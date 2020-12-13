@@ -2,7 +2,7 @@ import { addDecorator, addParameters } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 // custom decorators
-// import withGlobalStyles from './decorators/withGlobalStyles'
+import withStyles from './decorators/withStyles'
 import withTheme from './decorators/withTheme'
 import withRouter from './decorators/withRouter'
 // import withWhyDidYouRender from './decorators/withWhyDidYouRender'
@@ -17,7 +17,7 @@ addParameters({
 })
 
 // addDecorator(withWhyDidYouRender)
-// addDecorator(withGlobalStyles)
+addDecorator(withStyles)
 addDecorator(withTheme)
 addDecorator(withRouter)
 
