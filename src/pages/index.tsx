@@ -1,9 +1,9 @@
 
-import Test from '../components/Test'
+import Navbar from '../components/LandingPage/Navbar'
 import { initializeApollo, addApolloState } from '../lib/apolloClient'
 
 const IndexPage = () => (
-  <Test />
+  <Navbar />
 )
 
 export async function getStaticProps() {

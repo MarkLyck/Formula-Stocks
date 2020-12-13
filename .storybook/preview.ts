@@ -14,6 +14,7 @@ addParameters({
     viewport: {
         viewports: INITIAL_VIEWPORTS,
     },
+    layout: 'fullscreen'
 })
 
 // addDecorator(withWhyDidYouRender)
