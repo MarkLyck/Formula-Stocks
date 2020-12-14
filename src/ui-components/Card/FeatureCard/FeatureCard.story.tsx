@@ -26,16 +26,16 @@ algorithmic.args = {
 
 export const win_ratio = Template.bind({});
 win_ratio.args = {
-    title: 'Algorithmic approach',
+    title: '+92% Win Ratio',
     color: theme.palette.feature_color,
-    icon: 'brain',
-    children: 'Our algorithms identify high quality public companies with a large margin of safety, similar to methods used by Warren Buffet'
+    icon: 'percentage',
+    children: 'To date +93.67% of our stock buy/sell signals have been sold with a profit.'
 };
 
 export const guarantee = Template.bind({});
 guarantee.args = {
-    title: 'Algorithmic approach',
+    title: '7-day money back guarantee',
     color: theme.palette.feature_color,
-    icon: 'brain',
-    children: 'Our algorithms identify high quality public companies with a large margin of safety, similar to methods used by Warren Buffet'
+    icon: 'money-bill-wave',
+    children: 'If you don’t absolutely love our service after signing up. No worries, we’ll give your money back - No questions asked.'
 };
