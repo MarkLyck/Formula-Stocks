@@ -1,0 +1,21 @@
+export const WORK_SPACE_ID = 'ck1y5djt0000201ldey0t1bju'
+export const GRAPHQL_ENDPOINT = `https://api.8base.com/${WORK_SPACE_ID}`
+export const AUTH_PROFILE_ID = 'ck1y7bhrz00m101kzc5cp20ft'
+
+export const STRIPE_API_KEY = 'pk_live_3kRhRm6wqrUJ3ThsaDlf0f8w'
+export const PLAN_PREFIX = 'weekly-'
+export const MAX_USERS = 100
+export const PRICE = 29
+
+export const WIN_RATIO = 93.67
+export const ANNUAL_GROWTH = 34.14
+export const AVG_GAIN = 102.37
+export const AVG_LOSS = 16.47
+export const GAIN_TO_PAIN_RATIO = 2.39697
+export const SORTINO_RATIO = 7.532204
+export const MAX_DRAWDOWN_36M = 22.97
+export const MAX_DRAWDOWN_50Y = 47.85
+export const IRR_GEOMETRIC_MEAN = 48.66
+export const IRR_ARITHMIC_MEAN = 108.01
+
+export const EXPECTED_RETURN = ((WIN_RATIO / 100) * AVG_GAIN - (1 - WIN_RATIO / 100) * AVG_LOSS).toFixed(2)

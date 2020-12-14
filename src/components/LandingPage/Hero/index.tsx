@@ -3,11 +3,8 @@ import styled from '@emotion/styled'
 import LazyLoad from 'react-lazy-load'
 import NoSSR from 'react-no-ssr'
 import { maxSiteWidth, Bold } from '~/common/styles'
-import Button from '~/ui-components/Button'
-import FeatureCard from '~/ui-components/Card/FeatureCard'
-import FadeIn from '~/ui-components/Animations/FadeIn'
-import ShiftIn from '~/ui-components/Animations/ShiftIn'
-import { PRICE, WIN_RATIO, ANNUAL_GROWTH } from '~/common/constants'
+import { Button, FeatureCard } from '~/ui-components'
+import { PRICE, WIN_RATIO } from '~/common/constants'
 
 const HeroContainer = styled.div`
   position: relative;
@@ -242,90 +239,70 @@ const CardsContainer = styled.div`
 `
 
 const Hero = ({ showSignup }) => (
-    <React.Fragment>
-        <HeroContainer>
-            <ContentContainer>
-                <LeftContent>
-                    <Title>
-                        Gain an <span>unfair</span> investing advantage
+  <>
+    <HeroContainer>
+      <ContentContainer>
+        <LeftContent>
+          <Title>
+            Gain an <span>unfair</span> investing advantage
           </Title>
-                    <Subtitle>
-                        +{Math.floor(WIN_RATIO)}% of our stock picks have been sold with a profit.
+          <Subtitle>
+            +{Math.floor(WIN_RATIO)}% of our stock picks have been sold with a profit.
             <br />
-                        <br />
+            <br />
             Only invest in<Bold> high quality, profitable companies</Bold> with a large margin of safety!
           </Subtitle>
-                    <CTAContainer>
-                        <span>
-                            For <CTAPrice>${PRICE}</CTAPrice>
+          <CTAContainer>
+            <span>
+              For <CTAPrice>${PRICE}</CTAPrice>
               /wk
             </span>
-                    </CTAContainer>
-                    <NoSSR>
-                        <FadeIn delay={100}>
-                            <CTAButtonArea>
-                                <Button backgroundColor="secondary" color="white" size="medium" onClick={showSignup}>
-                                    SIGN UP TO BEAT THE MARKET
+          </CTAContainer>
+          <NoSSR>
+            <CTAButtonArea>
+              <Button status="success" onClick={showSignup}>
+                SIGN UP TO BEAT THE MARKET
                 </Button>
-                                <Divider />
-                                <Cancellation>
-                                    Cancel
+              <Divider />
+              <Cancellation>
+                Cancel
                   <br />
                   anytime
                 </Cancellation>
-                            </CTAButtonArea>
-                        </FadeIn>
-                    </NoSSR>
-                </LeftContent>
+            </CTAButtonArea>
+          </NoSSR>
+        </LeftContent>
 
-                <RightContent>
-                    <LazyLoad>
-                        <img src="static/images/mockup_with_robot.png" alt="best stock picking service dashboard mockup" />
-                    </LazyLoad>
-                </RightContent>
-            </ContentContainer>
-            <CardsContainer data-chromatic="ignore">
-                <ShiftIn y={100} delay={100}>
-                    <FadeIn delay={100}>
-                        <FeatureCard
-                            title="Algorithmic approach"
-                            icon={['fad', 'brain']}
-                            color="pink"
-                            text="Our algorithms identify high quality public companies with a high margin of safety, similar to methods used by Benjamin Graham"
-                        />
-                    </FadeIn>
-                </ShiftIn>
-
-                <ShiftIn y={200} delay={300}>
-                    <FadeIn delay={300}>
-                        <FeatureCard
-                            title={`+${Math.floor(WIN_RATIO)}% Win Ratio`}
-                            icon={['fad', 'percentage']}
-                            color="primary"
-                            // @ts-ignore
-                            text={
-                                <>
-                                    To date <Bold>+{WIN_RATIO}%</Bold> of our stock buy/sell signals have been sold with a profit.
-                </>
-                            }
-                        />
-                    </FadeIn>
-                </ShiftIn>
-                <ShiftIn y={300} delay={600}>
-                    <FadeIn delay={500}>
-                        <FeatureCard
-                            title="7-day money back guarantee"
-                            icon={['fad', 'money-bill-wave']}
-                            color="secondary"
-                            text="If you don’t absolutely love our service after signing up. No worries, we’ll give your money back - No
+        <RightContent>
+          <LazyLoad>
+            <img src="static/images/mockup_with_robot.png" alt="best stock picking service dashboard mockup" />
+          </LazyLoad>
+        </RightContent>
+      </ContentContainer>
+      <CardsContainer data-chromatic="ignore">
+        <FeatureCard
+          title="Algorithmic approach"
+          icon="brain"
+          color="pink"
+          children="Our algorithms identify high quality public companies with a high margin of safety, similar to methods used by Benjamin Graham"
+        />
+        <FeatureCard
+          title={`+${Math.floor(WIN_RATIO)}% Win Ratio`}
+          icon="percentage"
+          color="primary"
+          children={<>To date <Bold>+{WIN_RATIO}%</Bold> of our stock buy/sell signals have been sold with a profit.</>}
+        />
+        <FeatureCard
+          title="7-day money back guarantee"
+          icon="money-bill-wave"
+          color="secondary"
+          children="If you don’t absolutely love our service after signing up. No worries, we’ll give your money back - No
               questions asked."
-                        />
-                    </FadeIn>
-                </ShiftIn>
-            </CardsContainer>
-        </HeroContainer>
-        <HeroBackground />
-    </React.Fragment>
+        />
+      </CardsContainer>
+    </HeroContainer>
+    <HeroBackground />
+  </>
 )
 
 export default React.memo(Hero)
