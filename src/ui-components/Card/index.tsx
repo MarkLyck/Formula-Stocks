@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 export * from './FeatureCard'
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
     background: white;
     border-radius: 4px;
     border: 1px solid #ebedf5;
