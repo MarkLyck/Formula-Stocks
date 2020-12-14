@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardProps } from './index'
 
 export default {
-    title: 'Card',
+    title: 'ui-components/Card',
     component: Card,
     parameters: {
         layout: 'centered'

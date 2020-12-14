@@ -2,7 +2,7 @@ import React from 'react'
 import { NavItem, NavItemProps } from './NavItem'
 
 export default {
-    title: 'NavItem',
+    title: 'ui-components/NavItem',
     component: NavItem,
     parameters: {
         layout: 'centered'

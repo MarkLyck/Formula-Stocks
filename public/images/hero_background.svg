@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080px" height="867px" viewBox="0 0 1080 867" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hero background</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="73.4476929%" id="linearGradient-1">
+            <stop stop-color="#060081" offset="0%"></stop>
+            <stop stop-color="#0224CB" offset="59.8559429%"></stop>
+            <stop stop-color="#0034E4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="66.7102512%" x2="97.8639812%" y2="66.7102512%" id="linearGradient-2">
+            <stop stop-color="#0714B2" offset="0%"></stop>
+            <stop stop-color="#0022C7" offset="46.6266257%"></stop>
+            <stop stop-color="#0038EB" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="64.4965048%" x2="100%" y2="62.0537938%" id="linearGradient-3">
+            <stop stop-color="#050994" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#0420C2" offset="42.2687861%"></stop>
+            <stop stop-color="#003AF1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Front-page">
+            <g id="Hero">
+                <g id="Hero-background">
+                    <polygon id="Rectangle" fill="url(#linearGradient-1)" points="0 0 1080 0 1080 867 0 867"></polygon>
+                    <polygon id="Rectangle" fill="url(#linearGradient-2)" points="0 530.573355 1080 307 1080 862.573355 0 862.573355"></polygon>
+                    <polygon id="Rectangle" fill="url(#linearGradient-3)" points="0 2.84217094e-14 1080 2.84217094e-14 1080 30.6710549 0 259.053208"></polygon>
+                    <polygon id="Rectangle" fill="#0046FC" points="936 512.413304 1080 483 1080 579.376077 936 609"></polygon>
+                    <polygon id="Rectangle" fill="#00DA8E" points="1024 171.091907 1080 159 1083.32899 199.688056 1024 212"></polygon>
+                    <polygon id="Rectangle" fill="#0134E4" points="993 107.565688 1080.38585 90 1080.38585 159.275062 993 179.919676"></polygon>
+                    <polygon id="Rectangle" fill="#00DC95" points="-6.03961325e-14 546.695221 54 535 54 579.651037 -6.03961325e-14 591.385771"></polygon>
+                    <polygon id="Rectangle" fill="#070BA4" points="0 591.505961 141.715854 562 141.715854 659.93086 0 689.99651"></polygon>
+                    <polygon id="Rectangle" fill="#06069E" points="0 88.1083819 52 77 52 149.355153 0 159"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

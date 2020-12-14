@@ -33,7 +33,6 @@ const Card = styled.div`
     box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
     box-sizing: border-box;
     padding: 16px 24px;
-    max-width: 300px;
     text-align: center;
 `
 

@@ -68,7 +68,9 @@ const theme: any = {
             800: '#94124E',
             900: '#700940',
         },
-        feature_color: '#C86B89'
+        icon_colors: {
+            pink: '#C86B89'
+        }
     },
 }
 

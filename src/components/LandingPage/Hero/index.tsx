@@ -5,6 +5,7 @@ import NoSSR from 'react-no-ssr'
 import { maxSiteWidth, Bold } from '~/common/styles'
 import { Button, FeatureCard } from '~/ui-components'
 import { PRICE, WIN_RATIO } from '~/common/constants'
+import theme from '~/lib/theme'
 
 const HeroContainer = styled.div`
   position: relative;
@@ -30,7 +31,7 @@ const HeroBackground = styled.div`
   margin-left: -1px;
   height: 900px;
   background: #0523b6;
-  background: url('/static/images/hero_background.svg');
+  background: url('/images/hero_background.svg');
   background-repeat: no-repeat;
   background-size: cover;
   transform: skewY(-10deg);
@@ -275,7 +276,7 @@ const Hero = ({ showSignup }) => (
 
         <RightContent>
           <LazyLoad>
-            <img src="static/images/mockup_with_robot.png" alt="best stock picking service dashboard mockup" />
+            <img src="images/mockup_with_robot.png" alt="best stock picking service dashboard mockup" />
           </LazyLoad>
         </RightContent>
       </ContentContainer>
@@ -283,19 +284,19 @@ const Hero = ({ showSignup }) => (
         <FeatureCard
           title="Algorithmic approach"
           icon="brain"
-          color="pink"
+          color={theme.palette.icon_colors.pink}
           children="Our algorithms identify high quality public companies with a high margin of safety, similar to methods used by Benjamin Graham"
         />
         <FeatureCard
           title={`+${Math.floor(WIN_RATIO)}% Win Ratio`}
           icon="percentage"
-          color="primary"
+          color={theme.palette.primary[500]}
           children={<>To date <Bold>+{WIN_RATIO}%</Bold> of our stock buy/sell signals have been sold with a profit.</>}
         />
         <FeatureCard
           title="7-day money back guarantee"
           icon="money-bill-wave"
-          color="secondary"
+          color={theme.palette.success[500]}
           children="If you don’t absolutely love our service after signing up. No worries, we’ll give your money back - No
               questions asked."
         />
