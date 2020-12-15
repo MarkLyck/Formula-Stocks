@@ -4,6 +4,7 @@ import { transparentize } from 'polished'
 import theme from '../../lib/theme'
 
 export * from './NavItem'
+export * from './ActionButton'
 
 export interface ButtonProps {
     appearance?: 'filled' | 'outline' | 'ghost';

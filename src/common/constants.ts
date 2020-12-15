@@ -7,6 +7,8 @@ export const PLAN_PREFIX = 'weekly-'
 export const MAX_USERS = 100
 export const PRICE = 29
 
+export const COMPANY_NAME = "Formula Stocks"
+
 export const WIN_RATIO = 93.67
 export const ANNUAL_GROWTH = 34.14
 export const AVG_GAIN = 102.37

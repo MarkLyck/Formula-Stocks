@@ -14,7 +14,6 @@ addParameters({
     viewport: {
         viewports: INITIAL_VIEWPORTS,
     },
-    layout: 'fullscreen'
 })
 
 // addDecorator(withWhyDidYouRender)
@@ -24,4 +23,5 @@ addDecorator(withRouter)
 
 export const parameters = {
     actions: { argTypesRegex: '^on.*' },
+    layout: 'fullscreen',
 }

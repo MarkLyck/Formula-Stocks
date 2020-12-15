@@ -1,10 +1,14 @@
 import { ThemeProvider } from '@emotion/react'
 import theme from './theme'
+import GlobalStyles from './GlobalStyles'
 import 'antd/dist/antd.less'
 
-const AppProvider = ({ children }) => (
+const AppProvider = ({ children }: any) => (
     <ThemeProvider theme={theme}>
-        {children}
+        <>
+            <GlobalStyles />
+            {children}
+        </>
     </ThemeProvider>
 )
 
