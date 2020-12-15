@@ -23,15 +23,13 @@ const New = styled.div`
     font-weight: bold;
 `
 
-const NewThing = () => {
-    return (
-        <Container>
-            <New>NEW</New>
-            <Text>
-                Your personal crypto training bot
+const NewThing = () => (
+    <Container>
+        <New>NEW</New>
+        <Text>
+            Your personal crypto training bot
             </Text>
-        </Container>
-    )
-}
+    </Container>
+)
 
 export default NewThing

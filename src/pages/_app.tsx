@@ -3,7 +3,7 @@ import { useApollo } from '../lib/apolloClient'
 import AppProvider from '../lib/AppProvider'
 import '~/lib/iconLibrary'
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: any) => {
   const apolloClient = useApollo(pageProps)
 
   return (
