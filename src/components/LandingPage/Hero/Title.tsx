@@ -11,7 +11,6 @@ const Highlight = styled.span`
     font-weight: 900;
     color: ${(p) => p.theme.palette.primary[500]};
     font-size: 3.5vw;
-    margin-left: -1%;
 `
 
 

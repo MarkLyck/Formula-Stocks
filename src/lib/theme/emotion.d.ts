@@ -24,6 +24,9 @@ declare module '@emotion/react' {
             danger: {
                 [key: string]: string
             }
+            icon_colors: {
+                pink: string
+            }
         }
     }
 }

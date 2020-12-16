@@ -7,11 +7,12 @@ const Text = styled.p`
     font-size: 1.2vw;
     line-height: 1.8vw;
     color: ${(p) => p.theme.palette.text[200]};
+    max-width: 28vw;
 `
 
 const Description = () => (
     <Text>
-        Our strategy only invests high quality companies selling for much less than they should be worth.
+        Our strategy invests high quality companies selling for much less than they should be worth.
         <br />
         <br />
         <strong>+{WIN_RATIO}%</strong> of these investments have later been sold with a profit.

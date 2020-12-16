@@ -1,18 +1,18 @@
 import React from 'react'
 import { Story } from '@storybook/react';
-import { FeatureCard, CardProps } from './index'
+import { SmallFeatureCard, CardProps } from './SmallFeatureCard'
 import theme from '~/lib/theme'
 
 export default {
     title: 'ui-components/Card/Feature',
-    component: FeatureCard,
+    component: SmallFeatureCard,
     parameters: {
         layout: 'centered'
     }
 }
 
 const Template: Story<CardProps> = (args: CardProps) => (
-    <FeatureCard {...args} />
+    <SmallFeatureCard {...args} />
 )
 
 

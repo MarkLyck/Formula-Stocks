@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Hero from './index'
 
 export default {
-  title: 'Sales page/hero',
+  title: 'Landing page/hero',
 }
 
 export const hero = () => {
