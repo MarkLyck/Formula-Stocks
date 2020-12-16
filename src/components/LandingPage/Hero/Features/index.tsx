@@ -7,8 +7,7 @@ import { maxSiteWidth } from '~/common/styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Container = styled.div`
-    ${maxSiteWidth}
-    width: 100%;
+    padding: 0 8%;
 `
 
 const NextButton = styled.button`
