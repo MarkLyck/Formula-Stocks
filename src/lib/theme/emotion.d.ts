@@ -27,6 +27,15 @@ declare module '@emotion/react' {
             icon_colors: {
                 pink: string
             }
+            scale: {
+                perfect: string
+                good: string
+                average: string
+                bad: string
+                worst: string
+            }
+            border: string;
+
         }
     }
 }

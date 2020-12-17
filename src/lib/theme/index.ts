@@ -78,7 +78,15 @@ const theme: any = {
         },
         icon_colors: {
             pink: '#C86B89'
-        }
+        },
+        scale: {
+            worst: '#F3446C',
+            bad: '#ff9800',
+            average: '#f9dd4d',
+            good: '#1D93F2',
+            perfect: '#00DA8E',
+        },
+        border: '#ebedf5',
     },
 }
 
