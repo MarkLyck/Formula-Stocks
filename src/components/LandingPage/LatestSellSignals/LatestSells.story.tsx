@@ -1,6 +1,6 @@
 import React from 'react'
-import { MockedProvider } from '@apollo/client/testing'
 import LatestSells from './index'
+import { MockedProvider } from '@apollo/client/testing'
 import { LATEST_SELL_SIGNALS } from '~/common/queries'
 import { latestSellSignalsMock } from '~/../tests/mocks'
 
@@ -16,7 +16,7 @@ const mocks = [
 ]
 
 export default {
-  title: 'Sales page/latest sells',
+  title: 'Landing page/latest sells',
   component: LatestSells,
 }
 

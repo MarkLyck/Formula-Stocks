@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import DataSet from '@antv/data-set' // TODO REMOVE!
 import styled from '@emotion/styled'
-import { getAIScoreColor } from '~/components/Dashboard/Reports/utils'
+import { getAIScoreColor } from '~/common/utils/reportUtils'
 import theme from '~/lib/theme'
 import withCharts from '../withCharts'
 
@@ -73,7 +73,7 @@ const renderChart = ({ G2, id, data, aiScore }: ChartPropsType & { chartInstance
         style: {
           lineDash: [16, 8],
           lineWidth: 2,
-          stroke: theme.colors.lightText,
+          stroke: theme.palette.text[300],
         },
       },
     },

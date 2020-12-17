@@ -6,6 +6,7 @@ const { Title, Paragraph } = Typography
 export * from './LandingPageContainer'
 
 export const ScalingTitle = styled(Title)`
+    text-align: ${(p: { textAlign?: string }) => p.textAlign ? p.textAlign : ''};
     &&& { 
         font-size: 2.8vw;
         margin-top: 0;
@@ -18,6 +19,8 @@ export const ScalingSubTitle = styled(Title)`
         color: ${(p) => p.theme.palette.text[200]};
         font-size: 1.4vw;
         font-weight: 400;
+        margin-top: 1vw;
+        margin-bottom: 3vw;
     }
 `
 

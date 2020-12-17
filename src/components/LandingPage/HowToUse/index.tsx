@@ -33,11 +33,10 @@ const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 24px;
 `
 
 const HowDoIUseIt = () => (
-    <LandingPageContainer align="center" >
+    <LandingPageContainer align="center" marginBottom="8vw" >
         <TitleContainer>
             <ScalingTitle>
                 How to get started

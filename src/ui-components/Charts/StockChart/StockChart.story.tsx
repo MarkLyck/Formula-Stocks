@@ -1,6 +1,4 @@
 import React from 'react'
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
-
 import styled from '@emotion/styled'
 import StockChart from './index'
 import { sixMonthsPricesMock } from '~/../tests/mocks'
@@ -11,7 +9,6 @@ const Container = styled.div``
 
 export default {
   title: 'Charts / stock chart',
-  decorators: [withKnobs],
   component: StockChart,
 }
 
@@ -21,14 +18,14 @@ const createLineAnnotations = (belowNumber: number) => {
       start: ['min', belowNumber],
       end: ['max', belowNumber],
       style: {
-        stroke: theme.colors.primary,
+        stroke: theme.palette.primary[500],
         lineWidth: 2,
         lineDash: [10, 5],
       },
       text: {
         position: 'start',
         style: {
-          fill: theme.colors.primary,
+          fill: theme.palette.primary[500],
           fontSize: 15,
           fontWeight: '500',
         },
@@ -47,16 +44,16 @@ const createRegionFilters = (belowNumber: number) => {
       top: true,
       start: ['min', 0],
       end: ['max', belowNumber],
-      color: theme.colors.primary,
+      color: theme.palette.primary[500],
     },
   ]
   return regionFilters
 }
 
 export const stock_chart = () => {
-  const showLineAnnotation = boolean('show line annotation', true)
-  const showRegionFilter = boolean('show region filter', true)
-  const belowNumber = number('buy near', 3.34)
+  const showLineAnnotation = true
+  const showRegionFilter = true
+  const belowNumber = 3.34
 
   return (
     <Container>

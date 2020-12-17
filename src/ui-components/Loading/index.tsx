@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Icon = styled(FontAwesomeIcon)`
-  color: ${(props: any) => props.theme.colors.primary};
+  color: ${(props: any) => props.theme.palette.primary[500]};
   margin-bottom: 16px;
 `
 
@@ -22,8 +22,8 @@ const LoadingTitle = styled.h2`
 `
 
 export const GenericLoading = () => (
-    <Container>
-        <Icon icon="spinner-third" spin size="4x" />
-        <LoadingTitle>Loading...</LoadingTitle>
-    </Container>
+  <Container>
+    <Icon icon="spinner-third" spin size="4x" />
+    <LoadingTitle>Loading...</LoadingTitle>
+  </Container>
 )

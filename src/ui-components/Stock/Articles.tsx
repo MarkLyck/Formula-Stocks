@@ -23,17 +23,17 @@ const Article = styled.a`
   margin-bottom: 16px;
 
   text-decoration: none;
-  color: ${(props: any) => props.theme.colors.text};
+  color: ${(props: any) => props.theme.palette.text[500]};
   transition: all 0.2s;
 
   &:hover {
     cursor: pointer;
     box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.2);
     text-decoration: none;
-    color: ${(props: any) => props.theme.colors.text};
+    color: ${(props: any) => props.theme.palette.text[500]};
 
     .news-article-footer {
-      color: ${(props: any) => props.theme.colors.primary};
+      color: ${(props: any) => props.theme.palette.primary[500]};
     }
   }
 `
@@ -44,7 +44,7 @@ const Image = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 3px;
-  border: 1px solid ${(props: any) => props.theme.colors.border};
+  border: 1px solid ${(props: any) => props.theme.palette.border};
 `
 
 const Headline = styled.h2`

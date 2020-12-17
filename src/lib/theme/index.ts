@@ -1,4 +1,8 @@
 const theme: any = {
+    colors: {
+        black: '#000',
+        white: '#fff',
+    },
     palette: {
         text: {
             200: '#8F9BB3',

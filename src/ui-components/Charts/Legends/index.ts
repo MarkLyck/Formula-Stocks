@@ -37,5 +37,3 @@ export const Legends = styled.div`
   align-items: center;
   flex-direction: ${(props: any) => (props.horizontal ? 'row' : 'column')};
 `
-
-export default null

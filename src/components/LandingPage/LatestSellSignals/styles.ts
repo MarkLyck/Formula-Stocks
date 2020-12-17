@@ -5,11 +5,9 @@ export const Table = styled.table`
   ${cardStyle};
   display: table;
   width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.15), 0 8px 16px -8px rgba(0, 0, 0, 0.2),
-    0 -6px 16px -6px rgba(0, 0, 0, 0.015);
+  border-radius: 4px;
+  border-style: hidden; 
+  box-shadow: 0 0 0 1px ${p => p.theme.palette.border}, 0 4px 14px 0 rgba(111, 120, 156, 0.08);; 
 
   @media (max-width: 700px) {
     .sales-price,
@@ -27,7 +25,7 @@ export const Table = styled.table`
 
 export const TableRow = styled.tr`
   width: 100%;
-  border-bottom: 1px solid ${(p: any) => p.theme.palette.basic[500]};
+  border-bottom: 1px solid ${(p: any) => p.theme.palette.border};
 `
 
 export const TableBody = styled.tbody`
@@ -60,7 +58,7 @@ export const TableCell = styled.td`
   padding: 20px 24px;
   font-weight: 400;
   box-sizing: border-box;
-  color: ${(p: any) => p.theme.palette.basic[500]};
+  color: ${(p: any) => p.theme.palette.text[500]};
 
   @media (max-width: 500px) {
     font-size: 0.8rem;

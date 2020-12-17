@@ -4,7 +4,7 @@ import { useCountUp } from 'react-countup'
 import { PieChart } from 'react-minimal-pie-chart'
 import styled from '@emotion/styled'
 import { cardStyle } from '~/ui-components'
-import { getAIScoreColor, getAIScoreType } from '~/components/Dashboard/Reports/utils'
+import { getAIScoreColor, getAIScoreType } from '~/common/utils/reportUtils'
 import theme from '~/lib/theme'
 
 const Wrapper = styled.div`
@@ -152,27 +152,27 @@ const Gauge: FC<ChartPropsType> = ({
           {
             title: 'Very bad',
             value: 45,
-            color: theme.colors.scale.worst,
+            color: theme.palette.scale.worst,
           },
           {
             title: 'Bad',
             value: 20,
-            color: theme.colors.scale.bad,
+            color: theme.palette.scale.bad,
           },
           {
             title: 'Okay',
             value: 12.5,
-            color: theme.colors.scale.okay,
+            color: theme.palette.scale.average,
           },
           {
             title: 'Good',
             value: 12.5,
-            color: theme.colors.scale.good,
+            color: theme.palette.scale.good,
           },
           {
             title: 'Excellent',
             value: 12.5,
-            color: theme.colors.scale.perfect,
+            color: theme.palette.scale.perfect,
           },
         ]}
         lineWidth={lineWidth}

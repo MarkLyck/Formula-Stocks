@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from '@emotion/styled'
-import { getAIScoreColor } from '~/components/Dashboard/Reports/utils'
-import theme from '~/libs/theme'
+import { getAIScoreColor } from '~/common/utils/reportUtils'
+import theme from '~/lib/theme'
 import { Card } from '~/ui-components'
 
 const Container = styled(Card)`
@@ -31,7 +31,7 @@ const TextContainer = styled.div`
 `
 
 const Label = styled.p`
-  color: ${(props: any) => props.theme.colors.text};
+  color: ${(props: any) => props.theme.palette.text[500]};
   font-weight: bold;
   margin-right: 16px;
   font-size: 1rem;
@@ -42,7 +42,7 @@ const ChartContainer = styled.div`
   position: relative;
   width: 100%;
   margin-top: 12px;
-  // background-color: ${(props) => props.theme.colors.lightGray};
+  // background-color: ${(props) => props.theme.palette.basic[200]};
   border-radius: 4px;
 
   div:last-of-type {
@@ -102,31 +102,31 @@ const HorizontalScore: FC<ChartPropsType> = ({ value, label, description, direct
         <ChartSection
           className="chart-section"
           width={40}
-          color={theme.colors.scale.worst}
+          color={theme.palette.scale.worst}
           active={outputValue < -20}
         />
         <ChartSection
           className="chart-section"
           width={20}
-          color={theme.colors.scale.bad}
+          color={theme.palette.scale.bad}
           active={outputValue >= -20 && outputValue < 20}
         />
         <ChartSection
           className="chart-section"
           width={12.5}
-          color={theme.colors.scale.okay}
+          color={theme.palette.scale.average}
           active={outputValue >= 20 && outputValue < 50}
         />
         <ChartSection
           className="chart-section"
           width={12.5}
-          color={theme.colors.scale.good}
+          color={theme.palette.scale.good}
           active={outputValue >= 50 && outputValue < 75}
         />
         <ChartSection
           className="chart-section"
           width={12.75}
-          color={theme.colors.scale.perfect}
+          color={theme.palette.scale.perfect}
           active={outputValue >= 75}
         />
       </ChartContainer>

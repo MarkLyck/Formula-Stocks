@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import { DataView } from '@antv/data-set'
 import debounce from '~/common/utils/debounce'
 import withCharts from '../withCharts'
-import theme from '~/common/theme'
+import theme from '~/lib/theme'
 
 const ChartContainer = styled.div`
   .g2-tooltip {

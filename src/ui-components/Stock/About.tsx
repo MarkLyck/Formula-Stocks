@@ -15,7 +15,7 @@ const Info = styled(Card)`
 `
 
 const Title = styled.h3`
-  color: ${(props: any) => props.theme.colors.title};
+  color: ${(props: any) => props.palette.text[500]};
   font-weight: bold;
   font-size: 1rem;
 `
@@ -23,7 +23,7 @@ const Title = styled.h3`
 const Ticker = styled.h3`
   margin-bottom: 16px;
   font-size: 0.8rem;
-  color: ${(props: any) => props.theme.colors.text};
+  color: ${(props: any) => props.theme.palette.text[500]};
 `
 
 const Grid = styled.div`
@@ -39,7 +39,7 @@ const Grid = styled.div`
 const GridItem = styled.div`
   display: flex;
   justify-content: space-between;
-  background: ${(props: any) => props.theme.colors.dbBackground};
+  background: ${(props: any) => props.theme.palette.basic[400]};
   padding: 12px;
   border-radius: 4px;
 `

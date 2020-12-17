@@ -22,7 +22,7 @@ export const Container = styled.span`
 const Prefix = styled.span`
   font-weight: 500;
   margin-right: 8px;
-  color: ${(props) => props.theme.colors.lightText};
+  color: ${(props) => props.theme.palette.text[300]};
 `
 
 interface ReturnPropsType {
@@ -37,8 +37,8 @@ export const Tag = ({
   loading,
   prefix = '',
   children,
-  color = theme.colors.title,
-  backgroundColor = theme.colors.lightGray,
+  color = theme.palette.text[500],
+  backgroundColor = theme.palette.basic[300],
 }: ReturnPropsType) => {
   if (loading) {
     return (

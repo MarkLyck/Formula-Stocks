@@ -15,6 +15,7 @@ const LatestSellsContainer = styled.div`
   border-radius: 8px;
   width: 100%;
   margin-top: 40px;
+  margin-bottom: 8vw;
 
   @media (max-width: 500px) {
     margin-top: 24px;
@@ -31,18 +32,19 @@ const ReturnTableCell = styled(TableCell)`
 `
 
 const StyledDisclaimer = styled(Disclaimer)`
-  margin-left: 8px;
-  margin-top: 16px;
+  margin: 16px auto 0;
   width: 100%;
+  text-align:center;
 `
-const LatestSells = () => {
+
+const LatestSellSignals = () => {
   const { loading, error, data } = useQuery(LATEST_SELL_SIGNALS)
 
   const [numberVisible] = useState(10)
   const latestSells = data ? data.latestSellSignalsList.items : []
 
   return (
-    <LatestSellsContainer>
+    <LatestSellsContainer >
       <ScalingTitle>Latest sell signals</ScalingTitle>
       <ScalingSubTitle>Here's our 10 latest sell signals (updated monthly)</ScalingSubTitle>
       {loading && <GenericLoading />}
@@ -81,4 +83,4 @@ const LatestSells = () => {
   )
 }
 
-export default LatestSells
+export default LatestSellSignals

@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from 'styled'
+import styled from '@emotion/styled'
 import { Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logoutUser from '~/common/utils/logout'
-import PermissionError from '../PermissionError'
+import PermissionError from './PermissionError'
 import { Card } from '~/ui-components'
 import { ErrorHeader, ErrorText } from './styles'
 
@@ -27,31 +27,31 @@ const Container = styled(Card)`
 `
 
 const refreshPage = () => {
-    location.reload()
+  location.reload()
 }
 
 const LoadingError = ({ error }) => {
-    let errorText = 'Please try to refresh the page.'
+  let errorText = 'Please try to refresh the page.'
 
-    if (error && error.message.includes('permission')) {
-        return <PermissionError />
-    } else if (error && error.message.includes('Token expired')) {
-        logoutUser('/dashboard/login')
-        return null
-    }
+  if (error && error.message.includes('permission')) {
+    return <PermissionError />
+  } else if (error && error.message.includes('Token expired')) {
+    logoutUser('/dashboard/login')
+    return null
+  }
 
-    return (
-        <Container>
-            <Space direction="vertical" align="center" size="middle">
-                <FontAwesomeIcon icon={['fad', 'exclamation-square']} />
-                <ErrorHeader>Oups! Something went wrong</ErrorHeader>
-                <ErrorText>{errorText}</ErrorText>
-                <Button onClick={refreshPage} icon={<FontAwesomeIcon icon={['far', 'redo']} />}>
-                    Refresh page
+  return (
+    <Container>
+      <Space direction="vertical" align="center" size="middle">
+        <FontAwesomeIcon icon={['fad', 'exclamation-square']} />
+        <ErrorHeader>Oups! Something went wrong</ErrorHeader>
+        <ErrorText>{errorText}</ErrorText>
+        <Button onClick={refreshPage} icon={<FontAwesomeIcon icon={['far', 'redo']} />}>
+          Refresh page
         </Button>
-            </Space>
-        </Container>
-    )
+      </Space>
+    </Container>
+  )
 }
 
 export default LoadingError

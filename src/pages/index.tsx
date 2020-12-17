@@ -1,12 +1,14 @@
 
 import { initializeApollo, addApolloState } from '~/lib/apolloClient'
-import { Navbar, Hero, PickingWinningStocks, HowToUse } from '~/components/LandingPage'
+import { Navbar, Hero, PickingWinningStocks, HowToUse, LatestSellSignals, Performance } from '~/components/LandingPage'
 
 const IndexPage = () => (
   <>
     <Navbar />
     <Hero />
     <PickingWinningStocks />
+    <Performance />
+    <LatestSellSignals />
     <HowToUse />
   </>
 )

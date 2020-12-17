@@ -14,7 +14,7 @@ const TabIcon = styled(FontAwesomeIcon)`
 const ActionLink = styled.a`
   color: ${(p: any) => p.theme.palette.text[500]};
   &:hover {
-    color: ${(p: any) => p.theme.colors.primary[500]};
+    color: ${(p: any) => p.theme.palette.primary[500][500]};
   }
 
   @media (max-width: 900px) {

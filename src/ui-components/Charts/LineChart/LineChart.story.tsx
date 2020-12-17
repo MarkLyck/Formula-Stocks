@@ -1,5 +1,4 @@
 import React from 'react'
-import { withKnobs, text, number } from '@storybook/addon-knobs'
 import styled from '@emotion/styled'
 import LineChart, { ChartPropsType } from './index'
 import { sixMonthsPricesMock } from '~/../tests/mocks'
@@ -11,7 +10,6 @@ const Container = styled.div``
 
 export default {
   title: 'Charts / line chart',
-  decorators: [withKnobs],
   component: LineChart,
 }
 const scales = [
@@ -40,14 +38,14 @@ const createLineAnnotations = (belowNumber: number) => {
       start: ['min', belowNumber],
       end: ['max', belowNumber],
       style: {
-        stroke: theme.colors.primary,
+        stroke: theme.palette.primary[500],
         lineWidth: 2,
         lineDash: [10, 5],
       },
       text: {
         position: 'start',
         style: {
-          fill: theme.colors.primary,
+          fill: theme.palette.primary[500],
           fontSize: 15,
           fontWeight: '500',
         },
@@ -66,7 +64,7 @@ const createRegionFilters = (belowNumber: number) => {
       top: true,
       start: ['min', 0],
       end: ['max', belowNumber],
-      color: theme.colors.primary,
+      color: theme.palette.primary[500],
     },
   ]
   return regionFilters
@@ -76,7 +74,7 @@ const breathPoints: BreathPointType[] = [
   {
     id: 'buy-price',
     date: '2020-05-06',
-    color: theme.colors.primary,
+    color: theme.palette.primary[500],
   },
 ]
 
@@ -123,17 +121,15 @@ line_chart.args = {
   showRegionFilter: true,
   showBreathPoint: false,
   showDataMarker: true,
-  lineColor: theme.colors.text,
-  belowColor: theme.colors.primary,
+  lineColor: theme.palette.text[500],
+  belowColor: theme.palette.primary[500],
   belowNumber: 3.32,
   splitDate: new Date('2020.05.10'),
-  splitColor: theme.colors.gray,
+  splitColor: theme.palette.basic[500],
 }
 
 export const split_line_chart = () => {
-  const lineColor = text('line Color', theme.colors.text)
-  const belowColor = text('below Color', theme.colors.primary)
-  const belowNumber = number('buy near', 2.98)
+  const belowNumber = 2.98
 
   return (
     <Container>
@@ -141,10 +137,10 @@ export const split_line_chart = () => {
         id="chart-id"
         data={sixMonthsPricesMock}
         scales={scales}
-        lineColor={lineColor}
+        lineColor={theme.palette.text[500]}
         splitDate={new Date('2020.03.10')}
         splitColor="red"
-        belowColor={belowColor}
+        belowColor={theme.palette.primary[500]}
         tooltipFunction={(_date: any, close: number) => {
           return {
             className: close <= belowNumber ? 'below' : 'above',

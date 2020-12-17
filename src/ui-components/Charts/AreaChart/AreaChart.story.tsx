@@ -73,7 +73,7 @@ area_chart.args = {
           style: {
             fontSize: 14,
             fontWeight: 'normal',
-            fill: theme.colors.darkGray,
+            fill: theme.palette.basic[1100],
           },
         },
       },

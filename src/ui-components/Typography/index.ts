@@ -1,1 +1,1 @@
-export { default as Disclaimer } from './Disclaimer'
+export * from './Disclaimer'

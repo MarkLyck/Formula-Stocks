@@ -1,5 +1,4 @@
 import React from 'react'
-import { withKnobs, number, boolean, text } from '@storybook/addon-knobs'
 import styled from '@emotion/styled'
 import { StockReturn } from './index'
 
@@ -9,14 +8,13 @@ const Container = styled.div`
 
 export default {
   title: 'ui components / Stock',
-  decorators: [withKnobs],
 }
 
 export const stock_return = () => {
-  const percentReturn = number('percent return', 10.97)
-  const loading = boolean('loading', false)
-  const positiveColor = text('positiveColor', '')
-  const negativeColor = text('negativeColor', '')
+  const percentReturn = 10.97
+  const loading = false
+  const positiveColor = ''
+  const negativeColor = ''
 
   return (
     <Container>

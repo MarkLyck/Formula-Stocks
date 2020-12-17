@@ -29,10 +29,10 @@ const ChartContainer = styled.div`
   }
 
   .weeklystocktip {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(p) => p.theme.palette.primary[500]};
   }
   .market {
-    color: ${(props) => props.theme.colors.darkGray};
+    color: ${(p) => p.theme.palette.basic[1100]};
   }
 
   .g2-tooltip-name {
@@ -45,10 +45,10 @@ const ChartContainer = styled.div`
   }
 
   .g2-tooltip-value.positive {
-    color: ${(props) => props.theme.colors.scale.perfect};
+    color: ${(p) => p.theme.palette.scale.perfect};
   }
   .g2-tooltip-value.negative {
-    color: ${(props) => props.theme.colors.scale.worst};
+    color: ${(p) => p.theme.palette.scale.worst};
   }
 `
 
@@ -98,7 +98,7 @@ const renderChart = ({
     },
     label: {
       offset: -12,
-      formatter: (text) => text.split(' ')[1],
+      formatter: (text: string) => text.split(' ')[1],
       style: {
         fontWeight: 'bold',
         fill: 'black', // can't make white because of: https://github.com/antvis/G2/issues/2567
@@ -156,8 +156,8 @@ const renderChart = ({
   chart
     .line()
     .position('date*fs')
-    .color(theme.colors.primary)
-    .tooltip('date*fs', (_date, fs) => ({
+    .color(theme.palette.primary[500])
+    .tooltip('date*fs', (_date: any, fs: any) => ({
       value: scale.fs.formatter(fs),
       className: 'weeklystocktip',
       name: scale.fs.alias,
@@ -167,11 +167,11 @@ const renderChart = ({
       startOnZero: false,
     })
     .position('date*fs')
-    .color(theme.colors.primary)
+    .color(theme.palette.primary[500])
     .style({
       fillOpacity: 0.4,
     })
-    .tooltip('date*fs', (_date, fs) => ({
+    .tooltip('date*fs', (_date: any, fs: any) => ({
       value: scale.fs.formatter(fs),
       className: 'weeklystocktip',
       name: scale.fs.alias,
@@ -180,8 +180,8 @@ const renderChart = ({
   chart
     .line()
     .position('date*market')
-    .color(theme.colors.darkGray)
-    .tooltip('date*market', (_date, market) => ({
+    .color(theme.palette.basic[1100])
+    .tooltip('date*market', (_date: any, market: any) => ({
       value: scale.fs.formatter(market),
       className: 'market',
       name: scale.market.alias,
@@ -191,11 +191,11 @@ const renderChart = ({
       startOnZero: false,
     })
     .position('date*market')
-    .color(theme.colors.darkGray)
+    .color(theme.palette.basic[1100])
     .style({
       fillOpacity: 0.4,
     })
-    .tooltip('date*market', (_date, market) => ({
+    .tooltip('date*market', (_date: any, market: any) => ({
       value: scale.fs.formatter(market),
       className: 'market',
       name: scale.market.alias,
