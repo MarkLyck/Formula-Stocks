@@ -7,6 +7,7 @@ export interface CardProps {
     children: any;
     color: string;
     icon: string;
+    style?: any;
 }
 
 export const SmallIconContainer = styled.div`
@@ -32,9 +33,14 @@ const Card = styled.div`
     padding: 12px 20px;
     text-align: center;
 
-    &:hover {
-        background: ${p => p.theme.palette.basic[200]};
+    ${(p: { hover: boolean }) => p.hover ? `
+        &:hover {
+            background: ${p => p.theme.palette.basic[200]};
+        }`
+        : ''
     }
+
+    
 `
 
 const Content = styled.div`
@@ -43,8 +49,8 @@ const Content = styled.div`
     color: ${p => p.theme.palette.text[500]}
 `
 
-export const SmallFeatureCard = ({ children, color, icon }: CardProps) => (
-    <Card>
+export const SmallFeatureCard = ({ children, color, icon, style, hover = true }: CardProps) => (
+    <Card hover={hover} style={style}>
         <Space align="center">
             <SmallIconContainer>
                 {/* @ts-ignore */}

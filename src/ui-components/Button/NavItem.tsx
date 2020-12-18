@@ -31,7 +31,7 @@ const getPadding = (size: string) => {
 }
 
 const GhostNavItem = styled.a`
-    background-color: transparent;
+    background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
     color: ${(p) => p.theme.palette.basic[800]};
     font-weight: bold;
     padding: ${(p: NavItemProps) => getPadding(p.size)};

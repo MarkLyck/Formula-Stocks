@@ -35,7 +35,20 @@ const TitleContainer = styled.div`
     align-items: center;
 `
 
-const HowDoIUseIt = () => (
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+const StepCard = styled(Card)`
+    margin: 0 16px;
+
+    &:hover {
+        background-color: ${p => p.theme.palette.basic[200]};
+    }
+`
+
+const HowToGetStarted = () => (
     <LandingPageContainer align="center" marginBottom="8vw" >
         <TitleContainer>
             <ScalingTitle>
@@ -45,21 +58,21 @@ const HowDoIUseIt = () => (
                 Using {COMPANY_NAME} is easy and only requires a few minutes of trading each month.
             </ScalingSubTitle>
         </TitleContainer>
-        <Space size="large">
-            <Card>
+        <Container >
+            <StepCard style={{ padding: "32px", minHeight: "180px", width: 'calc(100% / 3)' }}>
                 <Space direction="vertical">
                     <Space size="middle">
                         <NumberContainer>1</NumberContainer>
                         <CardTitle>
-                            Mirror the portfolio
+                            Mirror portfolio
                         </CardTitle>
                     </Space>
                     <Description>
-                        The easiest way to get started is to mirror our portfolio in your own brokerage account of choice.
+                        The easiest way to get started is to mirror our portfolio in your own brokerage account of choice. If you don't have one yet, we will help!
                     </Description>
                 </Space>
-            </Card>
-            <Card>
+            </StepCard>
+            <StepCard style={{ padding: "32px", minHeight: "180px", width: 'calc(100% / 3)' }}>
                 <Space direction="vertical">
                     <Space size="middle">
                         <NumberContainer>2</NumberContainer>
@@ -68,25 +81,25 @@ const HowDoIUseIt = () => (
                     </CardTitle>
                     </Space>
                     <Description>
-                        In the beginning of every month, the system re-evaluates it’s portfolio, buying & selling stocks. Simply copy our tradres in your own account to follow along.
+                        Every month, the system re-evaluates it’s portfolio, buying & selling stocks. You'll be notified of the new trades that you can make in your own account to follow along.
                     </Description>
                 </Space>
-            </Card>
-            <Card>
+            </StepCard>
+            <StepCard style={{ padding: "32px", minHeight: "180px", width: 'calc(100% / 3)' }}>
                 <Space direction="vertical">
-                    <Space size="middle">
+                    < Space size="middle">
                         <NumberContainer>3</NumberContainer>
                         <CardTitle>
                             Re-invest dividends
                     </CardTitle>
                     </Space>
                     <Description>
-                        Most stocks we invest in will pay out a dividend. We highly recommend you re-invest the dividends for exponential growth.
+                        Most stocks we invest in will pay out a dividend. To get the most of our system, we highly recommend you re-invest the dividends for exponential growth.
                     </Description>
-                </Space>
-            </Card>
-        </Space>
-    </LandingPageContainer>
+                </Space >
+            </StepCard >
+        </Container >
+    </LandingPageContainer >
 )
 
-export default HowDoIUseIt
+export default HowToGetStarted

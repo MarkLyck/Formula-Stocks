@@ -4,7 +4,7 @@ import {
   Navbar,
   Hero,
   PickingWinningStocks,
-  HowToUse,
+  HowToGetStarted,
   LatestSellSignals,
   Performance,
   Risk,
@@ -12,7 +12,9 @@ import {
   AIScore,
   Newsletter,
   MoneyBackGuarantee,
-  StrategyWeUse
+  StrategyWeUse,
+  ExchangesSupported,
+  Pricing
 } from '~/components/LandingPage'
 
 const IndexPage = () => (
@@ -26,9 +28,11 @@ const IndexPage = () => (
     <Statistics />
     <Newsletter />
     <AIScore />
-    <HowToUse />
+    <Pricing />
     <MoneyBackGuarantee />
+    <HowToGetStarted />
     <StrategyWeUse />
+    <ExchangesSupported />
   </>
 )
 

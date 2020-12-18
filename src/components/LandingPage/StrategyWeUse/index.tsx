@@ -14,7 +14,7 @@ const CardTitle = styled.h4`
 const CardSubtitle = styled.h5`
     font-size: 1.2vw;
     color: ${p => p.theme.palette.text[200]};
-    font-weight: 500;
+    font-weight: 400;
 `
 
 const Content = styled.div`
@@ -23,7 +23,7 @@ const Content = styled.div`
 
 
 const StrategyWeUse = () => (
-    <LandingPageContainer align="center" marginBottom="8vw" >
+    <LandingPageContainer align="center" marginBottom="2vw" >
         <Card>
             <Content>
                 <Space direction="vertical">
@@ -33,7 +33,7 @@ const StrategyWeUse = () => (
                     <CardSubtitle>
                         We have shown you what we can do. Want to know more? Check out the FAQ or chat with us.
                     </CardSubtitle>
-                    <Space>
+                    <Space size="middle">
                         <ActionButton status="success">TRY IT FOR FREE</ActionButton>
                         <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])}>SEE FAQ</ActionButton>
                         <ActionButton>CONTACT US</ActionButton>

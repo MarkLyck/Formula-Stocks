@@ -1,24 +1,31 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { Space } from 'antd'
-import { NavItem } from '~/ui-components'
+import { Space, Divider } from 'antd'
+import { NavItem, LandingPageContainer } from '~/ui-components'
 import LoginItems from './LoginItems'
 import useWindowSize from '~/common/hooks/useWindowSize'
 
 const Header = styled.header`
+    position: absolute;
+    top: 0;
     width:100%;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 16px;
+    padding: 32px 0;
 `
 
 const Logo = styled.img`
-    height: 100%;
-    width: auto;
-    padding: 16px;
+    height: 24px;
+`
+
+const Container = styled(LandingPageContainer)`
+    width:100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 export interface NavbarProps { }
@@ -28,20 +35,24 @@ const Navbar = () => {
 
     return (
         <Header>
-            <Link href="/">
-                <a>
-                    <Logo
-                        data-id="components-navbar"
-                        src={windowSize.width > 1080 ? '/logos/horizontal.svg' : '/logos/logo_icon_white.svg'}
-                    />
-                </a>
-            </Link>
-            <Space>
-                <NavItem href="/">Strategy</NavItem>
-                <NavItem href="/">FAQ</NavItem>
-                <NavItem href="/">White paper</NavItem>
-            </Space>
-            <LoginItems />
+            <Container>
+                <Space>
+                    <Link href="/">
+                        <a>
+                            <Logo
+                                data-id="components-navbar"
+                                // @ts-ignore
+                                src={windowSize.width > 1080 ? '/logos/logo_horizontal_color.svg' : '/logos/logo_icon_color.svg'}
+                            />
+                        </a>
+                    </Link>
+                    <Divider type="vertical" />
+                    <NavItem href="/">Strategy</NavItem>
+                    <NavItem href="/">Pricing</NavItem>
+                    <NavItem href="/">White paper</NavItem>
+                </Space>
+                <LoginItems />
+            </Container>
         </Header>
     )
 }

@@ -10,7 +10,7 @@ const ContentContainer = styled.div`
 `
 
 const MoneyBackGuarantee = () => (
-    <LandingPageContainer marginBottom="8vw" >
+    <LandingPageContainer marginBottom="4vw" >
         <Beside>
             <SpaceImage src="/images/space/space-1.svg" />
             <ContentContainer>

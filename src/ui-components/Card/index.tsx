@@ -24,14 +24,16 @@ export const CardTitle = styled.h3`
 
 const Container = styled.div`
     ${cardStyle}
+    padding: ${(p: any) => p.padding ? p.padding : ''};
 `
 
 export interface CardProps {
-    children: any
+    children: any;
+    style: any;
 }
 
-export const Card = ({ children }: CardProps) => (
-    <Container>
-        {children}
-    </Container>
+export const Card = ({ children, ...args }: CardProps) => (
+    <Container {...args}>
+        { children}
+    </Container >
 )
