@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 import { Space, Carousel } from 'antd'
 import styled from '@emotion/styled'
-import { SmallFeatureCard, LandingPageContainer } from '~/ui-components'
+import { SmallFeatureCard } from '~/ui-components'
 import { useTheme } from '@emotion/react'
-import { maxSiteWidth } from '~/common/styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Container = styled.div`
@@ -28,15 +27,21 @@ const NextButton = styled.button`
     }
 `
 
+let timer: any
+
 const Features = () => {
     const theme = useTheme()
     const slider = useRef();
 
     // @ts-ignore
     const nextPage = () => slider.current.next()
+    const handleClick = () => {
+        nextPage()
+        clearInterval(timer)
+    }
 
     useEffect(() => {
-        let timer = setInterval(() => nextPage(), 7500)
+        timer = setInterval(() => nextPage(), 7500)
 
         return () => {
             clearInterval(timer)
@@ -51,30 +56,30 @@ const Features = () => {
             }}>
                 <div>
                     <Space size="large" align="center">
-                        <SmallFeatureCard icon="percent" title="93.67% Win ratio" color={theme.palette.primary[500]} />
-                        <SmallFeatureCard icon="chart-line" title="+1,007% Return to date" color={theme.palette.success[500]} />
-                        <SmallFeatureCard icon="hand-holding-usd" title="Stay in full control" color={theme.palette.icon_colors.pink} />
-                        <NextButton onClick={nextPage}>
+                        <SmallFeatureCard icon="percent" color={theme.palette.primary[500]}>93.67% Win ratio</SmallFeatureCard>
+                        <SmallFeatureCard icon="chart-line" color={theme.palette.success[500]}>+1,007% Return to date</SmallFeatureCard>
+                        <SmallFeatureCard icon="hand-holding-usd" color={theme.palette.icon_colors.pink}>Stay in full control</SmallFeatureCard>
+                        <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />
                         </NextButton>
                     </Space>
                 </div>
                 <div>
                     <Space size="large" align="center">
-                        <SmallFeatureCard icon="brain" title="AI Stock reports" color={theme.palette.icon_colors.pink} />
-                        <SmallFeatureCard icon="analytics" title="Portfolio management" color={theme.palette.primary[500]} />
-                        <SmallFeatureCard icon="money-bill-wave" title="Money back guarantee" color={theme.palette.success[500]} />
-                        <NextButton onClick={nextPage}>
+                        <SmallFeatureCard icon="brain" color={theme.palette.icon_colors.pink}>AI Stock reports</SmallFeatureCard>
+                        <SmallFeatureCard icon="analytics" color={theme.palette.primary[500]}>Portfolio management</SmallFeatureCard>
+                        <SmallFeatureCard icon="money-bill-wave" color={theme.palette.success[500]}>Money back guarantee</SmallFeatureCard>
+                        <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />
                         </NextButton>
                     </Space>
                 </div>
                 <div>
                     <Space size="large" align="center">
-                        <SmallFeatureCard icon="gift" title="Free 7-day trial" color={theme.palette.danger[500]} />
-                        <SmallFeatureCard icon="comment" title="24/7 Support" color={theme.palette.success[500]} />
-                        <SmallFeatureCard icon="handshake" title="Fully transparent" color={theme.palette.primary[500]} />
-                        <NextButton onClick={nextPage}>
+                        <SmallFeatureCard icon="gift" color={theme.palette.danger[500]}>Free 7-day trial</SmallFeatureCard>
+                        <SmallFeatureCard icon="comment" color={theme.palette.success[500]}>24/7 Support</SmallFeatureCard>
+                        <SmallFeatureCard icon="handshake" color={theme.palette.primary[500]}>Fully transparent</SmallFeatureCard>
+                        <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />
                         </NextButton>
                     </Space>

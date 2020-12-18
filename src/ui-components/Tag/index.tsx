@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import theme from '~/lib/theme'
 
+export * from './TextTag'
+
 export const Container = styled.span`
   background: ${(props: { backgroundColor: string; color: string }) => props.backgroundColor};
   color: ${(props: any) => props.color};

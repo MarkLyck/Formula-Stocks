@@ -3,14 +3,13 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Space } from 'antd'
 
-
 export interface CardProps {
-    title: string;
+    children: any;
     color: string;
     icon: string;
 }
 
-const IconContainer = styled.div`
+export const SmallIconContainer = styled.div`
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -23,6 +22,7 @@ const IconContainer = styled.div`
 `
 
 const Card = styled.div`
+    width: 100%;
     display: flex;
     background: white;
     border-radius: 4px;
@@ -37,20 +37,20 @@ const Card = styled.div`
     }
 `
 
-const Title = styled.h4`
+const Content = styled.div`
     margin: 0;
     font-size: 1rem;
     color: ${p => p.theme.palette.text[500]}
 `
 
-export const SmallFeatureCard = ({ title, color, icon }: CardProps) => (
+export const SmallFeatureCard = ({ children, color, icon }: CardProps) => (
     <Card>
         <Space align="center">
-            <IconContainer>
+            <SmallIconContainer>
                 {/* @ts-ignore */}
                 <FontAwesomeIcon icon={['fad', icon]} color={color} />
-            </IconContainer>
-            <Title>{title}</Title>
+            </SmallIconContainer>
+            <Content>{children}</Content>
         </Space>
     </Card>
 )

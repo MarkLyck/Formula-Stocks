@@ -1,6 +1,19 @@
 
 import { initializeApollo, addApolloState } from '~/lib/apolloClient'
-import { Navbar, Hero, PickingWinningStocks, HowToUse, LatestSellSignals, Performance } from '~/components/LandingPage'
+import {
+  Navbar,
+  Hero,
+  PickingWinningStocks,
+  HowToUse,
+  LatestSellSignals,
+  Performance,
+  Risk,
+  Statistics,
+  AIScore,
+  Newsletter,
+  MoneyBackGuarantee,
+  StrategyWeUse
+} from '~/components/LandingPage'
 
 const IndexPage = () => (
   <>
@@ -8,8 +21,14 @@ const IndexPage = () => (
     <Hero />
     <PickingWinningStocks />
     <Performance />
+    <Risk />
     <LatestSellSignals />
+    <Statistics />
+    <Newsletter />
+    <AIScore />
     <HowToUse />
+    <MoneyBackGuarantee />
+    <StrategyWeUse />
   </>
 )
 

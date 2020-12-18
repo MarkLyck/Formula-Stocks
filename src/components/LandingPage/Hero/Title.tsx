@@ -18,7 +18,7 @@ const Title = () => (
     <H1>
         <Highlight>Value investing</Highlight>
         <br />
-        With an unfair advantage
+        With a technological advantage
     </H1>
 )
 

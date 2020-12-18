@@ -4,6 +4,8 @@ import { Typography } from 'antd'
 const { Title, Paragraph } = Typography
 
 export * from './LandingPageContainer'
+export * from './SpaceImage'
+export * from './Beside'
 
 export const ScalingTitle = styled(Title)`
     text-align: ${(p: { textAlign?: string }) => p.textAlign ? p.textAlign : ''};

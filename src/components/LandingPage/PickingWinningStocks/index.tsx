@@ -3,7 +3,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { maxSiteWidth } from '~/common/styles'
 import { Space } from 'antd'
-import { ActionButton, ScalingTitle, ScalingParagraph } from '~/ui-components'
+import { ActionButton, ScalingTitle, ScalingParagraph, TextTag } from '~/ui-components'
 
 const BackgroundContainer = styled.div`
     background-image: url(/images/product_images/screenshot_space.svg);
@@ -30,12 +30,6 @@ const Content = styled.div`
     margin-left: auto;
 `
 
-const Tag = styled.span`
-  background: ${(props) => props.theme.palette.basic[600]};
-  color: white;
-  border-radius: 4px;
-  padding: 4px 6px;
-`
 
 const HowItWorks = () => (
     <>
@@ -46,10 +40,10 @@ const HowItWorks = () => (
                         <ScalingTitle>How we pick <Highlight>winning stocks</Highlight></ScalingTitle>
                         <ScalingParagraph>
                             Our algorithms are built on timeless value investing principles from history's
-                            top value-investors like Warren Buffet & Benjamin Graham
+                            top value-investors like Warren Buffet & Benjamin Graham.
                         </ScalingParagraph>
                         <ScalingParagraph>
-                            We analyze and evaluate companies based on 100s of factors like: <Tag>value</Tag> <Tag>risk</Tag> <Tag>growth</Tag> <Tag>stewardship</Tag> & many more.
+                            We analyze and evaluate companies based on 100s of factors like: <TextTag>value</TextTag> <TextTag>risk</TextTag> <TextTag>growth</TextTag> <TextTag>stewardship</TextTag> & many more.
                         </ScalingParagraph>
                         <ScalingParagraph>
                             Out of thousands of stocks, only a select few companies make the cut for our portfolio.

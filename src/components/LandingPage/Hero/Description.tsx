@@ -15,7 +15,7 @@ const Description = () => (
         Our strategy invests in high quality companies selling for much less than they should be worth.
         <br />
         <br />
-        <strong>+{WIN_RATIO}%</strong> of these investments have later been sold with a profit.
+        <strong>+{WIN_RATIO}%</strong> of these investments have been sold with a profit.
     </Text>
 )
 
