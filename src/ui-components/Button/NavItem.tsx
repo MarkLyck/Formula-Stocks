@@ -9,7 +9,8 @@ export interface NavItemProps {
     size?: 'tiny' | 'small' | 'medium' | 'large' | 'giant';
     onClick?: () => void;
     children: any;
-    href?: string;
+    href?: string | boolean | null;
+    target?: string;
     disabled?: boolean;
     accessoryLeft?: any;
     accessoryRight?: any;
@@ -31,7 +32,7 @@ const getPadding = (size: string) => {
 }
 
 
-const GhostNavItem = styled.a`
+const GhostNavLink = styled.a`
     background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
     color: ${(p) => p.theme.palette.basic[800]};
     font-weight: bold;
@@ -95,7 +96,7 @@ const GhostNavButton = styled.button`
     }
 `
 
-export const NavItem = ({ onClick = () => { }, href, children, size = 'medium' }: NavItemProps) => {
+export const NavItem = ({ onClick = () => { }, href, target, children, size = 'medium' }: NavItemProps) => {
     if (!href) {
         return (
             <GhostNavButton onClick={onClick} size={size}>
@@ -106,9 +107,9 @@ export const NavItem = ({ onClick = () => { }, href, children, size = 'medium' }
 
     return (
         <Link href={href}>
-            <GhostNavItem size={size}>
+            <GhostNavLink size={size} target={target}>
                 {children}
-            </GhostNavItem>
+            </GhostNavLink>
         </Link>
     )
 }

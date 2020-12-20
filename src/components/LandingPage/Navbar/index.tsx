@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Space, Divider } from 'antd'
 import { scroller } from 'react-scroll'
-import { Button, NavItem, LandingPageContainer } from '~/ui-components'
+import { NavItem, LandingPageContainer } from '~/ui-components'
 import LoginItems from './LoginItems'
 import useWindowSize from '~/common/hooks/useWindowSize'
 
@@ -57,9 +57,9 @@ const Navbar = () => {
                         </a>
                     </Link>
                     <Divider type="vertical" />
-                    <NavItem href="/">Strategy</NavItem>
+                    <NavItem href="/strategy">Strategy</NavItem>
                     <NavItem onClick={goToPricing} href={false}>Pricing</NavItem>
-                    <NavItem href="/">White paper</NavItem>
+                    <NavItem href="/assets/white_paper.pdf" target="_blank">White paper</NavItem>
                 </Space>
                 <LoginItems />
             </Container>
