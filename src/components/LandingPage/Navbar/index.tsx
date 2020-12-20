@@ -2,7 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Space, Divider } from 'antd'
-import { NavItem, LandingPageContainer } from '~/ui-components'
+import { scroller } from 'react-scroll'
+import { Button, NavItem, LandingPageContainer } from '~/ui-components'
 import LoginItems from './LoginItems'
 import useWindowSize from '~/common/hooks/useWindowSize'
 
@@ -33,6 +34,15 @@ export interface NavbarProps { }
 const Navbar = () => {
     const windowSize = useWindowSize()
 
+    const goToPricing = () => {
+        scroller.scrollTo('pricing', {
+            duration: 500,
+            delay: 50,
+            smooth: true,
+            offset: -80
+        })
+    }
+
     return (
         <Header>
             <Container>
@@ -48,12 +58,12 @@ const Navbar = () => {
                     </Link>
                     <Divider type="vertical" />
                     <NavItem href="/">Strategy</NavItem>
-                    <NavItem href="/">Pricing</NavItem>
+                    <NavItem onClick={goToPricing} href={false}>Pricing</NavItem>
                     <NavItem href="/">White paper</NavItem>
                 </Space>
                 <LoginItems />
             </Container>
-        </Header>
+        </Header >
     )
 }
 

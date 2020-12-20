@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { scroller } from 'react-scroll'
 import { Space } from 'antd'
 import { ActionButton } from '~/ui-components'
 import { maxSiteWidth } from '~/common/styles'
@@ -20,20 +21,31 @@ const Content = styled.div`
     margin-bottom: 7vw;
 `
 
-const Hero = () => (
-    <Container>
-        <Content>
-            <Space direction="vertical">
-                <Title />
-                <Description />
-                <Space size="middle">
-                    <ActionButton status="success">TRY IT FOR FREE</ActionButton>
-                    <ActionButton>LEARN MORE</ActionButton>
+const Hero = () => {
+    const learnMore = () => {
+        scroller.scrollTo('how-we-pick-winning-stocks', {
+            duration: 500,
+            delay: 50,
+            smooth: true,
+            offset: 140
+        })
+    }
+
+    return (
+        <Container>
+            <Content>
+                <Space direction="vertical">
+                    <Title />
+                    <Description />
+                    <Space size="middle">
+                        <ActionButton onClick={learnMore} status="success">TRY IT FOR FREE</ActionButton>
+                        <ActionButton onClick={learnMore}> LEARN MORE</ActionButton>
+                    </Space>
                 </Space>
-            </Space>
-        </Content>
-        <Features />
-    </Container>
-)
+            </Content>
+            <Features />
+        </Container>
+    )
+}
 
 export default Hero

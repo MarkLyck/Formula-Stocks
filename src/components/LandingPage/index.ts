@@ -12,3 +12,4 @@ export { default as MoneyBackGuarantee } from './MoneyBackGuarantee';
 export { default as StrategyWeUse } from './StrategyWeUse';
 export { default as ExchangesSupported } from './ExchangesSupported';
 export { default as Pricing } from './Pricing';
+export { default as Footer } from './Footer';

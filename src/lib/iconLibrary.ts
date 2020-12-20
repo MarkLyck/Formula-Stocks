@@ -52,10 +52,13 @@ import {
 
 // duoTone
 import {
+  faAbacus as faAbacusDuo,
   faAnalytics as faAnalyticsDuo,
   faBadgeDollar as faBadgeDollarDuo,
+  faBalanceScaleRight as faBalanceScaleRightDuo,
   faBrain as faBrainDuo,
   faComment as faCommentDuo,
+  faCalculator as faCalculatorDuo,
   faCalendar as faCalendarDuo,
   faChartPie as faChartPieDuo,
   faChartLine as faChartLineDuo,
@@ -91,17 +94,20 @@ import {
 import { faFacebookF, faTwitter, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
+  faAbacusDuo,
   faAnalytics,
   faAnalyticsDuo,
   faAngleDown,
   faAngleLeft,
   faAngleRight,
   faBadgeDollarDuo,
+  faBalanceScaleRightDuo,
   faBars,
   faBrain,
   faBrainDuo,
   faBrainSolid,
   faCalculator,
+  faCalculatorDuo,
   faCalendarDuo,
   faCalendarTimes,
   faCaretRight,

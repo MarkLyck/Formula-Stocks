@@ -8,7 +8,8 @@ interface ActionButtonProps {
     color?: string;
     backgroundColor?: string;
     shadowColor?: string;
-    theme?: any
+    theme?: any;
+    onClick: () => any;
 }
 
 const Button = styled.button`
@@ -42,9 +43,9 @@ const Button = styled.button`
 
 `
 
-export const ActionButton = ({ status = 'primary', backgroundColor, color, shadowColor, children }: ActionButtonProps) => (
+export const ActionButton = ({ status = 'primary', backgroundColor, color, shadowColor, children, ...args }: ActionButtonProps) => (
     // @ts-ignore
-    <Button status={status} backgroundColor={backgroundColor} color={color} shadowColor={shadowColor}>
+    <Button status={status} backgroundColor={backgroundColor} color={color} shadowColor={shadowColor} {...args}>
         {children}
     </Button>
 )

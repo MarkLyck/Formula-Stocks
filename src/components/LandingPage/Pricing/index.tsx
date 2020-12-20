@@ -1,6 +1,7 @@
 import React from 'react'
 import { Divider, Button } from 'antd'
 import styled from '@emotion/styled'
+import { Element } from 'react-scroll'
 import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard } from '~/ui-components'
 import theme from '~/lib/theme'
 
@@ -23,7 +24,7 @@ const Container = styled.div`
 
 const PricingCard = styled(Card)`
     margin: 0 16px;
-    width: 300px;
+    width: 320px;
 
     &:hover {
         background-color: ${p => p.theme.palette.basic[200]};
@@ -43,7 +44,8 @@ const CancelText = styled.p`
 `
 
 const Pricing = () => (
-    <LandingPageContainer align="center" marginBottom="8vw" >
+    <LandingPageContainer align="center" marginBottom="8vw">
+        <Element name="pricing" />
         <TitleContainer>
             <ScalingTitle>
                 Pricing
@@ -69,7 +71,7 @@ const Pricing = () => (
                     Account value $25k - $100k
                 </CardTitle>
                 <Divider />
-                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="analytics" color={theme.palette.primary[500]} hover={false}>Medium capital</SmallFeatureCard>
+                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="analytics" color={theme.palette.primary[500]} hover={false}>For Medium capital</SmallFeatureCard>
                 <PriceTag>
                     $99 / month<sup>*</sup>
                 </PriceTag>
@@ -80,7 +82,7 @@ const Pricing = () => (
                     Account value over $100k
                 </CardTitle>
                 <Divider />
-                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="money-check-edit-alt" color={theme.palette.warning[500]} hover={false}>Large capital</SmallFeatureCard>
+                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="money-check-edit-alt" color={theme.palette.warning[500]} hover={false}>For Large capital</SmallFeatureCard>
                 <PriceTag>
                     Contact us
                 </PriceTag>

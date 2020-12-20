@@ -8,6 +8,7 @@ export interface CardProps {
     color: string;
     icon: string;
     style?: any;
+    hover?: boolean;
 }
 
 export const SmallIconContainer = styled.div`
@@ -35,7 +36,7 @@ const Card = styled.div`
 
     ${(p: { hover: boolean }) => p.hover ? `
         &:hover {
-            background: ${p => p.theme.palette.basic[200]};
+            background: ${(p: any) => p.theme.palette.basic[200]};
         }`
         : ''
     }

@@ -14,7 +14,8 @@ import {
   MoneyBackGuarantee,
   StrategyWeUse,
   ExchangesSupported,
-  Pricing
+  Pricing,
+  Footer
 } from '~/components/LandingPage'
 
 const IndexPage = () => (
@@ -33,6 +34,7 @@ const IndexPage = () => (
     <HowToGetStarted />
     <StrategyWeUse />
     <ExchangesSupported />
+    <Footer />
   </>
 )
 

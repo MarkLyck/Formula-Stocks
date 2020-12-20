@@ -1,6 +1,7 @@
 import React from 'react'
-// import { Space } from 'antd'
+import Router from 'next/router'
 import styled from '@emotion/styled'
+import { Element } from 'react-scroll'
 import { maxSiteWidth } from '~/common/styles'
 import { Space } from 'antd'
 import { ActionButton, ScalingTitle, ScalingParagraph, TextTag } from '~/ui-components'
@@ -31,10 +32,13 @@ const Content = styled.div`
 `
 
 
-const HowItWorks = () => (
-    <>
+const HowItWorks = () => {
+    const goToStrategyPage = () => Router.push('/strategy')
+
+    return (
         <BackgroundContainer>
             <Container>
+                <Element name="how-we-pick-winning-stocks" />
                 <Content>
                     <Space direction="vertical">
                         <ScalingTitle>How we pick <Highlight>winning stocks</Highlight></ScalingTitle>
@@ -48,12 +52,12 @@ const HowItWorks = () => (
                         <ScalingParagraph>
                             Out of thousands of stocks, only a select few companies make the cut for our portfolio.
                         </ScalingParagraph>
-                        <ActionButton>LEARN MORE ABOUT OUR STRATEGY</ActionButton>
+                        <ActionButton onClick={goToStrategyPage}>READ MORE ABOUT OUR STRATEGY</ActionButton>
                     </Space>
                 </Content>
             </Container>
         </BackgroundContainer>
-    </>
-)
+    )
+}
 
 export default HowItWorks

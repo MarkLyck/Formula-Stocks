@@ -5,6 +5,8 @@ const theme: any = {
     },
     palette: {
         text: {
+            0: '#F7F9FC',
+            100: '#EDF1F7',
             200: '#8F9BB3',
             300: '#2E3A59',
             400: '#222B45',

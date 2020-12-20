@@ -21,3 +21,13 @@ export const IRR_GEOMETRIC_MEAN = 48.66
 export const IRR_ARITHMIC_MEAN = 108.01
 
 export const EXPECTED_RETURN = ((WIN_RATIO / 100) * AVG_GAIN - (1 - WIN_RATIO / 100) * AVG_LOSS).toFixed(2)
+
+export const SOCIAL_MEDIA_LINKS = [
+    { href: 'https://www.facebook.com/formulastocks/', icon: 'facebook-f' },
+    { href: 'https://twitter.com/FormulaStocks', icon: 'twitter' },
+    { href: 'https://www.linkedin.com/company/formula-stocks', icon: 'linkedin' },
+]
+
+export const BLOG_POSTS = {
+    BACKTESTING_BIAS: 'https://keepingstock.net/backtesting-bias-and-how-we-avoid-it-fe598930cb1'
+}

@@ -11,16 +11,21 @@ const Title = styled.h2`
 `
 
 const Exchange = styled.img`
-    height: 48px;
+    height: 80px;
     margin: 0 32px;
+    padding: 16px;
+    border-radius: 4px;
+    &:hover {
+        background-color: ${p => p.theme.palette.basic[200]};
+    }
 `
 
 const ExchangesSupported = () => (
-    <LandingPageContainer align="center" marginBottom="200px" >
+    <LandingPageContainer align="center" >
         <Title>
             Exchanges supported
         </Title>
-        <Space size="large">
+        <Space size="middle">
             <Exchange src="/logos/exchanges/nyse.svg" />
             <Exchange src="/logos/exchanges/nasdaq.svg" />
             <Exchange src="/logos/exchanges/tsx.svg" />
