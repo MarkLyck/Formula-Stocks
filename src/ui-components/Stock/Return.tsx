@@ -51,7 +51,7 @@ const Return = ({ percentReturn, loading, positiveColor, negativeColor }: Return
   return (
     <Tag color={color} backgroundColor={lighten(backgroundOpacity, color)}>
       {isPositive ? '+' : ''}
-      {percentReturn}%
+      {Number(percentReturn).toFixed(2)}%
     </Tag>
   )
 }

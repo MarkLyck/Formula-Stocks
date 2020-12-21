@@ -9,3 +9,4 @@ export * from './latestSellSignals'
 
 export * from './LAUNCH_PERFORMANCE_HISTORY'
 export * from './MARKET_PRICE_HISTORY'
+export * from './STATISTICS'

@@ -1,8 +1,8 @@
 import React from 'react'
 import LandingPage from '../../pages'
 import { MockedProvider } from '@apollo/client/testing'
-import { LATEST_SELL_SIGNALS, LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from '~/common/queries'
-import { latestSellSignalsMock, LAUNCH_PERFORMANCE_HISTORY_MOCK, MARKET_PRICE_HISTORY_MOCK } from '~/../tests/mocks'
+import { LATEST_SELL_SIGNALS, LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY, STATISTICS } from '~/common/queries'
+import { latestSellSignalsMock, LAUNCH_PERFORMANCE_HISTORY_MOCK, MARKET_PRICE_HISTORY_MOCK, STATISTICS_MOCK } from '~/../tests/mocks'
 
 const mocks = [
     {
@@ -39,6 +39,14 @@ const mocks = [
         },
         result: {
             data: latestSellSignalsMock,
+        },
+    },
+    {
+        request: {
+            query: STATISTICS,
+        },
+        result: {
+            data: STATISTICS_MOCK,
         },
     },
 ]

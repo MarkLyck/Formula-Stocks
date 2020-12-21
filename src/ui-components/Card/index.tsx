@@ -29,7 +29,7 @@ const Container = styled.div`
 
 export interface CardProps {
     children: any;
-    style: any;
+    style?: any;
 }
 
 export const Card = ({ children, ...args }: CardProps) => (

@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
 import { Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Card } from '~/ui-components'
+import { Card, ButtonIcon } from '~/ui-components'
 import { ErrorHeader, ErrorText } from './styles'
 
 const Container = styled(Card)`
@@ -37,11 +37,11 @@ const PermissionError = () => {
 
   return (
     <Container>
-      <Space direction="vertical" align="center" size="middle" fullWidth>
+      <Space direction="vertical" align="center" size="middle" style={{ width: '100%' }}>
         <FontAwesomeIcon icon={['fad', 'exclamation-triangle']} />
         <ErrorHeader>{title}</ErrorHeader>
         <ErrorText>{text}</ErrorText>
-        <Button onClick={goToAccount} icon={<FontAwesomeIcon icon={['far', 'user']} />}>
+        <Button onClick={goToAccount} icon={<ButtonIcon icon={['far', 'user']} />}>
           {buttonText}
         </Button>
       </Space>

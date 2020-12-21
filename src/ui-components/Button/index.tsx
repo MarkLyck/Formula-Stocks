@@ -5,6 +5,7 @@ import theme from '../../lib/theme'
 
 export * from './NavItem'
 export * from './ActionButton'
+export * from './ButtonIcon'
 
 export interface ButtonProps {
     appearance?: 'filled' | 'outline' | 'ghost';

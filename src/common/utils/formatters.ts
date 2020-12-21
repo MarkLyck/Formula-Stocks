@@ -10,6 +10,7 @@ export const currencyRoundedFormatter = new Intl.NumberFormat('en-US', {
 })
 
 export const numberFormatter = new Intl.NumberFormat('en-US')
+
 export const decimalNumberFormatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 2,
 })

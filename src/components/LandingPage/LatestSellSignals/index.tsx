@@ -37,6 +37,15 @@ const StyledDisclaimer = styled(Disclaimer)`
   text-align:center;
 `
 
+const StockContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const TagContainer = styled.div`
+width: 100px;
+`
+
 const LatestSellSignals = () => {
   const { loading, error, data } = useQuery(LATEST_SELL_SIGNALS)
 
@@ -64,7 +73,12 @@ const LatestSellSignals = () => {
             return (
               <TableRow key={sell.name + i}>
                 <TableCell className="stock-name">
-                  <Tag>{sell.ticker}</Tag> <StockName>{sell.name}</StockName>
+                  <StockContainer>
+                    <TagContainer>
+                      <Tag>{sell.ticker.replace('_', '.')}</Tag>
+                    </TagContainer>
+                    <StockName>{sell.name}</StockName>
+                  </StockContainer>
                 </TableCell>
                 <ReturnTableCell className="purchase-price">${sell.boughtAt.toFixed(2)}</ReturnTableCell>
                 <ReturnTableCell className="sales-price">${sell.soldAt.toFixed(2)}</ReturnTableCell>

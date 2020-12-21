@@ -1,11 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { LoadingIndicator } from './LoadingIndicator'
 
-export const Icon = styled(FontAwesomeIcon)`
-  color: ${(props: any) => props.theme.palette.primary[500]};
-  margin-bottom: 16px;
-`
+export * from './LoadingIndicator'
+export * from './LoadingTag'
 
 const Container = styled.div`
     display: flex;
@@ -18,12 +16,13 @@ const Container = styled.div`
 `
 
 const LoadingTitle = styled.h2`
+margin-top: 8px;
   font-size: 1.2rem;
 `
 
 export const GenericLoading = () => (
   <Container>
-    <Icon icon="spinner-third" spin size="4x" />
+    <LoadingIndicator size="4x" />
     <LoadingTitle>Loading...</LoadingTitle>
   </Container>
 )

@@ -1,9 +1,13 @@
 import React, { useRef, useEffect } from 'react'
 import { Space, Carousel } from 'antd'
 import styled from '@emotion/styled'
-import { SmallFeatureCard } from '~/ui-components'
 import { useTheme } from '@emotion/react'
+import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { STATISTICS, STATISTICS_SINCE_LAUNCH } from '~/common/queries'
+import { SmallFeatureCard } from '~/ui-components'
+import { numberFormatter } from '~/common/utils/formatters'
 
 const Container = styled.div`
     padding: 0 8%;
@@ -30,6 +34,8 @@ const NextButton = styled.button`
 let timer: any
 
 const Features = () => {
+    const { data, loading, error } = useQuery(STATISTICS)
+    const { data: launchData, loading: launchLoading, error: launchError } = useQuery(STATISTICS_SINCE_LAUNCH)
     const theme = useTheme()
     const slider = useRef();
 
@@ -41,12 +47,22 @@ const Features = () => {
     }
 
     useEffect(() => {
-        timer = setInterval(() => nextPage(), 7500)
+        timer = setInterval(() => {
+            if (slider.current) {
+                nextPage()
+            }
+        }, 7500)
 
         return () => {
             clearInterval(timer)
         }
     })
+
+    if (loading || launchLoading) return null
+    if (error || launchError) return null
+
+    const statistics = data ? data.statisticsList.items[0] : {}
+    const launchStatistics = data ? launchData.statisticsSinceLaunchesList.items[0] : {}
 
     return (
         <Container>
@@ -56,8 +72,8 @@ const Features = () => {
             }}>
                 <div>
                     <Space size="large" align="center">
-                        <SmallFeatureCard icon="percent" color={theme.palette.primary[500]}>93.67% Win ratio</SmallFeatureCard>
-                        <SmallFeatureCard icon="chart-line" color={theme.palette.success[500]}>+1,007% Return to date</SmallFeatureCard>
+                        <SmallFeatureCard icon="percent" color={theme.palette.primary[500]}>{statistics.winLossRatio.toFixed(2)}% win ratio</SmallFeatureCard>
+                        <SmallFeatureCard icon="chart-line" color={theme.palette.success[500]}>+{numberFormatter.format(launchStatistics.totalReturn.toFixed(0))}% return to date</SmallFeatureCard>
                         <SmallFeatureCard icon="hand-holding-usd" color={theme.palette.icon_colors.pink}>Stay in full control</SmallFeatureCard>
                         <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />

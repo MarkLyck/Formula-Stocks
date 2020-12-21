@@ -6,13 +6,15 @@ import isEqual from 'lodash/isEqual'
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
-let apolloClient
+console.log('process.env.GRAPHQL_URI', process.env.NEXT_PUBLIC_GRAPHQL_URI)
+
+let apolloClient: any
 
 function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: 'https://nextjs-graphql-with-prisma-simple.vercel.app/api', // Server URL (must be absolute)
+      uri: process.env.NEXT_PUBLIC_GRAPHQL_URI, // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache({
