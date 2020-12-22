@@ -41,9 +41,19 @@ export const ChartLoaderContainer = styled.div`
   ${cardStyle};
   height: 480px;
   width: 100%;
-  max-width: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
+  background: ${p => p.theme.palette.basic[200]};
+  
+  svg {
+    color: ${p => p.theme.palette.primary[500]};
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 1rem;
+  }
 `

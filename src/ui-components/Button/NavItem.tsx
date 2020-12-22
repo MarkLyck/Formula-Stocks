@@ -14,6 +14,7 @@ export interface NavItemProps {
     disabled?: boolean;
     accessoryLeft?: any;
     accessoryRight?: any;
+    realLink?: boolean;
 }
 const getFontSize = (size: string) => {
     if (size === 'tiny') return '12px'
@@ -68,7 +69,7 @@ const GhostNavButton = styled.button`
     background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
     color: ${(p) => p.theme.palette.basic[800]};
     font-weight: bold;
-    padding: ${(p: NavItemProps) => getPadding(p.size)};
+    padding: 8px 16px;
     font-size: ${(p: NavItemProps) => getFontSize(p.size)};
     border: 2px solid transparent;
     border-radius: 4px;
@@ -96,7 +97,7 @@ const GhostNavButton = styled.button`
     }
 `
 
-export const NavItem = ({ onClick = () => { }, href, target, children, size = 'medium' }: NavItemProps) => {
+export const NavItem = ({ onClick = () => { }, realLink, href, target, children, size = 'medium' }: NavItemProps) => {
     if (!href) {
         return (
             <GhostNavButton onClick={onClick} size={size}>
@@ -105,7 +106,19 @@ export const NavItem = ({ onClick = () => { }, href, target, children, size = 'm
         )
     }
 
+    if (realLink) {
+        return (
+            // @ts-ignore
+            <a href={href} target="_blank">
+                <GhostNavLink size={size} target={target}>
+                    {children}
+                </GhostNavLink>
+            </a>
+        )
+    }
+
     return (
+        // @ts-ignore
         <Link href={href}>
             <GhostNavLink size={size} target={target}>
                 {children}

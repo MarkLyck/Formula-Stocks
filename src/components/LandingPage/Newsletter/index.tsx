@@ -1,8 +1,12 @@
-import React from 'react'
-import { Space, Input, Button } from 'antd'
+import React, { useState } from 'react'
+import { Form, Space, Input, Button } from 'antd'
 import styled from '@emotion/styled'
-import { LandingPageContainer, Card, Highlight } from '~/ui-components'
+import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { LandingPageContainer, Card, Highlight, Alert } from '~/ui-components'
+import { CREATE_NEWSLETTER } from '~/common/queries'
+import { Mixpanel } from '~/lib/analytics/mixpanel'
+import { validateEmail, capitalize } from '~/common/utils/helpers'
 import theme from '~/lib/theme'
 
 const CardTitle = styled.h4`
@@ -19,32 +23,112 @@ const CardSubtitle = styled.h5`
 
 const Content = styled.div`
     padding: 16px;
+
+    .ant-form-inline {
+        margin-bottom: 0;
+    }
+    .ant-form-inline .ant-form-item-with-help {
+        margin-bottom: 0;
+    }
 `
 
 const InputIcon = styled(FontAwesomeIcon)`
     margin-right: 8px;
 `
 
-const Newsletter = () => (
-    <LandingPageContainer align="center" marginBottom="8vw" >
-        <Card>
-            <Content>
-                <Space direction="vertical">
-                    <CardTitle>
-                        Don't believe us yet? Let us prove it!
-                    </CardTitle>
-                    <CardSubtitle>
-                        Join our newsletter, to receive emails with <Highlight>actual realtime results</Highlight> of our investment signals (good or bad).
-                    </CardSubtitle>
-                    <Space>
-                        <Input size="large" placeholder="First name" prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.basic[500]} />} />
-                        <Input size="large" placeholder="Email address" prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.basic[500]} />} />
-                        <Button size="large" type="primary">Join newsletter</Button>
+const Newsletter = () => {
+
+    const [email, setEmail] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [emailError, setEmailError] = useState<string | null>(null)
+    const [
+        executeCreateNewsletter,
+        { data: createData, loading: createLoading, error: createError },
+    ] = useMutation(CREATE_NEWSLETTER)
+
+    let alreadyOnList = !!createError
+
+    console.log('createError', createError)
+
+    const handleNameInput = (e) => {
+        e.preventDefault()
+        setFirstName(capitalize(e.target.value))
+    }
+
+    const handleEmailInput = (e) => {
+        e.preventDefault()
+        setEmail(e.target.value.toLowerCase())
+        setEmailError(null)
+    }
+
+    const onFinish = () => {
+        if (!validateEmail(email)) {
+            setEmailError('This email is invalid')
+            return
+        } else {
+            // @ts-ignore
+            if (window.$crisp) window.$crisp.push(['set', 'user:email', email])
+        }
+        if (!firstName) {
+            setEmailError('Please add first name')
+            return
+        }
+
+        executeCreateNewsletter({ variables: { email, firstName } })
+        Mixpanel.track('Newsletter Signup', { email })
+        Mixpanel.people.set({
+            $email: email,
+        })
+
+        // @ts-ignore
+        if (window && window.fbq) {
+            // Facebook pixel tracking
+            // @ts-ignore
+            window.fbq('track', 'Lead')
+        }
+    }
+
+    return (
+        <LandingPageContainer align="center" marginBottom="8vw" >
+            <Card>
+                <Content>
+                    <Space direction="vertical">
+                        <CardTitle>Don't believe us yet? Let us prove it!</CardTitle>
+                        <CardSubtitle>Join our newsletter, to receive emails with <Highlight>actual realtime results</Highlight> of our investment signals (good or bad).</CardSubtitle>
+                        {(!createLoading && createData) || alreadyOnList
+                            ? (<Alert message="Success, you're on the list!" type="success" />)
+                            : (
+                                <Space>
+                                    <Form layout="inline" name="newsletter_signup" onFinish={onFinish}>
+                                        <Form.Item
+                                            name="firstName"
+                                            rules={[{ required: true, message: 'Please input your first name' }]}
+                                        >
+                                            <Input onChange={handleNameInput} size="large" placeholder="First name" prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.basic[500]} />} />
+                                        </Form.Item>
+                                        <Form.Item
+                                            name="email"
+                                            validateStatus={!!emailError ? 'error' : undefined}
+                                            help={!!emailError ? emailError : undefined}
+                                            rules={[
+                                                { required: true, message: 'Please input your email' }
+                                            ]}
+                                        >
+                                            <Input onChange={handleEmailInput} size="large" placeholder="Email address" prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.basic[500]} />} />
+                                        </Form.Item>
+                                        <Form.Item shouldUpdate={true}>
+                                            {() => (
+                                                <Button size="large" type="primary" htmlType="submit" loading={createLoading}>Join newsletter</Button>
+                                            )}
+                                        </Form.Item>
+                                    </Form>
+                                </Space>
+                            )}
                     </Space>
-                </Space>
-            </Content>
-        </Card>
-    </LandingPageContainer>
-)
+                </Content>
+            </Card>
+        </LandingPageContainer >
+    )
+}
 
 export default Newsletter

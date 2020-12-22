@@ -39,6 +39,7 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
     return (
       <ChartLoaderContainer>
         <FontAwesomeIcon icon="spinner-third" spin size="4x" />
+        <p>Loading chart</p>
       </ChartLoaderContainer>
     )
   }

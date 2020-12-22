@@ -59,7 +59,7 @@ const Navbar = () => {
                     <Divider type="vertical" />
                     <NavItem href="/strategy">Strategy</NavItem>
                     <NavItem onClick={goToPricing} href={false}>Pricing</NavItem>
-                    <NavItem href="/assets/white_paper.pdf" target="_blank">White paper</NavItem>
+                    <NavItem realLink href="/assets/white_paper.pdf" target="_blank">White paper</NavItem>
                 </Space>
                 <LoginItems />
             </Container>

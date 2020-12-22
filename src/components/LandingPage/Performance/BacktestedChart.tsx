@@ -51,13 +51,12 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
     return (
       <ChartLoaderContainer>
         <FontAwesomeIcon icon="spinner-third" spin size="4x" />
+        <p>Loading chart</p>
       </ChartLoaderContainer>
     )
   }
 
   const chartData = createChartData(planPerformance, marketPrices)
-  console.log('LaunchChart -> marketPrices', marketPrices)
-  console.log('LaunchChart -> planPerformance', planPerformance)
 
   const max = Math.ceil(maxBy(chartData, (point: any) => point.fs).fs)
 
