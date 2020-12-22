@@ -38,10 +38,11 @@ const Card = styled.div`
     text-align: center;
 `
 
-export const FeatureCard = ({ children, title, color, icon }: CardProps) => (
-    <Card>
+export const FeatureCard = ({ children, title, color, icon, ...args }: CardProps) => (
+    <Card {...args}>
         <Space direction="vertical" align="center">
             <IconContainer>
+                {/* @ts-ignore */}
                 <FontAwesomeIcon icon={['fad', icon]} color={color} size="2x" />
             </IconContainer>
             <Title level={4}>{title}</Title>

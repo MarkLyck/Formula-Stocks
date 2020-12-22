@@ -1,8 +1,8 @@
 import React from 'react'
-import { Divider, Button } from 'antd'
+import { Divider, Button, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { Element } from 'react-scroll'
-import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard } from '~/ui-components'
+import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard, Alert } from '~/ui-components'
 import theme from '~/lib/theme'
 
 const CardTitle = styled.h4`
@@ -24,7 +24,7 @@ const Container = styled.div`
 
 const PricingCard = styled(Card)`
     margin: 0 16px;
-    width: 320px;
+    width: 340px;
 
     &:hover {
         background-color: ${p => p.theme.palette.basic[200]};
@@ -41,6 +41,10 @@ const PriceTag = styled.h5`
 const CancelText = styled.p`
     margin-top: 16px;
     text-align: center;
+`
+
+const StyledAlert = styled(Alert)`
+    margin-top: 24px;
 `
 
 const Pricing = () => (
@@ -60,7 +64,9 @@ const Pricing = () => (
                     Account value under $25k
                 </CardTitle>
                 <Divider />
-                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="gift" color={theme.palette.success[500]} hover={false}>Free 7-day trial</SmallFeatureCard>
+                <Tooltip title="Try it for free for 7-days">
+                    <SmallFeatureCard style={{ boxShadow: 'none' }} icon="gift" color={theme.palette.success[500]} hover={false}>Free 7-day trial</SmallFeatureCard>
+                </Tooltip>
                 <PriceTag>
                     $49 / month<sup>*</sup>
                 </PriceTag>
@@ -68,10 +74,12 @@ const Pricing = () => (
             </PricingCard>
             <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
                 <CardTitle>
-                    Account value $25k - $100k
+                    Account value $25k - $200k
                 </CardTitle>
                 <Divider />
-                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="analytics" color={theme.palette.primary[500]} hover={false}>For Medium capital</SmallFeatureCard>
+                <Tooltip title="This portfolio is tailored for medium-sized accounts.">
+                    <SmallFeatureCard style={{ boxShadow: 'none' }} icon="analytics" color={theme.palette.primary[500]} hover={false}>Best for medium size</SmallFeatureCard>
+                </Tooltip>
                 <PriceTag>
                     $99 / month<sup>*</sup>
                 </PriceTag>
@@ -79,16 +87,19 @@ const Pricing = () => (
             </PricingCard>
             <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
                 <CardTitle>
-                    Account value over $100k
+                    Account value over $200k
                 </CardTitle>
                 <Divider />
-                <SmallFeatureCard style={{ boxShadow: 'none' }} icon="money-check-edit-alt" color={theme.palette.warning[500]} hover={false}>For Large capital</SmallFeatureCard>
+                <Tooltip title="Contact us for portfolios tailored for large or very large accounts.">
+                    <SmallFeatureCard style={{ boxShadow: 'none' }} icon="money-check-edit-alt" color={theme.palette.warning[500]} hover={false}>Best for large cap</SmallFeatureCard>
+                </Tooltip>
                 <PriceTag>
                     Contact us
                 </PriceTag>
                 <Button style={{ fontWeight: 'bold' }}>Send email</Button>
             </PricingCard>
         </Container>
+        <StyledAlert type="info" message="You stay in full control of your investments in your own brokerage account!" />
         <CancelText><sup>*</sup>No lock-in contract, cancel anytime</CancelText>
     </LandingPageContainer >
 )

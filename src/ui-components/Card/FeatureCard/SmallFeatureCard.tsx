@@ -50,8 +50,8 @@ const Content = styled.div`
     color: ${p => p.theme.palette.text[500]}
 `
 
-export const SmallFeatureCard = ({ children, color, icon, style, hover = true }: CardProps) => (
-    <Card hover={hover} style={style}>
+export const SmallFeatureCard = ({ children, color, icon, style, hover = true, ...args }: CardProps) => (
+    <Card hover={hover} style={style} {...args}>
         <Space align="center">
             <SmallIconContainer>
                 {/* @ts-ignore */}

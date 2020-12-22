@@ -45,14 +45,14 @@ const getIcon = (type: 'success' | 'info' | 'warning' | 'error') => {
 }
 
 
-export const Alert = ({ message, type = 'info' }: AlertProps) => {
+export const Alert = ({ message, type = 'info', ...args }: AlertProps) => {
     const theme = useTheme()
 
     const color = getColor(type, theme)
     const backgroundColor = getBackgroundColor(type, theme)
 
     return (
-        <AlertContainer color={color} backgroundColor={backgroundColor}>
+        <AlertContainer color={color} backgroundColor={backgroundColor} {...args}>
             {/* @ts-ignore */}
             <FontAwesomeIcon icon={['fad', getIcon(type)]} /> {message}
         </AlertContainer>
