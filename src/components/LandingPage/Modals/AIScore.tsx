@@ -8,14 +8,14 @@ const StyledSpace = styled(Space)`
     width: 100%;
 `
 
-interface StatisticsDialogProps {
+interface AIScoreModalProps {
     isVisible: boolean;
     onClose: () => any;
 }
 
 
 
-const AIScoreDialog = ({ isVisible, onClose }: StatisticsDialogProps) => (
+const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
     <Modal title="AI Score" visible={isVisible} onOk={onClose} onCancel={onClose} footer={null} width={1000}>
         <StyledSpace direction="vertical" size="middle">
             <Paragraph>
@@ -42,4 +42,4 @@ const AIScoreDialog = ({ isVisible, onClose }: StatisticsDialogProps) => (
     </Modal>
 )
 
-export default AIScoreDialog
+export default AIScoreModal

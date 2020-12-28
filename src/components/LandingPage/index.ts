@@ -8,7 +8,7 @@ export { default as Risk } from './Risk';
 export { default as Statistics } from './Statistics';
 export { default as AIScore } from './AIScore';
 export { default as Newsletter } from './Newsletter';
-export { default as MoneyBackGuarantee } from './MoneyBackGuarantee';
+export { default as MoneyBackGuarantee } from './PerformanceGuarantee';
 export { default as StrategyWeUse } from './StrategyWeUse';
 export { default as ExchangesSupported } from './ExchangesSupported';
 export { default as Pricing } from './Pricing';

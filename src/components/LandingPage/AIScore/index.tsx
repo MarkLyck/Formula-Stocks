@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { Highlight, ActionButton, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage, TextTag } from '~/ui-components'
-import { AIScoreDialog } from '../Dialogs'
+import { AIScoreModal } from '../Modals'
 
 const ContentContainer = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ const AIScore = () => {
 
     return (
         <LandingPageContainer marginBottom="8vw" >
-            <AIScoreDialog isVisible={dialogVisible} onClose={() => setDialogVisible(false)} />
+            <AIScoreModal isVisible={dialogVisible} onClose={() => setDialogVisible(false)} />
             <Beside>
                 <ContentContainer>
                     <Space direction="vertical">

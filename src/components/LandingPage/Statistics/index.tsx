@@ -17,7 +17,7 @@ import {
 } from '~/ui-components'
 import theme from '~/lib/theme'
 import { STATISTICS } from '~/common/queries'
-import { StatisticsDialog } from '../Dialogs'
+import { StatisticsModal } from '../Modals'
 
 const ContentContainer = styled.div`
     display: flex;
@@ -37,7 +37,7 @@ const Statistics = () => {
 
     return (
         <LandingPageContainer marginBottom="8vw" >
-            {!loading && <StatisticsDialog isVisible={dialogVisible} onClose={() => setDialogVisible(false)} statistics={statistics} />}
+            {!loading && <StatisticsModal isVisible={dialogVisible} onClose={() => setDialogVisible(false)} statistics={statistics} />}
             <Beside>
                 <SpaceImage src="/images/space/space-0.svg" />
                 <ContentContainer>

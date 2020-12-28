@@ -8,7 +8,7 @@ const StyledSpace = styled(Space)`
     width: 100%;
 `
 
-interface StatisticsDialogProps {
+interface StatisticsModalProps {
     isVisible: boolean;
     onClose: () => any;
     statistics: any;
@@ -19,7 +19,7 @@ const Paragraph = styled.p`
     text-align: center;
 `
 
-const StatisticsDialog = ({ isVisible, statistics, onClose }: StatisticsDialogProps) => (
+const StatisticsModal = ({ isVisible, statistics, onClose }: StatisticsModalProps) => (
     <Modal title="Advanced statistics" visible={isVisible} onOk={onClose} onCancel={onClose} footer={null} width={600}>
         <StyledSpace direction="vertical" size="middle">
             <StatisticsCard icon="chart-line" color={theme.palette.success[500]}>
@@ -66,4 +66,4 @@ const StatisticsDialog = ({ isVisible, statistics, onClose }: StatisticsDialogPr
     </Modal >
 )
 
-export default StatisticsDialog
+export default StatisticsModal
