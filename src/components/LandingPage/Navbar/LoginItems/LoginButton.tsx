@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { Button } from '~/ui-components'
+import { LoginModal } from '~/components/LandingPage/Modals'
 
 const StyledButton = styled(Button)`
     color: ${(p) => p.theme.colors.white};
@@ -17,10 +18,17 @@ const StyledButton = styled(Button)`
     }
 `
 
-const LoginButton = (props: any) => (
-    <StyledButton appearance="ghost" {...props}>
-        Login
-    </StyledButton>
-)
+const LoginButton = (props: any) => {
+    const [isVisible, setIsVisible] = useState(false)
+
+    return (
+        <>
+            <LoginModal isVisible={isVisible} onClose={() => setIsVisible(false)} />
+            <StyledButton appearance="ghost" onClick={() => setIsVisible(true)} {...props}>
+                Login
+            </StyledButton>
+        </>
+    )
+}
 
 export default LoginButton

@@ -1,6 +1,6 @@
 import { subscriptionMock } from './subscription'
 
-export const userMock = {
+export const USER_MOCK = {
   id: 'ck40ei37x00ye08js7guo95e3',
   intros: {
     reports: true,

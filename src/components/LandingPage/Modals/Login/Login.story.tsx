@@ -2,7 +2,8 @@ import React from 'react'
 import { MockedProvider } from '@apollo/client/testing'
 import { USER_LOGIN } from '~/common/queries'
 import { USER_LOGIN_MOCK } from '~/../tests/mocks'
-import Login from './index'
+import LoginModal from './index'
+import LoginForm from './LoginForm'
 // import ResetPassword from './ResetPassword'
 
 export default {
@@ -23,7 +24,13 @@ const mocks = [
 
 export const login_modal = () => (
   <MockedProvider mocks={mocks} addTypename={false}>
-    <Login onClose={() => { }} isVisible />
+    <LoginModal onClose={() => { }} isVisible />
+  </MockedProvider>
+)
+
+export const login_form = () => (
+  <MockedProvider mocks={mocks} addTypename={false}>
+    <LoginForm />
   </MockedProvider>
 )
 

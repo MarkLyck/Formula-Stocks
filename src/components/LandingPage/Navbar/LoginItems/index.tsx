@@ -26,7 +26,6 @@ const LoginItems = () => {
     }
 
     // Get user login info
-    // const handleLogin = () => {}
     // const handleSignup = () => {}
 
     if (loggedIn) {
