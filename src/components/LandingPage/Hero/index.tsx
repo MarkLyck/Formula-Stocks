@@ -21,7 +21,7 @@ const Content = styled.div`
     margin-bottom: 7vw;
 `
 
-const Hero = () => {
+const Hero = ({ showSignup }: any) => {
     const learnMore = () => {
         scroller.scrollTo('how-we-pick-winning-stocks', {
             duration: 500,
@@ -38,7 +38,7 @@ const Hero = () => {
                     <Title />
                     <Description />
                     <Space size="middle">
-                        <ActionButton onClick={learnMore} status="success">TRY IT FOR FREE</ActionButton>
+                        <ActionButton onClick={showSignup} status="success">TRY IT FOR FREE</ActionButton>
                         <ActionButton onClick={learnMore}> LEARN MORE</ActionButton>
                     </Space>
                 </Space>

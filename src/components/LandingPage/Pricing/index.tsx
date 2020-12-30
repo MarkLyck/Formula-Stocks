@@ -47,7 +47,7 @@ const StyledAlert = styled(Alert)`
     margin-top: 24px;
 `
 
-const Pricing = () => (
+const Pricing = ({ showSignup }: any) => (
     <LandingPageContainer align="center" marginBottom="8vw">
         <Element name="pricing" />
         <TitleContainer>
@@ -70,7 +70,7 @@ const Pricing = () => (
                 <PriceTag>
                     $49 / month<sup>*</sup>
                 </PriceTag>
-                <Button style={{ fontWeight: 'bold' }} type="primary">Try it for free</Button>
+                <Button onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">Try it for free</Button>
             </PricingCard>
             <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
                 <CardTitle>
@@ -83,7 +83,7 @@ const Pricing = () => (
                 <PriceTag>
                     $99 / month<sup>*</sup>
                 </PriceTag>
-                <Button style={{ fontWeight: 'bold' }} type="primary">Get started</Button>
+                <Button onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">Get started</Button>
             </PricingCard>
             <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
                 <CardTitle>

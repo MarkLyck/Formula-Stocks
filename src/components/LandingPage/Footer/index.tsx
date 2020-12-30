@@ -51,10 +51,6 @@ const Footer = () => (
             <Space size="middle">
                 {SOCIAL_MEDIA_LINKS.map(link => <SocialMediaLink key={link.href} {...link} />)}
             </Space>
-            {/* <FooterDisclaimer>
-                <strong>When investing in stocks your capital is at risk.</strong>
-            </FooterDisclaimer> */}
-            {/* <Divider /> */}
             <FooterDisclaimer>
                 By accessing the Site and any pages thereof, you agree to be bound by the {COMPANY_NAME} Terms of Use and Privacy Policy.
             </FooterDisclaimer>

@@ -10,7 +10,7 @@ import SignupButton from './SignupButton'
 import LogoutButton from './LogoutButton'
 import DashboardButton from './DashboardButton'
 
-const LoginItems = () => {
+const LoginItems = ({ showSignup }) => {
     const [loggedIn, setLoggedIn] = useState(
         // @ts-ignore window.authToken
         (hasStorage && localStorage.getItem('authToken')) || (isBrowser && window.authToken)
@@ -25,9 +25,6 @@ const LoginItems = () => {
         Router.push('/dashboard')
     }
 
-    // Get user login info
-    // const handleSignup = () => {}
-
     if (loggedIn) {
         return (
             <Space>
@@ -40,7 +37,7 @@ const LoginItems = () => {
     return (
         <Space>
             <LoginButton />
-            <SignupButton />
+            <SignupButton onClick={showSignup} />
         </Space>
     )
 }

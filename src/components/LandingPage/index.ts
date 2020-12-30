@@ -9,7 +9,7 @@ export { default as Statistics } from './Statistics';
 export { default as AIScore } from './AIScore';
 export { default as Newsletter } from './Newsletter';
 export { default as MoneyBackGuarantee } from './PerformanceGuarantee';
+export { default as Pricing } from './Pricing';
 export { default as StrategyWeUse } from './StrategyWeUse';
 export { default as ExchangesSupported } from './ExchangesSupported';
-export { default as Pricing } from './Pricing';
 export { default as Footer } from './Footer';

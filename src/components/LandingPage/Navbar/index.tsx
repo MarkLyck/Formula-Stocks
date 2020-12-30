@@ -31,7 +31,7 @@ const Container = styled(LandingPageContainer)`
 
 export interface NavbarProps { }
 
-const Navbar = () => {
+const Navbar = ({ showSignup }: any) => {
     const windowSize = useWindowSize()
 
     const goToPricing = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
                     <NavItem onClick={goToPricing} href={false}>Pricing</NavItem>
                     <NavItem realLink href="/assets/white_paper.pdf" target="_blank">White paper</NavItem>
                 </Space>
-                <LoginItems />
+                <LoginItems showSignup={showSignup} />
             </Container>
         </Header >
     )

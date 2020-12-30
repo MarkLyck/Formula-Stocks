@@ -1,5 +1,6 @@
-
+import React, { useState } from 'react'
 import { initializeApollo, addApolloState } from '~/lib/apolloClient'
+import { SignupModal } from '~/components/LandingPage/Modals'
 import {
   Navbar,
   Hero,
@@ -18,25 +19,34 @@ import {
   Footer
 } from '~/components/LandingPage'
 
-const IndexPage = () => (
-  <>
-    <Navbar />
-    <Hero />
-    <PickingWinningStocks />
-    <Performance />
-    <Risk />
-    <LatestSellSignals />
-    <Statistics />
-    <Newsletter />
-    <AIScore />
-    <Pricing />
-    <MoneyBackGuarantee />
-    <HowToGetStarted />
-    <StrategyWeUse />
-    <ExchangesSupported />
-    <Footer />
-  </>
-)
+const IndexPage = () => {
+  const [signupVisible, setSignupVisible] = useState(false)
+
+  const showSignup = () => setSignupVisible(true)
+
+  return (
+    <>
+      {/* Modals */}
+      <SignupModal isVisible={signupVisible} onClose={() => setSignupVisible(false)} />
+      {/* Page components */}
+      <Navbar showSignup={showSignup} />
+      <Hero showSignup={showSignup} />
+      <PickingWinningStocks />
+      <Performance />
+      <Risk />
+      <LatestSellSignals />
+      <Statistics />
+      <Newsletter />
+      <AIScore />
+      <Pricing showSignup={showSignup} />
+      <MoneyBackGuarantee />
+      <HowToGetStarted />
+      <StrategyWeUse showSignup={showSignup} />
+      <ExchangesSupported />
+      <Footer />
+    </>
+  )
+}
 
 export async function getStaticProps() {
   const apolloClient = initializeApollo()

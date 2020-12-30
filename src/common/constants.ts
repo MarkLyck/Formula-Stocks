@@ -4,7 +4,6 @@ export const AUTH_PROFILE_ID = 'ck1y7bhrz00m101kzc5cp20ft'
 
 export const STRIPE_API_KEY = 'pk_live_3kRhRm6wqrUJ3ThsaDlf0f8w'
 export const PLAN_PREFIX = 'weekly-'
-export const MAX_USERS = 100
 export const PRICE = 29
 
 export const COMPANY_NAME = "Formula Stocks"
@@ -31,3 +30,22 @@ export const SOCIAL_MEDIA_LINKS = [
 export const BLOG_POSTS = {
     BACKTESTING_BIAS: 'https://keepingstock.net/backtesting-bias-and-how-we-avoid-it-fe598930cb1'
 }
+
+export const PLANS = [
+    {
+        id: '',
+        name: 'Monthly plan',
+        price: 49.99,
+        paymentSchedule: 'monthly',
+        priceDescription: '$49.99 / month',
+        icon: 'check'
+    },
+    {
+        id: '',
+        name: 'Yearly plan - Save 20%',
+        price: 499.99,
+        paymentSchedule: 'yearly',
+        priceDescription: '$499.99 / year (20% off)',
+        icon: 'tags'
+    },
+]

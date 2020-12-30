@@ -22,7 +22,7 @@ const Content = styled.div`
 `
 
 
-const StrategyWeUse = () => (
+const StrategyWeUse = ({ showSignup }) => (
     <LandingPageContainer align="center" marginBottom="2vw" >
         <Card>
             <Content>
@@ -34,7 +34,7 @@ const StrategyWeUse = () => (
                         We have shown you what we can do. Want to know more? Check out the FAQ or chat with us.
                     </CardSubtitle>
                     <Space size="middle">
-                        <ActionButton status="success">TRY IT FOR FREE</ActionButton>
+                        <ActionButton onClick={showSignup} status="success">TRY IT FOR FREE</ActionButton>
                         <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])}>SEE FAQ</ActionButton>
                         <ActionButton>CONTACT US</ActionButton>
                     </Space>

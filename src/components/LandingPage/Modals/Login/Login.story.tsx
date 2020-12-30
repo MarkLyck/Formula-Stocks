@@ -8,6 +8,9 @@ import LoginForm from './LoginForm'
 
 export default {
   title: 'landing_page/modals/login',
+  parameters: {
+    layout: 'centered'
+  }
 }
 
 const mocks = [
