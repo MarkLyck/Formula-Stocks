@@ -180,7 +180,7 @@ const renderChart = ({
   chart
     .line()
     .position('date*market')
-    .color(theme.palette.basic[1100])
+    .color(theme.palette.basic[800])
     .tooltip('date*market', (_date: any, market: any) => ({
       value: scale.fs.formatter(market),
       className: 'market',

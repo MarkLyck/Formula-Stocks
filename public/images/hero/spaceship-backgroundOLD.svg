@@ -475,6 +475,7 @@
     </defs>
     <g id="Background" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="background" transform="translate(-59.000000, 0.000000)">
+            <rect id="Rectangle" stroke="#979797" fill="#FFFFFF" x="59.5" y="0.5" width="1919" height="1333"></rect>
             <g id="Group" transform="translate(59.000000, 0.000000)" fill-rule="nonzero">
                 <path d="M1920,0 L1920,918 C1762.768,944.506 1583.09,905.393 1472.55,799.787 C1428.729,757.819 1391.168,706.884 1338.305,677.471 C1222.493,613.264 1058.34,667.069 964.091,572.731 C882.361,491.307 904.272,347.828 843.411,248.827 C816.979,205.783 781.505,169.197 742.553,137.631 C700.575,103.886 672.793,54.44 658,0 L1920,0 Z" id="Path" fill="#ECF0F9"></path>
                 <g id="H-link" transform="translate(706.000000, 0.000000)" fill="#ECF0F9">

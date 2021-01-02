@@ -64,6 +64,11 @@ const FilledButton = styled.button`
         color: ${theme.palette.basic[600]};
         cursor: not-allowed;
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding: 4px 12px;
+        font-size: 14px;
+    }
 `
 
 const OutlineButton = styled.button`
@@ -96,6 +101,11 @@ const OutlineButton = styled.button`
         color: ${theme.palette.basic[600]};
         cursor: not-allowed;
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding: 4px 12px;
+        font-size: 14px;
+    }
 `
 
 const GhostButton = styled.button`
@@ -127,6 +137,11 @@ const GhostButton = styled.button`
         border: 2px solid ${transparentize(1 - 0.24, theme.palette.basic[500])};
         color: ${theme.palette.basic[600]};
         cursor: not-allowed;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding: 4px 12px;
+        font-size: 14px;
     }
 `
 

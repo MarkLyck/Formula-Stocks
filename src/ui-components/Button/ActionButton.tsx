@@ -41,6 +41,10 @@ const Button = styled.button`
         opacity: 0.7;
     }
 
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 `
 
 export const ActionButton = ({ status = 'primary', backgroundColor, color, shadowColor, children, ...args }: ActionButtonProps) => (

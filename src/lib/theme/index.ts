@@ -94,6 +94,20 @@ const theme: any = {
         },
         border: '#ebedf5',
     },
+    breakpoints: {
+        extraSmall: '380px',
+        small: '720px',
+        medium: '960px',
+        large: '1280px',
+        extraLarge: '1920px',
+        values: {
+            extraSmall: 380,
+            small: 720,
+            medium: 960,
+            large: 1280,
+            extraLarge: 1920,
+        }
+    }
 }
 
 export default theme

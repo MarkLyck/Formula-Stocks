@@ -29,6 +29,29 @@ const Container = styled(LandingPageContainer)`
     justify-content: space-between;
 `
 
+const NavItems = styled(Space)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media(max-width: 700px) {
+         .ant-space-item:nth-child(1) {
+            display: none;
+        }
+    }
+
+    @media(max-width: 600px) {
+        .ant-space-item:nth-child(2) {
+           display: none;
+       }
+   }
+
+   @media(max-width: 500px) {
+    display: none;  
+   }
+`
+
+
 export interface NavbarProps { }
 
 const Navbar = ({ showSignup }: any) => {
@@ -57,9 +80,11 @@ const Navbar = ({ showSignup }: any) => {
                         </a>
                     </Link>
                     <Divider type="vertical" />
-                    <NavItem href="/strategy">Strategy</NavItem>
-                    <NavItem onClick={goToPricing} href={false}>Pricing</NavItem>
-                    <NavItem realLink href="/assets/white_paper.pdf" target="_blank">White paper</NavItem>
+                    <NavItems>
+                        <NavItem href="/strategy">Strategy</NavItem>
+                        <NavItem onClick={goToPricing} href={false}>Pricing</NavItem>
+                        <NavItem realLink href="/assets/white_paper.pdf" target="_blank">White paper</NavItem>
+                    </NavItems>
                 </Space>
                 <LoginItems showSignup={showSignup} />
             </Container>

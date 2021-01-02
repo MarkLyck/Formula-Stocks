@@ -94,7 +94,7 @@ const Newsletter = () => {
                 <Content>
                     <Space direction="vertical">
                         <CardTitle>Don't believe us yet? Let us prove it!</CardTitle>
-                        <CardSubtitle>Join our newsletter, to receive emails with <Highlight>actual realtime results</Highlight> of our investment signals (good or bad).</CardSubtitle>
+                        <CardSubtitle>Join our newsletter, to receive emails with <Highlight>actual results</Highlight> of our investment signals (good or bad).</CardSubtitle>
                         {(!createLoading && createData) || alreadyOnList
                             ? (<Alert message="Success, you're on the list!" type="success" />)
                             : (

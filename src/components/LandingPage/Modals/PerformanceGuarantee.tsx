@@ -24,7 +24,7 @@ const PerformanceGuaranteeModal = ({ isVisible, onClose }: PerformanceGuaranteeM
                 If our strategy has not outperformed the S&P500 (SPX) over a period of 24 months from the date of signup. You are eligible for a full refund of all payments made to {COMPANY_NAME}.
                 <br />
                 <br />
-                <Underline>The refund does not include any potential losses you might have incurred investing in the stock market, only payments made to {COMPANY_NAME}*</Underline>
+                <Underline>The refund does not include any potential losses you might have incurred investing in the stock market. We can only refund payments made to {COMPANY_NAME}*</Underline>
                 <br />
                 <br />
                 Since {COMPANY_NAME} launched in 2009 our strategy has consistently outperfomed the S&P500 index in the vast majority of years.

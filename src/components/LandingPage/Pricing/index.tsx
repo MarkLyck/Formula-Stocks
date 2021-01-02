@@ -43,9 +43,9 @@ const CancelText = styled.p`
     text-align: center;
 `
 
-const StyledAlert = styled(Alert)`
-    margin-top: 24px;
-`
+// const StyledAlert = styled(Alert)`
+//     margin-top: 24px;
+// `
 
 const Pricing = ({ showSignup }: any) => (
     <LandingPageContainer align="center" marginBottom="8vw">
@@ -90,7 +90,7 @@ const Pricing = ({ showSignup }: any) => (
                     Account value over $200k
                 </CardTitle>
                 <Divider />
-                <Tooltip title="Contact us for portfolios tailored for large or very large accounts.">
+                <Tooltip title="Contact us for portfolios tailored for large accounts.">
                     <SmallFeatureCard style={{ boxShadow: 'none' }} icon="money-check-edit-alt" color={theme.palette.warning[500]} hover={false}>Best for large cap</SmallFeatureCard>
                 </Tooltip>
                 <PriceTag>
@@ -99,7 +99,7 @@ const Pricing = ({ showSignup }: any) => (
                 <Button style={{ fontWeight: 'bold' }}>Send email</Button>
             </PricingCard>
         </Container>
-        <StyledAlert type="info" message="You stay in full control of your investments in your own brokerage account!" />
+        {/* <StyledAlert type="info" message="You stay in full control of your investments in your brokerage account!" /> */}
         <CancelText><sup>*</sup>No lock-in contract, cancel anytime</CancelText>
     </LandingPageContainer >
 )

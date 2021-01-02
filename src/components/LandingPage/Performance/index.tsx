@@ -106,7 +106,7 @@ const Performance = () => {
                 marketPrices={marketPrices}
               />
             ) : null}
-            <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer>
+            {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
             <Button onClick={toggleModal}>See yearly returns</Button>
           </Tabs.TabPane>
           <Tabs.TabPane tab="1970 - 2020 Backtested Performance" key="2">
@@ -135,7 +135,7 @@ const Performance = () => {
           visible={returnsModalVisible}
           onCancel={toggleModal}
           footer={[
-            <Button key="back" onClick={toggleModal}>
+            <Button key="back" onClick={toggleModal} size="large">
               Dismiss
               </Button>,
           ]}

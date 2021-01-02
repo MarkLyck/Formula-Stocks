@@ -6,8 +6,6 @@ import isEqual from 'lodash/isEqual'
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
-console.log('process.env.GRAPHQL_URI', process.env.NEXT_PUBLIC_GRAPHQL_URI)
-
 let apolloClient: any
 
 function createApolloClient() {

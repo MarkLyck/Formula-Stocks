@@ -43,7 +43,7 @@ const StockContainer = styled.div`
 `
 
 const TagContainer = styled.div`
-width: 100px;
+  width: 90px;
 `
 
 const LatestSellSignals = () => {

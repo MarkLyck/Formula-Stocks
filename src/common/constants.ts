@@ -1,6 +1,6 @@
 export const WORK_SPACE_ID = 'ck1y5djt0000201ldey0t1bju'
 export const GRAPHQL_ENDPOINT = `https://api.8base.com/${WORK_SPACE_ID}`
-export const AUTH_PROFILE_ID = 'ck1y7bhrz00m101kzc5cp20ft'
+export const AUTH_PROFILE_ID = 'ck3689vfo00xk01l5g4we1bp1'
 
 export const STRIPE_API_KEY = 'pk_live_3kRhRm6wqrUJ3ThsaDlf0f8w'
 export const PLAN_PREFIX = 'weekly-'

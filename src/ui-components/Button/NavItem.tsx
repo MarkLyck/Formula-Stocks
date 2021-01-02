@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Router from 'next/router'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 
@@ -63,6 +64,11 @@ const GhostNavLink = styled.a`
         color: ${(p) => p.theme.palette.basic[600]};
         cursor: not-allowed;
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
 `
 
 const GhostNavButton = styled.button`
@@ -74,7 +80,7 @@ const GhostNavButton = styled.button`
     border: 2px solid transparent;
     border-radius: 4px;
     outline: none;
-
+    
     &:hover {
         cursor: pointer;
         background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[500])};
@@ -95,35 +101,30 @@ const GhostNavButton = styled.button`
         color: ${(p) => p.theme.palette.basic[600]};
         cursor: not-allowed;
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding: 4px 12px;
+        font-size: 14px;
+    }
 `
 
 export const NavItem = ({ onClick = () => { }, realLink, href, target, children, size = 'medium' }: NavItemProps) => {
-    if (!href) {
-        return (
-            <GhostNavButton onClick={onClick} size={size}>
-                {children}
-            </GhostNavButton>
-        )
-    }
-
-    if (realLink) {
-        return (
+    const handleClick = () => {
+        if (realLink) {
             // @ts-ignore
-            <a href={href} target="_blank">
-                <GhostNavLink size={size} target={target}>
-                    {children}
-                </GhostNavLink>
-            </a>
-        )
+            window.open(href, target);
+        } else if (href) {
+            // @ts-ignore
+            Router.push(href)
+        } else {
+            onClick()
+        }
     }
 
     return (
-        // @ts-ignore
-        <Link href={href}>
-            <GhostNavLink size={size} target={target}>
-                {children}
-            </GhostNavLink>
-        </Link>
+        <GhostNavButton onClick={handleClick} size={size}>
+            {children}
+        </GhostNavButton>
     )
 }
 

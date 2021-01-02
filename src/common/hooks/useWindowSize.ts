@@ -3,12 +3,10 @@ import { isBrowser } from '~/common/utils/featureTests'
 
 // Hook
 function useWindowSize() {
-    const isBrowser = typeof window === 'object'
-
     function getSize() {
         return {
-            width: isBrowser ? window.innerWidth : undefined,
-            height: isBrowser ? window.innerHeight : undefined,
+            width: isBrowser ? window.innerWidth : 0,
+            height: isBrowser ? window.innerHeight : 0,
         }
     }
 
@@ -16,9 +14,7 @@ function useWindowSize() {
 
     // @ts-ignore
     useEffect(() => {
-        if (!isBrowser) {
-            return false
-        }
+        if (!isBrowser) return false
 
         function handleResize() {
             setWindowSize(getSize())

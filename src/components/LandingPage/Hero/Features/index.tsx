@@ -8,9 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { STATISTICS, STATISTICS_SINCE_LAUNCH } from '~/common/queries'
 import { SmallFeatureCard } from '~/ui-components'
 import { numberFormatter } from '~/common/utils/formatters'
+import { useWindowSize } from '~/common/hooks'
 
 const Container = styled.div`
     padding: 0 8%;
+    margin-left: -8px;
+
 `
 
 const NextButton = styled.button`
@@ -29,6 +32,37 @@ const NextButton = styled.button`
     &:active {
         background: ${p => p.theme.palette.basic[300]};
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+    }
+`
+
+const StyledSmallFeatureCard = styled(SmallFeatureCard)`
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        margin-left: 0;
+    }
+`
+
+const SlickItem = styled.div`
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+    }
+`
+
+const StyledSpace = styled(Space)`
+    margin-left: 8px;
+
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0;
+
+        > .ant-space-item {
+            width: 100%;
+        }
+    }
 `
 
 let timer: any
@@ -38,6 +72,7 @@ const Features = () => {
     const { data: launchData, loading: launchLoading, error: launchError } = useQuery(STATISTICS_SINCE_LAUNCH)
     const theme = useTheme()
     const slider = useRef();
+    const windowSize = useWindowSize()
 
     // @ts-ignore
     const nextPage = () => slider.current.next()
@@ -48,9 +83,9 @@ const Features = () => {
 
     useEffect(() => {
         timer = setInterval(() => {
-            if (slider.current) {
-                nextPage()
-            }
+            // if (slider.current) {
+            //     nextPage()
+            // }
         }, 7500)
 
         return () => {
@@ -70,36 +105,36 @@ const Features = () => {
                 // @ts-ignore
                 slider.current = ref;
             }}>
-                <div>
-                    <Space size="large" align="center">
-                        <SmallFeatureCard icon="percent" color={theme.palette.primary[500]}>{statistics.winLossRatio.toFixed(2)}% win ratio</SmallFeatureCard>
-                        <SmallFeatureCard icon="chart-line" color={theme.palette.success[500]}>+{numberFormatter.format(launchStatistics.totalReturn.toFixed(0))}% return to date</SmallFeatureCard>
-                        <SmallFeatureCard icon="hand-holding-usd" color={theme.palette.icon_colors.pink}>Stay in full control</SmallFeatureCard>
+                <SlickItem>
+                    <StyledSpace size={windowSize.width <= theme.breakpoints.values.small ? "small" : "large"} align="center" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                        <StyledSmallFeatureCard icon="percent" color={theme.palette.primary[500]}>{statistics.winLossRatio.toFixed(2)}% win ratio</StyledSmallFeatureCard>
+                        <StyledSmallFeatureCard icon="chart-line" color={theme.palette.success[500]}>+{numberFormatter.format(launchStatistics.totalReturn.toFixed(0))}% return to date</StyledSmallFeatureCard>
+                        <StyledSmallFeatureCard icon="hand-holding-usd" color={theme.palette.icon_colors.pink}>Stay in full control</StyledSmallFeatureCard>
                         <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />
                         </NextButton>
-                    </Space>
-                </div>
-                <div>
-                    <Space size="large" align="center">
-                        <SmallFeatureCard icon="brain" color={theme.palette.icon_colors.pink}>AI Stock reports</SmallFeatureCard>
-                        <SmallFeatureCard icon="analytics" color={theme.palette.primary[500]}>Portfolio management</SmallFeatureCard>
-                        <SmallFeatureCard icon="money-bill-wave" color={theme.palette.success[500]}>Money back guarantee</SmallFeatureCard>
+                    </StyledSpace>
+                </SlickItem>
+                <SlickItem>
+                    <StyledSpace size={windowSize.width <= theme.breakpoints.values.small ? "small" : "large"} align="center" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                        <StyledSmallFeatureCard icon="brain" color={theme.palette.icon_colors.pink}>AI Stock reports</StyledSmallFeatureCard>
+                        <StyledSmallFeatureCard icon="analytics" color={theme.palette.primary[500]}>Portfolio management</StyledSmallFeatureCard>
+                        <StyledSmallFeatureCard icon="money-bill-wave" color={theme.palette.success[500]}>Money back guarantee</StyledSmallFeatureCard>
                         <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />
                         </NextButton>
-                    </Space>
-                </div>
-                <div>
-                    <Space size="large" align="center">
-                        <SmallFeatureCard icon="gift" color={theme.palette.danger[500]}>Free 7-day trial</SmallFeatureCard>
-                        <SmallFeatureCard icon="comment" color={theme.palette.success[500]}>24/7 Support</SmallFeatureCard>
-                        <SmallFeatureCard icon="handshake" color={theme.palette.primary[500]}>Fully transparent</SmallFeatureCard>
+                    </StyledSpace>
+                </SlickItem>
+                <SlickItem>
+                    <StyledSpace size={windowSize.width <= theme.breakpoints.values.small ? "small" : "large"} align="center" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                        <StyledSmallFeatureCard icon="gift" color={theme.palette.danger[500]}>Free 7-day trial</StyledSmallFeatureCard>
+                        <StyledSmallFeatureCard icon="comment" color={theme.palette.success[500]}>24/7 Support</StyledSmallFeatureCard>
+                        <StyledSmallFeatureCard icon="handshake" color={theme.palette.primary[500]}>Fully transparent</StyledSmallFeatureCard>
                         <NextButton onClick={handleClick}>
                             <FontAwesomeIcon icon="chevron-double-right" />
                         </NextButton>
-                    </Space>
-                </div>
+                    </StyledSpace>
+                </SlickItem>
             </Carousel>
 
         </Container>

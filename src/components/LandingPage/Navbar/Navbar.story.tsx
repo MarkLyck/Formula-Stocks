@@ -2,13 +2,14 @@ import React from 'react'
 import Navbar, { NavbarProps } from './index'
 
 export default {
-    title: 'Navbar',
+    title: 'landing_page/navbar',
     component: Navbar,
     parameters: {
         backgrounds: {
             default: 'dark',
             values: [
-                { name: 'dark', value: 'gray' },
+                { name: 'dark', value: '#3D3FA3' },
+                { name: 'light', value: '#fff' },
             ],
         },
     },

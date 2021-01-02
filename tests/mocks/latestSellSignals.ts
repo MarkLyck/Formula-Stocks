@@ -21,7 +21,7 @@ export const latestSellSignalsMock = {
       },
       {
         name: 'Wayside Technology Group',
-        ticker: 'WSTG',
+        ticker: 'WSTG_TO',
         boughtAt: 14.65,
         soldAt: 24.09,
       },

@@ -12,7 +12,12 @@ const Container = styled.div`
     background-image: url(/images/hero/spaceship-background.svg);
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: 10vw 0;
     height: 50vw;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {        
+        background-image: none;
+    }
 `
 
 const Content = styled.div`

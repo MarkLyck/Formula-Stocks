@@ -16,3 +16,31 @@ export const USER_MOCK = {
     subscription: subscriptionMock,
   },
 }
+
+export const USER_LOGIN_MOCK = {
+  "success": true
+}
+
+export const USER_LOGIN_FAILED_MOCK = {
+  data: {
+    "userLogin": null
+  },
+  errors: [
+    {
+      message: "AuthenticationProfile not found",
+      locations: [
+        {
+          line: 2,
+          column: 3
+        }
+      ],
+      path: [
+        "userLogin"
+      ],
+      code: "EntityNotFoundError",
+      details: {
+        profile: "AuthenticationProfile not found"
+      }
+    }
+  ]
+}

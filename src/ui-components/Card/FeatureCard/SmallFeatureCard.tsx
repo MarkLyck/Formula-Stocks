@@ -21,6 +21,10 @@ export const SmallIconContainer = styled.div`
     box-shadow: 0 5px 30px rgba(18, 62, 138, 0.1);
     font-size: 1.2rem;
     margin-right: 16px;
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        font-size: 1rem;
+    } 
 `
 
 const Card = styled.div`
@@ -44,20 +48,30 @@ const Card = styled.div`
     
 `
 
-const Content = styled.div`
+const Content = styled.p`
     margin: 0;
     font-size: 1rem;
-    color: ${p => p.theme.palette.text[500]}
+    color: ${p => p.theme.palette.text[500]};
+    text-align: left;
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        font-size: 0.8rem;
+    }
+`
+
+const StyledSpace = styled.div`
+    display: flex;
+    align-items: center;
 `
 
 export const SmallFeatureCard = ({ children, color, icon, style, hover = true, ...args }: CardProps) => (
     <Card hover={hover} style={style} {...args}>
-        <Space align="center">
+        <StyledSpace>
             <SmallIconContainer>
                 {/* @ts-ignore */}
                 <FontAwesomeIcon icon={['fad', icon]} color={color} />
             </SmallIconContainer>
             <Content>{children}</Content>
-        </Space>
+        </StyledSpace>
     </Card>
 )

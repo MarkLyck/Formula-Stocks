@@ -41,5 +41,19 @@ declare module '@emotion/react' {
             border: string;
 
         }
+        breakpoints: {
+            extraSmall: string,
+            small: string,
+            medium: string,
+            large: string,
+            extraLarge: string,
+            values: {
+                extraSmall: number,
+                small: number,
+                medium: number,
+                large: number,
+                extraLarge: number,
+            }
+        }
     }
 }
