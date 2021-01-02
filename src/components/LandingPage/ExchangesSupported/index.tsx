@@ -1,12 +1,14 @@
 import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
+import { useTheme } from '@emotion/react'
 import { LandingPageContainer, } from '~/ui-components'
+import { useWindowSize } from '~/common/hooks'
 
 const Title = styled.h2`
     text-align: center;
     color: ${p => p.theme.palette.text[300]};
-    font-size: 1.6vw;
+    font-size: 1.6rem;
     margin-bottom: 16px;
 `
 
@@ -20,17 +22,22 @@ const Exchange = styled.img`
     }
 `
 
-const ExchangesSupported = () => (
-    <LandingPageContainer align="center" >
-        <Title>
-            Exchanges supported
+const ExchangesSupported = () => {
+    const windowSize = useWindowSize()
+    const theme = useTheme()
+
+    return (
+        <LandingPageContainer align="center" >
+            <Title>
+                Exchanges supported
         </Title>
-        <Space size="middle">
-            <Exchange src="/logos/exchanges/nyse.svg" />
-            <Exchange src="/logos/exchanges/nasdaq.svg" />
-            <Exchange src="/logos/exchanges/tsx.svg" />
-        </Space>
-    </LandingPageContainer>
-)
+            <Space size="middle" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                <Exchange src="/logos/exchanges/nyse.svg" />
+                <Exchange src="/logos/exchanges/nasdaq.svg" />
+                <Exchange src="/logos/exchanges/tsx.svg" />
+            </Space>
+        </LandingPageContainer>
+    )
+}
 
 export default ExchangesSupported

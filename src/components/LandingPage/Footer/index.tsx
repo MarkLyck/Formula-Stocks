@@ -7,6 +7,11 @@ import { COMPANY_NAME, SOCIAL_MEDIA_LINKS } from '~/common/constants'
 const Logo = styled.img`
     height: 48px;
     margin-bottom: 16px;
+
+    @media(max-width: ${p => p.theme.breakpoints.extraSmall}) {
+        height: auto;
+        width: 100%;
+    }
 `
 
 const Container = styled.div`
@@ -19,8 +24,24 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     padding: 32px;
-    padding-top: 380px;
+    padding-top: 360px;
     text-align: center;
+
+    @media(max-width: ${p => p.theme.breakpoints.large}) {
+        padding-top: 300px;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding-top: 250px;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        padding-top: 200px;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.extraSmall}) {
+        padding-top: 100px;
+    }
 `
 
 

@@ -15,7 +15,7 @@ const LatestSellsContainer = styled.div`
   border-radius: 8px;
   width: 100%;
   margin-top: 40px;
-  margin-bottom: 8vw;
+  margin-bottom: 4rem;
 
   @media (max-width: 500px) {
     margin-top: 24px;

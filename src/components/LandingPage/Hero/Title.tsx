@@ -17,27 +17,6 @@ const StyledTitle = styled(Title)`
 }
 `
 
-// const H1 = styled.h1`
-//     font-size: 2vw;
-//     font-weight: bold;
-//     line-height: 2.8vw;
-
-//     @media(max-width: ${p => p.theme.breakpoints.medium}) {
-//         font-size: 2.4vw;
-//         line-height: 4vw;
-//     }
-
-//     @media(max-width: ${p => p.theme.breakpoints.small}) {
-//         font-size: 3vw;
-//         line-height: 5vw;
-//     }
-
-//     @media(max-width: ${p => p.theme.breakpoints.extraSmall}) {
-//         font-size: 4vw;
-//         line-height: 6vw;
-//     }
-// `
-
 const Highlight = styled(Text)`
     font-weight: 900;
     color: ${(p) => p.theme.palette.primary[500]};

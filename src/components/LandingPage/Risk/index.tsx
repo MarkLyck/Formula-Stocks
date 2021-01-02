@@ -8,14 +8,18 @@ const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 64px;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        margin-right: 0;
+    }
 `
 
 const Risk = () => {
     const goToRiskPage = () => Router.push('/risk')
 
     return (
-        <LandingPageContainer marginBottom="8vw" >
-            <Beside>
+        <LandingPageContainer marginBottom="4rem" >
+            <Beside reverse>
                 <ContentContainer>
                     <Space direction="vertical">
                         <ScalingTitle>

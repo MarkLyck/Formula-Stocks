@@ -14,20 +14,38 @@ const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 24px;
 `
 
 const Container = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        flex-direction: column;
+    }
 `
 
 const PricingCard = styled(Card)`
     margin: 0 16px;
     width: 340px;
+    padding: 32px;
+    min-height: 180px;
 
     &:hover {
         background-color: ${p => p.theme.palette.basic[200]};
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        width: 100%;
+        margin: 0 8px;
+        padding: 16px;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        margin: 0 0 16px 0;
+        padding: 32px;
     }
 `
 
@@ -43,23 +61,19 @@ const CancelText = styled.p`
     text-align: center;
 `
 
-// const StyledAlert = styled(Alert)`
-//     margin-top: 24px;
-// `
-
 const Pricing = ({ showSignup }: any) => (
-    <LandingPageContainer align="center" marginBottom="8vw">
+    <LandingPageContainer align="center" marginBottom="4rem">
         <Element name="pricing" />
         <TitleContainer>
             <ScalingTitle>
                 Pricing
             </ScalingTitle>
             <ScalingSubTitle>
-                Our pricing is tiered based on your portfolio size in order to keep our service affordable for those with smaller account sizes.
+                Our pricing is tiered based on portfolio size, in order to keep our service affordable for those with smaller account sizes.
             </ScalingSubTitle>
         </TitleContainer>
         <Container >
-            <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
+            <PricingCard >
                 <CardTitle>
                     Account value under $25k
                 </CardTitle>
@@ -72,7 +86,7 @@ const Pricing = ({ showSignup }: any) => (
                 </PriceTag>
                 <Button onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">Try it for free</Button>
             </PricingCard>
-            <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
+            <PricingCard >
                 <CardTitle>
                     Account value $25k - $200k
                 </CardTitle>
@@ -85,7 +99,7 @@ const Pricing = ({ showSignup }: any) => (
                 </PriceTag>
                 <Button onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">Get started</Button>
             </PricingCard>
-            <PricingCard style={{ padding: "32px", minHeight: "180px" }}>
+            <PricingCard>
                 <CardTitle>
                     Account value over $200k
                 </CardTitle>

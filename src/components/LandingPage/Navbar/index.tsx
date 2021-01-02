@@ -19,6 +19,13 @@ const Header = styled.header`
 
 const Logo = styled.img`
     height: 24px;
+    background: white;
+    border-radius: 4px;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        padding: 8px;
+        height: 32px;
+    }
 `
 
 const Container = styled(LandingPageContainer)`

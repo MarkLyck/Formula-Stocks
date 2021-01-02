@@ -8,6 +8,12 @@ const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 64px;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+        width: 100%;
+    }
 `
 
 const LinkButton = styled(Button)`
@@ -18,7 +24,7 @@ const MoneyBackGuarantee = () => {
     const [dialogVisible, setDialogVisible] = useState(false)
 
     return (
-        <LandingPageContainer marginBottom="4vw" >
+        <LandingPageContainer marginBottom="4rem" >
             <PerformanceGuaranteeModal isVisible={dialogVisible} onClose={() => setDialogVisible(false)} />
             <Beside>
                 <SpaceImage src="/images/space/space-1.svg" />

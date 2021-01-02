@@ -1,25 +1,14 @@
 import React, { useState } from 'react'
 import { Form, Space, Input, Button } from 'antd'
 import styled from '@emotion/styled'
+import { useTheme } from '@emotion/react'
 import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { LandingPageContainer, Card, Highlight, Alert } from '~/ui-components'
+import { LandingPageContainer, Card, Highlight, Alert, ScalingTitle, ScalingSubTitle } from '~/ui-components'
 import { CREATE_NEWSLETTER } from '~/common/queries'
+import { useWindowSize } from '~/common/hooks'
 import { Mixpanel } from '~/lib/analytics/mixpanel'
 import { validateEmail, capitalize } from '~/common/utils/helpers'
-import theme from '~/lib/theme'
-
-const CardTitle = styled.h4`
-    margin: 0;
-    font-size: 1.8vw;
-    font-weight: bold;
-`
-
-const CardSubtitle = styled.h5`
-    font-size: 1.2vw;
-    color: ${p => p.theme.palette.text[200]};
-    font-weight: 400;
-`
 
 const Content = styled.div`
     padding: 16px;
@@ -29,6 +18,14 @@ const Content = styled.div`
     }
     .ant-form-inline .ant-form-item-with-help {
         margin-bottom: 0;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+        padding-bottom: 0;
+
+        .ant-space-item {
+            width: 100%;
+        }
     }
 `
 
@@ -45,10 +42,10 @@ const Newsletter = () => {
         executeCreateNewsletter,
         { data: createData, loading: createLoading, error: createError },
     ] = useMutation(CREATE_NEWSLETTER)
+    const windowSize = useWindowSize()
+    const theme = useTheme()
 
     let alreadyOnList = !!createError
-
-    console.log('createError', createError)
 
     const handleNameInput = (e) => {
         e.preventDefault()
@@ -89,40 +86,38 @@ const Newsletter = () => {
     }
 
     return (
-        <LandingPageContainer align="center" marginBottom="8vw" >
+        <LandingPageContainer align="center" marginBottom="4rem" >
             <Card>
                 <Content>
-                    <Space direction="vertical">
-                        <CardTitle>Don't believe us yet? Let us prove it!</CardTitle>
-                        <CardSubtitle>Join our newsletter, to receive emails with <Highlight>actual results</Highlight> of our investment signals (good or bad).</CardSubtitle>
+                    <Space direction="vertical" align="center">
+                        <ScalingTitle>Don't believe us yet? Let us prove it!</ScalingTitle>
+                        <ScalingSubTitle>Join our newsletter, to receive emails with <Highlight>actual results</Highlight> of our investment signals (good or bad).</ScalingSubTitle>
                         {(!createLoading && createData) || alreadyOnList
                             ? (<Alert message="Success, you're on the list!" type="success" />)
                             : (
-                                <Space>
-                                    <Form layout="inline" name="newsletter_signup" onFinish={onFinish}>
-                                        <Form.Item
-                                            name="firstName"
-                                            rules={[{ required: true, message: 'Please input your first name' }]}
-                                        >
-                                            <Input onChange={handleNameInput} size="large" placeholder="First name" prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.basic[500]} />} />
-                                        </Form.Item>
-                                        <Form.Item
-                                            name="email"
-                                            validateStatus={!!emailError ? 'error' : undefined}
-                                            help={!!emailError ? emailError : undefined}
-                                            rules={[
-                                                { required: true, message: 'Please input your email' }
-                                            ]}
-                                        >
-                                            <Input onChange={handleEmailInput} size="large" placeholder="Email address" prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.basic[500]} />} />
-                                        </Form.Item>
-                                        <Form.Item shouldUpdate={true}>
-                                            {() => (
-                                                <Button size="large" type="primary" htmlType="submit" loading={createLoading}>Join newsletter</Button>
-                                            )}
-                                        </Form.Item>
-                                    </Form>
-                                </Space>
+                                <Form layout={windowSize.width <= 840 ? undefined : "inline"} name="newsletter_signup" onFinish={onFinish}>
+                                    <Form.Item
+                                        name="firstName"
+                                        rules={[{ required: true, message: 'Please input your first name' }]}
+                                    >
+                                        <Input onChange={handleNameInput} size="large" placeholder="First name" prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.basic[500]} />} />
+                                    </Form.Item>
+                                    <Form.Item
+                                        name="email"
+                                        validateStatus={!!emailError ? 'error' : undefined}
+                                        help={!!emailError ? emailError : undefined}
+                                        rules={[
+                                            { required: true, message: 'Please input your email' }
+                                        ]}
+                                    >
+                                        <Input onChange={handleEmailInput} size="large" placeholder="Email address" prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.basic[500]} />} />
+                                    </Form.Item>
+                                    <Form.Item shouldUpdate={true}>
+                                        {() => (
+                                            <Button block size="large" type="primary" htmlType="submit" loading={createLoading}>Join newsletter</Button>
+                                        )}
+                                    </Form.Item>
+                                </Form>
                             )}
                     </Space>
                 </Content>

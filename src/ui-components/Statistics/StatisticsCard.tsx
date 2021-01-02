@@ -13,6 +13,7 @@ const StatCardContainer = styled.div`
         background: ${p => p.theme.palette.basic[200]};
     }
 `
+
 const StatCardContent = styled.div`
     width: 100%;
 `

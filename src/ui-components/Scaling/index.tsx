@@ -10,7 +10,7 @@ export * from './Beside'
 export const ScalingTitle = styled(Title)`
     text-align: ${(p: { textAlign?: string }) => p.textAlign ? p.textAlign : ''};
     &&& { 
-        font-size: 2.8vw;
+        font-size: 2rem;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -19,15 +19,14 @@ export const ScalingTitle = styled(Title)`
 export const ScalingSubTitle = styled(Title)`
     &&& { 
         color: ${(p) => p.theme.palette.text[200]};
-        font-size: 1.4vw;
+        font-size: 1.4rem;
         font-weight: 400;
-        margin-top: 1vw;
-        margin-bottom: 3vw;
+        margin-top: 1rem;
     }
 `
 
 export const ScalingParagraph = styled(Paragraph)`
     && {
-        font-size: 1.2vw;
+        font-size: 1.2rem;
     }
 `

@@ -41,7 +41,11 @@ const Button = styled.button`
         opacity: 0.7;
     }
 
-    @media(max-width: ${p => p.theme.breakpoints.medium}) {
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.extraSmall}) {
         padding: 8px 12px;
         font-size: 12px;
     }

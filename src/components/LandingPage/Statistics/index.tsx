@@ -23,6 +23,10 @@ const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 64px;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        margin-left: 0;
+    }
 `
 
 const Statistics = () => {
@@ -34,9 +38,8 @@ const Statistics = () => {
     const statistics = data ? data.statisticsList.items[0] : {}
     const expectedReturn = ((statistics.winLossRatio / 100) * statistics.averageGainPerPosition - (1 - statistics.winLossRatio / 100) * statistics.averageLossPerPosition).toFixed(2)
 
-
     return (
-        <LandingPageContainer marginBottom="8vw" >
+        <LandingPageContainer marginBottom="4rem" >
             {!loading && <StatisticsModal isVisible={dialogVisible} onClose={() => setDialogVisible(false)} statistics={statistics} />}
             <Beside>
                 <SpaceImage src="/images/space/space-0.svg" />

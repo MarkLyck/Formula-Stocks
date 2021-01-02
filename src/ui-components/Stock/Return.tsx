@@ -13,9 +13,9 @@ export const Container = styled.span`
   padding: 8px 12px;
   border-radius: 4px;
   font-weight: 500;
+    white-space: nowrap;
 
   @media (max-width: 940px) {
-    margin-right: 12px;
     margin-left: 8px;
     font-size: 0.7rem;
   }

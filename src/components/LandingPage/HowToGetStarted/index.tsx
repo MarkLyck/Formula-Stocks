@@ -13,14 +13,14 @@ const NumberContainer = styled.div`
     align-items: center;
     justify-content: center;
     box-shadow: 0 5px 16px rgba(18, 62, 138, 0.15);
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font-weight: bold;
     color: ${p => p.theme.palette.primary[500]};
 `
 
 const CardTitle = styled.h4`
     margin: 0;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font-weight: bold;
 `
 
@@ -33,23 +33,36 @@ const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 24px;
 `
 
 const Container = styled.div`
     display: flex;
     justify-content: center;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        flex-direction: column;
+    }
 `
 
 const StepCard = styled(Card)`
     margin: 0 16px;
+    padding: 32px;
+    min-height: 180px;
+    width: calc(100% / 3);
 
     &:hover {
         background-color: ${p => p.theme.palette.basic[200]};
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+        margin: 16px 0;
+    }
 `
 
 const HowToGetStarted = () => (
-    <LandingPageContainer align="center" marginBottom="8vw" >
+    <LandingPageContainer align="center" marginBottom="4rem" >
         <TitleContainer>
             <ScalingTitle>
                 How to get started
@@ -59,7 +72,7 @@ const HowToGetStarted = () => (
             </ScalingSubTitle>
         </TitleContainer>
         <Container >
-            <StepCard style={{ padding: "32px", minHeight: "180px", width: 'calc(100% / 3)' }}>
+            <StepCard>
                 <Space direction="vertical">
                     <Space size="middle">
                         <NumberContainer>1</NumberContainer>
@@ -72,7 +85,7 @@ const HowToGetStarted = () => (
                     </Description>
                 </Space>
             </StepCard>
-            <StepCard style={{ padding: "32px", minHeight: "180px", width: 'calc(100% / 3)' }}>
+            <StepCard>
                 <Space direction="vertical">
                     <Space size="middle">
                         <NumberContainer>2</NumberContainer>
@@ -85,7 +98,7 @@ const HowToGetStarted = () => (
                     </Description>
                 </Space>
             </StepCard>
-            <StepCard style={{ padding: "32px", minHeight: "180px", width: 'calc(100% / 3)' }}>
+            <StepCard>
                 <Space direction="vertical">
                     < Space size="middle">
                         <NumberContainer>3</NumberContainer>

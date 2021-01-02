@@ -5,4 +5,9 @@ export const Beside = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        flex-direction: ${(p: any) => p.reverse ? 'column-reverse' : 'column'}
+        
+    }
 `

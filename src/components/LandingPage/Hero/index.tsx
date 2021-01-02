@@ -13,17 +13,27 @@ const Container = styled.div`
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 10vw 0;
-    height: 50vw;
+    min-height: 48vw;
+
+    @media(max-width: ${p => p.theme.breakpoints.large}) {        
+        margin-bottom: 24px;
+    }
+
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {        
+        margin-bottom: 32px;
+    }
 
     @media(max-width: ${p => p.theme.breakpoints.small}) {        
-        background-image: none;
+        background-image: url(/images/hero/mobile-background.svg);
+        background-position: right -17vw;
+        padding-top: 48vw;
     }
 `
 
 const Content = styled.div`
     ${maxSiteWidth}
     padding-top: 12%;
-    margin-bottom: 7vw;
+    margin-bottom: 4rem;
 `
 
 const Hero = ({ showSignup }: any) => {
