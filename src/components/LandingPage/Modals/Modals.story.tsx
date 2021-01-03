@@ -39,6 +39,3 @@ export const ai_score = () => (
 export const performance_guarantee = () => (
   <PerformanceGuaranteeModal isVisible onClose={() => { }} />
 )
-export const returns_calculator = () => (
-  <ReturnsCalculator isVisible onClose={() => { }} />
-)

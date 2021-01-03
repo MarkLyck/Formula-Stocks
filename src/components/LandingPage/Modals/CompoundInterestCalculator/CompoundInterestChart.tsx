@@ -1,5 +1,6 @@
-import React from 'react';
-import { Column } from '@ant-design/charts';
+import React, {useState, useEffect} from "react"
+// import { Column } from '@ant-design/charts';
+import dynamic from 'next/dynamic';
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { currencyRoundedFormatter } from '~/common/utils/formatters'
@@ -8,9 +9,17 @@ const Value = styled.span`
     font-weight: bold;
 `
 
-const StyledColumn = styled(Column)`
-    width: 100%;
+const Container = styled.div`
+    canvas {
+        min-height: 400px;
+    }
 `
+
+
+const Column = dynamic(
+    () => import("@ant-design/charts").then((mod) => mod.Column) as any,
+    { ssr: false }
+  )
 
 const generateTooltip = (title: string, items: any[]) => {
     let balance = 0
@@ -55,21 +64,22 @@ const CompoundInterestChart: React.FC = ({ data }: any) => {
         chartData.push({
             year: point.year,
             value: point.value - point.totalContribution,
-            type: 'Future value'
+            type: 'Future balance'
         })
         chartData.push({
             year: point.year,
             value: point.totalContribution,
-            type: 'Your contribution'
+            type: 'Total contribution'
         })
     })
 
-    const getColor = (ref: any) => (ref.type === 'Future value' ? theme.palette.success[500] : theme.palette.primary[500])
+    const getColor = (ref: any) => (ref.type === 'Future balance' ? theme.palette.success[500] : theme.palette.primary[500])
 
     const config = {
         id: 'compound-interest-chart',
         data: chartData,
         autoFit: true,
+        height: 300,
         legend: false,
         isStack: true,
         xField: 'year',
@@ -87,7 +97,11 @@ const CompoundInterestChart: React.FC = ({ data }: any) => {
     }
 
     // @ts-ignore
-    return <StyledColumn {...config} />;
+    return (
+        <Container>
+            <Column style={{height: '100%'}} {...config} />
+        </Container>
+    )
 };
 
 export default CompoundInterestChart;

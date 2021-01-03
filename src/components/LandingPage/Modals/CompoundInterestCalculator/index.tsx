@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
+import { useQuery } from '@apollo/client'
 import { Modal, Space, Typography, Table } from 'antd';
-import { PlusMinusInput } from '~/ui-components'
+import { PlusMinusInput, Disclaimer } from '~/ui-components'
 import CompoundInterestChart from './CompoundInterestChart'
 import { currencyRoundedFormatter } from '~/common/utils/formatters'
+import { STATISTICS } from '~/common/queries'
+import { COMPANY_NAME} from '~/common/constants'
 
 const { Title, Paragraph } = Typography
 
@@ -15,13 +18,22 @@ interface ReturnsCalculatorModalProps {
 const Beside = styled.div`
     display: flex;
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        flex-direction: column;
+    }
 `
 
 const StyledSpace = styled(Space)`
     width: 100%;
     max-width: 240px;
     margin-right: 32px;
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        max-width: 100%;
+        margin-right: 0;
+    }
 `
 
 const ChartContainer = styled.div`
@@ -34,43 +46,67 @@ const ChartContainer = styled.div`
     h2 {
         margin-bottom: 64px;
     }
+
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        margin-top: 48px;
+    }
 `
 
 const Highlight = styled.span`
     color: ${p => p.theme.palette.success[500]};
 `
 
-const columns = [
-    {
-        title: 'Years',
-        dataIndex: 'year',
-        key: 'year',
-    },
-    {
-        title: 'Future Value (20.00%)',
-        dataIndex: 'value',
-        key: 'value',
-        render: value => <p>{currencyRoundedFormatter.format(Math.floor(Number(value)))}</p>,
-    },
-    {
-        title: 'Your Contributions',
-        dataIndex: 'totalContribution',
-        key: 'totalContribution',
-        render: value => <p>{currencyRoundedFormatter.format(Math.floor(Number(value)))}</p>,
-    },
-]
+const TableValue = styled.p`
+    margin: 0;
+    color: ${p => p.theme.palette[p.color][500]};
+    ${p => p.bold ? 'font-weight: 500;' :''}
+`
 
 
-const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalProps) => {
+
+
+const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalProps) => {
+    const { data, loading, error } = useQuery(STATISTICS)
     const [initialDeposit, setInitialDeposit] = useState(1000)
     const [monthlyContribution, setMonthlyContribution] = useState(200)
     const [years, setYears] = useState(20)
     const [rateOfReturn, setRateOfReturn] = useState(20)
 
+    const columns = [
+        {
+            title: 'Year',
+            dataIndex: 'year',
+            key: 'year',
+        },
+        {
+            title: `Future Value (${rateOfReturn.toFixed(2)}%)`,
+            dataIndex: 'value',
+            key: 'value',
+            render: value => <TableValue color="success" bold>{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
+        },
+        {
+            title: 'Increase',
+            dataIndex: 'difference',
+            key: 'difference',
+            render: value => value > 0 ? <TableValue color="text">+{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue> : '',
+        },
+        {
+            title: 'Total Contribution',
+            dataIndex: 'totalContribution',
+            key: 'totalContribution',
+            render: value => <TableValue  color="primary">{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
+        },
+    ]
+
+    useEffect(() => {
+        if (data) setRateOfReturn(Math.floor(data.statisticsList.items[0].cAGR))
+    }, [data])
+
     let yearByYearReturns = [...Array(years + 1).keys()].reduce((acc: any, _curr: number, i: number) => {
         if (i === 0) {
             acc[i] = {
                 year: i,
+                difference: 0,
                 value: initialDeposit,
                 totalContribution: initialDeposit
             }
@@ -81,6 +117,7 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
             acc[i] = {
                 year: i,
                 value,
+                difference: value - acc[i - 1].value,
                 totalContribution: contribution
             }
         }
@@ -121,7 +158,7 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
                     </div>
                     <div>
                         <Title level={5}>Time in years</Title>
-                        <Paragraph>Amount that you plan to add to the principal every month.</Paragraph>
+                        <Paragraph>How many years you  plan to invest.</Paragraph>
                         <PlusMinusInput
                             min={0}
                             onChange={setYears}
@@ -130,7 +167,7 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
                     </div>
                     <div>
                         <Title level={5}>Estimated rate of return</Title>
-                        <Paragraph>Annual interest rate.</Paragraph>
+                        <Paragraph><strong>{data?.statisticsList?.items[0].cAGR}%</strong> was the average annual return for our strategy in the past.*</Paragraph>
                         <PlusMinusInput
                             min={0}
                             onChange={setRateOfReturn}
@@ -141,13 +178,14 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
                     </div>
                 </StyledSpace>
                 <ChartContainer>
-                    <Title level={2}>Future balance: <Highlight>{currencyRoundedFormatter.format(Math.floor(Number(futureBalance)))}</Highlight></Title>
+                    <Title level={2}>Balance in {years} year{years === 1 ? '' : 's'}: <Highlight>{currencyRoundedFormatter.format(Math.floor(Number(futureBalance)))}</Highlight></Title>
                     <CompoundInterestChart data={yearByYearReturns} />
                 </ChartContainer>
             </Beside>
-            <Table dataSource={yearByYearReturns} columns={columns} pagination={{ hideOnSinglePage: true, pageSize: years + 1 }} />
+            <Table size="small" dataSource={yearByYearReturns} columns={columns} pagination={{ hideOnSinglePage: true, pageSize: years + 1 }} />
+            <Disclaimer>*Past returns does not guarantee similar future results.</Disclaimer>
         </Modal >
     )
 }
 
-export default ReturnsCalculatorModal
+export default CompoundInterestCalculatorModal

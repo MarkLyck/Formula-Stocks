@@ -17,7 +17,7 @@ import {
 } from '~/ui-components'
 import theme from '~/lib/theme'
 import { STATISTICS } from '~/common/queries'
-import { StatisticsModal } from '../Modals'
+import { StatisticsModal, CompoundInterestCalculatorModal } from '../Modals'
 
 const ContentContainer = styled.div`
     display: flex;
@@ -32,6 +32,7 @@ const ContentContainer = styled.div`
 const Statistics = () => {
     const { data, loading, error } = useQuery(STATISTICS)
     const [dialogVisible, setDialogVisible] = useState(false)
+    const [compoundInterestCalculatorVisible, setCompoundInterestCalculatorVisible] = useState(false)
 
     if (error) return null
 
@@ -41,6 +42,7 @@ const Statistics = () => {
     return (
         <LandingPageContainer marginBottom="4rem" >
             {!loading && <StatisticsModal isVisible={dialogVisible} onClose={() => setDialogVisible(false)} statistics={statistics} />}
+            <CompoundInterestCalculatorModal isVisible={compoundInterestCalculatorVisible} onClose={() => setCompoundInterestCalculatorVisible(false)}  />
             <Beside>
                 <SpaceImage src="/images/space/space-0.svg" />
                 <ContentContainer>
@@ -70,7 +72,10 @@ const Statistics = () => {
                                 {loading ? <LoadingTag /> : <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.basic[300]}>{statistics.averageHoldingPeriod} days</Tag>}
                             </StatisticsCard>
                         </Space>
-                        <ActionButton onClick={() => setDialogVisible(true)}>SEE ADVANCED STATISTICS</ActionButton>
+                        <Space>
+                            <ActionButton onClick={() => setDialogVisible(true)}>SEE ADVANCED STATISTICS</ActionButton>
+                            <ActionButton status="success" onClick={() => setCompoundInterestCalculatorVisible(true)}>RETURNS CALCULATOR</ActionButton>
+                        </Space>
                     </Space>
                 </ContentContainer>
             </Beside>
