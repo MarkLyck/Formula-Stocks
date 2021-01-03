@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatisticsModal, AIScoreModal, PerformanceGuaranteeModal } from './index'
+import { StatisticsModal, AIScoreModal, PerformanceGuaranteeModal, ReturnsCalculator } from './index'
 
 export default {
   title: 'landing_page/modals',
@@ -38,4 +38,7 @@ export const ai_score = () => (
 
 export const performance_guarantee = () => (
   <PerformanceGuaranteeModal isVisible onClose={() => { }} />
+)
+export const returns_calculator = () => (
+  <ReturnsCalculator isVisible onClose={() => { }} />
 )

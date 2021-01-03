@@ -22,11 +22,13 @@ const CardTitle = styled.h4`
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
+    text-align: left;
 `
 
 const Description = styled.p`
     color: ${p => p.theme.palette.text[300]};
     margin: 0;
+    text-align: left;
 `
 
 const TitleContainer = styled.div`
@@ -40,7 +42,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
 
-    @media(max-width: ${p => p.theme.breakpoints.small}) {
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
         flex-direction: column;
     }
 `
@@ -55,7 +57,7 @@ const StepCard = styled(Card)`
         background-color: ${p => p.theme.palette.basic[200]};
     }
 
-    @media(max-width: ${p => p.theme.breakpoints.small}) {
+    @media(max-width: ${p => p.theme.breakpoints.medium}) {
         width: 100%;
         margin: 16px 0;
     }
