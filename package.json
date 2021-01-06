@@ -23,6 +23,7 @@
     "@fortawesome/pro-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "antd": "^4.9.4",
+    "date-fns-tz": "^1.0.12",
     "deepmerge": "^4.2.2",
     "framer-motion": "^3.1.1",
     "graphql": "^15.4.0",

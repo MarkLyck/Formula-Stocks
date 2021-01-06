@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled'
+import styled from '@emotion/styled'
 import { opacify } from 'polished'
 import { Tooltip } from 'antd'
 import { format, isBefore, isAfter, isSaturday, isSunday } from 'date-fns'
