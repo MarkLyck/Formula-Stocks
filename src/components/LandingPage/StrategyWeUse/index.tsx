@@ -2,7 +2,7 @@ import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
-import { LandingPageContainer, Card, Highlight, ActionButton } from '~/ui-components'
+import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from '~/ui-components'
 import { useWindowSize } from '~/common/hooks'
 import { transparentize } from 'polished'
 
@@ -22,6 +22,12 @@ const Content = styled.div`
     padding: 16px;
 `
 
+const ButtonContainer = styled(Space)`
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+    }
+`
+
 
 const StrategyWeUse = ({ showSignup }: any) => {
     const windowSize = useWindowSize()
@@ -38,11 +44,11 @@ const StrategyWeUse = ({ showSignup }: any) => {
                         <CardSubtitle>
                             We have shown you what we can do. Want to know more? Check out the FAQ or chat with us.
                     </CardSubtitle>
-                        <Space size="middle" direction={windowSize.width <= theme.breakpoints.values.extraSmall ? 'vertical' : 'horizontal'}>
-                            <ActionButton onClick={showSignup} status="success">TRY IT FOR FREE</ActionButton>
-                            <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])}>SEE FAQ</ActionButton>
-                            <ActionButton>CONTACT US</ActionButton>
-                        </Space>
+                        <ButtonContainer size="middle" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                            <ActionButton onClick={showSignup} status="success"><ButtonIcon icon={['fad', 'gift']} />TRY IT FOR FREE</ActionButton>
+                            <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])}><ButtonIcon icon={['fad', 'question']} />SEE FAQ</ActionButton>
+                            <ActionButton><ButtonIcon icon={['fad', 'comment']} />CONTACT US</ActionButton>
+                        </ButtonContainer>
                     </Space>
                 </Content>
             </Card>

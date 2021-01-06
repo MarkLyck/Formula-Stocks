@@ -2,7 +2,9 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { scroller } from 'react-scroll'
 import { Space } from 'antd'
-import { ActionButton } from '~/ui-components'
+import { useTheme } from '@emotion/react'
+import { useWindowSize } from '~/common/hooks'
+import { ActionButton, ButtonIcon } from '~/ui-components'
 import { maxSiteWidth } from '~/common/styles'
 import Title from './Title'
 import Description from './Description'
@@ -33,16 +35,25 @@ const Container = styled.div`
 const Content = styled.div`
     ${maxSiteWidth}
     padding-top: 12%;
-    margin-bottom: 4rem;
+    margin-bottom: 6vw;
+`
+
+const ButtonContainer = styled(Space)`
+    @media(max-width: ${p => p.theme.breakpoints.small}) {
+        width: 100%;
+    }
 `
 
 const Hero = ({ showSignup }: any) => {
+    const windowSize = useWindowSize()
+    const theme = useTheme()
+
     const learnMore = () => {
         scroller.scrollTo('how-we-pick-winning-stocks', {
             duration: 500,
             delay: 50,
             smooth: true,
-            offset: 140
+            offset: -80
         })
     }
 
@@ -52,10 +63,10 @@ const Hero = ({ showSignup }: any) => {
                 <Space direction="vertical">
                     <Title />
                     <Description />
-                    <Space size="middle">
-                        <ActionButton onClick={showSignup} status="success">TRY IT FOR FREE</ActionButton>
-                        <ActionButton onClick={learnMore}> LEARN MORE</ActionButton>
-                    </Space>
+                    <ButtonContainer size="middle" direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                        <ActionButton onClick={showSignup} status="success"><ButtonIcon icon={['fad', 'gift']}/>TRY IT FOR FREE</ActionButton>
+                        <ActionButton onClick={learnMore}><ButtonIcon icon={['fad', 'info-square']}/>LEARN MORE</ActionButton>
+                    </ButtonContainer>
                 </Space>
             </Content>
             <Features />

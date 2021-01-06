@@ -5,7 +5,7 @@ import { useTheme } from '@emotion/react'
 import { Element } from 'react-scroll'
 import { maxSiteWidth } from '~/common/styles'
 import { Space } from 'antd'
-import { ActionButton, ScalingTitle, ScalingParagraph, TextTag } from '~/ui-components'
+import { ActionButton, ScalingTitle, ScalingParagraph, TextTag, ButtonIcon } from '~/ui-components'
 import { useWindowSize } from '~/common/hooks'
 
 const BackgroundContainer = styled.div`
@@ -81,7 +81,7 @@ const HowItWorks = () => {
                         <ScalingParagraph>
                             Out of thousands of stocks, only a select few companies make the cut for our portfolio.
                         </ScalingParagraph>
-                        <ActionButton onClick={goToStrategyPage}>READ MORE ABOUT OUR STRATEGY</ActionButton>
+                        <ActionButton onClick={goToStrategyPage}><ButtonIcon icon={['fad', 'flask']}/>READ MORE ABOUT OUR STRATEGY</ActionButton>
                     </Space>
                 </Content>
             </Container>

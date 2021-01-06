@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { Highlight, ActionButton, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage, TextTag } from '~/ui-components'
+import { Highlight, ActionButton, ButtonIcon, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage, TextTag } from '~/ui-components'
 import { AIScoreModal } from '../Modals'
 
 const ContentContainer = styled.div`
@@ -43,7 +43,7 @@ const AIScore = () => {
                             <br />
                         Don't invest without it!
                     </ScalingParagraph>
-                        <ActionButton onClick={() => setDialogVisible(true)} >SEE OUR STUDY ON THE AI SCORE</ActionButton>
+                        <ActionButton onClick={() => setDialogVisible(true)} ><ButtonIcon icon={['fad', 'brain']} />SEE OUR STUDY ON THE AI SCORE</ActionButton>
                     </Space>
                 </ContentContainer>
                 <SpaceImage src="/images/space/space-2.svg" />

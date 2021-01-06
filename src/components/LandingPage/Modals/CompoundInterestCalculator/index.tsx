@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
-import { Modal, Space, Typography, Table } from 'antd';
+import { Modal, Space, Typography, Table, Divider } from 'antd';
 import { PlusMinusInput, Disclaimer } from '~/ui-components'
 import CompoundInterestChart from './CompoundInterestChart'
 import { currencyRoundedFormatter } from '~/common/utils/formatters'
@@ -182,6 +182,7 @@ const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculat
                     <CompoundInterestChart data={yearByYearReturns} />
                 </ChartContainer>
             </Beside>
+            <Divider />
             <Table size="small" dataSource={yearByYearReturns} columns={columns} pagination={{ hideOnSinglePage: true, pageSize: years + 1 }} />
             <Disclaimer>*Past returns does not guarantee similar future results.</Disclaimer>
         </Modal >

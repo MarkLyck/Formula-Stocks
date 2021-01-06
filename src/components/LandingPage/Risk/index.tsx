@@ -2,7 +2,7 @@ import React from 'react'
 import Router from 'next/router'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { Highlight, ActionButton, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage } from '~/ui-components'
+import { Highlight, ActionButton, ButtonIcon, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage } from '~/ui-components'
 
 const ContentContainer = styled.div`
     display: flex;
@@ -33,7 +33,7 @@ const Risk = () => {
                         Instead, we've spent decades developing long-term strategies that boasts above-average returns,
                         while keeping the risk very low. This is imperative to us, as we invest our own capital along with you.
                     </ScalingParagraph>
-                        <ActionButton onClick={goToRiskPage}>READ MORE ABOUT RISKS INVOLVED</ActionButton>
+                        <ActionButton onClick={goToRiskPage}><ButtonIcon icon={['fad', 'chart-line-down']} />READ MORE ABOUT RISKS INVOLVED</ActionButton>
                     </Space>
                 </ContentContainer>
                 <SpaceImage src="/images/space/space-3.svg" />

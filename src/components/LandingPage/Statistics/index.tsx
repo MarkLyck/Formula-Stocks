@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
+import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
+import { transparentize} from 'polished'
 import {
     StatisticsCard,
     ActionButton,
@@ -13,9 +15,10 @@ import {
     Highlight,
     StockReturn,
     LoadingIndicator,
-    LoadingTag
+    LoadingTag,
+    ButtonIcon
 } from '~/ui-components'
-import theme from '~/lib/theme'
+import { useWindowSize } from '~/common/hooks'
 import { STATISTICS } from '~/common/queries'
 import { StatisticsModal, CompoundInterestCalculatorModal } from '../Modals'
 
@@ -33,6 +36,8 @@ const Statistics = () => {
     const { data, loading, error } = useQuery(STATISTICS)
     const [dialogVisible, setDialogVisible] = useState(false)
     const [compoundInterestCalculatorVisible, setCompoundInterestCalculatorVisible] = useState(false)
+    const windowSize = useWindowSize()
+    const theme = useTheme()
 
     if (error) return null
 
@@ -72,9 +77,9 @@ const Statistics = () => {
                                 {loading ? <LoadingTag /> : <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.basic[300]}>{statistics.averageHoldingPeriod} days</Tag>}
                             </StatisticsCard>
                         </Space>
-                        <Space>
-                            <ActionButton onClick={() => setDialogVisible(true)}>SEE ADVANCED STATISTICS</ActionButton>
-                            <ActionButton status="success" onClick={() => setCompoundInterestCalculatorVisible(true)}>RETURNS CALCULATOR</ActionButton>
+                        <Space style={{width: '100%'}} direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                            <ActionButton onClick={() => setDialogVisible(true)}><ButtonIcon icon={['fad', 'analytics']}/>SEE ADVANCED STATISTICS</ActionButton>
+                            <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])} onClick={() => setCompoundInterestCalculatorVisible(true)}><ButtonIcon icon={['fad', 'calculator']}/>INTEREST CALCULATOR</ActionButton>
                         </Space>
                     </Space>
                 </ContentContainer>
