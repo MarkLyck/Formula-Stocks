@@ -28,6 +28,7 @@ const theme: any = {
             1100: '#101426',
         },
         primary: {
+            0: '#fafbff',
             100: '#F2F6FF',
             200: '#D9E4FF',
             300: '#A6C1FF',

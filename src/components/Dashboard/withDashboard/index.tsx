@@ -3,7 +3,6 @@ import { useQuery, useMutation } from '@apollo/client'
 import Router from 'next/router'
 import { isBrowser, hasStorage } from '~/common/utils/featureTests'
 import SideMenu from '~/components/Dashboard/SideMenu'
-import NavBar from '~/components/Dashboard/Navbar'
 import { DashboardLayout, DashboardContent, DashboardBeside, StyledAlert } from './styles'
 import { CURRENT_USER_QUERY, REFRESH_TOKEN } from '~/common/queries'
 import { AUTH_PROFILE_ID } from '~/common/constants'
@@ -44,7 +43,7 @@ const withDashboard = (Component: any) => ({ location, ...extraProps }: any) => 
     // The user has no authToken saved in storage or window sess -> make user login
     if (hasStorage && !localStorage.getItem('authToken')) {
       // @ts-ignore
-      if (isBrowser && !window.authToken && Router.router.route.includes('dashboard')) {
+      if (isBrowser && !window.authToken && Router?.router?.route.includes('dashboard')) {
         console.log('useEffect - authToken', localStorage.getItem('authToken'))
         console.log('useEffect - refreshToken', localStorage.getItem('refreshToken'))
         console.log('useEffect - dashboard push')
@@ -110,7 +109,6 @@ const withDashboard = (Component: any) => ({ location, ...extraProps }: any) => 
   return (
     <SettingsProvider>
       <DashboardLayout>
-        <NavBar user={user} />
         <DashboardBeside>
           <SideMenu user={user} />
           <DashboardContent>

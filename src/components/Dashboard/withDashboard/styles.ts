@@ -10,13 +10,12 @@ export const DashboardLayout = styled.div`
 
 export const DashboardBeside = styled.div`
   display: flex;
-  margin-top: 72px;
   height: 100%;
 `
 
 export const DashboardContent = styled.div`
   box-sizing: border-box;
-  height: calc(100vh - 72px);
+  height: 100vh;
   width: 100%;
   padding: 32px;
   background: ${(props: any) => props.theme.colors.dbBackground};

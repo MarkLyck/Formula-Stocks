@@ -5,8 +5,8 @@ import styled from '@emotion/styled'
 export const Button = styled.button`
   position: relative;
   width: 100%;
-  height: 68px;
-  padding: 8px 16px;
+  height: 52px;
+  padding: 4px 8px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -33,14 +33,14 @@ export const Button = styled.button`
   h4,
   svg {
     color: ${(props: any) => (props.isActive ? props.theme.palette.primary[500] : '#A0A0B9')};
-
     margin: 0;
   }
 
   svg {
     ${(props: any) => (props.disabled ? 'opacity: 0.5;' : '')}
-    font-size: 24px;
+    font-size: 16px;
   }
+
   h4 {
     ${(props: any) => (props.disabled ? 'opacity: 0.5;' : '')}
     text-transform: capitalize;
@@ -49,6 +49,7 @@ export const Button = styled.button`
     display: block;
     text-align: center;
     font-size: 10px;
+    font-weight: 400;
     margin-top: 4px;
     white-space: nowrap;
   }
@@ -68,14 +69,14 @@ export const Button = styled.button`
     padding: 8px 24px;
 
     h4 {
-      font-size: 1rem;
+      font-size: 14px;
     }
   }  
 `
 
 export const IconContainer = styled.div`
   @media(min-width: ${p => p.theme.breakpoints.medium}) {
-    width: 40px;
+    width: 24px;
     margin-right: 8px;
     display: flex;
   }  
