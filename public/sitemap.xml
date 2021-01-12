@@ -3,4 +3,12 @@
     <loc>http://localhost:3000</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+    <loc>http://localhost:3000/dashboard/index</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>http://localhost:3000/dashboard/portfolio</loc>
+    <changefreq>hourly</changefreq>
+  </url>
 </urlset>

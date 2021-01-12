@@ -35,12 +35,14 @@ const expandedMenu = css`
   }
 `
 
-export const MenuList = styled.ul`
-  padding: 0;
+export const MenuList = styled.div`
+  position: relative;
+  padding: 8px 0 0 0;
   margin: 0;
-  background: ${(props: any) => props.theme.palette.sideMenuColor};
+  width: 240px;
+  background: ${(props: any) => props.theme.palette.side_menu_color};
   border-right: 1px solid #eeeff3;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;

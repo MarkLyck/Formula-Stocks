@@ -21,6 +21,10 @@ export const USER_LOGIN_MOCK = {
   "success": true
 }
 
+export const USER_SIGNUP_MOCK = {
+  "success": true
+}
+
 export const USER_LOGIN_FAILED_MOCK = {
   data: {
     "userLogin": null

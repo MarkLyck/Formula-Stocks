@@ -39,7 +39,7 @@ export const Button = styled.button`
 
   svg {
     ${(props: any) => (props.disabled ? 'opacity: 0.5;' : '')}
-    font-size: 24px;
+    font-size: 18px;
   }
   h4 {
     ${(props: any) => (props.disabled ? 'opacity: 0.5;' : '')}
@@ -49,7 +49,6 @@ export const Button = styled.button`
     display: block;
     text-align: center;
     font-size: 10px;
-    margin-top: 4px;
     white-space: nowrap;
   }
   &:hover {
@@ -68,14 +67,14 @@ export const Button = styled.button`
     padding: 8px 24px;
 
     h4 {
-      font-size: 1rem;
+      font-size: 14px;
     }
   }  
 `
 
 export const IconContainer = styled.div`
   @media(min-width: ${p => p.theme.breakpoints.medium}) {
-    width: 40px;
+    width: 32px;
     margin-right: 8px;
     display: flex;
   }  

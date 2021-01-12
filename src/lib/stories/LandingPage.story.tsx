@@ -75,7 +75,7 @@ const mocks = [
 ]
 
 export default {
-    title: 'Landing page/LandingPage',
+    title: 'pages/LandingPage',
 }
 
 export const landing_page = () => (

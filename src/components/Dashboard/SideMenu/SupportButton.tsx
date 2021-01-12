@@ -1,14 +1,17 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, ButtonIcon } from '~/ui-components'
 
 import styled from '@emotion/styled'
 
+const Container = styled.div`
+margin-top: auto;
+padding: 8px 16px;
+width: 100%;
+`
+
 const StyledButton = styled(Button)`
-  width: inherit;
-  margin-bottom: 16px;
+  width: 100%;
   padding: 8px 16px;
-  margin-top: auto;
   display: flex;
   align-items: center;
   color: ${(props: any) => props.theme.colors.white};
@@ -50,9 +53,11 @@ const handleClick = (user: any) => {
 }
 
 const SupportButton = ({ user }: { user: any }) => (
-  <StyledButton backgroundColor="primary" color="white" size="thin" onClick={() => handleClick(user)}>
-    <ButtonIcon icon="question-circle" /><span>Support</span>
-  </StyledButton>
+  <Container>
+    <StyledButton backgroundColor="primary" color="white" size="thin" onClick={() => handleClick(user)}>
+      <ButtonIcon icon="question-circle" /><span>Support</span>
+    </StyledButton>
+  </Container>
 )
 
 export default SupportButton

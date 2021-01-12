@@ -2,7 +2,7 @@ import { gql } from '@apollo/client'
 
 export const LAUNCH_PERFORMANCE_HISTORY = gql`
   query {
-    plan(planID: "business") {
+    plan(planID: "entry") {
       launchHistory
     }
   }
@@ -10,7 +10,7 @@ export const LAUNCH_PERFORMANCE_HISTORY = gql`
 
 export const BACKTESTED_PERFORMANCE_HISTORY = gql`
   query {
-    plan(planID: "business") {
+    plan(planID: "entry") {
       backtestedHistory
     }
   }

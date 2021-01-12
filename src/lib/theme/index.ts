@@ -11,6 +11,7 @@ const theme: any = {
             300: '#2E3A59',
             400: '#222B45',
             500: '#192038',
+            550: '#152C5B',
             600: '#151A30',
             700: '#101426',
         },
@@ -93,6 +94,8 @@ const theme: any = {
             perfect: '#00DA8E',
         },
         border: '#ebedf5',
+        side_menu_color: '#fff',
+        dashboard_background: '#F1F6FD',
     },
     breakpoints: {
         extraSmall: '380px',
