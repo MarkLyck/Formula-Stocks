@@ -4,10 +4,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/indexA</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>http://localhost:3000/dashboard/index</loc>
     <changefreq>hourly</changefreq>
   </url>
