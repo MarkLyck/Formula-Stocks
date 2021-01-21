@@ -5,6 +5,7 @@ import ComposeProviders from './ComposeProviders'
 import FlagProvider from './FlagProvider'
 import 'src/lib/iconLibrary'
 import theme from 'src/lib/theme'
+import 'antd/dist/antd.less'
 
 type AppProviderProps = {
     children: React.ReactNode
