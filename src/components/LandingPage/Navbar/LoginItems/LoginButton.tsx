@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { Button } from '~/ui-components'
-import { LoginModal } from '~/components/LandingPage/Modals'
+import { Button } from 'src/ui-components'
+import { LoginModal } from 'src/components/LandingPage/Modals'
 
 const StyledButton = styled(Button)`
     color: ${(p) => p.theme.colors.white};

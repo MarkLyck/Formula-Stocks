@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Modal, Space } from 'antd';
-import { AIScoreChart, Paragraph } from '~/ui-components'
-import { COMPANY_NAME, BLOG_POSTS } from '~/common/constants'
+import { AIScoreChart, Paragraph } from 'src/ui-components'
+import { COMPANY_NAME, BLOG_POSTS } from 'src/common/constants'
 
 const StyledSpace = styled(Space)`
     width: 100%;

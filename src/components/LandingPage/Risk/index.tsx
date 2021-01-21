@@ -2,7 +2,7 @@ import React from 'react'
 import Router from 'next/router'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { Highlight, ActionButton, ButtonIcon, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage } from '~/ui-components'
+import { Highlight, ActionButton, ButtonIcon, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage } from 'src/ui-components'
 
 const ContentContainer = styled.div`
     display: flex;

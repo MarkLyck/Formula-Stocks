@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonIcon } from '~/ui-components'
+import { Button, ButtonIcon } from 'src/ui-components'
 
 import styled from '@emotion/styled'
 

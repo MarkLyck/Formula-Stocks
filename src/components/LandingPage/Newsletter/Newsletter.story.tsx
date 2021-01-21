@@ -1,8 +1,8 @@
 import React from 'react'
 import Newsletter from './index'
 import { MockedProvider } from '@apollo/client/testing'
-import { CREATE_NEWSLETTER } from '~/common/queries'
-// import { LAUNCH_PERFORMANCE_HISTORY_MOCK, MARKET_PRICE_HISTORY_MOCK } from '~/../tests/mocks'
+import { CREATE_NEWSLETTER } from 'src/common/queries'
+// import { LAUNCH_PERFORMANCE_HISTORY_MOCK, MARKET_PRICE_HISTORY_MOCK } from 'src/../tests/mocks'
 
 
 const mocks = [

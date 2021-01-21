@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Report, { ReportType } from '~/ui-components/Stock/Report'
-import mockReport from '~/../tests/mocks/report'
+import Report, { ReportType } from 'src/ui-components/Stock/Report'
+import mockReport from 'src/../tests/mocks/report'
 
 const Container = styled.div`
   padding: 32px;

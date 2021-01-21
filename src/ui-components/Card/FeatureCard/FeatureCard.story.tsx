@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story } from '@storybook/react';
 import { SmallFeatureCard, CardProps } from './SmallFeatureCard'
-import theme from '~/lib/theme'
+import themes from 'src/lib/themes'
 
 export default {
     title: 'ui-components/Card/Feature',
@@ -19,7 +19,7 @@ const Template: Story<CardProps> = (args: CardProps) => (
 export const algorithmic = Template.bind({});
 algorithmic.args = {
     title: 'Algorithmic approach',
-    color: theme.palette.icon_colors.pink,
+    color: themes.light.palette.icon_colors.pink,
     icon: 'brain',
     children: 'Our algorithms identify high quality public companies with a large margin of safety, similar to methods used by Warren Buffet'
 };
@@ -27,7 +27,7 @@ algorithmic.args = {
 export const win_ratio = Template.bind({});
 win_ratio.args = {
     title: '+92% Win Ratio',
-    color: theme.palette.icon_colors.pink,
+    color: themes.light.palette.icon_colors.pink,
     icon: 'percentage',
     children: 'To date +93.67% of our stock buy/sell signals have been sold with a profit.'
 };
@@ -35,7 +35,7 @@ win_ratio.args = {
 export const guarantee = Template.bind({});
 guarantee.args = {
     title: '7-day money back guarantee',
-    color: theme.palette.icon_colors.pink,
+    color: themes.light.palette.icon_colors.pink,
     icon: 'money-bill-wave',
     children: 'If you don’t absolutely love our service after signing up. No worries, we’ll give your money back - No questions asked.'
 };

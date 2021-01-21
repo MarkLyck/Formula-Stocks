@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Button } from '~/ui-components'
+import { Button } from 'src/ui-components'
 
 // const StyledButton = styled(Button)`
 

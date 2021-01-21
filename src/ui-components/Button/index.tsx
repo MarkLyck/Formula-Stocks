@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
-import theme from '../../lib/theme'
 
 export * from './NavItem'
 export * from './ActionButton'
@@ -35,7 +34,7 @@ export const getButtonPadding = (size: string) => {
 }
 
 const FilledButton = styled.button`
-    background-color: ${(p: ButtonProps) => theme.palette[p.status][500]};
+    background-color: ${(p: ButtonProps) => p.theme.palette[p.status][500]};
     color: white;
     border: 2px solid transparent;
     font-weight: bold;
@@ -46,22 +45,22 @@ const FilledButton = styled.button`
 
     &:hover {
         cursor: pointer;
-        background-color: ${(p: ButtonProps) => theme.palette[p.status][400]};
+        background-color: ${(p: ButtonProps) => p.theme.palette[p.status][400]};
     }
 
     &:active {
-        background-color: ${(p: ButtonProps) => theme.palette[p.status][600]};
+        background-color: ${(p: ButtonProps) => p.theme.palette[p.status][600]};
     }
 
     &:focus {
-        background-color: ${(p: ButtonProps) => theme.palette[p.status][600]};
-        border: 2px solid ${(p: ButtonProps) => theme.palette[p.status][700]};
+        background-color: ${(p: ButtonProps) => p.theme.palette[p.status][600]};
+        border: 2px solid ${(p: ButtonProps) => p.theme.palette[p.status][700]};
         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
     }
 
     &:disabled {
-        background-color: ${transparentize(1 - 0.16, theme.palette.basic[500])};
-        color: ${theme.palette.basic[600]};
+        background-color: ${transparentize(1 - 0.16, p.theme.palette.basic[500])};
+        color: ${p => p.theme.palette.basic[600]};
         cursor: not-allowed;
     }
 
@@ -73,32 +72,32 @@ const FilledButton = styled.button`
 
 const OutlineButton = styled.button`
     background-color: white;
-    color: ${(p: ButtonProps) => theme.palette[p.status][500]};
+    color: ${(p: ButtonProps) => p.theme.palette[p.status][500]};
     font-weight: bold;
     padding: ${p => getButtonPadding(p.size)};
     font-size: ${p => getButtonFontSize(p.size)};
-    border: 2px solid ${(p: ButtonProps) => theme.palette[p.status][500]};
+    border: 2px solid ${(p: ButtonProps) => p.theme.palette[p.status][500]};
     border-radius: 4px;
     outline: none;
 
     &:hover {
         cursor: pointer;
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.08, theme.palette[p.status][500])};
+        background-color: ${(p: ButtonProps) => transparentize(1 - 0.08, p.theme.palette[p.status][500])};
     }
 
     &:active {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, p.theme.palette[p.status][500])};
     }
 
     &:focus {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, p.theme.palette[p.status][500])};
         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
     }
 
     &:disabled {
-        background-color: ${transparentize(1 - 0.16, theme.palette.basic[500])};
-        border: 2px solid ${transparentize(1 - 0.24, theme.palette.basic[500])};
-        color: ${theme.palette.basic[600]};
+        background-color: ${transparentize(1 - 0.16, p.theme.palette.basic[500])};
+        border: 2px solid ${transparentize(1 - 0.24, p.theme.palette.basic[500])};
+        color: ${p => p.theme.palette.basic[600]};
         cursor: not-allowed;
     }
 
@@ -110,7 +109,7 @@ const OutlineButton = styled.button`
 
 const GhostButton = styled.button`
     background-color: transparent;
-    color: ${(p: ButtonProps) => theme.palette[p.status][500]};
+    color: ${(p: ButtonProps) => p.theme.palette[p.status][500]};
     font-weight: bold;
     padding: ${p => getButtonPadding(p.size)};
     font-size: ${p => getButtonFontSize(p.size)};
@@ -120,22 +119,22 @@ const GhostButton = styled.button`
 
     &:hover {
         cursor: pointer;
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.08, theme.palette[p.status][500])};
+        background-color: ${(p: ButtonProps) => transparentize(1 - 0.08, p.theme.palette[p.status][500])};
     }
 
     &:active {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, p.theme.palette[p.status][500])};
     }
 
     &:focus {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, p.theme.palette[p.status][500])};
         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
     }
 
     &:disabled {
-        background-color: ${transparentize(1 - 0.16, theme.palette.basic[500])};
-        border: 2px solid ${transparentize(1 - 0.24, theme.palette.basic[500])};
-        color: ${theme.palette.basic[600]};
+        background-color: ${transparentize(1 - 0.16, p.theme.palette.basic[500])};
+        border: 2px solid ${transparentize(1 - 0.24, p.theme.palette.basic[500])};
+        color: ${p => p.theme.palette.basic[600]};
         cursor: not-allowed;
     }
 

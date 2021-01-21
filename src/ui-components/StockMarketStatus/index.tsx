@@ -4,7 +4,7 @@ import { opacify } from 'polished'
 import { Tooltip } from 'antd'
 import { format, isBefore, isAfter, isSaturday, isSunday } from 'date-fns'
 import { utcToZonedTime } from 'date-fns-tz'
-import stockMarketHolidays from '~/common/info/stockMarketHolidays'
+import stockMarketHolidays from 'src/common/info/stockMarketHolidays'
 
 const Container = styled.div`
   display: flex;

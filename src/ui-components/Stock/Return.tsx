@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { lighten } from 'polished'
-import theme from '~/lib/theme'
+import { useAtom, themeAtom } from 'src/atoms'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Tag } from '~/ui-components'
+import { Tag } from 'src/ui-components'
 
 export const Container = styled.span`
   background: ${(p: any) =>
@@ -29,6 +29,8 @@ interface ReturnPropsType {
 }
 
 const Return = ({ percentReturn, loading, positiveColor, negativeColor }: ReturnPropsType) => {
+  const [theme] = useAtom(themeAtom)
+
   if (loading) {
     return (
       <Tag>

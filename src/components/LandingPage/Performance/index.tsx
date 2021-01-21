@@ -6,16 +6,16 @@ import { useQuery } from '@apollo/client'
 import fetch from 'isomorphic-unfetch'
 import { Tabs } from 'antd'
 import { useTheme } from '@emotion/react'
-import { useWindowSize } from '~/common/hooks'
+import { useWindowSize } from 'src/common/hooks'
 
-import { COMPANY_NAME } from '~/common/constants'
-import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from '~/ui-components'
+import { COMPANY_NAME } from 'src/common/constants'
+import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from 'src/ui-components'
 import LaunchChart from './LaunchChart'
 import BacktestedChart from './BacktestedChart'
-// import FSApolloClient from '~/common/FSApolloClient'
-import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from '~/common/queries'
+// import FSApolloClient from 'src/common/FSApolloClient'
+import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
 import YearlyReturns from './YearlyReturns'
-import { CompoundInterestCalculatorModal } from '~/components/LandingPage/Modals'
+import { CompoundInterestCalculatorModal } from 'src/components/LandingPage/Modals'
 
 // @ts-ignore
 if (!process.browser) {
@@ -73,10 +73,10 @@ const ButtonContainer = styled(Space)`
 
 const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
-  const [calculatorVisible, setCalculatorVisible] = useState(false) 
+  const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [chartType, setChartType] = useState('launch')
   const windowSize = useWindowSize()
-    const theme = useTheme()
+  const theme = useTheme()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
   const { data: planData, loading: planLoading } = useQuery(Query, {
@@ -121,9 +121,9 @@ const Performance = () => {
             ) : null}
             {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
             <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-                <Button block size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
-                <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
-              </ButtonContainer>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
+            </ButtonContainer>
           </Tabs.TabPane>
           <Tabs.TabPane tab="1970 - 2020 Backtested Performance" key="2">
             <ScalingSubTitle>
@@ -143,10 +143,10 @@ const Performance = () => {
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
               in real time.
               </Disclaimer>
-              <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-                <Button block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false} size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
-                <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />}  onClick={toggleModal}>See yearly returns</Button>
-              </ButtonContainer>
+            <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+              <Button block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false} size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
+            </ButtonContainer>
           </Tabs.TabPane>
         </StyledTabs>
         <CompoundInterestCalculatorModal isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />

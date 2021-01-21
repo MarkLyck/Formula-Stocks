@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
-import { maxSiteWidth } from '~/common/styles'
-import { LATEST_SELL_SIGNALS } from '~/common/queries'
-import { ScalingTitle, ScalingSubTitle, GenericLoading, LoadingError, Disclaimer, Tag, StockReturn } from '~/ui-components'
+import { maxSiteWidth } from 'src/common/styles'
+import { LATEST_SELL_SIGNALS } from 'src/common/queries'
+import { ScalingTitle, ScalingSubTitle, GenericLoading, LoadingError, Disclaimer, Tag, StockReturn } from 'src/ui-components'
 import { Table, TableBody, TableRow, TableCell, TableHeadCell, StockName } from './styles'
 
 const LatestSellsContainer = styled.div`

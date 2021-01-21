@@ -1,5 +1,5 @@
 // import React from 'react'
-import withDashboard from '~/components/Dashboard/withDashboard'
-import Portfolio from '~/components/Dashboard/Portfolio'
+import withDashboard from 'src/components/Dashboard/withDashboard'
+import Portfolio from 'src/components/Dashboard/Portfolio'
 
 export default withDashboard(Portfolio)

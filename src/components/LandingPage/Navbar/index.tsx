@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Space, Divider } from 'antd'
 import { scroller } from 'react-scroll'
-import { NavItem, LandingPageContainer } from '~/ui-components'
+import { NavItem, LandingPageContainer } from 'src/ui-components'
 import LoginItems from './LoginItems'
-import useWindowSize from '~/common/hooks/useWindowSize'
+import useWindowSize from 'src/common/hooks/useWindowSize'
 
 const Header = styled.header`
     position: absolute;

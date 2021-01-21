@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { Modal, Space, Typography, Table, Divider } from 'antd';
-import { PlusMinusInput, Disclaimer } from '~/ui-components'
+import { PlusMinusInput, Disclaimer } from 'src/ui-components'
 import CompoundInterestChart from './CompoundInterestChart'
-import { currencyRoundedFormatter } from '~/common/utils/formatters'
-import { STATISTICS } from '~/common/queries'
-import { COMPANY_NAME} from '~/common/constants'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
+import { STATISTICS } from 'src/common/queries'
+import { COMPANY_NAME } from 'src/common/constants'
 
 const { Title, Paragraph } = Typography
 
@@ -59,7 +59,7 @@ const Highlight = styled.span`
 const TableValue = styled.p`
     margin: 0;
     color: ${p => p.theme.palette[p.color][500]};
-    ${p => p.bold ? 'font-weight: 500;' :''}
+    ${p => p.bold ? 'font-weight: 500;' : ''}
 `
 
 
@@ -94,7 +94,7 @@ const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculat
             title: 'Total Contribution',
             dataIndex: 'totalContribution',
             key: 'totalContribution',
-            render: value => <TableValue  color="primary">{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
+            render: value => <TableValue color="primary">{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
         },
     ]
 
@@ -126,7 +126,7 @@ const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculat
         return acc
     }, [])
 
-    const futureBalance = yearByYearReturns[yearByYearReturns.length -1].value
+    const futureBalance = yearByYearReturns[yearByYearReturns.length - 1].value
 
     return (
         <Modal title="Compound interest calculator" visible={isVisible} onOk={onClose} onCancel={onClose} footer={null} width={1000}>

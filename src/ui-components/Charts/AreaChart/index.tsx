@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { format } from 'date-fns'
-import theme from '~/lib/theme'
+import { useAtom, themeAtom } from 'src/atoms'
 import withCharts from '../withCharts'
 
 const ChartContainer = styled.div`
@@ -60,6 +60,7 @@ export interface AreaChartType {
   axis: any[]
   chartLibraryLoaded?: boolean
   G2?: any
+  theme: any
 }
 
 const renderChart = ({
@@ -70,6 +71,7 @@ const renderChart = ({
   height = 400,
   scale,
   axis,
+  theme,
 }: AreaChartType & { chartInstance: any }) => {
   const chart = new G2.Chart({
     container: id,
@@ -206,6 +208,7 @@ const renderChart = ({
 
 const AreaChart = ({ G2, chartLibraryLoaded, id, data, ...rest }: AreaChartType) => {
   const [rendered, setRendered] = useState(false)
+  const [theme] = useAtom(themeAtom)
   let chartInstance: any
 
   useEffect(() => {
@@ -213,7 +216,7 @@ const AreaChart = ({ G2, chartLibraryLoaded, id, data, ...rest }: AreaChartType)
       chartInstance.destroy()
     }
     if (!rendered && chartLibraryLoaded) {
-      renderChart({ G2, chartInstance, id, data, ...rest })
+      renderChart({ G2, chartInstance, id, data, theme, ...rest })
       setRendered(true)
     }
 

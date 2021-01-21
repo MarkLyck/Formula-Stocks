@@ -1,6 +1,4 @@
-import theme from '~/lib/theme'
-
-export const getAIScoreColor = (value: number) => {
+export const getAIScoreColor = (value: number, theme: any) => {
     if (value < -20) {
         return theme.palette.scale.worst
     }

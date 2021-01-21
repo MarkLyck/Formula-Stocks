@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Card } from '~/ui-components'
+import { Card } from 'src/ui-components'
 
 export const BesideSection = styled(Card)`
   padding: 12px 24px;

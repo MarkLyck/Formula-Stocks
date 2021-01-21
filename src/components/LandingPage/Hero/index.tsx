@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 import { scroller } from 'react-scroll'
 import { Space } from 'antd'
 import { useTheme } from '@emotion/react'
-import { useWindowSize } from '~/common/hooks'
-import { ActionButton, ButtonIcon } from '~/ui-components'
-import { maxSiteWidth } from '~/common/styles'
+import { useWindowSize } from 'src/common/hooks'
+import { ActionButton, ButtonIcon } from 'src/ui-components'
+import { maxSiteWidth } from 'src/common/styles'
 import Title from './Title'
 import Description from './Description'
 import Features from './Features'
@@ -64,8 +64,8 @@ const Hero = ({ showSignup }: any) => {
                     <Title />
                     <Description />
                     <ButtonContainer size="middle" direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-                        <ActionButton onClick={showSignup} status="success"><ButtonIcon icon={['fad', 'gift']}/>TRY IT FOR FREE</ActionButton>
-                        <ActionButton onClick={learnMore}><ButtonIcon icon={['fad', 'info-square']}/>LEARN MORE</ActionButton>
+                        <ActionButton onClick={showSignup} status="success"><ButtonIcon icon={['fad', 'gift']} />TRY IT FOR FREE</ActionButton>
+                        <ActionButton onClick={learnMore}><ButtonIcon icon={['fad', 'info-square']} />LEARN MORE</ActionButton>
                     </ButtonContainer>
                 </Space>
             </Content>

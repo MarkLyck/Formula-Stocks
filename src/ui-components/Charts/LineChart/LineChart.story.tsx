@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import LineChart, { ChartPropsType } from './index'
-import { sixMonthsPricesMock } from '~/../tests/mocks'
-import theme from '~/lib/theme'
+import { sixMonthsPricesMock } from 'src/../tests/mocks'
+import themes from 'src/lib/themes'
 import { BreathPointType } from './breathPoint'
 import { LineAnnotationType, RegionFilterType } from '../types'
 
@@ -38,14 +38,14 @@ const createLineAnnotations = (belowNumber: number) => {
       start: ['min', belowNumber],
       end: ['max', belowNumber],
       style: {
-        stroke: theme.palette.primary[500],
+        stroke: themes.light.palette.primary[500],
         lineWidth: 2,
         lineDash: [10, 5],
       },
       text: {
         position: 'start',
         style: {
-          fill: theme.palette.primary[500],
+          fill: themes.light.palette.primary[500],
           fontSize: 15,
           fontWeight: '500',
         },
@@ -64,7 +64,7 @@ const createRegionFilters = (belowNumber: number) => {
       top: true,
       start: ['min', 0],
       end: ['max', belowNumber],
-      color: theme.palette.primary[500],
+      color: themes.light.palette.primary[500],
     },
   ]
   return regionFilters
@@ -74,7 +74,7 @@ const breathPoints: BreathPointType[] = [
   {
     id: 'buy-price',
     date: '2020-05-06',
-    color: theme.palette.primary[500],
+    color: themes.light.palette.primary[500],
   },
 ]
 
@@ -121,11 +121,11 @@ line_chart.args = {
   showRegionFilter: true,
   showBreathPoint: false,
   showDataMarker: true,
-  lineColor: theme.palette.text[500],
-  belowColor: theme.palette.primary[500],
+  lineColor: themes.light.palette.text[500],
+  belowColor: themes.light.palette.primary[500],
   belowNumber: 3.32,
   splitDate: new Date('2020.05.10'),
-  splitColor: theme.palette.basic[500],
+  splitColor: themes.light.palette.basic[500],
 }
 
 export const split_line_chart = () => {
@@ -137,10 +137,10 @@ export const split_line_chart = () => {
         id="chart-id"
         data={sixMonthsPricesMock}
         scales={scales}
-        lineColor={theme.palette.text[500]}
+        lineColor={themes.light.palette.text[500]}
         splitDate={new Date('2020.03.10')}
         splitColor="red"
-        belowColor={theme.palette.primary[500]}
+        belowColor={themes.light.palette.primary[500]}
         tooltipFunction={(_date: any, close: number) => {
           return {
             className: close <= belowNumber ? 'below' : 'above',

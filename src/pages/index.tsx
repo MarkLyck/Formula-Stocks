@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { initializeApollo, addApolloState } from '~/lib/apolloClient'
-import { SignupModal } from '~/components/LandingPage/Modals'
+import { initializeApollo, addApolloState } from 'src/lib/apolloClient'
+import { SignupModal } from 'src/components/LandingPage/Modals'
 import {
   Navbar,
   Hero,
@@ -17,7 +17,7 @@ import {
   ExchangesSupported,
   Pricing,
   Footer
-} from '~/components/LandingPage'
+} from 'src/components/LandingPage'
 
 const IndexPage = () => {
   const [signupVisible, setSignupVisible] = useState(false)

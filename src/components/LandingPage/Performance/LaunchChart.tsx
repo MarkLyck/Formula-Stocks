@@ -1,10 +1,11 @@
 import React from 'react'
 import maxBy from 'lodash.maxby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Legends, Legend } from '~/ui-components/Charts/Legends'
-import { decimalNumberFormatter } from '~/common/utils/formatters'
-import theme from '~/lib/theme'
-import { AreaChart } from '~/ui-components'
+import { Legends, Legend } from 'src/ui-components/Charts/Legends'
+import { decimalNumberFormatter } from 'src/common/utils/formatters'
+import { useAtom, themeAtom } from 'src/atoms'
+
+import { AreaChart } from 'src/ui-components'
 import { GraphContainer, ChartLoaderContainer } from './styles'
 
 interface LaunchChartType {
@@ -35,6 +36,7 @@ const createChartData = (planPerformance: any, marketPrices: any) => {
 }
 
 const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, name, id }: LaunchChartType) => {
+  const [theme] = useAtom(themeAtom)
   if (isLoading) {
     return (
       <ChartLoaderContainer>

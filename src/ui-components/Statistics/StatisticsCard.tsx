@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { cardStyle, SmallIconContainer } from '~/ui-components'
+import { cardStyle, SmallIconContainer } from 'src/ui-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StatCardContainer = styled.div`

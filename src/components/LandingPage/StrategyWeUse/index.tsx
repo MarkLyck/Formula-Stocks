@@ -2,8 +2,8 @@ import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
-import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from '~/ui-components'
-import { useWindowSize } from '~/common/hooks'
+import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from 'src/ui-components'
+import { useWindowSize } from 'src/common/hooks'
 import { transparentize } from 'polished'
 
 const CardTitle = styled.h4`

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
 import { Space } from 'antd'
-import logout from '~/common/utils/logout'
-import { hasStorage, isBrowser } from '~/common/utils/featureTests'
+import logout from 'src/common/utils/logout'
+import { hasStorage, isBrowser } from 'src/common/utils/featureTests'
 
 
 import LoginButton from './LoginButton'

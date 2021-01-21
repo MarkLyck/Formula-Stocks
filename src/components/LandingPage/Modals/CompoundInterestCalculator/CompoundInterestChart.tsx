@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 // import { Column } from '@ant-design/charts';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
-import { currencyRoundedFormatter } from '~/common/utils/formatters'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 
 const Value = styled.span`
     font-weight: bold;
@@ -19,7 +19,7 @@ const Container = styled.div`
 const Column = dynamic(
     () => import("@ant-design/charts").then((mod) => mod.Column) as any,
     { ssr: false }
-  )
+)
 
 const generateTooltip = (title: string, items: any[]) => {
     let balance = 0
@@ -89,17 +89,17 @@ const CompoundInterestChart: React.FC = ({ data }: any) => {
         tooltip: {
             customContent: generateTooltip
         },
-        yAxis : { 
+        yAxis: {
             label: {
-              formatter: (v) => currencyRoundedFormatter.format(Math.floor(Number(v))),
+                formatter: (v) => currencyRoundedFormatter.format(Math.floor(Number(v))),
             },
-          },
+        },
     }
 
     // @ts-ignore
     return (
         <Container>
-            <Column style={{height: '100%'}} {...config} />
+            <Column style={{ height: '100%' }} {...config} />
         </Container>
     )
 };

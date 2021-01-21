@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
-import debounce from '~/common/utils/debounce'
-import theme from '~/lib/theme'
-import withCharts from '~/ui-components/Charts/withCharts'
+import debounce from 'src/common/utils/debounce'
+import { useAtom, themeAtom } from 'src/atoms'
+import withCharts from 'src/ui-components/Charts/withCharts'
 
 const ChartContainer = styled.div`
   .g2-tooltip-title {
@@ -50,7 +50,7 @@ const chartData = [
     { bucket: '90 to 100', score: 95, irr: 30.15, winrate: 90 },
 ]
 
-const renderChart = ({ G2, chartInstance, id, height = 360 }: any) => {
+const renderChart = ({ G2, chartInstance, id, height = 360, theme }: any) => {
     if (!document.querySelector(`#${id}`)) {
         if (chartInstance) {
             chartInstance.destroy()
@@ -136,6 +136,7 @@ const AIScoreChart = ({ G2, chartLibraryLoaded, style, ...rest }: any) => {
     // Nasty hack to handle window resizing
     // https://github.com/antvis/G2/issues/2491
     const [isResizing, setIsResizing] = useState(false)
+    const [theme] = useAtom(themeAtom)
     let chartInstance: any
 
     const resize = () => {
@@ -159,7 +160,7 @@ const AIScoreChart = ({ G2, chartLibraryLoaded, style, ...rest }: any) => {
         window.addEventListener('resize', debouncedReset)
 
         if (!isResizing && !chartInstance) {
-            renderChart({ G2, chartInstance, id, ...rest })
+            renderChart({ G2, chartInstance, id, theme, ...rest })
         }
 
         return () => {

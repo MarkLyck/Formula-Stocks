@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 import Router from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logoutUser from '~/common/utils/logout'
-import { Mixpanel } from '~/lib/analytics/mixpanel'
+import logoutUser from 'src/common/utils/logout'
+import { Mixpanel } from 'src/lib/analytics/mixpanel'
 import { Button, Badge, IconContainer } from './styles'
 
 class MenuItem extends Component<any, any> {

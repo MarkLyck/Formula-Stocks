@@ -1,11 +1,18 @@
 {
     "cSpell.ignoreWords": [
         "button",
+        "c",
         "changefreq",
+        "cn",
         "globby",
+        "hez",
+        "pfc",
         "prefetch",
         "signup",
-        "urlset"
+        "tmtjddh",
+        "urlset",
+        "vk",
+        "ztc"
     ],
     "cSpell.words": [
         "backtested",
@@ -15,5 +22,7 @@
         "financials",
         "gcap",
         "scroller"
-    ]
+    ],
+    "ponicode.testSettings.testLocation.locationType": "Same folder as source file",
+    "ponicode.testSettings.testLocation.path": "{rootDir}/{filePath}/{fileName}.test.{ext}"
 }

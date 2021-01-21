@@ -1,7 +1,7 @@
 import React from 'react'
 import { MockedProvider } from '@apollo/client/testing'
-import { USER_SIGNUP } from '~/common/queries'
-import { USER_SIGNUP_MOCK } from '~/../tests/mocks'
+import { USER_SIGNUP } from 'src/common/queries'
+import { USER_SIGNUP_MOCK } from 'src/../tests/mocks'
 import LoginModal from './index'
 import SignupForm from './SignupForm'
 

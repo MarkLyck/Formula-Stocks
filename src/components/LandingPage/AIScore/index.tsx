@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { Highlight, ActionButton, ButtonIcon, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage, TextTag } from '~/ui-components'
+import { Highlight, ActionButton, ButtonIcon, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage, TextTag } from 'src/ui-components'
 import { AIScoreModal } from '../Modals'
 
 const ContentContainer = styled.div`

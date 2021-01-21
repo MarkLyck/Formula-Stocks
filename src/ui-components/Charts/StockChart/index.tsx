@@ -3,9 +3,9 @@ import React, { FC, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { format } from 'date-fns'
 import { DataView } from '@antv/data-set'
-import debounce from '~/common/utils/debounce'
+import debounce from 'src/common/utils/debounce'
 import withCharts from '../withCharts'
-import theme from '~/lib/theme'
+import { useAtom, themeAtom } from 'src/atoms'
 
 const ChartContainer = styled.div`
   .g2-tooltip {
@@ -68,6 +68,7 @@ interface ChartPropsType {
   regionFilters?: RegionFilterType[]
   tooltipFunction?: any
   height?: number
+  theme: any
 }
 
 const renderChart = ({
@@ -78,6 +79,7 @@ const renderChart = ({
   lineAnnotations = [],
   height = 400,
   tooltipFunction,
+  theme,
 }: ChartPropsType) => {
   const chartData = data.map((point) => ({ ...point, date: new Date(point.date) }))
 
@@ -186,10 +188,11 @@ const renderChart = ({
 
 const StockChart: FC<ChartPropsType> = ({ G2, chartLibraryLoaded, id, ...rest }: ChartPropsType) => {
   let chartInstance: any
+  const [theme] = useAtom(themeAtom)
 
   useEffect(() => {
     if (!chartInstance && chartLibraryLoaded) {
-      renderChart({ G2, chartInstance, id, ...rest })
+      renderChart({ G2, chartInstance, id, theme, ...rest })
     }
 
     return () => {

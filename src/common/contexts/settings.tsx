@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { hasStorage } from '~/common/utils/featureTests'
+import { hasStorage } from 'src/common/utils/featureTests'
 
 let defaultSettings: any = {
   chartType: 'line',

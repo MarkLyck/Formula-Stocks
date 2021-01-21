@@ -3,10 +3,10 @@ import { useQuery } from '@apollo/client'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Tooltip } from 'antd'
-import { GenericLoading, Card, CardTitle, Empty } from '~/ui-components'
-import { currencyFormatter, numberFormatter } from '~/common/utils/formatters'
-import { STOCK_STATS_QUERY } from '~/common/queries'
-// import FSApolloClient from '~/common/FSApolloClient'
+import { GenericLoading, Card, CardTitle, Empty } from 'src/ui-components'
+import { currencyFormatter, numberFormatter } from 'src/common/utils/formatters'
+import { STOCK_STATS_QUERY } from 'src/common/queries'
+// import FSApolloClient from 'src/common/FSApolloClient'
 
 const StatisticsContainer = styled.div`
   display: grid;

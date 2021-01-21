@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import { useQuery, useMutation } from '@apollo/client'
 import Router from 'next/router'
-import { isBrowser, hasStorage } from '~/common/utils/featureTests'
-import SideMenu from '~/components/Dashboard/SideMenu'
+import flagsmith from 'flagsmith'
+import { isBrowser, hasStorage } from 'src/common/utils/featureTests'
+import SideMenu from 'src/components/Dashboard/SideMenu'
 import { DashboardLayout, DashboardContent, DashboardBeside, StyledAlert } from './styles'
-import { CURRENT_USER_QUERY, REFRESH_TOKEN } from '~/common/queries'
-import { AUTH_PROFILE_ID } from '~/common/constants'
-import { SettingsProvider } from '~/common/contexts/settings'
-import { Mixpanel } from '~/lib/analytics/mixpanel'
+import { CURRENT_USER_QUERY, REFRESH_TOKEN } from 'src/common/queries'
+import { AUTH_PROFILE_ID } from 'src/common/constants'
+import { SettingsProvider } from 'src/common/contexts/settings'
+import { Mixpanel } from 'src/lib/analytics/mixpanel'
 
 const removeStoredTokens = () => {
   if (hasStorage) {
@@ -68,7 +69,7 @@ const withDashboard = (Component: any) => ({ location, ...extraProps }: any) => 
         // if no auth requests are in progress and refreshToken data is invalid -> make user login
         removeStoredTokens()
         console.log('push login')
-        Router.push('/dashboard/login')
+        // Router.push('/dashboard/login')
       }
     }
   }
@@ -85,6 +86,8 @@ const withDashboard = (Component: any) => ({ location, ...extraProps }: any) => 
 
     // @ts-ignore
     if (window.$crisp) window.$crisp.push(['set', 'user:email', user.email])
+
+    flagsmith.identify(user.id)
     Mixpanel.identify(user.id)
     Mixpanel.people.set({
       $email: user.email,

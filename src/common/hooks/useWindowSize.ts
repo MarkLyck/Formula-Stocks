@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { isBrowser } from '~/common/utils/featureTests'
+import { isBrowser } from 'src/common/utils/featureTests'
 
 // Hook
 function useWindowSize() {

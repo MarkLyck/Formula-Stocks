@@ -3,8 +3,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
-import { HorizontalScore, RadarChart } from '~/ui-components/Charts'
-import { Card } from '~/ui-components'
+import { HorizontalScore, RadarChart } from 'src/ui-components/Charts'
+import { Card } from 'src/ui-components'
 
 const ChartContainer = styled(Card)`
   width: 100%;

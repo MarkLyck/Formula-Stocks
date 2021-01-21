@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Tag } from '~/ui-components'
+import { Tag } from 'src/ui-components'
 
 const Container = styled.div`
   padding: 32px;

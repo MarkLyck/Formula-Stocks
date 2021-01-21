@@ -1,8 +1,8 @@
 import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card } from '~/ui-components'
-import { COMPANY_NAME } from '~/common/constants'
+import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card } from 'src/ui-components'
+import { COMPANY_NAME } from 'src/common/constants'
 
 const NumberContainer = styled.div`
     background: #fff;

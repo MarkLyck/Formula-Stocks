@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '~/ui-components'
+import { Button } from 'src/ui-components'
 
 const DashboardButton = (props: any) => (
     <Button {...props}>

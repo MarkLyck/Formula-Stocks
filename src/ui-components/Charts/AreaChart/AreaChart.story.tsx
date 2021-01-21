@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import AreaChart, { AreaChartType } from './index'
-import { launchPerformanceMock, backtestedPerformanceMock } from '~/../tests/mocks'
-import { Card } from '~/ui-components'
-import { currencyRoundedFormatter, decimalNumberFormatter } from '~/common/utils/formatters'
-import theme from '~/lib/theme'
+import { launchPerformanceMock, backtestedPerformanceMock } from 'src/../tests/mocks'
+import { Card } from 'src/ui-components'
+import { currencyRoundedFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
+import themes from 'src/lib/themes'
 
 const Container = styled(Card)`
   max-width: 800px;
@@ -73,7 +73,7 @@ area_chart.args = {
           style: {
             fontSize: 14,
             fontWeight: 'normal',
-            fill: theme.palette.basic[1100],
+            fill: themes.light.palette.basic[1100],
           },
         },
       },

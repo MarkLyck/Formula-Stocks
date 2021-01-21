@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { WIN_RATIO } from '~/common/constants'
+import { WIN_RATIO } from 'src/common/constants'
 import { Typography } from 'antd';
 const { Paragraph, Text } = Typography;
 

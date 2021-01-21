@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
-import { ModalTitle } from '~/ui-components'
+import { ModalTitle } from 'src/ui-components'
 import SignupForm from './SignupForm'
 
 interface SignupModalProps {

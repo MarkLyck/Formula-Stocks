@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 import createBreathPointShape, { BreathPointType } from './breathPoint'
 import createSplitLine from './splitLine'
 import { format } from 'date-fns'
-import theme from '~/lib/theme'
+import { useAtom, themeAtom } from 'src/atoms'
 import { LineAnnotationType, RegionFilterType } from '../types'
-import debounce from '~/common/utils/debounce'
+import debounce from 'src/common/utils/debounce'
 import withCharts from '../withCharts'
 
 interface DataMarkerType {
@@ -33,6 +33,7 @@ export interface ChartPropsType {
   splitColor?: string
   chartLibraryLoaded?: boolean
   G2: any
+  theme: any
 }
 
 let chartInstance: any
@@ -68,6 +69,7 @@ const renderChart = ({
   splitDate,
   splitEndDate,
   splitColor,
+  theme,
 }: ChartPropsType) => {
   const chartData = data.map((point) => ({
     ...point,
@@ -197,6 +199,7 @@ const LineChart: FC<ChartPropsType> = ({ G2, chartLibraryLoaded, id, belowColor,
   // Nasty hack to handle window resizing
   // https://github.com/antvis/G2/issues/2491
   const [isResizing, setIsResizing] = useState(false)
+  const [theme] = useAtom(themeAtom)
 
   const resize = () => {
     setIsResizing(true)
@@ -220,7 +223,7 @@ const LineChart: FC<ChartPropsType> = ({ G2, chartLibraryLoaded, id, belowColor,
     window.addEventListener('resize', debouncedReset)
 
     if (!isResizing && !chartInstance && chartLibraryLoaded) {
-      renderChart({ G2, id, ...rest })
+      renderChart({ G2, id, theme, ...rest })
     }
 
     return () => {

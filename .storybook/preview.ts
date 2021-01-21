@@ -17,8 +17,8 @@ addParameters({
 })
 
 // addDecorator(withWhyDidYouRender)
-addDecorator(withStyles)
 addDecorator(withTheme)
+addDecorator(withStyles)
 addDecorator(withRouter)
 
 export const parameters = {

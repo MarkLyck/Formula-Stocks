@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import theme from '~/lib/theme'
+import themes from 'src/lib/themes'
 
 export * from './TextTag'
 
@@ -39,8 +39,8 @@ export const Tag = ({
   loading,
   prefix = '',
   children,
-  color = theme.palette.text[500],
-  backgroundColor = theme.palette.basic[300],
+  color = themes.light.palette.text[500],
+  backgroundColor = themes.light.palette.basic[300],
 }: ReturnPropsType) => {
   if (loading) {
     return (

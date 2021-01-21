@@ -1,12 +1,13 @@
-import React from 'react'
-import { useQuery } from '@apollo/client'
-import { Line } from '@ant-design/charts';
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { format } from 'date-fns'
-import { numberFormatter, decimalNumberFormatter } from '~/common/utils/formatters'
-import { LAUNCH_PERFORMANCE_HISTORY } from '~/common/queries'
-import { Card as DashboardCard } from '~/ui-components'
-import theme from '~/lib/theme'
+import { useQuery } from '@apollo/client'
+import { Select, Space } from 'antd'
+import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
+import ReturnsChart from './ReturnsChart'
+import BarChart from './BarChart'
+import { Card as DashboardCard } from 'src/ui-components'
+const { Option } = Select;
+
 
 const ChartContainer = styled.div`
     width: 800px;
@@ -17,146 +18,127 @@ const ChartContainer = styled.div`
     }
 `
 
-const TooltipContent = styled.div`
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
 
-// tooltip components do not respect our ThemeProvider
+const START_VALUE = 200000000
 
-const TooltipDateLabel = styled.p`
-    margin: 0;
-    color: ${theme.palette.text[200]};
-    font-weight: 400;
-`
-const ReturnValue = styled.h2`
-    color: ${(p: any) => p.value < 0 ? theme.palette.danger[500] : theme.palette.success[500]};
-    font-weight: 900;
-    margin-bottom: 8px;
-`
+const generateMonthlyReturns = (data: returnsDataPointType[] = []) => {
+    const returns = data.map((point, i) => {
+        if (i === 0) {
+            return {
+                value: 0,
+                date: point.date,
+            }
+        }
 
-type PortfolioChartProps = {
-    data: any[];
-    loading: boolean;
-    error: any
-}
+        const newValue = data[i].balance + data[i].cash
+        const originalValue = data[i - 1].balance + data[i - 1].cash
+        const increase = newValue - originalValue
+        const percentIncrease = increase / originalValue * 100
 
-type DataPoint = {
-    balance: number;
-    date: string
-}
-
-const createChartData = (planPerformance: DataPoint[]) => {
-    if (!planPerformance.length) return []
-    const startValue = planPerformance[0].balance
-
-    return planPerformance.map((point: any, i: number) => {
-        const balance = (((planPerformance[i].balance - startValue) / startValue) * 100).toFixed(2)
 
         return {
-            value: Number(balance),
+            value: percentIncrease,
             date: point.date,
         }
     })
+
+    return returns
 }
 
-const chartTooltip = (title: string, items: any[]) => {
-    if (!items[0]) return null
+const generateAnnualReturns = (data: returnsDataPointType[] = []) => {
 
-    const value = decimalNumberFormatter.format(items[0].data.value)
+    const yearByYearBalances = data.reduce((acc: any, point: any, i: number) => {
+        const year = Number(point.date.split('-')[0])
+        const balance = point.balance + point.cash
 
-    return (
-        <TooltipContent>
-            <ReturnValue value={items[0].data.value}>{items[0].data.value > 0 ? '+' : ''}{value}%</ReturnValue>
-            <TooltipDateLabel>{format(new Date(title), 'MMM yyyy')}</TooltipDateLabel>
-        </TooltipContent>
-    )
+        if (i === 0) {
+            acc[year] = {
+                startValue: START_VALUE,
+            }
+        } else if (!acc[year]) {
+            acc[year] = {
+                startValue: acc[year - 1].endValue,
+                endValue: balance,
+            }
+        } else {
+            acc[year].endValue = balance
+        }
+
+        if (i === data.length - 1) {
+            if (acc[year].endValue < acc[Number(year) - 1].endValue) {
+                delete acc[year]
+            }
+        }
+
+        return acc
+    }, {})
+
+    const yearlyReturns = Object.keys(yearByYearBalances).map(key => {
+
+        const newValue = yearByYearBalances[key].endValue
+        const originalValue = yearByYearBalances[key].startValue
+        const increase = newValue - originalValue
+        const percentIncrease = increase / originalValue * 100
+
+        return {
+            date: key,
+            value: percentIncrease
+        }
+    })
+
+    return yearlyReturns
 }
 
-const PortfolioChart = ({ data, loading, error }: PortfolioChartProps) => {
-    let ref;
-
-    const chartData = createChartData(data)
-    const lastPoint = chartData[chartData.length - 1]
-    console.log("🚀 ~ file: index.tsx ~ line 77 ~ PortfolioChart ~ lastPoint", lastPoint)
-
-    const config = {
-        data: chartData,
-        loading: loading,
-        padding: 'auto',
-        xField: 'date',
-        yField: 'value',
-        yAxis: {
-            minLimit: -100,
-            maxLimit: Math.ceil(lastPoint?.value / 100) * 100,
-            tickCount: 6,
-            label: {
-                labelLine: null,
-                formatter: (v: string) => `${numberFormatter.format(Math.floor(Number(v)))}%`,
-                style: {
-                    fill: '#A0A5B2',
-                },
-            },
-            grid: {
-                line: {
-                    style: {
-                        stroke: '#EFF4F7',
-                        lineWidth: 1,
-                    }
-                }
-            },
-        },
-        xAxis: {
-            type: 'timeCat',
-            tickCount: 5,
-            grid: null,
-            tickLine: { style: { stroke: '#EFF4F7' } },
-            label: {
-                labelLine: null,
-                formatter: (v: string) => v.split('-')[0],
-                style: {
-                    fill: '#A0A5B2',
-                },
-            },
-        },
-        color: lastPoint?.value > 0 ? theme.palette.success[500] : theme.palette.danger[500],
-        lineStyle: {
-            lineWidth: 4,
-            shadowColor: lastPoint?.value > 0 ? theme.palette.success[200] : theme.palette.danger[200],
-            shadowBlur: 10,
-            shadowOffsetX: 5,
-            shadowOffsetY: 6
-        },
-        tooltip: {
-            customContent: chartTooltip
-        },
-        animation: {
-            appear: {
-                animation: 'path-in',
-                duration: 2000,
-            },
-        },
-    };
-
-    return (
-        <DashboardCard>
-            <ChartContainer>
-                <Line {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
-            </ChartContainer>
-        </DashboardCard>
-    )
+type returnsDataPointType = {
+    balance: number
+    cash: number
+    date: string
 }
 
-const PortfolioChartProvider = () => {
+
+const PortfolioChart = () => {
+    const [chartType, setChartType] = useState('total_return')
     const { data, loading, error } = useQuery(LAUNCH_PERFORMANCE_HISTORY, {
         // client: FSApolloClient,
     })
 
-    const chartData = data?.plan?.launchHistory || []
+    let totalReturnsData: returnsDataPointType[] = []
 
-    return <PortfolioChart data={chartData} loading={loading} error={error} />
+    if (data?.plan?.launchHistory) {
+        totalReturnsData = [{
+            balance: 0,
+            cash: START_VALUE,
+            date: "2009-01-01T00:00:00.000Z"
+        }, ...data.plan.launchHistory]
+    }
+
+    const monthlyReturnsData = generateMonthlyReturns(totalReturnsData)
+    const annualReturnsData = generateAnnualReturns(totalReturnsData)
+
+    return (
+        <DashboardCard>
+            <Space direction="vertical">
+                <Space>
+                    <Select defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
+                        <Option value="total_return">Total return</Option>
+                        {/* <Option value="monthly_returns">Monthly returns</Option> */}
+                        <Option value="annual_returns">Annual returns</Option>
+                    </Select>
+                </Space>
+                <ChartContainer>
+                    {chartType === 'total_return' && <ReturnsChart data={totalReturnsData} loading={loading} error={error} />}
+                    {(chartType === 'annual_returns' || chartType === 'monthly_returns') && (
+                        <BarChart
+                            data={chartType === 'monthly_returns' ? monthlyReturnsData : annualReturnsData}
+                            chartType={chartType}
+                            loading={loading}
+                            error={error}
+                        />
+                    )}
+                </ChartContainer>
+            </Space>
+        </DashboardCard>
+    )
 }
 
-export default PortfolioChartProvider
+export default PortfolioChart

@@ -2,8 +2,8 @@ import React, { FC, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import DataSet from '@antv/data-set' // TODO REMOVE!
 import styled from '@emotion/styled'
-import { getAIScoreColor } from '~/common/utils/reportUtils'
-import theme from '~/lib/theme'
+import { getAIScoreColor } from 'src/common/utils/reportUtils'
+import { useAtom, themeAtom } from 'src/atoms'
 import withCharts from '../withCharts'
 
 const ChartContainer = styled(motion.div)`
@@ -34,9 +34,10 @@ interface ChartPropsType {
   id: string
   data: any[]
   aiScore: number
+  theme: any
 }
 
-const renderChart = ({ G2, id, data, aiScore }: ChartPropsType & { chartInstance: any }) => {
+const renderChart = ({ G2, id, data, aiScore, theme }: ChartPropsType & { chartInstance: any }) => {
   const { DataView } = DataSet
 
   const dv = new DataView().source(data)
@@ -145,12 +146,13 @@ const renderChart = ({ G2, id, data, aiScore }: ChartPropsType & { chartInstance
 
 const RadarChart: FC<ChartPropsType> = ({ G2, chartLibraryLoaded, id, ...rest }: ChartPropsType) => {
   const [rendered, setRendered] = useState(false)
+  const [theme] = useAtom(themeAtom)
   let chartInstance: any
 
   useEffect(() => {
     if (!chartInstance && !rendered && chartLibraryLoaded) {
       setRendered(true)
-      renderChart({ G2, chartInstance, id, ...rest })
+      renderChart({ G2, chartInstance, id, theme, ...rest })
     }
 
     return () => {

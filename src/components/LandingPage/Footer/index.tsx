@@ -1,8 +1,8 @@
 import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { SocialMediaLink, Disclaimer } from '~/ui-components'
-import { COMPANY_NAME, SOCIAL_MEDIA_LINKS } from '~/common/constants'
+import { SocialMediaLink, Disclaimer } from 'src/ui-components'
+import { COMPANY_NAME, SOCIAL_MEDIA_LINKS } from 'src/common/constants'
 
 const Logo = styled.img`
     height: 48px;

@@ -3,10 +3,10 @@ import Router from 'next/router'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { Element } from 'react-scroll'
-import { maxSiteWidth } from '~/common/styles'
+import { maxSiteWidth } from 'src/common/styles'
 import { Space } from 'antd'
-import { ActionButton, ScalingTitle, ScalingParagraph, TextTag, ButtonIcon } from '~/ui-components'
-import { useWindowSize } from '~/common/hooks'
+import { ActionButton, ScalingTitle, ScalingParagraph, TextTag, ButtonIcon } from 'src/ui-components'
+import { useWindowSize } from 'src/common/hooks'
 
 const BackgroundContainer = styled.div`
     background-image: url(/images/product_images/screenshot_space.svg);
@@ -81,7 +81,7 @@ const HowItWorks = () => {
                         <ScalingParagraph>
                             Out of thousands of stocks, only a select few companies make the cut for our portfolio.
                         </ScalingParagraph>
-                        <ActionButton onClick={goToStrategyPage}><ButtonIcon icon={['fad', 'flask']}/>READ MORE ABOUT OUR STRATEGY</ActionButton>
+                        <ActionButton onClick={goToStrategyPage}><ButtonIcon icon={['fad', 'flask']} />READ MORE ABOUT OUR STRATEGY</ActionButton>
                     </Space>
                 </Content>
             </Container>

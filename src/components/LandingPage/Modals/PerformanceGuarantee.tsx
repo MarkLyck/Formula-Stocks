@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Modal, Space } from 'antd';
-import { COMPANY_NAME } from '~/common/constants'
+import { COMPANY_NAME } from 'src/common/constants'
 
 interface PerformanceGuaranteeModalProps {
     isVisible: boolean;

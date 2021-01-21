@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from '@emotion/styled'
-import { getAIScoreColor } from '~/common/utils/reportUtils'
-import theme from '~/lib/theme'
-import { Card } from '~/ui-components'
+import { getAIScoreColor } from 'src/common/utils/reportUtils'
+import { useAtom, themeAtom } from 'src/atoms'
+import { Card } from 'src/ui-components'
 
 const Container = styled(Card)`
   display: flex;
@@ -21,7 +21,7 @@ const Container = styled(Card)`
 const Score = styled.p`
   font-weight: bold;
   font-size: 1.1rem;
-  color: ${(props: any) => getAIScoreColor(props.value)};
+  color: ${(p: any) => getAIScoreColor(p.value, p.theme)};
 `
 
 const TextContainer = styled.div`
@@ -31,7 +31,7 @@ const TextContainer = styled.div`
 `
 
 const Label = styled.p`
-  color: ${(props: any) => props.theme.palette.text[500]};
+  color: ${(p: any) => p.theme.palette.text[500]};
   font-weight: bold;
   margin-right: 16px;
   font-size: 1rem;
@@ -42,7 +42,7 @@ const ChartContainer = styled.div`
   position: relative;
   width: 100%;
   margin-top: 12px;
-  // background-color: ${(props) => props.theme.palette.basic[200]};
+  // background-color: ${(p) => p.theme.palette.basic[200]};
   border-radius: 4px;
 
   div:last-of-type {
@@ -52,23 +52,23 @@ const ChartContainer = styled.div`
 
 const ChartSection = styled.div`
   height: 8px;
-  width: ${(props: { width: number; color: string; active?: boolean }) => props.width}%;
+  width: ${(p: { width: number; color: string; active?: boolean }) => p.width}%;
   background-color: ${(props: { width: number; color: string; active?: boolean }) => props.color};
   border-radius: 0px;
   margin-right: 4px;
-  opacity: ${(props: { width: number; color: string; active?: boolean }) => (props.active ? '1' : '0.1')};
+  opacity: ${(p: { width: number; color: string; active?: boolean }) => (p.active ? '1' : '0.1')};
   transition: all 0.2s;
 `
 
 const Indicator = styled.div`
   border-radius: 2px;
   background-color: white;
-  border: 3px solid ${(props: any) => getAIScoreColor(props.value)};
+  border: 3px solid ${(p: any) => getAIScoreColor(p.value, p.theme)};
   height: 32px;
   width: 16px;
   position: absolute;
   top: 50%;
-  left: ${(props: any) => (props.value + 100) / 2}%;
+  left: ${(p: any) => (p.value + 100) / 2}%;
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px 0 rgba(111, 120, 156, 0.24);
   box-sizing: border-box;
@@ -84,6 +84,8 @@ export interface ChartPropsType {
 
 const HorizontalScore: FC<ChartPropsType> = ({ value, label, description, direction }: ChartPropsType) => {
   const outputValue = value * 100
+  const [theme] = useAtom(themeAtom)
+
   return (
     // @ts-ignore
     <Container direction={direction}>

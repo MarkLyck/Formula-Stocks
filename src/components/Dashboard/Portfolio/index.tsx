@@ -1,13 +1,9 @@
 import React from 'react'
-import { PortfolioChart } from '~/ui-components'
+import { PortfolioChart } from 'src/ui-components'
 
 const Portfolio = () => {
-
-
-
     return (
         <div>
-            Portfolio
             <PortfolioChart />
         </div>
     )

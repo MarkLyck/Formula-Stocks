@@ -3,12 +3,12 @@ import Router from 'next/router'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Divider } from 'antd'
-import { isBrowser } from '~/common/utils/featureTests'
+import { isBrowser } from 'src/common/utils/featureTests'
 import MenuItem from './MenuItem'
 import { MenuList } from './styles'
 import SupportButton from './SupportButton'
-import { useWindowSize } from '~/common/hooks'
-import { COMPANY_NAME } from '~/common/constants'
+import { useWindowSize } from 'src/common/hooks'
+import { COMPANY_NAME } from 'src/common/constants'
 
 const BrandContainer = styled.div`
   display: flex;

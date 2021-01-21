@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import StockChart from './index'
-import { sixMonthsPricesMock } from '~/../tests/mocks'
-import theme from '~/lib/theme'
+import { sixMonthsPricesMock } from 'src/../tests/mocks'
+import themes from 'src/lib/themes'
 import { LineAnnotationType, RegionFilterType } from '../types'
 
 const Container = styled.div``
@@ -18,14 +18,14 @@ const createLineAnnotations = (belowNumber: number) => {
       start: ['min', belowNumber],
       end: ['max', belowNumber],
       style: {
-        stroke: theme.palette.primary[500],
+        stroke: themes.light.palette.primary[500],
         lineWidth: 2,
         lineDash: [10, 5],
       },
       text: {
         position: 'start',
         style: {
-          fill: theme.palette.primary[500],
+          fill: themes.light.palette.primary[500],
           fontSize: 15,
           fontWeight: '500',
         },
@@ -44,7 +44,7 @@ const createRegionFilters = (belowNumber: number) => {
       top: true,
       start: ['min', 0],
       end: ['max', belowNumber],
-      color: theme.palette.primary[500],
+      color: themes.light.palette.primary[500],
     },
   ]
   return regionFilters

@@ -1,7 +1,7 @@
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/apolloClient'
 import AppProvider from '../lib/AppProvider'
-import '~/lib/iconLibrary'
+import 'src/lib/iconLibrary'
 
 const App = ({ Component, pageProps }: any) => {
   const apolloClient = useApollo(pageProps)
