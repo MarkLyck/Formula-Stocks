@@ -8,7 +8,6 @@ import BarChart from './Histogram'
 import { Card as DashboardCard } from 'src/ui-components'
 const { Option } = Select;
 
-
 const ChartContainer = styled.div`
     width: 800px;
     .g2-tooltip {
@@ -120,7 +119,7 @@ const PortfolioChart = () => {
                 <Space>
                     <Select defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
                         <Option value="total_return">Total return</Option>
-                        {/* <Option value="monthly_returns">Monthly returns</Option> */}
+                        <Option value="monthly_returns">Monthly returns</Option>
                         <Option value="annual_returns">Annual returns</Option>
                     </Select>
                 </Space>
