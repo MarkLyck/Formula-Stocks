@@ -5,10 +5,10 @@ import '~/lib/iconLibrary'
 import 'antd/dist/antd.less'
 
 const withStyles = (storyFn: any) => (
-    <>
-        <GlobalStyles />
-        {storyFn()}
-    </>
+  <>
+    <GlobalStyles />
+    {storyFn()}
+  </>
 )
 
 export default withStyles

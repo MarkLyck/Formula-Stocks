@@ -64,12 +64,10 @@ const StyledModal = styled(Modal)`
 `
 
 const ButtonContainer = styled(Space)`
-    @media(max-width: ${p => p.theme.breakpoints.small}) {
-        width: 100%;
-    }
+  @media (max-width: ${(p) => p.theme.breakpoints.small}) {
+    width: 100%;
+  }
 `
-
-
 
 const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
@@ -91,7 +89,6 @@ const Performance = () => {
     // client: FSApolloClient,
   })
 
-
   let planPerformance = []
   let marketPrices = []
 
@@ -108,7 +105,9 @@ const Performance = () => {
         <ScalingTitle>Performance</ScalingTitle>
         <StyledTabs defaultActiveKey="1" onChange={switchChartType}>
           <Tabs.TabPane tab="2009 - 2020 Live Performance" key="1">
-            <ScalingSubTitle>Growth since our 2009 launch, compared to the Dow Jones Industrial Average.</ScalingSubTitle>
+            <ScalingSubTitle>
+              Growth since our 2009 launch, compared to the Dow Jones Industrial Average.
+            </ScalingSubTitle>
             {chartType === 'launch' ? (
               <LaunchChart
                 id={`single-launch-performance-graph`}
@@ -121,14 +120,23 @@ const Performance = () => {
             ) : null}
             {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
             <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
-              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
+              <Button
+                block
+                size="large"
+                icon={<ButtonIcon icon={['fad', 'calculator']} />}
+                onClick={() => setCalculatorVisible(true)}
+              >
+                Interest calculator
+              </Button>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>
+                See yearly returns
+              </Button>
             </ButtonContainer>
           </Tabs.TabPane>
           <Tabs.TabPane tab="1970 - 2020 Backtested Performance" key="2">
             <ScalingSubTitle>
               Backtested Logarithmic Chart showing how <b>$25,000</b> would have grown since 1970
-              </ScalingSubTitle>
+            </ScalingSubTitle>
             {chartType === 'backtested' ? (
               <BacktestedChart
                 id={`single-backtested-performance-graph`}
@@ -142,10 +150,19 @@ const Performance = () => {
             <Disclaimer>
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
               in real time.
-              </Disclaimer>
+            </Disclaimer>
             <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-              <Button block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false} size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
-              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
+              <Button
+                block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false}
+                size="large"
+                icon={<ButtonIcon icon={['fad', 'calculator']} />}
+                onClick={() => setCalculatorVisible(true)}
+              >
+                Interest calculator
+              </Button>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>
+                See yearly returns
+              </Button>
             </ButtonContainer>
           </Tabs.TabPane>
         </StyledTabs>
@@ -157,7 +174,7 @@ const Performance = () => {
           footer={[
             <Button key="back" onClick={toggleModal} size="large">
               Dismiss
-              </Button>,
+            </Button>,
           ]}
         >
           <YearlyReturns monthlyPerformance={planPerformance} chartType={chartType} />

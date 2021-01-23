@@ -20,21 +20,21 @@ const BrandContainer = styled.div`
 const BrandName = styled.h1`
   font-size: 16px;
   font-weight: 700;
-  color: ${p => p.theme.palette.text[550]};
+  color: ${(p) => p.theme.palette.text[550]};
 `
 
 const Logo = styled.img`
-    height: 32px;
-    margin: 8px 16px 16px 16px;
-    background: white;
-    border-radius: 4px;
-    padding: 8px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+  height: 32px;
+  margin: 8px 16px 16px 16px;
+  background: white;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
 
-    @media(max-width: ${p => p.theme.breakpoints.small}) {
-        padding: 8px;
-        height: 16px;
-    }
+  @media (max-width: ${(p) => p.theme.breakpoints.small}) {
+    padding: 8px;
+    height: 16px;
+  }
 `
 
 const StyledDivider = styled(Divider)`

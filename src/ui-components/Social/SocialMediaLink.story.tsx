@@ -1,5 +1,5 @@
 import React from 'react'
-import { Story } from '@storybook/react';
+import { Story } from '@storybook/react'
 import { SocialMediaLink, SocialMediaLinkProps } from './index'
 
 export default {
@@ -9,29 +9,27 @@ export default {
     layout: 'centered',
     backgrounds: {
       default: 'dark',
-      values: [
-        { name: 'dark', value: 'gray' },
-      ],
+      values: [{ name: 'dark', value: 'gray' }],
     },
   },
 }
 
 const Template: Story<SocialMediaLinkProps> = (args) => <SocialMediaLink {...args} />
 
-export const Facebook = Template.bind({});
+export const Facebook = Template.bind({})
 Facebook.args = {
   href: '/',
-  icon: 'facebook-f'
-};
+  icon: 'facebook-f',
+}
 
-export const Twitter = Template.bind({});
+export const Twitter = Template.bind({})
 Twitter.args = {
   href: '/',
-  icon: 'twitter'
-};
+  icon: 'twitter',
+}
 
-export const LinkedIn = Template.bind({});
+export const LinkedIn = Template.bind({})
 LinkedIn.args = {
   href: '/',
-  icon: 'linkedin'
-};
+  icon: 'linkedin',
+}

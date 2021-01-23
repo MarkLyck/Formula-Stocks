@@ -27,14 +27,13 @@ const mocks = [
       variables: {
         marketType: 'DJIA',
         fromDate: '2009-01-30',
-      }
+      },
     },
     result: {
       data: MARKET_PRICE_HISTORY_MOCK,
     },
   },
 ]
-
 
 export default {
   title: 'landing page/performance/chart',

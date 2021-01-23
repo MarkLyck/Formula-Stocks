@@ -5,10 +5,8 @@ export default {
   title: 'ui-components/plan_picker',
   component: PlanPicker,
   parameters: {
-    layout: 'centered'
-  }
+    layout: 'centered',
+  },
 }
 
-export const plan_picker = () => (
-  <PlanPicker onChange={console.log} />
-)
+export const plan_picker = () => <PlanPicker onChange={console.log} />

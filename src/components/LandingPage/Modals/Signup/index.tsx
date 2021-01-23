@@ -4,14 +4,14 @@ import { ModalTitle } from '~/ui-components'
 import SignupForm from './SignupForm'
 
 interface SignupModalProps {
-  onClose: () => void;
-  isVisible?: boolean;
+  onClose: () => void
+  isVisible?: boolean
 }
 
 const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   const [page, setPage] = useState(1)
   const [accountInfo, setAccountInfo] = useState(null)
-  console.log(" accountInfo", accountInfo)
+  console.log(' accountInfo', accountInfo)
 
   const handleAccountInfoSubmit = (values: any) => {
     setAccountInfo(values)

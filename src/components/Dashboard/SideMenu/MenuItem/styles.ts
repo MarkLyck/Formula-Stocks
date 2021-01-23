@@ -61,7 +61,7 @@ export const Button = styled.button`
     }
   }
 
-  @media(min-width: ${p => p.theme.breakpoints.medium}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.medium}) {
     flex-direction: row;
     justify-content: flex-start;
     padding: 8px 24px;
@@ -69,15 +69,15 @@ export const Button = styled.button`
     h4 {
       font-size: 14px;
     }
-  }  
+  }
 `
 
 export const IconContainer = styled.div`
-  @media(min-width: ${p => p.theme.breakpoints.medium}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.medium}) {
     width: 32px;
     margin-right: 8px;
     display: flex;
-  }  
+  }
 `
 export const Badge = styled.p`
   position: absolute;

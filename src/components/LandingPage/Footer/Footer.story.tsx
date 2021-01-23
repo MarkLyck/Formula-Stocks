@@ -3,9 +3,7 @@ import Footer from './index'
 
 export default {
   title: 'Landing page/footer',
-  component: Footer
+  component: Footer,
 }
 
-export const footer = () => (
-  <Footer />
-)
+export const footer = () => <Footer />

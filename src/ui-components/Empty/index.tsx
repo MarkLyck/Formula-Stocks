@@ -17,4 +17,3 @@ export const Empty = ({ label = 'No data' }: EmptyProps) => (
     <EmptyAntD image={EmptyAntD.PRESENTED_IMAGE_SIMPLE} description={<span>{label}</span>} />
   </Container>
 )
-

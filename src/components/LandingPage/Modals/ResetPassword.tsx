@@ -4,7 +4,7 @@ import { Form, Button } from 'antd'
 import { ActionButton } from '~/ui-components'
 
 interface ResetPasswordModalProps {
-  backToLogin?: any;
+  backToLogin?: any
 }
 
 const ResetPasswordModal = ({ backToLogin }: ResetPasswordModalProps) => {

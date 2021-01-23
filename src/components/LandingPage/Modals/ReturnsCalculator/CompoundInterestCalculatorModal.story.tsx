@@ -7,8 +7,8 @@ import ReturnsCalculatorModal from './index'
 export default {
   title: 'landing_page/modals',
   parameters: {
-    layout: 'centered'
-  }
+    layout: 'centered',
+  },
 }
 
 const mocks = [
@@ -22,10 +22,9 @@ const mocks = [
   },
 ]
 
-
 export const returns_calculator = () => (
   <MockedProvider mocks={mocks} addTypename={false}>
-    <ReturnsCalculatorModal isVisible onClose={() => { }} />
+    <ReturnsCalculatorModal isVisible onClose={() => {}} />
   </MockedProvider>
 )
 

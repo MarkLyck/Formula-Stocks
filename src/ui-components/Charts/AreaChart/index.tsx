@@ -62,14 +62,7 @@ export interface AreaChartType {
   G2?: any
 }
 
-const renderChart = ({
-  G2,
-  id,
-  data,
-  height = 400,
-  scale,
-  axis,
-}: AreaChartType) => {
+const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType) => {
   const chart = new G2.Chart({
     container: id,
     autoFit: true,

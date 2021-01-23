@@ -20,7 +20,6 @@ const mocks = [
   },
 ]
 
-
 export const statistics = () => (
   <MockedProvider mocks={mocks} addTypename={false}>
     <Statistics />

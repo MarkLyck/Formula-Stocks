@@ -6,14 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Tag } from '~/ui-components'
 
 export const Container = styled.span`
-  background: ${(p: any) =>
-    lighten(p.backgroundOpacity, p.color ? p.color : p.theme.palette.primary[500])};
+  background: ${(p: any) => lighten(p.backgroundOpacity, p.color ? p.color : p.theme.palette.primary[500])};
   color: ${(p: any) => (p.color ? p.color : p.theme.palette.primary[500])};
   font-size: 14px;
   padding: 8px 12px;
   border-radius: 4px;
   font-weight: 500;
-    white-space: nowrap;
+  white-space: nowrap;
 
   @media (max-width: 940px) {
     margin-left: 8px;

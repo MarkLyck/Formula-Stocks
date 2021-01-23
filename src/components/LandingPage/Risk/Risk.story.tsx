@@ -5,6 +5,4 @@ export default {
   title: 'landing_page/risk',
 }
 
-export const risk = () => (
-  <Risk />
-)
+export const risk = () => <Risk />

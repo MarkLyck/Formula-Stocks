@@ -6,8 +6,8 @@ export const Table = styled.table`
   display: table;
   width: 100%;
   border-radius: 4px;
-  border-style: hidden; 
-  box-shadow: 0 0 0 1px ${p => p.theme.palette.border}, 0 4px 14px 0 rgba(111, 120, 156, 0.08);; 
+  border-style: hidden;
+  box-shadow: 0 0 0 1px ${(p) => p.theme.palette.border}, 0 4px 14px 0 rgba(111, 120, 156, 0.08);
 
   @media (max-width: 700px) {
     .sales-price,

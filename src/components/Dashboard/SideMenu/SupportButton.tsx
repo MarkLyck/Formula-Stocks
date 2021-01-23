@@ -4,9 +4,9 @@ import { Button, ButtonIcon } from '~/ui-components'
 import styled from '@emotion/styled'
 
 const Container = styled.div`
-margin-top: auto;
-padding: 8px 16px;
-width: 100%;
+  margin-top: auto;
+  padding: 8px 16px;
+  width: 100%;
 `
 
 const StyledButton = styled(Button)`
@@ -16,7 +16,7 @@ const StyledButton = styled(Button)`
   align-items: center;
   color: ${(props: any) => props.theme.colors.white};
 
-  @media(max-width: ${p => p.theme.breakpoints.medium}) {
+  @media (max-width: ${(p) => p.theme.breakpoints.medium}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@ const StyledButton = styled(Button)`
       font-size: 16px;
       margin-bottom: 4px;
     }
-  }  
+  }
 `
 
 // @media (max-width: 1439px) and (min-width: 850px) {
@@ -56,7 +56,8 @@ const handleClick = (user: any) => {
 const SupportButton = ({ user }: { user: any }) => (
   <Container>
     <StyledButton onClick={() => handleClick(user)}>
-      <ButtonIcon icon="question-circle" /><span>Support</span>
+      <ButtonIcon icon="question-circle" />
+      <span>Support</span>
     </StyledButton>
   </Container>
 )

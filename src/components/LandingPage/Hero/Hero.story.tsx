@@ -23,17 +23,15 @@ const mocks = [
   },
 ]
 
-
 export default {
   title: 'Landing page/hero',
 }
 
 export const hero = () => (
   <MockedProvider mocks={mocks}>
-    <Hero showSignup={() => { }} />
+    <Hero showSignup={() => {}} />
   </MockedProvider>
 )
-
 
 hero.story = {
   parameters: {

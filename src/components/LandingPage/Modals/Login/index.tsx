@@ -12,15 +12,15 @@ const ForgotPassword = styled.a`
 `
 
 interface LoginModalProps {
-  onClose: () => void;
-  isVisible?: boolean;
+  onClose: () => void
+  isVisible?: boolean
 }
 
 const LoginModal = ({ onClose, isVisible }: LoginModalProps) => (
   <Modal visible={isVisible} onCancel={onClose} footer={null} centered>
     <ModalTitle>Log in</ModalTitle>
     <LoginForm />
-    <ForgotPassword onClick={() => { }}>Forgot your password?</ForgotPassword>
+    <ForgotPassword onClick={() => {}}>Forgot your password?</ForgotPassword>
   </Modal>
 )
 

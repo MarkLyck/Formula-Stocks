@@ -3,7 +3,8 @@ import { Global, css } from '@emotion/react'
 const GlobalStyles = () => (
   <Global
     styles={css`
-      body, html {
+      body,
+      html {
         padding: 0;
         margin: 0;
       }

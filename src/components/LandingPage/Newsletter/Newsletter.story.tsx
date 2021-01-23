@@ -9,18 +9,17 @@ const mocks = [
       query: CREATE_NEWSLETTER,
     },
     result: {
-      data: {}
+      data: {},
     },
   },
 ]
-
 
 export default {
   title: 'Landing page/newsletter',
   component: Newsletter,
   parameters: {
-    layout: 'centered'
-  }
+    layout: 'centered',
+  },
 }
 
 export const newsletter = () => (
@@ -38,7 +37,6 @@ export const newsletter = () => (
 //     error: new Error('An error occurred'),
 //   },
 // ]
-
 
 // export const newsletter_with_error = () => (
 //   <MockedProvider mocks={errorMocks}>
