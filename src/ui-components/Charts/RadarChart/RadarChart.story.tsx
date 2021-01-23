@@ -18,7 +18,7 @@ export const radar_chart = ({
   ai_soundness,
   ai_stewardship,
   ai_value,
-}) => {
+}: any) => {
   const data = [
     { label: 'Growth', value: ai_growth * 100 },
     { label: 'Value', value: ai_value * 100 },

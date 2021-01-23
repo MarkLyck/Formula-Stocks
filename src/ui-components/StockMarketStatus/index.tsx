@@ -28,6 +28,7 @@ const MarketText = styled.h4`
 `
 
 const now = new Date()
+// @ts-ignore
 const holidayList = Object.values(stockMarketHolidays[now.getFullYear()])
 const isHoliday = holidayList.includes(format(now, 'yyyy-MM-dd'))
 

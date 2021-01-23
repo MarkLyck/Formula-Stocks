@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
-let loadingChartLibrary = false
-let G2 = null
+// let loadingChartLibrary: boolean = false
+let G2: any = null
 
-const withCharts = (ComponentWithChart) => (props) => {
+const withCharts = (ComponentWithChart: any) => (props: any) => {
   const [chartLibraryLoaded, setChartLibraryLoaded] = useState(G2 !== null)
 
   const loadChartLibrary = async () => {

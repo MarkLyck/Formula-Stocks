@@ -61,6 +61,7 @@
     "@types/react-scroll": "^1.8.2",
     "@zeit/next-less": "^1.0.1",
     "babel-plugin-import": "^1.13.3",
+    "chromatic": "^5.6.1",
     "gitmoji-cli": "^3.2.18",
     "globby": "^11.0.2",
     "less": "^3.13.0",
