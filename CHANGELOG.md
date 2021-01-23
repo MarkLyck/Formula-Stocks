@@ -1,5 +1,43 @@
 # Changelog
 
+<a name="1.0.8"></a>
+## 1.0.8 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.8 [[a097cc3](https://github.com/MarkLyck/formula-stocks/commit/a097cc35d599ca27b8d9f760535b87e9a6f66f67)]
+
+
+<a name="1.0.7"></a>
+## 1.0.7 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.7 [[eb47de6](https://github.com/MarkLyck/formula-stocks/commit/eb47de6bcfb8df8625db50680388e1de41e43cbb)]
+
+
+<a name="1.0.6"></a>
+## 1.0.6 (2021-01-23)
+
+### Changed
+
+- ⬆️ Pin dependencies [[9607b0e](https://github.com/MarkLyck/formula-stocks/commit/9607b0e6a0ce8eb3b8c44945a3b6f10db5c9cead)]
+- ⬆️ Update dependency @types/node to v14.14.22 [[b3f949d](https://github.com/MarkLyck/formula-stocks/commit/b3f949dfbc89b698e1a790b931512a30e6dd4dfd)]
+- 🔧 ignore generated files in prettier [[3aaa16f](https://github.com/MarkLyck/formula-stocks/commit/3aaa16f1e6d8daab8aad545971c68bbff3416b92)]
+
+### Fixed
+
+- 💚 update bump wording [[1caa5a0](https://github.com/MarkLyck/formula-stocks/commit/1caa5a0a0451e4792719f8996b2452877ae619ae)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.6 [[7dea564](https://github.com/MarkLyck/formula-stocks/commit/7dea564a3f2786b91638f9d905b33271cf8c49df)]
+- 📝 generated changelog [[bf2bc74](https://github.com/MarkLyck/formula-stocks/commit/bf2bc741c7ca9dc600b021750b225dc8922d86e7)]
+-  Merge pull request [#16](https://github.com/MarkLyck/formula-stocks/issues/16) from MarkLyck/renovate/node-14.x [[cb5679a](https://github.com/MarkLyck/formula-stocks/commit/cb5679a42bf00c62fff8c34ebd1cbe95e39daa78)]
+-  Merge pull request [#20](https://github.com/MarkLyck/formula-stocks/issues/20) from MarkLyck/renovate/pin-dependencies [[e601854](https://github.com/MarkLyck/formula-stocks/commit/e6018540db7294bd254dea261608e81ff6e61911)]
+-  Merge pull request [#23](https://github.com/MarkLyck/formula-stocks/issues/23) from MarkLyck/cleanup [[15677da](https://github.com/MarkLyck/formula-stocks/commit/15677da2755c1716abf198ca021ba50903f768c0)]
+
+
 <a name="1.0.5"></a>
 ## 1.0.5 (2021-01-23)
 
