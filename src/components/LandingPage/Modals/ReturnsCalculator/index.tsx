@@ -61,9 +61,6 @@ const TableValue = styled.p`
     ${(p: any) => p.bold ? 'font-weight: 500;' : ''}
 `
 
-
-
-
 const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalProps) => {
     const { data } = useQuery(STATISTICS)
     const [initialDeposit, setInitialDeposit] = useState(1000)
