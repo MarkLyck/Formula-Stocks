@@ -43,6 +43,7 @@ const StyledButton = styled(Button)`
 // }
 
 const handleClick = (user: any) => {
+  console.log('handleClick', user)
   // @ts-ignore
   if (window.$crisp) {
     // @ts-ignore
