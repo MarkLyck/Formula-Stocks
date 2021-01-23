@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.5"></a>
+## 1.0.5 (2021-01-23)
+
+### Changed
+
+- 🏗️ add pretty quick to yarn gcap [[23ecca4](https://github.com/MarkLyck/formula-stocks/commit/23ecca42040d31699c0237bb7ca664ac4a162afe)]
+- 🔧 config lh [[14c30ea](https://github.com/MarkLyck/formula-stocks/commit/14c30eac17e83706ab8ab3cf82638be7b014fe1d)]
+
+### Removed
+
+- ➖ remove size-limit [[c1ac46b](https://github.com/MarkLyck/formula-stocks/commit/c1ac46b5fa2915fe5d1079f1fb661d185ab01b77)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.5 [[466df68](https://github.com/MarkLyck/formula-stocks/commit/466df68621ca5efb8955e545afaf8049627336e5)]
+- 📝 generated changelog [[f7f706a](https://github.com/MarkLyck/formula-stocks/commit/f7f706a731fe97555fa1f926217b3c4c696be1b8)]
+-  Merge pull request [#22](https://github.com/MarkLyck/formula-stocks/issues/22) from MarkLyck/cleanup [[585601e](https://github.com/MarkLyck/formula-stocks/commit/585601ed436b25d8a9efb2ff29407c2bad1158d0)]
+
+
 <a name="1.0.4"></a>
 ## 1.0.4 (2021-01-23)
 
