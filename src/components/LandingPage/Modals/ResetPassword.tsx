@@ -72,4 +72,4 @@ const ResetPasswordModal = ({ backToLogin }: ResetPasswordModalProps) => {
   )
 }
 
-export default ResetPassword
+export default ResetPasswordModal

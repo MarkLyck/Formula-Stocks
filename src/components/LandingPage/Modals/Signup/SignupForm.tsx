@@ -27,46 +27,46 @@ const StyledForm = styled(Form)`
 `
 
 const validateMessages = {
-    required: 'Please input your email',
-    types: {
-        email: 'This is not a valid email',
-    },
+  required: 'Please input your email',
+  types: {
+    email: 'This is not a valid email',
+  },
 };
 
-const SignupForm = ({ onSubmit }) => (
-    <StyledForm
-        name="basic"
-        initialValues={{ remember: true }}
-        size="large"
-        // @ts-ignore
-        onFinish={onSubmit}
-        validateMessages={validateMessages}
-        validateTrigger="onSubmit"
+const SignupForm = ({ onSubmit }: any) => (
+  <StyledForm
+    name="basic"
+    initialValues={{ remember: true }}
+    size="large"
+    // @ts-ignore
+    onFinish={onSubmit}
+    validateMessages={validateMessages}
+    validateTrigger="onSubmit"
+  >
+    <Form.Item
+      name="email"
+      rules={[{ required: true, type: 'email' }]}
     >
-        <Form.Item
-            name="email"
-            rules={[{ required: true, type: 'email' }]}
-        >
-            <Input
-                prefix={<FontAwesomeIcon icon={['fad', 'envelope']} />}
-                placeholder="email"
-            />
-        </Form.Item>
-        <Form.Item
-            name="password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
-            validateTrigger="onChange"
-        >
-            <Input.Password
-                prefix={<FontAwesomeIcon icon={['fad', 'lock-alt']} />}
-                placeholder="password"
-            />
-        </Form.Item>
+      <Input
+        prefix={<FontAwesomeIcon icon={['fad', 'envelope']} />}
+        placeholder="email"
+      />
+    </Form.Item>
+    <Form.Item
+      name="password"
+      rules={[{ required: true, message: 'Please input your password!' }]}
+      validateTrigger="onChange"
+    >
+      <Input.Password
+        prefix={<FontAwesomeIcon icon={['fad', 'lock-alt']} />}
+        placeholder="password"
+      />
+    </Form.Item>
 
-        <Form.Item>
-            <Button type="primary" htmlType="submit" block>Next</Button>
-        </Form.Item>
-    </StyledForm>
+    <Form.Item>
+      <Button type="primary" htmlType="submit" block>Next</Button>
+    </Form.Item>
+  </StyledForm>
 )
 
 export default SignupForm

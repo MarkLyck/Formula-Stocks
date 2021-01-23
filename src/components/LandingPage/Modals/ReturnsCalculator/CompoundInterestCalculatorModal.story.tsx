@@ -2,7 +2,7 @@ import React from 'react'
 import { MockedProvider } from '@apollo/client/testing'
 import { STATISTICS } from '~/common/queries'
 import { STATISTICS_MOCK } from '~/../tests/mocks'
-import CompoundInterestCalculatorModal from './index'
+import ReturnsCalculatorModal from './index'
 
 export default {
   title: 'landing_page/modals',
@@ -25,6 +25,6 @@ const mocks = [
 
 export const compound_interest_calculator = () => (
   <MockedProvider mocks={mocks} addTypename={false}>
-    <CompoundInterestCalculatorModal isVisible onClose={() => { }} />
+    <ReturnsCalculatorModal isVisible onClose={() => { }} />
   </MockedProvider>
 )

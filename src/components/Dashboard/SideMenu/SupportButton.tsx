@@ -55,7 +55,7 @@ const handleClick = (user: any) => {
 
 const SupportButton = ({ user }: { user: any }) => (
   <Container>
-    <StyledButton backgroundColor="primary" color="white" size="thin" onClick={() => handleClick(user)}>
+    <StyledButton onClick={() => handleClick(user)}>
       <ButtonIcon icon="question-circle" /><span>Support</span>
     </StyledButton>
   </Container>

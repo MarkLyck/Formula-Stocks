@@ -2,7 +2,7 @@ import React from 'react'
 import { Divider, Button, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { Element } from 'react-scroll'
-import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard, Alert } from '~/ui-components'
+import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard } from '~/ui-components'
 import theme from '~/lib/theme'
 
 const CardTitle = styled.h4`

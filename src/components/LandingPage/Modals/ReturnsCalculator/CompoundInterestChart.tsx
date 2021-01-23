@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 // import { Column } from '@ant-design/charts';
 import dynamic from 'next/dynamic';
 import styled from '@emotion/styled'
@@ -19,7 +19,7 @@ const Container = styled.div`
 const Column = dynamic(
     () => import("@ant-design/charts").then((mod) => mod.Column) as any,
     { ssr: false }
-  )
+)
 
 const generateTooltip = (title: string, items: any[]) => {
     let balance = 0
@@ -56,7 +56,11 @@ const generateTooltip = (title: string, items: any[]) => {
     );
 }
 
-const CompoundInterestChart: React.FC = ({ data }: any) => {
+export type CompoundInterestChartType = {
+    data: any[]
+}
+
+const CompoundInterestChart = ({ data }: CompoundInterestChartType) => {
     const theme = useTheme()
     const chartData: any = []
 
@@ -89,17 +93,18 @@ const CompoundInterestChart: React.FC = ({ data }: any) => {
         tooltip: {
             customContent: generateTooltip
         },
-        yAxis : { 
+        yAxis: {
             label: {
-              formatter: (v) => currencyRoundedFormatter.format(Math.floor(Number(v))),
+                formatter: (v: string) => currencyRoundedFormatter.format(Math.floor(Number(v))),
             },
-          },
+        },
     }
 
     // @ts-ignore
     return (
         <Container>
-            <Column style={{height: '100%'}} {...config} />
+            {/* @ts-ignore */}
+            <Column style={{ height: '100%' }} {...config} />
         </Container>
     )
 };

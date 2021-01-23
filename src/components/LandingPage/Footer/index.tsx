@@ -57,14 +57,6 @@ const FooterDisclaimer = styled(Disclaimer)`
     color: ${p => p.theme.palette.text[100]};
 `
 
-const Divider = styled.div`
-width: 100%;
-height: 2px;
-background-color: ${p => p.theme.palette.text[100]};
-max-width: 1400px;
-`
-
-
 const Footer = () => (
     <Container  >
         <Space direction="vertical" size="middle">
@@ -100,7 +92,7 @@ const Footer = () => (
                 financial situation, or investment objective(s).
             </MainDisclaimer>
         </Space>
-    </Container >
+    </Container>
 )
 
 export default Footer

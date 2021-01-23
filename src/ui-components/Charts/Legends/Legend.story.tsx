@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import { Legends, Legend } from './index'
 
 export default {

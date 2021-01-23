@@ -64,20 +64,18 @@ export interface AreaChartType {
 
 const renderChart = ({
   G2,
-  chartInstance,
   id,
   data,
   height = 400,
   scale,
   axis,
-}: AreaChartType & { chartInstance: any }) => {
+}: AreaChartType) => {
   const chart = new G2.Chart({
     container: id,
     autoFit: true,
     padding: [0, 0, 0, 0],
     height,
   })
-  chartInstance = chart
 
   chart.data(data)
 
@@ -213,6 +211,7 @@ const AreaChart = ({ G2, chartLibraryLoaded, id, data, ...rest }: AreaChartType)
       chartInstance.destroy()
     }
     if (!rendered && chartLibraryLoaded) {
+      // @ts-ignore
       renderChart({ G2, chartInstance, id, data, ...rest })
       setRendered(true)
     }

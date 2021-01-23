@@ -1,5 +1,5 @@
 import React from 'react'
-import maxBy from 'lodash.maxby'
+import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Legends, Legend } from '~/ui-components/Charts/Legends'
 import { currencyRoundedFormatter } from '~/common/utils/formatters'

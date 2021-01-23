@@ -6,7 +6,6 @@ import { PlusMinusInput, Disclaimer } from '~/ui-components'
 import CompoundInterestChart from './CompoundInterestChart'
 import { currencyRoundedFormatter } from '~/common/utils/formatters'
 import { STATISTICS } from '~/common/queries'
-import { COMPANY_NAME} from '~/common/constants'
 
 const { Title, Paragraph } = Typography
 
@@ -58,15 +57,15 @@ const Highlight = styled.span`
 
 const TableValue = styled.p`
     margin: 0;
-    color: ${p => p.theme.palette[p.color][500]};
-    ${p => p.bold ? 'font-weight: 500;' :''}
+    color: ${(p: any) => p.theme.palette[p.color][500]};
+    ${(p: any) => p.bold ? 'font-weight: 500;' : ''}
 `
 
 
 
 
-const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalProps) => {
-    const { data, loading, error } = useQuery(STATISTICS)
+const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalProps) => {
+    const { data } = useQuery(STATISTICS)
     const [initialDeposit, setInitialDeposit] = useState(1000)
     const [monthlyContribution, setMonthlyContribution] = useState(200)
     const [years, setYears] = useState(20)
@@ -82,19 +81,20 @@ const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculat
             title: `Future Value (${rateOfReturn.toFixed(2)}%)`,
             dataIndex: 'value',
             key: 'value',
-            render: value => <TableValue color="success" bold>{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
+            // @ts-ignore
+            render: (value: number) => <TableValue color="success" bold>{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
         },
         {
             title: 'Increase',
             dataIndex: 'difference',
             key: 'difference',
-            render: value => value > 0 ? <TableValue color="text">+{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue> : '',
+            render: (value: number) => value > 0 ? <TableValue color="text">+{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue> : '',
         },
         {
             title: 'Total Contribution',
             dataIndex: 'totalContribution',
             key: 'totalContribution',
-            render: value => <TableValue  color="primary">{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
+            render: (value: number) => <TableValue color="primary">{currencyRoundedFormatter.format(Math.floor(Number(value)))}</TableValue>,
         },
     ]
 
@@ -126,7 +126,7 @@ const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculat
         return acc
     }, [])
 
-    const futureBalance = yearByYearReturns[yearByYearReturns.length -1].value
+    const futureBalance = yearByYearReturns[yearByYearReturns.length - 1].value
 
     return (
         <Modal title="Compound interest calculator" visible={isVisible} onOk={onClose} onCancel={onClose} footer={null} width={1000}>
@@ -189,4 +189,4 @@ const CompoundInterestCalculatorModal = ({ isVisible, onClose }: ReturnsCalculat
     )
 }
 
-export default CompoundInterestCalculatorModal
+export default ReturnsCalculatorModal

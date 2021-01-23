@@ -15,12 +15,12 @@ interface ActionButtonProps {
 const Button = styled.button`
     outline: none;
     border-radius: 4px;
-    background-color: ${(p: ActionButtonProps) => p.backgroundColor ? p.backgroundColor : p.theme.palette[p.status][500]};
+    background-color: ${(p: any) => p.backgroundColor ? p.backgroundColor : p.theme.palette[p.status][500]};
     border: 4px solid transparent;
-    color: ${(p: ActionButtonProps) => p.color ? p.color : '#fff'};
+    color: ${(p: any) => p.color ? p.color : '#fff'};
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: 0 4px 16px 0 ${(p: ActionButtonProps) => p.shadowColor ? p.shadowColor : transparentize(0.5, p.theme.palette[p.status][500])};
+    box-shadow: 0 4px 16px 0 ${(p: any) => p.shadowColor ? p.shadowColor : transparentize(0.5, p.theme.palette[p.status][500])};
     text-decoration: none;
     text-align: center;
     padding: 12px 20px;

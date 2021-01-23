@@ -40,7 +40,9 @@ const chartTooltip = (chartType: string, title: string, items: any[], theme: any
 
     return (
         <TooltipContent>
+            {/* @ts-ignore */}
             <ReturnValue value={items[0].data.value} themeProp={theme}>{items[0].data.value > 0 ? '+' : ''}{value}%</ReturnValue>
+            {/* @ts-ignore */}
             <TooltipDateLabel themeProp={theme}>{date}</TooltipDateLabel>
         </TooltipContent>
     )
@@ -99,6 +101,7 @@ const Histogram = ({ data, chartType }: any) => {
     };
 
     return (
+        // @ts-ignore
         <Column {...config} />
     )
 }

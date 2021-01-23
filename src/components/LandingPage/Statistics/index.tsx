@@ -3,7 +3,7 @@ import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
-import { transparentize} from 'polished'
+import { transparentize } from 'polished'
 import {
     StatisticsCard,
     ActionButton,
@@ -20,7 +20,7 @@ import {
 } from '~/ui-components'
 import { useWindowSize } from '~/common/hooks'
 import { STATISTICS } from '~/common/queries'
-import { StatisticsModal, CompoundInterestCalculatorModal } from '../Modals'
+import { StatisticsModal, ReturnsCalculatorModal } from '../Modals'
 
 const ContentContainer = styled.div`
     display: flex;
@@ -47,7 +47,7 @@ const Statistics = () => {
     return (
         <LandingPageContainer marginBottom="4rem" >
             {!loading && <StatisticsModal isVisible={dialogVisible} onClose={() => setDialogVisible(false)} statistics={statistics} />}
-            <CompoundInterestCalculatorModal isVisible={compoundInterestCalculatorVisible} onClose={() => setCompoundInterestCalculatorVisible(false)}  />
+            <ReturnsCalculatorModal isVisible={compoundInterestCalculatorVisible} onClose={() => setCompoundInterestCalculatorVisible(false)} />
             <Beside>
                 <SpaceImage src="/images/space/space-0.svg" />
                 <ContentContainer>
@@ -77,9 +77,9 @@ const Statistics = () => {
                                 {loading ? <LoadingTag /> : <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.basic[300]}>{statistics.averageHoldingPeriod} days</Tag>}
                             </StatisticsCard>
                         </Space>
-                        <Space style={{width: '100%'}} direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-                            <ActionButton onClick={() => setDialogVisible(true)}><ButtonIcon icon={['fad', 'analytics']}/>SEE ADVANCED STATISTICS</ActionButton>
-                            <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])} onClick={() => setCompoundInterestCalculatorVisible(true)}><ButtonIcon icon={['fad', 'calculator']}/>INTEREST CALCULATOR</ActionButton>
+                        <Space style={{ width: '100%' }} direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+                            <ActionButton onClick={() => setDialogVisible(true)}><ButtonIcon icon={['fad', 'analytics']} />SEE ADVANCED STATISTICS</ActionButton>
+                            <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])} onClick={() => setCompoundInterestCalculatorVisible(true)}><ButtonIcon icon={['fad', 'calculator']} />INTEREST CALCULATOR</ActionButton>
                         </Space>
                     </Space>
                 </ContentContainer>

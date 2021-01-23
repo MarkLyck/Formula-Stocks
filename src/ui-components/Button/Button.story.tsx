@@ -13,13 +13,9 @@ export default {
     },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args}>{args.label}</Button>;
+const Template: Story<ButtonProps & { label: string }> = (args) => <Button {...args}>{args.label}</Button>;
 
 export const Primary = Template.bind({});
-Primary.args = {
-    label: 'BUTTON',
-};
-
 export const Outline = Template.bind({});
 Outline.args = {
     appearance: 'outline',
