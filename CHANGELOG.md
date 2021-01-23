@@ -1,5 +1,26 @@
 # Changelog
 
+<a name="1.0.3"></a>
+## 1.0.3 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.3 [[f7479be](https://github.com/MarkLyck/formula-stocks/commit/f7479be10dd30602dd24be5807faf8a1d3c1e04f)]
+
+
+<a name="1.0.2"></a>
+## 1.0.2 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.2 [[53110d0](https://github.com/MarkLyck/formula-stocks/commit/53110d0b75b7a6c022ad20e61e28bfb2ca5e4fbb)]
+- 📝 generated changelog [[5e50ba1](https://github.com/MarkLyck/formula-stocks/commit/5e50ba182e7fb351fba06767a1b09b5a8b82c406)]
+-  Update dependency @ant-design/charts to v1.0.16 [[58a8569](https://github.com/MarkLyck/formula-stocks/commit/58a8569022e6652751aaaf97638835d1fc7aa5e5)]
+-  Update Font Awesome [[d15f466](https://github.com/MarkLyck/formula-stocks/commit/d15f46659bbb3e1cd121d501d4aaa0f45d0a9ec8)]
+-  Merge pull request [#14](https://github.com/MarkLyck/formula-stocks/issues/14) from MarkLyck/renovate/ant-design-charts-1.x [[ec5579b](https://github.com/MarkLyck/formula-stocks/commit/ec5579b47e13f4220804f4c3ff98da19549db6df)]
+-  Merge pull request [#13](https://github.com/MarkLyck/formula-stocks/issues/13) from MarkLyck/renovate/font-awesome [[4c551dd](https://github.com/MarkLyck/formula-stocks/commit/4c551dd6b0ad7b4a9e7e905660798ef85a1b0704)]
+
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2021-01-23)
 
