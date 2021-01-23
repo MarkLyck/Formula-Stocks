@@ -1,0 +1,35 @@
+name: "Bump Version"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout source code"
+        uses: "actions/checkout@v2"
+        with:
+          ref: ${{ github.ref }} # 👈 Required to create tag
+          fetch-depth: 0 # 👈 Required to retrieve git history for changelog
+      - name: "Automated Version Bump"
+        id: version-bump
+        uses: "MarkLyck/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ steps.version-bump.outputs.newTag }}
+          release_name: ${{ steps.version-bump.outputs.newTag }}
+          body: https://github.com/MarkLyck/formula-stocks/blob/main/CHANGELOG.md
+          draft: false
+          prerelease: false
+      - name: Gitmoji Changelog Action
+        uses: MarkLyck/gitmoji-changelog-action@1.0.1
