@@ -5,6 +5,4 @@ export default {
   title: 'Landing page/Picking Winning Stocks',
 }
 
-export const picking_winning_stocks = () => (
-  <PickingWinningStocks />
-)
+export const picking_winning_stocks = () => <PickingWinningStocks />

@@ -7,22 +7,22 @@ const autoprefixer = require('autoprefixer')
 const NpmImportPlugin = require('less-plugin-npm-import')
 
 gulp.task('less', function () {
-    const plugins = [autoprefixer()]
+  const plugins = [autoprefixer()]
 
-    return gulp
-        .src('src/lib/themes/antd/*-theme.less')
-        .pipe(debug({ title: 'Less files:' }))
-        .pipe(
-            gulpless({
-                javascriptEnabled: true,
-                plugins: [new NpmImportPlugin({ prefix: '~' })],
-            }),
-        )
-        .pipe(postcss(plugins))
-        .pipe(
-            csso({
-                debug: true,
-            }),
-        )
-        .pipe(gulp.dest('./public/antd'))
+  return gulp
+    .src('src/lib/themes/antd/*-theme.less')
+    .pipe(debug({ title: 'Less files:' }))
+    .pipe(
+      gulpless({
+        javascriptEnabled: true,
+        plugins: [new NpmImportPlugin({ prefix: '~' })],
+      })
+    )
+    .pipe(postcss(plugins))
+    .pipe(
+      csso({
+        debug: true,
+      })
+    )
+    .pipe(gulp.dest('./public/antd'))
 })

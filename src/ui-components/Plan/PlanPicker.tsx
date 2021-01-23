@@ -74,35 +74,35 @@ export const PlanPicker = ({ onChange }: PlanPickerProps) => (
         // @ts-ignore
         <Label primary>
           <FontAwesomeIcon icon={['fad', 'check-square']} />
-            Weekly plan - $29 / week
-          </Label>
+          Weekly plan - $29 / week
+        </Label>
       }
     >
       <PlanOption className="demo-option-label-item">
         {/* @ts-ignore */}
         <PlanTitle primary>
           <FontAwesomeIcon icon={['fad', 'check-square']} />
-            Weekly plan
-          </PlanTitle>
-          $29 / week
-        </PlanOption>
+          Weekly plan
+        </PlanTitle>
+        $29 / week
+      </PlanOption>
     </Option>
     <Option
       value="yearly"
       label={
         <Label>
           <FontAwesomeIcon icon={['fas', 'tags']} />
-            Yearly plan - $1,200 / year (Save 20%)
-          </Label>
+          Yearly plan - $1,200 / year (Save 20%)
+        </Label>
       }
     >
       <PlanOption className="demo-option-label-item">
         <PlanTitle>
           <FontAwesomeIcon icon={['fas', 'tags']} />
-            Yearly plan - Save 20%
-          </PlanTitle>
-          $1,200 / year (20% off <OldPrice>$1,508</OldPrice>)
-        </PlanOption>
+          Yearly plan - Save 20%
+        </PlanTitle>
+        $1,200 / year (20% off <OldPrice>$1,508</OldPrice>)
+      </PlanOption>
     </Option>
   </StyledSelect>
 )

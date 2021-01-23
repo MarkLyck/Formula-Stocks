@@ -12,9 +12,9 @@ import withJotai from './decorators/withJotai'
 // import '../src/common/utils/fontAwesomeLibrary'
 
 addParameters({
-    viewport: {
-        viewports: INITIAL_VIEWPORTS,
-    },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
 })
 
 addDecorator(withJotai)
@@ -23,6 +23,6 @@ addDecorator(withTheme)
 addDecorator(withRouter)
 
 export const parameters = {
-    actions: { argTypesRegex: '^on.*' },
-    layout: 'fullscreen',
+  actions: { argTypesRegex: '^on.*' },
+  layout: 'fullscreen',
 }

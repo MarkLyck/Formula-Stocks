@@ -20,4 +20,4 @@ report.story = {
 report.args = {
   price: mockReport.price,
   scores: mockReport.scores,
-};
+}

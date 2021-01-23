@@ -3,9 +3,7 @@ import AIScore from './index'
 
 export default {
   title: 'landing_page/ai_score',
-  component: AIScore
+  component: AIScore,
 }
 
-export const risk = () => (
-  <AIScore />
-)
+export const risk = () => <AIScore />

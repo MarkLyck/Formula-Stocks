@@ -3,9 +3,7 @@ import MoneyBackGuarantee from './index'
 
 export default {
   title: 'landing_page/performance_guarantee',
-  component: MoneyBackGuarantee
+  component: MoneyBackGuarantee,
 }
 
-export const performance_guarantee = () => (
-  <MoneyBackGuarantee />
-)
+export const performance_guarantee = () => <MoneyBackGuarantee />

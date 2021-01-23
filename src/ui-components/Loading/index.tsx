@@ -16,7 +16,7 @@ const Container = styled.div`
 `
 
 const LoadingTitle = styled.h2`
-margin-top: 8px;
+  margin-top: 8px;
   font-size: 1.2rem;
 `
 

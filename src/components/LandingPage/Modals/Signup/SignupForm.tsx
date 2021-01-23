@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StyledForm = styled(Form)`
@@ -31,7 +31,7 @@ const validateMessages = {
   types: {
     email: 'This is not a valid email',
   },
-};
+}
 
 const SignupForm = ({ onSubmit }: any) => (
   <StyledForm
@@ -43,28 +43,21 @@ const SignupForm = ({ onSubmit }: any) => (
     validateMessages={validateMessages}
     validateTrigger="onSubmit"
   >
-    <Form.Item
-      name="email"
-      rules={[{ required: true, type: 'email' }]}
-    >
-      <Input
-        prefix={<FontAwesomeIcon icon={['fad', 'envelope']} />}
-        placeholder="email"
-      />
+    <Form.Item name="email" rules={[{ required: true, type: 'email' }]}>
+      <Input prefix={<FontAwesomeIcon icon={['fad', 'envelope']} />} placeholder="email" />
     </Form.Item>
     <Form.Item
       name="password"
       rules={[{ required: true, message: 'Please input your password!' }]}
       validateTrigger="onChange"
     >
-      <Input.Password
-        prefix={<FontAwesomeIcon icon={['fad', 'lock-alt']} />}
-        placeholder="password"
-      />
+      <Input.Password prefix={<FontAwesomeIcon icon={['fad', 'lock-alt']} />} placeholder="password" />
     </Form.Item>
 
     <Form.Item>
-      <Button type="primary" htmlType="submit" block>Next</Button>
+      <Button type="primary" htmlType="submit" block>
+        Next
+      </Button>
     </Form.Item>
   </StyledForm>
 )

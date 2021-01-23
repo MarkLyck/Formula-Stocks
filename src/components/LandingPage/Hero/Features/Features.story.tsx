@@ -23,7 +23,6 @@ const mocks = [
   },
 ]
 
-
 export default {
   title: 'Landing page/features',
 }

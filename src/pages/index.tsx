@@ -16,7 +16,7 @@ import {
   StrategyWeUse,
   ExchangesSupported,
   Pricing,
-  Footer
+  Footer,
 } from '~/components/LandingPage'
 
 const IndexPage = () => {

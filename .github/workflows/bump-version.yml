@@ -1,23 +1,23 @@
-name: "Bump Version"
+name: 'Bump Version'
 
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   bump-version:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout source code"
-        uses: "actions/checkout@v2"
+      - name: 'Checkout source code'
+        uses: 'actions/checkout@v2'
         with:
           ref: ${{ github.ref }} # 👈 Required to create tag
           fetch-depth: 0 # 👈 Required to retrieve git history for changelog
-      - name: "Automated Version Bump"
+      - name: 'Automated Version Bump'
         id: version-bump
-        uses: "MarkLyck/gh-action-bump-version@master"
+        uses: 'MarkLyck/gh-action-bump-version@master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Release

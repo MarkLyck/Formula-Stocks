@@ -8,8 +8,8 @@ import SignupForm from './SignupForm'
 export default {
   title: 'landing_page/modals/signup',
   parameters: {
-    layout: 'centered'
-  }
+    layout: 'centered',
+  },
 }
 
 const mocks = [
@@ -23,10 +23,9 @@ const mocks = [
   },
 ]
 
-
 export const signup_modal = () => (
   <MockedProvider mocks={mocks} addTypename={false}>
-    <LoginModal onClose={() => { }} isVisible />
+    <LoginModal onClose={() => {}} isVisible />
   </MockedProvider>
 )
 

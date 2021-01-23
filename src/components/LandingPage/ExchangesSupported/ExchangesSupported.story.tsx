@@ -3,9 +3,7 @@ import ExchangesSupported from './index'
 
 export default {
   title: 'Landing page/exchanges_supported',
-  component: ExchangesSupported
+  component: ExchangesSupported,
 }
 
-export const exchanges_supported = () => (
-  <ExchangesSupported />
-)
+export const exchanges_supported = () => <ExchangesSupported />

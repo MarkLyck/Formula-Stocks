@@ -1,4 +1,4 @@
 /// <reference types="next" />
 /// <reference types="next/types/global" />
 
-declare module 'flagsmith/isomorphic';
+declare module 'flagsmith/isomorphic'

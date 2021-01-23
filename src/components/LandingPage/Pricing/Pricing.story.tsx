@@ -3,9 +3,7 @@ import Pricing from './index'
 
 export default {
   title: 'Landing page/pricing',
-  component: Pricing
+  component: Pricing,
 }
 
-export const pricing = () => (
-  <Pricing />
-)
+export const pricing = () => <Pricing />
