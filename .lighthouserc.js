@@ -40,7 +40,7 @@ module.exports = {
         'mainthread-work-breakdown': 'off',
         'maskable-icon': 'off',
         'meta-description': 'off',
-        'max-potential-fid': ['error', { minScore: 0.05 }],
+        'max-potential-fid': ['error', { minScore: 0.01 }],
         'no-unload-listeners': 'off',
         'non-composited-animations': 'off',
         'offline-start-url': 'off',
