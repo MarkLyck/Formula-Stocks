@@ -44,7 +44,7 @@ module.exports = {
         'no-unload-listeners': 'off',
         'non-composited-animations': 'off',
         'offline-start-url': 'off',
-        'render-blocking-resources': ['error', { minScore: 0.85 }],
+        'render-blocking-resources': ['error', { minScore: 0.5 }],
         'service-worker': 'off',
         'speed-index': 'off',
         'speed-index': ['error', { minScore: 0.3 }],
