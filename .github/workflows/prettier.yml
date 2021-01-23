@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Prettier
 
 on:
   pull_request:
@@ -23,5 +23,6 @@ jobs:
       with:
         # This part is also where you can pass other options, for example:
         only_changed: True
+        prettier_options: --write **/*.{js,jsx,ts,tsx,md,json}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

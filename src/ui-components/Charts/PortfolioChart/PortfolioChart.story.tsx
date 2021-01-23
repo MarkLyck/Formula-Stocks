@@ -11,7 +11,6 @@ export default {
     }
 }
 
-
 const mocks = [
     {
         request: {
@@ -23,9 +22,13 @@ const mocks = [
     },
 ]
 
-
-export const portfolio = () => (
+export const portfolio_chart = () => (
     <MockedProvider mocks={mocks}>
         <PortfolioChart />
     </MockedProvider>
 )
+
+portfolio_chart.parameters = {
+    // disables Chromatic on a story level
+    chromatic: { disable: true },
+};

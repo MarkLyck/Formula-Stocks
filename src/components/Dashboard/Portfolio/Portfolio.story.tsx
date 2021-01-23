@@ -24,4 +24,9 @@ export const portfolio = () => (
     <MockedProvider mocks={mocks}>
         <Portfolio />
     </MockedProvider>
-) 
+)
+
+portfolio.parameters = {
+    // disables Chromatic on a story level
+    chromatic: { disable: true },
+};
