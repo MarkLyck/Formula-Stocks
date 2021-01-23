@@ -28,3 +28,8 @@ export const returns_calculator = () => (
     <ReturnsCalculatorModal isVisible onClose={() => { }} />
   </MockedProvider>
 )
+
+returns_calculator.parameters = {
+  // disables Chromatic on a story level
+  chromatic: { disable: true },
+}
