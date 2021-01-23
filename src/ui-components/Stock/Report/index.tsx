@@ -3,7 +3,10 @@ import React from 'react'
 import styled from '@emotion/styled'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
-import { HorizontalScore, RadarChart } from '~/ui-components/Charts'
+import {
+  HorizontalScore,
+  // RadarChart
+} from '~/ui-components/Charts'
 import { Card } from '~/ui-components'
 
 const ChartContainer = styled(Card)`
@@ -82,15 +85,15 @@ export interface ReportType {
 }
 
 const Report = ({ price, scores, ticker }: ReportType) => {
-  const radarChartData = [
-    { label: 'Growth', value: scores.ai_growth * 100 },
-    { label: 'Value', value: scores.ai_value * 100 },
-    { label: 'Profitability', value: scores.ai_profitability * 100 },
-    { label: 'Soundness', value: scores.ai_soundness * 100 },
-    { label: 'Stewardship', value: scores.ai_stewardship * 100 },
-    { label: 'Safety', value: scores.ai_safety * 100 },
-    { label: 'Reward', value: scores.ai_reward * 100 },
-  ]
+  // const radarChartData = [
+  //   { label: 'Growth', value: scores.ai_growth * 100 },
+  //   { label: 'Value', value: scores.ai_value * 100 },
+  //   { label: 'Profitability', value: scores.ai_profitability * 100 },
+  //   { label: 'Soundness', value: scores.ai_soundness * 100 },
+  //   { label: 'Stewardship', value: scores.ai_stewardship * 100 },
+  //   { label: 'Safety', value: scores.ai_safety * 100 },
+  //   { label: 'Reward', value: scores.ai_reward * 100 },
+  // ]
 
   return (
     <>
@@ -108,7 +111,7 @@ const Report = ({ price, scores, ticker }: ReportType) => {
         <ReportPartContainer>
           <SectionHeader>AI Scores</SectionHeader>
           <ChartContainer>
-            <RadarChart id={`${ticker}-radar-chart`} data={radarChartData} aiScore={scores.ai_score * 100} />
+            {/* <RadarChart id={`${ticker}-radar-chart`} data={radarChartData} aiScore={scores.ai_score * 100} /> */}
           </ChartContainer>
 
           {/* <ScoreList>

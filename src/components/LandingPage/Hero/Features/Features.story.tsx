@@ -2,7 +2,7 @@ import React from 'react'
 import Features from './index'
 import { MockedProvider } from '@apollo/client/testing'
 import { STATISTICS, STATISTICS_SINCE_LAUNCH } from '~/common/queries'
-import { STATISTICS_MOCK, STATISTICS_SINCE_LAUNCH_MOCK } from '~/../tests/mocks'
+import { STATISTICS_MOCK, STATISTICS_SINCE_LAUNCH_MOCK } from 'src/tests/mocks'
 
 const mocks = [
   {

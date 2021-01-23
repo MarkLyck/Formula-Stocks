@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Space } from 'antd'
 
 export interface CardProps {
     children: any;

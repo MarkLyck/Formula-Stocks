@@ -10,7 +10,7 @@ export default {
   title: 'ui components/Tag',
 }
 
-export const tag = () => (
+export const tag = ({ loading, prefix, value }: any) => (
   <Container>
     <Tag loading={loading} prefix={prefix}>
       {value}

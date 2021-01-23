@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Router from 'next/router'
+// import Router from 'next/router'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Divider } from 'antd'
-import { isBrowser } from '~/common/utils/featureTests'
+// import { isBrowser } from '~/common/utils/featureTests'
 import MenuItem from './MenuItem'
 import { MenuList } from './styles'
 import SupportButton from './SupportButton'
@@ -58,13 +58,12 @@ const getRoutes = (user?: any) => {
   return routes
 }
 
-const SideMenu = ({ user, onClose }) => {
+const SideMenu = ({ user, onClose }: any) => {
   const [activeRoute, setActiveRoute] = useState('')
-  const [isVisible, setIsVisible] = useState(true)
   const windowSize = useWindowSize()
 
   return (
-    <MenuList isVisible={isVisible}>
+    <MenuList>
       <BrandContainer>
         <Link href="/">
           <a>

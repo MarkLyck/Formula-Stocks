@@ -30,7 +30,7 @@ const refreshPage = () => {
   location.reload()
 }
 
-const LoadingError = ({ error }) => {
+const LoadingError = ({ error }: any) => {
   let errorText = 'Please try to refresh the page.'
 
   if (error && error.message.includes('permission')) {

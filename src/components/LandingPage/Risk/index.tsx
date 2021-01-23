@@ -19,6 +19,7 @@ const Risk = () => {
 
     return (
         <LandingPageContainer marginBottom="4rem" >
+            {/* @ts-ignore */}
             <Beside reverse>
                 <ContentContainer>
                     <Space direction="vertical">

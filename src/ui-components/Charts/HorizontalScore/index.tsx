@@ -78,11 +78,10 @@ const Indicator = styled.div`
 export interface ChartPropsType {
   value: number
   label: string
-  description?: string
   direction?: string
 }
 
-const HorizontalScore: FC<ChartPropsType> = ({ value, label, description, direction }: ChartPropsType) => {
+const HorizontalScore: FC<ChartPropsType> = ({ value, label, direction }: ChartPropsType) => {
   const outputValue = value * 100
   return (
     // @ts-ignore

@@ -1,7 +1,4 @@
-export { default as LineChart } from './LineChart'
 export { default as AreaChart } from './AreaChart'
-export { default as StockChart } from './StockChart'
 export { default as Gauge } from './Gauge'
 export { default as HorizontalScore } from './HorizontalScore'
-export { default as RadarChart } from './RadarChart'
 export { default as PortfolioChart } from './PortfolioChart'

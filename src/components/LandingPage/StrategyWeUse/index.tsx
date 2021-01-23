@@ -46,8 +46,8 @@ const StrategyWeUse = ({ showSignup }: any) => {
                     </CardSubtitle>
                         <ButtonContainer size="middle" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
                             <ActionButton onClick={showSignup} status="success"><ButtonIcon icon={['fad', 'gift']} />TRY IT FOR FREE</ActionButton>
-                            <ActionButton backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])}><ButtonIcon icon={['fad', 'question']} />SEE FAQ</ActionButton>
-                            <ActionButton><ButtonIcon icon={['fad', 'comment']} />CONTACT US</ActionButton>
+                            <ActionButton onClick={() => console.log('SEE FAQ')} backgroundColor="#fff" color={theme.palette.text[500]} shadowColor={transparentize(0.5, theme.palette.basic[600])}><ButtonIcon icon={['fad', 'question']} />SEE FAQ</ActionButton>
+                            <ActionButton onClick={() => console.log('OPEN CRISP')}><ButtonIcon icon={['fad', 'comment']} />CONTACT US</ActionButton>
                         </ButtonContainer>
                     </Space>
                 </Content>

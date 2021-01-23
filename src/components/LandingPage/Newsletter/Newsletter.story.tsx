@@ -2,8 +2,6 @@ import React from 'react'
 import Newsletter from './index'
 import { MockedProvider } from '@apollo/client/testing'
 import { CREATE_NEWSLETTER } from '~/common/queries'
-// import { LAUNCH_PERFORMANCE_HISTORY_MOCK, MARKET_PRICE_HISTORY_MOCK } from '~/../tests/mocks'
-
 
 const mocks = [
   {
@@ -31,19 +29,19 @@ export const newsletter = () => (
   </MockedProvider>
 )
 
-const errorMocks = [
-  {
-    request: {
-      query: CREATE_NEWSLETTER,
-    },
-    data: undefined,
-    error: new Error('An error occurred'),
-  },
-]
+// const errorMocks = [
+//   {
+//     request: {
+//       query: CREATE_NEWSLETTER,
+//     },
+//     data: undefined,
+//     error: new Error('An error occurred'),
+//   },
+// ]
 
 
-export const newsletter_with_error = () => (
-  <MockedProvider mocks={errorMocks}>
-    <Newsletter />
-  </MockedProvider>
-)
+// export const newsletter_with_error = () => (
+//   <MockedProvider mocks={errorMocks}>
+//     <Newsletter />
+//   </MockedProvider>
+// )

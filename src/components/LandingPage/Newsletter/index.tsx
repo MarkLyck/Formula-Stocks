@@ -47,12 +47,12 @@ const Newsletter = () => {
 
     let alreadyOnList = !!createError
 
-    const handleNameInput = (e) => {
+    const handleNameInput = (e: any) => {
         e.preventDefault()
         setFirstName(capitalize(e.target.value))
     }
 
-    const handleEmailInput = (e) => {
+    const handleEmailInput = (e: any) => {
         e.preventDefault()
         setEmail(e.target.value.toLowerCase())
         setEmailError(null)

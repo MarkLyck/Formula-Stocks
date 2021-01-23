@@ -1,5 +1,5 @@
 export * from './subscription'
-export * from './USER'
+export * from './user'
 export * from './stock'
 export * from './stockTip'
 export * from './launchPerformance'

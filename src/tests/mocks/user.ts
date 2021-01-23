@@ -18,33 +18,31 @@ export const USER_MOCK = {
 }
 
 export const USER_LOGIN_MOCK = {
-  "success": true
+  success: true,
 }
 
 export const USER_SIGNUP_MOCK = {
-  "success": true
+  success: true,
 }
 
 export const USER_LOGIN_FAILED_MOCK = {
   data: {
-    "userLogin": null
+    userLogin: null,
   },
   errors: [
     {
-      message: "AuthenticationProfile not found",
+      message: 'AuthenticationProfile not found',
       locations: [
         {
           line: 2,
-          column: 3
-        }
+          column: 3,
+        },
       ],
-      path: [
-        "userLogin"
-      ],
-      code: "EntityNotFoundError",
+      path: ['userLogin'],
+      code: 'EntityNotFoundError',
       details: {
-        profile: "AuthenticationProfile not found"
-      }
-    }
-  ]
+        profile: 'AuthenticationProfile not found',
+      },
+    },
+  ],
 }

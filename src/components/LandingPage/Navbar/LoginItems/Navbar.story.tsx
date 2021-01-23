@@ -10,7 +10,7 @@ export default {
     }
 }
 
-export const login_items = (args) => {
+export const login_items = (args: any) => {
     return (
         <LoginItems {...args} />
     )

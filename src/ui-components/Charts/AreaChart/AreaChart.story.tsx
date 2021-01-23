@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import AreaChart, { AreaChartType } from './index'
-import { launchPerformanceMock, backtestedPerformanceMock } from '~/../tests/mocks'
+import { launchPerformanceMock, backtestedPerformanceMock } from 'src/tests/mocks'
 import { Card } from '~/ui-components'
 import { currencyRoundedFormatter, decimalNumberFormatter } from '~/common/utils/formatters'
 import theme from '~/lib/theme'

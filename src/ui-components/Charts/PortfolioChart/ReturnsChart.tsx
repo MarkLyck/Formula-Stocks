@@ -63,15 +63,18 @@ const chartTooltip = (title: string, items: any[], theme: any) => {
 
     return (
         <TooltipContent>
+            {/* @ts-ignore */}
             <ReturnValue value={items[0].data.value} themeProp={theme}>{items[0].data.value > 0 ? '+' : ''}{value}%</ReturnValue>
+            {/* @ts-ignore */}
             <TooltipDateLabel themeProp={theme}>{format(new Date(title), 'MMM yyyy')}</TooltipDateLabel>
         </TooltipContent>
     )
 }
 
-const ReturnsChart = ({ data, loading, error }: PortfolioChartProps) => {
+const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     const theme = useTheme()
-    let ref;
+    // @ts-ignore
+    let ref: any;
 
     const chartData = createChartData(data)
     const lastPoint = chartData[chartData.length - 1]
@@ -135,6 +138,7 @@ const ReturnsChart = ({ data, loading, error }: PortfolioChartProps) => {
     };
 
     return (
+        // @ts-ignore
         <Line {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
     )
 }

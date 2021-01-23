@@ -6,7 +6,7 @@ import {
 } from '~/common/queries'
 import {
     latestSellSignalsMock
-} from '~/../tests/mocks'
+} from 'src/tests/mocks'
 
 
 

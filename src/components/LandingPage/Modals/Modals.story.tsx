@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatisticsModal, AIScoreModal, PerformanceGuaranteeModal, ReturnsCalculator } from './index'
+import { StatisticsModal, AIScoreModal, PerformanceGuaranteeModal } from './index'
 
 export default {
   title: 'landing_page/modals',

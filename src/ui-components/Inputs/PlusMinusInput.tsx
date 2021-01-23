@@ -36,7 +36,8 @@ export const PlusMinusInput = ({ value, min, onChange, step = 1, ...props }: Plu
         onChange(value + step)
     }
 
-    const handleChange = (value) => {
+    const handleChange = (value: number) => {
+        // @ts-ignore
         if (isNaN(min) || value >= min) {
             onChange(value)
         }
@@ -44,9 +45,10 @@ export const PlusMinusInput = ({ value, min, onChange, step = 1, ...props }: Plu
 
     return (
         <div>
+            {/* @ts-ignore */}
             <MinusButton onClick={subtract} disabled={!isNaN(min) && (value - step < min)}>-</MinusButton>
             {/* @ts-ignore */}
-            <StyledInputNumber value={value} onChange={handleChange} {...props} min={min}/>
+            <StyledInputNumber value={value} onChange={handleChange} {...props} min={min} />
             <PlusButton onClick={add}>+</PlusButton>
         </div>
     )

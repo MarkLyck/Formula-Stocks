@@ -2,26 +2,30 @@ import React from 'react'
 import Portfolio from './index'
 import { MockedProvider } from '@apollo/client/testing'
 import { LAUNCH_PERFORMANCE_HISTORY } from '~/common/queries'
-import { LAUNCH_PERFORMANCE_HISTORY_MOCK } from '~/../tests/mocks'
-
+import { LAUNCH_PERFORMANCE_HISTORY_MOCK } from 'src/tests/mocks'
 
 const mocks = [
-    {
-        request: {
-            query: LAUNCH_PERFORMANCE_HISTORY,
-        },
-        result: {
-            data: LAUNCH_PERFORMANCE_HISTORY_MOCK,
-        },
+  {
+    request: {
+      query: LAUNCH_PERFORMANCE_HISTORY,
     },
+    result: {
+      data: LAUNCH_PERFORMANCE_HISTORY_MOCK,
+    },
+  },
 ]
 
 export default {
-    title: 'dashboard/portfolio',
+  title: 'dashboard/portfolio',
 }
 
 export const portfolio = () => (
-    <MockedProvider mocks={mocks}>
-        <Portfolio />
-    </MockedProvider>
-) 
+  <MockedProvider mocks={mocks}>
+    <Portfolio />
+  </MockedProvider>
+)
+
+portfolio.parameters = {
+  // disables Chromatic on a story level
+  chromatic: { disable: true },
+}

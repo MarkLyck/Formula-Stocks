@@ -10,7 +10,7 @@ import SignupButton from './SignupButton'
 import LogoutButton from './LogoutButton'
 import DashboardButton from './DashboardButton'
 
-const LoginItems = ({ showSignup }) => {
+const LoginItems = ({ showSignup }: any) => {
     const [loggedIn, setLoggedIn] = useState(
         // @ts-ignore window.authToken
         (hasStorage && localStorage.getItem('authToken')) || (isBrowser && window.authToken)

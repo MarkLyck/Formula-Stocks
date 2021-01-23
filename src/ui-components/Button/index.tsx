@@ -35,27 +35,27 @@ export const getButtonPadding = (size: string) => {
 }
 
 const FilledButton = styled.button`
-    background-color: ${(p: ButtonProps) => theme.palette[p.status][500]};
+    background-color: ${(p: any) => theme.palette[p.status][500]};
     color: white;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: ${p => getButtonPadding(p.size)};
-    font-size: ${p => getButtonFontSize(p.size)};
+    padding: ${(p: any) => getButtonPadding(p.size)};
+    font-size: ${(p: any) => getButtonFontSize(p.size)};
     border-radius: 4px;
     outline: none;
 
     &:hover {
         cursor: pointer;
-        background-color: ${(p: ButtonProps) => theme.palette[p.status][400]};
+        background-color: ${(p: any) => theme.palette[p.status][400]};
     }
 
     &:active {
-        background-color: ${(p: ButtonProps) => theme.palette[p.status][600]};
+        background-color: ${(p: any) => theme.palette[p.status][600]};
     }
 
     &:focus {
-        background-color: ${(p: ButtonProps) => theme.palette[p.status][600]};
-        border: 2px solid ${(p: ButtonProps) => theme.palette[p.status][700]};
+        background-color: ${(p: any) => theme.palette[p.status][600]};
+        border: 2px solid ${(p: any) => theme.palette[p.status][700]};
         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
     }
 
@@ -73,25 +73,25 @@ const FilledButton = styled.button`
 
 const OutlineButton = styled.button`
     background-color: white;
-    color: ${(p: ButtonProps) => theme.palette[p.status][500]};
+    color: ${(p: any) => theme.palette[p.status][500]};
     font-weight: bold;
-    padding: ${p => getButtonPadding(p.size)};
-    font-size: ${p => getButtonFontSize(p.size)};
-    border: 2px solid ${(p: ButtonProps) => theme.palette[p.status][500]};
+    padding: ${(p: any) => getButtonPadding(p.size)};
+    font-size: ${(p: any) => getButtonFontSize(p.size)};
+    border: 2px solid ${(p: any) => theme.palette[p.status][500]};
     border-radius: 4px;
     outline: none;
 
     &:hover {
         cursor: pointer;
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.08, theme.palette[p.status][500])};
+        background-color: ${(p: any) => transparentize(1 - 0.08, theme.palette[p.status][500])};
     }
 
     &:active {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: any) => transparentize(1 - 0.16, theme.palette[p.status][500])};
     }
 
     &:focus {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: any) => transparentize(1 - 0.16, theme.palette[p.status][500])};
         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
     }
 
@@ -110,25 +110,25 @@ const OutlineButton = styled.button`
 
 const GhostButton = styled.button`
     background-color: transparent;
-    color: ${(p: ButtonProps) => theme.palette[p.status][500]};
+    color: ${(p: any) => theme.palette[p.status][500]};
     font-weight: bold;
-    padding: ${p => getButtonPadding(p.size)};
-    font-size: ${p => getButtonFontSize(p.size)};
+    padding: ${(p: any) => getButtonPadding(p.size)};
+    font-size: ${(p: any) => getButtonFontSize(p.size)};
     border: 2px solid transparent;
     border-radius: 4px;
     outline: none;
 
     &:hover {
         cursor: pointer;
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.08, theme.palette[p.status][500])};
+        background-color: ${(p: any) => transparentize(1 - 0.08, theme.palette[p.status][500])};
     }
 
     &:active {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: any) => transparentize(1 - 0.16, theme.palette[p.status][500])};
     }
 
     &:focus {
-        background-color: ${(p: ButtonProps) => transparentize(1 - 0.16, theme.palette[p.status][500])};
+        background-color: ${(p: any) => transparentize(1 - 0.16, theme.palette[p.status][500])};
         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
     }
 
@@ -155,6 +155,7 @@ export const Button = ({
 }: ButtonProps) => {
     if (appearance === 'outline') {
         return (
+            // @ts-ignore
             <OutlineButton size={size} status={status} disabled={disabled} {...props}>
                 {children}
             </OutlineButton>
@@ -163,6 +164,7 @@ export const Button = ({
 
     if (appearance === 'ghost') {
         return (
+            // @ts-ignore
             <GhostButton size={size} status={status} disabled={disabled} {...props}>
                 {children}
             </GhostButton>
@@ -170,6 +172,7 @@ export const Button = ({
     }
 
     return (
+        // @ts-ignore
         <FilledButton size={size} status={status} disabled={disabled} {...props}>
             {children}
         </FilledButton>

@@ -15,10 +15,10 @@ const OpenIndicator = styled.div`
   height: 16px;
   width: 16px;
   background: ${(props: any) =>
-    opacify(-0.4, props.marketIsOpen ? props.theme.colors.scale.perfect : props.theme.colors.gray)};
+    opacify(-0.4, props.marketIsOpen ? props.theme.palette.scale.perfect : props.theme.palette.basic[500])};
 
   border: 2px solid;
-  border-color: ${(props: any) => (props.marketIsOpen ? props.theme.colors.scale.perfect : 'gray')};
+  border-color: ${(props: any) => (props.marketIsOpen ? props.theme.palette.scale.perfect : 'gray')};
   border-radius: 50%;
   margin-right: 8px;
 `
@@ -28,6 +28,7 @@ const MarketText = styled.h4`
 `
 
 const now = new Date()
+// @ts-ignore
 const holidayList = Object.values(stockMarketHolidays[now.getFullYear()])
 const isHoliday = holidayList.includes(format(now, 'yyyy-MM-dd'))
 

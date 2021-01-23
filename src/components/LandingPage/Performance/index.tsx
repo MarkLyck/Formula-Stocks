@@ -15,7 +15,7 @@ import BacktestedChart from './BacktestedChart'
 // import FSApolloClient from '~/common/FSApolloClient'
 import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from '~/common/queries'
 import YearlyReturns from './YearlyReturns'
-import { CompoundInterestCalculatorModal } from '~/components/LandingPage/Modals'
+import { ReturnsCalculatorModal } from '~/components/LandingPage/Modals'
 
 // @ts-ignore
 if (!process.browser) {
@@ -51,11 +51,11 @@ const StyledTabs = styled(Tabs)`
   }
 `
 
-const AuditorLogo = styled.img`
-  height: 24px;
-  width: auto;
-  transform: translateY(-7px);
-`
+// const AuditorLogo = styled.img`
+//   height: 24px;
+//   width: auto;
+//   transform: translateY(-7px);
+// `
 
 const StyledModal = styled(Modal)`
   .ant-modal-body {
@@ -73,10 +73,10 @@ const ButtonContainer = styled(Space)`
 
 const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
-  const [calculatorVisible, setCalculatorVisible] = useState(false) 
+  const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [chartType, setChartType] = useState('launch')
   const windowSize = useWindowSize()
-    const theme = useTheme()
+  const theme = useTheme()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
   const { data: planData, loading: planLoading } = useQuery(Query, {
@@ -121,9 +121,9 @@ const Performance = () => {
             ) : null}
             {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
             <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-                <Button block size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
-                <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
-              </ButtonContainer>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
+            </ButtonContainer>
           </Tabs.TabPane>
           <Tabs.TabPane tab="1970 - 2020 Backtested Performance" key="2">
             <ScalingSubTitle>
@@ -143,13 +143,13 @@ const Performance = () => {
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
               in real time.
               </Disclaimer>
-              <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-                <Button block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false} size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
-                <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />}  onClick={toggleModal}>See yearly returns</Button>
-              </ButtonContainer>
+            <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+              <Button block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false} size="large" icon={<ButtonIcon icon={['fad', 'calculator']} />} onClick={() => setCalculatorVisible(true)}>Interest calculator</Button>
+              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>See yearly returns</Button>
+            </ButtonContainer>
           </Tabs.TabPane>
         </StyledTabs>
-        <CompoundInterestCalculatorModal isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />
+        <ReturnsCalculatorModal isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />
         <StyledModal
           title="Yearly returns"
           visible={returnsModalVisible}
