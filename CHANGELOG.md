@@ -1,5 +1,25 @@
 # Changelog
 
+<a name="1.0.4"></a>
+## 1.0.4 (2021-01-23)
+
+### Changed
+
+- 🔧 config lighthouse [[c5d8a75](https://github.com/MarkLyck/formula-stocks/commit/c5d8a75ff50b09b48d5de3149ea261da6d42efc3)]
+- 🎨 prettify repo [[a8214d9](https://github.com/MarkLyck/formula-stocks/commit/a8214d9a4f67b9fac0578906033e83d8d73aabd5)]
+
+### Fixed
+
+- 💚 remove size-limit [[c185525](https://github.com/MarkLyck/formula-stocks/commit/c185525c302efede5b5376234c359b04936dfe87)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.4 [[97d5333](https://github.com/MarkLyck/formula-stocks/commit/97d5333878aa8682ff507caa6b827549173a0f8e)]
+- 📝 generated changelog [[7d0a65b](https://github.com/MarkLyck/formula-stocks/commit/7d0a65bd7d7d76cf16af2ae2d14aa47e07b1241c)]
+-  Merge pull request [#19](https://github.com/MarkLyck/formula-stocks/issues/19) from MarkLyck/prettier-files [[124bcfd](https://github.com/MarkLyck/formula-stocks/commit/124bcfd383d6eae4905f40f9108732377bcd6df8)]
+- 🏷️ fix ts-ignore [[1b77927](https://github.com/MarkLyck/formula-stocks/commit/1b779270049a1dfa86677034b346da0c2fb38800)]
+
+
 <a name="1.0.3"></a>
 ## 1.0.3 (2021-01-23)
 
