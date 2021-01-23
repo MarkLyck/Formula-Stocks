@@ -1,6 +1,0 @@
-[
-  {
-    "path": "build/static/js/*.js",
-    "limit": "5000 ms"
-  }
-]
