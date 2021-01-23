@@ -27,7 +27,7 @@
     "@fortawesome/pro-solid-svg-icons": "5.15.1",
     "@fortawesome/react-fontawesome": "0.1.14",
     "ahooks": "2.9.4",
-    "antd": "4.10.2",
+    "antd": "4.10.3",
     "date-fns-tz": "1.0.12",
     "deepmerge": "4.2.2",
     "flagsmith": "1.2.1",
