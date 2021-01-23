@@ -169,12 +169,14 @@ const PortfolioChart = () => {
   return (
     <DashboardCard>
       <Space direction="vertical">
-        <Flex justify="space-between">
+        <Flex>
+          {/* @ts-ignore */}
           <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
             <Option value="total_return">Total return</Option>
             <Option value="monthly_returns">Monthly returns</Option>
             <Option value="annual_returns">Annual returns</Option>
           </TypeSelect>
+          {/* @ts-ignore */}
           <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
             <Option value="all_time">All time</Option>
             <Option value="since_signup" disabled>
