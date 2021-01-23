@@ -40,7 +40,7 @@
     "framer-motion": "3.2.1",
     "graphql": "15.4.0",
     "isomorphic-unfetch": "3.1.0",
-    "jotai": "0.12.5",
+    "jotai": "0.12.6",
     "lodash": "4.17.20",
     "lodash.maxby": "4.6.0",
     "mixpanel-browser": "2.40.0",
