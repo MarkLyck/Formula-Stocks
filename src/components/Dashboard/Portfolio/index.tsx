@@ -4,7 +4,6 @@ import { PortfolioChart } from '~/ui-components'
 const Portfolio = () => {
   return (
     <div>
-      Portfolio
       <PortfolioChart />
     </div>
   )

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { Select, Space } from 'antd'
+import { subYears, subMonths, isAfter } from 'date-fns'
 import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import ReturnsChart from './ReturnsChart'
 import BarChart from './Histogram'
@@ -9,10 +10,45 @@ import { Card as DashboardCard } from 'src/ui-components'
 const { Option } = Select
 
 const ChartContainer = styled.div`
-  width: 800px;
+  width: 100%;
   .g2-tooltip {
     border-radius: 8px !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+  }
+`
+
+const StyledSelect = styled(Select)`
+  min-width: 140px;
+`
+
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+`
+
+const TypeSelect = styled(Select)`
+  && {
+    .ant-select-selector {
+      background-color: ${(p) => p.theme.palette.basic[200]};
+      position: relative;
+      padding-left: 32px;
+      border: none;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        background: ${(p) => p.theme.palette.success[500]};
+      }
+    }
   }
 `
 
@@ -48,7 +84,7 @@ const generateAnnualReturns = (data: returnsDataPointType[] = []) => {
 
     if (i === 0) {
       acc[year] = {
-        startValue: START_VALUE,
+        startValue: data[0].balance + data[0].cash,
       }
     } else if (!acc[year]) {
       acc[year] = {
@@ -60,7 +96,7 @@ const generateAnnualReturns = (data: returnsDataPointType[] = []) => {
     }
 
     if (i === data.length - 1) {
-      if (acc[year].endValue < acc[Number(year) - 1].endValue) {
+      if (acc[year]?.endValue < acc[Number(year) - 1]?.endValue) {
         delete acc[year]
       }
     }
@@ -91,9 +127,20 @@ type returnsDataPointType = {
 
 const PortfolioChart = () => {
   const [chartType, setChartType] = useState('total_return')
+  const [startDate, setStartDate] = useState('all_time')
   const { data, loading, error } = useQuery(LAUNCH_PERFORMANCE_HISTORY, {
     // client: FSApolloClient,
   })
+
+  const dateMap = {
+    all_time: new Date(2008, 11, 31),
+    since_signup: new Date(),
+    last_10_years: subMonths(subYears(new Date(), 10), 0),
+    last_5_years: subMonths(subYears(new Date(), 5), 0),
+    last_3_years: subMonths(subYears(new Date(), 3), 0),
+    last_2_years: subMonths(subYears(new Date(), 2), 0),
+    last_12_months: subMonths(subYears(new Date(), 1), 0),
+  }
 
   let totalReturnsData: returnsDataPointType[] = []
 
@@ -106,6 +153,14 @@ const PortfolioChart = () => {
       },
       ...data.plan.launchHistory,
     ]
+
+    totalReturnsData = totalReturnsData.filter((point) => {
+      // @ts-ignore
+      if (isAfter(new Date(point.date), dateMap[startDate])) {
+        return true
+      }
+      return false
+    })
   }
 
   const monthlyReturnsData = generateMonthlyReturns(totalReturnsData)
@@ -114,14 +169,26 @@ const PortfolioChart = () => {
   return (
     <DashboardCard>
       <Space direction="vertical">
-        <Space>
-          <Select defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
+        <Flex justify="space-between">
+          <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
             <Option value="total_return">Total return</Option>
             <Option value="monthly_returns">Monthly returns</Option>
             <Option value="annual_returns">Annual returns</Option>
-          </Select>
-        </Space>
+          </TypeSelect>
+          <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
+            <Option value="all_time">All time</Option>
+            <Option value="since_signup" disabled>
+              Since I signed up
+            </Option>
+            <Option value="last_10_years">Last 10 years</Option>
+            <Option value="last_5_years">Last 5 years</Option>
+            <Option value="last_3_years">Last 3 years</Option>
+            <Option value="last_2_years">Last 2 years</Option>
+            <Option value="last_12_months">Last 12 months</Option>
+          </StyledSelect>
+        </Flex>
         <ChartContainer>
+          {/* @ts-ignore */}
           {chartType === 'total_return' && <ReturnsChart data={totalReturnsData} loading={loading} error={error} />}
           {(chartType === 'annual_returns' || chartType === 'monthly_returns') && (
             <BarChart
