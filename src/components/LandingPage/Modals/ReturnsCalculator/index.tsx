@@ -78,8 +78,8 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
       title: `Future Value (${rateOfReturn.toFixed(2)}%)`,
       dataIndex: 'value',
       key: 'value',
-      // @ts-ignore
       render: (value: number) => (
+        // @ts-ignore
         <TableValue color="success" bold>
           {currencyRoundedFormatter.format(Math.floor(Number(value)))}
         </TableValue>
