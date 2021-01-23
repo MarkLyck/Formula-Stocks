@@ -1,12 +1,17 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { Line } from '@ant-design/charts';
 import styled from '@emotion/styled'
+import dynamic from 'next/dynamic';
 import { format } from 'date-fns'
 import { numberFormatter, decimalNumberFormatter } from '~/common/utils/formatters'
 import { LAUNCH_PERFORMANCE_HISTORY } from '~/common/queries'
 import { Card as DashboardCard } from '~/ui-components'
 import theme from '~/lib/theme'
+
+const Line = dynamic(
+    () => import("@ant-design/charts").then((mod) => mod.Line) as any,
+    { ssr: false }
+)
 
 const ChartContainer = styled.div`
     width: 800px;

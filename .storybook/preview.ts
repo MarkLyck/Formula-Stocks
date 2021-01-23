@@ -5,6 +5,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import withStyles from './decorators/withStyles'
 import withTheme from './decorators/withTheme'
 import withRouter from './decorators/withRouter'
+import withJotai from './decorators/withJotai'
 // import withWhyDidYouRender from './decorators/withWhyDidYouRender'
 
 // icons
@@ -16,7 +17,7 @@ addParameters({
     },
 })
 
-// addDecorator(withWhyDidYouRender)
+addDecorator(withJotai)
 addDecorator(withStyles)
 addDecorator(withTheme)
 addDecorator(withRouter)
