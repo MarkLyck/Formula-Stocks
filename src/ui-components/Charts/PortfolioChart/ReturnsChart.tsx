@@ -73,6 +73,8 @@ const chartTooltip = (title: string, items: any[], theme: any) => {
 
 const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     const theme = useTheme()
+    // @ts-ignore
+    let ref: any;
 
     const chartData = createChartData(data)
     const lastPoint = chartData[chartData.length - 1]

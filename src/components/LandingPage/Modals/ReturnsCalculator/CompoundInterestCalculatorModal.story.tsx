@@ -23,7 +23,7 @@ const mocks = [
 ]
 
 
-export const compound_interest_calculator = () => (
+export const returns_calculator = () => (
   <MockedProvider mocks={mocks} addTypename={false}>
     <ReturnsCalculatorModal isVisible onClose={() => { }} />
   </MockedProvider>

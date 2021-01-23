@@ -1,10 +1,9 @@
 import React from 'react'
 import { MockedProvider } from '@apollo/client/testing'
 import { USER_LOGIN } from '~/common/queries'
-import { USER_LOGIN_MOCK } from '~/../tests/mocks'
+import { USER_LOGIN_MOCK } from 'src/../tests/mocks'
 import LoginModal from './index'
 import LoginForm from './LoginForm'
-// import ResetPassword from './ResetPassword'
 
 export default {
   title: 'landing_page/modals/login',
@@ -36,11 +35,3 @@ export const login_form = () => (
     <LoginForm />
   </MockedProvider>
 )
-
-// export const reset_password = () => {
-//   return (
-//     <Container>
-//       <ResetPassword backToLogin={() => { }} />
-//     </Container>
-//   )
-// }
