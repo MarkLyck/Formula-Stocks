@@ -20,6 +20,9 @@ jobs:
         uses: 'MarkLyck/gh-action-bump-version@master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          minor-wording: '[minor]'
+          major-wording: '[major]'
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
