@@ -1,7 +1,7 @@
 import React from 'react'
 import { MockedProvider } from '@apollo/client/testing'
 import { STATISTICS } from '~/common/queries'
-import { STATISTICS_MOCK } from '~/../tests/mocks'
+import { STATISTICS_MOCK } from 'src/tests/mocks'
 import Statistics from './index'
 
 export default {

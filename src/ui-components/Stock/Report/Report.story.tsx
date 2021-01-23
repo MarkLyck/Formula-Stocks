@@ -1,6 +1,6 @@
 import React from 'react'
 import Report, { ReportType } from '~/ui-components/Stock/Report'
-import mockReport from '~/../tests/mocks/report'
+import mockReport from 'src/tests/mocks/report'
 
 export default {
   title: 'ui components/report',

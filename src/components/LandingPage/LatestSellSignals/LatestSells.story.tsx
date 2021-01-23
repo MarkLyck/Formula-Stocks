@@ -2,7 +2,7 @@ import React from 'react'
 import LatestSells from './index'
 import { MockedProvider } from '@apollo/client/testing'
 import { LATEST_SELL_SIGNALS } from '~/common/queries'
-import { latestSellSignalsMock } from '~/../tests/mocks'
+import { latestSellSignalsMock } from 'src/tests/mocks'
 
 const mocks = [
   {
