@@ -1,5 +1,51 @@
 # Changelog
 
+<a name="1.0.12"></a>
+## 1.0.12 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.12 [[b1dbcbd](https://github.com/MarkLyck/formula-stocks/commit/b1dbcbd4326dc02a63a0797fa361038dc7bbc4e0)]
+
+
+<a name="1.0.11"></a>
+## 1.0.11 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.11 [[74a8984](https://github.com/MarkLyck/formula-stocks/commit/74a8984970be6b6c41735571fde81e987ed8f955)]
+
+
+<a name="1.0.10"></a>
+## 1.0.10 (2021-01-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.10 [[bcf8e64](https://github.com/MarkLyck/formula-stocks/commit/bcf8e64298df69c582fb971673c19fbbe73597f9)]
+
+
+<a name="1.0.9"></a>
+## 1.0.9 (2021-01-23)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.1.15 [[d0827ee](https://github.com/MarkLyck/formula-stocks/commit/d0827eeda10f57c41efd8b71e113d0b18b9a5e27)]
+- ⬆️ Update dependency @apollo/client to v3.3.7 [[e765f5b](https://github.com/MarkLyck/formula-stocks/commit/e765f5b655adf67c19948413f47899855bc472a7)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.9 [[0d0227c](https://github.com/MarkLyck/formula-stocks/commit/0d0227c467e7e4f50e90632179951391a3b59676)]
+- 📝 generated changelog [[03796b5](https://github.com/MarkLyck/formula-stocks/commit/03796b560437dbe2477d019fcf3239cc540600a2)]
+-  Update dependency mixpanel-browser to v2.40.1 [[744965f](https://github.com/MarkLyck/formula-stocks/commit/744965fa1ed0bbd7aa32ae29c7d74f814b2b11d8)]
+-  Update dependency jotai to v0.12.6 [[a2475ea](https://github.com/MarkLyck/formula-stocks/commit/a2475eadcf9b31c6e691172666dcff54cf175030)]
+-  Update dependency antd to v4.10.3 [[83dabf0](https://github.com/MarkLyck/formula-stocks/commit/83dabf04ab35cd58b42e2d33f400ff86f0f4bf31)]
+-  Merge pull request [#25](https://github.com/MarkLyck/formula-stocks/issues/25) from MarkLyck/renovate/storybook-monorepo [[e7e66a7](https://github.com/MarkLyck/formula-stocks/commit/e7e66a70d60a30c540011ad5a9c362e7de224d87)]
+-  Merge pull request [#24](https://github.com/MarkLyck/formula-stocks/issues/24) from MarkLyck/renovate/mixpanel-browser-2.x [[6ff3b13](https://github.com/MarkLyck/formula-stocks/commit/6ff3b1325c0cc88e0eac9acee6da8ad236d86650)]
+-  Merge pull request [#17](https://github.com/MarkLyck/formula-stocks/issues/17) from MarkLyck/renovate/antd-4.x [[4c2ec30](https://github.com/MarkLyck/formula-stocks/commit/4c2ec3032e691e651d9a79a01b3f6422d5a33b37)]
+-  Merge pull request [#18](https://github.com/MarkLyck/formula-stocks/issues/18) from MarkLyck/renovate/jotai-0.x [[4f97531](https://github.com/MarkLyck/formula-stocks/commit/4f97531c2fb1eb9c2650b73519b45ff1feeb5faa)]
+-  Merge pull request [#12](https://github.com/MarkLyck/formula-stocks/issues/12) from MarkLyck/renovate/apollo-graphql-packages [[63fc1f6](https://github.com/MarkLyck/formula-stocks/commit/63fc1f6eaf5ec95fce859bc164dc676bf90bed2e)]
+
+
 <a name="1.0.8"></a>
 ## 1.0.8 (2021-01-23)
 
