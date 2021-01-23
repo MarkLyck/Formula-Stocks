@@ -1,7 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
-import { format, isAfter } from 'date-fns'
+import { format } from 'date-fns'
 import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 import { useTheme } from '@emotion/react'
 
