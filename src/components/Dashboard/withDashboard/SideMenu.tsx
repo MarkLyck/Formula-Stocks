@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorFallback } from 'src/ui-components'
-import { resetApplication } from 'src/common/utils'
+import { resetApplication, logout } from 'src/common/utils'
 import SupportButton from './SupportButton'
 
 const { Sider } = Layout
@@ -107,7 +107,8 @@ export type SideMenuProps = {
 
 const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
   const router = useRouter()
-  const activeItem = menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route
+  const activeItem =
+    menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route || '/dashboard/portfolio'
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
@@ -130,7 +131,7 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
         </Tooltip>
         <MenuDivider />
         {/* @ts-ignore */}
-        <StyledMenu collapsed={collapsed} defaultSelectedKeys={activeItem} mode="inline">
+        <StyledMenu collapsed={collapsed} defaultSelectedKeys={[activeItem]} mode="inline">
           {menuList.map((item, i) => {
             if (item.divider) return <MenuDivider key={'divider' + i} />
 
@@ -144,7 +145,7 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
               </Menu.Item>
             )
           })}
-          <Menu.Item key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
+          <Menu.Item onClick={logout} key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
             Logout
           </Menu.Item>
           <Spacer />

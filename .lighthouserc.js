@@ -53,7 +53,7 @@ module.exports = {
         'unminified-css': ['error', { minScore: 0.8 }],
         'unsized-images': 'off',
         'unused-css-rules': ['error', { minScore: 0.4 }],
-        'unused-javascript': ['error', { maxLength: 5 }],
+        'unused-javascript': ['error', { maxLength: 6 }],
         'uses-http2': ['error', { minScore: 0.7 }],
         'uses-passive-event-listeners': 'off',
         'valid-source-maps': 'off',
