@@ -10,7 +10,7 @@ export default {
 export const layout = (args: LayoutProps) => <Layout {...args} />
 
 layout.args = {
-  children: <div>dashboard content</div>,
+  children: <div>dashboard content2</div>,
 }
 
 export const side_menu = () => <SideMenu />

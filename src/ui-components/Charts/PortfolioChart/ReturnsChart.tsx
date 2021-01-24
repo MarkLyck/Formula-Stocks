@@ -1,6 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
+import { maxBy } from 'lodash'
 import { format } from 'date-fns'
 import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 import { useTheme } from '@emotion/react'
@@ -82,6 +83,9 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
   const chartData = createChartData(data)
   const lastPoint = chartData[chartData.length - 1]
 
+  const maxPoint = maxBy(chartData, (p) => p.value)
+  const maxLimit = maxPoint && !isNaN(maxPoint?.value) && maxPoint?.value !== 0 ? maxPoint.value : 100
+
   const config = {
     data: chartData,
     loading: loading,
@@ -90,7 +94,7 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     yField: 'value',
     yAxis: {
       minLimit: -100,
-      maxLimit: Math.ceil(lastPoint?.value / 100) * 100,
+      maxLimit: Math.ceil(maxLimit / 100) * 100,
       tickCount: 6,
       label: {
         labelLine: null,

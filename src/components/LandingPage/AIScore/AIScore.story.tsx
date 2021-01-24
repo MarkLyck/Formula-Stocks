@@ -6,4 +6,4 @@ export default {
   component: AIScore,
 }
 
-export const risk = () => <AIScore />
+export const ai_score = () => <AIScore />

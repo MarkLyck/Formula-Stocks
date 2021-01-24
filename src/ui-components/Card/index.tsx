@@ -13,6 +13,7 @@ export const cardStyle = () => css`
   box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
   box-sizing: border-box;
   padding: 16px;
+  overflow: hidden;
 `
 
 export const CardTitle = styled.h3`
