@@ -107,7 +107,7 @@ export type SideMenuProps = {
 
 const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
   const router = useRouter()
-  const activeItem = menuList.filter((item) => item.route && router.pathname.includes(item.route))[0]?.route
+  const activeItem = menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
