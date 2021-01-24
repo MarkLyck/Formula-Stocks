@@ -145,7 +145,10 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
               </Menu.Item>
             )
           })}
-          <Menu.Item onClick={logout} key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
+          <Menu.Item key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
+            Theme
+          </Menu.Item>
+          <Menu.Item onClick={logout} key={menuList.length + 2} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
             Logout
           </Menu.Item>
           <Spacer />

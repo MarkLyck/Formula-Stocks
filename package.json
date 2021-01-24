@@ -37,6 +37,7 @@
     "apollo-link-context": "1.0.20",
     "date-fns-tz": "1.0.12",
     "deepmerge": "4.2.2",
+    "encoding": "^0.1.13",
     "flagsmith": "1.2.1",
     "framer-motion": "3.2.1",
     "graphql": "15.4.0",
