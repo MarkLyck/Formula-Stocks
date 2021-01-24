@@ -100,7 +100,7 @@ const menuList = [
   { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin' },
 ]
 
-type SideMenuProps = {
+export type SideMenuProps = {
   collapsed?: boolean
   setCollapsed: () => void
 }
