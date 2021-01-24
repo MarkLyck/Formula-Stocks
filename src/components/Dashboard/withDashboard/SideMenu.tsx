@@ -135,8 +135,9 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
             if (item.divider) return <MenuDivider key={'divider' + i} />
 
             return (
-              // @ts-ignore
+              // @ts-ignore icon string
               <Menu.Item key={item.route} icon={<MenuIcon icon={item.icon} />}>
+                {/* @ts-ignore item.route will exist */}
                 <Link href={item.route}>
                   <a>{item.label}</a>
                 </Link>
