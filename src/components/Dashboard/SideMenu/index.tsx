@@ -48,7 +48,7 @@ const getRoutes = (user?: any) => {
     { name: 'Portfolio', icon: ['fad', 'analytics'], route: 'portfolio' },
     { name: 'Trades', icon: ['fad', 'flask'], route: 'trades' },
     { name: 'Reports', icon: ['fad', 'brain'], route: 'reports' },
-    { name: 'account', icon: ['fad', 'user'], route: 'account' },
+    { name: 'Account', icon: ['fad', 'user'], route: 'account' },
     // { name: 'Community', icon: ['fad', 'comments'], route: 'community', badge: 'New' },
     // { name: 'logout', icon: ['fad', 'sign-out-alt'], route: 'logout' },
   ]
