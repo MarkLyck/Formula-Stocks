@@ -50,7 +50,7 @@
     "react": "17.0.1",
     "react-countup": "4.3.3",
     "react-dom": "17.0.1",
-    "react-error-boundary": "^3.1.0",
+    "react-error-boundary": "3.1.0",
     "react-lazy-load": "3.1.13",
     "react-lazyload": "3.1.0",
     "react-minimal-pie-chart": "8.1.0",
