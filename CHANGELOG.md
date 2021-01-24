@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.19"></a>
+## 1.0.19 (2021-01-24)
+
+### Changed
+
+- ⬆️ Pin dependency apollo-link-context to 1.0.20 [[ee31582](https://github.com/MarkLyck/formula-stocks/commit/ee315823099fc513f2e1d0e75085316f820929d6)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.19 [[8f0d67a](https://github.com/MarkLyck/formula-stocks/commit/8f0d67a457c075aab7adaaeb452bf869e5b78dcb)]
+- 📝 generated changelog [[6aad788](https://github.com/MarkLyck/formula-stocks/commit/6aad7882eefc7b5bc6e6db1205f1bc9973605688)]
+-  Merge pull request [#36](https://github.com/MarkLyck/formula-stocks/issues/36) from MarkLyck/renovate/pin-dependencies [[cf37d89](https://github.com/MarkLyck/formula-stocks/commit/cf37d891620c5414d75b3d190cc828ca624e17cf)]
+
+
 <a name="1.0.18"></a>
 ## 1.0.18 (2021-01-24)
 
