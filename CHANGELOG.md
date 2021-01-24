@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.15"></a>
+## 1.0.15 (2021-01-24)
+
+### Changed
+
+- ⬆️ Update dependency jotai to v0.12.7 [[8bcf6d7](https://github.com/MarkLyck/formula-stocks/commit/8bcf6d7cf51c682ed2612c866809808735f43cfb)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.15 [[6c92de9](https://github.com/MarkLyck/formula-stocks/commit/6c92de9b6947749cf1a44e4c70d7abfee7451481)]
+-  Merge pull request [#30](https://github.com/MarkLyck/formula-stocks/issues/30) from MarkLyck/renovate/jotai-0.x [[5acd7d9](https://github.com/MarkLyck/formula-stocks/commit/5acd7d9563eca75482e180af3c5d1dec477de119)]
+- 📝 generated changelog [[602c2d4](https://github.com/MarkLyck/formula-stocks/commit/602c2d47f05f361a674287c7cbf908a2ba45a072)]
+
+
 <a name="1.0.14"></a>
 ## 1.0.14 (2021-01-24)
 
