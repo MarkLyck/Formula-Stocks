@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.14"></a>
+## 1.0.14 (2021-01-24)
+
+### Added
+
+- ✨ Dashboard Layout [[f2992d7](https://github.com/MarkLyck/formula-stocks/commit/f2992d7e524d008210f46ea2358a0c6a05fda9da)]
+- ✨ dashboard layout [[6475944](https://github.com/MarkLyck/formula-stocks/commit/6475944a2f4d449eff98298a1398ab0110c11d6f)]
+
+### Changed
+
+- 🚨 unused import [[70de7db](https://github.com/MarkLyck/formula-stocks/commit/70de7dbc79dd9bd8dc4a199ca26c131af1c913cb)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.14 [[1fc700f](https://github.com/MarkLyck/formula-stocks/commit/1fc700f6ea0f5d106c8fc99621f4edd8e5000f93)]
+- 📝 generated changelog [[2f2e215](https://github.com/MarkLyck/formula-stocks/commit/2f2e21539416ec1e828ecae0beed73e2b7cf0191)]
+-  Merge pull request [#29](https://github.com/MarkLyck/formula-stocks/issues/29) from MarkLyck/layout-2 [[23c170d](https://github.com/MarkLyck/formula-stocks/commit/23c170d787b777619bf385d558be74add379cd50)]
+
+
 <a name="1.0.13"></a>
 ## 1.0.13 (2021-01-24)
 
