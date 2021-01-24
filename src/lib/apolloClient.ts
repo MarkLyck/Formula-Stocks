@@ -1,20 +1,30 @@
 import { useMemo } from 'react'
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
 import { concatPagination } from '@apollo/client/utilities'
+import { setContext } from 'apollo-link-context'
 import merge from 'deepmerge'
-import isEqual from 'lodash/isEqual'
+import { isEqual } from 'lodash'
+import { hasStorage } from '~/common/utils/featureTests'
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
 let apolloClient: any
 
+const authLink = setContext((_, { headers }) => {
+  const token = hasStorage ? localStorage.getItem('authToken') : ''
+
+  return {
+    headers: { ...headers, Authorization: token ? `Bearer ${token}` : '' },
+  }
+})
+
+const httpLink = new HttpLink({ uri: process.env.NEXT_PUBLIC_GRAPHQL_URI, credentials: 'same-origin' })
+
 function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
-    link: new HttpLink({
-      uri: process.env.NEXT_PUBLIC_GRAPHQL_URI, // Server URL (must be absolute)
-      credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
-    }),
+    // @ts-ignore
+    link: authLink.concat(httpLink),
     cache: new InMemoryCache({
       typePolicies: {
         Query: {

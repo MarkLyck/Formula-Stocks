@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logoutUser from '~/common/utils/logout'
+import { logout } from 'src/common/utils'
 import PermissionError from './PermissionError'
-import { Card } from '~/ui-components'
+import { Card } from 'src/ui-components'
 import { ErrorHeader, ErrorText } from './styles'
 
 const Container = styled(Card)`
@@ -36,7 +36,7 @@ const LoadingError = ({ error }: any) => {
   if (error && error.message.includes('permission')) {
     return <PermissionError />
   } else if (error && error.message.includes('Token expired')) {
-    logoutUser('/dashboard/login')
+    logout('/dashboard/login')
     return null
   }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import Portfolio from './index'
 import { MockedProvider } from '@apollo/client/testing'
-import { LAUNCH_PERFORMANCE_HISTORY } from '~/common/queries'
-import { LAUNCH_PERFORMANCE_HISTORY_MOCK } from 'src/tests/mocks'
+import { LAUNCH_PERFORMANCE_HISTORY, PORTFOLIO_HOLDINGS } from '~/common/queries'
+import { LAUNCH_PERFORMANCE_HISTORY_MOCK, PORTFOLIO_HOLDINGS_MOCK } from 'src/tests/mocks'
 
 const mocks = [
   {
@@ -13,10 +13,21 @@ const mocks = [
       data: LAUNCH_PERFORMANCE_HISTORY_MOCK,
     },
   },
+  {
+    request: {
+      query: PORTFOLIO_HOLDINGS,
+      variables: {
+        planName: 'entry',
+      },
+    },
+    result: {
+      data: PORTFOLIO_HOLDINGS_MOCK,
+    },
+  },
 ]
 
 export default {
-  title: 'dashboard/portfolio',
+  title: 'dashboard/portfolio/portfolio',
 }
 
 export const portfolio = () => (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd'
 import { PortfolioChart, WelcomeStatus, Card } from '~/ui-components'
+import Holdings from './Holdings'
 
 const GUTTER_SIZE = 24
 
@@ -19,9 +20,11 @@ const Portfolio = () => (
         <Card style={{ height: '100%' }}>latest sell signals</Card>
       </Col>
     </Row>
-    <Row gutter={[GUTTER_SIZE, GUTTER_SIZE]}>
+    <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
-        <Card style={{ height: '800px' }}>holdings</Card>
+        <Card>
+          <Holdings />
+        </Card>
       </Col>
     </Row>
   </div>

@@ -23,6 +23,10 @@ const DashboardContent = styled(Content)`
   margin: 32px;
 `
 
+const DashboardFooter = styled(Footer)`
+  text-align: center;
+`
+
 export type LayoutProps = {
   children: React.ReactNode
 }
@@ -36,9 +40,9 @@ const LayoutComponent = ({ children }: LayoutProps) => {
         <SideMenu collapsed={sideMenuCollapsed} setCollapsed={setSideMenuCollapsed} />
         <ContentLayout sideMenuCollapsed={sideMenuCollapsed}>
           <DashboardContent>{children}</DashboardContent>
-          <Footer>
+          <DashboardFooter>
             {COMPANY_NAME} ©{new Date().getFullYear()}
-          </Footer>
+          </DashboardFooter>
         </ContentLayout>
       </DashboardLayout>
     </ErrorBoundary>

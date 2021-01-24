@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
-import { Select, Space } from 'antd'
+import { Select, Space, Typography } from 'antd'
 import { subYears, subMonths, isAfter } from 'date-fns'
 import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -10,8 +10,11 @@ import BarChart from './Histogram'
 import { Card as DashboardCard, ErrorFallback } from 'src/ui-components'
 const { Option } = Select
 
+const { Title } = Typography
+
 const ChartContainer = styled.div`
   width: 100%;
+  height: 400px;
   .g2-tooltip {
     border-radius: 8px !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
@@ -178,24 +181,27 @@ const PortfolioChart = () => {
       >
         <Space direction="vertical">
           <Flex>
-            {/* @ts-ignore */}
-            <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
-              <Option value="total_return">Total return</Option>
-              <Option value="monthly_returns">Monthly returns</Option>
-              <Option value="annual_returns">Annual returns</Option>
-            </TypeSelect>
-            {/* @ts-ignore */}
-            <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
-              <Option value="all_time">All time</Option>
-              <Option value="since_signup" disabled>
-                Since I signed up
-              </Option>
-              <Option value="last_10_years">Last 10 years</Option>
-              <Option value="last_5_years">Last 5 years</Option>
-              <Option value="last_3_years">Last 3 years</Option>
-              <Option value="last_2_years">Last 2 years</Option>
-              <Option value="last_12_months">Last 12 months</Option>
-            </StyledSelect>
+            <Title level={4}>Portfolio returns</Title>
+            <Space>
+              {/* @ts-ignore */}
+              <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
+                <Option value="total_return">Total return</Option>
+                <Option value="monthly_returns">Monthly returns</Option>
+                <Option value="annual_returns">Annual returns</Option>
+              </TypeSelect>
+              {/* @ts-ignore */}
+              <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
+                <Option value="all_time">All time</Option>
+                <Option value="since_signup" disabled>
+                  Since I signed up
+                </Option>
+                <Option value="last_10_years">Last 10 years</Option>
+                <Option value="last_5_years">Last 5 years</Option>
+                <Option value="last_3_years">Last 3 years</Option>
+                <Option value="last_2_years">Last 2 years</Option>
+                <Option value="last_12_months">Last 12 months</Option>
+              </StyledSelect>
+            </Space>
           </Flex>
           <ChartContainer>
             {/* @ts-ignore */}
