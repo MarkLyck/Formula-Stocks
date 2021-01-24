@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.18"></a>
+## 1.0.18 (2021-01-24)
+
+### Added
+
+- ✨ basic portfolio holdings [[57e93ae](https://github.com/MarkLyck/formula-stocks/commit/57e93ae8cd79e56e1226d1a9b0fde4052d3b262f)]
+
+### Changed
+
+- 🔧 config lighthouse [[37130cd](https://github.com/MarkLyck/formula-stocks/commit/37130cd20ea17c7367a67bcd1407f1530d5b6f2c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.18 [[74ce9ad](https://github.com/MarkLyck/formula-stocks/commit/74ce9ad9a72ccc8c900a10d1dd632445c31a67b5)]
+- 📝 generated changelog [[5e1413d](https://github.com/MarkLyck/formula-stocks/commit/5e1413d56ad961f5a3b45bf99c1ffdbf1d6fe26f)]
+-  Merge pull request [#35](https://github.com/MarkLyck/formula-stocks/issues/35) from MarkLyck/portfolio-holdings [[d9f3ea7](https://github.com/MarkLyck/formula-stocks/commit/d9f3ea78b5f794ba024adaabdfc5d009113b4c21)]
+- 🔀 merge main [[6cf8b8d](https://github.com/MarkLyck/formula-stocks/commit/6cf8b8dd612f8cc03b08d157a5e6c6e7b25994b6)]
+
+
 <a name="1.0.17"></a>
 ## 1.0.17 (2021-01-24)
 
