@@ -41,6 +41,7 @@ type DataPoint = {
 
 const createChartData = (planPerformance: DataPoint[]) => {
   if (!planPerformance.length) return []
+
   const startValue = planPerformance[0].balance + planPerformance[0].cash
 
   return planPerformance.map((point: any, i: number) => {

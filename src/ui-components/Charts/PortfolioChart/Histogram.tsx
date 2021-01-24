@@ -92,7 +92,7 @@ const Histogram = ({ data, chartType }: any) => {
     annotations: [
       {
         type: 'regionFilter',
-        start: ['min', '-0.1'],
+        start: ['min', '-0.05'],
         end: ['max', '-100'],
         color: theme.palette.danger[500],
       },
