@@ -1,5 +1,4 @@
 import React from 'react'
-import isPropValid from '@emotion/is-prop-valid'
 import { useLocalStorageState } from 'ahooks'
 import { Layout, Menu, Tooltip } from 'antd'
 import styled from '@emotion/styled'
