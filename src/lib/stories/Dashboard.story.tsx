@@ -1,10 +1,26 @@
 import React from 'react'
 import Portfolio from '../../pages/dashboard/portfolio'
 import { MockedProvider } from '@apollo/client/testing'
-import { LATEST_SELL_SIGNALS } from '~/common/queries'
-import { latestSellSignalsMock } from 'src/tests/mocks'
+import { CURRENT_USER_QUERY, LATEST_SELL_SIGNALS, LAUNCH_PERFORMANCE_HISTORY } from '~/common/queries'
+import { USER_MOCK, latestSellSignalsMock, LAUNCH_PERFORMANCE_HISTORY_MOCK } from 'src/tests/mocks'
 
 const mocks = [
+  {
+    request: {
+      query: CURRENT_USER_QUERY,
+    },
+    result: {
+      data: USER_MOCK,
+    },
+  },
+  {
+    request: {
+      query: LAUNCH_PERFORMANCE_HISTORY,
+    },
+    result: {
+      data: LAUNCH_PERFORMANCE_HISTORY_MOCK,
+    },
+  },
   {
     request: {
       query: LATEST_SELL_SIGNALS,

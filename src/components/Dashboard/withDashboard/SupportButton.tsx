@@ -29,6 +29,8 @@ const StyledButton = styled(Button)`
     width: ${(p: any) => (p.collapsed ? '0px' : '100%')};
     text-align: left;
     transition: all 0.2s;
+    font-weight: 400;
+    font-size: 14px;
   }
 
   svg {

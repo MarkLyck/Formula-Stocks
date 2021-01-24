@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout, { LayoutProps } from './Layout'
-import SideMenu from './SideMenu'
+import SideMenu, { SideMenuProps } from './SideMenu'
 
 export default {
   title: 'dashboard/Layout',
@@ -13,4 +13,8 @@ layout.args = {
   children: <div>dashboard content</div>,
 }
 
-export const side_menu = () => <SideMenu />
+export const side_menu = (args: SideMenuProps) => <SideMenu {...args} />
+side_menu.args = {
+  collapsed: false,
+  setCollapsed: () => {},
+}

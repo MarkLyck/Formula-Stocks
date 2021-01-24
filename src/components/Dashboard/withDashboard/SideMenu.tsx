@@ -1,8 +1,12 @@
 import React from 'react'
-import { useLocalStorageState } from 'ahooks'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Layout, Menu, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ErrorBoundary } from 'react-error-boundary'
+import { ErrorFallback } from 'src/ui-components'
+import { resetApplication } from 'src/common/utils'
 import SupportButton from './SupportButton'
 
 const { Sider } = Layout
@@ -88,45 +92,67 @@ const Spacer = styled('div', {
 `
 
 const menuList = [
-  { label: 'Portfolio', icon: ['fad', 'analytics'] },
-  { label: 'Trades', icon: ['fad', 'flask'] },
-  { label: 'Reports', icon: ['fad', 'brain'] },
-  { label: 'Account', icon: ['fad', 'user'] },
+  { label: 'Portfolio', icon: ['fad', 'analytics'], route: '/dashboard/portfolio' },
+  { label: 'Trades', icon: ['fad', 'flask'], route: '/dashboard/trades' },
+  { label: 'Reports', icon: ['fad', 'brain'], route: '/dashboard/reports' },
+  { label: 'Account', icon: ['fad', 'user'], route: '/dashboard/account' },
   { divider: true },
-  { label: 'Admin', icon: ['fad', 'tools'] },
+  { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin' },
 ]
 
-const SideMenu = () => {
-  const [collapsed, setCollapsed] = useLocalStorageState('side-menu-collapsed', false)
+export type SideMenuProps = {
+  collapsed?: boolean
+  setCollapsed: () => void
+}
+
+const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
+  const router = useRouter()
+  const activeItem = menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route
 
   return (
-    <Sider theme="light" collapsible collapsed={collapsed} onCollapse={setCollapsed}>
-      <Tooltip placement="right" title="Home">
-        <LogoContainer>
-          <Logo>{collapsed ? 'L' : 'Logo'}</Logo>
-        </LogoContainer>
-      </Tooltip>
-      <MenuDivider />
-      {/* @ts-ignore */}
-      <StyledMenu collapsed={collapsed} defaultSelectedKeys={['1']} mode="inline">
-        {menuList.map((item, i) => {
-          if (item.divider) return <MenuDivider key={i + 1} />
-
-          return (
-            // @ts-ignore
-            <Menu.Item key={i + 1} icon={<MenuIcon icon={item.icon} />}>
-              {item.label}
-            </Menu.Item>
-          )
-        })}
-        <Menu.Item key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
-          Logout
-        </Menu.Item>
-        <Spacer />
+    <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
+      <Sider
+        theme="light"
+        style={{
+          position: 'fixed',
+          height: '100vh',
+          left: 0,
+          overflow: 'auto',
+        }}
+        collapsible
+        collapsed={collapsed}
+        onCollapse={setCollapsed}
+      >
+        <Tooltip placement="right" title="Home">
+          <LogoContainer>
+            <Logo>{collapsed ? 'L' : 'Logo'}</Logo>
+          </LogoContainer>
+        </Tooltip>
+        <MenuDivider />
         {/* @ts-ignore */}
-        <SupportButton user={{}} collapsed={collapsed} />
-      </StyledMenu>
-    </Sider>
+        <StyledMenu collapsed={collapsed} defaultSelectedKeys={activeItem} mode="inline">
+          {menuList.map((item, i) => {
+            if (item.divider) return <MenuDivider key={'divider' + i} />
+
+            return (
+              // @ts-ignore icon string
+              <Menu.Item key={item.route} icon={<MenuIcon icon={item.icon} />}>
+                {/* @ts-ignore item.route will exist */}
+                <Link href={item.route}>
+                  <a>{item.label}</a>
+                </Link>
+              </Menu.Item>
+            )
+          })}
+          <Menu.Item key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
+            Logout
+          </Menu.Item>
+          <Spacer />
+          {/* @ts-ignore */}
+          <SupportButton user={{}} collapsed={collapsed} />
+        </StyledMenu>
+      </Sider>
+    </ErrorBoundary>
   )
 }
 
