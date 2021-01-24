@@ -1,5 +1,41 @@
 # Changelog
 
+<a name="1.0.17"></a>
+## 1.0.17 (2021-01-24)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.17 [[aea1ccd](https://github.com/MarkLyck/formula-stocks/commit/aea1ccdc4252539d5c6cea6c416ae90d81369a15)]
+
+
+<a name="1.0.16"></a>
+## 1.0.16 (2021-01-24)
+
+### Added
+
+- ✨ portfolio layout [[843ddd8](https://github.com/MarkLyck/formula-stocks/commit/843ddd8425a9aaeec25a17f9a9542d3ffb370713)]
+
+### Changed
+
+- ⬆️ Pin dependency react-error-boundary to 3.1.0 [[4d9d48e](https://github.com/MarkLyck/formula-stocks/commit/4d9d48e2bc2a3274ab507407428eec86f6763950)]
+- ⬆️ Update dependency antd to v4.11.1 [[83dc831](https://github.com/MarkLyck/formula-stocks/commit/83dc83139eec3de875b84c7bf7d64d2a892c35f7)]
+- 🚨 fix type error [[db701ce](https://github.com/MarkLyck/formula-stocks/commit/db701ce204c04f0734c7f0fdfac78846a26a587f)]
+- 🚨 fix required prop [[0fdfc27](https://github.com/MarkLyck/formula-stocks/commit/0fdfc27a618afcd2552673665bc71c70ab2b2da3)]
+
+### Fixed
+
+- 💚 fix chromatic build [[861bcc4](https://github.com/MarkLyck/formula-stocks/commit/861bcc4d22627c386b5291f07a3c21a93a2b2d39)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.16 [[3397cc1](https://github.com/MarkLyck/formula-stocks/commit/3397cc190ea074a1d079622fa782644903ff47f3)]
+- 📝 generated changelog [[d31d648](https://github.com/MarkLyck/formula-stocks/commit/d31d648eea36e338e376df33c4b85757b368c300)]
+-  Merge pull request [#33](https://github.com/MarkLyck/formula-stocks/issues/33) from MarkLyck/renovate/pin-dependencies [[c3c54a0](https://github.com/MarkLyck/formula-stocks/commit/c3c54a028a8d80b0b173285bf462d09d35d4e372)]
+-  Merge pull request [#32](https://github.com/MarkLyck/formula-stocks/issues/32) from MarkLyck/renovate/antd-4.x [[413ee43](https://github.com/MarkLyck/formula-stocks/commit/413ee43620fb26206e24feb260bced4b3742cd37)]
+-  Merge pull request [#31](https://github.com/MarkLyck/formula-stocks/issues/31) from MarkLyck/portfolio-layout [[884923f](https://github.com/MarkLyck/formula-stocks/commit/884923f1060f5db69bd453c6a69d63c417ada5ad)]
+- 🏷️ use SideMenuPropsType [[13c03df](https://github.com/MarkLyck/formula-stocks/commit/13c03dfd8ee3999b076344b11e5f5fa01ff90e0e)]
+
+
 <a name="1.0.15"></a>
 ## 1.0.15 (2021-01-24)
 
