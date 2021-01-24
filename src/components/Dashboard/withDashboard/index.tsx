@@ -2,12 +2,11 @@ import React, { useEffect } from 'react'
 import { useQuery, useMutation } from '@apollo/client'
 import Router from 'next/router'
 import { isBrowser, hasStorage } from '~/common/utils/featureTests'
-import SideMenu from '~/components/Dashboard/SideMenu'
-import { DashboardLayout, DashboardContent, DashboardBeside, StyledAlert } from './styles'
 import { CURRENT_USER_QUERY, REFRESH_TOKEN } from '~/common/queries'
 import { AUTH_PROFILE_ID } from '~/common/constants'
 import { SettingsProvider } from '~/common/contexts/settings'
 import { Mixpanel } from '~/lib/analytics/mixpanel'
+import Layout from './Layout'
 
 const removeStoredTokens = () => {
   if (hasStorage) {
@@ -108,23 +107,15 @@ const withDashboard = (Component: any) => ({ location, ...extraProps }: any) => 
 
   return (
     <SettingsProvider>
-      <DashboardLayout>
-        <DashboardBeside>
-          <SideMenu user={user} />
-          <DashboardContent>
-            {alerts.map((alert: any) => (
-              <StyledAlert {...alert} />
-            ))}
-            <Component
-              location={location}
-              user={user}
-              subscriptionPaused={subscriptionPaused}
-              loading={authenticating}
-              {...extraProps}
-            />
-          </DashboardContent>
-        </DashboardBeside>
-      </DashboardLayout>
+      <Layout>
+        <Component
+          location={location}
+          user={user}
+          subscriptionPaused={subscriptionPaused}
+          loading={authenticating}
+          {...extraProps}
+        />
+      </Layout>
     </SettingsProvider>
   )
 }

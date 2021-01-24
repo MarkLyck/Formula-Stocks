@@ -1,9 +1,10 @@
 import React from 'react'
-import { PortfolioChart } from '~/ui-components'
+import { PortfolioChart, WelcomeStatus } from '~/ui-components'
 
 const Portfolio = () => {
   return (
     <div>
+      <WelcomeStatus />
       <PortfolioChart />
     </div>
   )
