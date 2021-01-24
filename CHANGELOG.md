@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.13"></a>
+## 1.0.13 (2021-01-24)
+
+### Added
+
+- ✨ portfolio chart [[4d262a8](https://github.com/MarkLyck/formula-stocks/commit/4d262a8c3ca69148f14fac54201c3c5f06f142df)]
+
+### Changed
+
+- 🚨 fix typescript errors [[be8f167](https://github.com/MarkLyck/formula-stocks/commit/be8f167b54ef21a64123155db7ff4e5e8d907cb5)]
+- 🚨 remove unused import [[dd43ea7](https://github.com/MarkLyck/formula-stocks/commit/dd43ea7a198eacb5bcdaa67371c3589637209a73)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.13 [[b7cfc86](https://github.com/MarkLyck/formula-stocks/commit/b7cfc8650ec8831fc5121aa3797136edbe070856)]
+-  Merge pull request [#27](https://github.com/MarkLyck/formula-stocks/issues/27) from MarkLyck/portfolio-chart [[771291d](https://github.com/MarkLyck/formula-stocks/commit/771291dd75f70673c5406eb3663df75dac968b0d)]
+- 📝 generated changelog [[dc17833](https://github.com/MarkLyck/formula-stocks/commit/dc178339ffc5bce90ab5301335a3be908ffc59d7)]
+
+
 <a name="1.0.12"></a>
 ## 1.0.12 (2021-01-23)
 
