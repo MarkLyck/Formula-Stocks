@@ -91,6 +91,7 @@ import {
   faUser as faUserDuo,
   faUserTie,
   faTimesOctagon as faTimesOctagonDuo,
+  faWandMagic as faWandMagicDuo,
 } from '@fortawesome/pro-duotone-svg-icons'
 
 // brands
@@ -180,6 +181,8 @@ library.add(
   faUserTie,
   faUserHeadset,
   faSearch,
+  faWandMagicDuo,
+  // brands
   faFacebookF,
   faTwitter,
   faLinkedin

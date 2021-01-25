@@ -34,7 +34,7 @@ const getFontSize = (size: string) => {
 // }
 
 // const GhostNavLink = styled.a`
-//     background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
+//     background-color: ${(p) => transparentize(0.25, p.theme.palette.basic[100])};
 //     color: ${(p) => p.theme.palette.basic[800]};
 //     font-weight: bold;
 //     padding: ${(p: any) => getPadding(p.size)};
@@ -71,7 +71,7 @@ const getFontSize = (size: string) => {
 // `
 
 const GhostNavButton = styled.button`
-  background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
+  background-color: ${(p) => transparentize(0.25, p.theme.palette.basic[100])};
   color: ${(p) => p.theme.palette.basic[800]};
   font-weight: bold;
   padding: 8px 16px;

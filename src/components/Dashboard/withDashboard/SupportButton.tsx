@@ -16,7 +16,7 @@ const StyledButton = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props: any) => props.theme.colors.white};
+  color: ${(props: any) => props.theme.palette.basic[100]};
   overflow: hidden;
   transition: all 0.2s;
 

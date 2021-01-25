@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorFallback } from 'src/ui-components'
 import { resetApplication, logout } from 'src/common/utils'
+import { useAtom, themeAtom } from 'src/atoms'
 import SupportButton from './SupportButton'
 
 const { Sider } = Layout
@@ -106,9 +107,15 @@ export type SideMenuProps = {
 }
 
 const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
+  const [theme, setTheme] = useAtom(themeAtom)
   const router = useRouter()
   const activeItem =
     menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route || '/dashboard/portfolio'
+
+  const toggleTheme = () => {
+    console.log('toggle theme')
+    setTheme(theme.type === 'light' ? 'dark' : 'light')
+  }
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
@@ -145,7 +152,7 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
               </Menu.Item>
             )
           })}
-          <Menu.Item key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
+          <Menu.Item onClick={toggleTheme} key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'wand-magic']} />}>
             Theme
           </Menu.Item>
           <Menu.Item onClick={logout} key={menuList.length + 2} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>

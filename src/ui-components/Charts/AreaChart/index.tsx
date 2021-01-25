@@ -123,7 +123,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
               textBaseline: 'top',
               fontSize: 12,
               fontWeight: '400',
-              fill: theme.colors.white,
+              fill: theme.palette.basic[100],
             },
           }
         }

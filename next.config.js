@@ -1,44 +1,58 @@
-/* eslint-disable */
+const withSass = require('@zeit/next-sass')
 const withLess = require('@zeit/next-less')
-const lessToJS = require('less-vars-to-js')
-const fs = require('fs')
-const path = require('path')
+const AntdThemePlugin = require('antd-theme/plugin')
 
-// Where your antd-custom.less file lives
-const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, 'src/lib/assets/antd-custom.less'), 'utf8'))
+// fix: prevents error when .less files are required by node
+if (typeof require !== 'undefined') {
+  require.extensions['.less'] = (file) => {}
+}
 
-module.exports = withLess({
-  lessLoaderOptions: {
-    lessOptions: {
-      javascriptEnabled: true,
-      modifyVars: themeVariables, // make your antd custom effective
+module.exports = withLess(
+  withSass({
+    lessLoaderOptions: {
+      lessOptions: {
+        javascriptEnabled: true,
+      },
     },
-  },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      // generate sitemap
-      require('./scripts/generate-sitemap')
+    webpack: (config) => {
+      config.plugins.push(
+        new AntdThemePlugin({
+          themes: [
+            {
+              name: 'dark',
+              filename: require.resolve('antd/lib/style/themes/dark.less'),
+            },
+            {
+              name: 'compact',
+              filename: require.resolve('antd/lib/style/themes/compact.less'),
+            },
+          ],
+        })
+      )
 
-      // ant design styles
-      const antStyles = /antd\/.*?\/style.*?/
-      const origExternals = [...config.externals]
-      config.externals = [
-        (context, request, callback) => {
-          if (request.match(antStyles)) return callback()
-          if (typeof origExternals[0] === 'function') {
-            origExternals[0](context, request, callback)
-          } else {
-            callback()
-          }
+      config.module.rules[2].use = [
+        {
+          loader: AntdThemePlugin.loader,
         },
-        ...(typeof origExternals[0] === 'function' ? [] : origExternals),
+        {
+          loader: 'css-loader',
+        },
+        {
+          loader: 'less-loader',
+          options: {
+            lessOptions: {
+              javascriptEnabled: true,
+            },
+          },
+        },
       ]
 
-      config.module.rules.unshift({
-        test: antStyles,
-        use: 'null-loader',
-      })
-    }
-    return config
-  },
-})
+      console.log('config', config)
+      console.log('config.module', config.module)
+      console.log('config.module.rules[2]', config.module.rules)
+      console.log('config.module.rules[2]', config.module.rules[2])
+
+      return config
+    },
+  })
+)

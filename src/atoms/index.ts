@@ -1,4 +1,4 @@
-export * from './flagAtom'
+export * from './themeAtom'
 export * from './userAtom'
 
 // re-export jotai

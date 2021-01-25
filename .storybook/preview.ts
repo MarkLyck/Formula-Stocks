@@ -3,9 +3,9 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 // custom decorators
 import withStyles from './decorators/withStyles'
-import withTheme from './decorators/withTheme'
+import withJotaiTheme from './decorators/withJotaiTheme'
 import withRouter from './decorators/withRouter'
-import withJotai from './decorators/withJotai'
+// import withJotai from './decorators/withJotai'
 // import withWhyDidYouRender from './decorators/withWhyDidYouRender'
 
 // icons
@@ -17,9 +17,8 @@ addParameters({
   },
 })
 
-addDecorator(withJotai)
 addDecorator(withStyles)
-addDecorator(withTheme)
+addDecorator(withJotaiTheme)
 addDecorator(withRouter)
 
 export const parameters = {
