@@ -61,10 +61,10 @@
   dependencies:
     cross-fetch "3.0.6"
 
-"@ant-design/charts@1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@ant-design/charts/-/charts-1.0.16.tgz#5b72aeb2f0fe10593eea737fd65e01e5e4517f31"
-  integrity sha512-iPVqXn437MRbLf3z88tkxZl3Ind/2I+pSm1NvHjwrZZgHq5Npu1x6+ZnrDF7mGDc44Br94q1UBA8Lu58Vv6WKw==
+"@ant-design/charts@1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@ant-design/charts/-/charts-1.0.17.tgz#1ec5a98f78ba7bd65137f3ba5581ae0d12527064"
+  integrity sha512-Nd5K3+hvssSUlRLGb2Fg7EDmePbYuTW7fOvDhCUtLiwREZVDdJupuvdRHX7a3LDnEJaqUIirE8+PUlSnq+0A+A==
   dependencies:
     "@antv/g2plot" "^2.2.11"
     "@antv/g6" "^4.1.1"
