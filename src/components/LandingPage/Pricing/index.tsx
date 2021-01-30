@@ -34,7 +34,7 @@ const PricingCard = styled(Card)`
   min-height: 180px;
 
   &:hover {
-    background-color: ${(p) => p.theme.palette.basic[200]};
+    background-color: ${(p) => p.theme.palette.neutral[200]};
   }
 
   @media (max-width: ${(p) => p.theme.breakpoints.medium}) {
@@ -52,7 +52,7 @@ const PricingCard = styled(Card)`
 const PriceTag = styled.h5`
   font-weight: bold;
   font-size: 1.2rem;
-  color: ${(p) => p.theme.palette.primary[500]};
+  color: ${(p) => p.theme.palette.primary[600]};
   margin: 24px 0;
 `
 
@@ -76,7 +76,7 @@ const Pricing = ({ showSignup }: any) => (
         <CardTitle>Account value under $25k</CardTitle>
         <Divider />
         <Tooltip title="Try it for free for 7-days">
-          <SmallFeatureCard style={{ boxShadow: 'none' }} icon="gift" color={theme.palette.success[500]} hover={false}>
+          <SmallFeatureCard style={{ boxShadow: 'none' }} icon="gift" color={theme.palette.success[600]} hover={false}>
             Free 7-day trial
           </SmallFeatureCard>
         </Tooltip>
@@ -94,7 +94,7 @@ const Pricing = ({ showSignup }: any) => (
           <SmallFeatureCard
             style={{ boxShadow: 'none' }}
             icon="analytics"
-            color={theme.palette.primary[500]}
+            color={theme.palette.primary[600]}
             hover={false}
           >
             Best for medium size

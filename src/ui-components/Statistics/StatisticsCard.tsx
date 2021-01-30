@@ -10,7 +10,7 @@ const StatCardContainer = styled.div`
   width: 100%;
 
   &:hover {
-    background: ${(p) => p.theme.palette.basic[200]};
+    background: ${(p) => p.theme.palette.neutral[200]};
   }
 `
 

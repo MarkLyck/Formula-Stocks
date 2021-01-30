@@ -52,7 +52,7 @@ const ChartContainer = styled.div`
 `
 
 const Highlight = styled.span`
-  color: ${(p) => p.theme.palette.success[500]};
+  color: ${(p) => p.theme.palette.success[600]};
 `
 
 const TableValue = styled.p`

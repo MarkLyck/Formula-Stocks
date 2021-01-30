@@ -25,11 +25,11 @@ const NextButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background: ${(p) => p.theme.palette.basic[200]};
+    background: ${(p) => p.theme.palette.neutral[200]};
   }
 
   &:active {
-    background: ${(p) => p.theme.palette.basic[300]};
+    background: ${(p) => p.theme.palette.neutral[300]};
   }
 
   @media (max-width: ${(p) => p.theme.breakpoints.small}) {
@@ -112,10 +112,10 @@ const Features = () => {
             align="center"
             direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}
           >
-            <StyledSmallFeatureCard icon="percent" color={theme.palette.primary[500]}>
+            <StyledSmallFeatureCard icon="percent" color={theme.palette.primary[600]}>
               {statistics.winLossRatio.toFixed(2)}% win ratio
             </StyledSmallFeatureCard>
-            <StyledSmallFeatureCard icon="chart-line" color={theme.palette.success[500]}>
+            <StyledSmallFeatureCard icon="chart-line" color={theme.palette.success[600]}>
               +{numberFormatter.format(launchStatistics.totalReturn.toFixed(0))}% return to date
             </StyledSmallFeatureCard>
             <StyledSmallFeatureCard icon="hand-holding-usd" color={theme.palette.icon_colors.pink}>
@@ -135,10 +135,10 @@ const Features = () => {
             <StyledSmallFeatureCard icon="brain" color={theme.palette.icon_colors.pink}>
               AI Stock reports
             </StyledSmallFeatureCard>
-            <StyledSmallFeatureCard icon="analytics" color={theme.palette.primary[500]}>
+            <StyledSmallFeatureCard icon="analytics" color={theme.palette.primary[600]}>
               Portfolio management
             </StyledSmallFeatureCard>
-            <StyledSmallFeatureCard icon="money-bill-wave" color={theme.palette.success[500]}>
+            <StyledSmallFeatureCard icon="money-bill-wave" color={theme.palette.success[600]}>
               Money back guarantee
             </StyledSmallFeatureCard>
             <NextButton onClick={handleClick}>
@@ -152,13 +152,13 @@ const Features = () => {
             align="center"
             direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}
           >
-            <StyledSmallFeatureCard icon="gift" color={theme.palette.danger[500]}>
+            <StyledSmallFeatureCard icon="gift" color={theme.palette.danger[600]}>
               Free 7-day trial
             </StyledSmallFeatureCard>
-            <StyledSmallFeatureCard icon="comment" color={theme.palette.success[500]}>
+            <StyledSmallFeatureCard icon="comment" color={theme.palette.success[600]}>
               24/7 Support
             </StyledSmallFeatureCard>
-            <StyledSmallFeatureCard icon="handshake" color={theme.palette.primary[500]}>
+            <StyledSmallFeatureCard icon="handshake" color={theme.palette.primary[600]}>
               Fully transparent
             </StyledSmallFeatureCard>
             <NextButton onClick={handleClick}>

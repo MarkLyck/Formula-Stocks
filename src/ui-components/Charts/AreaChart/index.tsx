@@ -29,10 +29,10 @@ const ChartContainer = styled.div`
   }
 
   .weeklystocktip {
-    color: ${(p) => p.theme.palette.primary[500]};
+    color: ${(p) => p.theme.palette.primary[600]};
   }
   .market {
-    color: ${(p) => p.theme.palette.basic[1100]};
+    color: ${(p) => p.theme.palette.neutral[1100]};
   }
 
   .g2-tooltip-name {
@@ -123,7 +123,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
               textBaseline: 'top',
               fontSize: 12,
               fontWeight: '400',
-              fill: theme.colors.white,
+              fill: theme.palette.neutral[100],
             },
           }
         }
@@ -132,7 +132,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
         padding: [2, 4],
         style: {
           padding: 8,
-          fill: theme.colors.black,
+          fill: theme.palette.neutral[1200],
           opacity: 1,
           lineJoin: 'round',
           stroke: '#000',
@@ -147,7 +147,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
   chart
     .line()
     .position('date*fs')
-    .color(theme.palette.primary[500])
+    .color(theme.palette.primary[600])
     .tooltip('date*fs', (_date: any, fs: any) => ({
       value: scale.fs.formatter(fs),
       className: 'weeklystocktip',
@@ -158,7 +158,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
       startOnZero: false,
     })
     .position('date*fs')
-    .color(theme.palette.primary[500])
+    .color(theme.palette.primary[600])
     .style({
       fillOpacity: 0.4,
     })
@@ -171,7 +171,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
   chart
     .line()
     .position('date*market')
-    .color(theme.palette.basic[800])
+    .color(theme.palette.neutral[800])
     .tooltip('date*market', (_date: any, market: any) => ({
       value: scale.fs.formatter(market),
       className: 'market',
@@ -182,7 +182,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
       startOnZero: false,
     })
     .position('date*market')
-    .color(theme.palette.basic[1100])
+    .color(theme.palette.neutral[1100])
     .style({
       fillOpacity: 0.4,
     })

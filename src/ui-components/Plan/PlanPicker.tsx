@@ -43,7 +43,7 @@ const Label = styled.div`
 
   svg {
     margin-right: 8px;
-    color: ${(props: any) => props.theme.colors[props.primary ? 'primary' : 'secondary']};
+    color: ${(props: any) => props.theme.palette[props.primary ? 'primary' : 'success'][500]};
   }
 `
 
@@ -53,7 +53,7 @@ const PlanTitle = styled.h4`
 
   svg {
     margin-right: 8px;
-    color: ${(props: any) => props.theme.colors[props.primary ? 'primary' : 'secondary']};
+    color: ${(props: any) => props.theme.palette[props.primary ? 'primary' : 'success'][500]};
   }
 `
 

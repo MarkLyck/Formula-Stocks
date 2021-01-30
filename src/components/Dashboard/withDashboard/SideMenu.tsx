@@ -42,7 +42,7 @@ const StyledMenu = styled(Menu, {
         border: none;
         width: 6px;
         height: 80%;
-        background: ${(p) => p.theme.palette.primary[500]};
+        background: ${(p) => p.theme.palette.primary[600]};
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
       }
@@ -61,19 +61,27 @@ const LogoContainer = styled.div`
   width: 100%;
 `
 
-const Logo = styled.div`
+const LogoCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 48px;
   width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: ${(p) => p.theme.palette.basic[200]};
+  padding: ${(p: { collapsed: any }) => (p.collapsed ? '8px' : '8px 16px')};
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: ${(p) => p.theme.palette.neutral[200]};
+  transition: all 0.2s;
 
   &:hover {
     cursor: pointer;
+    background-color: ${(p) => p.theme.palette.neutral[400]};
   }
+`
+
+const Logo = styled.img`
+  max-height: 40px;
+  max-width: 100%;
 `
 
 const MenuDivider = styled('div', {
@@ -81,7 +89,7 @@ const MenuDivider = styled('div', {
 })`
   width: calc(100% - 32px);
   height: 1px;
-  background: ${(p) => p.theme.palette.basic[300]};
+  background: ${(p) => p.theme.palette.neutral[300]};
   margin: 16px auto;
 `
 
@@ -126,7 +134,9 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
       >
         <Tooltip placement="right" title="Home">
           <LogoContainer>
-            <Logo>{collapsed ? 'L' : 'Logo'}</Logo>
+            <LogoCard collapsed={collapsed}>
+              <Logo src={collapsed ? '/logos/logo_icon_color.svg' : '/logos/logo_horizontal_color.svg'} />
+            </LogoCard>
           </LogoContainer>
         </Tooltip>
         <MenuDivider />

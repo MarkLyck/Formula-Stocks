@@ -27,7 +27,7 @@ const InfoBox = styled(Card)`
   svg {
     font-size: 1.5rem;
     margin-right: 12px;
-    color: ${(props: any) => props.theme.palette.primary[500]};
+    color: ${(props: any) => props.theme.palette.primary[600]};
   }
 `
 

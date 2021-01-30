@@ -4,17 +4,17 @@ import { Button } from '~/ui-components'
 import { LoginModal } from '~/components/LandingPage/Modals'
 
 const StyledButton = styled(Button)`
-  color: ${(p) => p.theme.colors.white};
-  border: 2px solid ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.palette.neutral[100]};
+  border: 2px solid ${(p) => p.theme.palette.neutral[100]};
 
   &:hover {
-    background-color: ${(p) => p.theme.colors.white};
-    border: 2px solid ${(p) => p.theme.palette.basic[400]};
+    background-color: ${(p) => p.theme.palette.neutral[100]};
+    border: 2px solid ${(p) => p.theme.palette.neutral[400]};
     color: ${(p) => p.theme.palette.text[500]};
   }
 
   &:active {
-    color: ${(p) => p.theme.palette.primary[500]};
+    color: ${(p) => p.theme.palette.primary[600]};
   }
 `
 

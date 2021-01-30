@@ -6,7 +6,7 @@ const Container = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(p) => p.theme.palette.basic[200]};
+  background: ${(p) => p.theme.palette.neutral[200]};
   height: 40px;
   width: 40px;
   border-radius: 4px;

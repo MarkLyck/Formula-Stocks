@@ -18,7 +18,7 @@ const Exchange = styled.img`
   padding: 16px;
   border-radius: 4px;
   &:hover {
-    background-color: ${(p) => p.theme.palette.basic[200]};
+    background-color: ${(p) => p.theme.palette.neutral[200]};
   }
 `
 

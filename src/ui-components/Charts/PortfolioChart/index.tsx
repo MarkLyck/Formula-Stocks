@@ -36,7 +36,7 @@ const Flex = styled.div`
 const TypeSelect = styled(Select)`
   && {
     .ant-select-selector {
-      background-color: ${(p) => p.theme.palette.basic[200]};
+      background-color: ${(p) => p.theme.palette.neutral[200]};
       position: relative;
       padding-left: 32px;
       border: none;
@@ -50,7 +50,7 @@ const TypeSelect = styled(Select)`
         width: 16px;
         height: 16px;
         border-radius: 4px;
-        background: ${(p) => p.theme.palette.success[500]};
+        background: ${(p) => p.theme.palette.success[600]};
       }
     }
   }

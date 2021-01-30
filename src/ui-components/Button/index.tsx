@@ -60,8 +60,8 @@ const FilledButton = styled.button`
   }
 
   &:disabled {
-    background-color: ${transparentize(1 - 0.16, theme.palette.basic[500])};
-    color: ${theme.palette.basic[600]};
+    background-color: ${transparentize(1 - 0.16, theme.palette.neutral[500])};
+    color: ${theme.palette.neutral[600]};
     cursor: not-allowed;
   }
 
@@ -96,9 +96,9 @@ const OutlineButton = styled.button`
   }
 
   &:disabled {
-    background-color: ${transparentize(1 - 0.16, theme.palette.basic[500])};
-    border: 2px solid ${transparentize(1 - 0.24, theme.palette.basic[500])};
-    color: ${theme.palette.basic[600]};
+    background-color: ${transparentize(1 - 0.16, theme.palette.neutral[500])};
+    border: 2px solid ${transparentize(1 - 0.24, theme.palette.neutral[500])};
+    color: ${theme.palette.neutral[600]};
     cursor: not-allowed;
   }
 
@@ -133,9 +133,9 @@ const GhostButton = styled.button`
   }
 
   &:disabled {
-    background-color: ${transparentize(1 - 0.16, theme.palette.basic[500])};
-    border: 2px solid ${transparentize(1 - 0.24, theme.palette.basic[500])};
-    color: ${theme.palette.basic[600]};
+    background-color: ${transparentize(1 - 0.16, theme.palette.neutral[500])};
+    border: 2px solid ${transparentize(1 - 0.24, theme.palette.neutral[500])};
+    color: ${theme.palette.neutral[600]};
     cursor: not-allowed;
   }
 

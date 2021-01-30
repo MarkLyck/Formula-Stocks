@@ -41,7 +41,7 @@ const Card = styled.div`
     p.hover
       ? `
         &:hover {
-            background: ${(p: any) => p.theme.palette.basic[200]};
+            background: ${(p: any) => p.theme.palette.neutral[200]};
         }`
       : ''}
 `

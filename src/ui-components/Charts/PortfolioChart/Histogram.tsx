@@ -22,7 +22,7 @@ const TooltipDateLabel = styled.p`
   font-weight: 400;
 `
 const ReturnValue = styled.h2`
-  color: ${(p: any) => (p.value < 0 ? p.themeProp.palette.danger[500] : p.themeProp.palette.success[500])};
+  color: ${(p: any) => (p.value < 0 ? p.themeProp.palette.danger[600] : p.themeProp.palette.success[600])};
   font-weight: 900;
   margin-bottom: 8px;
 `
@@ -85,7 +85,7 @@ const Histogram = ({ data, chartType }: any) => {
       },
     },
     columnWidthRatio: 0.8,
-    color: theme.palette.success[500],
+    color: theme.palette.success[600],
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(chartType, title, items, theme),
     },
@@ -94,7 +94,7 @@ const Histogram = ({ data, chartType }: any) => {
         type: 'regionFilter',
         start: ['min', '-0.25'],
         end: ['max', '-100'],
-        color: theme.palette.danger[500],
+        color: theme.palette.danger[600],
       },
     ],
   }

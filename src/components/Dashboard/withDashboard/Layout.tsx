@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout } from 'antd'
 import styled from '@emotion/styled'
+import isPropValid from '@emotion/is-prop-valid'
 import { useLocalStorageState } from 'ahooks'
 import { COMPANY_NAME } from 'src/common/constants'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -13,8 +14,9 @@ const { Content, Footer } = Layout
 const DashboardLayout = styled(Layout)`
   min-height: 100vh;
 `
-
-const ContentLayout = styled(Layout)`
+const ContentLayout = styled(Layout, {
+  shouldForwardProp: isPropValid,
+})`
   margin-left: ${(p: { sideMenuCollapsed?: boolean }) => (p.sideMenuCollapsed ? '80px' : '200px')};
   transition: all 0.2s;
 `

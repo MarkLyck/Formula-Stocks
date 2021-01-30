@@ -34,8 +34,8 @@ const getFontSize = (size: string) => {
 // }
 
 // const GhostNavLink = styled.a`
-//     background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
-//     color: ${(p) => p.theme.palette.basic[800]};
+//     background-color: ${(p) => transparentize(0.25, p.theme.palette.neutral[100])};
+//     color: ${(p) => p.theme.palette.neutral[800]};
 //     font-weight: bold;
 //     padding: ${(p: any) => getPadding(p.size)};
 //     font-size: ${(p: any) => getFontSize(p.size)};
@@ -45,22 +45,22 @@ const getFontSize = (size: string) => {
 
 //     &:hover {
 //         cursor: pointer;
-//         background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[500])};
+//         background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[600])};
 //     }
 
 //     &:active {
-//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
 //     }
 
 //     &:focus {
-//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
 //         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
 //     }
 
 //     &:disabled {
-//         background-color: ${p => transparentize(1 - 0.16, p.theme.palette.basic[500])};
-//         border: 2px solid ${p => transparentize(1 - 0.24, p.theme.palette.basic[500])};
-//         color: ${(p) => p.theme.palette.basic[600]};
+//         background-color: ${p => transparentize(1 - 0.16, p.theme.palette.neutral[500])};
+//         border: 2px solid ${p => transparentize(1 - 0.24, p.theme.palette.neutral[500])};
+//         color: ${(p) => p.theme.palette.neutral[600]};
 //         cursor: not-allowed;
 //     }
 
@@ -71,8 +71,8 @@ const getFontSize = (size: string) => {
 // `
 
 const GhostNavButton = styled.button`
-  background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
-  color: ${(p) => p.theme.palette.basic[800]};
+  background-color: ${(p) => transparentize(0.25, p.theme.palette.neutral[100])};
+  color: ${(p) => p.theme.palette.neutral[800]};
   font-weight: bold;
   padding: 8px 16px;
   font-size: ${(p: any) => getFontSize(p.size)};
@@ -82,22 +82,22 @@ const GhostNavButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[500])};
+    background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[600])};
   }
 
   &:active {
-    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
   }
 
   &:focus {
-    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
     box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
   }
 
   &:disabled {
-    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.basic[500])};
-    border: 2px solid ${(p) => transparentize(1 - 0.24, p.theme.palette.basic[500])};
-    color: ${(p) => p.theme.palette.basic[600]};
+    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.neutral[500])};
+    border: 2px solid ${(p) => transparentize(1 - 0.24, p.theme.palette.neutral[500])};
+    color: ${(p) => p.theme.palette.neutral[600]};
     cursor: not-allowed;
   }
 

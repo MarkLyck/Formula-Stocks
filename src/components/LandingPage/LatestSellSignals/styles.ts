@@ -30,18 +30,18 @@ export const TableRow = styled.tr`
 
 export const TableBody = styled.tbody`
   tr:hover {
-    background: ${(p: any) => p.theme.palette.basic[200]};
+    background: ${(p: any) => p.theme.palette.neutral[200]};
   }
 
   .percent-return.positive {
-    color: ${(p: any) => p.theme.palette.success[500]};
+    color: ${(p: any) => p.theme.palette.success[600]};
   }
   .percent-return.positive::before {
     content: '+';
   }
 
   .percent-return.negative {
-    color: ${(p: any) => p.theme.palette.danger[500]};
+    color: ${(p: any) => p.theme.palette.danger[600]};
   }
 `
 

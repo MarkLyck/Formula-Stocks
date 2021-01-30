@@ -15,7 +15,7 @@ const NumberContainer = styled.div`
   box-shadow: 0 5px 16px rgba(18, 62, 138, 0.15);
   font-size: 1.2rem;
   font-weight: bold;
-  color: ${(p) => p.theme.palette.primary[500]};
+  color: ${(p) => p.theme.palette.primary[600]};
 `
 
 const CardTitle = styled.h4`
@@ -54,7 +54,7 @@ const StepCard = styled(Card)`
   width: calc(100% / 3);
 
   &:hover {
-    background-color: ${(p) => p.theme.palette.basic[200]};
+    background-color: ${(p) => p.theme.palette.neutral[200]};
   }
 
   @media (max-width: ${(p) => p.theme.breakpoints.medium}) {

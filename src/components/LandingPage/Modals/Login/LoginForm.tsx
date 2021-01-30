@@ -21,7 +21,7 @@ const StyledForm = styled(Form)`
 
   .ant-input-affix-wrapper-focused {
     svg {
-      color: ${(props: any) => props.theme.palette.primary[500]};
+      color: ${(props: any) => props.theme.palette.primary[600]};
     }
   }
 

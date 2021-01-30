@@ -48,7 +48,7 @@ const ReportPartContainer = styled.div`
 
 const SectionHeader = styled.h3`
   font-weight: 500;
-  color: ${(p: any) => p.theme.palette.basic[500]};
+  color: ${(p: any) => p.theme.palette.neutral[500]};
   margin-bottom: 8px;
   margin-top: 24px;
   margin-left: 2px;

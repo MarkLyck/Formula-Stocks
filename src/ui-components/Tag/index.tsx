@@ -40,7 +40,7 @@ export const Tag = ({
   prefix = '',
   children,
   color = theme.palette.text[500],
-  backgroundColor = theme.palette.basic[300],
+  backgroundColor = theme.palette.neutral[300],
 }: ReturnPropsType) => {
   if (loading) {
     return (

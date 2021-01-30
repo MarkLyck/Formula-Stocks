@@ -19,7 +19,7 @@ const StyledTitle = styled(Title)`
 
 const Highlight = styled(Text)`
   font-weight: 900;
-  color: ${(p) => p.theme.palette.primary[500]};
+  color: ${(p) => p.theme.palette.primary[600]};
   font-size: 3.5rem;
 
   @media (max-width: ${(p) => p.theme.breakpoints.medium}) {

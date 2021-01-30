@@ -64,17 +64,17 @@ const Statistics = () => {
               Statistics & <Highlight>expectations</Highlight>
             </ScalingTitle>
             <Space direction="vertical" size="middle">
-              <StatisticsCard icon="percent" color={theme.palette.primary[500]}>
+              <StatisticsCard icon="percent" color={theme.palette.primary[600]}>
                 <p>stocks sold with a profit</p>
                 {loading ? (
                   <LoadingTag />
                 ) : (
-                  <Tag color={theme.palette.primary[500]} backgroundColor={theme.palette.primary[100]}>
+                  <Tag color={theme.palette.primary[600]} backgroundColor={theme.palette.primary[100]}>
                     {statistics.winLossRatio.toFixed(2)}%
                   </Tag>
                 )}
               </StatisticsCard>
-              <StatisticsCard icon="chart-line" color={theme.palette.success[500]}>
+              <StatisticsCard icon="chart-line" color={theme.palette.success[600]}>
                 <p>
                   Average return of the{' '}
                   <strong>
@@ -89,7 +89,7 @@ const Statistics = () => {
                 </p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={statistics.averageGainPerPosition} />}
               </StatisticsCard>
-              <StatisticsCard icon="chart-line-down" color={theme.palette.danger[500]}>
+              <StatisticsCard icon="chart-line-down" color={theme.palette.danger[600]}>
                 <p>
                   Average loss of the{' '}
                   <strong>
@@ -104,16 +104,16 @@ const Statistics = () => {
                 </p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={-statistics.averageLossPerPosition} />}
               </StatisticsCard>
-              <StatisticsCard icon="money-bill-wave" color={theme.palette.success[500]}>
+              <StatisticsCard icon="money-bill-wave" color={theme.palette.success[600]}>
                 <p>Average expected return per investment</p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={Number(expectedReturn)} />}
               </StatisticsCard>
-              <StatisticsCard icon="hourglass-start" color={theme.palette.basic[500]}>
+              <StatisticsCard icon="hourglass-start" color={theme.palette.neutral[500]}>
                 <p>Average holding period</p>
                 {loading ? (
                   <LoadingTag />
                 ) : (
-                  <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.basic[300]}>
+                  <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.neutral[300]}>
                     {statistics.averageHoldingPeriod} days
                   </Tag>
                 )}
@@ -130,7 +130,7 @@ const Statistics = () => {
               <ActionButton
                 backgroundColor="#fff"
                 color={theme.palette.text[500]}
-                shadowColor={transparentize(0.5, theme.palette.basic[600])}
+                shadowColor={transparentize(0.5, theme.palette.neutral[600])}
                 onClick={() => setCompoundInterestCalculatorVisible(true)}
               >
                 <ButtonIcon icon={['fad', 'calculator']} />
