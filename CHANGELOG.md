@@ -1,5 +1,54 @@
 # Changelog
 
+<a name="1.0.24"></a>
+## 1.0.24 (2021-01-30)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.24 [[c476441](https://github.com/MarkLyck/formula-stocks/commit/c4764417eb7eeb55448dffc2015640ce7593a017)]
+
+
+<a name="1.0.23"></a>
+## 1.0.23 (2021-01-30)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.23 [[dc26fa3](https://github.com/MarkLyck/formula-stocks/commit/dc26fa3d6e4b40b7d034240740b912148eb32e83)]
+
+
+<a name="1.0.22"></a>
+## 1.0.22 (2021-01-30)
+
+### Changed
+
+- ⬆️ Update dependency graphql to v15.5.0 [[9e82ef1](https://github.com/MarkLyck/formula-stocks/commit/9e82ef15da452b17f499ffb86a3a2b505e80410a)]
+- ⬆️ Update dependency antd to v4.11.2 [[c492ffe](https://github.com/MarkLyck/formula-stocks/commit/c492ffe6fddd3d2c472e02a504582df98f9d537d)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.22 [[7361579](https://github.com/MarkLyck/formula-stocks/commit/73615793aed23b8b2a83e3d452994da10be0cf4e)]
+-  Merge pull request [#38](https://github.com/MarkLyck/formula-stocks/issues/38) from MarkLyck/renovate/graphql-15.x [[5581922](https://github.com/MarkLyck/formula-stocks/commit/55819221a9c57eeec30f2a231fa75b36ffd16886)]
+-  Merge pull request [#37](https://github.com/MarkLyck/formula-stocks/issues/37) from MarkLyck/renovate/antd-4.x [[1363cdf](https://github.com/MarkLyck/formula-stocks/commit/1363cdfab56d2e6cf126f52dcc8983a4f054a287)]
+
+
+<a name="1.0.21"></a>
+## 1.0.21 (2021-01-30)
+
+### Changed
+
+- ⬆️ Update dependency date-fns-tz to v1.1.1 [[1e0de1a](https://github.com/MarkLyck/formula-stocks/commit/1e0de1a84d3ef0e01a5a4e271c67becc3275ec52)]
+- ⬆️ Update dependency mixpanel-browser to v2.41.0 [[2c24315](https://github.com/MarkLyck/formula-stocks/commit/2c24315bf9c25ff6c86c99837971b8f186bb717b)]
+- ⬆️ Update dependency @ant-design/charts to v1.0.17 [[2d52941](https://github.com/MarkLyck/formula-stocks/commit/2d5294151381bceda6a8fe9b6922695c555cf9d9)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.21 [[5eee303](https://github.com/MarkLyck/formula-stocks/commit/5eee30399e845a7154850fca491ca3dd29a902dd)]
+- 📝 generated changelog [[c20c00b](https://github.com/MarkLyck/formula-stocks/commit/c20c00ba5b42d49b2f55af83336f8ed22548b152)]
+-  Merge pull request [#39](https://github.com/MarkLyck/formula-stocks/issues/39) from MarkLyck/renovate/ant-design-charts-1.x [[2c36698](https://github.com/MarkLyck/formula-stocks/commit/2c36698451dd5fba88eaa83bec89523a69253551)]
+-  Merge pull request [#40](https://github.com/MarkLyck/formula-stocks/issues/40) from MarkLyck/renovate/mixpanel-browser-2.x [[3869503](https://github.com/MarkLyck/formula-stocks/commit/386950327ddad7062a1374d7ec171fe4833a9243)]
+-  Merge pull request [#41](https://github.com/MarkLyck/formula-stocks/issues/41) from MarkLyck/renovate/date-fns-tz-1.x [[d444ba6](https://github.com/MarkLyck/formula-stocks/commit/d444ba683112653424f4cc82e2c4c5bea28a5aef)]
+
+
 <a name="1.0.20"></a>
 ## 1.0.20 (2021-01-30)
 
