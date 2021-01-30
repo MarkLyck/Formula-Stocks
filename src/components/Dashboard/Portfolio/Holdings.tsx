@@ -7,6 +7,22 @@ import { StockReturn } from 'src/ui-components'
 
 const { Text, Title } = Typography
 
+type HoldingType = {
+  date: string
+  daysOwned: number
+  dividends: number
+  name: string
+  numberHeld: number
+  percentageWeight: number
+  price: number
+  purchasePrice: number
+  stock: {
+    date: string
+    latestPrice: number
+  }
+  ticker: string
+}
+
 const columns = [
   {
     title: 'Company',
@@ -23,12 +39,14 @@ const columns = [
         </Text>
       )
     },
+    sorter: (a: any, b: any) => (a.name < b.name ? -1 : 1),
   },
   {
     title: 'Allocation',
     key: 'percentageWeight',
     dataIndex: 'percentageWeight',
     render: (value: number) => <Progress percent={Number(value.toFixed(2))} />,
+    sorter: (a: HoldingType, b: HoldingType) => a.percentageWeight - b.percentageWeight,
   },
   {
     title: 'Basis price',
@@ -39,6 +57,7 @@ const columns = [
 
       return <Text>${value.toFixed(2)}</Text>
     },
+    sorter: (a: HoldingType, b: HoldingType) => a.purchasePrice - b.purchasePrice,
   },
   {
     title: 'Latest price',
@@ -49,6 +68,7 @@ const columns = [
 
       return <Text>${price.toFixed(2)}</Text>
     },
+    sorter: (a: HoldingType, b: HoldingType) => (a.stock?.latestPrice || a.price) - b.purchasePrice,
   },
   {
     title: 'Unrealized Return',
@@ -58,11 +78,17 @@ const columns = [
       const increase = calculatePercentIncrease(item.purchasePrice, item.stock?.latestPrice || item.price)
       return <StockReturn percentReturn={increase} />
     },
+    sorter: (a: HoldingType, b: HoldingType) => {
+      const aIncrease = calculatePercentIncrease(a.purchasePrice, a.stock?.latestPrice || a.price)
+      const bIncrease = calculatePercentIncrease(b.purchasePrice, b.stock?.latestPrice || b.price)
+      return aIncrease - bIncrease
+    },
   },
   {
     title: 'Days held',
     key: 'daysOwned',
     dataIndex: 'daysOwned',
+    sorter: (a: HoldingType, b: HoldingType) => a.daysOwned - b.daysOwned,
   },
 ]
 
@@ -71,7 +97,7 @@ const Holdings = () => {
     variables: { planName: 'entry' },
   })
 
-  const holdings = data?.portfolioHoldingsList?.items || []
+  const holdings: HoldingType[] = data?.portfolioHoldingsList?.items || []
 
   return (
     <div>
