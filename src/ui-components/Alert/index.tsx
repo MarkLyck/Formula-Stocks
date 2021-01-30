@@ -23,10 +23,10 @@ const AlertContainer = styled.div`
 `
 
 const getColor = (type: 'success' | 'info' | 'warning' | 'error', theme: any) => {
-  if (type === 'error') return theme.palette.danger[500]
+  if (type === 'error') return theme.palette.danger[600]
   if (type === 'warning') return theme.palette.warning[500]
-  if (type === 'info') return theme.palette.primary[500]
-  if (type === 'success') return theme.palette.success[500]
+  if (type === 'info') return theme.palette.primary[600]
+  if (type === 'success') return theme.palette.success[600]
 }
 
 const getBackgroundColor = (type: 'success' | 'info' | 'warning' | 'error', theme: any) => {

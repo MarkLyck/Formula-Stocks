@@ -14,7 +14,7 @@ const StyledButton = styled(Button)`
   }
 
   &:active {
-    color: ${(p) => p.theme.palette.primary[500]};
+    color: ${(p) => p.theme.palette.primary[600]};
   }
 `
 

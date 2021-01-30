@@ -45,15 +45,15 @@ const getFontSize = (size: string) => {
 
 //     &:hover {
 //         cursor: pointer;
-//         background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[500])};
+//         background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[600])};
 //     }
 
 //     &:active {
-//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
 //     }
 
 //     &:focus {
-//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+//         background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
 //         box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
 //     }
 
@@ -82,15 +82,15 @@ const GhostNavButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[500])};
+    background-color: ${(p) => transparentize(1 - 0.08, p.theme.palette.primary[600])};
   }
 
   &:active {
-    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
   }
 
   &:focus {
-    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[500])};
+    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.primary[600])};
     box-shadow: 0 0 0 2pt rgba(143, 155, 179, 0.16);
   }
 

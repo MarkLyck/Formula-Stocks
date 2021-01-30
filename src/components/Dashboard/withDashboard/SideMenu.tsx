@@ -42,7 +42,7 @@ const StyledMenu = styled(Menu, {
         border: none;
         width: 6px;
         height: 80%;
-        background: ${(p) => p.theme.palette.primary[500]};
+        background: ${(p) => p.theme.palette.primary[600]};
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
       }

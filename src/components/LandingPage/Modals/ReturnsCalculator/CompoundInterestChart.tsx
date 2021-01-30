@@ -72,7 +72,7 @@ const CompoundInterestChart = ({ data }: CompoundInterestChartType) => {
   })
 
   const getColor = (ref: any) =>
-    ref.type === 'Future balance' ? theme.palette.success[500] : theme.palette.primary[500]
+    ref.type === 'Future balance' ? theme.palette.success[600] : theme.palette.primary[600]
 
   const config = {
     id: 'compound-interest-chart',

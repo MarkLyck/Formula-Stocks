@@ -14,7 +14,7 @@ const Container = styled(Card)`
   padding: 48px;
 
   svg {
-    color: ${(p) => p.theme.palette.danger[500]};
+    color: ${(p) => p.theme.palette.danger[600]};
     font-size: 32px;
   }
 

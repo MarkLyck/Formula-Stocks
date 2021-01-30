@@ -33,7 +33,7 @@ const Article = styled.a`
     color: ${(props: any) => props.theme.palette.text[500]};
 
     .news-article-footer {
-      color: ${(props: any) => props.theme.palette.primary[500]};
+      color: ${(props: any) => props.theme.palette.primary[600]};
     }
   }
 `

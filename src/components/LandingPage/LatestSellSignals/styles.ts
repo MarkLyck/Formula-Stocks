@@ -34,14 +34,14 @@ export const TableBody = styled.tbody`
   }
 
   .percent-return.positive {
-    color: ${(p: any) => p.theme.palette.success[500]};
+    color: ${(p: any) => p.theme.palette.success[600]};
   }
   .percent-return.positive::before {
     content: '+';
   }
 
   .percent-return.negative {
-    color: ${(p: any) => p.theme.palette.danger[500]};
+    color: ${(p: any) => p.theme.palette.danger[600]};
   }
 `
 

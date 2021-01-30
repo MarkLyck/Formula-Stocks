@@ -23,7 +23,7 @@ const TooltipDateLabel = styled.p`
   font-weight: 400;
 `
 const ReturnValue = styled.h2`
-  color: ${(p: any) => (p.value < 0 ? p.themeProp.palette.danger[500] : p.themeProp.palette.success[500])};
+  color: ${(p: any) => (p.value < 0 ? p.themeProp.palette.danger[600] : p.themeProp.palette.success[600])};
   font-weight: 900;
   margin-bottom: 8px;
 `
@@ -125,7 +125,7 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
         },
       },
     },
-    color: lastPoint?.value > 0 ? theme.palette.success[500] : theme.palette.danger[500],
+    color: lastPoint?.value > 0 ? theme.palette.success[600] : theme.palette.danger[600],
     lineStyle: {
       lineWidth: 4,
       shadowColor: lastPoint?.value > 0 ? theme.palette.success[200] : theme.palette.danger[200],

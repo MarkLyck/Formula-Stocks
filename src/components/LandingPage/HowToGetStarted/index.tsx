@@ -15,7 +15,7 @@ const NumberContainer = styled.div`
   box-shadow: 0 5px 16px rgba(18, 62, 138, 0.15);
   font-size: 1.2rem;
   font-weight: bold;
-  color: ${(p) => p.theme.palette.primary[500]};
+  color: ${(p) => p.theme.palette.primary[600]};
 `
 
 const CardTitle = styled.h4`

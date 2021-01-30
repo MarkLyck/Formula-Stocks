@@ -30,7 +30,7 @@ const Container = styled.div`
 `
 
 const Highlight = styled.span`
-  color: ${(p) => p.theme.palette.primary[500]};
+  color: ${(p) => p.theme.palette.primary[600]};
 `
 
 const Content = styled.div`

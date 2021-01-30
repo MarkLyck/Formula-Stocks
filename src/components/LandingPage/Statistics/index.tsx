@@ -64,17 +64,17 @@ const Statistics = () => {
               Statistics & <Highlight>expectations</Highlight>
             </ScalingTitle>
             <Space direction="vertical" size="middle">
-              <StatisticsCard icon="percent" color={theme.palette.primary[500]}>
+              <StatisticsCard icon="percent" color={theme.palette.primary[600]}>
                 <p>stocks sold with a profit</p>
                 {loading ? (
                   <LoadingTag />
                 ) : (
-                  <Tag color={theme.palette.primary[500]} backgroundColor={theme.palette.primary[100]}>
+                  <Tag color={theme.palette.primary[600]} backgroundColor={theme.palette.primary[100]}>
                     {statistics.winLossRatio.toFixed(2)}%
                   </Tag>
                 )}
               </StatisticsCard>
-              <StatisticsCard icon="chart-line" color={theme.palette.success[500]}>
+              <StatisticsCard icon="chart-line" color={theme.palette.success[600]}>
                 <p>
                   Average return of the{' '}
                   <strong>
@@ -89,7 +89,7 @@ const Statistics = () => {
                 </p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={statistics.averageGainPerPosition} />}
               </StatisticsCard>
-              <StatisticsCard icon="chart-line-down" color={theme.palette.danger[500]}>
+              <StatisticsCard icon="chart-line-down" color={theme.palette.danger[600]}>
                 <p>
                   Average loss of the{' '}
                   <strong>
@@ -104,7 +104,7 @@ const Statistics = () => {
                 </p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={-statistics.averageLossPerPosition} />}
               </StatisticsCard>
-              <StatisticsCard icon="money-bill-wave" color={theme.palette.success[500]}>
+              <StatisticsCard icon="money-bill-wave" color={theme.palette.success[600]}>
                 <p>Average expected return per investment</p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={Number(expectedReturn)} />}
               </StatisticsCard>

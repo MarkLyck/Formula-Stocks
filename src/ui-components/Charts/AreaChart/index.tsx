@@ -29,7 +29,7 @@ const ChartContainer = styled.div`
   }
 
   .weeklystocktip {
-    color: ${(p) => p.theme.palette.primary[500]};
+    color: ${(p) => p.theme.palette.primary[600]};
   }
   .market {
     color: ${(p) => p.theme.palette.neutral[1100]};
@@ -147,7 +147,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
   chart
     .line()
     .position('date*fs')
-    .color(theme.palette.primary[500])
+    .color(theme.palette.primary[600])
     .tooltip('date*fs', (_date: any, fs: any) => ({
       value: scale.fs.formatter(fs),
       className: 'weeklystocktip',
@@ -158,7 +158,7 @@ const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType)
       startOnZero: false,
     })
     .position('date*fs')
-    .color(theme.palette.primary[500])
+    .color(theme.palette.primary[600])
     .style({
       fillOpacity: 0.4,
     })

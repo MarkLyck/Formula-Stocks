@@ -48,7 +48,7 @@ export const ChartLoaderContainer = styled.div`
   background: ${(p) => p.theme.palette.neutral[200]};
 
   svg {
-    color: ${(p) => p.theme.palette.primary[500]};
+    color: ${(p) => p.theme.palette.primary[600]};
     margin-bottom: 24px;
   }
 
