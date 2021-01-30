@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="1.0.25"></a>
+## 1.0.25 (2021-01-30)
+
+### Added
+
+- ✨ holdings improvements [[d0d91df](https://github.com/MarkLyck/formula-stocks/commit/d0d91df08892d1af5fa3ecc5fc9e8a77f1d96312)]
+- ✨ sort holdings [[186e000](https://github.com/MarkLyck/formula-stocks/commit/186e000b9ff886af2e870bf77982a241d6d97874)]
+
+### Changed
+
+- 🔧 add missing icon [[36caff5](https://github.com/MarkLyck/formula-stocks/commit/36caff5f3ae592a0a30ea59c7c22f558ea68ef29)]
+- 🚚 move holdings columns [[218f5f5](https://github.com/MarkLyck/formula-stocks/commit/218f5f5a7d4c9e1916898fd4a19fada375e0231f)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.25 [[cd06c95](https://github.com/MarkLyck/formula-stocks/commit/cd06c95952072c4f4d084d6e6396c06931c2575f)]
+- 📝 generated changelog [[3f04d68](https://github.com/MarkLyck/formula-stocks/commit/3f04d6862de4bd7028f8a887f7c01242626a76c4)]
+-  Merge pull request [#43](https://github.com/MarkLyck/formula-stocks/issues/43) from MarkLyck/holdings [[b1f008c](https://github.com/MarkLyck/formula-stocks/commit/b1f008c42975c1cdfd19f9395e6f0d739db40f7a)]
+- 🗑️ remove unused import [[5881bb6](https://github.com/MarkLyck/formula-stocks/commit/5881bb6a15045dd48fdfb4236dc86e03c4e19d16)]
+- 🔀 merge main [[4b14477](https://github.com/MarkLyck/formula-stocks/commit/4b1447769c920d926e33d5b9e0a37b97f80f2ef7)]
+
+
 <a name="1.0.24"></a>
 ## 1.0.24 (2021-01-30)
 
