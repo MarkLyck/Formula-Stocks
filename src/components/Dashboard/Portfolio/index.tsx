@@ -22,9 +22,7 @@ const Portfolio = () => (
     </Row>
     <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
-        <Card>
-          <Holdings />
-        </Card>
+        <Holdings />
       </Col>
     </Row>
   </div>

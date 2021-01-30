@@ -1,5 +1,5 @@
 import React from 'react'
-import PortfolioHoldings from './Holdings'
+import PortfolioHoldings from './index'
 import { MockedProvider } from '@apollo/client/testing'
 import { PORTFOLIO_HOLDINGS } from '~/common/queries'
 import { PORTFOLIO_HOLDINGS_MOCK } from 'src/tests/mocks'

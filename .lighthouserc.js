@@ -47,7 +47,7 @@ module.exports = {
         'render-blocking-resources': ['error', { minScore: 0.5 }],
         'service-worker': 'off',
         'speed-index': 'off',
-        'speed-index': ['error', { minScore: 0.3 }],
+        'speed-index': ['error', { minScore: 0.1 }],
         'splash-screen': 'off',
         'themed-omnibox': 'off',
         'unminified-css': ['error', { minScore: 0.8 }],

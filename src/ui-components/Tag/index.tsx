@@ -6,8 +6,8 @@ import theme from '~/lib/theme'
 export * from './TextTag'
 
 export const Container = styled.span`
-  background: ${(props: { backgroundColor: string; color: string }) => props.backgroundColor};
-  color: ${(props: any) => props.color};
+  background: ${(p: { backgroundColor: string; color: string }) => p.backgroundColor};
+  color: ${(p: any) => p.color};
   font-size: 14px;
   padding: 8px 12px;
   border-radius: 4px;
@@ -24,7 +24,7 @@ export const Container = styled.span`
 const Prefix = styled.span`
   font-weight: 500;
   margin-right: 8px;
-  color: ${(props) => props.theme.palette.text[300]};
+  color: ${(p) => p.theme.palette.text[300]};
 `
 
 interface ReturnPropsType {
