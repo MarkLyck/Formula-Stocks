@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.20"></a>
+## 1.0.20 (2021-01-30)
+
+### Changed
+
+- 🎨 update theme palette [[bf29310](https://github.com/MarkLyck/formula-stocks/commit/bf29310169b9183b970f6ec044a57fd7bc2af82a)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.20 [[6854b90](https://github.com/MarkLyck/formula-stocks/commit/6854b90239e5946ae075c532d6392555fbf2f78e)]
+-  Merge pull request [#42](https://github.com/MarkLyck/formula-stocks/issues/42) from MarkLyck/update-theme [[2ed9bb6](https://github.com/MarkLyck/formula-stocks/commit/2ed9bb6de72e2b3f958fef02ea05595d1b3ac064)]
+-  update theme and add sidebar logo [[56cd0e7](https://github.com/MarkLyck/formula-stocks/commit/56cd0e7998c13ef548693d5b501bb26b4e140003)]
+- 📝 generated changelog [[dc288c6](https://github.com/MarkLyck/formula-stocks/commit/dc288c600d128b4243abcecec6077efbf8326b66)]
+
+
 <a name="1.0.19"></a>
 ## 1.0.19 (2021-01-24)
 
