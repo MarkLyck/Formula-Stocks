@@ -298,7 +298,28 @@
     probe.gl "^3.1.1"
     reflect-metadata "^0.1.13"
 
-"@antv/g2@4.1.6", "@antv/g2@^4.1.0":
+"@antv/g2@4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@antv/g2/-/g2-4.1.9.tgz#d8f763618b4982f21f6372b82c9d3b9669c1d0db"
+  integrity sha512-EUlhGYq/yKfXE80BNXSOrTiHixCF1ikLt4OX/DCcRvkZ05AYuK31EcY6LZcHmqwuZYSgdGqMOGTaPeWuMQHDXA==
+  dependencies:
+    "@antv/adjust" "^0.2.1"
+    "@antv/attr" "^0.3.1"
+    "@antv/color-util" "^2.0.2"
+    "@antv/component" "^0.8.7"
+    "@antv/coord" "^0.3.0"
+    "@antv/dom-util" "^2.0.2"
+    "@antv/event-emitter" "~0.1.0"
+    "@antv/g-base" "^0.5.0"
+    "@antv/g-canvas" "^0.5.0"
+    "@antv/g-svg" "^0.5.0"
+    "@antv/matrix-util" "^3.1.0-beta.1"
+    "@antv/path-util" "^2.0.3"
+    "@antv/scale" "^0.3.7"
+    "@antv/util" "~2.0.5"
+    tslib "^2.0.0"
+
+"@antv/g2@^4.1.0":
   version "4.1.6"
   resolved "https://registry.yarnpkg.com/@antv/g2/-/g2-4.1.6.tgz#f08ab5d897898ae416df3aba51b6a42207e873a7"
   integrity sha512-RiHNGAJ61YpjnL29/FV1Q1dJpjb9ygUKXRdnaxK33t3KYi1rv3pKXPd2cOP22uUNi9a64Xm93qAuoJtjrgW0Ng==
