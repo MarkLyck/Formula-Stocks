@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Progress, Typography } from 'antd'
+import { Progress, Typography, Space } from 'antd'
 import { calculatePercentIncrease } from 'src/common/utils'
-import { StockReturn } from 'src/ui-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { StockReturn, Ticker, Tag } from 'src/ui-components'
 
 const CashIcon = styled(FontAwesomeIcon)`
   margin-right: 8px;
@@ -36,17 +36,18 @@ const columns = [
     render: (stockName: any, item: any) => {
       if (item.ticker === 'CASH') {
         return (
-          <Text>
+          <Tag>
             <CashIcon icon={['fad', 'money-bill']} />
             Cash
-          </Text>
+          </Tag>
         )
       }
 
       return (
-        <Text>
-          {item.ticker} - {stockName}
-        </Text>
+        <Space>
+          <Ticker ticker={item.ticker} />
+          <Text>{stockName}</Text>
+        </Space>
       )
     },
     sorter: (a: any, b: any) => (a.name < b.name ? -1 : 1),

@@ -1,10 +1,13 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { PORTFOLIO_HOLDINGS } from '~/common/queries'
-import { Table, Typography } from 'antd'
+import { Table } from 'antd'
 import columns, { HoldingType } from './Columns'
 
-const { Title } = Typography
+const Container = styled.div`
+  border-radius: 4px;
+`
 
 const Holdings = () => {
   const { data, loading } = useQuery(PORTFOLIO_HOLDINGS, {
@@ -14,10 +17,9 @@ const Holdings = () => {
   const holdings: HoldingType[] = data?.portfolioHoldingsList?.items || []
 
   return (
-    <div>
-      <Title level={4}>Portfolio</Title>
+    <Container>
       <Table loading={loading} columns={columns} dataSource={holdings} pagination={false} />
-    </div>
+    </Container>
   )
 }
 

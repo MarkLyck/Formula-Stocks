@@ -35,6 +35,7 @@
     "ahooks": "2.9.4",
     "antd": "4.11.1",
     "apollo-link-context": "1.0.20",
+    "copy-to-clipboard": "3.3.1",
     "date-fns-tz": "1.0.12",
     "deepmerge": "4.2.2",
     "flagsmith": "1.2.1",
