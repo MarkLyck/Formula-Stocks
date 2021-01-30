@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.26"></a>
+## 1.0.26 (2021-01-30)
+
+### Changed
+
+- ⬆️ Update dependency @antv/g2 to v4.1.9 [[fb5ec51](https://github.com/MarkLyck/formula-stocks/commit/fb5ec515fc7f62dd4adb896a12a4be3e046689e8)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.26 [[ac756c1](https://github.com/MarkLyck/formula-stocks/commit/ac756c14c6d0e25f5c65220dad74b200e23cd0b2)]
+- 📝 generated changelog [[77bc5b5](https://github.com/MarkLyck/formula-stocks/commit/77bc5b5a306ff4b57555de824d35b2a013653382)]
+-  Merge pull request [#15](https://github.com/MarkLyck/formula-stocks/issues/15) from MarkLyck/renovate/antv-g2-4.x [[ececde1](https://github.com/MarkLyck/formula-stocks/commit/ececde10b525b0075ac6a26c83765ac7fc7ce98e)]
+
+
 <a name="1.0.25"></a>
 ## 1.0.25 (2021-01-30)
 
