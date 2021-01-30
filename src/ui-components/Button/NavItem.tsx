@@ -34,8 +34,8 @@ const getFontSize = (size: string) => {
 // }
 
 // const GhostNavLink = styled.a`
-//     background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
-//     color: ${(p) => p.theme.palette.basic[800]};
+//     background-color: ${(p) => transparentize(0.25, p.theme.palette.neutral[100])};
+//     color: ${(p) => p.theme.palette.neutral[800]};
 //     font-weight: bold;
 //     padding: ${(p: any) => getPadding(p.size)};
 //     font-size: ${(p: any) => getFontSize(p.size)};
@@ -58,9 +58,9 @@ const getFontSize = (size: string) => {
 //     }
 
 //     &:disabled {
-//         background-color: ${p => transparentize(1 - 0.16, p.theme.palette.basic[500])};
-//         border: 2px solid ${p => transparentize(1 - 0.24, p.theme.palette.basic[500])};
-//         color: ${(p) => p.theme.palette.basic[600]};
+//         background-color: ${p => transparentize(1 - 0.16, p.theme.palette.neutral[500])};
+//         border: 2px solid ${p => transparentize(1 - 0.24, p.theme.palette.neutral[500])};
+//         color: ${(p) => p.theme.palette.neutral[600]};
 //         cursor: not-allowed;
 //     }
 
@@ -71,8 +71,8 @@ const getFontSize = (size: string) => {
 // `
 
 const GhostNavButton = styled.button`
-  background-color: ${(p) => transparentize(0.25, p.theme.colors.white)};
-  color: ${(p) => p.theme.palette.basic[800]};
+  background-color: ${(p) => transparentize(0.25, p.theme.palette.neutral[100])};
+  color: ${(p) => p.theme.palette.neutral[800]};
   font-weight: bold;
   padding: 8px 16px;
   font-size: ${(p: any) => getFontSize(p.size)};
@@ -95,9 +95,9 @@ const GhostNavButton = styled.button`
   }
 
   &:disabled {
-    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.basic[500])};
-    border: 2px solid ${(p) => transparentize(1 - 0.24, p.theme.palette.basic[500])};
-    color: ${(p) => p.theme.palette.basic[600]};
+    background-color: ${(p) => transparentize(1 - 0.16, p.theme.palette.neutral[500])};
+    border: 2px solid ${(p) => transparentize(1 - 0.24, p.theme.palette.neutral[500])};
+    color: ${(p) => p.theme.palette.neutral[600]};
     cursor: not-allowed;
   }
 

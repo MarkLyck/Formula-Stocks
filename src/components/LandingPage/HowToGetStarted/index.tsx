@@ -54,7 +54,7 @@ const StepCard = styled(Card)`
   width: calc(100% / 3);
 
   &:hover {
-    background-color: ${(p) => p.theme.palette.basic[200]};
+    background-color: ${(p) => p.theme.palette.neutral[200]};
   }
 
   @media (max-width: ${(p) => p.theme.breakpoints.medium}) {

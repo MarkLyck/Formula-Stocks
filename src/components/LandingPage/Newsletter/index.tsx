@@ -106,7 +106,7 @@ const Newsletter = () => {
                     onChange={handleNameInput}
                     size="large"
                     placeholder="First name"
-                    prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.basic[500]} />}
+                    prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.neutral[500]} />}
                   />
                 </Form.Item>
                 <Form.Item
@@ -119,7 +119,7 @@ const Newsletter = () => {
                     onChange={handleEmailInput}
                     size="large"
                     placeholder="Email address"
-                    prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.basic[500]} />}
+                    prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.neutral[500]} />}
                   />
                 </Form.Item>
                 <Form.Item shouldUpdate={true}>

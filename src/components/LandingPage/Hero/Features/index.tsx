@@ -25,11 +25,11 @@ const NextButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background: ${(p) => p.theme.palette.basic[200]};
+    background: ${(p) => p.theme.palette.neutral[200]};
   }
 
   &:active {
-    background: ${(p) => p.theme.palette.basic[300]};
+    background: ${(p) => p.theme.palette.neutral[300]};
   }
 
   @media (max-width: ${(p) => p.theme.breakpoints.small}) {

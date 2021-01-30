@@ -10,7 +10,7 @@ declare module '@emotion/react' {
       text: {
         [key: string]: string
       }
-      basic: {
+      neutral: {
         [key: string]: string
       }
       primary: {

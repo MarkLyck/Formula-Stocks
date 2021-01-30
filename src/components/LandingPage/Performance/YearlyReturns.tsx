@@ -20,7 +20,7 @@ const YearReturnItem = styled.li`
   font-size: 0.9rem;
 
   &:hover {
-    background: ${(props: any) => props.theme.palette.basic[200]};
+    background: ${(props: any) => props.theme.palette.neutral[200]};
   }
 
   &:last-of-type {

@@ -108,12 +108,12 @@ const Statistics = () => {
                 <p>Average expected return per investment</p>
                 {loading ? <LoadingTag /> : <StockReturn percentReturn={Number(expectedReturn)} />}
               </StatisticsCard>
-              <StatisticsCard icon="hourglass-start" color={theme.palette.basic[500]}>
+              <StatisticsCard icon="hourglass-start" color={theme.palette.neutral[500]}>
                 <p>Average holding period</p>
                 {loading ? (
                   <LoadingTag />
                 ) : (
-                  <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.basic[300]}>
+                  <Tag color={theme.palette.text[500]} backgroundColor={theme.palette.neutral[300]}>
                     {statistics.averageHoldingPeriod} days
                   </Tag>
                 )}
@@ -130,7 +130,7 @@ const Statistics = () => {
               <ActionButton
                 backgroundColor="#fff"
                 color={theme.palette.text[500]}
-                shadowColor={transparentize(0.5, theme.palette.basic[600])}
+                shadowColor={transparentize(0.5, theme.palette.neutral[600])}
                 onClick={() => setCompoundInterestCalculatorVisible(true)}
               >
                 <ButtonIcon icon={['fad', 'calculator']} />

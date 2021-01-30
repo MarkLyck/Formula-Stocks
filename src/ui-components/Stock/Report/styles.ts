@@ -26,7 +26,7 @@ export const Value = styled.h2`
 
 export const FadedValue = styled.h2`
   font-weight: 500;
-  color: ${(p: any) => p.theme.palette.basic[500]};
+  color: ${(p: any) => p.theme.palette.neutral[500]};
   opacity: 0.5;
   margin-left: 16px;
 `
@@ -46,7 +46,7 @@ export const Beside = styled.div`
 `
 
 export const HelpText = styled.p`
-  color: ${(p: any) => p.theme.palette.basic[500]};
+  color: ${(p: any) => p.theme.palette.neutral[500]};
   margin-top: 16px;
   margin-bottom: 8px;
   font-size: 0.8rem;

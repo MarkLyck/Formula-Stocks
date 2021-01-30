@@ -45,7 +45,7 @@ const BrainIcon = styled(FontAwesomeIcon)`
   position: absolute;
   top: 16px;
   left: 16px;
-  color: ${(p: any) => p.theme.palette.basic[500]};
+  color: ${(p: any) => p.theme.palette.neutral[500]};
   font-size: 1.2rem;
 `
 

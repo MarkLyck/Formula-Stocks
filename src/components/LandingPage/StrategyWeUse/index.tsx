@@ -55,7 +55,7 @@ const StrategyWeUse = ({ showSignup }: any) => {
                 onClick={() => console.log('SEE FAQ')}
                 backgroundColor="#fff"
                 color={theme.palette.text[500]}
-                shadowColor={transparentize(0.5, theme.palette.basic[600])}
+                shadowColor={transparentize(0.5, theme.palette.neutral[600])}
               >
                 <ButtonIcon icon={['fad', 'question']} />
                 SEE FAQ

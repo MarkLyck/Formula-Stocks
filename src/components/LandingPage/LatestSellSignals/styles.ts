@@ -30,7 +30,7 @@ export const TableRow = styled.tr`
 
 export const TableBody = styled.tbody`
   tr:hover {
-    background: ${(p: any) => p.theme.palette.basic[200]};
+    background: ${(p: any) => p.theme.palette.neutral[200]};
   }
 
   .percent-return.positive {

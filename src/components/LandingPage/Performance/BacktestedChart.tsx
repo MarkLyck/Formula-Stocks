@@ -117,7 +117,7 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
         <Legend color={theme.palette.primary[500]} width={40}>
           <p>{name}</p>
         </Legend>
-        <Legend color={theme.colors.black}>
+        <Legend color={theme.palette.neutral[1200]}>
           <p>{marketName}</p>
         </Legend>
       </Legends>

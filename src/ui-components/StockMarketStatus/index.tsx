@@ -15,7 +15,7 @@ const OpenIndicator = styled.div`
   height: 16px;
   width: 16px;
   background: ${(props: any) =>
-    opacify(-0.4, props.marketIsOpen ? props.theme.palette.scale.perfect : props.theme.palette.basic[500])};
+    opacify(-0.4, props.marketIsOpen ? props.theme.palette.scale.perfect : props.theme.palette.neutral[500])};
 
   border: 2px solid;
   border-color: ${(props: any) => (props.marketIsOpen ? props.theme.palette.scale.perfect : 'gray')};

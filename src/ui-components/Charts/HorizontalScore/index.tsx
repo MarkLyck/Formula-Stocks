@@ -42,7 +42,7 @@ const ChartContainer = styled.div`
   position: relative;
   width: 100%;
   margin-top: 12px;
-  // background-color: ${(props) => props.theme.palette.basic[200]};
+  // background-color: ${(props) => props.theme.palette.neutral[200]};
   border-radius: 4px;
 
   div:last-of-type {

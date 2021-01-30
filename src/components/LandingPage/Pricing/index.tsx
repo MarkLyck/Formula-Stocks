@@ -34,7 +34,7 @@ const PricingCard = styled(Card)`
   min-height: 180px;
 
   &:hover {
-    background-color: ${(p) => p.theme.palette.basic[200]};
+    background-color: ${(p) => p.theme.palette.neutral[200]};
   }
 
   @media (max-width: ${(p) => p.theme.breakpoints.medium}) {

@@ -39,7 +39,7 @@ const Grid = styled.div`
 const GridItem = styled.div`
   display: flex;
   justify-content: space-between;
-  background: ${(props: any) => props.theme.palette.basic[400]};
+  background: ${(props: any) => props.theme.palette.neutral[400]};
   padding: 12px;
   border-radius: 4px;
 `
