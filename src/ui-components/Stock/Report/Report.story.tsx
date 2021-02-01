@@ -1,6 +1,6 @@
 import React from 'react'
 import Report, { ReportType } from '~/ui-components/Stock/Report'
-import mockReport from 'src/tests/mocks/report'
+import { REPORT_MOCK } from 'src/tests/mocks'
 
 export default {
   title: 'ui components/report',
@@ -18,6 +18,6 @@ report.story = {
 }
 
 report.args = {
-  price: mockReport.price,
-  scores: mockReport.scores,
+  price: REPORT_MOCK.price,
+  scores: REPORT_MOCK.scores,
 }

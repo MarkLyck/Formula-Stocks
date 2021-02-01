@@ -6,7 +6,7 @@ import Holdings from './Holdings'
 const GUTTER_SIZE = 24
 
 const Portfolio = () => (
-  <div>
+  <>
     <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
         <WelcomeStatus />
@@ -25,7 +25,7 @@ const Portfolio = () => (
         <Holdings />
       </Col>
     </Row>
-  </div>
+  </>
 )
 
 export default Portfolio

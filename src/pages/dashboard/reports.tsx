@@ -1,8 +1,4 @@
-import React from 'react'
 import withDashboard from '~/components/Dashboard/withDashboard'
-
-const Reports = () => {
-  return <div>Reports</div>
-}
+import Reports from '~/components/Dashboard/Reports'
 
 export default withDashboard(Reports)
