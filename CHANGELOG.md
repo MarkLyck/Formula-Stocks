@@ -1,5 +1,25 @@
 # Changelog
 
+<a name="1.0.27"></a>
+## 1.0.27 (2021-02-01)
+
+### Added
+
+- ✨ AI Reports [[7b3a1d6](https://github.com/MarkLyck/formula-stocks/commit/7b3a1d6bdb92e860eb6095e82a4fb9f933960d04)]
+
+### Changed
+
+- 🔧 config lh [[20d3264](https://github.com/MarkLyck/formula-stocks/commit/20d3264313e1267ae4d59a5dea2a452228e1fc71)]
+- 🚚 rename report [[0da9e60](https://github.com/MarkLyck/formula-stocks/commit/0da9e60091e90b68d380a8723ab1036e9bca9b12)]
+- 🚚 rename report [[89b88ff](https://github.com/MarkLyck/formula-stocks/commit/89b88ff6395535b0f1224152bba2d7532c5c9011)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.27 [[1c5f98d](https://github.com/MarkLyck/formula-stocks/commit/1c5f98d2cffa69b3809c078b98c5b49c8ef736cd)]
+-  Merge pull request [#47](https://github.com/MarkLyck/formula-stocks/issues/47) from MarkLyck/reports [[a72ce9c](https://github.com/MarkLyck/formula-stocks/commit/a72ce9cb8ac643a58e450c5f376f2918bc70073f)]
+- 📝 generated changelog [[3e64b83](https://github.com/MarkLyck/formula-stocks/commit/3e64b83d060a6424c80ccabd2f4a9e25f1878602)]
+
+
 <a name="1.0.26"></a>
 ## 1.0.26 (2021-01-30)
 
