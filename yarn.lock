@@ -166,10 +166,10 @@
     "@antv/util" "~2.0.3"
     tslib "^1.10.0"
 
-"@antv/data-set@0.11.7":
-  version "0.11.7"
-  resolved "https://registry.yarnpkg.com/@antv/data-set/-/data-set-0.11.7.tgz#a0effbcf8a51dc8af4c03cc1d19f9bc6dbae057a"
-  integrity sha512-TP62M4ZGda/6dhz+XvmsghMSpkrmRLsLiRFfPfYQVM9+QZAzvGisVayj9x0xMSBBwDwjKE69LeDTFFMQJlTnog==
+"@antv/data-set@0.11.8":
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/@antv/data-set/-/data-set-0.11.8.tgz#7413e900624863d5a5f3b46841fd009fc4f2a4ff"
+  integrity sha512-8/YDsfk4wNQdo/J9tfmzOuo9Y5nl0mB+sSZO+tEZsHFLUhMrioJGBMPkuW51Pn0zcVZPNivuMBi2sQKYCpCeew==
   dependencies:
     "@antv/hierarchy" "^0.6.0"
     "@antv/util" "^2.0.0"
