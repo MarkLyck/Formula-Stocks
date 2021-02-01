@@ -91,6 +91,7 @@ import {
   faQuestion as faQuestionDuo,
   faUser as faUserDuo,
   faUserTie,
+  faTachometerAlt as faTachometerAltDuo,
   faTimesOctagon as faTimesOctagonDuo,
 } from '@fortawesome/pro-duotone-svg-icons'
 
@@ -171,6 +172,7 @@ library.add(
   faSignOutAlt,
   faSpinnerThird,
   faTags,
+  faTachometerAltDuo,
   faTagsReg,
   faTimes,
   faTimesOctagonDuo,

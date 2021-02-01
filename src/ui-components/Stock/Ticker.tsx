@@ -6,6 +6,7 @@ import copy from 'copy-to-clipboard'
 const { Text } = Typography
 
 export const Container = styled.div`
+  display: inline-block;
   background: ${(p: any) => p.theme.palette.neutral[300]};
   color: ${(p: any) => p.theme.palette.text[500]};
   font-size: 14px;

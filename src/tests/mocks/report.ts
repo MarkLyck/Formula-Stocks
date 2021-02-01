@@ -1,4 +1,4 @@
-export const scoresMock = {
+export const AI_SCORES_MOCK = {
   ai_growth: -0.7213,
   ai_profitability: 0.142857,
   ai_reward: 0.92,
@@ -9,15 +9,13 @@ export const scoresMock = {
   ai_value: 0.818182,
 }
 
-export const reportMock = {
+export const REPORT_MOCK = {
   aIScore: 0.96,
   date: '2020-05-12T00:00:00.000Z',
   industry: 'Motor Vehicles',
   name: 'Honda Motor Company Ltd.',
   price: 23.97,
-  scores: scoresMock,
+  scores: AI_SCORES_MOCK,
   sector: 'Consumer Durables',
   ticker: 'TST',
 }
-
-export default reportMock
