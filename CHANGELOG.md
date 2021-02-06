@@ -1,5 +1,79 @@
 # Changelog
 
+<a name="1.0.33"></a>
+## 1.0.33 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.33 [[f9eb854](https://github.com/MarkLyck/formula-stocks/commit/f9eb85446aa80260130a910ecdd23a8068b1463e)]
+
+
+<a name="1.0.32"></a>
+## 1.0.32 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.32 [[263560b](https://github.com/MarkLyck/formula-stocks/commit/263560b9caeb945358d74dbc4af1ba2158b304f8)]
+
+
+<a name="1.0.31"></a>
+## 1.0.31 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.31 [[7cb7913](https://github.com/MarkLyck/formula-stocks/commit/7cb79137db93f5fbb1b47d235295339165ee19ec)]
+
+
+<a name="1.0.30"></a>
+## 1.0.30 (2021-02-06)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.12.2 [[c3828bf](https://github.com/MarkLyck/formula-stocks/commit/c3828bf5cff1a15b1a3bb204dd73ec3ec38f71a8)]
+- ⬆️ Update dependency @types/node to v14.14.25 [[04b01b0](https://github.com/MarkLyck/formula-stocks/commit/04b01b0af234a83eddeb550cadec1fba49e74a39)]
+- ⬆️ Update dependency framer-motion to v3.3.0 [[554e420](https://github.com/MarkLyck/formula-stocks/commit/554e420340b544c6e5c6d511abd6bf1489bc1da9)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.30 [[5481c2b](https://github.com/MarkLyck/formula-stocks/commit/5481c2b32e784eb894cd73e369bc300494b7d3b4)]
+-  Merge pull request [#54](https://github.com/MarkLyck/formula-stocks/issues/54) from MarkLyck/renovate/antd-4.x [[e01a79e](https://github.com/MarkLyck/formula-stocks/commit/e01a79e56f9a479333c9ece0d02fbf1e18fe85b6)]
+-  Merge pull request [#57](https://github.com/MarkLyck/formula-stocks/issues/57) from MarkLyck/renovate/framer-motion-3.x [[8ee1b4e](https://github.com/MarkLyck/formula-stocks/commit/8ee1b4ee9ed7005f86eadf19916c64ff30b860ca)]
+-  Merge pull request [#58](https://github.com/MarkLyck/formula-stocks/issues/58) from MarkLyck/renovate/node-14.x [[5faf47d](https://github.com/MarkLyck/formula-stocks/commit/5faf47df94ae0e9d50eea00ff1965b880448643c)]
+
+
+<a name="1.0.29"></a>
+## 1.0.29 (2021-02-06)
+
+### Changed
+
+- ⬆️ Update emotion monorepo to v11.1.5 [[00a3a2f](https://github.com/MarkLyck/formula-stocks/commit/00a3a2fbad113ab150bd604e551d87a36b305115)]
+- ⬆️ Update dependency msw to v0.26.1 [[a547697](https://github.com/MarkLyck/formula-stocks/commit/a547697f26d8963f4d48e31e9b6b57fe3fe4469e)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.29 [[7d1cbd4](https://github.com/MarkLyck/formula-stocks/commit/7d1cbd4cd16396a3153e75abeaaf331052fed4c6)]
+-  Merge pull request [#61](https://github.com/MarkLyck/formula-stocks/issues/61) from MarkLyck/renovate/emotion-monorepo [[2824a70](https://github.com/MarkLyck/formula-stocks/commit/2824a7079148a06a3495f50feefd61f98b945f5a)]
+-  Merge pull request [#53](https://github.com/MarkLyck/formula-stocks/issues/53) from MarkLyck/renovate/msw-0.x [[26469e1](https://github.com/MarkLyck/formula-stocks/commit/26469e1643934ce6189ca7b41d6cd8fce4241085)]
+
+
+<a name="1.0.28"></a>
+## 1.0.28 (2021-02-06)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.1.17 [[f11cbdd](https://github.com/MarkLyck/formula-stocks/commit/f11cbddeee69f8ca1ba97cf1bcec28742903fca2)]
+- ⬆️ Pin dependency storybook-addon-apollo-client to 4.0.6 [[83cd152](https://github.com/MarkLyck/formula-stocks/commit/83cd152d69248131cee2074552af1a880675912e)]
+- ⬆️ Update dependency ahooks to v2.9.6 [[96fa01c](https://github.com/MarkLyck/formula-stocks/commit/96fa01cb5d860755ce9d9c2991f781c715a29e5c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.28 [[cd5c50d](https://github.com/MarkLyck/formula-stocks/commit/cd5c50d29cc3f532ca6f695b4f6b50e358cab8f7)]
+-  Merge pull request [#51](https://github.com/MarkLyck/formula-stocks/issues/51) from MarkLyck/renovate/storybook-monorepo [[ece8e97](https://github.com/MarkLyck/formula-stocks/commit/ece8e977300569e163ce710d0ce80346da6b5d07)]
+-  Merge pull request [#49](https://github.com/MarkLyck/formula-stocks/issues/49) from MarkLyck/renovate/ahooks-2.x [[464d9a6](https://github.com/MarkLyck/formula-stocks/commit/464d9a618e564d50d5282756d94c9ee20e9b4a32)]
+-  Merge pull request [#48](https://github.com/MarkLyck/formula-stocks/issues/48) from MarkLyck/renovate/pin-dependencies [[ad983a7](https://github.com/MarkLyck/formula-stocks/commit/ad983a7352b938883d00edfe54daed860d4cc99a)]
+- 📝 generated changelog [[17fd004](https://github.com/MarkLyck/formula-stocks/commit/17fd004f43cd4b5571a9cae9166ab2b92b3e62cd)]
+
+
 <a name="1.0.27"></a>
 ## 1.0.27 (2021-02-01)
 
