@@ -1,5 +1,30 @@
 # Changelog
 
+<a name="1.0.41"></a>
+## 1.0.41 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.41 [[dfc4309](https://github.com/MarkLyck/formula-stocks/commit/dfc4309821032944eef592327f54fc4600ec5cde)]
+
+
+<a name="1.0.40"></a>
+## 1.0.40 (2021-02-06)
+
+### Changed
+
+- ⬆️ Update dependency @antv/g2 to v4.1.10 [[b53de34](https://github.com/MarkLyck/formula-stocks/commit/b53de34c59008d01cfca38189bc26a9a283befdf)]
+- 🔧 disabble chromatic for portfolio page [[a8014cb](https://github.com/MarkLyck/formula-stocks/commit/a8014cb028cb48089e95773fe115c522564e5359)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.40 [[ffea41e](https://github.com/MarkLyck/formula-stocks/commit/ffea41e28971a04b1038c9ce6d26a63fb32d3b8d)]
+- 📝 generated changelog [[c9e1c8d](https://github.com/MarkLyck/formula-stocks/commit/c9e1c8d36858cb58947e166544be19168010c301)]
+-  Merge pull request [#56](https://github.com/MarkLyck/formula-stocks/issues/56) from MarkLyck/renovate/antv-g2-4.x [[67d32f8](https://github.com/MarkLyck/formula-stocks/commit/67d32f84ef2765464075202a481c6a5fcee23194)]
+-  Merge pull request [#63](https://github.com/MarkLyck/formula-stocks/issues/63) from MarkLyck/cleanup2 [[507760f](https://github.com/MarkLyck/formula-stocks/commit/507760f321bef3bbad8debc80611e912212629a2)]
+- 🗑️ cleanup code [[1fef6a1](https://github.com/MarkLyck/formula-stocks/commit/1fef6a14c40c54504f71f48d258d162731b9b3e0)]
+
+
 <a name="1.0.39"></a>
 ## 1.0.39 (2021-02-06)
 
