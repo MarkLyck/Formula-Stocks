@@ -6699,11 +6699,6 @@ find-versions@^4.0.0:
   dependencies:
     semver-regex "^3.1.2"
 
-flagsmith@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/flagsmith/-/flagsmith-1.2.1.tgz#16f9c0d9b4ded26510dc4ffeb132130bda5575a7"
-  integrity sha512-kGSxE8z4isk3jQoRu4MUFrYsB5HhP/I0flihmareOpF8jKLCmWsbMoBXgXtbUBQBcrPCcH9c9N+XOcIeGMsrcA==
-
 flush-write-stream@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/flush-write-stream/-/flush-write-stream-1.1.1.tgz#8dd7d873a1babc207d94ead0c2e0e44276ebf2e8"
