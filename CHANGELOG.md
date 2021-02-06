@@ -1,5 +1,53 @@
 # Changelog
 
+<a name="1.0.37"></a>
+## 1.0.37 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.37 [[cd2eb01](https://github.com/MarkLyck/formula-stocks/commit/cd2eb01dc4893b023cf6b6a9219f60d314f7be15)]
+
+
+<a name="1.0.36"></a>
+## 1.0.36 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.36 [[bb44863](https://github.com/MarkLyck/formula-stocks/commit/bb44863a32379ebd329185c38fdbf550f3368bd7)]
+
+
+<a name="1.0.35"></a>
+## 1.0.35 (2021-02-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.35 [[29b01ff](https://github.com/MarkLyck/formula-stocks/commit/29b01ffb8693909be6ccd8c6e4e3ee53aa83551f)]
+
+
+<a name="1.0.34"></a>
+## 1.0.34 (2021-02-06)
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.1 [[387d8d9](https://github.com/MarkLyck/formula-stocks/commit/387d8d98979df0a9ab5bc333d8f7865166d98916)]
+- ⬆️ Update dependency jotai to v0.14.0 [[80cd963](https://github.com/MarkLyck/formula-stocks/commit/80cd96365cba2d04ccac9bd6ee24ca266be86cc8)]
+- ⬆️ Update dependency react-lazyload to v3.1.1 [[f922c54](https://github.com/MarkLyck/formula-stocks/commit/f922c54ffd066f86cc0f046e9b58ac3fbba4ab57)]
+
+### Removed
+
+- 🔥 remove flagsmith [[d574583](https://github.com/MarkLyck/formula-stocks/commit/d574583ac3e65e16bff11d9f38c9ef36d4e20186)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.34 [[05ebe3d](https://github.com/MarkLyck/formula-stocks/commit/05ebe3d212621feb6731532532194b5bf1dd2555)]
+- 📝 generated changelog [[2e93909](https://github.com/MarkLyck/formula-stocks/commit/2e939093f3a2794a00f037864e1d76ef8d00995c)]
+-  Merge pull request [#62](https://github.com/MarkLyck/formula-stocks/issues/62) from MarkLyck/remove-flagsmith [[2492ce0](https://github.com/MarkLyck/formula-stocks/commit/2492ce0d6310d02e8f3b342005c3463ecfb10d0e)]
+-  Merge pull request [#59](https://github.com/MarkLyck/formula-stocks/issues/59) from MarkLyck/renovate/react-lazyload-3.x [[0a699dc](https://github.com/MarkLyck/formula-stocks/commit/0a699dcdd86b9e6c2eff8e720af5a4cb3e36f058)]
+-  Merge pull request [#55](https://github.com/MarkLyck/formula-stocks/issues/55) from MarkLyck/renovate/react-17.x [[0b49f91](https://github.com/MarkLyck/formula-stocks/commit/0b49f918dc781da398a35fa80f7ca2d9ff8433e8)]
+-  Merge pull request [#45](https://github.com/MarkLyck/formula-stocks/issues/45) from MarkLyck/renovate/jotai-0.x [[448a0b9](https://github.com/MarkLyck/formula-stocks/commit/448a0b9c6284d9d4cd06f810cfe6a811a06787f0)]
+-  Merge branch &#x27;main&#x27; into remove-flagsmith [[5bd3176](https://github.com/MarkLyck/formula-stocks/commit/5bd3176c572fc17007299e201490559108437a65)]
+
+
 <a name="1.0.33"></a>
 ## 1.0.33 (2021-02-06)
 
