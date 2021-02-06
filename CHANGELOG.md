@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.39"></a>
+## 1.0.39 (2021-02-06)
+
+### Changed
+
+- ⬆️ Update dependency @antv/data-set to v0.11.8 [[a3b0d6f](https://github.com/MarkLyck/formula-stocks/commit/a3b0d6fc6e87246d0e55d23c99d1863f62525ea0)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.39 [[fd48404](https://github.com/MarkLyck/formula-stocks/commit/fd48404e146ec3029011da76736638d6e03932e1)]
+- 📝 generated changelog [[cc627f6](https://github.com/MarkLyck/formula-stocks/commit/cc627f67ed038fe9a2a5e6d352b6771ff0ed424c)]
+-  Merge pull request [#46](https://github.com/MarkLyck/formula-stocks/issues/46) from MarkLyck/renovate/antv-data-set-0.x [[c82f9a3](https://github.com/MarkLyck/formula-stocks/commit/c82f9a337589932ebdd1914c943391b1ae43b7db)]
+
+
 <a name="1.0.38"></a>
 ## 1.0.38 (2021-02-06)
 
