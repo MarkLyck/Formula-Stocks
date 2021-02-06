@@ -57,6 +57,8 @@ export default {
 
 export const portfolio_page = () => <Portfolio />
 portfolio_page.parameters = {
+  // disables Chromatic on a story level
+  chromatic: { disable: true },
   apolloClient: {
     mocks,
   },
