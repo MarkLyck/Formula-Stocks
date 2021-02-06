@@ -1,8 +1,4 @@
-import React from 'react'
 import withDashboard from '~/components/Dashboard/withDashboard'
-
-const Trades = () => {
-  return <div>trades</div>
-}
+import Trades from '~/components/Dashboard/Trades'
 
 export default withDashboard(Trades)
