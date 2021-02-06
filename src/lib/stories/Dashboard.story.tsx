@@ -1,6 +1,5 @@
 import React from 'react'
 import Portfolio from '../../pages/dashboard/portfolio'
-import { MockedProvider } from '@apollo/client/testing'
 import {
   CURRENT_USER_QUERY,
   LATEST_SELL_SIGNALS,
@@ -56,8 +55,11 @@ export default {
   title: 'pages/portfolio',
 }
 
-export const portfolio_page = () => (
-  <MockedProvider mocks={mocks}>
-    <Portfolio />
-  </MockedProvider>
-)
+export const portfolio_page = () => <Portfolio />
+portfolio_page.parameters = {
+  // disables Chromatic on a story level
+  chromatic: { disable: true },
+  apolloClient: {
+    mocks,
+  },
+}

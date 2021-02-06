@@ -1,5 +1,4 @@
 import React from 'react'
-import { MockedProvider } from '@apollo/client/testing'
 import { STATISTICS } from '~/common/queries'
 import { STATISTICS_MOCK } from 'src/tests/mocks'
 import Statistics from './index'
@@ -20,8 +19,9 @@ const mocks = [
   },
 ]
 
-export const statistics = () => (
-  <MockedProvider mocks={mocks} addTypename={false}>
-    <Statistics />
-  </MockedProvider>
-)
+export const statistics = () => <Statistics />
+statistics.parameters = {
+  apolloClient: {
+    mocks,
+  },
+}

@@ -1,18 +1,6 @@
 import React from 'react'
 import Newsletter from './index'
-import { MockedProvider } from '@apollo/client/testing'
 import { CREATE_NEWSLETTER } from '~/common/queries'
-
-const mocks = [
-  {
-    request: {
-      query: CREATE_NEWSLETTER,
-    },
-    result: {
-      data: {},
-    },
-  },
-]
 
 export default {
   title: 'Landing page/newsletter',
@@ -22,24 +10,19 @@ export default {
   },
 }
 
-export const newsletter = () => (
-  <MockedProvider mocks={mocks}>
-    <Newsletter />
-  </MockedProvider>
-)
+export const newsletter = () => <Newsletter />
 
-// const errorMocks = [
-//   {
-//     request: {
-//       query: CREATE_NEWSLETTER,
-//     },
-//     data: undefined,
-//     error: new Error('An error occurred'),
-//   },
-// ]
-
-// export const newsletter_with_error = () => (
-//   <MockedProvider mocks={errorMocks}>
-//     <Newsletter />
-//   </MockedProvider>
-// )
+newsletter.parameters = {
+  apolloClient: {
+    mocks: [
+      {
+        request: {
+          query: CREATE_NEWSLETTER,
+        },
+        result: {
+          data: {},
+        },
+      },
+    ],
+  },
+}
