@@ -2,7 +2,6 @@ import React from 'react'
 import { Provider as JotaiProvider } from 'jotai'
 import { ThemeProvider } from '@emotion/react'
 import ComposeProviders from './ComposeProviders'
-import FlagProvider from './FlagProvider'
 import 'src/lib/iconLibrary'
 import theme from 'src/lib/theme'
 import 'antd/dist/antd.less'
@@ -12,7 +11,7 @@ type AppProviderProps = {
 }
 
 const AppProvider = ({ children }: AppProviderProps) => {
-  return <ComposeProviders components={[[ThemeProvider, { theme }], FlagProvider]}>{children}</ComposeProviders>
+  return <ComposeProviders components={[[ThemeProvider, { theme }]]}>{children}</ComposeProviders>
 }
 
 const Wrapper = (props: any) => (
