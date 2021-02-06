@@ -1,6 +1,5 @@
 import React from 'react'
 import LandingPage from '../../pages'
-import { MockedProvider } from '@apollo/client/testing'
 import {
   LATEST_SELL_SIGNALS,
   LAUNCH_PERFORMANCE_HISTORY,
@@ -76,8 +75,9 @@ export default {
   title: 'pages/LandingPage',
 }
 
-export const landing_page = () => (
-  <MockedProvider mocks={mocks}>
-    <LandingPage />
-  </MockedProvider>
-)
+export const landing_page = () => <LandingPage />
+landing_page.parameters = {
+  apolloClient: {
+    mocks,
+  },
+}

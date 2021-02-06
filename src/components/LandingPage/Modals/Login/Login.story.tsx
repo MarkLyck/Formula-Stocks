@@ -1,5 +1,4 @@
 import React from 'react'
-import { MockedProvider } from '@apollo/client/testing'
 import { USER_LOGIN } from '~/common/queries'
 import { USER_SIGNUP_MOCK } from '~/tests/mocks'
 import LoginModal from './index'
@@ -23,14 +22,16 @@ const mocks = [
   },
 ]
 
-export const login_modal = () => (
-  <MockedProvider mocks={mocks} addTypename={false}>
-    <LoginModal onClose={() => {}} isVisible />
-  </MockedProvider>
-)
+export const login_modal = () => <LoginModal onClose={() => {}} isVisible />
+login_modal.parameters = {
+  apolloClient: {
+    mocks,
+  },
+}
 
-export const login_form = () => (
-  <MockedProvider mocks={mocks} addTypename={false}>
-    <LoginForm />
-  </MockedProvider>
-)
+export const login_form = () => <LoginForm />
+login_form.parameters = {
+  apolloClient: {
+    mocks,
+  },
+}
