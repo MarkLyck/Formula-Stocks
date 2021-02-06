@@ -63,8 +63,8 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.1.2",
-    "@storybook/addon-essentials": "6.1.15",
-    "@storybook/react": "6.1.15",
+    "@storybook/addon-essentials": "6.1.17",
+    "@storybook/react": "6.1.17",
     "@types/lodash": "4.14.168",
     "@types/mixpanel-browser": "2.35.4",
     "@types/node": "14.14.22",
