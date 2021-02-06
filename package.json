@@ -46,7 +46,7 @@
     "lodash": "4.17.20",
     "lodash.maxby": "4.6.0",
     "mixpanel-browser": "2.41.0",
-    "msw-storybook-addon": "1.0.5",
+    "msw-storybook-addon": "1.1.0",
     "next": "latest",
     "platform": "1.3.6",
     "prop-types": "15.7.2",
