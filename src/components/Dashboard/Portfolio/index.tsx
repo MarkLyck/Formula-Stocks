@@ -12,7 +12,7 @@ const Portfolio = () => (
         <WelcomeStatus />
       </Col>
     </Row>
-    <Row gutter={[GUTTER_SIZE, GUTTER_SIZE]}>
+    <Row gutter={[GUTTER_SIZE, GUTTER_SIZE]} style={{ marginBottom: GUTTER_SIZE }}>
       <Col span={18}>
         <PortfolioChart />
       </Col>
