@@ -298,10 +298,10 @@
     probe.gl "^3.1.1"
     reflect-metadata "^0.1.13"
 
-"@antv/g2@4.1.9":
-  version "4.1.9"
-  resolved "https://registry.yarnpkg.com/@antv/g2/-/g2-4.1.9.tgz#d8f763618b4982f21f6372b82c9d3b9669c1d0db"
-  integrity sha512-EUlhGYq/yKfXE80BNXSOrTiHixCF1ikLt4OX/DCcRvkZ05AYuK31EcY6LZcHmqwuZYSgdGqMOGTaPeWuMQHDXA==
+"@antv/g2@4.1.10":
+  version "4.1.10"
+  resolved "https://registry.yarnpkg.com/@antv/g2/-/g2-4.1.10.tgz#77fe3593d2c1b00061ca931924fe8173a02bfbfd"
+  integrity sha512-9IrjUCHXwaNR7zN20ydIkrnU+Y4GBgzDp7cND9cdnPohYmAC1rN3Am1ULj4JSpkPJje7zzKiThFQmyrkZ2Iwpg==
   dependencies:
     "@antv/adjust" "^0.2.1"
     "@antv/attr" "^0.3.1"
