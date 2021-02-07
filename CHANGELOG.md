@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.43"></a>
+## 1.0.43 (2021-02-07)
+
+### Added
+
+- ✨ trades [[b27462c](https://github.com/MarkLyck/formula-stocks/commit/b27462ce01defac6c3bbaace06ac136704e8e118)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.43 [[c75bc75](https://github.com/MarkLyck/formula-stocks/commit/c75bc75e7484987e74d0a4fbe2d5bd7691b21f56)]
+-  Merge pull request [#65](https://github.com/MarkLyck/formula-stocks/issues/65) from MarkLyck/trades [[8fca93b](https://github.com/MarkLyck/formula-stocks/commit/8fca93bbf95f3bf59909cc6d6729c1d14f353dc3)]
+- 📝 generated changelog [[336fb40](https://github.com/MarkLyck/formula-stocks/commit/336fb40a6162dfba235cbce4aa8bc23b6d3ef73b)]
+
+
 <a name="1.0.42"></a>
 ## 1.0.42 (2021-02-06)
 
