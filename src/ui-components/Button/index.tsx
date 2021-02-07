@@ -6,6 +6,8 @@ import theme from '../../lib/theme'
 export * from './NavItem'
 export * from './ActionButton'
 export * from './ButtonIcon'
+export * from './RetryButton'
+export * from './SupportButton'
 
 export interface ButtonProps {
   appearance?: 'filled' | 'outline' | 'ghost'
