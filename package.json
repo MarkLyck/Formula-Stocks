@@ -60,7 +60,7 @@
     "react-scroll": "1.8.1"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "11.1.2",
+    "@emotion/babel-plugin": "11.2.0",
     "@storybook/addon-essentials": "6.1.17",
     "@storybook/react": "6.1.17",
     "@types/lodash": "4.14.168",
