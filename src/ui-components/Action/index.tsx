@@ -15,5 +15,6 @@ type ActionProps = {
 }
 
 export const Action = ({ action }: ActionProps) => {
+  // @ts-ignore
   return <Container action={action}>{action}</Container>
 }
