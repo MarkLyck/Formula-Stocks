@@ -1,5 +1,71 @@
 # Changelog
 
+<a name="1.0.49"></a>
+## 1.0.49 (2021-02-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.49 [[e42e3b6](https://github.com/MarkLyck/formula-stocks/commit/e42e3b6f29f93ec2dae73c6688a68bc5ff25fd39)]
+
+
+<a name="1.0.48"></a>
+## 1.0.48 (2021-02-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.48 [[3975bb2](https://github.com/MarkLyck/formula-stocks/commit/3975bb2b3ae3f9998cedfcbe045d723e1c005ee2)]
+
+
+<a name="1.0.47"></a>
+## 1.0.47 (2021-02-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.47 [[5d376ab](https://github.com/MarkLyck/formula-stocks/commit/5d376ab32acc48b9e2e13d1fef7c2dfec610d92f)]
+
+
+<a name="1.0.46"></a>
+## 1.0.46 (2021-02-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.46 [[25f6260](https://github.com/MarkLyck/formula-stocks/commit/25f6260d4646a71e1f52f831c5ad4af7fdd1bbf5)]
+
+
+<a name="1.0.45"></a>
+## 1.0.45 (2021-02-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.45 [[5b8d200](https://github.com/MarkLyck/formula-stocks/commit/5b8d200536f88179e9eefa637f5b60228693ec09)]
+
+
+<a name="1.0.44"></a>
+## 1.0.44 (2021-02-13)
+
+### Changed
+
+- ⬆️ Update dependency @types/react-dom to v17.0.1 [[ca9c987](https://github.com/MarkLyck/formula-stocks/commit/ca9c98779eacdbbbaed29d7793578bdc6edefef8)]
+- ⬆️ Update dependency @types/node to v14.14.27 [[71f512d](https://github.com/MarkLyck/formula-stocks/commit/71f512d54773b9bb9c1dcf968d4a2233c0508134)]
+- ⬆️ Update dependency @antv/g2 to v4.1.11 [[5e4c277](https://github.com/MarkLyck/formula-stocks/commit/5e4c2775db94b5181dc17f0334cc0e411e323a34)]
+- ⬆️ Update dependency react-lazyload to v3.2.0 [[180bae4](https://github.com/MarkLyck/formula-stocks/commit/180bae41983b65849ad3c355b39eec3f9147a967)]
+- ⬆️ Update dependency typescript to v4.1.5 [[f8cb15b](https://github.com/MarkLyck/formula-stocks/commit/f8cb15b225c104de2d74554d5d66a8b0058d03f2)]
+- ⬆️ Update dependency antd to v4.12.3 [[74d22bd](https://github.com/MarkLyck/formula-stocks/commit/74d22bd292bf57bb81ce34ddcf6c30e698fbcf49)]
+- ⬆️ Update dependency @emotion/babel-plugin to v11.2.0 [[f27b986](https://github.com/MarkLyck/formula-stocks/commit/f27b986f339a3518830db3871cd76951c852d02c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.44 [[0383fc2](https://github.com/MarkLyck/formula-stocks/commit/0383fc2256b3756dd642e56c8c3082cd3766d57f)]
+-  Merge pull request [#72](https://github.com/MarkLyck/formula-stocks/issues/72) from MarkLyck/renovate/node-14.x [[56b32d0](https://github.com/MarkLyck/formula-stocks/commit/56b32d03a9991e909b5eae3f0f3d3091473dc769)]
+-  Merge pull request [#69](https://github.com/MarkLyck/formula-stocks/issues/69) from MarkLyck/renovate/typescript-4.x [[c5b0bc6](https://github.com/MarkLyck/formula-stocks/commit/c5b0bc67e4237ee8b819bce71731c61d158e3e26)]
+-  Merge pull request [#70](https://github.com/MarkLyck/formula-stocks/issues/70) from MarkLyck/renovate/antd-4.x [[1566269](https://github.com/MarkLyck/formula-stocks/commit/15662693315ca360351357185b2dc6bc98cf0440)]
+-  Merge pull request [#71](https://github.com/MarkLyck/formula-stocks/issues/71) from MarkLyck/renovate/react-lazyload-3.x [[0f55128](https://github.com/MarkLyck/formula-stocks/commit/0f55128d87c196a73692aec3f627edb15ad206a8)]
+-  Merge pull request [#73](https://github.com/MarkLyck/formula-stocks/issues/73) from MarkLyck/renovate/antv-g2-4.x [[b943f3b](https://github.com/MarkLyck/formula-stocks/commit/b943f3bd62d4ef1a1d7c3ce7712f801836eca29e)]
+-  Merge pull request [#75](https://github.com/MarkLyck/formula-stocks/issues/75) from MarkLyck/renovate/react-dom-17.x [[0063f5d](https://github.com/MarkLyck/formula-stocks/commit/0063f5d8652c2859374f0180ae57b10170e31c93)]
+-  Merge pull request [#68](https://github.com/MarkLyck/formula-stocks/issues/68) from MarkLyck/renovate/emotion-monorepo [[220cbd4](https://github.com/MarkLyck/formula-stocks/commit/220cbd4cb1871296462bba0455499d3a08a9f2b8)]
+- 📝 generated changelog [[eee74d6](https://github.com/MarkLyck/formula-stocks/commit/eee74d6d2b447829f32e47a3b9d3a81915d6b2de)]
+
+
 <a name="1.0.43"></a>
 ## 1.0.43 (2021-02-07)
 
