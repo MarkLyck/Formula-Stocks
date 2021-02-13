@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.51"></a>
+## 1.0.51 (2021-02-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.51 [[2ebf94e](https://github.com/MarkLyck/formula-stocks/commit/2ebf94e61a871ac42d1dcbd4ad67a8d176cc9a3b)]
+
+
+<a name="1.0.50"></a>
+## 1.0.50 (2021-02-13)
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.2 [[d966bee](https://github.com/MarkLyck/formula-stocks/commit/d966bee4c77d16b7abd02dd3ddce2ae9491203c8)]
+- ⬆️ Update dependency @apollo/client to v3.3.9 [[bd157bb](https://github.com/MarkLyck/formula-stocks/commit/bd157bbfacb23bc966f8967d0bc5c832faf3883b)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.50 [[594711e](https://github.com/MarkLyck/formula-stocks/commit/594711ed89a259e8d2d353310edd43d76ec0e644)]
+- 📝 generated changelog [[1ec5396](https://github.com/MarkLyck/formula-stocks/commit/1ec53969d62723025be3a6714f021a61c988fbaa)]
+-  Merge pull request [#67](https://github.com/MarkLyck/formula-stocks/issues/67) from MarkLyck/renovate/apollo-graphql-packages [[31dc49f](https://github.com/MarkLyck/formula-stocks/commit/31dc49f3f43f5ea1ec9392e341140f7f6757ca01)]
+-  Merge pull request [#74](https://github.com/MarkLyck/formula-stocks/issues/74) from MarkLyck/renovate/react-17.x [[b05bbcf](https://github.com/MarkLyck/formula-stocks/commit/b05bbcf8d6bfe5070a393c178f7ec471e72efe90)]
+
+
 <a name="1.0.49"></a>
 ## 1.0.49 (2021-02-13)
 
