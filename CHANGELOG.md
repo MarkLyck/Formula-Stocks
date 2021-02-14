@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.52"></a>
+## 1.0.52 (2021-02-14)
+
+### Changed
+
+- ⬆️ Update dependency @apollo/client to v3.3.10 [[252de55](https://github.com/MarkLyck/formula-stocks/commit/252de5549c08bb672f42b155f0a0191bb701dfcf)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.52 [[5c9f7d8](https://github.com/MarkLyck/formula-stocks/commit/5c9f7d8e8d8db17afc6b33b4026e1b23abea92c6)]
+-  Merge pull request [#77](https://github.com/MarkLyck/formula-stocks/issues/77) from MarkLyck/renovate/apollo-graphql-packages [[de909b7](https://github.com/MarkLyck/formula-stocks/commit/de909b772291153d726c4f2936d96dc972312edb)]
+- 📝 generated changelog [[ad80192](https://github.com/MarkLyck/formula-stocks/commit/ad801929a6120dac4f195e54fc4f50af606e1fce)]
+
+
 <a name="1.0.51"></a>
 ## 1.0.51 (2021-02-13)
 
