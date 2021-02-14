@@ -1,7 +1,7 @@
 {
   "name": "with-apollo",
   "license": "MIT",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "scripts": {
     "dev": "next",
     "build": "next build",
