@@ -32,7 +32,7 @@ interface TickerType {
   ticker: string
 }
 
-const Ticker = ({ ticker }: TickerType) => {
+const Ticker = ({ ticker, ...props }: TickerType) => {
   const formattedTicker = ticker.replace('_', '.')
 
   const handleClick = () => {
@@ -41,7 +41,7 @@ const Ticker = ({ ticker }: TickerType) => {
 
   return (
     <Tooltip title={'copied'} trigger="click">
-      <Container onClick={handleClick}>
+      <Container onClick={handleClick} {...props}>
         <Text>{formattedTicker}</Text>
       </Container>
     </Tooltip>
