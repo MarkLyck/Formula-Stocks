@@ -1,10 +1,9 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-import { maxBy, minBy } from 'lodash'
+import { minBy } from 'lodash'
 const TinyArea = dynamic(() => import('@ant-design/charts').then((mod) => mod.TinyArea) as any, { ssr: false })
 
 export const TinyStockChart = ({ data }: any) => {
-  console.log('🚀 ~ file: index.tsx ~ line 6 ~ TinyStockChart ~ data', data)
   if (!Array.isArray(data) || data.length === 0) return null
 
   var config = {
@@ -17,5 +16,6 @@ export const TinyStockChart = ({ data }: any) => {
     smooth: true,
   }
 
+  // @ts-ignore
   return <TinyArea {...config} />
 }
