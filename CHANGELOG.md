@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.55"></a>
+## 1.0.55 (2021-02-15)
+
+### Changed
+
+- ⬆️ Update dependency husky to v5 [[30506be](https://github.com/MarkLyck/formula-stocks/commit/30506be900b7f5ef253412298ed024b6eb5277fd)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.55 [[2a9d679](https://github.com/MarkLyck/formula-stocks/commit/2a9d6793ff0c962d36d01d9a0f67ce15044705d2)]
+-  Merge pull request [#66](https://github.com/MarkLyck/formula-stocks/issues/66) from MarkLyck/renovate/husky-5.x [[af92ec7](https://github.com/MarkLyck/formula-stocks/commit/af92ec77b3ff2b9c12a0476397e77d0de26121bc)]
+- 📝 generated changelog [[b2e83a7](https://github.com/MarkLyck/formula-stocks/commit/b2e83a77410e265a05b7287435df8e21572a0e11)]
+
+
 <a name="1.0.54"></a>
 ## 1.0.54 (2021-02-14)
 
