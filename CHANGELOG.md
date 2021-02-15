@@ -1,5 +1,25 @@
 # Changelog
 
+<a name="1.0.56"></a>
+## 1.0.56 (2021-02-15)
+
+### Added
+
+- ✨ trades work [[2d31f3d](https://github.com/MarkLyck/formula-stocks/commit/2d31f3db989c6c7cc56370e69dad6945833970f7)]
+
+### Removed
+
+- 🔥 remove husky [[ea5be78](https://github.com/MarkLyck/formula-stocks/commit/ea5be78cc8203be76dbf2866e32fc6d2c042392c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.56 [[eec8f25](https://github.com/MarkLyck/formula-stocks/commit/eec8f259af28dda2fb3846dbe71e19d227909845)]
+- 📝 generated changelog [[b555976](https://github.com/MarkLyck/formula-stocks/commit/b555976f1187ce418742e7025881a44573100d9f)]
+-  Merge pull request [#76](https://github.com/MarkLyck/formula-stocks/issues/76) from MarkLyck/trades [[0150491](https://github.com/MarkLyck/formula-stocks/commit/015049175fccb0596ddf78afb46b15aa8bf8ac1d)]
+-  Merge branch &#x27;main&#x27; into trades [[069adff](https://github.com/MarkLyck/formula-stocks/commit/069adff96ac6405e30bf8dafca994f5aa279cc30)]
+- 🏷️ fix action type [[bfc48d2](https://github.com/MarkLyck/formula-stocks/commit/bfc48d2b45bd318c3151fca0efaaa091df43ba46)]
+
+
 <a name="1.0.55"></a>
 ## 1.0.55 (2021-02-15)
 
