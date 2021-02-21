@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.62"></a>
+## 1.0.62 (2021-02-21)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.62 [[7d32bbf](https://github.com/MarkLyck/formula-stocks/commit/7d32bbf4dd2f29ff9255d62e3f31c615f9317fa1)]
+
+
+<a name="1.0.61"></a>
+## 1.0.61 (2021-02-21)
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.14.31 [[d08e78f](https://github.com/MarkLyck/formula-stocks/commit/d08e78f5e9fd9309329b817a967824a5aa09dd50)]
+- ⬆️ Update dependency lodash to v4.17.21 [[37dd562](https://github.com/MarkLyck/formula-stocks/commit/37dd5622a7d5326c76aa945d976f6ddc7237c8a5)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.61 [[feb102b](https://github.com/MarkLyck/formula-stocks/commit/feb102b7f73aa22405dec3d4cc79f80e1176f6da)]
+-  Merge pull request [#88](https://github.com/MarkLyck/formula-stocks/issues/88) from MarkLyck/renovate/lodash-monorepo [[5bd67a7](https://github.com/MarkLyck/formula-stocks/commit/5bd67a79c655d3c18b42e7af4e16b935c5b5fd4c)]
+-  Merge pull request [#84](https://github.com/MarkLyck/formula-stocks/issues/84) from MarkLyck/renovate/node-14.x [[9725d3a](https://github.com/MarkLyck/formula-stocks/commit/9725d3ada4aa1e040ceabd619b39ac1dcf4f8e70)]
+- 📝 generated changelog [[a49ef94](https://github.com/MarkLyck/formula-stocks/commit/a49ef947bf1cbdb65f9659a655d3cbc35df25174)]
+
+
 <a name="1.0.60"></a>
 ## 1.0.60 (2021-02-21)
 
