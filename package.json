@@ -17,7 +17,7 @@
     "@ant-design/charts": "1.0.17",
     "@antv/data-set": "0.11.8",
     "@antv/g2": "4.1.11",
-    "@apollo/client": "3.3.10",
+    "@apollo/client": "3.3.11",
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.1.5",
     "@fortawesome/fontawesome-svg-core": "1.2.34",
