@@ -1,5 +1,53 @@
 # Changelog
 
+<a name="1.0.60"></a>
+## 1.0.60 (2021-02-21)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.60 [[a9fa9e3](https://github.com/MarkLyck/formula-stocks/commit/a9fa9e3f88c7b548cbcb37190bb78c85a66f6b89)]
+
+
+<a name="1.0.59"></a>
+## 1.0.59 (2021-02-21)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.59 [[7567862](https://github.com/MarkLyck/formula-stocks/commit/75678627492f14b316f88b86fa74a79b41657e06)]
+
+
+<a name="1.0.58"></a>
+## 1.0.58 (2021-02-21)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.58 [[325731e](https://github.com/MarkLyck/formula-stocks/commit/325731ed69c35151aafdfae9bfbcd65554ccbba9)]
+
+
+<a name="1.0.57"></a>
+## 1.0.57 (2021-02-21)
+
+### Changed
+
+- ⬆️ Update dependency jotai to v0.14.4 [[2d70d2f](https://github.com/MarkLyck/formula-stocks/commit/2d70d2fed1743a3c08ad7c9a80bf1aec11af1fee)]
+- ⬆️ Update dependency date-fns-tz to v1.1.2 [[20e3baa](https://github.com/MarkLyck/formula-stocks/commit/20e3baa26421f039ac285463fc7c76dda095e2c5)]
+- ⬆️ Update dependency framer-motion to v3.6.2 [[c226856](https://github.com/MarkLyck/formula-stocks/commit/c2268567571ff5d0f7e2a645113814a14bffce70)]
+- ⬆️ Update dependency @ant-design/charts to v1.0.18 [[960ef30](https://github.com/MarkLyck/formula-stocks/commit/960ef3074cd5ec453e82a3034e41e512d3e159d3)]
+- ⬆️ Update dependency @types/mixpanel-browser to v2.35.6 [[cc75ab1](https://github.com/MarkLyck/formula-stocks/commit/cc75ab1c913756ef93c1299b04416251c4e827a1)]
+- ⬆️ Update dependency @apollo/client to v3.3.11 [[0a98fd9](https://github.com/MarkLyck/formula-stocks/commit/0a98fd9777dd59b5bc5779e720fc56ea8730c4ba)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.57 [[2bb07df](https://github.com/MarkLyck/formula-stocks/commit/2bb07df8854d7113bfe3afa490f0101aaf779c12)]
+-  Merge pull request [#87](https://github.com/MarkLyck/formula-stocks/issues/87) from MarkLyck/renovate/date-fns-tz-1.x [[12ff0d3](https://github.com/MarkLyck/formula-stocks/commit/12ff0d355036217bed91a445204c12315ac3639d)]
+-  Merge pull request [#85](https://github.com/MarkLyck/formula-stocks/issues/85) from MarkLyck/renovate/ant-design-charts-1.x [[503124b](https://github.com/MarkLyck/formula-stocks/commit/503124ba3aa3c340dccd5fb664f1aef96b0532eb)]
+-  Merge pull request [#83](https://github.com/MarkLyck/formula-stocks/issues/83) from MarkLyck/renovate/framer-motion-3.x [[6116fae](https://github.com/MarkLyck/formula-stocks/commit/6116fae98f4e31ae829e6aa0f9954f0fc41fbc4e)]
+-  Merge pull request [#82](https://github.com/MarkLyck/formula-stocks/issues/82) from MarkLyck/renovate/mixpanel-browser-2.x [[b951ba8](https://github.com/MarkLyck/formula-stocks/commit/b951ba8876555b4a3059ab418e896d34d8ae8100)]
+-  Merge pull request [#81](https://github.com/MarkLyck/formula-stocks/issues/81) from MarkLyck/renovate/apollo-graphql-packages [[eb47641](https://github.com/MarkLyck/formula-stocks/commit/eb47641ab576a71b9947b6e9066ef53f3c00fce3)]
+-  Merge pull request [#80](https://github.com/MarkLyck/formula-stocks/issues/80) from MarkLyck/renovate/jotai-0.x [[62a6682](https://github.com/MarkLyck/formula-stocks/commit/62a6682c9150b97517174543f738a2931d373c3a)]
+- 📝 generated changelog [[0fe1647](https://github.com/MarkLyck/formula-stocks/commit/0fe1647b29f22806008c6e880e30659874225ed6)]
+
+
 <a name="1.0.56"></a>
 ## 1.0.56 (2021-02-15)
 
