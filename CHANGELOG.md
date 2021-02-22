@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.65"></a>
+## 1.0.65 (2021-02-22)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v3.6.7 [[15fa063](https://github.com/MarkLyck/formula-stocks/commit/15fa063ec05b1569e1cbe57bd6f9d151ffd0a2b5)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.65 [[16ff5ba](https://github.com/MarkLyck/formula-stocks/commit/16ff5ba00bce7a79f9dca3bb45ce908d885f6d81)]
+- 📝 generated changelog [[be983e9](https://github.com/MarkLyck/formula-stocks/commit/be983e9e90e21356bb23f02603351f8fb42e6949)]
+-  Merge pull request [#93](https://github.com/MarkLyck/formula-stocks/issues/93) from MarkLyck/renovate/framer-motion-3.x [[c8b352c](https://github.com/MarkLyck/formula-stocks/commit/c8b352ccfb7191a77904d78e5604fd9bb5182c8c)]
+
+
 <a name="1.0.64"></a>
 ## 1.0.64 (2021-02-22)
 
