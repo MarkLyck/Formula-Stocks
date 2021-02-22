@@ -16,6 +16,7 @@ const Allocation = () => {
 
   return (
     <div style={{ height: 200 }}>
+      {/* @ts-ignore */}
       <DonutChart data={chartData} isLoading={loading} />
     </div>
   )

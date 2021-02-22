@@ -16,7 +16,6 @@ let colorIndex = 0
 const generateColor = (item: DataValueType, numberOfItems: number, theme: any) => {
   let color = transparentize((numberOfItems - colorIndex) / numberOfItems, theme.palette.primary[700])
   if (item.title === 'CASH') color = theme.palette.success[600]
-  console.log((numberOfItems - colorIndex) / numberOfItems)
   colorIndex -= 1
 
   return color

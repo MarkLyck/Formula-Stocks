@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Legends, Legend } from '~/ui-components/Charts/Legends'
 import { currencyRoundedFormatter } from '~/common/utils/formatters'
 import theme from '~/lib/theme'
-import { AreaChart } from '~/ui-components'
+import { AreaChartOld } from '~/ui-components'
 import { GraphContainer, ChartLoaderContainer } from './styles'
 
 interface LaunchChartType {
@@ -121,7 +121,7 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
           <p>{marketName}</p>
         </Legend>
       </Legends>
-      <AreaChart id={id} data={chartData} scale={scale} axis={axis} />
+      <AreaChartOld id={id} data={chartData} scale={scale} axis={axis} />
     </GraphContainer>
   )
 }

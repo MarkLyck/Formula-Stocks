@@ -1,8 +1,8 @@
 import React from 'react'
+import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Legends, Legend } from '~/ui-components/Charts/Legends'
-import { decimalNumberFormatter } from '~/common/utils/formatters'
 import theme from '~/lib/theme'
 import { AreaChart } from '~/ui-components'
 import { GraphContainer, ChartLoaderContainer } from './styles'
@@ -16,20 +16,34 @@ interface LaunchChartType {
   id: string
 }
 
-const createChartData = (planPerformance: any, marketPrices: any) => {
-  const startValue = planPerformance[0].balance
-  const marketStartValue = marketPrices.length ? Number(marketPrices[0].price) : 0
+let lastPlanDate = new Date()
 
-  return planPerformance.map((point: any, i: number) => {
-    const balance = (((planPerformance[i].balance - startValue) / startValue) * 100).toFixed(2)
-    const marketBalance = marketPrices[i]
-      ? (((Number(marketPrices[i].price) - marketStartValue) / marketStartValue) * 100).toFixed(2)
-      : (((Number(marketPrices[marketPrices.length - 1].price) - marketStartValue) / marketStartValue) * 100).toFixed(2)
+const createPlanData = (data: any[]) => {
+  const startValue = data[0].balance
+
+  lastPlanDate = dayjs(data[data.length - 1].date).endOf('day')
+
+  return data.map((point: any, i: number) => {
+    const balance = (((data[i].balance - startValue) / startValue) * 100).toFixed(2)
 
     return {
-      market: Number(marketBalance),
-      fs: Number(balance),
-      date: point.date,
+      value: Number(balance),
+      type: 'Formula Stocks',
+      date: dayjs(point.date).startOf('day').toDate(),
+    }
+  })
+}
+
+const createMarketData = (data: any[]) => {
+  const marketStartValue = data.length ? Number(data[0].price) : 0
+
+  return data.map((point: any, i: number) => {
+    const balance = (((data[i].price - marketStartValue) / marketStartValue) * 100).toFixed(2)
+
+    return {
+      value: Number(balance),
+      type: 'DJIA',
+      date: dayjs(new Date(point.date)).startOf('day').toDate(),
     }
   })
 }
@@ -44,58 +58,37 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
     )
   }
 
-  const chartData = createChartData(planPerformance, marketPrices)
+  const planData: any[] = createPlanData(planPerformance)
+  const marketData: any[] = createMarketData(marketPrices).filter((point) => dayjs(point.date).isBefore(lastPlanDate))
+  const chartData = [...planData, ...marketData]
 
-  const max = Math.ceil(maxBy(chartData, (point: any) => point.fs).fs)
+  const max = Math.ceil(maxBy(chartData, (point: any) => point.value).value)
 
-  const scale = {
-    market: {
-      min: -50,
-      max,
-      alias: 'DJIA',
-      formatter: (value: number) => `${value > 0 ? '+' : ''}${decimalNumberFormatter.format(value)}%`,
-      range: [0, 0.96],
-    },
-    fs: {
-      min: -50,
-      max,
-      alias: 'Weekly Stocktip',
-      tickCount: 10,
-      formatter: (value: number) => `${value > 0 ? '+' : ''}${decimalNumberFormatter.format(value)}%`,
-      range: [0, 0.96],
-    },
-    date: {
-      type: 'time',
-      alias: 'date',
-      mask: 'MMM YYYY',
-    },
-  }
-
-  const axis = [
-    { name: 'market', config: false },
-    {
-      name: 'fs',
-      config: {
-        grid: {
-          line: {
-            style: {
-              stroke: '#000',
-              strokeOpacity: 0.05,
-            },
-          },
-        },
-        label: {
-          offset: -8,
-          formatter: (text: string) => text.replace('+', '').split('.')[0] + '%',
-          style: {
-            fontSize: 14,
-            fontWeight: 'normal',
-            fill: theme.palette.neutral[1100],
-          },
-        },
-      },
-    },
-  ]
+  // const axis = [
+  //   { name: 'market', config: false },
+  //   {
+  //     name: 'fs',
+  //     config: {
+  //       grid: {
+  //         line: {
+  //           style: {
+  //             stroke: '#000',
+  //             strokeOpacity: 0.05,
+  //           },
+  //         },
+  //       },
+  //       label: {
+  //         offset: -8,
+  //         formatter: (text: string) => text.replace('+', '').split('.')[0] + '%',
+  //         style: {
+  //           fontSize: 14,
+  //           fontWeight: 'normal',
+  //           fill: theme.palette.neutral[1100],
+  //         },
+  //       },
+  //     },
+  //   },
+  // ]
 
   return (
     <GraphContainer>
@@ -109,7 +102,7 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
           <p>{marketName}</p>
         </Legend>
       </Legends>
-      <AreaChart id={id} data={chartData} scale={scale} axis={axis} />
+      <AreaChart data={chartData} max={max} min={0} />
     </GraphContainer>
   )
 }
