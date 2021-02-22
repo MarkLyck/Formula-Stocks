@@ -13,8 +13,8 @@ const Marker = styled.div`
   height: 16px;
   width: 16px;
   border-radius: 4px;
-  border: 2px solid ${(p) => p.color};
-  background-color: ${(p: any) => transparentize(0.6, p.color)};
+  border: 2px solid ${(p: { color: string }) => p.color};
+  background-color: ${(p: { color: string }) => transparentize(0.6, p.color)};
   margin-right: 4px;
 `
 
@@ -45,7 +45,7 @@ const Tooltip = (title: string, items: any[]) => (
             <Marker color={color} />
             <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
               <Type color={color}>{name}:</Type>
-              <Value color={color}>
+              <Value>
                 {value >= 0 ? '+' : ''}
                 {decimalNumberFormatter.format(value)}%
               </Value>

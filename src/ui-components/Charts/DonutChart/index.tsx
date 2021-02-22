@@ -10,6 +10,7 @@ type DataValueType = {
 
 type DonutChartProps = {
   data: DataValueType[]
+  isLoading?: boolean
 }
 
 let colorIndex = 0

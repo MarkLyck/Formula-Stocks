@@ -21,6 +21,7 @@ let lastPlanDate = new Date()
 const createPlanData = (data: any[]) => {
   const startValue = data[0].balance
 
+  // @ts-ignore
   lastPlanDate = dayjs(data[data.length - 1].date).endOf('day')
 
   return data.map((point: any, i: number) => {
@@ -48,7 +49,7 @@ const createMarketData = (data: any[]) => {
   })
 }
 
-const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, name, id }: LaunchChartType) => {
+const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, name }: LaunchChartType) => {
   if (isLoading) {
     return (
       <ChartLoaderContainer>
@@ -63,32 +64,6 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
   const chartData = [...planData, ...marketData]
 
   const max = Math.ceil(maxBy(chartData, (point: any) => point.value).value)
-
-  // const axis = [
-  //   { name: 'market', config: false },
-  //   {
-  //     name: 'fs',
-  //     config: {
-  //       grid: {
-  //         line: {
-  //           style: {
-  //             stroke: '#000',
-  //             strokeOpacity: 0.05,
-  //           },
-  //         },
-  //       },
-  //       label: {
-  //         offset: -8,
-  //         formatter: (text: string) => text.replace('+', '').split('.')[0] + '%',
-  //         style: {
-  //           fontSize: 14,
-  //           fontWeight: 'normal',
-  //           fill: theme.palette.neutral[1100],
-  //         },
-  //       },
-  //     },
-  //   },
-  // ]
 
   return (
     <GraphContainer>
