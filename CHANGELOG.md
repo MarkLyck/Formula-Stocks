@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.64"></a>
+## 1.0.64 (2021-02-22)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.64 [[37be156](https://github.com/MarkLyck/formula-stocks/commit/37be156f29cbc88484f7560d5dd927cfbe91a143)]
+
+
+<a name="1.0.63"></a>
+## 1.0.63 (2021-02-22)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v3.6.6 [[f5b1983](https://github.com/MarkLyck/formula-stocks/commit/f5b19836c4175dfd1132c3c921924649db9b5003)]
+- ⬆️ Update dependency jotai to v0.14.5 [[a36fa0f](https://github.com/MarkLyck/formula-stocks/commit/a36fa0f54da9ad76ee74831e44f519ad6d039eb8)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.63 [[3f62c16](https://github.com/MarkLyck/formula-stocks/commit/3f62c16262a545b05b0dddc724e61530bce0f054)]
+-  Merge pull request [#91](https://github.com/MarkLyck/formula-stocks/issues/91) from MarkLyck/renovate/framer-motion-3.x [[2e50e2a](https://github.com/MarkLyck/formula-stocks/commit/2e50e2aee4ce13f5c8504d74d2185ef59d0dcb02)]
+-  Merge pull request [#89](https://github.com/MarkLyck/formula-stocks/issues/89) from MarkLyck/renovate/jotai-0.x [[0ed4d48](https://github.com/MarkLyck/formula-stocks/commit/0ed4d48b6b0798473cee8c3bf82119e7f37db7bf)]
+- 📝 generated changelog [[cae1f96](https://github.com/MarkLyck/formula-stocks/commit/cae1f96a08c75ad8fa0cc34ba960873563cca085)]
+
+
 <a name="1.0.62"></a>
 ## 1.0.62 (2021-02-21)
 
