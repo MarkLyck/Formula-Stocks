@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import { useTheme } from '@emotion/react'
-// import { decimalNumberFormatter } from '~/common/utils/formatters'
+import Tooltip from './Tooltip'
 
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 
@@ -16,7 +16,7 @@ type AreaChartProps = {
   min: number
 }
 
-const AreaChart = ({ data, height = 680, max, min }: AreaChartProps) => {
+const AreaChart = ({ data, height = 600, max, min }: AreaChartProps) => {
   const theme = useTheme()
 
   const config = {
@@ -30,6 +30,9 @@ const AreaChart = ({ data, height = 680, max, min }: AreaChartProps) => {
     isStack: false,
     legend: false,
     areaStyle: { fillOpacity: 0.5 },
+    tooltip: {
+      customContent: Tooltip,
+    },
     xField: 'date',
     xAxis: {
       nice: false,

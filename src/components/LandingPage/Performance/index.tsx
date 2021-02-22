@@ -104,7 +104,7 @@ const Performance = () => {
       <>
         <ScalingTitle>Performance</ScalingTitle>
         <StyledTabs defaultActiveKey="1" onChange={switchChartType}>
-          <Tabs.TabPane tab="2009 - 2020 Live Performance" key="1">
+          <Tabs.TabPane tab={`2009 - ${new Date().getFullYear()} Live Performance`} key="1">
             <ScalingSubTitle>
               Growth since our 2009 launch, compared to the Dow Jones Industrial Average.
             </ScalingSubTitle>
@@ -133,7 +133,7 @@ const Performance = () => {
               </Button>
             </ButtonContainer>
           </Tabs.TabPane>
-          <Tabs.TabPane tab="1970 - 2020 Backtested Performance" key="2">
+          <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="2">
             <ScalingSubTitle>
               Backtested Logarithmic Chart showing how <b>$25,000</b> would have grown since 1970
             </ScalingSubTitle>
