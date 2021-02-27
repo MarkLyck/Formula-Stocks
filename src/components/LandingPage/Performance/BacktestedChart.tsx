@@ -1,52 +1,70 @@
 import React from 'react'
+import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Legends, Legend } from '~/ui-components/Charts/Legends'
-import { currencyRoundedFormatter } from '~/common/utils/formatters'
+import { currencyFormatter, currencyRoundedFormatter } from 'src/common/utils/formatters'
 import theme from '~/lib/theme'
-import { AreaChartOld } from '~/ui-components'
+import { AreaChart } from '~/ui-components'
 import { GraphContainer, ChartLoaderContainer } from './styles'
 
 interface LaunchChartType {
   isLoading: boolean
+  error: any
   planPerformance: any
   marketPrices: any
   marketName: string
   name: string
-  id: string
 }
 
-const createChartData = (planPerformance: any, marketPrices: any) => {
-  const startingValue = 25000
-  let lastMarketBalance = startingValue
-  return planPerformance.map((point: any, i: number) => {
-    let balance = startingValue
-    let marketBalance = startingValue
+let lastPlanDate = new Date()
+const createPlanData = (data: any[]) => {
+  // @ts-ignore
+  lastPlanDate = dayjs(data[data.length - 1].date).endOf('day')
 
-    let marketPercentIncrease = 0
-    if (marketPrices[i]) {
-      marketPercentIncrease = (marketPrices[i].price - marketPrices[0].price) / marketPrices[0].price
-    }
-
-    if (planPerformance[i] && i !== 0) {
-      balance = planPerformance[i].balance
-    }
-    if (marketPrices[i] && marketPrices[i].price) {
-      marketBalance = startingValue + Math.floor(marketPercentIncrease * startingValue)
-      lastMarketBalance = marketBalance
-    } else if (i !== 0 && planPerformance[i - 1] !== startingValue) {
-      marketBalance = lastMarketBalance
-    }
+  return data.map((point: any, i: number) => {
+    const balance = data[i].balance
 
     return {
-      market: Number(marketBalance) || 0,
-      fs: Number(balance),
-      date: point.date,
+      value: Number(balance),
+      type: 'Formula Stocks (Backtested)',
+      date: dayjs(point.date).startOf('day').toDate(),
+    }
+  })
+}
+const createMarketData = (data: any[]) => {
+  const marketStartValue = data[0]?.price || 1
+  const startValue = 25000
+
+  return data.map((point: any, i: number) => {
+    const percentIncrease = (data[i].price - marketStartValue) / marketStartValue
+
+    return {
+      value: Number(startValue + Math.floor(percentIncrease * startValue)),
+      type: 'S&P500',
+      date: dayjs(new Date(point.date)).startOf('day').toDate(),
     }
   })
 }
 
-const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, name, id }: LaunchChartType) => {
+const dollarFormatterRounded = (value: number) => currencyRoundedFormatter.format(value)
+
+const BacktestedHistoryChart = ({
+  isLoading,
+  error,
+  planPerformance,
+  marketPrices,
+  marketName,
+  name,
+}: LaunchChartType) => {
+  if (error) {
+    return (
+      <ChartLoaderContainer>
+        <FontAwesomeIcon icon={['fad', 'exclamation-triangle']} size="4x" />
+        <p>Error loading chart</p>
+      </ChartLoaderContainer>
+    )
+  }
   if (isLoading) {
     return (
       <ChartLoaderContainer>
@@ -56,58 +74,11 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
     )
   }
 
-  const chartData = createChartData(planPerformance, marketPrices)
+  const planData: any[] = createPlanData(planPerformance)
+  const marketData: any[] = createMarketData(marketPrices).filter((point) => dayjs(point.date).isBefore(lastPlanDate))
+  const chartData = [...planData, ...marketData]
 
-  const max = Math.ceil(maxBy(chartData, (point: any) => point.fs).fs)
-
-  const scale = {
-    market: {
-      type: 'log',
-      min: 10000,
-      max,
-      alias: 'S&P 500',
-      formatter: (value: number) => currencyRoundedFormatter.format(value),
-      range: [0, 1.1],
-    },
-    fs: {
-      type: 'log',
-      min: 10000,
-      max,
-      alias: 'Weekly Stocktip (Backtested)',
-      tickCount: 5,
-      formatter: (value: number) => currencyRoundedFormatter.format(value),
-      range: [0, 1.1],
-    },
-    date: {
-      type: 'time',
-      alias: 'date',
-      mask: 'MMM YYYY',
-    },
-  }
-
-  const axis = [
-    { name: 'market', config: false },
-    {
-      name: 'fs',
-      config: {
-        grid: {
-          line: {
-            style: {
-              stroke: '#000',
-              strokeOpacity: 0.05,
-            },
-          },
-        },
-        label: {
-          offset: -8,
-          style: {
-            fontSize: 14,
-            fontWeight: 500,
-          },
-        },
-      },
-    },
-  ]
+  const max = Math.ceil(maxBy(chartData, (point: any) => point.value).value)
 
   return (
     <GraphContainer>
@@ -121,9 +92,17 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
           <p>{marketName}</p>
         </Legend>
       </Legends>
-      <AreaChartOld id={id} data={chartData} scale={scale} axis={axis} />
+      <AreaChart
+        data={chartData}
+        max={max}
+        min={15000}
+        dateMask="YYYY"
+        labelFormatter={dollarFormatterRounded}
+        tooltipValueFormatter={dollarFormatterRounded}
+        log
+      />
     </GraphContainer>
   )
 }
 
-export default LaunchChart
+export default BacktestedHistoryChart

@@ -14,9 +14,24 @@ type AreaChartProps = {
   height?: number
   max: number
   min: number
+  dateMask?: string
+  yTickSpace?: number
+  log?: boolean
+  labelFormatter: (value: number) => string
+  tooltipValueFormatter: (value: number) => string
 }
 
-const AreaChart = ({ data, height = 600, max, min }: AreaChartProps) => {
+const AreaChart = ({
+  data,
+  height = 600,
+  max,
+  min,
+  dateMask = 'MMM YYYY',
+  yTickSpace,
+  log,
+  labelFormatter,
+  tooltipValueFormatter,
+}: AreaChartProps) => {
   const theme = useTheme()
 
   const config = {
@@ -31,13 +46,13 @@ const AreaChart = ({ data, height = 600, max, min }: AreaChartProps) => {
     legend: false,
     areaStyle: { fillOpacity: 0.5 },
     tooltip: {
-      customContent: Tooltip,
+      customContent: (title: string, items: any[]) => Tooltip(title, items, tooltipValueFormatter),
     },
     xField: 'date',
     xAxis: {
       nice: false,
       type: 'time',
-      mask: 'MMM YYYY',
+      mask: dateMask,
       label: {
         style: {
           fontWeight: 'bold',
@@ -46,22 +61,31 @@ const AreaChart = ({ data, height = 600, max, min }: AreaChartProps) => {
         offset: -8,
       },
     },
+    meta: log
+      ? {
+          value: {
+            type: 'log',
+          },
+        }
+      : undefined,
     yField: 'value',
     yAxis: {
       max: max,
       maxLimit: max,
       min,
       minLimit: min,
-      tickMethod: () => {
-        let ticks = []
-        for (var i = 0; i <= max; i += 100) {
-          ticks.push(i)
-        }
+      tickMethod: yTickSpace
+        ? () => {
+            let ticks = []
+            for (var i = 0; i <= max; i += yTickSpace) {
+              ticks.push(i)
+            }
 
-        ticks.push(ticks[ticks.length - 1] + 100)
+            ticks.push(ticks[ticks.length - 1] + yTickSpace)
 
-        return ticks
-      },
+            return ticks
+          }
+        : undefined,
       grid: {
         line: {
           style: {
@@ -71,7 +95,7 @@ const AreaChart = ({ data, height = 600, max, min }: AreaChartProps) => {
         },
       },
       label: {
-        formatter: (text: string) => `${text}%`,
+        formatter: labelFormatter,
         offset: -8,
       },
     },

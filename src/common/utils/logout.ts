@@ -6,7 +6,6 @@ import Router from 'next/router'
 export const logout = (event?: any, to?: string) => {
   if (event?.preventDefault) event.preventDefault()
 
-  console.log('LOGOUT')
   // @ts-ignore
   if (isBrowser) window.authToken = undefined
 

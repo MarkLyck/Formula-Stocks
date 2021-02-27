@@ -9,11 +9,11 @@ import { GraphContainer, ChartLoaderContainer } from './styles'
 
 interface LaunchChartType {
   isLoading: boolean
+  error?: any
   planPerformance: any
   marketPrices: any
   marketName: string
   name: string
-  id: string
 }
 
 let lastPlanDate = new Date()
@@ -49,7 +49,17 @@ const createMarketData = (data: any[]) => {
   })
 }
 
-const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, name }: LaunchChartType) => {
+const percentFormatter = (value: number) => `${value}%`
+
+const LaunchChart = ({ isLoading, error, planPerformance, marketPrices, marketName, name }: LaunchChartType) => {
+  if (error) {
+    return (
+      <ChartLoaderContainer>
+        <FontAwesomeIcon icon={['fad', 'exclamation-triangle']} size="4x" />
+        <p>Error loading chart</p>
+      </ChartLoaderContainer>
+    )
+  }
   if (isLoading) {
     return (
       <ChartLoaderContainer>
@@ -77,7 +87,14 @@ const LaunchChart = ({ isLoading, planPerformance, marketPrices, marketName, nam
           <p>{marketName}</p>
         </Legend>
       </Legends>
-      <AreaChart data={chartData} max={max} min={0} />
+      <AreaChart
+        data={chartData}
+        max={max}
+        min={0}
+        yTickSpace={100}
+        labelFormatter={percentFormatter}
+        tooltipValueFormatter={(value: number) => `${value > 0 ? '+' : ''}${value}%`}
+      />
     </GraphContainer>
   )
 }

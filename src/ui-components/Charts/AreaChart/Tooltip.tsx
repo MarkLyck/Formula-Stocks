@@ -29,7 +29,11 @@ const Type = styled(Text)`
   font-weight: 500;
 `
 
-const Tooltip = (title: string, items: any[]) => (
+const Tooltip = (
+  title: string,
+  items: any[],
+  tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
+) => (
   <Container>
     <Text style={{ fontWeight: 500 }}>{title}</Text>
     <ul style={{ paddingLeft: 0 }}>
@@ -45,10 +49,7 @@ const Tooltip = (title: string, items: any[]) => (
             <Marker color={color} />
             <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
               <Type color={color}>{name}:</Type>
-              <Value>
-                {value >= 0 ? '+' : ''}
-                {decimalNumberFormatter.format(value)}%
-              </Value>
+              <Value>{tooltipValueFormatter(value)}</Value>
             </span>
           </li>
         )

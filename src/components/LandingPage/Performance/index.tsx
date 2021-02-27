@@ -77,11 +77,11 @@ const Performance = () => {
   const theme = useTheme()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
-  const { data: planData, loading: planLoading } = useQuery(Query, {
+  const { data: planData, loading: planLoading, error: planError } = useQuery(Query, {
     // client: FSApolloClient,
   })
 
-  const { data: marketData, loading: marketLoading } = useQuery(MARKET_PRICE_HISTORY, {
+  const { data: marketData } = useQuery(MARKET_PRICE_HISTORY, {
     variables: {
       marketType: chartType === 'launch' ? 'DJIA' : 'SP500',
       fromDate: chartType === 'launch' ? '2009-01-30' : '1970-01-30',
@@ -110,10 +110,10 @@ const Performance = () => {
             </ScalingSubTitle>
             {chartType === 'launch' ? (
               <LaunchChart
-                id={`single-launch-performance-graph`}
                 name={COMPANY_NAME}
                 marketName="DJIA"
-                isLoading={!planPerformance.length || !marketPrices.length}
+                isLoading={planLoading}
+                error={planError}
                 planPerformance={planPerformance}
                 marketPrices={marketPrices}
               />
@@ -139,10 +139,9 @@ const Performance = () => {
             </ScalingSubTitle>
             {chartType === 'backtested' ? (
               <BacktestedChart
-                id={`single-backtested-performance-graph`}
                 name={`${COMPANY_NAME} (backtested)`}
                 marketName="S&P 500"
-                isLoading={planLoading || marketLoading || !planPerformance.length || !marketPrices.length}
+                isLoading={planLoading}
                 planPerformance={planPerformance}
                 marketPrices={marketPrices}
               />
