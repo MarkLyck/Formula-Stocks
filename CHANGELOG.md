@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.67"></a>
+## 1.0.67 (2021-02-27)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.1.20 [[a3ca4f2](https://github.com/MarkLyck/formula-stocks/commit/a3ca4f26d3e14c71035855139c57f53c142458c8)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.67 [[dd646c6](https://github.com/MarkLyck/formula-stocks/commit/dd646c611715958a120e7b11a68c7265d53012ec)]
+-  Merge pull request [#95](https://github.com/MarkLyck/formula-stocks/issues/95) from MarkLyck/renovate/storybook-monorepo [[2e4a8df](https://github.com/MarkLyck/formula-stocks/commit/2e4a8dffdca8dc76533e228ff6b923fcca998208)]
+
+
+<a name="1.0.66"></a>
+## 1.0.66 (2021-02-27)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v3.7.0 [[64d133c](https://github.com/MarkLyck/formula-stocks/commit/64d133c32198ce901c6722f8fd7ca7af66d85c9d)]
+- ⬆️ Update dependency jotai to v0.15.0 [[e8d8d98](https://github.com/MarkLyck/formula-stocks/commit/e8d8d985affe8493f193cf796991644e15d646b9)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.66 [[d81bcd7](https://github.com/MarkLyck/formula-stocks/commit/d81bcd7a16cfe0ad61f59e58a813c23bd1a0b72e)]
+-  Merge pull request [#96](https://github.com/MarkLyck/formula-stocks/issues/96) from MarkLyck/renovate/jotai-0.x [[81d3a6f](https://github.com/MarkLyck/formula-stocks/commit/81d3a6fc05b62895dacdba59c56bb7147fb2a622)]
+-  Merge pull request [#98](https://github.com/MarkLyck/formula-stocks/issues/98) from MarkLyck/renovate/framer-motion-3.x [[1f7a043](https://github.com/MarkLyck/formula-stocks/commit/1f7a04308f60938d1416d2ea2750f95cb1fc9f73)]
+- 📝 generated changelog [[4c8d346](https://github.com/MarkLyck/formula-stocks/commit/4c8d346732748b120ece0e5272d4395aeb5f98ce)]
+
+
 <a name="1.0.65"></a>
 ## 1.0.65 (2021-02-22)
 
