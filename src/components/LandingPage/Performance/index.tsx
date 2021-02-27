@@ -142,6 +142,7 @@ const Performance = () => {
                 name={`${COMPANY_NAME} (backtested)`}
                 marketName="S&P 500"
                 isLoading={planLoading}
+                error={planError}
                 planPerformance={planPerformance}
                 marketPrices={marketPrices}
               />

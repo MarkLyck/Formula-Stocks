@@ -3,12 +3,12 @@ import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Legends, Legend } from '~/ui-components/Charts/Legends'
-import { currencyFormatter, currencyRoundedFormatter } from 'src/common/utils/formatters'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 import theme from '~/lib/theme'
 import { AreaChart } from '~/ui-components'
 import { GraphContainer, ChartLoaderContainer } from './styles'
 
-interface LaunchChartType {
+interface BacktestedChartType {
   isLoading: boolean
   error: any
   planPerformance: any
@@ -56,7 +56,7 @@ const BacktestedHistoryChart = ({
   marketPrices,
   marketName,
   name,
-}: LaunchChartType) => {
+}: BacktestedChartType) => {
   if (error) {
     return (
       <ChartLoaderContainer>

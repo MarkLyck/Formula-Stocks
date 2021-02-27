@@ -10,7 +10,7 @@ interface SignupModalProps {
 
 const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   const [page, setPage] = useState(1)
-  const [accountInfo, setAccountInfo] = useState(null)
+  const [, setAccountInfo] = useState(null)
 
   const handleAccountInfoSubmit = (values: any) => {
     setAccountInfo(values)

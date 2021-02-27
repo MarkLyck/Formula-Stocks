@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { Typography } from 'antd'
 import { transparentize } from 'polished'
-import { decimalNumberFormatter } from '~/common/utils/formatters'
 
 const { Text } = Typography
 
