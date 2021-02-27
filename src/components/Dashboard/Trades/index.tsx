@@ -13,8 +13,6 @@ const Trades = () => {
 
   if (error) return 'error'
 
-  console.log('🚀 ~ file: index.tsx ~ line 8 ~ Trades ~ data', data)
-
   return (
     <List loading={loading} grid={{ gutter: 16, column: 1 }} dataSource={data?.signalsList?.items} renderItem={Trade} />
   )

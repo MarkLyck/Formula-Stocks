@@ -24,7 +24,7 @@ module.exports = {
         'errors-in-console': 'off',
         'external-anchors-use-rel-noopener': 'off',
         'first-contentful-paint': ['error', { minScore: 0.2 }],
-        'first-cpu-idle': ['error', { minScore: 0.3 }],
+        'first-cpu-idle': ['error', { minScore: 0.1 }],
         'first-meaningful-paint': ['error', { minScore: 0.2 }],
         'heading-order': 'off',
         'html-has-lang': 'off',

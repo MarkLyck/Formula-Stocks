@@ -5,12 +5,13 @@ export const GraphContainer = styled.div`
   position: relative;
   width: calc(100% - 32px);
   margin: 8px 0px 16px;
-  height: 480px;
+  height: 600px;
   border-radius: 8px;
-  box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
+  box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   .portfolio-legends {
     z-index: 10;

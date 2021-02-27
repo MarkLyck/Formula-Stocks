@@ -56,8 +56,6 @@ const LoginForm = () => {
   const [success, setSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
-  console.log('success', success)
-
   const handleLogin = ({ email, password }: { email: string; password: string }) => {
     if (!validateEmail(email)) {
       setErrorMessage('Email is invalid')
@@ -112,8 +110,6 @@ const LoginForm = () => {
             errorText = 'Please try again'
           }
         }
-
-        console.log('errorText', errorText)
 
         setErrorMessage(errorText)
       })

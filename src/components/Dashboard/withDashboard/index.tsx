@@ -9,16 +9,12 @@ import { useAtom, userAtom } from 'src/atoms'
 import Layout from './Layout'
 
 const withDashboard = (Component: React.ReactNode) => () => {
-  const [user, setUser] = useAtom(userAtom)
-  const { loading, data, error } = useQuery(CURRENT_USER_QUERY, { fetchPolicy: 'cache-and-network' })
+  const [, setUser] = useAtom(userAtom)
+  const { data } = useQuery(CURRENT_USER_QUERY, { fetchPolicy: 'cache-and-network' })
 
   useEffect(() => {
     setUser(data?.user)
   }, [data])
-
-  console.log('loading', loading)
-  console.log('loading', error)
-  console.log('user', user)
 
   return (
     <Layout>

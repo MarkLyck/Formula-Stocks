@@ -1,224 +1,112 @@
-import React, { useEffect, useState } from 'react'
-import styled from '@emotion/styled'
-import { format } from 'date-fns'
-import theme from '~/lib/theme'
-import withCharts from '../withCharts'
+import dynamic from 'next/dynamic'
+import { useTheme } from '@emotion/react'
+import Tooltip from './Tooltip'
 
-const ChartContainer = styled.div`
-  width: 100%;
-  .g2-tooltip-title {
-    display: none;
-  }
+const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 
-  .chart-tooltip {
-    font-weight: 500;
-    font-size: 0.9rem;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .tooltip-label {
-    font-weight: 500;
-    font-size: 0.9rem;
-  }
-
-  .tooltip-value {
-    font-weight: bold
-    font-size: 1rem;
-  }
-
-  .weeklystocktip {
-    color: ${(p) => p.theme.palette.primary[600]};
-  }
-  .market {
-    color: ${(p) => p.theme.palette.neutral[1100]};
-  }
-
-  .g2-tooltip-name {
-    font-size: 0.9rem;
-  }
-
-  .g2-tooltip-value {
-    font-weight: 500;
-    font-size: 0.9rem;
-  }
-
-  .g2-tooltip-value.positive {
-    color: ${(p) => p.theme.palette.scale.perfect};
-  }
-  .g2-tooltip-value.negative {
-    color: ${(p) => p.theme.palette.scale.worst};
-  }
-`
-
-export interface AreaChartType {
-  id: string
-  data: any[]
+type DataType = {
+  value: number
+  type: string
+  date: Date
+}
+type AreaChartProps = {
+  data: DataType[]
   height?: number
-  scale: any
-  axis: any[]
-  chartLibraryLoaded?: boolean
-  G2?: any
+  max: number
+  min: number
+  dateMask?: string
+  yTickSpace?: number
+  log?: boolean
+  labelFormatter: (value: number) => string
+  tooltipValueFormatter: (value: number) => string
 }
 
-const renderChart = ({ G2, id, data, height = 400, scale, axis }: AreaChartType) => {
-  const chart = new G2.Chart({
-    container: id,
-    autoFit: true,
-    padding: [0, 0, 0, 0],
-    height,
-  })
+const AreaChart = ({
+  data,
+  height = 600,
+  max,
+  min,
+  dateMask = 'MMM YYYY',
+  yTickSpace,
+  log,
+  labelFormatter,
+  tooltipValueFormatter,
+}: AreaChartProps) => {
+  const theme = useTheme()
 
-  chart.data(data)
-
-  chart.scale(scale)
-
-  axis.forEach((axis: any) => {
-    chart.axis(axis.name, axis.config)
-  })
-
-  chart.axis('date', {
-    grid: {
-      line: {
+  const config = {
+    data,
+    nice: false,
+    padding: [8, 0, 0, 0],
+    style: {
+      width: '100%',
+      height,
+    },
+    isStack: false,
+    legend: false,
+    areaStyle: { fillOpacity: 0.5 },
+    tooltip: {
+      customContent: (title: string, items: any[]) => Tooltip(title, items, tooltipValueFormatter),
+    },
+    xField: 'date',
+    xAxis: {
+      nice: false,
+      type: 'time',
+      mask: dateMask,
+      label: {
         style: {
-          stroke: '#000',
-          strokeOpacity: 0.05,
+          fontWeight: 'bold',
+          fill: 'black',
         },
+        offset: -8,
       },
     },
-    label: {
-      offset: -12,
-      formatter: (text: string) => text.split(' ')[1],
-      style: {
-        fontWeight: 'bold',
-        fill: 'black', // can't make white because of: https://github.com/antvis/G2/issues/2567
-        fontSize: 12,
-      },
-    },
-  })
-
-  chart.tooltip({
-    shared: false,
-    showCrosshairs: true,
-    showTitle: false,
-    itemTpl: `
-    <li class="chart-tooltip">
-      <p class="tooltip-label {className}">{name}</p>
-      <p class="tooltip-value">{value}</p>
-    </li>`,
-    crosshairs: {
-      type: 'x',
-      follow: true,
-
-      // @ts-ignore
-      text: (type: string, defaultText: any) => {
-        if (type === 'x') {
-          return {
-            offset: -20,
-            position: 'end',
-            content: format(new Date(defaultText), 'MMM yyyy'),
-            style: {
-              textAlign: 'center',
-              textBaseline: 'top',
-              fontSize: 12,
-              fontWeight: '400',
-              fill: theme.palette.neutral[100],
-            },
-          }
+    meta: log
+      ? {
+          value: {
+            type: 'log',
+          },
         }
-      },
-      textBackground: {
-        padding: [2, 4],
-        style: {
-          padding: 8,
-          fill: theme.palette.neutral[1200],
-          opacity: 1,
-          lineJoin: 'round',
-          stroke: '#000',
-          lineWidth: 4,
+      : undefined,
+    yField: 'value',
+    yAxis: {
+      max: max,
+      maxLimit: max,
+      min,
+      minLimit: min,
+      tickMethod: yTickSpace
+        ? () => {
+            let ticks = []
+            for (var i = 0; i <= max; i += yTickSpace) {
+              ticks.push(i)
+            }
+
+            ticks.push(ticks[ticks.length - 1] + yTickSpace)
+
+            return ticks
+          }
+        : undefined,
+      grid: {
+        line: {
+          style: {
+            stroke: 'black',
+            strokeOpacity: 0.05,
+          },
         },
       },
+      label: {
+        formatter: labelFormatter,
+        offset: -8,
+      },
     },
-  })
+    seriesField: 'type',
+    color: [theme.palette.primary[600], theme.palette.neutral[1000]],
+  }
 
-  chart.legend(false)
-
-  chart
-    .line()
-    .position('date*fs')
-    .color(theme.palette.primary[600])
-    .tooltip('date*fs', (_date: any, fs: any) => ({
-      value: scale.fs.formatter(fs),
-      className: 'weeklystocktip',
-      name: scale.fs.alias,
-    }))
-  chart
-    .area({
-      startOnZero: false,
-    })
-    .position('date*fs')
-    .color(theme.palette.primary[600])
-    .style({
-      fillOpacity: 0.4,
-    })
-    .tooltip('date*fs', (_date: any, fs: any) => ({
-      value: scale.fs.formatter(fs),
-      className: 'weeklystocktip',
-      name: scale.fs.alias,
-    }))
-
-  chart
-    .line()
-    .position('date*market')
-    .color(theme.palette.neutral[800])
-    .tooltip('date*market', (_date: any, market: any) => ({
-      value: scale.fs.formatter(market),
-      className: 'market',
-      name: scale.market.alias,
-    }))
-  chart
-    .area({
-      startOnZero: false,
-    })
-    .position('date*market')
-    .color(theme.palette.neutral[1100])
-    .style({
-      fillOpacity: 0.4,
-    })
-    .tooltip('date*market', (_date: any, market: any) => ({
-      value: scale.fs.formatter(market),
-      className: 'market',
-      name: scale.market.alias,
-    }))
-
-  chart.render()
+  return (
+    // @ts-ignore
+    <Area {...config} />
+  )
 }
 
-const AreaChart = ({ G2, chartLibraryLoaded, id, data, ...rest }: AreaChartType) => {
-  const [rendered, setRendered] = useState(false)
-  let chartInstance: any
-
-  useEffect(() => {
-    if (chartInstance) {
-      chartInstance.destroy()
-    }
-    if (!rendered && chartLibraryLoaded) {
-      // @ts-ignore
-      renderChart({ G2, chartInstance, id, data, ...rest })
-      setRendered(true)
-    }
-
-    return () => {
-      if (chartInstance) {
-        chartInstance.destroy()
-      }
-    }
-  }, [data, chartLibraryLoaded])
-
-  if (!chartLibraryLoaded) return null
-
-  return <ChartContainer id={id} />
-}
-
-export default React.memo(withCharts(AreaChart))
+export default AreaChart

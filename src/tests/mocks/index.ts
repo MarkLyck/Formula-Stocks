@@ -8,6 +8,8 @@ export * from './prices/sixMonthsPrices'
 export * from './latestSellSignals'
 
 export * from './LAUNCH_PERFORMANCE_HISTORY'
+export * from './BACKTESTED_HISTORY'
+export * from './MARKET_PRICES_HISTORY_SINCE_1970'
 export * from './MARKET_PRICE_HISTORY'
 export * from './STATISTICS'
 export * from './STATISTICS_SINCE_LAUNCH'

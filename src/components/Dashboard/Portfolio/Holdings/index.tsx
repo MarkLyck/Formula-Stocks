@@ -18,7 +18,7 @@ const Holdings = () => {
 
   return (
     <Container>
-      <Table loading={loading} columns={columns} dataSource={holdings} pagination={false} />
+      <Table loading={loading} columns={columns} dataSource={holdings} pagination={false} rowKey="ticker" />
     </Container>
   )
 }
