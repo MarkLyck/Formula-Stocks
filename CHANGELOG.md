@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.70"></a>
+## 1.0.70 (2021-02-27)
+
+### Changed
+
+- ⬆️ Pin dependency dayjs to 1.10.4 [[7625d3f](https://github.com/MarkLyck/formula-stocks/commit/7625d3fe9fd43f6d62aa23fc71438b261cfbc824)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.70 [[7aa6df8](https://github.com/MarkLyck/formula-stocks/commit/7aa6df87a26564200ca144e936de53cce19184d1)]
+- 📝 generated changelog [[578dbfb](https://github.com/MarkLyck/formula-stocks/commit/578dbfb6b6d79a4c7ad9b4baa9c1f263c9f2b5b4)]
+-  Merge pull request [#103](https://github.com/MarkLyck/formula-stocks/issues/103) from MarkLyck/renovate/pin-dependencies [[99b6cd0](https://github.com/MarkLyck/formula-stocks/commit/99b6cd0bfb1c98a229be259fa14710a7eb3ed2d1)]
+
+
 <a name="1.0.69"></a>
 ## 1.0.69 (2021-02-27)
 
