@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.69"></a>
+## 1.0.69 (2021-02-27)
+
+### Added
+
+- ✨ area chart fully functional [[2a273c5](https://github.com/MarkLyck/formula-stocks/commit/2a273c51ecf33cde47e0e5a17de48dae78fdc16d)]
+- ✨ chart tooltip [[16779ec](https://github.com/MarkLyck/formula-stocks/commit/16779ec14a169046c672d66cdb39cd404642b495)]
+- ✨ launch chart functional [[b4ff51e](https://github.com/MarkLyck/formula-stocks/commit/b4ff51e21d29ceeb066ffdfc7000747ce1ceede6)]
+- ✨ allocation donut chart [[cfdf0e8](https://github.com/MarkLyck/formula-stocks/commit/cfdf0e8b6224699560b0234975f2b78bb7aeb3f8)]
+
+### Changed
+
+- 🔧 config lighthouse [[801c531](https://github.com/MarkLyck/formula-stocks/commit/801c531fc23a2b58b52cb27e1041cfa7332d57be)]
+
+### Removed
+
+- 🔥 remove AreaChartOld [[bb37320](https://github.com/MarkLyck/formula-stocks/commit/bb373209c0655939fdd0dd4669eeef66a55f6565)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.69 [[2517e0f](https://github.com/MarkLyck/formula-stocks/commit/2517e0f65575b577663b87d01510cdd8a1c7f447)]
+- 📝 generated changelog [[b3a7991](https://github.com/MarkLyck/formula-stocks/commit/b3a79915e6fc2cd861a1e5bd53b2846aa4321245)]
+-  Merge pull request [#90](https://github.com/MarkLyck/formula-stocks/issues/90) from MarkLyck/portfolio-donut-chart [[329c1cb](https://github.com/MarkLyck/formula-stocks/commit/329c1cbbe3c82ee9a34d6d22653f4a67043e3b55)]
+- 🏷️ fix types [[cc8a104](https://github.com/MarkLyck/formula-stocks/commit/cc8a1042ab6de1eb47edb41f29b2c5a0e31c75fa)]
+- 🏷️ fix unused variable [[9968662](https://github.com/MarkLyck/formula-stocks/commit/99686624313d611ac51062171ec6725893d98fdd)]
+-  Merge branch &#x27;main&#x27; into portfolio-donut-chart [[0485a16](https://github.com/MarkLyck/formula-stocks/commit/0485a16ea43b11dc09cfaf16ea22bdbc77d6a451)]
+- 🏷️ fix types [[b4a4abd](https://github.com/MarkLyck/formula-stocks/commit/b4a4abd7bb417fedd8d95ca82d6b6b0a8d4529a7)]
+
+
 <a name="1.0.68"></a>
 ## 1.0.68 (2021-02-27)
 
