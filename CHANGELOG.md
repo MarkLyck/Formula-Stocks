@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.74"></a>
+## 1.0.74 (2021-02-28)
+
+### Changed
+
+- 📱 responsive side menu [[e639672](https://github.com/MarkLyck/formula-stocks/commit/e6396723fa1d0b05ccde6919e4e371c24c179cb3)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.74 [[21d781d](https://github.com/MarkLyck/formula-stocks/commit/21d781dadab9033604aee79ddaa786a2c39957dd)]
+- 📝 generated changelog [[c847d66](https://github.com/MarkLyck/formula-stocks/commit/c847d66be1481d13fb1823458d2844f22c4151d6)]
+-  Merge pull request [#114](https://github.com/MarkLyck/formula-stocks/issues/114) from MarkLyck/side-menu [[680132d](https://github.com/MarkLyck/formula-stocks/commit/680132d72c6d8ffa9c29db1046e058f0d96e5665)]
+
+
 <a name="1.0.73"></a>
 ## 1.0.73 (2021-02-28)
 
