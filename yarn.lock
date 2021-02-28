@@ -3059,6 +3059,11 @@
   resolved "https://registry.yarnpkg.com/@ungap/global-this/-/global-this-0.4.3.tgz#44cb668b03e7c4bc88cb6e6f9329d381131878ee"
   integrity sha512-MuHEpDBurNVeD6mV9xBcAN2wfTwuaFQhHuhWkJuXmyVJ5P5sBCw+nnFpdfb0tAvgWkfefWCsAoAsh7MTUr3LPg==
 
+"@w11r/use-breakpoint@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@w11r/use-breakpoint/-/use-breakpoint-1.8.0.tgz#55a9d7fd4ed6b55ca1e694dbefadc6e75c52915c"
+  integrity sha512-q4ZxtHUZnjZ0Rrs1b5uWjds/Zih2UvOe7zbIXiDi7/4I3688uNpAm/8x7MCbYzHmM8/fPOPEWNgpY3mbUDHmPQ==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

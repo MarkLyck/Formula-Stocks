@@ -111,9 +111,10 @@ const menuList = [
 export type SideMenuProps = {
   collapsed?: boolean
   setCollapsed: () => void
+  onLinkClick: () => void
 }
 
-const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
+const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
   const router = useRouter()
   const activeItem =
     menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route || '/dashboard/portfolio'
@@ -147,7 +148,7 @@ const SideMenu = ({ collapsed, setCollapsed }: SideMenuProps) => {
 
             return (
               // @ts-ignore icon string
-              <Menu.Item key={item.route} icon={<MenuIcon icon={item.icon} />}>
+              <Menu.Item onClick={onLinkClick} key={item.route} icon={<MenuIcon icon={item.icon} />}>
                 {/* @ts-ignore item.route will exist */}
                 <Link href={item.route}>
                   <a>{item.label}</a>
