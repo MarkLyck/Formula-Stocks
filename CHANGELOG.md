@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.71"></a>
+## 1.0.71 (2021-02-28)
+
+### Changed
+
+- ⬆️ Update dependency gitmoji-cli to v3.3.0 [[5a9f1c2](https://github.com/MarkLyck/formula-stocks/commit/5a9f1c274a94f3f2481365fa6dfd897e9b62f586)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.71 [[0c8a85a](https://github.com/MarkLyck/formula-stocks/commit/0c8a85a600abf7cf5d16787699a93105033e76ef)]
+-  Merge pull request [#105](https://github.com/MarkLyck/formula-stocks/issues/105) from MarkLyck/renovate/gitmoji-cli-3.x [[1983784](https://github.com/MarkLyck/formula-stocks/commit/1983784315aa9245a29047ced6b4294e4398eff3)]
+- 📝 generated changelog [[09e403f](https://github.com/MarkLyck/formula-stocks/commit/09e403fbf085ac173859fa349819fd38ac19bd47)]
+
+
 <a name="1.0.70"></a>
 ## 1.0.70 (2021-02-27)
 
