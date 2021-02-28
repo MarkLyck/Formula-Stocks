@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.73"></a>
+## 1.0.73 (2021-02-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.73 [[8e47d56](https://github.com/MarkLyck/formula-stocks/commit/8e47d56897e5f0dd010cd74066686e83b8e413e6)]
+
+
+<a name="1.0.72"></a>
+## 1.0.72 (2021-02-28)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.13.0 [[8960431](https://github.com/MarkLyck/formula-stocks/commit/8960431097bbbb67943fe37962a5b331a2e5270f)]
+- ⬆️ Update dependency typescript to v4.2.2 [[44ef6b9](https://github.com/MarkLyck/formula-stocks/commit/44ef6b9ee58fc365c2a5bd0b2919b4d86e4edcc2)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.72 [[ebe4e8c](https://github.com/MarkLyck/formula-stocks/commit/ebe4e8c7023f5b43258e6c66237c92b3ad29669e)]
+- 📝 generated changelog [[dae40da](https://github.com/MarkLyck/formula-stocks/commit/dae40da294bec6548800e1d02817baf92e8ec64f)]
+-  Merge pull request [#97](https://github.com/MarkLyck/formula-stocks/issues/97) from MarkLyck/renovate/typescript-4.x [[9d686b0](https://github.com/MarkLyck/formula-stocks/commit/9d686b0b1fd9c9bb00204c13477723f18c65d18c)]
+-  Merge pull request [#104](https://github.com/MarkLyck/formula-stocks/issues/104) from MarkLyck/renovate/antd-4.x [[3195a3c](https://github.com/MarkLyck/formula-stocks/commit/3195a3cac99ed9e856369fdab028e4a28144742b)]
+
+
 <a name="1.0.71"></a>
 ## 1.0.71 (2021-02-28)
 
