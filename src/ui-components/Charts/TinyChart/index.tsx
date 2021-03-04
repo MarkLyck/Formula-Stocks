@@ -10,7 +10,7 @@ export const TinyStockChart = ({ data, height = 60 }: any) => {
     height,
     autoFit: true,
     tooltip: {
-      customContent: (index: string, points: [any]) => {
+      customContent: (_: string, points: [any]) => {
         const value = points[0]?.value
         return `$${value ? Number(value).toFixed(2) : ''}`
       },
