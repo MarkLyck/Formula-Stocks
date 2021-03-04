@@ -8295,10 +8295,10 @@ jest-worker@^26.2.1, jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jotai@0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/jotai/-/jotai-0.15.0.tgz#de8c1373ef12142ce3547c144acd08953bd95d67"
-  integrity sha512-pHjb8R9jn+Y+G01p8j94n0emFkJfrRlA1Ha2M2ZZyguHAF6PWMUaCF091qXR68rfMxfoEgM+i6DojTKBo7B6dg==
+jotai@0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-0.15.1.tgz#31d04b38c7eb0b0b33552c3d0009cb01cd1a68fe"
+  integrity sha512-ffC+CGYLyV6CiWZ2Pm2XcySzH3+AhaIdGN2LTmpOrbFQqH+JBPHQTRqw0G9ys7/6xhzhWDvBASigTaQQGEBubA==
 
 js-cookie@^2.2.1:
   version "2.2.1"
