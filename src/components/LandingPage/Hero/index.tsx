@@ -69,7 +69,7 @@ const Hero = ({ showSignup }: any) => {
           >
             <ActionButton onClick={showSignup} status="success">
               <ButtonIcon icon={['fad', 'gift']} />
-              TRY IT FOR FREE
+              TRY IT FOR $0
             </ActionButton>
             <ActionButton onClick={learnMore}>
               <ButtonIcon icon={['fad', 'info-square']} />
