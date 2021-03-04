@@ -1,5 +1,26 @@
 # Changelog
 
+<a name="1.0.77"></a>
+## 1.0.77 (2021-03-04)
+
+### Added
+
+- ✨ trades [[e81d2c9](https://github.com/MarkLyck/formula-stocks/commit/e81d2c9427663080b9322a2f146c267ae7519124)]
+
+### Changed
+
+- ⬆️ Update dependency jotai to v0.15.1 [[93db4a6](https://github.com/MarkLyck/formula-stocks/commit/93db4a68ae098fe5bacb24ec30c56ed8330d80d5)]
+- ⚡ improve performance [[99d03bd](https://github.com/MarkLyck/formula-stocks/commit/99d03bd38f866c079ff402247e61b00fa40e92b0)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.77 [[20d4af2](https://github.com/MarkLyck/formula-stocks/commit/20d4af25e31f28a9ef8097fdb9886266cee294d5)]
+- 📝 generated changelog [[197cc76](https://github.com/MarkLyck/formula-stocks/commit/197cc764c2a8f70fd92c6049877bff1e66bb41ed)]
+-  Merge pull request [#119](https://github.com/MarkLyck/formula-stocks/issues/119) from MarkLyck/renovate/jotai-0.x [[94541e4](https://github.com/MarkLyck/formula-stocks/commit/94541e404274276e711961c18a0c5da285879436)]
+-  Merge pull request [#120](https://github.com/MarkLyck/formula-stocks/issues/120) from MarkLyck/trade2 [[c94bb9e](https://github.com/MarkLyck/formula-stocks/commit/c94bb9eb37876006a4540dc901e62141e9cc7d72)]
+- 🏷️ fix unused param [[a464414](https://github.com/MarkLyck/formula-stocks/commit/a464414bd1b73fc640d14315e0c30888e130c99a)]
+
+
 <a name="1.0.76"></a>
 ## 1.0.76 (2021-03-04)
 
