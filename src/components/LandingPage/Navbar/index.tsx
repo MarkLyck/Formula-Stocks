@@ -81,7 +81,11 @@ const Navbar = ({ showSignup }: any) => {
               <Logo
                 data-id="components-navbar"
                 // @ts-ignore
-                src={windowSize.width > 1000 ? '/logos/logo_horizontal_color.svg' : '/logos/logo_icon_color.svg'}
+                src={
+                  windowSize.width > 1000
+                    ? '/logos/formula_stocks/logo_horizontal.svg'
+                    : '/logos/formula_stocks/logo_square.svg'
+                }
               />
             </a>
           </Link>
