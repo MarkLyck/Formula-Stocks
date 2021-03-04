@@ -76,7 +76,7 @@ const LaunchChart = ({ isLoading, error, planPerformance, marketPrices, marketNa
   const max = Math.ceil(maxBy(chartData, (point: any) => point.value).value)
 
   return (
-    <GraphContainer>
+    <GraphContainer data-chromatic="ignore">
       {/* @ts-ignore */}
       <Legends horizontal left={40} top={8}>
         {/* @ts-ignore */}
