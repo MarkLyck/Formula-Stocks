@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { List } from 'antd'
+import { List, Row } from 'antd'
 import { TRADES_QUERY } from 'src/common/queries'
 import Trade from './Trade'
 
@@ -10,11 +10,20 @@ const Trades = () => {
       planName: 'entry',
     },
   })
+  console.log('🔈 ~ data', data)
 
   if (error) return 'error'
 
   return (
-    <List loading={loading} grid={{ gutter: 16, column: 1 }} dataSource={data?.signalsList?.items} renderItem={Trade} />
+    <Row gutter={16}>
+      {data?.signalsList.items.map((trade: any) => (
+        <Trade trade={trade} key={trade.ticker + trade.action} />
+      ))}
+    </Row>
+  )
+
+  return (
+    <List loading={loading} grid={{ gutter: 16, column: 3 }} dataSource={data?.signalsList?.items} renderItem={Trade} />
   )
 }
 
