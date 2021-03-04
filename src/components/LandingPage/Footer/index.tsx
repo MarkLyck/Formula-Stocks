@@ -58,7 +58,7 @@ const FooterDisclaimer = styled(Disclaimer)`
 const Footer = () => (
   <Container>
     <Space direction="vertical" size="middle">
-      <Logo src="/logos/logo_horizontal.svg" />
+      <Logo src="/logos/formula_stocks/logo_horizontal_white.svg" />
       <Space size="middle">
         {SOCIAL_MEDIA_LINKS.map((link) => (
           <SocialMediaLink key={link.href} {...link} />

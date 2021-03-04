@@ -39,7 +39,7 @@ const Navbar = ({ toggleSideMenu }: NavbarProps) => (
     <StyledButton aria-label="menu" data-testid="toggle-menu-btn" onClick={toggleSideMenu}>
       <FontAwesomeIcon icon={['far', 'bars']} />
     </StyledButton>
-    <Logo role="img" alt="logo" src="/logos/logo_horizontal_color.svg" />
+    <Logo role="img" alt="logo" src="/logos/formula_stocks/logo_horizontal.svg" />
   </StyledHeader>
 )
 

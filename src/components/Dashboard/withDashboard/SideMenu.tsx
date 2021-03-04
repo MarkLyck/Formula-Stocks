@@ -67,7 +67,7 @@ const LogoCard = styled.div`
   justify-content: center;
   height: 48px;
   width: 100%;
-  padding: ${(p: { collapsed: any }) => (p.collapsed ? '8px' : '8px 16px')};
+  padding: ${(p: { collapsed: any }) => (p.collapsed ? '8px' : '8px 8px')};
   overflow: hidden;
   border-radius: 4px;
   background-color: ${(p) => p.theme.palette.neutral[200]};
@@ -136,7 +136,9 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         <Tooltip placement="right" title="Home">
           <LogoContainer>
             <LogoCard collapsed={collapsed}>
-              <Logo src={collapsed ? '/logos/logo_icon_color.svg' : '/logos/logo_horizontal_color.svg'} />
+              <Logo
+                src={collapsed ? '/logos/formula_stocks/logo_square.svg' : '/logos/formula_stocks/logo_horizontal.svg'}
+              />
             </LogoCard>
           </LogoContainer>
         </Tooltip>
