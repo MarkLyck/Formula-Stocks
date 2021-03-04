@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.75"></a>
+## 1.0.75 (2021-03-04)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v3.10.0 [[ecba650](https://github.com/MarkLyck/formula-stocks/commit/ecba650ae1abcb6e5eafac43c88c4fd7ebbe24ad)]
+- ⬆️ Update storybook monorepo to v6.1.21 [[7a8025d](https://github.com/MarkLyck/formula-stocks/commit/7a8025db20f4db50b147990cd9212703495428ba)]
+- ⬆️ Update dependency react-error-boundary to v3.1.1 [[750a556](https://github.com/MarkLyck/formula-stocks/commit/750a556ecc22713e9bc2cca967686d45b0b4fa70)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.75 [[3992c5d](https://github.com/MarkLyck/formula-stocks/commit/3992c5d346e48955a279951a7bed88e3e7b00672)]
+-  Merge pull request [#117](https://github.com/MarkLyck/formula-stocks/issues/117) from MarkLyck/renovate/storybook-monorepo [[09d3349](https://github.com/MarkLyck/formula-stocks/commit/09d33496559b85e86e9914c9c9ee2a4e3585a635)]
+-  Merge pull request [#116](https://github.com/MarkLyck/formula-stocks/issues/116) from MarkLyck/renovate/react-error-boundary-3.x [[28837ad](https://github.com/MarkLyck/formula-stocks/commit/28837ada10e290200815ac288047a13431493a59)]
+-  Merge pull request [#115](https://github.com/MarkLyck/formula-stocks/issues/115) from MarkLyck/renovate/framer-motion-3.x [[f7fa9f0](https://github.com/MarkLyck/formula-stocks/commit/f7fa9f0c861ca8e2da0c82d55354ed53b50ad92b)]
+- 📝 generated changelog [[eedfb2a](https://github.com/MarkLyck/formula-stocks/commit/eedfb2a1810c7e001baee51daab0d2908d682efa)]
+
+
 <a name="1.0.74"></a>
 ## 1.0.74 (2021-02-28)
 
