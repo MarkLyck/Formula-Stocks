@@ -14,6 +14,9 @@ export const TRADES_QUERY = gql`
         totalPortfolioWeight
         type
         boughtAt
+        report {
+          aIScore
+        }
         stock {
           ticker
           sixMonthsPrices

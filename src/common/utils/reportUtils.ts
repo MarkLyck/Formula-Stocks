@@ -10,9 +10,7 @@ export const getAIScoreColor = (value: number) => {
   if (value < 50) {
     return theme.palette.scale.average
   }
-  if (value < 75) {
-    return theme.palette.scale.good
-  }
+
   return theme.palette.scale.perfect
 }
 

@@ -7,6 +7,7 @@ import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/format
 import { useTheme } from '@emotion/react'
 
 const Line = dynamic(() => import('@ant-design/charts').then((mod) => mod.Line) as any, { ssr: false })
+const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 
 const TooltipContent = styled.div`
   padding: 16px;
@@ -128,10 +129,10 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     color: lastPoint?.value > 0 ? theme.palette.success[600] : theme.palette.danger[600],
     lineStyle: {
       lineWidth: 4,
-      shadowColor: lastPoint?.value > 0 ? theme.palette.success[200] : theme.palette.danger[200],
-      shadowBlur: 10,
-      shadowOffsetX: 5,
-      shadowOffsetY: 6,
+      // shadowColor: lastPoint?.value > 0 ? theme.palette.success[200] : theme.palette.danger[200],
+      // shadowBlur: 5,
+      // shadowOffsetX: 2,
+      // shadowOffsetY: 4,
     },
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
@@ -146,7 +147,8 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
 
   return (
     // @ts-ignore
-    <Line {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
+    <Area {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
+    // <Line {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
   )
 }
 
