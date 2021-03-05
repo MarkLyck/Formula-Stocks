@@ -6,7 +6,6 @@ import { format } from 'date-fns'
 import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 import { useTheme } from '@emotion/react'
 
-const Line = dynamic(() => import('@ant-design/charts').then((mod) => mod.Line) as any, { ssr: false })
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 
 const TooltipContent = styled.div`
