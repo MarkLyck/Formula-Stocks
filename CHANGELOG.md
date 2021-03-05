@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.79"></a>
+## 1.0.79 (2021-03-05)
+
+### Changed
+
+- ⬆️ Update dependency typescript to v4.2.3 [[180c94a](https://github.com/MarkLyck/formula-stocks/commit/180c94ac6b44cb4d901b2f3a96e1412091c91e4b)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.79 [[e008eae](https://github.com/MarkLyck/formula-stocks/commit/e008eaeafbc476b83d977603ebe740d7c0b89260)]
+- 📝 generated changelog [[59add2d](https://github.com/MarkLyck/formula-stocks/commit/59add2d6cc9974be319e92c2e955219f236b0917)]
+-  Merge pull request [#122](https://github.com/MarkLyck/formula-stocks/issues/122) from MarkLyck/renovate/typescript-4.x [[fbb8eb7](https://github.com/MarkLyck/formula-stocks/commit/fbb8eb7fdfbf0537f2908d51535d2eb73760edd2)]
+
+
 <a name="1.0.78"></a>
 ## 1.0.78 (2021-03-05)
 
