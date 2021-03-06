@@ -35,7 +35,7 @@ const Name = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  color: ${(p) => p.theme.palette.neutral[500]};
+  color: ${(p) => p.theme.palette.neutral[600]};
 `
 
 const TradeChart = ({ ticker, name, data }: TradeChartProps) => {

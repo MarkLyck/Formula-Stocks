@@ -5,7 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { resetApplication } from 'src/common/utils'
-import { ActionPill, ErrorCard } from 'src/ui-components'
+import { ActionPill, ErrorCard, AIScorePreview } from 'src/ui-components'
 import TradeChart from './TradeChart'
 
 const { Text } = Typography
@@ -37,7 +37,7 @@ const AllocationContainer = styled.div`
 `
 
 const ArrowIcon = styled(FontAwesomeIcon)`
-  color: ${(p: any) => p.theme.palette[p.higher ? 'success' : 'neutral'][400]};
+  color: ${(p: any) => p.theme.palette[p.higher ? 'success' : 'neutral'][600]};
   font-size: 14px;
   margin-right: 6px;
 `
@@ -55,6 +55,7 @@ type TradeProps = {
 }
 
 const Trade = ({ trade }: TradeProps) => {
+  console.log('🔈 ~ trade', trade)
   let latestPrice = trade.stock?.latestPrice
 
   return (
@@ -107,8 +108,11 @@ const Trade = ({ trade }: TradeProps) => {
             </>
           )}
           <Row justify="space-between" align="middle">
-            <Label>AI Score</Label>
-            <Value>+00.00</Value>
+            <Label>
+              AI Score <FontAwesomeIcon icon={['fad', 'brain']} />
+            </Label>
+            <AIScorePreview score={trade.report.aIScore} />
+            {/* <Value>{(trade.report.aIScore * 100).toFixed(2)}</Value> */}
           </Row>
 
           {trade.action === 'BUY' && (

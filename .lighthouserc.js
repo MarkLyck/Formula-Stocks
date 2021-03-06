@@ -15,7 +15,7 @@ module.exports = {
         // should be fixed.
         'apple-touch-icon': 'off',
         'aria-hidden-focus': 'off',
-        'bootup-time': ['error', { minScore: 0.5 }],
+        'bootup-time': ['error', { minScore: 0.4 }],
         'button-name': 'off',
         'color-contrast': 'off',
         'cumulative-layout-shift': ['error', { minScore: 0.2 }],
@@ -30,7 +30,7 @@ module.exports = {
         'html-has-lang': 'off',
         'image-alt': 'off',
         'installable-manifest': 'off',
-        interactive: ['error', { minScore: 0.1 }],
+        interactive: ['error', { minScore: 0.05 }],
         label: 'off',
         'largest-contentful-paint': ['error', { minScore: 0.01 }],
         'legacy-javascript': ['error', { maxLength: 6 }],
