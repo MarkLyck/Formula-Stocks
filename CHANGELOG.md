@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.83"></a>
+## 1.0.83 (2021-03-06)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.13.1 [[95ecdd2](https://github.com/MarkLyck/formula-stocks/commit/95ecdd2713e2a4805896b0a3397d5726f7707236)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.83 [[397e736](https://github.com/MarkLyck/formula-stocks/commit/397e73694d709cf57798ad81ec04f6e5f9d6d543)]
+-  Merge pull request [#126](https://github.com/MarkLyck/formula-stocks/issues/126) from MarkLyck/renovate/antd-4.x [[7289756](https://github.com/MarkLyck/formula-stocks/commit/7289756ee3191a7a2aa7f7396840e5b33f902cf6)]
+- 📝 generated changelog [[b2c5333](https://github.com/MarkLyck/formula-stocks/commit/b2c53336ed690906ab4df7086cbdfd2da53aeade)]
+
+
 <a name="1.0.82"></a>
 ## 1.0.82 (2021-03-06)
 
