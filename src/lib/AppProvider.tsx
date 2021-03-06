@@ -5,6 +5,7 @@ import ComposeProviders from './ComposeProviders'
 import 'src/lib/iconLibrary'
 import theme from 'src/lib/theme'
 import 'antd/dist/antd.less'
+import GlobalStyles from './GlobalStyles'
 
 type AppProviderProps = {
   children: React.ReactNode
@@ -16,6 +17,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
 
 const Wrapper = (props: any) => (
   <JotaiProvider>
+    <GlobalStyles />
     <AppProvider {...props} />
   </JotaiProvider>
 )

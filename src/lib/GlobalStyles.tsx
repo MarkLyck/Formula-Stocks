@@ -12,6 +12,10 @@ const GlobalStyles = () => (
       body {
         font-family: Roboto, sans-serif;
       }
+
+      .ant-progress-inner {
+        background-color: #f7f9fc;
+      }
     `}
   />
 )

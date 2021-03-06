@@ -1,7 +1,9 @@
+import { ReactNode } from 'react'
 import styled from '@emotion/styled'
 import { Typography } from 'antd'
 import React from 'react'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
+
 const { Text } = Typography
 
 const Container = styled.div`
@@ -14,8 +16,8 @@ const Chart = styled.div`
   position: relative;
   width: 100%;
   height: 8px;
-  background: ${(p) => p.theme.palette.neutral[400]};
-  background-color: #f5f5f5;
+  background: ${(p) => p.theme.palette.neutral[300]};
+  // background-color: #f5f5f5;
   border-radius: 4px;
   margin-right: 8px;
 `
@@ -32,11 +34,12 @@ const Middle = styled.div`
 type ValueProps = { theme?: any; width: number; positive: boolean; color: string }
 
 const Value = styled.div`
+  position: absolute;
   height: 8px;
   width: ${(p: ValueProps) => p.width}%;
+  left: ${(p: ValueProps) => (p.positive ? '50%' : `calc(50% - ${p.width}%)`)};
+
   background: ${(p: ValueProps) => p.color};
-  position: absolute;
-  left: ${(p: ValueProps) => (p.positive ? '50%' : '0')};
   border-top-right-radius: ${(p: ValueProps) => (p.positive ? '4px' : '0')};
   border-bottom-right-radius: ${(p: ValueProps) => (p.positive ? '4px' : '0')};
   border-top-left-radius: ${(p: ValueProps) => (p.positive ? '0' : '4px')};
@@ -44,23 +47,32 @@ const Value = styled.div`
   z-index: 1;
 `
 
+const Label = styled(Text)`
+  color: ${(p) => p.theme.palette.neutral[700]};
+`
+
 type AIScoreProps = {
   score: number
+  label: ReactNode
 }
 
-const AIScorePreview = ({ score }: AIScoreProps) => {
+const AIScorePreview = ({ score, label }: AIScoreProps) => {
   const realScore = score * 100
+
   return (
-    <Container>
-      <Chart>
-        <Middle />
-        <Value width={realScore / 2} positive={realScore >= 0} color={getAIScoreColor(realScore)} />
-      </Chart>
-      <Text style={{ fontWeight: 'bold' }}>
-        {realScore >= 0 ? '+' : ''}
-        {realScore.toFixed(2)}
-      </Text>
-    </Container>
+    <div style={{ width: '100%' }}>
+      <Label>{label}</Label>
+      <Container>
+        <Chart>
+          <Middle />
+          <Value width={Math.abs(realScore / 2)} positive={realScore >= 0} color={getAIScoreColor(realScore)} />
+        </Chart>
+        <Text style={{ fontWeight: 'bold' }}>
+          {realScore >= 0 ? '+' : ''}
+          {realScore.toFixed(2)}
+        </Text>
+      </Container>
+    </div>
   )
 }
 
