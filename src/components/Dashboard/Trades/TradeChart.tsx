@@ -35,8 +35,8 @@ const ChartUnavailableContainer = styled.div`
 
 const Name = styled.div`
   position: absolute;
-  top: ${(p: { unavailable: boolean }) => (p.unavailable ? '8px' : '0')};
-  left: ${(p: { unavailable: boolean }) => (p.unavailable ? '8px' : '0')};
+  top: ${(p: { unavailable?: boolean }) => (p.unavailable ? '8px' : '0')};
+  left: ${(p: { unavailable?: boolean }) => (p.unavailable ? '8px' : '0')};
   color: ${(p) => p.theme.palette.neutral[600]};
 `
 
