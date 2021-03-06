@@ -3,7 +3,7 @@ name: Typescript
 on: [push]
 
 jobs:
-  typescript lint:
+  typescript_lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
