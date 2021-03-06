@@ -1,5 +1,44 @@
 # Changelog
 
+<a name="1.0.82"></a>
+## 1.0.82 (2021-03-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.82 [[86e38fe](https://github.com/MarkLyck/formula-stocks/commit/86e38fed106836f2c53fa56a0ed338cf01cb5b51)]
+
+
+<a name="1.0.81"></a>
+## 1.0.81 (2021-03-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.81 [[3a5ac79](https://github.com/MarkLyck/formula-stocks/commit/3a5ac799fe8198d7a5b1bec3886e1b5031854718)]
+
+
+<a name="1.0.80"></a>
+## 1.0.80 (2021-03-06)
+
+### Added
+
+- ✨ trade improvements [[fc0c92c](https://github.com/MarkLyck/formula-stocks/commit/fc0c92c1290e7401058be093ea53848e3093bab0)]
+
+### Changed
+
+- ⬆️ Update dependency jotai to v0.15.2 [[73e5ae2](https://github.com/MarkLyck/formula-stocks/commit/73e5ae2a2cd84fe4a94c7ff7df04c63d6ad5750e)]
+- ⬆️ Update dependency next to v10.0.8 [[d2646c7](https://github.com/MarkLyck/formula-stocks/commit/d2646c71ff537440a6a62bf4d3da097799c97f3c)]
+- 🔧 config lighthouse [[3c75658](https://github.com/MarkLyck/formula-stocks/commit/3c7565889e89a499b1f5e055b5ddf6508843189b)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.80 [[37d0000](https://github.com/MarkLyck/formula-stocks/commit/37d0000c8029ca09a4c9eec3fbb160b3f1289bed)]
+-  Merge pull request [#123](https://github.com/MarkLyck/formula-stocks/issues/123) from MarkLyck/trade-improvements [[831a60d](https://github.com/MarkLyck/formula-stocks/commit/831a60d434ba5dcf12f2be83ed86a842fd6e4cbb)]
+-  Merge pull request [#125](https://github.com/MarkLyck/formula-stocks/issues/125) from MarkLyck/renovate/jotai-0.x [[fcc02e0](https://github.com/MarkLyck/formula-stocks/commit/fcc02e027e06b52a01f6078d8ec466d2dbba5819)]
+-  Merge pull request [#124](https://github.com/MarkLyck/formula-stocks/issues/124) from MarkLyck/renovate/nextjs-monorepo [[4b3bf72](https://github.com/MarkLyck/formula-stocks/commit/4b3bf720fb9f3bef1235c2f8c99bd7a87f05c3cf)]
+- 📝 generated changelog [[267b91e](https://github.com/MarkLyck/formula-stocks/commit/267b91e1397fbfe23e52215ad02afc83660a7e4b)]
+- 🏷️ fix unused var [[6de0e00](https://github.com/MarkLyck/formula-stocks/commit/6de0e00883ea7169df5f063f3a2bb2565bbe2a8f)]
+
+
 <a name="1.0.79"></a>
 ## 1.0.79 (2021-03-05)
 
