@@ -122,6 +122,8 @@ const Report = ({ price, scores, ticker }: ReportType) => {
             <Card>
               <AIScorePreview score={scores.ai_value} label="Value" />
               <Divider />
+              <AIScorePreview score={scores.ai_profitability} label="Profitability" />
+              <Divider />
               <AIScorePreview score={scores.ai_growth} label="Growth" />
               <Divider />
               <AIScorePreview score={scores.ai_soundness} label="Soundness" />

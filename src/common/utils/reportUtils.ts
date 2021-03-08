@@ -1,17 +1,28 @@
 import theme from '~/lib/theme'
 
 export const getAIScoreColor = (value: number) => {
-  if (value < -20) {
-    return theme.palette.scale.worst
-  }
-  if (value < 20) {
-    return theme.palette.scale.bad
-  }
-  if (value < 50) {
-    return theme.palette.scale.average
+  // if (score < -75) return 'Very bad'
+  // if (score < -25) return 'Bad'
+  // if (score < -10) return 'Below average'
+  // if (score < 10) return 'Average'
+  // if (score < 25) return 'Above average'
+  // if (score < 50) return 'Good'
+  // if (score < 80) return 'Great'
+  // if (score <= 100) return 'Excellent'
+
+  if (value < -10) {
+    return theme.palette.danger[600]
   }
 
-  return theme.palette.scale.perfect
+  if (value < 10) {
+    return theme.palette.warning[600]
+  }
+
+  if (value < 50) {
+    return theme.palette.primary[600]
+  }
+
+  return theme.palette.success[600]
 }
 
 export const getAIScoreType = (value: number) => {

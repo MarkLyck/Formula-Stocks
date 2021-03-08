@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { Typography } from 'antd'
 import React from 'react'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
+import AIScoreTag from './AIScoreTag'
 
 const { Text } = Typography
 
@@ -50,6 +51,11 @@ const Label = styled(Text)`
   color: ${(p) => p.theme.palette.neutral[700]};
 `
 
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 type AIScoreProps = {
   score: number
   label: ReactNode
@@ -60,7 +66,10 @@ const AIScorePreview = ({ score, label }: AIScoreProps) => {
 
   return (
     <div style={{ width: '100%' }}>
-      <Label>{label}</Label>
+      <Top>
+        <Label>{label}</Label>
+        <AIScoreTag score={realScore} />
+      </Top>
       <Container>
         <Chart>
           <Middle />
