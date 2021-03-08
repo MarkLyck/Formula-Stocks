@@ -89,9 +89,9 @@ const theme: any = {
       pink: '#C86B89',
     },
     scale: {
-      worst: '#F3446C',
-      bad: '#ff9800',
-      average: '#f9dd4d',
+      worst: '#f3446c',
+      bad: '#fa8c16',
+      average: '#fadb14',
       good: '#1D93F2',
       perfect: '#00DA8E',
     },
