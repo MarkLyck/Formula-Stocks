@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.88"></a>
+## 1.0.88 (2021-03-08)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.88 [[8966d2f](https://github.com/MarkLyck/formula-stocks/commit/8966d2f7e7e3347e9a0f979efab865bc36ab684c)]
+
+
+<a name="1.0.87"></a>
+## 1.0.87 (2021-03-08)
+
+### Added
+
+- ✨ improvements [[fe919ea](https://github.com/MarkLyck/formula-stocks/commit/fe919eae6b6a8bfdb42278630a1c5f0ecd08c28f)]
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.14.32 [[c1d5033](https://github.com/MarkLyck/formula-stocks/commit/c1d50336378ebb1c833701dd05ed94206624a500)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.87 [[0932a06](https://github.com/MarkLyck/formula-stocks/commit/0932a0665fd696078725e4b6e6e5a371510b3331)]
+- 📝 generated changelog [[60553f7](https://github.com/MarkLyck/formula-stocks/commit/60553f70e359fa424802102f9dae002c7a2d8366)]
+-  Merge pull request [#128](https://github.com/MarkLyck/formula-stocks/issues/128) from MarkLyck/renovate/node-14.x [[5032857](https://github.com/MarkLyck/formula-stocks/commit/50328574dda0cd209b176f9251d8fbc177e71966)]
+-  Merge pull request [#131](https://github.com/MarkLyck/formula-stocks/issues/131) from MarkLyck/ai-report-improvements [[ded56e8](https://github.com/MarkLyck/formula-stocks/commit/ded56e846e43c9d09400598c9ae67adcead357f6)]
+
+
 <a name="1.0.86"></a>
 ## 1.0.86 (2021-03-08)
 
