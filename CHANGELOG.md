@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.84"></a>
+## 1.0.84 (2021-03-08)
+
+### Added
+
+- 👷‍♂️ add typescript CI action [[62e48ce](https://github.com/MarkLyck/formula-stocks/commit/62e48cea7fbe6aef540084111dc35ab9ce4410be)]
+- ✨ ai reports MVP [[6802321](https://github.com/MarkLyck/formula-stocks/commit/68023210da2b856c7f67cadfccb6a873817a06dc)]
+
+### Removed
+
+- 🔥 remove typescript CI [[589139f](https://github.com/MarkLyck/formula-stocks/commit/589139f01ab0a76928aa7993d57b8072f2ba6dd9)]
+- 🔇 remove log [[22db131](https://github.com/MarkLyck/formula-stocks/commit/22db131e1ee72aab9f19fccfce8247575bf5f6e9)]
+
+### Fixed
+
+- 💚 fix ts lint [[280fb19](https://github.com/MarkLyck/formula-stocks/commit/280fb19f27309145a21ded0be8cf67747292452d)]
+- 💚 fix ts workflow [[7078e9e](https://github.com/MarkLyck/formula-stocks/commit/7078e9e54b7a92dec8cc17cb86479c7fa5e8fdf5)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.84 [[658a369](https://github.com/MarkLyck/formula-stocks/commit/658a36989585304f3d1b6dca52aba4fecba461c7)]
+-  Merge pull request [#127](https://github.com/MarkLyck/formula-stocks/issues/127) from MarkLyck/ai-report2 [[2d5d577](https://github.com/MarkLyck/formula-stocks/commit/2d5d577d7f485f90679e5395a214fd768b47a803)]
+- 🗑️ cleanup [[9d9cfd6](https://github.com/MarkLyck/formula-stocks/commit/9d9cfd669adab100aa3f8e1915fa53233aa1f214)]
+- 📝 generated changelog [[efd86a3](https://github.com/MarkLyck/formula-stocks/commit/efd86a3b357dbc6c34cc650bb032a6134f8c2520)]
+- 🏷️ fix type error [[67889e7](https://github.com/MarkLyck/formula-stocks/commit/67889e7479ce6e650de78951f157b80670914699)]
+
+
 <a name="1.0.83"></a>
 ## 1.0.83 (2021-03-06)
 
