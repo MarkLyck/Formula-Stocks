@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.86"></a>
+## 1.0.86 (2021-03-08)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.86 [[73cd707](https://github.com/MarkLyck/formula-stocks/commit/73cd707a33213e3eabd2390b5b693baddc397f96)]
+
+
+<a name="1.0.85"></a>
+## 1.0.85 (2021-03-08)
+
+### Changed
+
+- ⬆️ Update dependency react-scroll to v1.8.2 [[f795bf2](https://github.com/MarkLyck/formula-stocks/commit/f795bf2169a70f06b1c0567164ba4ceb63659bed)]
+- ⬆️ Update dependency @types/react to v17.0.3 [[a0d0449](https://github.com/MarkLyck/formula-stocks/commit/a0d0449ed79a8d855a4ef5baa3c91a1aefda4cec)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.85 [[f9c438f](https://github.com/MarkLyck/formula-stocks/commit/f9c438fb9987879e77ac9a9fb2e4c44f2582e250)]
+- 📝 generated changelog [[6846ff0](https://github.com/MarkLyck/formula-stocks/commit/6846ff06ce18ad7c778dc3b0bbd63b2d96fdb099)]
+-  Merge pull request [#129](https://github.com/MarkLyck/formula-stocks/issues/129) from MarkLyck/renovate/react-17.x [[ec1a1dd](https://github.com/MarkLyck/formula-stocks/commit/ec1a1dd762edf41234a110389b3d615ba5c7e4c1)]
+-  Merge pull request [#130](https://github.com/MarkLyck/formula-stocks/issues/130) from MarkLyck/renovate/react-scroll-1.x [[f29a2cd](https://github.com/MarkLyck/formula-stocks/commit/f29a2cdc619b8a91c395aace4a6645d4a97ec633)]
+
+
 <a name="1.0.84"></a>
 ## 1.0.84 (2021-03-08)
 
