@@ -1,17 +1,16 @@
 // @ts-nocheck
 import React from 'react'
 import styled from '@emotion/styled'
+import { Card, Divider, Space } from 'antd'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
-import {
-  HorizontalScore,
-  // RadarChart
-} from '~/ui-components/Charts'
-import { Card } from '~/ui-components'
+import { HorizontalScore, RadarChart } from '~/ui-components/Charts'
+import { AIScorePreview } from '~/ui-components'
+import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const ChartContainer = styled(Card)`
   width: 100%;
-  height: 504px;
+  height: 425px;
   margin-bottom: 16px;
   > div {
     width: 100%;
@@ -85,15 +84,15 @@ export interface ReportType {
 }
 
 const Report = ({ price, scores, ticker }: ReportType) => {
-  // const radarChartData = [
-  //   { label: 'Growth', value: scores.ai_growth * 100 },
-  //   { label: 'Value', value: scores.ai_value * 100 },
-  //   { label: 'Profitability', value: scores.ai_profitability * 100 },
-  //   { label: 'Soundness', value: scores.ai_soundness * 100 },
-  //   { label: 'Stewardship', value: scores.ai_stewardship * 100 },
-  //   { label: 'Safety', value: scores.ai_safety * 100 },
-  //   { label: 'Reward', value: scores.ai_reward * 100 },
-  // ]
+  const radarChartData = [
+    { label: 'Growth', value: scores.ai_growth * 100 + 100 },
+    { label: 'Value', value: scores.ai_value * 100 + 100 },
+    { label: 'Profitability', value: scores.ai_profitability * 100 + 100 },
+    { label: 'Soundness', value: scores.ai_soundness * 100 + 100 },
+    { label: 'Stewardship', value: scores.ai_stewardship * 100 + 100 },
+    { label: 'Safety', value: scores.ai_safety * 100 + 100 },
+    { label: 'Reward', value: scores.ai_reward * 100 + 100 },
+  ]
 
   return (
     <>
@@ -101,31 +100,35 @@ const Report = ({ price, scores, ticker }: ReportType) => {
         <ReportPartContainer>
           <SectionHeader>AI Investment Report</SectionHeader>
 
-          <AIScore value={scores.ai_score} />
-          <ScoreList>
-            <HorizontalScore value={scores.ai_reward} label="Reward" direction="right" />
-            <HorizontalScore value={scores.ai_safety} label="Safety" direction="right" />
-          </ScoreList>
+          <Space direction="vertical" style={{ width: '100%' }} size="large">
+            <Card>
+              <AIScorePreview score={scores.ai_score} label="AI Score" />
+              <Divider />
+              <ChartContainer>
+                <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />
+              </ChartContainer>
+            </Card>
+          </Space>
         </ReportPartContainer>
 
         <ReportPartContainer>
-          <SectionHeader>AI Scores</SectionHeader>
-          <ChartContainer>
-            {/* <RadarChart id={`${ticker}-radar-chart`} data={radarChartData} aiScore={scores.ai_score * 100} /> */}
-          </ChartContainer>
-
-          {/* <ScoreList>
-            <HorizontalScore value={scores.ai_growth} label="Growth" direction="left" />
-            <HorizontalScore value={scores.ai_value} label="Value" direction="left" />
-            <HorizontalScore value={scores.ai_profitability} label="Profitability" direction="left" />
-            <HorizontalScore value={scores.ai_soundness} label="Soundness" direction="left" />
-            <HorizontalScore value={scores.ai_stewardship} label="Stewardship" direction="left" />
-          </ScoreList> */}
-
-          <BesideSection>
-            <BoldValue>Report based on price</BoldValue>
-            <BoldValue>${price}</BoldValue>
-          </BesideSection>
+          <SectionHeader>Scores</SectionHeader>
+          <Space direction="vertical" style={{ width: '100%' }} size="large">
+            <Card>
+              <AIScorePreview score={scores.ai_reward} label="Reward" />
+              <Divider />
+              <AIScorePreview score={scores.ai_safety} label="Safety" />
+            </Card>
+            <Card>
+              <AIScorePreview score={scores.ai_value} label="Value" />
+              <Divider />
+              <AIScorePreview score={scores.ai_growth} label="Growth" />
+              <Divider />
+              <AIScorePreview score={scores.ai_soundness} label="Soundness" />
+              <Divider />
+              <AIScorePreview score={scores.ai_stewardship} label="Stewardship" />
+            </Card>
+          </Space>
         </ReportPartContainer>
       </ReportContainer>
     </>

@@ -10,7 +10,6 @@ const Trades = () => {
       planName: 'entry',
     },
   })
-  console.log('🔈 ~ data', data)
 
   if (error) return 'error'
 

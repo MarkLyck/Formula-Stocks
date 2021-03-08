@@ -103,7 +103,9 @@ const menuList = [
   { label: 'Portfolio', icon: ['fad', 'analytics'], route: '/dashboard/portfolio' },
   { label: 'Trades', icon: ['fad', 'flask'], route: '/dashboard/trades' },
   { label: 'AI Reports', icon: ['fad', 'tachometer-alt'], route: '/dashboard/reports' },
+  { divider: true },
   { label: 'Account', icon: ['fad', 'user'], route: '/dashboard/account' },
+  { label: 'Road map', icon: ['fad', 'pennant'], route: '/dashboard/roadmap' },
   { divider: true },
   { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin' },
 ]

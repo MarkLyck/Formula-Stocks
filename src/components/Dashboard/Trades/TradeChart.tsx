@@ -18,6 +18,8 @@ const ChartUnavailableContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100px;
+  background: ${(p) => p.theme.palette.neutral[200]};
+  border-radius: 4px;
 
   display: flex;
   flex-direction: column;
@@ -33,8 +35,8 @@ const ChartUnavailableContainer = styled.div`
 
 const Name = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: ${(p: { unavailable?: boolean }) => (p.unavailable ? '8px' : '0')};
+  left: ${(p: { unavailable?: boolean }) => (p.unavailable ? '8px' : '0')};
   color: ${(p) => p.theme.palette.neutral[600]};
 `
 
@@ -42,7 +44,7 @@ const TradeChart = ({ ticker, name, data }: TradeChartProps) => {
   if (!Array.isArray(data) || data.length === 0) {
     return (
       <ChartUnavailableContainer>
-        <Name>{name}</Name>
+        <Name unavailable>{name}</Name>
         <FontAwesomeIcon icon={['fad', 'exclamation-triangle']} />
         Chart unavailable {ticker?.includes('_TO') ? 'for TSX stocks' : ''}
       </ChartUnavailableContainer>
