@@ -22,9 +22,6 @@ const TooltipContainer = styled.div`
 `
 
 const generateTooltip = (title: string, items: any[]) => {
-  console.log('🔈 ~ title', title)
-  console.log('🔈 ~ items', items)
-
   const realValue = Number(items[0]?.value) - 100
 
   return (

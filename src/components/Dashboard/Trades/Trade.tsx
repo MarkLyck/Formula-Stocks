@@ -108,9 +108,6 @@ const Trade = ({ trade }: TradeProps) => {
             </>
           )}
           <Row justify="space-between" align="middle">
-            {/* <Label>
-              AI Score <FontAwesomeIcon icon={['fad', 'brain']} />
-            </Label> */}
             <AIScorePreview
               score={trade.report.aIScore}
               label={
@@ -119,7 +116,6 @@ const Trade = ({ trade }: TradeProps) => {
                 </Label>
               }
             />
-            {/* <Value>{(trade.report.aIScore * 100).toFixed(2)}</Value> */}
           </Row>
 
           {trade.action === 'BUY' && (

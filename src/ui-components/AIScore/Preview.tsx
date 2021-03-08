@@ -17,7 +17,6 @@ const Chart = styled.div`
   width: 100%;
   height: 8px;
   background: ${(p) => p.theme.palette.neutral[300]};
-  // background-color: #f5f5f5;
   border-radius: 4px;
   margin-right: 8px;
 `
