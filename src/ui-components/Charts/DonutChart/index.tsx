@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import { useTheme } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 const Pie = dynamic(() => import('@ant-design/charts').then((mod) => mod.Pie) as any, { ssr: false })
 
@@ -22,6 +23,26 @@ const generateColor = (item: DataValueType, numberOfItems: number, theme: any) =
   return color
 }
 
+const Value = styled.span`
+  font-weight: bold;
+  margin-left: 8px;
+`
+
+const TooltipContainer = styled.div`
+  padding: 16px 0;
+
+  h3 {
+    margin: 0;
+  }
+`
+const generateTooltip = (title: string, items: any[]) => (
+  <TooltipContainer>
+    <h3>
+      {title}: <Value>{Number(items[0]?.value).toFixed(2)}%</Value>
+    </h3>
+  </TooltipContainer>
+)
+
 const DonutChart = ({ data }: DonutChartProps) => {
   const theme = useTheme()
   colorIndex = data.length
@@ -36,11 +57,14 @@ const DonutChart = ({ data }: DonutChartProps) => {
     legend: false,
     label: false,
     interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
+    tooltip: {
+      customContent: generateTooltip,
+    },
     statistic: {
       title: false,
       content: {
         style: {
-          fontSize: '14px',
+          fontSize: '16px',
           fontWeight: '500',
         },
         formatter: function formatter() {

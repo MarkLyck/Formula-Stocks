@@ -8,6 +8,7 @@ import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorFallback } from 'src/ui-components'
 import { resetApplication, logout } from 'src/common/utils'
 import SupportButton from './SupportButton'
+import PlanSelect from './PlanSelect'
 
 const { Sider } = Layout
 
@@ -163,6 +164,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
           <Menu.Item onClick={logout} key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
             Logout
           </Menu.Item>
+          <PlanSelect />
           <Spacer />
           {/* @ts-ignore */}
           <SupportButton user={{}} collapsed={collapsed} />

@@ -1,13 +1,16 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
 import { List, Row } from 'antd'
+import { useAtom, planAtom } from 'src/atoms'
 import { TRADES_QUERY } from 'src/common/queries'
 import Trade from './Trade'
 
 const Trades = () => {
+  const [plan] = useAtom(planAtom)
+
   const { data, loading, error } = useQuery(TRADES_QUERY, {
     variables: {
-      planName: 'entry',
+      planName: plan,
     },
   })
 
