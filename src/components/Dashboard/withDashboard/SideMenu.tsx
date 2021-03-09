@@ -1,13 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Layout, Menu, Tooltip } from 'antd'
+import { Layout, Menu, Tooltip, Select } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorFallback } from 'src/ui-components'
 import { resetApplication, logout } from 'src/common/utils'
 import SupportButton from './SupportButton'
+import PlanSelect from './PlanSelect'
 
 const { Sider } = Layout
 
@@ -163,6 +164,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
           <Menu.Item onClick={logout} key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
             Logout
           </Menu.Item>
+          <PlanSelect />
           <Spacer />
           {/* @ts-ignore */}
           <SupportButton user={{}} collapsed={collapsed} />

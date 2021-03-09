@@ -3,13 +3,15 @@ import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { Select, Space, Typography } from 'antd'
 import { subYears, subMonths, isAfter } from 'date-fns'
-import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import { ErrorBoundary } from 'react-error-boundary'
+
+import { useAtom, planAtom } from 'src/atoms'
+import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import ReturnsChart from './ReturnsChart'
 import BarChart from './Histogram'
 import { Card as DashboardCard, ErrorFallback } from 'src/ui-components'
-const { Option } = Select
 
+const { Option } = Select
 const { Title } = Typography
 
 const ChartContainer = styled.div`
@@ -130,9 +132,11 @@ type returnsDataPointType = {
 }
 
 const PortfolioChart = () => {
+  const [plan] = useAtom(planAtom)
   const [chartType, setChartType] = useState('total_return')
   const [startDate, setStartDate] = useState('all_time')
   const { data, loading, error } = useQuery(LAUNCH_PERFORMANCE_HISTORY, {
+    variables: { plan },
     // client: FSApolloClient,
   })
 

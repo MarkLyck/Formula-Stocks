@@ -24,7 +24,7 @@ const getTagName = (score: number) => {
   if (score < 50) return 'Good'
   if (score < 80) return 'Great'
   if (score < 100) return 'Excellent'
-  return 'perfect'
+  return 'Perfect'
 }
 
 type AIScoreTagProps = {

@@ -10,8 +10,11 @@ import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const ChartContainer = styled(Card)`
   width: 100%;
-  height: 425px;
+  height: 530px;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   > div {
     width: 100%;
   }

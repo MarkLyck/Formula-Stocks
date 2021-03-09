@@ -1,4 +1,4 @@
-export * from './flagAtom'
+export * from './planAtom'
 export * from './userAtom'
 
 // re-export jotai

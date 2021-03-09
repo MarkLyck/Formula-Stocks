@@ -6,6 +6,7 @@ import { format } from 'date-fns'
 import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 import { useTheme } from '@emotion/react'
 
+// const Line = dynamic(() => import('@ant-design/charts').then((mod) => mod.Line) as any, { ssr: false })
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 
 const TooltipContent = styled.div`
@@ -93,6 +94,7 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     xField: 'date',
     yField: 'value',
     yAxis: {
+      min: -100,
       minLimit: -100,
       maxLimit: Math.ceil(maxLimit / 100) * 100,
       tickCount: 6,
@@ -128,10 +130,6 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     color: lastPoint?.value > 0 ? theme.palette.success[600] : theme.palette.danger[600],
     lineStyle: {
       lineWidth: 4,
-      // shadowColor: lastPoint?.value > 0 ? theme.palette.success[200] : theme.palette.danger[200],
-      // shadowBlur: 5,
-      // shadowOffsetX: 2,
-      // shadowOffsetY: 4,
     },
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
@@ -145,9 +143,11 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
   }
 
   return (
-    // @ts-ignore
-    <Area {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
-    // <Line {...config} chartRef={(chartRef: any) => (ref = chartRef)} />
+    <Area
+      {...config}
+      // @ts-ignore
+      chartRef={(chartRef: any) => (ref = chartRef)}
+    />
   )
 }
 
