@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Modal, Space } from 'antd'
-import { AIScoreChart, Paragraph } from '~/ui-components'
+import { AIScoreChart, AIScoreChartOLD, Paragraph } from '~/ui-components'
 import { COMPANY_NAME, BLOG_POSTS } from '~/common/constants'
 
 const StyledSpace = styled(Space)`
@@ -32,6 +32,7 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
         bracket.
       </Paragraph>
       <AIScoreChart />
+      <AIScoreChartOLD />
       <Paragraph>
         The above chart shows this experiment tested over a period of 50 years on +12,000 stocks. You can see if you
         invested solely in stocks with an AI Score between +80 to +90 the likely long-term outcome is a return of ~27%.
