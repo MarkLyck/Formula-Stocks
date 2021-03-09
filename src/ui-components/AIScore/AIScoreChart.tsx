@@ -32,38 +32,33 @@ const Value = styled.span`
   font-size: 14px;
 `
 
-const chartTooltip = (title: string, items: any[], theme: any) => {
-  console.log('🔈 ~ items', items)
-  console.log('🔈 ~ title', title)
-
-  return (
-    <>
-      <h5 style={{ marginTop: 16, fontSize: 14 }}>{title}</h5>
-      <ul style={{ paddingLeft: 0 }}>
-        {items?.map((item, index) => {
-          const { name, value, color } = item
-          return (
-            <li
-              key={item.bucket}
-              className="g2-tooltip-list-item"
-              data-index={index}
-              style={{ marginBottom: 4, display: 'flex', alignItems: 'center' }}
-            >
-              <span className="g2-tooltip-marker" style={{ backgroundColor: color }}></span>
-              <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
-                <span style={{ marginRight: 16 }}>{index === 0 ? 'Annual return' : 'Win ratio'}:</span>
-                <Value className="g2-tooltip-list-item-value">
-                  {index === 0 && value > 0 ? '+' : ''}
-                  {index === 0 ? Number(value).toFixed(2) : value}%
-                </Value>
-              </span>
-            </li>
-          )
-        })}
-      </ul>
-    </>
-  )
-}
+const chartTooltip = (title: string, items: any[]) => (
+  <>
+    <h5 style={{ marginTop: 16, fontSize: 14 }}>{title}</h5>
+    <ul style={{ paddingLeft: 0 }}>
+      {items?.map((item, index) => {
+        const { value, color } = item
+        return (
+          <li
+            key={item.bucket}
+            className="g2-tooltip-list-item"
+            data-index={index}
+            style={{ marginBottom: 4, display: 'flex', alignItems: 'center' }}
+          >
+            <span className="g2-tooltip-marker" style={{ backgroundColor: color }}></span>
+            <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
+              <span style={{ marginRight: 16 }}>{index === 0 ? 'Annual return' : 'Win ratio'}:</span>
+              <Value className="g2-tooltip-list-item-value">
+                {index === 0 && value > 0 ? '+' : ''}
+                {index === 0 ? Number(value).toFixed(2) : value}%
+              </Value>
+            </span>
+          </li>
+        )
+      })}
+    </ul>
+  </>
+)
 
 const AIScoreChart = () => {
   const theme = useTheme()
@@ -85,7 +80,7 @@ const AIScoreChart = () => {
       },
     },
     tooltip: {
-      customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
+      customContent: chartTooltip,
     },
     geometryOptions: [
       {
