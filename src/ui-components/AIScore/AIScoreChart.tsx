@@ -1,31 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
-import debounce from '~/common/utils/debounce'
-import theme from '~/lib/theme'
-import withCharts from '~/ui-components/Charts/withCharts'
+import { useTheme } from '@emotion/react'
 
-const ChartContainer = styled.div`
-  .g2-tooltip-title {
-    font-weight: 500;
-    font-size: 0.9rem;
-  }
-
-  .g2-tooltip-name {
-    font-size: 0.9rem;
-  }
-
-  .g2-tooltip-value {
-    font-weight: 500;
-    font-size: 0.9rem;
-  }
-
-  .g2-tooltip-value.positive {
-    color: ${(props: any) => props.theme.palette.scale.perfect};
-  }
-  .g2-tooltip-value.negative {
-    color: ${(props: any) => props.theme.palette.scale.worst};
-  }
-`
+const DualAxes = dynamic(() => import('@ant-design/charts').then((mod) => mod.DualAxes) as any, { ssr: false })
 
 const chartData = [
   { bucket: '-100 to -90', score: -95, irr: -9.13, winrate: 48 },
@@ -50,130 +27,80 @@ const chartData = [
   { bucket: '90 to 100', score: 95, irr: 30.15, winrate: 90 },
 ]
 
-const renderChart = ({ G2, chartInstance, id, height = 360 }: any) => {
-  if (!document.querySelector(`#${id}`)) {
-    if (chartInstance) {
-      chartInstance.destroy()
-      chartInstance = undefined
-    }
-    return null
+const Value = styled.span`
+  font-weight: bold;
+  font-size: 14px;
+`
+
+const chartTooltip = (title: string, items: any[]) => (
+  <>
+    <h5 style={{ marginTop: 16, fontSize: 14 }}>{title}</h5>
+    <ul style={{ paddingLeft: 0 }}>
+      {items?.map((item, index) => {
+        const { value, color } = item
+        return (
+          <li
+            key={item.bucket}
+            className="g2-tooltip-list-item"
+            data-index={index}
+            style={{ marginBottom: 4, display: 'flex', alignItems: 'center' }}
+          >
+            <span className="g2-tooltip-marker" style={{ backgroundColor: color }}></span>
+            <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
+              <span style={{ marginRight: 16 }}>{index === 0 ? 'Annual return' : 'Win ratio'}:</span>
+              <Value className="g2-tooltip-list-item-value">
+                {index === 0 && value > 0 ? '+' : ''}
+                {index === 0 ? Number(value).toFixed(2) : value}%
+              </Value>
+            </span>
+          </li>
+        )
+      })}
+    </ul>
+  </>
+)
+
+const AIScoreChart = () => {
+  const theme = useTheme()
+  const config = {
+    legend: false,
+    data: [chartData, chartData],
+    xField: 'bucket',
+    yField: ['irr', 'winrate'],
+    yAxis: {
+      irr: {
+        label: {
+          formatter: (value: number) => `${value}%`,
+        },
+      },
+      winrate: {
+        label: {
+          formatter: (value: number) => `${value}%`,
+        },
+      },
+    },
+    tooltip: {
+      customContent: chartTooltip,
+    },
+    geometryOptions: [
+      {
+        geometry: 'column',
+        color: (value: { bucket: string }) => {
+          if (Number(value?.bucket.split(' ')[0]) < -60) return theme.palette.danger[500]
+          return theme.palette.success[500]
+        },
+      },
+      {
+        geometry: 'line',
+        lineStyle: { lineWidth: 2 },
+        color: theme.palette.primary[600],
+        point: {},
+      },
+    ],
   }
 
-  const chart = new G2.Chart({
-    container: id,
-    autoFit: true,
-    padding: [0, 20, 24, 40],
-    height,
-  })
-  chartInstance = chart
-
-  chart.data(chartData)
-  chart.scale({
-    irr: {
-      alias: 'Avg. irr return',
-      range: [0, 0.98],
-    },
-    bucket: {
-      range: [0, 0.98],
-    },
-    winrate: {
-      alias: 'Win ratio',
-      range: [0, 0.98],
-    },
-  })
-
-  chart.axis('winrate', false)
-  chart.axis('bucket', {
-    label: {
-      autoRotate: false,
-    },
-  })
-  chart.axis('irr', {
-    label: {
-      formatter: (text: string) => `${Number(text) > 0 ? '+' : ''}${text}%`,
-      offset: 16,
-    },
-  })
-
-  chart.tooltip({
-    shared: true,
-    showMarkers: false,
-    itemTpl: `
-    <li class="g2-tooltip-list-item">
-        <span class="g2-tooltip-name">{label}</span>:<span class="g2-tooltip-value {className}">{value}</span>
-    </li>
-    `,
-  })
-
-  chart.legend(false)
-  chart
-    .interval()
-    .position('bucket*irr')
-    .color('score', (score: any) => (score <= -10 ? theme.palette.scale.worst : theme.palette.scale.perfect))
-    .tooltip('irr*score', (irr: any, score: any) => ({
-      label: 'Annual return',
-      value: `${irr > 0 ? '+' : ''}${irr.toFixed(2)}%`,
-      className: score > -10 ? 'positive' : 'negative',
-    }))
-
-  chart
-    .line()
-    .position('bucket*winrate')
-    .shape('smooth')
-    .tooltip('winrate', (winrate: any) => ({
-      label: 'Win ratio',
-      value: `${winrate}%`,
-    }))
-  chart.point().position('bucket*winrate').shape('circle')
-
-  chart.interaction('active-region')
-
-  chart.render()
+  // @ts-ignore
+  return <DualAxes {...config} />
 }
 
-const AIScoreChart = ({ G2, chartLibraryLoaded, style, ...rest }: any) => {
-  const id = 'ai-score-chart'
-  // Nasty hack to handle window resizing
-  // https://github.com/antvis/G2/issues/2491
-  const [isResizing, setIsResizing] = useState(false)
-  let chartInstance: any
-
-  const resize = () => {
-    setIsResizing(true)
-    if (chartInstance) {
-      chartInstance.destroy()
-      chartInstance = undefined
-    }
-  }
-
-  const debouncedReset = debounce(
-    () => {
-      setIsResizing(false)
-    },
-    200,
-    false
-  )
-
-  useEffect(() => {
-    window.addEventListener('resize', resize)
-    window.addEventListener('resize', debouncedReset)
-
-    if (!isResizing && !chartInstance) {
-      renderChart({ G2, chartInstance, id, ...rest })
-    }
-
-    return () => {
-      window.removeEventListener('resize', debouncedReset)
-      window.removeEventListener('resize', resize)
-      if (chartInstance) {
-        chartInstance.destroy()
-        chartInstance = undefined
-      }
-    }
-  })
-
-  if (isResizing || !chartLibraryLoaded) return null
-  return <ChartContainer id={id} style={style} />
-}
-
-export default React.memo(withCharts(AIScoreChart))
+export default AIScoreChart
