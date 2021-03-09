@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.91"></a>
+## 1.0.91 (2021-03-09)
+
+### Added
+
+- ✨ ability to change plans [[3dfb7c4](https://github.com/MarkLyck/formula-stocks/commit/3dfb7c4b03af8483178655f432bae81bbad617ba)]
+
+### Removed
+
+- 🔥 remove unused import [[0cb47a9](https://github.com/MarkLyck/formula-stocks/commit/0cb47a97ef54c602eba201e6412a2639a5ef4569)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.91 [[4cc20e1](https://github.com/MarkLyck/formula-stocks/commit/4cc20e1eff577320524bd4a478892ad2b4d7301c)]
+- 📝 generated changelog [[d0fa160](https://github.com/MarkLyck/formula-stocks/commit/d0fa160c3e44a84dc18fded7eef23d38a5f18e41)]
+-  Merge pull request [#134](https://github.com/MarkLyck/formula-stocks/issues/134) from MarkLyck/change-plan [[faf874b](https://github.com/MarkLyck/formula-stocks/commit/faf874b319b46a2d3bca1d118af44380fc39bf86)]
+
+
 <a name="1.0.90"></a>
 ## 1.0.90 (2021-03-09)
 
