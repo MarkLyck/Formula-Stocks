@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.92"></a>
+## 1.0.92 (2021-03-09)
+
+### Removed
+
+- 🔥 Remove antvis &amp; ant-data [[42274a5](https://github.com/MarkLyck/formula-stocks/commit/42274a5cadb8142986e5dddcef2941649fc54a82)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.92 [[4caccbf](https://github.com/MarkLyck/formula-stocks/commit/4caccbf3ae8123121ec99988898fbfe3f1c797e1)]
+- 📝 generated changelog [[54838d3](https://github.com/MarkLyck/formula-stocks/commit/54838d3ae6a9faf70c55db773bc94136ddd5c268)]
+-  Merge pull request [#135](https://github.com/MarkLyck/formula-stocks/issues/135) from MarkLyck/antvis [[6b5effa](https://github.com/MarkLyck/formula-stocks/commit/6b5effa968a887fdf27c8054b5654a4a5ed6afbb)]
+- 🗑️ cleanup [[b06cfaa](https://github.com/MarkLyck/formula-stocks/commit/b06cfaacc055e32d33613126724ae2ac977381ba)]
+
+
 <a name="1.0.91"></a>
 ## 1.0.91 (2021-03-09)
 
