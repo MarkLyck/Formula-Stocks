@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.89"></a>
+## 1.0.89 (2021-03-09)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v3.10.2 [[4acfcb3](https://github.com/MarkLyck/formula-stocks/commit/4acfcb39ac484f2a08cf105d3b909159b88a2e70)]
+- ⬆️ Update dependency @types/react-dom to v17.0.2 [[4c3e479](https://github.com/MarkLyck/formula-stocks/commit/4c3e479d675fc0490cd63bd4e28c45f0874a0725)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.89 [[7d70ad7](https://github.com/MarkLyck/formula-stocks/commit/7d70ad7700a0239c00bb566db8cc460ebcf1a22e)]
+-  Merge pull request [#133](https://github.com/MarkLyck/formula-stocks/issues/133) from MarkLyck/renovate/framer-motion-3.x [[b9dfc00](https://github.com/MarkLyck/formula-stocks/commit/b9dfc007dd4034e5553b482d8d2c977c4dac1e31)]
+-  Merge pull request [#132](https://github.com/MarkLyck/formula-stocks/issues/132) from MarkLyck/renovate/react-dom-17.x [[e0a21ad](https://github.com/MarkLyck/formula-stocks/commit/e0a21adcf333fd7e0056e8c27edb8fd2bd7e9d07)]
+- 📝 generated changelog [[ff7f974](https://github.com/MarkLyck/formula-stocks/commit/ff7f9748f20a6b68a321021fbfca4c8ae1b1ad6d)]
+
+
 <a name="1.0.88"></a>
 ## 1.0.88 (2021-03-08)
 
