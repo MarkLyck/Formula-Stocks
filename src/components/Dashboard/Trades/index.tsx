@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client'
 import { List, Row } from 'antd'
 import { useAtom, planAtom } from 'src/atoms'
 import { TRADES_QUERY } from 'src/common/queries'
+import { LoadingError } from 'src/ui-components'
 import Trade from './Trade'
 
 const Trades = () => {
@@ -13,8 +14,7 @@ const Trades = () => {
       planName: plan,
     },
   })
-
-  if (error) return 'error'
+  if (error) return <LoadingError error={error} />
 
   return (
     <Row gutter={16}>

@@ -9,7 +9,7 @@ import { useAtom, planAtom } from 'src/atoms'
 import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import ReturnsChart from './ReturnsChart'
 import BarChart from './Histogram'
-import { Card as DashboardCard, ErrorFallback } from 'src/ui-components'
+import { Card as DashboardCard, ErrorFallback, LoadingError } from 'src/ui-components'
 
 const { Option } = Select
 const { Title } = Typography
@@ -139,6 +139,8 @@ const PortfolioChart = () => {
     variables: { plan },
     // client: FSApolloClient,
   })
+
+  if (error) return <LoadingError error={error} />
 
   const dateMap = {
     all_time: new Date(2008, 11, 31),

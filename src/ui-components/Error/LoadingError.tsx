@@ -35,8 +35,8 @@ const LoadingError = ({ error }: any) => {
 
   if (error && error.message.includes('permission')) {
     return <PermissionError />
-  } else if (error && error.message.includes('Token expired')) {
-    logout('/dashboard/login')
+  } else if ((error && error.message.includes('Token expired')) || error.message === 'Token validation') {
+    logout(undefined, '/dashboard/login')
     return null
   }
 
