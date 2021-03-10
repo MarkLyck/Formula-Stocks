@@ -37,5 +37,8 @@ export const statistics = () => (
 )
 
 export const ai_score = () => <AIScoreModal isVisible onClose={() => {}} />
+ai_score.parameters = {
+  chromatic: { delay: 200 },
+}
 
 export const performance_guarantee = () => <PerformanceGuaranteeModal isVisible onClose={() => {}} />
