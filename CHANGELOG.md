@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.93"></a>
+## 1.0.93 (2021-03-10)
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.14.33 [[c0e683f](https://github.com/MarkLyck/formula-stocks/commit/c0e683fc422145580512d3cf97ee55404333a4f9)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.93 [[3198536](https://github.com/MarkLyck/formula-stocks/commit/3198536a9a6131265e51633b8cd998a62e7d1b0d)]
+-  Merge pull request [#136](https://github.com/MarkLyck/formula-stocks/issues/136) from MarkLyck/renovate/node-14.x [[37adf7a](https://github.com/MarkLyck/formula-stocks/commit/37adf7a3392a1f4a8609281bb63ca8c2f7eb848c)]
+-  Merge pull request [#137](https://github.com/MarkLyck/formula-stocks/issues/137) from MarkLyck/antvis [[b25f3f5](https://github.com/MarkLyck/formula-stocks/commit/b25f3f5df1c3fde70389505cdce3570f71694ddc)]
+- 🤡 chromatic delay [[92646d6](https://github.com/MarkLyck/formula-stocks/commit/92646d607fffd6083457e7fa2bb12ccee8b9816b)]
+- 📝 generated changelog [[f6398b3](https://github.com/MarkLyck/formula-stocks/commit/f6398b3c1690b7e038002946f769026ffa0f8c03)]
+
+
 <a name="1.0.92"></a>
 ## 1.0.92 (2021-03-09)
 
