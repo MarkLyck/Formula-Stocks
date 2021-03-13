@@ -1,5 +1,64 @@
 # Changelog
 
+<a name="1.0.98"></a>
+## 1.0.98 (2021-03-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.98 [[2b0daeb](https://github.com/MarkLyck/formula-stocks/commit/2b0daeb0671d8e480f36d6314e0b6d2b036e6dd6)]
+
+
+<a name="1.0.97"></a>
+## 1.0.97 (2021-03-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.97 [[c5aa165](https://github.com/MarkLyck/formula-stocks/commit/c5aa16547cbf05539c1235ec17b6c8915fa54056)]
+
+
+<a name="1.0.96"></a>
+## 1.0.96 (2021-03-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.96 [[f8b3622](https://github.com/MarkLyck/formula-stocks/commit/f8b3622b357bcd4797ed77fcc8544c3c1a11e294)]
+
+
+<a name="1.0.95"></a>
+## 1.0.95 (2021-03-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.95 [[6669c6c](https://github.com/MarkLyck/formula-stocks/commit/6669c6c943d15a15a5aed4eb8859167d7fbab430)]
+
+
+<a name="1.0.94"></a>
+## 1.0.94 (2021-03-13)
+
+### Added
+
+- ✨ loadingn error [[1a2f4ed](https://github.com/MarkLyck/formula-stocks/commit/1a2f4ed714c9000a88a4173ee2346d5a5842dc48)]
+
+### Changed
+
+- ⬆️ Update dependency tsconfig-paths-webpack-plugin to v3.4.1 [[24de0d9](https://github.com/MarkLyck/formula-stocks/commit/24de0d9757301501620a080bcbf4336139986738)]
+- ⬆️ Update dependency @types/node to v14.14.34 [[0c4aa82](https://github.com/MarkLyck/formula-stocks/commit/0c4aa824162877e6b1d8cffc2e1419588ece37bb)]
+- ⬆️ Update dependency react-minimal-pie-chart to v8.2.0 [[f5a9de5](https://github.com/MarkLyck/formula-stocks/commit/f5a9de51b26d96ca80be5bbc17e6c9631acb206d)]
+- ⬆️ Update dependency framer-motion to v3.10.3 [[044754d](https://github.com/MarkLyck/formula-stocks/commit/044754d4073f9dbde58a496a1e0c7e7c5957175c)]
+- ⬆️ Update dependency @ant-design/charts to v1.0.21 [[cf0b955](https://github.com/MarkLyck/formula-stocks/commit/cf0b955cd60cb98937dbd43e647b478c4a4342ee)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.94 [[fedc23e](https://github.com/MarkLyck/formula-stocks/commit/fedc23e56babddaa0cf0ae40e99b8bd382fcbe84)]
+-  Merge pull request [#142](https://github.com/MarkLyck/formula-stocks/issues/142) from MarkLyck/renovate/react-minimal-pie-chart-8.x [[399f082](https://github.com/MarkLyck/formula-stocks/commit/399f0821cb6897113891d632de397a0fe85de9e6)]
+-  Merge pull request [#143](https://github.com/MarkLyck/formula-stocks/issues/143) from MarkLyck/renovate/node-14.x [[dbf54a7](https://github.com/MarkLyck/formula-stocks/commit/dbf54a75805e850b818760854ba0f8be75f7c4ad)]
+-  Merge pull request [#144](https://github.com/MarkLyck/formula-stocks/issues/144) from MarkLyck/renovate/tsconfig-paths-webpack-plugin-3.x [[4a52fda](https://github.com/MarkLyck/formula-stocks/commit/4a52fdac1c493410bc8c418cc9309ff3221087ea)]
+-  Merge pull request [#141](https://github.com/MarkLyck/formula-stocks/issues/141) from MarkLyck/renovate/framer-motion-3.x [[101c58a](https://github.com/MarkLyck/formula-stocks/commit/101c58a8d8a9ce3478641e41a5c706acc62473c2)]
+-  Merge pull request [#140](https://github.com/MarkLyck/formula-stocks/issues/140) from MarkLyck/renovate/ant-design-charts-1.x [[b72ffd8](https://github.com/MarkLyck/formula-stocks/commit/b72ffd8f4adae6657872d6732f28f9466e6f7e28)]
+-  Merge pull request [#139](https://github.com/MarkLyck/formula-stocks/issues/139) from MarkLyck/loading-error [[f6cd00e](https://github.com/MarkLyck/formula-stocks/commit/f6cd00e15a945944bd0d8768a1da08adaf8fc0b4)]
+- 📝 generated changelog [[7173891](https://github.com/MarkLyck/formula-stocks/commit/7173891e3bcefd26ed6d17d24cf8b81a50bfca2f)]
+
+
 <a name="1.0.93"></a>
 ## 1.0.93 (2021-03-10)
 
