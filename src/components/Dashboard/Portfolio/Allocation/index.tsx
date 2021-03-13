@@ -2,14 +2,15 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 
 import { PORTFOLIO_HOLDINGS } from 'src/common/queries'
-import { DonutChart } from 'src/ui-components'
+import { DonutChart, LoadingError } from 'src/ui-components'
 import { useAtom, planAtom } from 'src/atoms'
 
 const Allocation = () => {
   const [plan] = useAtom(planAtom)
-  const { data, loading } = useQuery(PORTFOLIO_HOLDINGS, {
+  const { data, loading, error } = useQuery(PORTFOLIO_HOLDINGS, {
     variables: { planName: plan },
   })
+  if (error) return <LoadingError error={error} />
 
   const stocks: any[] = data?.portfolioHoldingsList?.items || []
   const chartData = stocks

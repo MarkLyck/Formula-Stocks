@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
 import { getAIScoreColor } from 'src/components/Dashboard/Reports/utils'
-import { ButtonIcon, DashboardHeader, Ticker } from 'src/ui-components'
+import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { Report } from 'src/ui-components/Stock'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
@@ -79,7 +79,7 @@ const Reports = () => {
     setSearchText(val)
   }
 
-  if (error) return <div>reports error</div> //<LoadingError error={error} />
+  if (error) return <LoadingError error={error} />
 
   const handleSearch = (selectedKeys: any[], confirm: () => void, dataIndex: any) => {
     confirm()

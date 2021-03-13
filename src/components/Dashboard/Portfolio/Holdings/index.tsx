@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { Table } from 'antd'
 
+import { LoadingError } from 'src/ui-components'
 import { useAtom, planAtom } from 'src/atoms'
 import { PORTFOLIO_HOLDINGS } from '~/common/queries'
 import columns, { HoldingType } from './Columns'
@@ -14,9 +15,10 @@ const Container = styled.div`
 const Holdings = () => {
   const [plan] = useAtom(planAtom)
 
-  const { data, loading } = useQuery(PORTFOLIO_HOLDINGS, {
+  const { data, loading, error } = useQuery(PORTFOLIO_HOLDINGS, {
     variables: { planName: plan },
   })
+  if (error) return <LoadingError error={error} />
 
   const holdings: HoldingType[] = data?.portfolioHoldingsList?.items || []
 
