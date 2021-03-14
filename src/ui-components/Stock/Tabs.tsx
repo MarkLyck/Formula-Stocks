@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Mixpanel } from '~/lib/analytics/mixpanel'
+import { Mixpanel } from 'src/lib/analytics/mixpanel'
 import { Tabs } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { About, Articles, Report, Stats, Financials } from '~/ui-components/Stock'
+import { About, Articles, Report, Stats, Financials } from 'src/ui-components/Stock'
 
 const { TabPane } = Tabs
 

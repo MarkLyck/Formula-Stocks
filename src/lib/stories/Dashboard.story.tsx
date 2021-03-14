@@ -5,7 +5,7 @@ import {
   LATEST_SELL_SIGNALS,
   LAUNCH_PERFORMANCE_HISTORY,
   PORTFOLIO_HOLDINGS,
-} from '~/common/queries'
+} from 'src/common/queries'
 import {
   USER_MOCK,
   latestSellSignalsMock,

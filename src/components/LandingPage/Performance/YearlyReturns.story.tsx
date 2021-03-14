@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import YearlyReturns from '~/components/LandingPage/Performance/YearlyReturns'
+import YearlyReturns from 'src/components/LandingPage/Performance/YearlyReturns'
 
 const Container = styled.div`
   padding: 32px;

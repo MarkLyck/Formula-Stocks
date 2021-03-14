@@ -1,5 +1,5 @@
-import withDashboard from '~/components/Dashboard/withDashboard'
-import Trades from '~/components/Dashboard/Trades'
+import withDashboard from 'src/components/Dashboard/withDashboard'
+import Trades from 'src/components/Dashboard/Trades'
 
 const TradesPage = withDashboard(Trades)
 

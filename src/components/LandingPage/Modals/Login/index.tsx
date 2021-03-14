@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Modal } from 'antd'
-import { ModalTitle } from '~/ui-components'
+import { ModalTitle } from 'src/ui-components'
 import LoginForm from './LoginForm'
 
 const ForgotPassword = styled.a`

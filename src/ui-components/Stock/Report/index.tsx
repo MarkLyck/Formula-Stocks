@@ -4,8 +4,8 @@ import styled from '@emotion/styled'
 import { Card, Divider, Space } from 'antd'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
-import { HorizontalScore, RadarChart } from '~/ui-components/Charts'
-import { AIScorePreview } from '~/ui-components'
+import { HorizontalScore, RadarChart } from 'src/ui-components/Charts'
+import { AIScorePreview } from 'src/ui-components'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const ChartContainer = styled(Card)`

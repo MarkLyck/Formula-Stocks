@@ -1,4 +1,4 @@
-import theme from '~/lib/theme'
+import theme from 'src/lib/theme'
 
 export const getAIScoreColor = (value: number) => {
   // if (score < -75) return 'Very bad'

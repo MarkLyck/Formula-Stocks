@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { StockReturn } from '~/ui-components/Stock'
+import { StockReturn } from 'src/ui-components/Stock'
 
 const YearByYearReturnsContainer = styled.ul`
   height: 100%;

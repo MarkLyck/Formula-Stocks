@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from './index'
-import { STATISTICS, STATISTICS_SINCE_LAUNCH } from '~/common/queries'
+import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
 import { STATISTICS_MOCK, STATISTICS_SINCE_LAUNCH_MOCK } from 'src/tests/mocks'
 
 export default {

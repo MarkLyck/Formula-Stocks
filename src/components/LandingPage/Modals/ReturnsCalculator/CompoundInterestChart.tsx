@@ -3,7 +3,7 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
-import { currencyRoundedFormatter } from '~/common/utils/formatters'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 
 const Value = styled.span`
   font-weight: bold;

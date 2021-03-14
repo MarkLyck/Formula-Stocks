@@ -2,8 +2,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Gauge } from '~/ui-components/Charts'
-import { Card } from '~/ui-components'
+import { Gauge } from 'src/ui-components/Charts'
+import { Card } from 'src/ui-components'
 
 // @ts-ignore
 export const AIScoreContainer = styled(Card)`

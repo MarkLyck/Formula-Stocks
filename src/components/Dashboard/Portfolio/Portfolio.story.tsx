@@ -1,6 +1,6 @@
 import React from 'react'
 import Portfolio from './index'
-import { LAUNCH_PERFORMANCE_HISTORY, PORTFOLIO_HOLDINGS } from '~/common/queries'
+import { LAUNCH_PERFORMANCE_HISTORY, PORTFOLIO_HOLDINGS } from 'src/common/queries'
 import { LAUNCH_PERFORMANCE_HISTORY_MOCK, PORTFOLIO_HOLDINGS_MOCK } from 'src/tests/mocks'
 
 export default {

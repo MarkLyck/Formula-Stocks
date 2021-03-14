@@ -1,6 +1,6 @@
 import React from 'react'
 import PortfolioHoldings from './index'
-import { PORTFOLIO_HOLDINGS } from '~/common/queries'
+import { PORTFOLIO_HOLDINGS } from 'src/common/queries'
 import { PORTFOLIO_HOLDINGS_MOCK } from 'src/tests/mocks'
 
 export default {

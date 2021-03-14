@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { Modal, Space, Typography, Table, Divider } from 'antd'
-import { PlusMinusInput, Disclaimer } from '~/ui-components'
+import { PlusMinusInput, Disclaimer } from 'src/ui-components'
 import CompoundInterestChart from './CompoundInterestChart'
-import { currencyRoundedFormatter } from '~/common/utils/formatters'
-import { STATISTICS } from '~/common/queries'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
+import { STATISTICS } from 'src/common/queries'
 
 const { Title, Paragraph } = Typography
 

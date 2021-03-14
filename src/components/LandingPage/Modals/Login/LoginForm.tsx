@@ -4,11 +4,11 @@ import { useMutation } from '@apollo/client'
 import { Form, Input, Button } from 'antd'
 import Router from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Mixpanel } from '~/lib/analytics/mixpanel'
-import { hasStorage, isBrowser } from '~/common/utils/featureTests'
-import { validateEmail } from '~/common/utils/helpers'
-import { USER_LOGIN } from '~/common/queries'
-import { Alert } from '~/ui-components'
+import { Mixpanel } from 'src/lib/analytics/mixpanel'
+import { hasStorage, isBrowser } from 'src/common/utils/featureTests'
+import { validateEmail } from 'src/common/utils/helpers'
+import { USER_LOGIN } from 'src/common/queries'
+import { Alert } from 'src/ui-components'
 
 const StyledForm = styled(Form)`
   svg {

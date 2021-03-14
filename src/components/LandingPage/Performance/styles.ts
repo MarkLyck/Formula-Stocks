@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { cardStyle } from '~/ui-components'
+import { cardStyle } from 'src/ui-components'
 
 export const GraphContainer = styled.div`
   position: relative;

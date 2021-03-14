@@ -17,9 +17,9 @@ import {
   LoadingIndicator,
   LoadingTag,
   ButtonIcon,
-} from '~/ui-components'
-import { useWindowSize } from '~/common/hooks'
-import { STATISTICS } from '~/common/queries'
+} from 'src/ui-components'
+import { useWindowSize } from 'src/common/hooks'
+import { STATISTICS } from 'src/common/queries'
 import { StatisticsModal, ReturnsCalculatorModal } from '../Modals'
 
 const ContentContainer = styled.div`

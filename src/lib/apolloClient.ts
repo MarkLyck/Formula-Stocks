@@ -4,7 +4,7 @@ import { concatPagination } from '@apollo/client/utilities'
 import { setContext } from 'apollo-link-context'
 import merge from 'deepmerge'
 import { isEqual } from 'lodash'
-import { hasStorage } from '~/common/utils/featureTests'
+import { hasStorage } from 'src/common/utils/featureTests'
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 

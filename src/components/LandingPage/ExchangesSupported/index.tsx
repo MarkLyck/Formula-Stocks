@@ -2,8 +2,8 @@ import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
-import { LandingPageContainer } from '~/ui-components'
-import { useWindowSize } from '~/common/hooks'
+import { LandingPageContainer } from 'src/ui-components'
+import { useWindowSize } from 'src/common/hooks'
 
 const Title = styled.h2`
   text-align: center;

@@ -3,10 +3,10 @@ import Router from 'next/router'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { Element } from 'react-scroll'
-import { maxSiteWidth } from '~/common/styles'
+import { maxSiteWidth } from 'src/common/styles'
 import { Space } from 'antd'
-import { ActionButton, ScalingTitle, ScalingParagraph, TextTag, ButtonIcon } from '~/ui-components'
-import { useWindowSize } from '~/common/hooks'
+import { ActionButton, ScalingTitle, ScalingParagraph, TextTag, ButtonIcon } from 'src/ui-components'
+import { useWindowSize } from 'src/common/hooks'
 
 const BackgroundContainer = styled.div`
   background-image: url(/images/product_images/screenshot_space.svg);

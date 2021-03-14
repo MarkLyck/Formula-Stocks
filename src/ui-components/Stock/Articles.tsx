@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { format } from 'date-fns'
-import { cardStyle, GenericLoading, Empty } from '~/ui-components'
-import { STOCK_ARTICLES_QUERY } from '~/common/queries'
-// import FSApolloClient from '~/common/FSApolloClient'
+import { cardStyle, GenericLoading, Empty } from 'src/ui-components'
+import { STOCK_ARTICLES_QUERY } from 'src/common/queries'
+// import FSApolloClient from 'src/common/FSApolloClient'
 import { NotNeededToUseService } from './Stats'
 
 const ArticlesContainer = styled.div``

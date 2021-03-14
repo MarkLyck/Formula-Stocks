@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-import { AUTH_PROFILE_ID } from '~/common/constants'
+import { AUTH_PROFILE_ID } from 'src/common/constants'
 
 export const USER_SIGNUP = gql`
   mutation userSignUpWithPassword(
