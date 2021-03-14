@@ -1,5 +1,5 @@
 import React from 'react'
-import withDashboard from '~/components/Dashboard/withDashboard'
+import withDashboard from 'src/components/Dashboard/withDashboard'
 
 const Account = () => {
   return <div>Account</div>

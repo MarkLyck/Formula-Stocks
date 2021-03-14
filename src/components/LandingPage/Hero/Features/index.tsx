@@ -5,10 +5,10 @@ import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { STATISTICS, STATISTICS_SINCE_LAUNCH } from '~/common/queries'
-import { SmallFeatureCard } from '~/ui-components'
-import { numberFormatter } from '~/common/utils/formatters'
-import { useWindowSize } from '~/common/hooks'
+import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
+import { SmallFeatureCard } from 'src/ui-components'
+import { numberFormatter } from 'src/common/utils/formatters'
+import { useWindowSize } from 'src/common/hooks'
 
 const Container = styled.div`
   padding: 0 8%;

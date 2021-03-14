@@ -1,5 +1,5 @@
 import React from 'react'
-import { STATISTICS } from '~/common/queries'
+import { STATISTICS } from 'src/common/queries'
 import { STATISTICS_MOCK } from 'src/tests/mocks'
 import ReturnsCalculatorModal from './index'
 

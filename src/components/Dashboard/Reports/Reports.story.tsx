@@ -1,6 +1,6 @@
 import React from 'react'
 import Reports from './index'
-import { SEARCH_REPORTS_QUERY } from '~/common/queries'
+import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 import { SEARCH_REPORTS_QUERY_MOCK } from 'src/tests/mocks'
 
 export default {

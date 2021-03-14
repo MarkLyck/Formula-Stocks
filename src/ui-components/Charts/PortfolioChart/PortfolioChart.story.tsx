@@ -1,7 +1,7 @@
 import React from 'react'
 import PortfolioChart from './index'
 import { MockedProvider } from '@apollo/client/testing'
-import { LAUNCH_PERFORMANCE_HISTORY } from '~/common/queries'
+import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import { LAUNCH_PERFORMANCE_HISTORY_MOCK } from 'src/tests/mocks'
 
 export default {

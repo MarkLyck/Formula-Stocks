@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Modal, Space } from 'antd'
-import { StatisticsCard, Tag } from '~/ui-components'
-import theme from '~/lib/theme'
+import { StatisticsCard, Tag } from 'src/ui-components'
+import theme from 'src/lib/theme'
 
 const StyledSpace = styled(Space)`
   width: 100%;

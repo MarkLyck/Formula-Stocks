@@ -2,9 +2,9 @@ import React from 'react'
 import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Legends, Legend } from '~/ui-components/Charts/Legends'
-import theme from '~/lib/theme'
-import { AreaChart } from '~/ui-components'
+import { Legends, Legend } from 'src/ui-components/Charts/Legends'
+import theme from 'src/lib/theme'
+import { AreaChart } from 'src/ui-components'
 import { GraphContainer, ChartLoaderContainer } from './styles'
 
 interface LaunchChartType {

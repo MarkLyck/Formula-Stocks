@@ -11,7 +11,7 @@ import {
   Beside,
   SpaceImage,
   TextTag,
-} from '~/ui-components'
+} from 'src/ui-components'
 import { AIScoreModal } from '../Modals'
 
 const ContentContainer = styled.div`

@@ -11,7 +11,7 @@ import {
   LandingPageContainer,
   Beside,
   SpaceImage,
-} from '~/ui-components'
+} from 'src/ui-components'
 
 const ContentContainer = styled.div`
   display: flex;

@@ -2,8 +2,8 @@ import React from 'react'
 import { Divider, Button, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { Element } from 'react-scroll'
-import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard } from '~/ui-components'
-import theme from '~/lib/theme'
+import { ScalingTitle, ScalingSubTitle, LandingPageContainer, Card, SmallFeatureCard } from 'src/ui-components'
+import theme from 'src/lib/theme'
 
 const CardTitle = styled.h4`
   margin: 0;

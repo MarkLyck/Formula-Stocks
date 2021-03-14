@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import { PortfolioChart, WelcomeStatus, Card } from '~/ui-components'
+import { PortfolioChart, WelcomeStatus, Card } from 'src/ui-components'
 import Holdings from './Holdings'
 import Allocation from './Allocation'
 

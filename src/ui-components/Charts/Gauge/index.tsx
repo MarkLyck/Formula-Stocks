@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 import { useCountUp } from 'react-countup'
 import { PieChart } from 'react-minimal-pie-chart'
 import styled from '@emotion/styled'
-import { cardStyle } from '~/ui-components'
-import { getAIScoreColor, getAIScoreType } from '~/common/utils/reportUtils'
-import theme from '~/lib/theme'
+import { cardStyle } from 'src/ui-components'
+import { getAIScoreColor, getAIScoreType } from 'src/common/utils/reportUtils'
+import theme from 'src/lib/theme'
 
 const Wrapper = styled.div`
   position: relative;

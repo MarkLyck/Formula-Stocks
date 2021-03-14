@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from '@emotion/styled'
-import { getAIScoreColor } from '~/common/utils/reportUtils'
-import theme from '~/lib/theme'
-import { Card } from '~/ui-components'
+import { getAIScoreColor } from 'src/common/utils/reportUtils'
+import theme from 'src/lib/theme'
+import { Card } from 'src/ui-components'
 
 const Container = styled(Card)`
   display: flex;

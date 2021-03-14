@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'antd'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ActionButton } from '~/ui-components'
+import { ActionButton } from 'src/ui-components'
 
 interface ResetPasswordModalProps {
   backToLogin?: any

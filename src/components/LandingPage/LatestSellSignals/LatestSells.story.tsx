@@ -1,6 +1,6 @@
 import React from 'react'
 import LatestSells from './index'
-import { LATEST_SELL_SIGNALS } from '~/common/queries'
+import { LATEST_SELL_SIGNALS } from 'src/common/queries'
 import { latestSellSignalsMock } from 'src/tests/mocks'
 
 export default {

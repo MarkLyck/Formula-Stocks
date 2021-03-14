@@ -1,6 +1,6 @@
 import React from 'react'
 import Newsletter from './index'
-import { CREATE_NEWSLETTER } from '~/common/queries'
+import { CREATE_NEWSLETTER } from 'src/common/queries'
 
 export default {
   title: 'Landing page/newsletter',

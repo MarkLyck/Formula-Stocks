@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Router from 'next/router'
 import { Space } from 'antd'
 import { logout } from 'src/common/utils'
-import { hasStorage, isBrowser } from '~/common/utils/featureTests'
+import { hasStorage, isBrowser } from 'src/common/utils/featureTests'
 
 import LoginButton from './LoginButton'
 import SignupButton from './SignupButton'

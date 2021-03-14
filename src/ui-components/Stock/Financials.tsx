@@ -1,10 +1,10 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
 import styled from '@emotion/styled'
-import { CardTitle, GenericLoading, Empty } from '~/ui-components'
-import { currencyFormatter } from '~/common/utils/formatters'
-import { STOCK_FINANCIALS_QUERY } from '~/common/queries'
-// import FSApolloClient from '~/common/FSApolloClient'
+import { CardTitle, GenericLoading, Empty } from 'src/ui-components'
+import { currencyFormatter } from 'src/common/utils/formatters'
+import { STOCK_FINANCIALS_QUERY } from 'src/common/queries'
+// import FSApolloClient from 'src/common/FSApolloClient'
 import { Statistic, StatBox, NotNeededToUseService } from './Stats'
 
 const Container = styled.div`

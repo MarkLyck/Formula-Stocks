@@ -1,6 +1,6 @@
 import React from 'react'
-import { USER_LOGIN } from '~/common/queries'
-import { USER_SIGNUP_MOCK } from '~/tests/mocks'
+import { USER_LOGIN } from 'src/common/queries'
+import { USER_SIGNUP_MOCK } from 'src/tests/mocks'
 import LoginModal from './index'
 import LoginForm from './LoginForm'
 

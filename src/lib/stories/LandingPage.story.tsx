@@ -7,7 +7,7 @@ import {
   MARKET_PRICE_HISTORY,
   STATISTICS,
   STATISTICS_SINCE_LAUNCH,
-} from '~/common/queries'
+} from 'src/common/queries'
 import {
   latestSellSignalsMock,
   LAUNCH_PERFORMANCE_HISTORY_MOCK,

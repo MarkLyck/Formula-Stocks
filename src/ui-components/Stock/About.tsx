@@ -2,11 +2,11 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import { Divider } from 'antd'
 import styled from '@emotion/styled'
-import { Card, GenericLoading, Empty } from '~/ui-components'
-import { capitalize } from '~/common/utils/helpers'
-import { STOCK_ABOUT_QUERY } from '~/common/queries'
-import { numberFormatter } from '~/common/utils/formatters'
-// import FSApolloClient from '~/common/FSApolloClient'
+import { Card, GenericLoading, Empty } from 'src/ui-components'
+import { capitalize } from 'src/common/utils/helpers'
+import { STOCK_ABOUT_QUERY } from 'src/common/queries'
+import { numberFormatter } from 'src/common/utils/formatters'
+// import FSApolloClient from 'src/common/FSApolloClient'
 
 const Info = styled(Card)`
   grid-area: info;

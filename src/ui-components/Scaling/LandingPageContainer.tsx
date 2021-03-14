@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { maxSiteWidth } from '~/common/styles'
+import { maxSiteWidth } from 'src/common/styles'
 
 interface LandingPageContainerProps {
   align?: string

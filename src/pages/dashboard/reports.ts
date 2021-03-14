@@ -1,5 +1,5 @@
-import withDashboard from '~/components/Dashboard/withDashboard'
-import Reports from '~/components/Dashboard/Reports'
+import withDashboard from 'src/components/Dashboard/withDashboard'
+import Reports from 'src/components/Dashboard/Reports'
 
 const ReportsPage = withDashboard(Reports)
 

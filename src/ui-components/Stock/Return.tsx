@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { lighten } from 'polished'
-import theme from '~/lib/theme'
+import theme from 'src/lib/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Tag } from '~/ui-components'
+import { Tag } from 'src/ui-components'
 
 export const Container = styled.span`
   background: ${(p: any) => lighten(p.backgroundOpacity, p.color ? p.color : p.theme.palette.primary[600])};

@@ -6,16 +6,16 @@ import { useQuery } from '@apollo/client'
 import fetch from 'isomorphic-unfetch'
 import { Tabs } from 'antd'
 import { useTheme } from '@emotion/react'
-import { useWindowSize } from '~/common/hooks'
+import { useWindowSize } from 'src/common/hooks'
 
-import { COMPANY_NAME } from '~/common/constants'
-import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from '~/ui-components'
+import { COMPANY_NAME } from 'src/common/constants'
+import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from 'src/ui-components'
 import LaunchChart from './LaunchChart'
 import BacktestedChart from './BacktestedChart'
-// import FSApolloClient from '~/common/FSApolloClient'
-import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from '~/common/queries'
+// import FSApolloClient from 'src/common/FSApolloClient'
+import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
 import YearlyReturns from './YearlyReturns'
-import { ReturnsCalculatorModal } from '~/components/LandingPage/Modals'
+import { ReturnsCalculatorModal } from 'src/components/LandingPage/Modals'
 
 // @ts-ignore
 if (!process.browser) {

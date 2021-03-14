@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story } from '@storybook/react'
 import { SmallFeatureCard, CardProps } from './SmallFeatureCard'
-import theme from '~/lib/theme'
+import theme from 'src/lib/theme'
 
 export default {
   title: 'ui-components/Card/Feature',

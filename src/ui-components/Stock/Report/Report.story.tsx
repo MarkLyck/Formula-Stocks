@@ -1,5 +1,5 @@
 import React from 'react'
-import Report, { ReportType } from '~/ui-components/Stock/Report'
+import Report, { ReportType } from 'src/ui-components/Stock/Report'
 import { REPORT_MOCK } from 'src/tests/mocks'
 
 export default {

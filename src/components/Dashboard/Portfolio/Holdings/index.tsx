@@ -5,7 +5,7 @@ import { Table } from 'antd'
 
 import { LoadingError } from 'src/ui-components'
 import { useAtom, planAtom } from 'src/atoms'
-import { PORTFOLIO_HOLDINGS } from '~/common/queries'
+import { PORTFOLIO_HOLDINGS } from 'src/common/queries'
 import columns, { HoldingType } from './Columns'
 
 const Container = styled.div`
