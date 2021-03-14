@@ -1,5 +1,39 @@
 # Changelog
 
+<a name="1.0.101"></a>
+## 1.0.101 (2021-03-14)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.101 [[3407169](https://github.com/MarkLyck/formula-stocks/commit/340716926e6b05d9b90da207d71edd2e7857b736)]
+
+
+<a name="1.0.100"></a>
+## 1.0.100 (2021-03-14)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.100 [[d1346ca](https://github.com/MarkLyck/formula-stocks/commit/d1346cab2d6a2c3d24c98786e0b751481f54137b)]
+
+
+<a name="1.0.99"></a>
+## 1.0.99 (2021-03-14)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.14.0 [[98bb447](https://github.com/MarkLyck/formula-stocks/commit/98bb4472ccb97a09a5b960f8fab6539d4a67de1f)]
+- ⬆️ Update dependency jotai to v0.15.3 [[ee45033](https://github.com/MarkLyck/formula-stocks/commit/ee45033e6afe5569e025d8e9409f4d2f3fca6110)]
+- 🎨 improve imports [[9d2458d](https://github.com/MarkLyck/formula-stocks/commit/9d2458d34fbcdfd9bab9c5ae314e189e0de16db4)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.99 [[a8504f1](https://github.com/MarkLyck/formula-stocks/commit/a8504f1e54057fd0dac4157ffd1a4f4f1bb63d4c)]
+-  Merge pull request [#145](https://github.com/MarkLyck/formula-stocks/issues/145) from MarkLyck/renovate/jotai-0.x [[7b76f33](https://github.com/MarkLyck/formula-stocks/commit/7b76f336db2038a99295dab50d642026473545c6)]
+-  Merge pull request [#146](https://github.com/MarkLyck/formula-stocks/issues/146) from MarkLyck/renovate/antd-4.x [[e6c67a5](https://github.com/MarkLyck/formula-stocks/commit/e6c67a5e4a46fd9a291b87fcc4e568698212b401)]
+-  Merge pull request [#147](https://github.com/MarkLyck/formula-stocks/issues/147) from MarkLyck/code-cleanup [[565996d](https://github.com/MarkLyck/formula-stocks/commit/565996da9bbba1f65843a141ffb546161cf90c37)]
+- 📝 generated changelog [[6e39b6e](https://github.com/MarkLyck/formula-stocks/commit/6e39b6ed260c2de2e5133f299c9a2efb6b019654)]
+
+
 <a name="1.0.98"></a>
 ## 1.0.98 (2021-03-13)
 
