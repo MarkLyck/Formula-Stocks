@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.109"></a>
+## 1.0.109 (2021-03-18)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.109 [[840c708](https://github.com/MarkLyck/formula-stocks/commit/840c7081174c0301b035cbc9189f135fbd1f7ade)]
+
+
+<a name="1.0.108"></a>
+## 1.0.108 (2021-03-18)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v3.10.6 [[436529f](https://github.com/MarkLyck/formula-stocks/commit/436529f53934d3969241eec06d6e10b6dfec8945)]
+- ⬆️ Update dependency @apollo/client to v3.3.12 [[94e41dd](https://github.com/MarkLyck/formula-stocks/commit/94e41dd4108009741ce92c785c4e2be7dd3534a4)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.108 [[124c0b7](https://github.com/MarkLyck/formula-stocks/commit/124c0b7b85989878106e0e84d0963578fb63e7f1)]
+- 📝 generated changelog [[ed098d2](https://github.com/MarkLyck/formula-stocks/commit/ed098d265f71aa79edfce871063ea873163310d5)]
+-  Merge pull request [#149](https://github.com/MarkLyck/formula-stocks/issues/149) from MarkLyck/renovate/apollo-graphql-packages [[de131be](https://github.com/MarkLyck/formula-stocks/commit/de131be39db432d05458dfe2253585042ef48eed)]
+-  Merge pull request [#156](https://github.com/MarkLyck/formula-stocks/issues/156) from MarkLyck/renovate/framer-motion-3.x [[0f3d1cc](https://github.com/MarkLyck/formula-stocks/commit/0f3d1cc19f3ee8c195eece94119678c9e7460c9c)]
+
+
 <a name="1.0.107"></a>
 ## 1.0.107 (2021-03-18)
 
