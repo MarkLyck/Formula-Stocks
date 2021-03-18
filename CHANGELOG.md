@@ -1,5 +1,45 @@
 # Changelog
 
+<a name="1.0.104"></a>
+## 1.0.104 (2021-03-18)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.104 [[7e3e281](https://github.com/MarkLyck/formula-stocks/commit/7e3e281b3e07ad0e28eb4580a1a15b20d4334d19)]
+
+
+<a name="1.0.103"></a>
+## 1.0.103 (2021-03-18)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.103 [[dd6930c](https://github.com/MarkLyck/formula-stocks/commit/dd6930c716ef93cdcc1172822b1ccec3a01a9770)]
+
+
+<a name="1.0.102"></a>
+## 1.0.102 (2021-03-18)
+
+### Changed
+
+- 📱 responsive herp [[4e7ee54](https://github.com/MarkLyck/formula-stocks/commit/4e7ee546978cb0f98b74ec478a9cb2fb2d7145d5)]
+- ⬆️ Update Font Awesome [[372c0e1](https://github.com/MarkLyck/formula-stocks/commit/372c0e10e5980f76593aeef562d71af0c6eab422)]
+- ⬆️ Update dependency tsconfig-paths-webpack-plugin to v3.5.1 [[56ce9e0](https://github.com/MarkLyck/formula-stocks/commit/56ce9e0f613beb6f86cd29ff3441d491c2825672)]
+- ⬆️ Update dependency framer-motion to v3.10.5 [[8cbebc6](https://github.com/MarkLyck/formula-stocks/commit/8cbebc6f462c79bbc27fbd32b0b0034091b1c1f0)]
+- ⬆️ Update dependency next to v10.0.9 [[c28c985](https://github.com/MarkLyck/formula-stocks/commit/c28c98578273e3c141eb226941115bc0073bb3fb)]
+- ⬆️ Update dependency @types/node to v14.14.35 [[9f3d247](https://github.com/MarkLyck/formula-stocks/commit/9f3d247d6db5d8f0c5f169414788ba53def1af85)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.102 [[ab1c3c8](https://github.com/MarkLyck/formula-stocks/commit/ab1c3c8d853308386ced18eb4b4e38941a76d5dd)]
+-  Merge pull request [#148](https://github.com/MarkLyck/formula-stocks/issues/148) from MarkLyck/renovate/framer-motion-3.x [[dbc19ad](https://github.com/MarkLyck/formula-stocks/commit/dbc19ada613f4c5ab9d2049a39f5b33ed402a742)]
+-  Merge pull request [#150](https://github.com/MarkLyck/formula-stocks/issues/150) from MarkLyck/renovate/node-14.x [[f255964](https://github.com/MarkLyck/formula-stocks/commit/f25596479b37d4f9f34f9c4b18fa99404fea4dc1)]
+-  Merge pull request [#151](https://github.com/MarkLyck/formula-stocks/issues/151) from MarkLyck/renovate/nextjs-monorepo [[4e326bd](https://github.com/MarkLyck/formula-stocks/commit/4e326bd399d528bb6c33c377f2deb716ff26f550)]
+-  Merge pull request [#152](https://github.com/MarkLyck/formula-stocks/issues/152) from MarkLyck/renovate/tsconfig-paths-webpack-plugin-3.x [[80e3eee](https://github.com/MarkLyck/formula-stocks/commit/80e3eee15de2996191e94d4163b5090ddfad86b4)]
+-  Merge pull request [#153](https://github.com/MarkLyck/formula-stocks/issues/153) from MarkLyck/renovate/font-awesome [[c8af779](https://github.com/MarkLyck/formula-stocks/commit/c8af7795cde62212e7f39aebb92738870309edce)]
+-  Merge pull request [#154](https://github.com/MarkLyck/formula-stocks/issues/154) from MarkLyck/responsiveness [[f7a513c](https://github.com/MarkLyck/formula-stocks/commit/f7a513cd0d8ddce708c2cb7127fb3b1dfb259d2c)]
+- 📝 generated changelog [[4c1a5b5](https://github.com/MarkLyck/formula-stocks/commit/4c1a5b56b70aa9cff4a5b02a2c8b383febeb685b)]
+
+
 <a name="1.0.101"></a>
 ## 1.0.101 (2021-03-14)
 
