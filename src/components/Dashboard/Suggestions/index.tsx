@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { List, Row } from 'antd'
+import { Row } from 'antd'
 import { useAtom, planAtom } from 'src/atoms'
 import { SUGGESTIONS_QUERY } from 'src/common/queries'
 import { LoadingError } from 'src/ui-components'
@@ -9,7 +9,7 @@ import Trade from './Suggestion'
 const Suggestions = () => {
   const [plan] = useAtom(planAtom)
 
-  const { data, loading, error } = useQuery(SUGGESTIONS_QUERY, {
+  const { data, error } = useQuery(SUGGESTIONS_QUERY, {
     variables: {
       planName: plan,
     },
