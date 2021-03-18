@@ -4,7 +4,6 @@ import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const Tag = styled.span`
   color: white;
-  // color: ${(p) => p.color};
   background: ${(p: any) => transparentize(0.2, p.color)};
   border: 1px solid ${(p) => p.color};
   font-size: 12px;
@@ -24,7 +23,7 @@ const getTagName = (score: number) => {
   if (score < 50) return 'Good'
   if (score < 80) return 'Great'
   if (score < 100) return 'Excellent'
-  return 'Perfect'
+  return 'Ideal'
 }
 
 type AIScoreTagProps = {

@@ -1,12 +1,13 @@
 # Ignore artifacts:
 build
 public
+.next
+./node_modules
 
 # dev
 yarn.lock
 package-lock.json
 coverage
 .vercel
-.node_modules
 CHANGELOG.md
 *.log
