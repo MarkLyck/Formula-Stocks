@@ -103,6 +103,7 @@ const Spacer = styled('div', {
 const menuList = [
   { label: 'Portfolio', icon: ['fad', 'analytics'], route: '/dashboard/portfolio' },
   { label: 'Trades', icon: ['fad', 'flask'], route: '/dashboard/trades' },
+  { label: 'Suggestions', icon: ['fad', 'lightbulb'], route: '/dashboard/suggestions' },
   { label: 'AI Reports', icon: ['fad', 'tachometer-alt'], route: '/dashboard/reports' },
   { divider: true },
   { label: 'Account', icon: ['fad', 'user'], route: '/dashboard/account' },
