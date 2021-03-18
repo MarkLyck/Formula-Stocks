@@ -5,12 +5,12 @@ import { Card, Divider, Space } from 'antd'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
 import { HorizontalScore, RadarChart } from 'src/ui-components/Charts'
-import { AIScorePreview } from 'src/ui-components'
+import { AIScorePreview, AIScoreReturn } from 'src/ui-components'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const ChartContainer = styled(Card)`
   width: 100%;
-  height: 530px;
+  height: 480px;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -107,10 +107,11 @@ const Report = ({ price, scores, ticker }: ReportType) => {
             <Card>
               <AIScorePreview score={scores.ai_score} label="AI Score" />
               <Divider />
-              <ChartContainer>
-                <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />
-              </ChartContainer>
+              <AIScoreReturn score={scores.ai_score} />
             </Card>
+            <ChartContainer>
+              <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />
+            </ChartContainer>
           </Space>
         </ReportPartContainer>
 
