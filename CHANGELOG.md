@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.110"></a>
+## 1.0.110 (2021-03-18)
+
+### Added
+
+- ✨ AI Score annual return [[559a474](https://github.com/MarkLyck/formula-stocks/commit/559a474f98e8f19983d30e6626d404556ee3928c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.110 [[d5811cf](https://github.com/MarkLyck/formula-stocks/commit/d5811cf794da69df2ac5deb3edea938239c225e8)]
+- 📝 generated changelog [[032beba](https://github.com/MarkLyck/formula-stocks/commit/032beba883fa593415c699f9c4a682ff7886e7e1)]
+-  Merge pull request [#157](https://github.com/MarkLyck/formula-stocks/issues/157) from MarkLyck/report-IRR [[7d05f09](https://github.com/MarkLyck/formula-stocks/commit/7d05f098b7d4e2dda87090758666c5d052818d15)]
+
+
 <a name="1.0.109"></a>
 ## 1.0.109 (2021-03-18)
 
