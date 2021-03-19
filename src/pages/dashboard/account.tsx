@@ -1,8 +1,7 @@
-import React from 'react'
 import withDashboard from 'src/components/Dashboard/withDashboard'
 
-const Account = () => {
-  return <div>Account</div>
-}
+import Account from 'src/components/Dashboard/Account'
 
-export default withDashboard(Account)
+const AccountPage = withDashboard(Account)
+
+export default AccountPage

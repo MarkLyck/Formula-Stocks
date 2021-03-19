@@ -1,0 +1,47 @@
+export const getIndustryIcon = (sectorName: string, industryName: string) => {
+  const sector = sectorName.toLocaleLowerCase()
+  const industry = industryName.toLocaleLowerCase()
+
+  if (industry.includes('auto') || industry.includes('motor')) return 'car'
+  if (sector === 'communications' || industry === 'broadcasting' || industry.includes('telecom')) return 'satellite'
+  if (industry.includes('chemical') || industry === 'biotechnology') return 'flask'
+  if (industry.includes('wholesale') || industry.includes('warehous')) return 'warehouse'
+  if (industry.includes('invest')) return 'chart-line'
+  if (industry.includes('savings') || industry.includes('bank')) return 'piggy-bank'
+  if (industry.includes('tobacco')) return 'smoking'
+  if (industry.includes('real estate')) return 'sign'
+  if (industry.includes('industrial')) return 'industry-alt'
+  if (industry.includes('home')) return 'home'
+  if (industry.includes('oil') || industry.includes('crude') || industry.includes('gas')) return 'gas-pump'
+  if (industry.includes('medical') || industry.includes('health') || industry.includes('hospital'))
+    return 'briefcase-medical'
+  if (industry.includes('footwear')) return 'boot'
+  if (industry.includes('candy')) return 'candy-cane'
+  if (industry.includes('information')) return 'info-square'
+  if (industry.includes('restaurant')) return 'utensils'
+  if (industry.includes('food')) return 'meat'
+  if (industry.includes('construction')) return 'construction'
+  if (industry.includes('marketing')) return 'ad'
+  if (industry.includes('aerospace') || industry.includes('air freight') || industry === 'airlines') return 'plane'
+  if (industry.includes('alcoholic')) return 'wine-bottle'
+  if (industry.includes('truck')) return 'truck'
+  if (industry.includes('data')) return 'server'
+  if (industry.includes('agricultural')) return 'wheat'
+  if (industry === 'cable/satellite tv' || industry.includes('television')) return 'tv'
+  if (industry.includes('computer')) return 'computer-speaker'
+  if (industry.includes('packaging')) return 'box'
+  if (industry.includes('department store')) return 'shopping-bag'
+  if (industry.includes('discount')) return 'percentage'
+  if (industry.includes('software')) return 'window'
+  if (industry.includes('rental') || industry.includes('office')) return 'building'
+  if (industry.includes('electric') || industry.includes('electronic')) return 'plug'
+  if (industry.includes('pharma') || industry.includes('drug')) return 'pills'
+  if (industry.includes('marine')) return 'ship'
+  if (industry.includes('semiconductors')) return 'microchip'
+  if (industry.includes('store')) return 'store'
+  if (industry.includes('print')) return 'print'
+  if (industry.includes('personnel')) return 'user-tie'
+  if (sector.includes('energy')) return 'charging-station'
+
+  return undefined
+}

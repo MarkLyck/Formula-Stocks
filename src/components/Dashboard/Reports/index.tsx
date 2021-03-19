@@ -3,10 +3,11 @@ import styled from '@emotion/styled'
 import isPropValid from '@emotion/is-prop-valid'
 import { useQuery } from '@apollo/client'
 import Highlighter from 'react-highlight-words'
-import { Row, Col, Table, Input, Button, Typography } from 'antd'
+import { Row, Col, Table, Input, Button, Typography, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
+import { getIndustryIcon } from 'src/common/utils/getIndustryIcon'
 import { getAIScoreColor } from 'src/components/Dashboard/Reports/utils'
 import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
@@ -135,8 +136,19 @@ const Reports = () => {
         setTimeout(() => searchInput.select())
       }
     },
-    render: (text: any) => {
-      const displayText = dataIndex === 'ticker' ? text.replace('_', '.') : text
+    render: (text: any, record: any) => {
+      let displayText = dataIndex === 'ticker' ? text.replace('_', '.') : text
+
+      if (dataIndex === 'industry') {
+        return (
+          <Space>
+            {/* @ts-ignore */}
+            <FontAwesomeIcon icon={['fad', getIndustryIcon(record.sector, text)]} />
+            <span>{text}</span>
+          </Space>
+        )
+      }
+
       return searchedColumn === dataIndex ? (
         <Highlighter
           highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
