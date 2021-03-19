@@ -28,6 +28,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/dashboard/suggestions</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/dashboard/trades</loc>
     <changefreq>hourly</changefreq>
   </url>
