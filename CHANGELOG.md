@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.115"></a>
+## 1.0.115 (2021-03-19)
+
+### Added
+
+- ✨ dashboard login [[7a9382d](https://github.com/MarkLyck/formula-stocks/commit/7a9382d2b8e3e2965409762a6910f207c43d8261)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.115 [[02dae2c](https://github.com/MarkLyck/formula-stocks/commit/02dae2c3a26c344d8d2a1a50d5987e8f20b49a16)]
+- 📝 generated changelog [[389422a](https://github.com/MarkLyck/formula-stocks/commit/389422af379087fdf8611f2209a19f7108357db5)]
+-  Merge pull request [#161](https://github.com/MarkLyck/formula-stocks/issues/161) from MarkLyck/dashboard-login [[97cd8f9](https://github.com/MarkLyck/formula-stocks/commit/97cd8f91bc96a1f9debf19380934e67a51083cec)]
+
+
 <a name="1.0.114"></a>
 ## 1.0.114 (2021-03-19)
 
