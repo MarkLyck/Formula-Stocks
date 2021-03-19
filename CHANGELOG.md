@@ -1,5 +1,53 @@
 # Changelog
 
+<a name="1.0.114"></a>
+## 1.0.114 (2021-03-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.114 [[3d6afe9](https://github.com/MarkLyck/formula-stocks/commit/3d6afe97476285f1f20111dd1b230224bd4ce8ed)]
+
+
+<a name="1.0.113"></a>
+## 1.0.113 (2021-03-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.113 [[939eb0d](https://github.com/MarkLyck/formula-stocks/commit/939eb0d2148d684a4525db174e1e601a58ebf4eb)]
+
+
+<a name="1.0.112"></a>
+## 1.0.112 (2021-03-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.112 [[f212d55](https://github.com/MarkLyck/formula-stocks/commit/f212d55dac45adda94997f6f4ffdd5c96e24fa15)]
+
+
+<a name="1.0.111"></a>
+## 1.0.111 (2021-03-19)
+
+### Added
+
+- ✨ suggestions page [[2cb1c03](https://github.com/MarkLyck/formula-stocks/commit/2cb1c03fea134fca20394ff6ff3631506c6cd9a4)]
+
+### Changed
+
+- ⬆️ Update dependency ahooks to v2.10.0 [[fe1f0c8](https://github.com/MarkLyck/formula-stocks/commit/fe1f0c8bca82a8dab6e3a94deb5c27d930e45b1b)]
+- ⬆️ Update dependency gitmoji-cli to v3.3.1 [[dec873d](https://github.com/MarkLyck/formula-stocks/commit/dec873d8c6976cdd49dea4a45a27bc9652560734)]
+- ⬆️ Update dependency framer-motion to v4 [[91e8f3b](https://github.com/MarkLyck/formula-stocks/commit/91e8f3bd2368bc0594f60c1cba177632f7494844)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.111 [[175f31c](https://github.com/MarkLyck/formula-stocks/commit/175f31cbd035acf5b305e2b47b11d1be4d9aa183)]
+-  Merge pull request [#155](https://github.com/MarkLyck/formula-stocks/issues/155) from MarkLyck/suggestions [[46e56f8](https://github.com/MarkLyck/formula-stocks/commit/46e56f8e78557c725c629bd3d6ce6602f584450e)]
+-  Merge pull request [#160](https://github.com/MarkLyck/formula-stocks/issues/160) from MarkLyck/renovate/ahooks-2.x [[2de3581](https://github.com/MarkLyck/formula-stocks/commit/2de3581db0c1d4184d9fda0125172e8249c7efbe)]
+-  Merge pull request [#159](https://github.com/MarkLyck/formula-stocks/issues/159) from MarkLyck/renovate/gitmoji-cli-3.x [[037f22a](https://github.com/MarkLyck/formula-stocks/commit/037f22a2b8705d291f356098f5a94d6933a04aec)]
+-  Merge pull request [#158](https://github.com/MarkLyck/formula-stocks/issues/158) from MarkLyck/renovate/framer-motion-4.x [[8a9d314](https://github.com/MarkLyck/formula-stocks/commit/8a9d31457aec7262535014f6ad0b48de4fd3e060)]
+- 📝 generated changelog [[19d5aec](https://github.com/MarkLyck/formula-stocks/commit/19d5aec48b1c09d7b4ce2fe914aeb75b355f1f76)]
+- 🏷️ fix unused import [[d2b834d](https://github.com/MarkLyck/formula-stocks/commit/d2b834da803ee468e02b26351dfe8922504c6d77)]
+
+
 <a name="1.0.110"></a>
 ## 1.0.110 (2021-03-18)
 
