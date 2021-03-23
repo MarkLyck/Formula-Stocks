@@ -16,6 +16,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/dashboard/login</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/dashboard/portfolio</loc>
     <changefreq>hourly</changefreq>
   </url>
