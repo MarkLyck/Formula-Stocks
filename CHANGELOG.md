@@ -1,5 +1,41 @@
 # Changelog
 
+<a name="1.0.118"></a>
+## 1.0.118 (2021-03-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.118 [[48b6b61](https://github.com/MarkLyck/formula-stocks/commit/48b6b61f5c90a401e77cd7e11bbedc08a901cf5b)]
+
+
+<a name="1.0.117"></a>
+## 1.0.117 (2021-03-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.117 [[8fd4bc7](https://github.com/MarkLyck/formula-stocks/commit/8fd4bc7b854b8887a7f3337eec6e10fe282d4982)]
+
+
+<a name="1.0.116"></a>
+## 1.0.116 (2021-03-23)
+
+### Changed
+
+- ⬆️ Update dependency @types/react-dom to v17.0.3 [[14f6430](https://github.com/MarkLyck/formula-stocks/commit/14f643083e964817eaa741482e7e2546917a78a9)]
+- ⬆️ Update react monorepo to v17.0.2 [[06897ea](https://github.com/MarkLyck/formula-stocks/commit/06897ea0f8ff5a8144360a7a5b6e1b42bd341b95)]
+- ⬆️ Update dependency antd to v4.14.1 [[a83b7bb](https://github.com/MarkLyck/formula-stocks/commit/a83b7bb375622956b154f2cfdcfc3b197f581cb1)]
+- ⬆️ Update dependency globby to v11.0.3 [[f69bc34](https://github.com/MarkLyck/formula-stocks/commit/f69bc34de7970222742fb5c5eff40f1e779e4074)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.116 [[3e5f1fe](https://github.com/MarkLyck/formula-stocks/commit/3e5f1fe22cde64d0d12cda180baa0cd91c48e32b)]
+-  Merge pull request [#162](https://github.com/MarkLyck/formula-stocks/issues/162) from MarkLyck/renovate/globby-11.x [[97d15c1](https://github.com/MarkLyck/formula-stocks/commit/97d15c1d8fa775c747cbeeca5e555761b96f7e92)]
+-  Merge pull request [#165](https://github.com/MarkLyck/formula-stocks/issues/165) from MarkLyck/renovate/react-dom-17.x [[edbb8ea](https://github.com/MarkLyck/formula-stocks/commit/edbb8ea2685e1135ff7e0daad2f8ed5ce4661b98)]
+-  Merge pull request [#164](https://github.com/MarkLyck/formula-stocks/issues/164) from MarkLyck/renovate/react-monorepo [[7d8d057](https://github.com/MarkLyck/formula-stocks/commit/7d8d0571a4c3cca2f926f8ff9fece2f55f0ea7e1)]
+-  Merge pull request [#163](https://github.com/MarkLyck/formula-stocks/issues/163) from MarkLyck/renovate/antd-4.x [[da6afbf](https://github.com/MarkLyck/formula-stocks/commit/da6afbf314209257b0e3578357d5b0763e8801c7)]
+- 📝 generated changelog [[4ec3f21](https://github.com/MarkLyck/formula-stocks/commit/4ec3f2151755e0d4d1f6bd8cea0db4fc1932769a)]
+
+
 <a name="1.0.115"></a>
 ## 1.0.115 (2021-03-19)
 
