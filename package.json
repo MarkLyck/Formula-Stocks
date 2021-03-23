@@ -1,7 +1,7 @@
 {
   "name": "formula-stocks",
   "license": "MIT",
-  "version": "1.0.115",
+  "version": "1.0.116",
   "scripts": {
     "dev": "next",
     "build": "next build",
