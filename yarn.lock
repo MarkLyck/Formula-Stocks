@@ -7891,10 +7891,10 @@ jest-worker@^26.2.1, jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jotai@0.15.3:
-  version "0.15.3"
-  resolved "https://registry.yarnpkg.com/jotai/-/jotai-0.15.3.tgz#323dcdc2b1a7f7ec777997b2d827e61bada2ede3"
-  integrity sha512-4+0Ie61mSQjyEuh/vCKKr7JFclDe/9DxV2rhzGRRZwnCcmgld8AdGX9BnRqfjMedyYpS3qATzLjIcCG0CopgMg==
+jotai@0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-0.16.0.tgz#f31faea08c03eb6fffd3839c2b4e1b5ba3a14bc6"
+  integrity sha512-1DjHUnTWIZD9Qh/cM+snmgJbI13AYccqfcDu0Vs8+sXHfzUi6zNyJUKfmJAjTH6vM4y81ljooTj8jSLyQauQuw==
 
 js-cookie@^2.2.1:
   version "2.2.1"
