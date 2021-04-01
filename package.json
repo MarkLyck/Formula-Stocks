@@ -63,7 +63,7 @@
     "@types/node": "14.14.35",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@types/react-highlight-words": "0.16.1",
+    "@types/react-highlight-words": "0.16.2",
     "@types/react-scroll": "1.8.2",
     "@zeit/next-less": "1.0.1",
     "babel-plugin-import": "1.13.3",
