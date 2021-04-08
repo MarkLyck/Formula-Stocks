@@ -17,7 +17,7 @@
     "@ant-design/charts": "1.1.1",
     "@apollo/client": "3.3.13",
     "@emotion/react": "11.1.5",
-    "@emotion/styled": "11.1.5",
+    "@emotion/styled": "11.3.0",
     "@fortawesome/fontawesome-svg-core": "1.2.35",
     "@fortawesome/free-brands-svg-icons": "5.15.3",
     "@fortawesome/pro-duotone-svg-icons": "5.15.3",
@@ -55,7 +55,7 @@
     "react-scroll": "1.8.2"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "11.2.0",
+    "@emotion/babel-plugin": "11.3.0",
     "@storybook/addon-essentials": "6.2.2",
     "@storybook/react": "6.2.2",
     "@types/lodash": "4.14.168",
