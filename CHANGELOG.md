@@ -1,5 +1,90 @@
 # Changelog
 
+<a name="1.0.136"></a>
+## 1.0.136 (2021-04-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.136 [[f36a255](https://github.com/MarkLyck/formula-stocks/commit/f36a255aa9f3d70ac009b60fe32dae5c1aa783f2)]
+
+
+<a name="1.0.135"></a>
+## 1.0.135 (2021-04-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.135 [[0172097](https://github.com/MarkLyck/formula-stocks/commit/01720973730c46f0330ab0e64c33f51119d4218f)]
+
+
+<a name="1.0.134"></a>
+## 1.0.134 (2021-04-17)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.15.1 [[d3c24d7](https://github.com/MarkLyck/formula-stocks/commit/d3c24d7ed33c3052cfb4b931bad8405725f13423)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.134 [[0dbbcc6](https://github.com/MarkLyck/formula-stocks/commit/0dbbcc66577f9e331b2d656d64f76f7685122d06)]
+-  Merge pull request [#186](https://github.com/MarkLyck/formula-stocks/issues/186) from MarkLyck/renovate/antd-4.x [[874abf7](https://github.com/MarkLyck/formula-stocks/commit/874abf75b04c94032dd1d78c9e228fbae659ff8e)]
+
+
+<a name="1.0.133"></a>
+## 1.0.133 (2021-04-17)
+
+### Changed
+
+- ⬆️ Update dependency date-fns-tz to v1.1.4 [[8dc4ea3](https://github.com/MarkLyck/formula-stocks/commit/8dc4ea31a138aa82f1ca97baac3c341b11adb8bd)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.133 [[050c033](https://github.com/MarkLyck/formula-stocks/commit/050c0337cb38bfaa62038d7c41467b8bac5816f1)]
+-  Merge pull request [#187](https://github.com/MarkLyck/formula-stocks/issues/187) from MarkLyck/renovate/date-fns-tz-1.x [[2d42a1d](https://github.com/MarkLyck/formula-stocks/commit/2d42a1da7e6223b609ca1534471c450f3678881e)]
+
+
+<a name="1.0.132"></a>
+## 1.0.132 (2021-04-17)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v4.1.4 [[2390f5d](https://github.com/MarkLyck/formula-stocks/commit/2390f5dd4c3cd665222c54dc418a52b1d61697c5)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.132 [[68dc9f9](https://github.com/MarkLyck/formula-stocks/commit/68dc9f90fd8a2aafa44d9ad973e0970f13bfbd64)]
+-  Merge pull request [#183](https://github.com/MarkLyck/formula-stocks/issues/183) from MarkLyck/renovate/framer-motion-4.x [[4ff7b71](https://github.com/MarkLyck/formula-stocks/commit/4ff7b719a7c387217764bf973b803127d543aaa8)]
+
+
+<a name="1.0.131"></a>
+## 1.0.131 (2021-04-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.131 [[3aa4a03](https://github.com/MarkLyck/formula-stocks/commit/3aa4a03275e2148142d015e5b0b3c1c460d541bb)]
+
+
+<a name="1.0.130"></a>
+## 1.0.130 (2021-04-17)
+
+### Changed
+
+- ⬆️ Update dependency jotai to v0.16.1 [[f729328](https://github.com/MarkLyck/formula-stocks/commit/f729328574ac0ff8c6b8922c9654a8a22d95401c)]
+- ⬆️ Update dependency @types/node to v14.14.41 [[86fb140](https://github.com/MarkLyck/formula-stocks/commit/86fb140023966b61f25c2a61cf0fb2497b9e717c)]
+- ⬆️ Update dependency @ant-design/charts to v1.1.2 [[baab42b](https://github.com/MarkLyck/formula-stocks/commit/baab42b6035a09dcf10bfc8bb34788d1bcb38836)]
+- ⬆️ Update emotion monorepo to v11.3.0 [[f9a2c5b](https://github.com/MarkLyck/formula-stocks/commit/f9a2c5be14933055b59c86fc336eb821ee1171e5)]
+- ⬆️ Update dependency typescript to v4.2.4 [[3497c64](https://github.com/MarkLyck/formula-stocks/commit/3497c64922c1678a775a3cee8fcf20e5bd9e9fbb)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.130 [[d78791c](https://github.com/MarkLyck/formula-stocks/commit/d78791c79c690f0ed15415d245594139f7bf8893)]
+-  Merge pull request [#184](https://github.com/MarkLyck/formula-stocks/issues/184) from MarkLyck/renovate/typescript-4.x [[caf54a6](https://github.com/MarkLyck/formula-stocks/commit/caf54a6d81650519aecf252b67daec198477a8f8)]
+-  Merge pull request [#185](https://github.com/MarkLyck/formula-stocks/issues/185) from MarkLyck/renovate/emotion-monorepo [[4897f85](https://github.com/MarkLyck/formula-stocks/commit/4897f8579843aea5b002dfa275189b2fb5cd4e19)]
+-  Merge pull request [#188](https://github.com/MarkLyck/formula-stocks/issues/188) from MarkLyck/renovate/ant-design-charts-1.x [[c8fd6fa](https://github.com/MarkLyck/formula-stocks/commit/c8fd6fa98d29d609bf835a4bf0ad0f5d20f0d363)]
+-  Merge pull request [#189](https://github.com/MarkLyck/formula-stocks/issues/189) from MarkLyck/renovate/node-14.x [[f83ad4e](https://github.com/MarkLyck/formula-stocks/commit/f83ad4ec3b1b57774a2945bf896737ffd6c0ce42)]
+-  Merge pull request [#190](https://github.com/MarkLyck/formula-stocks/issues/190) from MarkLyck/renovate/jotai-0.x [[4a3ce18](https://github.com/MarkLyck/formula-stocks/commit/4a3ce18a03c95def06829111f060626d801c34f7)]
+- 📝 generated changelog [[f37be4f](https://github.com/MarkLyck/formula-stocks/commit/f37be4feb49ef4758843e1ba778f3c8b62e6b7e9)]
+
+
 <a name="1.0.129"></a>
 ## 1.0.129 (2021-04-02)
 
