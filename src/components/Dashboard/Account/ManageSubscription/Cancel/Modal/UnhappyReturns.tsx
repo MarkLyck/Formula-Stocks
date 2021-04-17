@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 import { differenceInDays } from 'date-fns'
 import { Typography, Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ReturnsCalculator } from '~/ui-components'
+import ReturnsCalculator from 'src/components//LandingPage/Modals/ReturnsCalculator'
 import { Title, Bold } from './styles'
-import { EXPECTED_RETURN, WIN_RATIO } from '~/common/constants'
+import { EXPECTED_RETURN, WIN_RATIO, COMPANY_NAME } from '~/common/constants'
 const { Paragraph } = Typography
 import { CancelPagePropsType } from './types'
 
@@ -25,7 +25,7 @@ const UnhappyReturns = ({
 }: CancelPagePropsType) => {
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const percentDiscount = 40
-  const discountedPrice = (17.5).toFixed(2)
+  const discountedPrice = 30
   const discountedMonths = 3
 
   const daysUserSubscribed = differenceInDays(new Date(), new Date(user.createdAt))
@@ -51,7 +51,7 @@ const UnhappyReturns = ({
           Show Returns Calculator
         </CalculatorButton>
       ) : null}
-      {calculatorVisible ? <ReturnsCalculator showHints={false} initialValue={500} /> : null}
+      <ReturnsCalculator isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />
       <br />
       <Paragraph>
         We provide an algorithmic value/growth investment strategy. It is impossible to judge such investments in just{' '}
@@ -80,13 +80,13 @@ const UnhappyReturns = ({
         <Bold>
           {discountedMonths} months {percentDiscount}% discount
         </Bold>{' '}
-        to Weekly Stocktip, allowing you to see how the system performs over a more reasonable period at a much lower
+        to {COMPANY_NAME}, allowing you to see how the system performs over a more reasonable period at a much lower
         price.
       </Paragraph>
 
       <Space direction="vertical">
         <Button type="primary" onClick={onApplyDiscount} loading={applyCouponLoading}>
-          Yes, I'll give the system a chance at ${discountedPrice} / week
+          Yes, I'll give the system a chance at ${discountedPrice} / month
         </Button>
         <Button type="primary" danger onClick={onCancel} loading={cancelLoading}>
           No I'll pass, cancel my subscription

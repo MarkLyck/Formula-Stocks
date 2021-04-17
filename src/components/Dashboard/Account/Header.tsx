@@ -29,7 +29,7 @@ const AccountHeader = ({ user }: AccountHeaderProps) => {
       <WelcomeBack>
         Welcome back, <NameSpan>{user?.firstName}</NameSpan>
       </WelcomeBack>
-      <Subtitle>{user.email}</Subtitle>
+      <Subtitle>{user?.email}</Subtitle>
     </>
   )
 }

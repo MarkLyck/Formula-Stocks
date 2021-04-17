@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { Typography, Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ReturnsCalculator } from '~/ui-components'
+import ReturnsCalculator from 'src/components//LandingPage/Modals/ReturnsCalculator'
 import { Title, Bold } from './styles'
 import { PRICE } from '~/common/constants'
 import { CancelPagePropsType } from './types'
@@ -20,7 +20,7 @@ const { Paragraph } = Typography
 const TooExpensive = ({ onCancel, cancelLoading, onApplyDiscount, applyCouponLoading }: CancelPagePropsType) => {
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const percentDiscount = 40
-  const discountedPrice = (17.5).toFixed(2)
+  const discountedPrice = 30
   const discountedMonths = 3
 
   return (
@@ -35,14 +35,14 @@ const TooExpensive = ({ onCancel, cancelLoading, onApplyDiscount, applyCouponLoa
           Show Returns Calculator
         </CalculatorButton>
       ) : null}
-      {calculatorVisible ? <ReturnsCalculator showHints={false} initialValue={200} /> : null}
+      <ReturnsCalculator isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />
       <br />
       <Paragraph>
         But no matter how good our returns and dividends are, we totally understand that they don't happen overnight,
-        and not everyone can afford to pay ${PRICE}/week up front to begin with.
+        and not everyone can afford to pay ${PRICE}/month up front to begin with.
       </Paragraph>
       <Paragraph>
-        If we can help you by cutting <Bold>{percentDiscount}% of the price</Bold> every week for the next{' '}
+        If we can help you by cutting <Bold>{percentDiscount}% of the price</Bold> every month for the next{' '}
         <Bold>{discountedMonths} months</Bold> to give the system some time to start paying for itself in returns and
         dividends, would you stay?
       </Paragraph>
@@ -52,7 +52,7 @@ const TooExpensive = ({ onCancel, cancelLoading, onApplyDiscount, applyCouponLoa
       </Paragraph>
       <Space direction="vertical">
         <Button type="primary" onClick={onApplyDiscount} loading={applyCouponLoading}>
-          Yes, I'll stay for the discounted price at ${discountedPrice} / week
+          Yes, I'll stay for the discounted price at ${discountedPrice} / month
         </Button>
         <Button type="primary" danger onClick={onCancel} loading={cancelLoading}>
           No I'll pass, cancel my subscription

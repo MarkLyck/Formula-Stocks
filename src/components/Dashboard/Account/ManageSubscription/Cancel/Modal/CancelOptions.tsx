@@ -1,8 +1,7 @@
 import React from 'react'
-import { Button } from 'antd'
+import { Button, Space } from 'antd'
 import { Title } from './styles'
-import { Space } from '~/ui-components'
-import { Mixpanel } from '~/common/analytics/mixpanel'
+// import { Mixpanel } from '~/common/analytics/mixpanel'
 
 type CancelOptionsPropsType = {
   setPage: any
@@ -10,21 +9,21 @@ type CancelOptionsPropsType = {
 
 const CancelOptions = ({ setPage }: CancelOptionsPropsType) => {
   const handleClick = (reason: string) => {
-    Mixpanel.track('Cancel Reason Click', {
-      reason,
-    })
+    // Mixpanel.track('Cancel Reason Click', {
+    //   reason,
+    // })
     setPage(reason)
   }
 
   return (
     <>
       <Title>Please let us know why you are canceling your subscription</Title>
-      <Space direction="vertical" fullWidth>
+      <Space direction="vertical" style={{ width: '100%' }}>
         <Button block type="default" onClick={() => handleClick('TOO_EXPENSIVE')}>
           It's too expensive
         </Button>
         <Button block type="default" onClick={() => handleClick('UNHAPPY_RETURNS')}>
-          Not happy with returns
+          I'm not satisfied with the returns
         </Button>
         <Button block type="default" onClick={() => handleClick('WANT_MORE_SIGNALS')}>
           I want more signals

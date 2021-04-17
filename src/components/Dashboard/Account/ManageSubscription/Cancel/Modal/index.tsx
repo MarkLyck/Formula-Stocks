@@ -10,9 +10,9 @@ import UnhappyReturns from './UnhappyReturns'
 import MoreSignals from './MoreSignals'
 import NoTrust from './NoTrust'
 import Other from './Other'
-import Error from './Error'
-import Success from './Success'
-import DiscountSuccess from './DiscountSuccess'
+// import Error from './Error'
+// import Success from './Success'
+// import DiscountSuccess from './DiscountSuccess'
 
 type onCancelType = () => void
 
@@ -94,9 +94,9 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
         onCancel={onCancel}
       />
     ),
-    ERROR: <Error onModalDismiss={onModalDismiss} />,
-    SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
-    DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
+    // ERROR: <Error onModalDismiss={onModalDismiss} />,
+    // SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
+    // DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
   }
 
   const titleMap = {

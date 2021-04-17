@@ -4,7 +4,7 @@ export const AUTH_PROFILE_ID = 'ck3689vfo00xk01l5g4we1bp1'
 
 export const STRIPE_API_KEY = 'pk_live_3kRhRm6wqrUJ3ThsaDlf0f8w'
 export const PLAN_PREFIX = 'weekly-'
-export const PRICE = 29
+export const PRICE = 50
 
 export const COMPANY_NAME = 'Formula Stocks'
 

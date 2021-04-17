@@ -4,8 +4,8 @@ import { Card } from 'antd'
 
 import Error from './Error'
 import Cancel from './Cancel'
-import Pause from './Pause'
-import ReActivate from './ReActivate'
+// import Pause from './Pause'
+// import ReActivate from './ReActivate'
 
 import { subscriptionType } from './types'
 
@@ -32,10 +32,10 @@ const Subscription = ({ subscription, updateUser, user }: SubscriptionPropsType)
     <Card title="Manage Subscription">
       <Error subscription={subscription} />
       <ButtonContainer>
-        <Pause subscription={subscription} user={user} />
+        {/* <Pause subscription={subscription} user={user} /> */}
         <Cancel subscription={subscription} updateUser={updateUser} user={user} />
       </ButtonContainer>
-      <ReActivate subscription={subscription} user={user} />
+      {/* <ReActivate subscription={subscription} user={user} /> */}
     </Card>
   )
 }
