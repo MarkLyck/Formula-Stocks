@@ -30,7 +30,7 @@
     "antd": "4.15.0",
     "apollo-link-context": "1.0.20",
     "copy-to-clipboard": "3.3.1",
-    "date-fns-tz": "1.1.2",
+    "date-fns-tz": "1.1.4",
     "dayjs": "1.10.4",
     "deepmerge": "4.2.2",
     "framer-motion": "4.1.4",
