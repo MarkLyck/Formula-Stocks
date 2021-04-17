@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.138"></a>
+## 1.0.138 (2021-04-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.138 [[a665885](https://github.com/MarkLyck/formula-stocks/commit/a6658850af716f5992f68e231febbf4afbfaf086)]
+
+
+<a name="1.0.137"></a>
+## 1.0.137 (2021-04-17)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.2.8 [[25bab37](https://github.com/MarkLyck/formula-stocks/commit/25bab37c6a28e1190380d565223560e2a8e5c44b)]
+- ⬆️ Update dependency @apollo/client to v3.3.15 [[6d17a86](https://github.com/MarkLyck/formula-stocks/commit/6d17a8663f4f9a554a2051c0c813241cae42790c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.137 [[73d6fa8](https://github.com/MarkLyck/formula-stocks/commit/73d6fa8f90eee1e3e28d78b469bbb2929939b97e)]
+- 📝 generated changelog [[47d644c](https://github.com/MarkLyck/formula-stocks/commit/47d644c121d2ef743139c778aa7e885986a495e0)]
+-  Merge pull request [#182](https://github.com/MarkLyck/formula-stocks/issues/182) from MarkLyck/renovate/apollo-graphql-packages [[489d921](https://github.com/MarkLyck/formula-stocks/commit/489d921fa835d223322d4d2f958de1a889722e5c)]
+-  Merge pull request [#181](https://github.com/MarkLyck/formula-stocks/issues/181) from MarkLyck/renovate/storybook-monorepo [[e879fe5](https://github.com/MarkLyck/formula-stocks/commit/e879fe5f22d48ada67258f11ac89f3e36bfa7407)]
+
+
 <a name="1.0.136"></a>
 ## 1.0.136 (2021-04-17)
 
