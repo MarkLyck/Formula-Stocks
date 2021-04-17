@@ -33,7 +33,7 @@
     "date-fns-tz": "1.1.2",
     "dayjs": "1.10.4",
     "deepmerge": "4.2.2",
-    "framer-motion": "4.1.2",
+    "framer-motion": "4.1.4",
     "graphql": "15.5.0",
     "isomorphic-unfetch": "3.1.0",
     "jotai": "0.16.1",
