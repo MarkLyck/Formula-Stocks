@@ -7076,10 +7076,10 @@ github-slugger@^1.0.0:
   dependencies:
     emoji-regex ">=6.0.0 <=6.1.1"
 
-gitmoji-cli@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/gitmoji-cli/-/gitmoji-cli-3.3.1.tgz#addb6cc64259cdf0aa6db0b096be1ad3ca108c5e"
-  integrity sha512-wsCS8L8QTb9ghnJJpn1qKj+LokhGQ7OlKSM/n6/LhB8E4w/Pn4hiSgqcBthaL5J6CwJiWjpbNSA4t3sE0yqEPw==
+gitmoji-cli@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/gitmoji-cli/-/gitmoji-cli-3.4.0.tgz#5aef759272e19f0516118766876f65fb490fb07a"
+  integrity sha512-a5XeeQlD5D6MGDp+whDE72IdTTC1zCYrksLlUPDigB3yVM5wuHsEtwdOkadJG4wgebLaDVA5S00E/GVb5PgSZw==
   dependencies:
     chalk "^4.1.0"
     conf "^9.0.0"
