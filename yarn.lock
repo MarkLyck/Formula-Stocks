@@ -3505,10 +3505,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/global-this/-/global-this-0.4.3.tgz#44cb668b03e7c4bc88cb6e6f9329d381131878ee"
   integrity sha512-MuHEpDBurNVeD6mV9xBcAN2wfTwuaFQhHuhWkJuXmyVJ5P5sBCw+nnFpdfb0tAvgWkfefWCsAoAsh7MTUr3LPg==
 
-"@w11r/use-breakpoint@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@w11r/use-breakpoint/-/use-breakpoint-1.8.0.tgz#55a9d7fd4ed6b55ca1e694dbefadc6e75c52915c"
-  integrity sha512-q4ZxtHUZnjZ0Rrs1b5uWjds/Zih2UvOe7zbIXiDi7/4I3688uNpAm/8x7MCbYzHmM8/fPOPEWNgpY3mbUDHmPQ==
+"@w11r/use-breakpoint@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@w11r/use-breakpoint/-/use-breakpoint-2.0.0.tgz#0d70d64fd9e54093cdc861212e0989a55521759e"
+  integrity sha512-MsxxNWN7cFfFW7N4EslXI2gvO9jDCnjxKz1Ducw30qfnP1xsioeQLSmGcmy6a9QtaPZawhiwjxCw/mKbLVeLbA==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
