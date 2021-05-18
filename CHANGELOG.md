@@ -1,5 +1,96 @@
 # Changelog
 
+<a name="1.0.145"></a>
+## 1.0.145 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency ahooks to v2.10.4 [[f6543b2](https://github.com/MarkLyck/formula-stocks/commit/f6543b202e0fb624e6f7ebccc90f3d2fc5b5a8ce)]
+- ⬆️ Update dependency ahooks to v2.10.4 [[0801ccc](https://github.com/MarkLyck/formula-stocks/commit/0801cccb971e37e9a29d186b736c35401a4b4f93)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.145 [[1dffb6c](https://github.com/MarkLyck/formula-stocks/commit/1dffb6c95bd17f8f0ef48665b9c80d86938a415c)]
+- 📝 generated changelog [[561004f](https://github.com/MarkLyck/formula-stocks/commit/561004ff42123131a04b4a7615304af309053d91)]
+-  Merge pull request [#194](https://github.com/MarkLyck/formula-stocks/issues/194) from MarkLyck/renovate/ahooks-2.x [[1e10a9d](https://github.com/MarkLyck/formula-stocks/commit/1e10a9d31eb072c7bb648e0caa6683ada72e6481)]
+-  Merge branch &#x27;renovate/ahooks-2.x&#x27; of https://github.com/MarkLyck/formula-stocks into renovate/ahooks-2.x [[ee3ed83](https://github.com/MarkLyck/formula-stocks/commit/ee3ed8317408744877ba6edad918f7e0205dbb7c)]
+- 🔀 merge main [[b21d766](https://github.com/MarkLyck/formula-stocks/commit/b21d766b7caa8b48938f5ddcbd29fb51fc39a24d)]
+
+
+<a name="1.0.144"></a>
+## 1.0.144 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.1.4 [[7248c7e](https://github.com/MarkLyck/formula-stocks/commit/7248c7e7d2eb4eadc278bab36cfaf21755e2bca4)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.144 [[cd38715](https://github.com/MarkLyck/formula-stocks/commit/cd38715487bae6621eead488d08b021becf62754)]
+- 📝 generated changelog [[71c96c5](https://github.com/MarkLyck/formula-stocks/commit/71c96c534c643ce5cb8dbbe435a1826df26b525f)]
+-  Merge pull request [#202](https://github.com/MarkLyck/formula-stocks/issues/202) from MarkLyck/renovate/ant-design-charts-1.x [[5188576](https://github.com/MarkLyck/formula-stocks/commit/5188576c4336cdf428787c9dfc4749fc6d4a8509)]
+-  Merge branch &#x27;main&#x27; into renovate/ant-design-charts-1.x [[a3f51bc](https://github.com/MarkLyck/formula-stocks/commit/a3f51bc8dd2c69c25429c4e2d4e1a06e017b2b30)]
+
+
+<a name="1.0.143"></a>
+## 1.0.143 (2021-05-18)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.143 [[6445843](https://github.com/MarkLyck/formula-stocks/commit/6445843325bde0d3a332dea7238e9fa440594f05)]
+
+
+<a name="1.0.142"></a>
+## 1.0.142 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v4.1.17 [[379dd97](https://github.com/MarkLyck/formula-stocks/commit/379dd97f6126c0cd3e18ab13c53593dc93cf6248)]
+- ⬆️ Update dependency jotai to v0.16.5 [[8580243](https://github.com/MarkLyck/formula-stocks/commit/85802434d40a42914e06babfabaf016584ad19c4)]
+- ⬆️ Update storybook monorepo to v6.2.9 [[f215975](https://github.com/MarkLyck/formula-stocks/commit/f21597580c96cb3f1720eb32a2857e89f9f8cf4f)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.142 [[3b62fee](https://github.com/MarkLyck/formula-stocks/commit/3b62feea168b936e0f993e9feb2c609ee8469a4e)]
+- 📝 generated changelog [[dfb0435](https://github.com/MarkLyck/formula-stocks/commit/dfb0435628e9be5c1d1e091bb781a8f4285669eb)]
+-  Merge pull request [#197](https://github.com/MarkLyck/formula-stocks/issues/197) from MarkLyck/renovate/storybook-monorepo [[9126531](https://github.com/MarkLyck/formula-stocks/commit/9126531c53a21fb27c55927d837a0e5e6ce660e0)]
+-  Merge pull request [#196](https://github.com/MarkLyck/formula-stocks/issues/196) from MarkLyck/renovate/jotai-0.x [[ecad280](https://github.com/MarkLyck/formula-stocks/commit/ecad280023d18f5f6a453a1717aa72e6568265b3)]
+-  Merge pull request [#193](https://github.com/MarkLyck/formula-stocks/issues/193) from MarkLyck/renovate/framer-motion-4.x [[d1b20c9](https://github.com/MarkLyck/formula-stocks/commit/d1b20c9402cafeb01570be18cd758508a7729d45)]
+- 🤡 chromatic delay [[391daf9](https://github.com/MarkLyck/formula-stocks/commit/391daf9e79b142a265b08949d4322e291fe8d496)]
+-  Merge branch &#x27;main&#x27; into renovate/storybook-monorepo [[a758794](https://github.com/MarkLyck/formula-stocks/commit/a7587945ee7b22c32448df3270f155e7467103e9)]
+-  Merge branch &#x27;main&#x27; into renovate/jotai-0.x [[371ea98](https://github.com/MarkLyck/formula-stocks/commit/371ea98aec82a7396deffc582b6f1ef5eac119cb)]
+-  Merge branch &#x27;main&#x27; into renovate/framer-motion-4.x [[e206069](https://github.com/MarkLyck/formula-stocks/commit/e206069e856bcec6ad1cc7df67380a1716abe76c)]
+
+
+<a name="1.0.141"></a>
+## 1.0.141 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.15.6 [[c07d6e5](https://github.com/MarkLyck/formula-stocks/commit/c07d6e5cc8ae80ab59d565cf37009bea2a544c4a)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.141 [[f14e8d2](https://github.com/MarkLyck/formula-stocks/commit/f14e8d2feb621ab1b3d21ecd30c6951cf373769d)]
+- 📝 generated changelog [[5148e4a](https://github.com/MarkLyck/formula-stocks/commit/5148e4adc35a48ab0e44986dcd8a6df675610c58)]
+-  Merge pull request [#192](https://github.com/MarkLyck/formula-stocks/issues/192) from MarkLyck/renovate/antd-4.x [[fd332ac](https://github.com/MarkLyck/formula-stocks/commit/fd332ac813d72a2705972bf09e30d56b8861d96a)]
+-  Merge branch &#x27;main&#x27; into renovate/antd-4.x [[474d0e3](https://github.com/MarkLyck/formula-stocks/commit/474d0e35c0c5c41134632681bf55c41d00f54ac7)]
+
+
+<a name="1.0.140"></a>
+## 1.0.140 (2021-05-18)
+
+### Fixed
+
+- 💚 fix CI lighthouse [[5b97fd3](https://github.com/MarkLyck/formula-stocks/commit/5b97fd3d591ab591c3b7a992933c6043039253c0)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.140 [[9e3a1ee](https://github.com/MarkLyck/formula-stocks/commit/9e3a1ee4ab358db8d5ac7f864eb5400932db78f4)]
+-  Merge pull request [#214](https://github.com/MarkLyck/formula-stocks/issues/214) from MarkLyck/fix-lighthouse [[e8cea66](https://github.com/MarkLyck/formula-stocks/commit/e8cea66f699063fef2cd13f9a87c14619e368d65)]
+- 📝 generated changelog [[3912e9a](https://github.com/MarkLyck/formula-stocks/commit/3912e9a65e16a041a24df54de7cb73ebce037e3b)]
+
+
 <a name="1.0.139"></a>
 ## 1.0.139 (2021-04-18)
 
