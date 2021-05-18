@@ -1,5 +1,35 @@
 # Changelog
 
+<a name="1.0.143"></a>
+## 1.0.143 (2021-05-18)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.143 [[6445843](https://github.com/MarkLyck/formula-stocks/commit/6445843325bde0d3a332dea7238e9fa440594f05)]
+
+
+<a name="1.0.142"></a>
+## 1.0.142 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency framer-motion to v4.1.17 [[379dd97](https://github.com/MarkLyck/formula-stocks/commit/379dd97f6126c0cd3e18ab13c53593dc93cf6248)]
+- ⬆️ Update dependency jotai to v0.16.5 [[8580243](https://github.com/MarkLyck/formula-stocks/commit/85802434d40a42914e06babfabaf016584ad19c4)]
+- ⬆️ Update storybook monorepo to v6.2.9 [[f215975](https://github.com/MarkLyck/formula-stocks/commit/f21597580c96cb3f1720eb32a2857e89f9f8cf4f)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.142 [[3b62fee](https://github.com/MarkLyck/formula-stocks/commit/3b62feea168b936e0f993e9feb2c609ee8469a4e)]
+- 📝 generated changelog [[dfb0435](https://github.com/MarkLyck/formula-stocks/commit/dfb0435628e9be5c1d1e091bb781a8f4285669eb)]
+-  Merge pull request [#197](https://github.com/MarkLyck/formula-stocks/issues/197) from MarkLyck/renovate/storybook-monorepo [[9126531](https://github.com/MarkLyck/formula-stocks/commit/9126531c53a21fb27c55927d837a0e5e6ce660e0)]
+-  Merge pull request [#196](https://github.com/MarkLyck/formula-stocks/issues/196) from MarkLyck/renovate/jotai-0.x [[ecad280](https://github.com/MarkLyck/formula-stocks/commit/ecad280023d18f5f6a453a1717aa72e6568265b3)]
+-  Merge pull request [#193](https://github.com/MarkLyck/formula-stocks/issues/193) from MarkLyck/renovate/framer-motion-4.x [[d1b20c9](https://github.com/MarkLyck/formula-stocks/commit/d1b20c9402cafeb01570be18cd758508a7729d45)]
+- 🤡 chromatic delay [[391daf9](https://github.com/MarkLyck/formula-stocks/commit/391daf9e79b142a265b08949d4322e291fe8d496)]
+-  Merge branch &#x27;main&#x27; into renovate/storybook-monorepo [[a758794](https://github.com/MarkLyck/formula-stocks/commit/a7587945ee7b22c32448df3270f155e7467103e9)]
+-  Merge branch &#x27;main&#x27; into renovate/jotai-0.x [[371ea98](https://github.com/MarkLyck/formula-stocks/commit/371ea98aec82a7396deffc582b6f1ef5eac119cb)]
+-  Merge branch &#x27;main&#x27; into renovate/framer-motion-4.x [[e206069](https://github.com/MarkLyck/formula-stocks/commit/e206069e856bcec6ad1cc7df67380a1716abe76c)]
+
+
 <a name="1.0.141"></a>
 ## 1.0.141 (2021-05-18)
 
