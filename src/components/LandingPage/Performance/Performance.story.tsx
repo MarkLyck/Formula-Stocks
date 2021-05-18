@@ -16,6 +16,7 @@ export default {
 export const performance = () => <Performance />
 
 performance.parameters = {
+  chromatic: { delay: 500 },
   apolloClient: {
     mocks: [
       {
