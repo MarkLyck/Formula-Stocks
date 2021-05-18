@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.141"></a>
+## 1.0.141 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.15.6 [[c07d6e5](https://github.com/MarkLyck/formula-stocks/commit/c07d6e5cc8ae80ab59d565cf37009bea2a544c4a)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.141 [[f14e8d2](https://github.com/MarkLyck/formula-stocks/commit/f14e8d2feb621ab1b3d21ecd30c6951cf373769d)]
+- 📝 generated changelog [[5148e4a](https://github.com/MarkLyck/formula-stocks/commit/5148e4adc35a48ab0e44986dcd8a6df675610c58)]
+-  Merge pull request [#192](https://github.com/MarkLyck/formula-stocks/issues/192) from MarkLyck/renovate/antd-4.x [[fd332ac](https://github.com/MarkLyck/formula-stocks/commit/fd332ac813d72a2705972bf09e30d56b8861d96a)]
+-  Merge branch &#x27;main&#x27; into renovate/antd-4.x [[474d0e3](https://github.com/MarkLyck/formula-stocks/commit/474d0e35c0c5c41134632681bf55c41d00f54ac7)]
+
+
+<a name="1.0.140"></a>
+## 1.0.140 (2021-05-18)
+
+### Fixed
+
+- 💚 fix CI lighthouse [[5b97fd3](https://github.com/MarkLyck/formula-stocks/commit/5b97fd3d591ab591c3b7a992933c6043039253c0)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.140 [[9e3a1ee](https://github.com/MarkLyck/formula-stocks/commit/9e3a1ee4ab358db8d5ac7f864eb5400932db78f4)]
+-  Merge pull request [#214](https://github.com/MarkLyck/formula-stocks/issues/214) from MarkLyck/fix-lighthouse [[e8cea66](https://github.com/MarkLyck/formula-stocks/commit/e8cea66f699063fef2cd13f9a87c14619e368d65)]
+- 📝 generated changelog [[3912e9a](https://github.com/MarkLyck/formula-stocks/commit/3912e9a65e16a041a24df54de7cb73ebce037e3b)]
+
+
 <a name="1.0.139"></a>
 ## 1.0.139 (2021-04-18)
 
