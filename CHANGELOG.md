@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.145"></a>
+## 1.0.145 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency ahooks to v2.10.4 [[f6543b2](https://github.com/MarkLyck/formula-stocks/commit/f6543b202e0fb624e6f7ebccc90f3d2fc5b5a8ce)]
+- ⬆️ Update dependency ahooks to v2.10.4 [[0801ccc](https://github.com/MarkLyck/formula-stocks/commit/0801cccb971e37e9a29d186b736c35401a4b4f93)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.145 [[1dffb6c](https://github.com/MarkLyck/formula-stocks/commit/1dffb6c95bd17f8f0ef48665b9c80d86938a415c)]
+- 📝 generated changelog [[561004f](https://github.com/MarkLyck/formula-stocks/commit/561004ff42123131a04b4a7615304af309053d91)]
+-  Merge pull request [#194](https://github.com/MarkLyck/formula-stocks/issues/194) from MarkLyck/renovate/ahooks-2.x [[1e10a9d](https://github.com/MarkLyck/formula-stocks/commit/1e10a9d31eb072c7bb648e0caa6683ada72e6481)]
+-  Merge branch &#x27;renovate/ahooks-2.x&#x27; of https://github.com/MarkLyck/formula-stocks into renovate/ahooks-2.x [[ee3ed83](https://github.com/MarkLyck/formula-stocks/commit/ee3ed8317408744877ba6edad918f7e0205dbb7c)]
+- 🔀 merge main [[b21d766](https://github.com/MarkLyck/formula-stocks/commit/b21d766b7caa8b48938f5ddcbd29fb51fc39a24d)]
+
+
 <a name="1.0.144"></a>
 ## 1.0.144 (2021-05-18)
 
