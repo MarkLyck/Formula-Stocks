@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.146"></a>
+## 1.0.146 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency storybook-addon-apollo-client to v4.0.8 [[f318417](https://github.com/MarkLyck/formula-stocks/commit/f31841711425de459f00b3471fdac3369ba78023)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.146 [[b2079dd](https://github.com/MarkLyck/formula-stocks/commit/b2079dd2f257fb4a3fd0e851058a51d7ac78202f)]
+- 📝 generated changelog [[4f76a76](https://github.com/MarkLyck/formula-stocks/commit/4f76a76d4b4a51c160e7b4c0486908d4274e8d65)]
+-  Merge pull request [#204](https://github.com/MarkLyck/formula-stocks/issues/204) from MarkLyck/renovate/storybook-addon-apollo-client-4.x [[c1769a2](https://github.com/MarkLyck/formula-stocks/commit/c1769a232a189e2e52cdaf6efb07c30e674e5aba)]
+
+
 <a name="1.0.145"></a>
 ## 1.0.145 (2021-05-18)
 
