@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.140"></a>
+## 1.0.140 (2021-05-18)
+
+### Fixed
+
+- 💚 fix CI lighthouse [[5b97fd3](https://github.com/MarkLyck/formula-stocks/commit/5b97fd3d591ab591c3b7a992933c6043039253c0)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.140 [[9e3a1ee](https://github.com/MarkLyck/formula-stocks/commit/9e3a1ee4ab358db8d5ac7f864eb5400932db78f4)]
+-  Merge pull request [#214](https://github.com/MarkLyck/formula-stocks/issues/214) from MarkLyck/fix-lighthouse [[e8cea66](https://github.com/MarkLyck/formula-stocks/commit/e8cea66f699063fef2cd13f9a87c14619e368d65)]
+- 📝 generated changelog [[3912e9a](https://github.com/MarkLyck/formula-stocks/commit/3912e9a65e16a041a24df54de7cb73ebce037e3b)]
+
+
 <a name="1.0.139"></a>
 ## 1.0.139 (2021-04-18)
 
