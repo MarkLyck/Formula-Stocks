@@ -1,5 +1,55 @@
 # Changelog
 
+<a name="1.0.153"></a>
+## 1.0.153 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency @w11r/use-breakpoint to v2 [[be3dd0a](https://github.com/MarkLyck/formula-stocks/commit/be3dd0a6ff1b21372fa580f076cac621df81190a)]
+- ⬆️ Update dependency @w11r/use-breakpoint to v2 [[10d8723](https://github.com/MarkLyck/formula-stocks/commit/10d8723cd0a9ba911d61d60d4328fe83a821633f)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.153 [[2f41509](https://github.com/MarkLyck/formula-stocks/commit/2f41509949016e48e60222f1c34a4203704cf01a)]
+- 📝 generated changelog [[491c344](https://github.com/MarkLyck/formula-stocks/commit/491c3441904cfc6e78baf22f75c57de1a18a7c1c)]
+-  Merge pull request [#195](https://github.com/MarkLyck/formula-stocks/issues/195) from MarkLyck/renovate/w11r-use-breakpoint-2.x [[ccf8185](https://github.com/MarkLyck/formula-stocks/commit/ccf8185063ea7934f123c5ab244684227204bc4a)]
+- 📦 update breakpoint [[cf96704](https://github.com/MarkLyck/formula-stocks/commit/cf967041529b8e079a19588fd06a149ca4ad2854)]
+- 📦 update breakpoint package [[89d9037](https://github.com/MarkLyck/formula-stocks/commit/89d903786aa92cf93f50dd6b7f10510fe3162472)]
+
+
+<a name="1.0.152"></a>
+## 1.0.152 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency next to v10.2.0 [[8379769](https://github.com/MarkLyck/formula-stocks/commit/8379769d4409ce5a4df3088d82680121b78be8c2)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.152 [[0c8918a](https://github.com/MarkLyck/formula-stocks/commit/0c8918adcb41882647688434b05a50b912cfae07)]
+- 📝 generated changelog [[0af0c07](https://github.com/MarkLyck/formula-stocks/commit/0af0c076d25d102bd515fae9e8644e807f1fb531)]
+-  Merge pull request [#203](https://github.com/MarkLyck/formula-stocks/issues/203) from MarkLyck/renovate/nextjs-monorepo [[406f7a7](https://github.com/MarkLyck/formula-stocks/commit/406f7a7d1bbaae90c08b1933e7144c379387a4cb)]
+- 🔀 merge main [[60f0ea5](https://github.com/MarkLyck/formula-stocks/commit/60f0ea571773440b25d5d5c9b43177b5974d5374)]
+- 🔀 merge main [[c52b36f](https://github.com/MarkLyck/formula-stocks/commit/c52b36f0ae7f2c845b873ded906c5b6be2221fd7)]
+-  Merge branch &#x27;main&#x27; into renovate/nextjs-monorepo [[7e32b2b](https://github.com/MarkLyck/formula-stocks/commit/7e32b2baae999ca57447227ed4e60a97110d0821)]
+
+
+<a name="1.0.151"></a>
+## 1.0.151 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency gitmoji-cli to v4 [[394da6f](https://github.com/MarkLyck/formula-stocks/commit/394da6f038ef328526b49ad14721f3b1f0e09177)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.151 [[2528b17](https://github.com/MarkLyck/formula-stocks/commit/2528b179890c2af8f556f658039ea335816a3bfe)]
+-  Merge pull request [#201](https://github.com/MarkLyck/formula-stocks/issues/201) from MarkLyck/renovate/gitmoji-cli-4.x [[1b0e403](https://github.com/MarkLyck/formula-stocks/commit/1b0e403aa29e11b7bf83647a58866b1cff8e601e)]
+- 🔀 merge main [[1c18259](https://github.com/MarkLyck/formula-stocks/commit/1c18259ee6432e0e8db3540e5529e8a3fd8dfdfb)]
+- 📝 generated changelog [[db84d49](https://github.com/MarkLyck/formula-stocks/commit/db84d495c5513cd2bbc3c19d11c2a7a31f17ff1a)]
+-  merge main [[fbae620](https://github.com/MarkLyck/formula-stocks/commit/fbae620cb1a6f6e9733a7d6bf5c788b509d737c8)]
+
+
 <a name="1.0.150"></a>
 ## 1.0.150 (2021-05-19)
 
