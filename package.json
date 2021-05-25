@@ -67,7 +67,7 @@
     "@types/react-scroll": "1.8.2",
     "@zeit/next-less": "1.0.1",
     "babel-plugin-import": "1.13.3",
-    "gitmoji-cli": "3.4.2",
+    "gitmoji-cli": "4.1.0",
     "globby": "11.0.3",
     "less": "3.13.1",
     "less-loader": "7.2.1",
