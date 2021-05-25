@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.153"></a>
+## 1.0.153 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency @w11r/use-breakpoint to v2 [[be3dd0a](https://github.com/MarkLyck/formula-stocks/commit/be3dd0a6ff1b21372fa580f076cac621df81190a)]
+- ⬆️ Update dependency @w11r/use-breakpoint to v2 [[10d8723](https://github.com/MarkLyck/formula-stocks/commit/10d8723cd0a9ba911d61d60d4328fe83a821633f)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.153 [[2f41509](https://github.com/MarkLyck/formula-stocks/commit/2f41509949016e48e60222f1c34a4203704cf01a)]
+- 📝 generated changelog [[491c344](https://github.com/MarkLyck/formula-stocks/commit/491c3441904cfc6e78baf22f75c57de1a18a7c1c)]
+-  Merge pull request [#195](https://github.com/MarkLyck/formula-stocks/issues/195) from MarkLyck/renovate/w11r-use-breakpoint-2.x [[ccf8185](https://github.com/MarkLyck/formula-stocks/commit/ccf8185063ea7934f123c5ab244684227204bc4a)]
+- 📦 update breakpoint [[cf96704](https://github.com/MarkLyck/formula-stocks/commit/cf967041529b8e079a19588fd06a149ca4ad2854)]
+- 📦 update breakpoint package [[89d9037](https://github.com/MarkLyck/formula-stocks/commit/89d903786aa92cf93f50dd6b7f10510fe3162472)]
+
+
 <a name="1.0.152"></a>
 ## 1.0.152 (2021-05-25)
 
