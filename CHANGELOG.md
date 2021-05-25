@@ -1,5 +1,72 @@
 # Changelog
 
+<a name="1.0.150"></a>
+## 1.0.150 (2021-05-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.150 [[1967c5a](https://github.com/MarkLyck/formula-stocks/commit/1967c5adb49f189dc56174c68a7e9239e107b907)]
+
+
+<a name="1.0.149"></a>
+## 1.0.149 (2021-05-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.149 [[a57c020](https://github.com/MarkLyck/formula-stocks/commit/a57c02062e3a68095e31ee63889a2fac04a0ab84)]
+
+
+<a name="1.0.148"></a>
+## 1.0.148 (2021-05-19)
+
+### Changed
+
+- ⬆️ Update dependency @apollo/client to v3.3.19 [[29bcc5b](https://github.com/MarkLyck/formula-stocks/commit/29bcc5bc5e851853afc5e54056459693c7df3715)]
+- ⬆️ Update dependency @types/lodash to v4.14.169 [[cef098a](https://github.com/MarkLyck/formula-stocks/commit/cef098a5f7ef5d87461bc2f7728f55e7fc90c1b7)]
+- ⬆️ Update dependency @types/node to v14.17.0 [[519b95a](https://github.com/MarkLyck/formula-stocks/commit/519b95ace0eec4daabafadd814dda1e7c5af0dec)]
+- ⬆️ Update dependency react-error-boundary to v3.1.3 [[e110371](https://github.com/MarkLyck/formula-stocks/commit/e110371f1da516eb6b5a2e6252dbbd7e353447e2)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.148 [[96a99bc](https://github.com/MarkLyck/formula-stocks/commit/96a99bce4cf632f1c17441999ea8969e297bc2fa)]
+- 📝 generated changelog [[a808b61](https://github.com/MarkLyck/formula-stocks/commit/a808b6112bdfb68c6c88cbfae3837cc28b0eb566)]
+-  Merge pull request [#200](https://github.com/MarkLyck/formula-stocks/issues/200) from MarkLyck/renovate/node-14.x [[138c128](https://github.com/MarkLyck/formula-stocks/commit/138c1289f4dfd6a6f640f1ddd72eb7fa6384f3de)]
+-  Merge pull request [#207](https://github.com/MarkLyck/formula-stocks/issues/207) from MarkLyck/renovate/react-error-boundary-3.x [[77226f0](https://github.com/MarkLyck/formula-stocks/commit/77226f0ae0e86e19f52b061eca3443824ffd3dd6)]
+-  Merge pull request [#206](https://github.com/MarkLyck/formula-stocks/issues/206) from MarkLyck/renovate/apollo-graphql-packages [[b346271](https://github.com/MarkLyck/formula-stocks/commit/b3462714c0132db05bf7a4d7d69345d0f595919d)]
+-  Merge pull request [#212](https://github.com/MarkLyck/formula-stocks/issues/212) from MarkLyck/renovate/lodash-4.x [[35d8c4e](https://github.com/MarkLyck/formula-stocks/commit/35d8c4ea423c347ef30e1b3355217e8ad32cdbb1)]
+- 🔀 merge main [[ff9f0b3](https://github.com/MarkLyck/formula-stocks/commit/ff9f0b37bff366b4a51e8168294eff6a98a2bfae)]
+-  Merge branch &#x27;main&#x27; into renovate/react-error-boundary-3.x [[592e575](https://github.com/MarkLyck/formula-stocks/commit/592e5754b2ef0f2c9dcdfa49800d64cd2b258d73)]
+
+
+<a name="1.0.147"></a>
+## 1.0.147 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency gitmoji-cli to v3.4.2 [[8b196f0](https://github.com/MarkLyck/formula-stocks/commit/8b196f082516463d7c5e6b34bf113b242ff21a85)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.147 [[fa92377](https://github.com/MarkLyck/formula-stocks/commit/fa92377b1f22623b73cc5992e92bb6a1ff17559f)]
+- 📝 generated changelog [[a94facb](https://github.com/MarkLyck/formula-stocks/commit/a94facbab8a8912bb83553af2c07c6be83afdf1c)]
+-  Merge pull request [#198](https://github.com/MarkLyck/formula-stocks/issues/198) from MarkLyck/renovate/gitmoji-cli-3.x [[e9c8510](https://github.com/MarkLyck/formula-stocks/commit/e9c85100b4e43a324ac2b3a06003c94b3f0465b9)]
+-  Merge branch &#x27;main&#x27; into renovate/gitmoji-cli-3.x [[5aa0dda](https://github.com/MarkLyck/formula-stocks/commit/5aa0dda57f47087bb55eadec84eefde1fdc0d903)]
+
+
+<a name="1.0.146"></a>
+## 1.0.146 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency storybook-addon-apollo-client to v4.0.8 [[f318417](https://github.com/MarkLyck/formula-stocks/commit/f31841711425de459f00b3471fdac3369ba78023)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.146 [[b2079dd](https://github.com/MarkLyck/formula-stocks/commit/b2079dd2f257fb4a3fd0e851058a51d7ac78202f)]
+- 📝 generated changelog [[4f76a76](https://github.com/MarkLyck/formula-stocks/commit/4f76a76d4b4a51c160e7b4c0486908d4274e8d65)]
+-  Merge pull request [#204](https://github.com/MarkLyck/formula-stocks/issues/204) from MarkLyck/renovate/storybook-addon-apollo-client-4.x [[c1769a2](https://github.com/MarkLyck/formula-stocks/commit/c1769a232a189e2e52cdaf6efb07c30e674e5aba)]
+
+
 <a name="1.0.145"></a>
 ## 1.0.145 (2021-05-18)
 
