@@ -1,5 +1,154 @@
 # Changelog
 
+<a name="1.0.153"></a>
+## 1.0.153 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency @w11r/use-breakpoint to v2 [[be3dd0a](https://github.com/MarkLyck/formula-stocks/commit/be3dd0a6ff1b21372fa580f076cac621df81190a)]
+- ⬆️ Update dependency @w11r/use-breakpoint to v2 [[10d8723](https://github.com/MarkLyck/formula-stocks/commit/10d8723cd0a9ba911d61d60d4328fe83a821633f)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.153 [[2f41509](https://github.com/MarkLyck/formula-stocks/commit/2f41509949016e48e60222f1c34a4203704cf01a)]
+- 📝 generated changelog [[491c344](https://github.com/MarkLyck/formula-stocks/commit/491c3441904cfc6e78baf22f75c57de1a18a7c1c)]
+-  Merge pull request [#195](https://github.com/MarkLyck/formula-stocks/issues/195) from MarkLyck/renovate/w11r-use-breakpoint-2.x [[ccf8185](https://github.com/MarkLyck/formula-stocks/commit/ccf8185063ea7934f123c5ab244684227204bc4a)]
+- 📦 update breakpoint [[cf96704](https://github.com/MarkLyck/formula-stocks/commit/cf967041529b8e079a19588fd06a149ca4ad2854)]
+- 📦 update breakpoint package [[89d9037](https://github.com/MarkLyck/formula-stocks/commit/89d903786aa92cf93f50dd6b7f10510fe3162472)]
+
+
+<a name="1.0.152"></a>
+## 1.0.152 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency next to v10.2.0 [[8379769](https://github.com/MarkLyck/formula-stocks/commit/8379769d4409ce5a4df3088d82680121b78be8c2)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.152 [[0c8918a](https://github.com/MarkLyck/formula-stocks/commit/0c8918adcb41882647688434b05a50b912cfae07)]
+- 📝 generated changelog [[0af0c07](https://github.com/MarkLyck/formula-stocks/commit/0af0c076d25d102bd515fae9e8644e807f1fb531)]
+-  Merge pull request [#203](https://github.com/MarkLyck/formula-stocks/issues/203) from MarkLyck/renovate/nextjs-monorepo [[406f7a7](https://github.com/MarkLyck/formula-stocks/commit/406f7a7d1bbaae90c08b1933e7144c379387a4cb)]
+- 🔀 merge main [[60f0ea5](https://github.com/MarkLyck/formula-stocks/commit/60f0ea571773440b25d5d5c9b43177b5974d5374)]
+- 🔀 merge main [[c52b36f](https://github.com/MarkLyck/formula-stocks/commit/c52b36f0ae7f2c845b873ded906c5b6be2221fd7)]
+-  Merge branch &#x27;main&#x27; into renovate/nextjs-monorepo [[7e32b2b](https://github.com/MarkLyck/formula-stocks/commit/7e32b2baae999ca57447227ed4e60a97110d0821)]
+
+
+<a name="1.0.151"></a>
+## 1.0.151 (2021-05-25)
+
+### Changed
+
+- ⬆️ Update dependency gitmoji-cli to v4 [[394da6f](https://github.com/MarkLyck/formula-stocks/commit/394da6f038ef328526b49ad14721f3b1f0e09177)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.151 [[2528b17](https://github.com/MarkLyck/formula-stocks/commit/2528b179890c2af8f556f658039ea335816a3bfe)]
+-  Merge pull request [#201](https://github.com/MarkLyck/formula-stocks/issues/201) from MarkLyck/renovate/gitmoji-cli-4.x [[1b0e403](https://github.com/MarkLyck/formula-stocks/commit/1b0e403aa29e11b7bf83647a58866b1cff8e601e)]
+- 🔀 merge main [[1c18259](https://github.com/MarkLyck/formula-stocks/commit/1c18259ee6432e0e8db3540e5529e8a3fd8dfdfb)]
+- 📝 generated changelog [[db84d49](https://github.com/MarkLyck/formula-stocks/commit/db84d495c5513cd2bbc3c19d11c2a7a31f17ff1a)]
+-  merge main [[fbae620](https://github.com/MarkLyck/formula-stocks/commit/fbae620cb1a6f6e9733a7d6bf5c788b509d737c8)]
+
+
+<a name="1.0.150"></a>
+## 1.0.150 (2021-05-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.150 [[1967c5a](https://github.com/MarkLyck/formula-stocks/commit/1967c5adb49f189dc56174c68a7e9239e107b907)]
+
+
+<a name="1.0.149"></a>
+## 1.0.149 (2021-05-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.149 [[a57c020](https://github.com/MarkLyck/formula-stocks/commit/a57c02062e3a68095e31ee63889a2fac04a0ab84)]
+
+
+<a name="1.0.148"></a>
+## 1.0.148 (2021-05-19)
+
+### Changed
+
+- ⬆️ Update dependency @apollo/client to v3.3.19 [[29bcc5b](https://github.com/MarkLyck/formula-stocks/commit/29bcc5bc5e851853afc5e54056459693c7df3715)]
+- ⬆️ Update dependency @types/lodash to v4.14.169 [[cef098a](https://github.com/MarkLyck/formula-stocks/commit/cef098a5f7ef5d87461bc2f7728f55e7fc90c1b7)]
+- ⬆️ Update dependency @types/node to v14.17.0 [[519b95a](https://github.com/MarkLyck/formula-stocks/commit/519b95ace0eec4daabafadd814dda1e7c5af0dec)]
+- ⬆️ Update dependency react-error-boundary to v3.1.3 [[e110371](https://github.com/MarkLyck/formula-stocks/commit/e110371f1da516eb6b5a2e6252dbbd7e353447e2)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.148 [[96a99bc](https://github.com/MarkLyck/formula-stocks/commit/96a99bce4cf632f1c17441999ea8969e297bc2fa)]
+- 📝 generated changelog [[a808b61](https://github.com/MarkLyck/formula-stocks/commit/a808b6112bdfb68c6c88cbfae3837cc28b0eb566)]
+-  Merge pull request [#200](https://github.com/MarkLyck/formula-stocks/issues/200) from MarkLyck/renovate/node-14.x [[138c128](https://github.com/MarkLyck/formula-stocks/commit/138c1289f4dfd6a6f640f1ddd72eb7fa6384f3de)]
+-  Merge pull request [#207](https://github.com/MarkLyck/formula-stocks/issues/207) from MarkLyck/renovate/react-error-boundary-3.x [[77226f0](https://github.com/MarkLyck/formula-stocks/commit/77226f0ae0e86e19f52b061eca3443824ffd3dd6)]
+-  Merge pull request [#206](https://github.com/MarkLyck/formula-stocks/issues/206) from MarkLyck/renovate/apollo-graphql-packages [[b346271](https://github.com/MarkLyck/formula-stocks/commit/b3462714c0132db05bf7a4d7d69345d0f595919d)]
+-  Merge pull request [#212](https://github.com/MarkLyck/formula-stocks/issues/212) from MarkLyck/renovate/lodash-4.x [[35d8c4e](https://github.com/MarkLyck/formula-stocks/commit/35d8c4ea423c347ef30e1b3355217e8ad32cdbb1)]
+- 🔀 merge main [[ff9f0b3](https://github.com/MarkLyck/formula-stocks/commit/ff9f0b37bff366b4a51e8168294eff6a98a2bfae)]
+-  Merge branch &#x27;main&#x27; into renovate/react-error-boundary-3.x [[592e575](https://github.com/MarkLyck/formula-stocks/commit/592e5754b2ef0f2c9dcdfa49800d64cd2b258d73)]
+
+
+<a name="1.0.147"></a>
+## 1.0.147 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency gitmoji-cli to v3.4.2 [[8b196f0](https://github.com/MarkLyck/formula-stocks/commit/8b196f082516463d7c5e6b34bf113b242ff21a85)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.147 [[fa92377](https://github.com/MarkLyck/formula-stocks/commit/fa92377b1f22623b73cc5992e92bb6a1ff17559f)]
+- 📝 generated changelog [[a94facb](https://github.com/MarkLyck/formula-stocks/commit/a94facbab8a8912bb83553af2c07c6be83afdf1c)]
+-  Merge pull request [#198](https://github.com/MarkLyck/formula-stocks/issues/198) from MarkLyck/renovate/gitmoji-cli-3.x [[e9c8510](https://github.com/MarkLyck/formula-stocks/commit/e9c85100b4e43a324ac2b3a06003c94b3f0465b9)]
+-  Merge branch &#x27;main&#x27; into renovate/gitmoji-cli-3.x [[5aa0dda](https://github.com/MarkLyck/formula-stocks/commit/5aa0dda57f47087bb55eadec84eefde1fdc0d903)]
+
+
+<a name="1.0.146"></a>
+## 1.0.146 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency storybook-addon-apollo-client to v4.0.8 [[f318417](https://github.com/MarkLyck/formula-stocks/commit/f31841711425de459f00b3471fdac3369ba78023)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.146 [[b2079dd](https://github.com/MarkLyck/formula-stocks/commit/b2079dd2f257fb4a3fd0e851058a51d7ac78202f)]
+- 📝 generated changelog [[4f76a76](https://github.com/MarkLyck/formula-stocks/commit/4f76a76d4b4a51c160e7b4c0486908d4274e8d65)]
+-  Merge pull request [#204](https://github.com/MarkLyck/formula-stocks/issues/204) from MarkLyck/renovate/storybook-addon-apollo-client-4.x [[c1769a2](https://github.com/MarkLyck/formula-stocks/commit/c1769a232a189e2e52cdaf6efb07c30e674e5aba)]
+
+
+<a name="1.0.145"></a>
+## 1.0.145 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency ahooks to v2.10.4 [[f6543b2](https://github.com/MarkLyck/formula-stocks/commit/f6543b202e0fb624e6f7ebccc90f3d2fc5b5a8ce)]
+- ⬆️ Update dependency ahooks to v2.10.4 [[0801ccc](https://github.com/MarkLyck/formula-stocks/commit/0801cccb971e37e9a29d186b736c35401a4b4f93)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.145 [[1dffb6c](https://github.com/MarkLyck/formula-stocks/commit/1dffb6c95bd17f8f0ef48665b9c80d86938a415c)]
+- 📝 generated changelog [[561004f](https://github.com/MarkLyck/formula-stocks/commit/561004ff42123131a04b4a7615304af309053d91)]
+-  Merge pull request [#194](https://github.com/MarkLyck/formula-stocks/issues/194) from MarkLyck/renovate/ahooks-2.x [[1e10a9d](https://github.com/MarkLyck/formula-stocks/commit/1e10a9d31eb072c7bb648e0caa6683ada72e6481)]
+-  Merge branch &#x27;renovate/ahooks-2.x&#x27; of https://github.com/MarkLyck/formula-stocks into renovate/ahooks-2.x [[ee3ed83](https://github.com/MarkLyck/formula-stocks/commit/ee3ed8317408744877ba6edad918f7e0205dbb7c)]
+- 🔀 merge main [[b21d766](https://github.com/MarkLyck/formula-stocks/commit/b21d766b7caa8b48938f5ddcbd29fb51fc39a24d)]
+
+
+<a name="1.0.144"></a>
+## 1.0.144 (2021-05-18)
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.1.4 [[7248c7e](https://github.com/MarkLyck/formula-stocks/commit/7248c7e7d2eb4eadc278bab36cfaf21755e2bca4)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.144 [[cd38715](https://github.com/MarkLyck/formula-stocks/commit/cd38715487bae6621eead488d08b021becf62754)]
+- 📝 generated changelog [[71c96c5](https://github.com/MarkLyck/formula-stocks/commit/71c96c534c643ce5cb8dbbe435a1826df26b525f)]
+-  Merge pull request [#202](https://github.com/MarkLyck/formula-stocks/issues/202) from MarkLyck/renovate/ant-design-charts-1.x [[5188576](https://github.com/MarkLyck/formula-stocks/commit/5188576c4336cdf428787c9dfc4749fc6d4a8509)]
+-  Merge branch &#x27;main&#x27; into renovate/ant-design-charts-1.x [[a3f51bc](https://github.com/MarkLyck/formula-stocks/commit/a3f51bc8dd2c69c25429c4e2d4e1a06e017b2b30)]
+
+
 <a name="1.0.143"></a>
 ## 1.0.143 (2021-05-18)
 
