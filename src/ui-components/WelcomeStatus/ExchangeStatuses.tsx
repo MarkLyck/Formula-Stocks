@@ -23,7 +23,7 @@ const Exchange = styled.img`
 `
 
 const ExchangeTag = styled.span`
-  background: ${(p: any) => p.theme.palette[p.open ? 'success' : 'danger'][500]};
+  background: ${(p: any) => (p.open ? p.theme.palette.success[500] : p.theme.palette.neutral[600])};
   color: white;
   font-size: 12px;
   padding: 4px 8px;

@@ -13,7 +13,7 @@ const Container = styled.div`
 export const WelcomeStatus = () => {
   return (
     <Container>
-      <Title level={3}>Welcome to {COMPANY_NAME}</Title>
+      <Title level={3}>{COMPANY_NAME} Portfolio</Title>
       <ExchangeStatuses />
     </Container>
   )
