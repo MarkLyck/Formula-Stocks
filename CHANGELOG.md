@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.162"></a>
+## 1.0.162 (2021-05-26)
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.17.1 [[eac90d4](https://github.com/MarkLyck/formula-stocks/commit/eac90d4b7b4ed508049490b3b143517e77b29329)]
+- ⬆️ Update dependency typescript to v4.3.2 [[4a09cd0](https://github.com/MarkLyck/formula-stocks/commit/4a09cd0c9307b56f2ef56db46978da7c736cdba5)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.162 [[4685aed](https://github.com/MarkLyck/formula-stocks/commit/4685aed0f6d0c7664180da1804b1b471ea76402b)]
+- 📝 generated changelog [[d89f08c](https://github.com/MarkLyck/formula-stocks/commit/d89f08c637f5e40dd1f99378e5528e58e65a3cd4)]
+-  Merge pull request [#218](https://github.com/MarkLyck/formula-stocks/issues/218) from MarkLyck/renovate/node-14.x [[8231073](https://github.com/MarkLyck/formula-stocks/commit/8231073c443e97425b80298bb101a9817bda69f2)]
+-  Merge pull request [#223](https://github.com/MarkLyck/formula-stocks/issues/223) from MarkLyck/renovate/typescript-4.x [[e68062b](https://github.com/MarkLyck/formula-stocks/commit/e68062b734fa3c3569dda47e6c7c01935e0687d5)]
+- 🏷️ fix types [[36f95e5](https://github.com/MarkLyck/formula-stocks/commit/36f95e582bb483dd2feb20885d15654a4689759e)]
+
+
 <a name="1.0.161"></a>
 ## 1.0.161 (2021-05-26)
 
