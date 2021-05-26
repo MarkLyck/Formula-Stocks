@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.161"></a>
+## 1.0.161 (2021-05-26)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.161 [[60d0253](https://github.com/MarkLyck/formula-stocks/commit/60d02535979a58894bbdac0b92bd284c5c64102e)]
+
+
+<a name="1.0.160"></a>
+## 1.0.160 (2021-05-26)
+
+### Changed
+
+- ⬆️ Update dependency dayjs to v1.10.5 [[b68dedf](https://github.com/MarkLyck/formula-stocks/commit/b68dedfd231dd5eb48d92dea0afb4c3649561257)]
+- ⬆️ Update dependency @types/react to v17.0.8 [[dd87e3a](https://github.com/MarkLyck/formula-stocks/commit/dd87e3a57f435a95c95ec653fd78fff147c270c9)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.160 [[7cd8e43](https://github.com/MarkLyck/formula-stocks/commit/7cd8e43f67621b0cddbeb4c3eff9e1dc6726d7e3)]
+- 📝 generated changelog [[7e1afb0](https://github.com/MarkLyck/formula-stocks/commit/7e1afb00cd9e3b99843d83a4d90c6b1938ab09ee)]
+-  Merge pull request [#221](https://github.com/MarkLyck/formula-stocks/issues/221) from MarkLyck/renovate/react-17.x [[eb414b4](https://github.com/MarkLyck/formula-stocks/commit/eb414b443c733d952117929c083438c78babf490)]
+-  Merge pull request [#222](https://github.com/MarkLyck/formula-stocks/issues/222) from MarkLyck/renovate/dayjs-1.x [[1b24c83](https://github.com/MarkLyck/formula-stocks/commit/1b24c83bf989de652a89c4488b63e8dceffb2873)]
+
+
 <a name="1.0.159"></a>
 ## 1.0.159 (2021-05-26)
 
