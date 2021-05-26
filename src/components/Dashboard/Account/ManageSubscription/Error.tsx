@@ -2,7 +2,7 @@ import React from 'react'
 import { StatusLine, Description } from './styles'
 import { subscriptionType } from './types'
 
-const SubscriptionError = ({ subscription }: { subscription: subscriptionType }) => {
+const SubscriptionError = ({ subscription }: { subscription?: subscriptionType }) => {
   if (subscription && subscription.id) return null
 
   return (
