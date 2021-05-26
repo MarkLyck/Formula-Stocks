@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.165"></a>
+## 1.0.165 (2021-05-26)
+
+### Fixed
+
+- 🐛 fix chart keys [[f8ce882](https://github.com/MarkLyck/formula-stocks/commit/f8ce88249121eb9a335628599feafc6c396a1069)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.165 [[c959968](https://github.com/MarkLyck/formula-stocks/commit/c9599681b8dac9d76dc92b0b599b81050204ca8a)]
+- 📝 generated changelog [[2e6c924](https://github.com/MarkLyck/formula-stocks/commit/2e6c924dbac8c0c6eca74e8cf8eed1d2991ff8dc)]
+-  Merge pull request [#227](https://github.com/MarkLyck/formula-stocks/issues/227) from MarkLyck/fix-chart [[2aa4e85](https://github.com/MarkLyck/formula-stocks/commit/2aa4e85b2e71bee4e63c83703c3919f25ec3ff7b)]
+
+
 <a name="1.0.164"></a>
 ## 1.0.164 (2021-05-26)
 
