@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.164"></a>
+## 1.0.164 (2021-05-26)
+
+### Changed
+
+- ⬆️ Pin dependency waait to 1.0.5 [[9ddfaaf](https://github.com/MarkLyck/formula-stocks/commit/9ddfaaf06e5f70cd519ac649166dcaa91b8f616b)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.164 [[0765d18](https://github.com/MarkLyck/formula-stocks/commit/0765d18bd1710b010e4db9b8daafdb0e7f3910b9)]
+- 📝 generated changelog [[1487a80](https://github.com/MarkLyck/formula-stocks/commit/1487a800242fee1ebfa265b43729cd5316b4fabf)]
+-  Merge pull request [#226](https://github.com/MarkLyck/formula-stocks/issues/226) from MarkLyck/renovate/pin-dependencies [[8d0bc0d](https://github.com/MarkLyck/formula-stocks/commit/8d0bc0db54aacef859d0af39610d281606e0eb71)]
+
+
 <a name="1.0.163"></a>
 ## 1.0.163 (2021-05-26)
 
