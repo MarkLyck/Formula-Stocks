@@ -6,6 +6,7 @@ import { BreakpointProvider } from '@w11r/use-breakpoint'
 
 import 'antd/dist/antd.less'
 import 'src/lib/iconLibrary'
+import 'src/lib/dayjs'
 
 import theme from 'src/lib/theme'
 import GlobalStyles from './GlobalStyles'

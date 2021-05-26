@@ -100,6 +100,12 @@ const Spacer = styled('div', {
   flex: 1;
 `
 
+const BottomMenu = styled.div`
+  width: 100%;
+  position: absolute;
+  bottom: 48px;
+`
+
 const menuList = [
   { label: 'Portfolio', icon: ['fad', 'analytics'], route: '/dashboard/portfolio' },
   { label: 'Trades', icon: ['fad', 'flask'], route: '/dashboard/trades' },
@@ -146,11 +152,11 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
             </LogoCard>
           </LogoContainer>
         </Tooltip>
-        <MenuDivider />
+        <MenuDivider role="menuitem" />
         {/* @ts-ignore */}
         <StyledMenu collapsed={collapsed} defaultSelectedKeys={[activeItem]} mode="inline">
           {menuList.map((item, i) => {
-            if (item.divider) return <MenuDivider key={'divider' + i} />
+            if (item.divider) return <MenuDivider key={'divider' + i} role="menuitem" />
 
             return (
               // @ts-ignore icon string
@@ -165,11 +171,11 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
           <Menu.Item onClick={logout} key={menuList.length + 1} icon={<MenuIcon icon={['fad', 'sign-out-alt']} />}>
             Logout
           </Menu.Item>
-          <PlanSelect />
-          <Spacer />
-          {/* @ts-ignore */}
-          <SupportButton user={{}} collapsed={collapsed} />
         </StyledMenu>
+        <BottomMenu>
+          <PlanSelect />
+          <SupportButton user={{}} collapsed={collapsed} />
+        </BottomMenu>
       </Sider>
     </ErrorBoundary>
   )

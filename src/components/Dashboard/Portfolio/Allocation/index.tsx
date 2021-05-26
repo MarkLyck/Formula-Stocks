@@ -1,8 +1,9 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
+import { Card } from 'antd'
 
 import { PORTFOLIO_HOLDINGS } from 'src/common/queries'
-import { DonutChart, LoadingError } from 'src/ui-components'
+import { BulletAllocationChart, LoadingError } from 'src/ui-components'
 import { useAtom, planAtom } from 'src/atoms'
 
 const Allocation = () => {
@@ -10,9 +11,11 @@ const Allocation = () => {
   const { data, loading, error } = useQuery(PORTFOLIO_HOLDINGS, {
     variables: { planName: plan },
   })
+
   if (error) return <LoadingError error={error} />
 
   const stocks: any[] = data?.portfolioHoldingsList?.items || []
+
   const chartData = stocks
     .map((stock) => ({
       title: stock.ticker.replace('_', '.'),
@@ -21,10 +24,9 @@ const Allocation = () => {
     .sort((a, b) => b.value - a.value)
 
   return (
-    <div style={{ height: 200 }}>
-      {/* @ts-ignore */}
-      <DonutChart data={chartData} isLoading={loading} />
-    </div>
+    <Card style={{ width: '100%', marginTop: 32 }}>
+      <BulletAllocationChart data={chartData} isLoading={loading} />
+    </Card>
   )
 }
 
