@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Column } from '@ant-design/charts';
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
