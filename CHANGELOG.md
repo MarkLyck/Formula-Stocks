@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.159"></a>
+## 1.0.159 (2021-05-26)
+
+### Added
+
+- ✨ portfolio improvements, menu fixes [[6fb006f](https://github.com/MarkLyck/formula-stocks/commit/6fb006f57064975a3a030324d1de4de836398c25)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.159 [[4d3d536](https://github.com/MarkLyck/formula-stocks/commit/4d3d536fae1caa2e3a53cfa628c0392ba902eb20)]
+-  Merge pull request [#225](https://github.com/MarkLyck/formula-stocks/issues/225) from MarkLyck/portfolio-allocation [[ed50bca](https://github.com/MarkLyck/formula-stocks/commit/ed50bca8c61e37a1974d4031922f023091c38357)]
+- 🗑️ cleanup [[8ddd7ed](https://github.com/MarkLyck/formula-stocks/commit/8ddd7ed362348ee840249bb8b885f6928f01aece)]
+- 🗑️ cleanup [[9c26625](https://github.com/MarkLyck/formula-stocks/commit/9c2662564430e96713e17dd76aab51b6f52ae04c)]
+- 📝 generated changelog [[4b2121c](https://github.com/MarkLyck/formula-stocks/commit/4b2121c1bb8965626cafa9e81d173957efe26557)]
+
+
 <a name="1.0.158"></a>
 ## 1.0.158 (2021-05-26)
 
