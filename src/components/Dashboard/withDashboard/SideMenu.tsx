@@ -94,12 +94,6 @@ const MenuDivider = styled('div', {
   margin: 16px auto;
 `
 
-const Spacer = styled('div', {
-  shouldForwardProp: () => false,
-})`
-  flex: 1;
-`
-
 const BottomMenu = styled.div`
   width: 100%;
   position: absolute;
