@@ -30,13 +30,14 @@ const BulletAllocationChart = ({ data, isLoading }: any) => {
         {isLoading && <Spin />}
         {data.map((block: { value: number; title: string }) => (
           <Tooltip
+            key={block.title}
             title={() => (
               <>
                 {block.title}: <b>{block.value.toFixed(2)}%</b>
               </>
             )}
           >
-            <AllocationBlock title={block.title} width={block.value} key={block.title} />
+            <AllocationBlock title={block.title} width={block.value} />
           </Tooltip>
         ))}
       </Container>

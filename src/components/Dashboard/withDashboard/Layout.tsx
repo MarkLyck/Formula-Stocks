@@ -32,6 +32,7 @@ const DashboardContent = styled(Content)`
 
 const DashboardFooter = styled(Footer)`
   text-align: center;
+  padding-top: 0;
 `
 
 export type LayoutProps = {
