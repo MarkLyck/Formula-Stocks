@@ -51,7 +51,7 @@ const handleClick = (user: any) => {
   }
 }
 
-const SupportButton = ({ user, collapsed }: { user: any; collapsed: boolean }) => (
+const SupportButton = ({ user, collapsed }: { user: any; collapsed: any }) => (
   <Tooltip placement="right" title="support">
     <Container>
       {/* @ts-ignore */}

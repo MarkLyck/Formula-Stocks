@@ -16,6 +16,14 @@ const GlobalStyles = () => (
       .ant-progress-inner {
         background-color: #f7f9fc;
       }
+
+      .ant-menu-inline-collapsed-tooltip {
+        .ant-tooltip-inner {
+          a {
+            color: white;
+          }
+        }
+      }
     `}
   />
 )
