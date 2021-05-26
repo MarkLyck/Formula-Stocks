@@ -1,5 +1,25 @@
 # Changelog
 
+<a name="1.0.163"></a>
+## 1.0.163 (2021-05-26)
+
+### Added
+
+- ✨ cancel subscription feature [[b5587a4](https://github.com/MarkLyck/formula-stocks/commit/b5587a436f16a80f581749467635ed4671849ffc)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.163 [[d45882c](https://github.com/MarkLyck/formula-stocks/commit/d45882c8cb5c1ced3611cdc46dedc0f0566dd4fd)]
+- 📝 generated changelog [[cd88490](https://github.com/MarkLyck/formula-stocks/commit/cd88490fb5a16f1dfc5cfd70dcb099b89c8f42f8)]
+-  Merge pull request [#180](https://github.com/MarkLyck/formula-stocks/issues/180) from MarkLyck/account-page [[d198eb8](https://github.com/MarkLyck/formula-stocks/commit/d198eb845532af58399044a5a924757a6dda2331)]
+- 🏷️ fix type [[ee67fc7](https://github.com/MarkLyck/formula-stocks/commit/ee67fc7295a4ce93cfde31e75ecf9f7bc31bf705)]
+- 🏷️ fix unused type [[67bd401](https://github.com/MarkLyck/formula-stocks/commit/67bd401f440b0d0c1aec0daeacb9205918521449)]
+- 🤡 remove storybook knobs [[17e6163](https://github.com/MarkLyck/formula-stocks/commit/17e61632165a40e7319e97723d1e550a60905931)]
+- 📦 add waait [[ce9775f](https://github.com/MarkLyck/formula-stocks/commit/ce9775f987bc66ac8485303cd5545bf3d279810f)]
+- 🔀 merge main [[cb5127c](https://github.com/MarkLyck/formula-stocks/commit/cb5127cc831193d62ca0cbd78366126a259806a2)]
+- 🚧 wip [[e958704](https://github.com/MarkLyck/formula-stocks/commit/e9587046fb22fade16cb92e6192975c86c837bef)]
+
+
 <a name="1.0.162"></a>
 ## 1.0.162 (2021-05-26)
 
