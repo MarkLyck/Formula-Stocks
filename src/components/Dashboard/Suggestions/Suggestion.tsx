@@ -80,6 +80,7 @@ const Trade = ({ trade }: TradeProps) => {
                 <ArrowIcon
                   // @ts-ignore
                   icon={['fas', `arrow-${latestPrice > trade.price ? 'up' : 'down'}`]}
+                  // @ts-ignore
                   higher={latestPrice > trade.price}
                 />
               ) : (
