@@ -1,5 +1,67 @@
 # Changelog
 
+<a name="1.0.158"></a>
+## 1.0.158 (2021-05-26)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.158 [[03944d5](https://github.com/MarkLyck/formula-stocks/commit/03944d56cdfc3765be637faf36a5a35841d8f194)]
+
+
+<a name="1.0.157"></a>
+## 1.0.157 (2021-05-26)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.157 [[1be8178](https://github.com/MarkLyck/formula-stocks/commit/1be817895a5c23fa8d1cfc74f424205bffeaa20a)]
+
+
+<a name="1.0.156"></a>
+## 1.0.156 (2021-05-26)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.156 [[41b0c50](https://github.com/MarkLyck/formula-stocks/commit/41b0c50af9ac03b62e2cd462d1cc30a14a2b3ed1)]
+
+
+<a name="1.0.155"></a>
+## 1.0.155 (2021-05-26)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.155 [[7dd4d1d](https://github.com/MarkLyck/formula-stocks/commit/7dd4d1d94b2f78a460e691c1e5953844d468119b)]
+
+
+<a name="1.0.154"></a>
+## 1.0.154 (2021-05-26)
+
+### Changed
+
+- ⬆️ Update dependency jotai to v0.16.7 [[2220cad](https://github.com/MarkLyck/formula-stocks/commit/2220cad5ef3c0db7dcd82edb318277f13137e606)]
+- ⬆️ Update dependency @types/lodash to v4.14.170 [[98d37ee](https://github.com/MarkLyck/formula-stocks/commit/98d37ee5ac1103f9c38a7a1e5d055ddbcd239c5f)]
+- ⬆️ Update dependency next to v10.2.3 [[4b83ed1](https://github.com/MarkLyck/formula-stocks/commit/4b83ed1a1eda36b1e2e72205e6a962ae02aa04f6)]
+- ⬆️ Update dependency antd to v4.16.0 [[fc2ef9a](https://github.com/MarkLyck/formula-stocks/commit/fc2ef9a64a34ea6114bc7a39dc19d51ab87d43b2)]
+- ⬆️ Update dependency @types/react to v17.0.6 [[a52735e](https://github.com/MarkLyck/formula-stocks/commit/a52735e0f92880ae3ffe6d14332a7e3248b4d715)]
+
+### Fixed
+
+- 💚 remove chromatic from CI [[be77c4f](https://github.com/MarkLyck/formula-stocks/commit/be77c4fce24d2c307ea408ee69ec3aadd85601b8)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.154 [[1e65b54](https://github.com/MarkLyck/formula-stocks/commit/1e65b54fd17333f845ed7bc00a6f8fa677933dd8)]
+- 📝 generated changelog [[544b794](https://github.com/MarkLyck/formula-stocks/commit/544b79498aee1d289e60569074167f80db0a0c78)]
+-  Merge pull request [#216](https://github.com/MarkLyck/formula-stocks/issues/216) from MarkLyck/renovate/lodash-4.x [[4b2728f](https://github.com/MarkLyck/formula-stocks/commit/4b2728fb519c40e6b4b8eb96bd86839479078092)]
+-  Merge pull request [#217](https://github.com/MarkLyck/formula-stocks/issues/217) from MarkLyck/renovate/jotai-0.x [[1f88100](https://github.com/MarkLyck/formula-stocks/commit/1f88100f5c0ce40a3ff96f93ef035d71997ced26)]
+-  Merge pull request [#220](https://github.com/MarkLyck/formula-stocks/issues/220) from MarkLyck/renovate/nextjs-monorepo [[d315602](https://github.com/MarkLyck/formula-stocks/commit/d3156022e86ce50015ae7c2def64f0dacf73550c)]
+-  Merge pull request [#219](https://github.com/MarkLyck/formula-stocks/issues/219) from MarkLyck/renovate/antd-4.x [[fb91bf9](https://github.com/MarkLyck/formula-stocks/commit/fb91bf9e52490f23895280ec57cba4a0b06b201c)]
+-  Merge pull request [#199](https://github.com/MarkLyck/formula-stocks/issues/199) from MarkLyck/renovate/react-17.x [[d7b6125](https://github.com/MarkLyck/formula-stocks/commit/d7b6125eb89e7532815f3a50ce6d0a065e5eec93)]
+- 📦 update type packages [[023d284](https://github.com/MarkLyck/formula-stocks/commit/023d2843f30014e739850c1bef84f174a7b9061d)]
+- 📦 lockfile [[29b691f](https://github.com/MarkLyck/formula-stocks/commit/29b691fac021cfcd3f44a5c0948f97f5fabe393b)]
+- 📦 update packages [[e75bd3d](https://github.com/MarkLyck/formula-stocks/commit/e75bd3df72e5f81e5f518c0cfe5c86e5bb27a8c8)]
+- 🔀 merge main [[ec8e654](https://github.com/MarkLyck/formula-stocks/commit/ec8e654842361e385b533c7e2546d4fd233bc5c2)]
+
+
 <a name="1.0.153"></a>
 ## 1.0.153 (2021-05-25)
 
