@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Typography, Space } from 'antd'
+import { Typography } from 'antd'
 import { COMPANY_NAME } from 'src/common/constants'
 import ExchangeStatuses from './ExchangeStatuses'
 
