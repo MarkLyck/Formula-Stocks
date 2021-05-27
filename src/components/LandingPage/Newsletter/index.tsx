@@ -6,7 +6,6 @@ import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { LandingPageContainer, Card, Highlight, Alert, ScalingTitle, ScalingSubTitle } from 'src/ui-components'
 import { CREATE_NEWSLETTER } from 'src/common/queries'
-import { useWindowSize } from 'src/common/hooks'
 import { Mixpanel } from 'src/lib/analytics/mixpanel'
 import { validateEmail, capitalize } from 'src/common/utils/helpers'
 
@@ -40,7 +39,6 @@ const Newsletter = () => {
   const [executeCreateNewsletter, { data: createData, loading: createLoading, error: createError }] = useMutation(
     CREATE_NEWSLETTER
   )
-  const windowSize = useWindowSize()
   const theme = useTheme()
 
   let alreadyOnList = !!createError
@@ -96,11 +94,7 @@ const Newsletter = () => {
             {(!createLoading && createData) || alreadyOnList ? (
               <Alert message="Success, you're on the list!" type="success" />
             ) : (
-              <Form
-                layout={windowSize.width <= 840 ? undefined : 'inline'}
-                name="newsletter_signup"
-                onFinish={onFinish}
-              >
+              <Form layout={'inline'} name="newsletter_signup" onFinish={onFinish}>
                 <Form.Item name="firstName" rules={[{ required: true, message: 'Please input your first name' }]}>
                   <Input
                     onChange={handleNameInput}

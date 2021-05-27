@@ -47,6 +47,7 @@ export const TableBody = styled.tbody`
 
 export const TableHeadCell = styled.th`
   padding: 20px 24px;
+  text-align: left;
   box-sizing: border-box;
   @media (max-width: 500px) {
     font-size: 0.8rem;

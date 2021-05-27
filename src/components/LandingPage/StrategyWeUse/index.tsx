@@ -3,7 +3,6 @@ import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from 'src/ui-components'
-import { useWindowSize } from 'src/common/hooks'
 import { transparentize } from 'polished'
 
 const CardTitle = styled.h4`
@@ -29,24 +28,20 @@ const ButtonContainer = styled(Space)`
 `
 
 const StrategyWeUse = ({ showSignup }: any) => {
-  const windowSize = useWindowSize()
   const theme = useTheme()
 
   return (
     <LandingPageContainer align="center" marginBottom="4rem">
       <Card>
         <Content>
-          <Space direction="vertical">
+          <Space direction="vertical" style={{ alignItems: 'center' }}>
             <CardTitle>
               An investing strategy that <Highlight>we use</Highlight>.
             </CardTitle>
             <CardSubtitle>
               We have shown you what we can do. Want to know more? Check out the FAQ or chat with us.
             </CardSubtitle>
-            <ButtonContainer
-              size="middle"
-              direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}
-            >
+            <ButtonContainer size="middle" direction={'horizontal'}>
               <ActionButton onClick={showSignup} status="success">
                 <ButtonIcon icon={['fad', 'gift']} />
                 TRY IT FOR FREE

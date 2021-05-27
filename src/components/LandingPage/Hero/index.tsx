@@ -3,7 +3,9 @@ import styled from '@emotion/styled'
 import { scroller } from 'react-scroll'
 import { Space } from 'antd'
 import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
+import { useQuery } from '@apollo/client'
 
+import { STATISTICS } from 'src/common/queries'
 import { ActionButton, ButtonIcon } from 'src/ui-components'
 import { maxSiteWidth } from 'src/common/styles'
 import Title from './Title'
@@ -42,6 +44,7 @@ const ButtonContainer = styled(Space)`
 
 const Hero = ({ showSignup }: any) => {
   const { 'isMobile-': isMobileMinus } = useBreakpoint()
+  const { data, loading: statisticsLoading, error: statisticsError } = useQuery(STATISTICS)
 
   const learnMore = () => {
     scroller.scrollTo('how-we-pick-winning-stocks', {
@@ -52,12 +55,14 @@ const Hero = ({ showSignup }: any) => {
     })
   }
 
+  const statistics = data ? data.statisticsList.items[0] : {}
+
   return (
     <Container>
       <Content>
         <Space direction="vertical">
           <Title />
-          <Description />
+          <Description statistics={statistics} />
           <ButtonContainer size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
             <ActionButton onClick={showSignup} status="success">
               <ButtonIcon icon={['fad', 'gift']} />
@@ -70,7 +75,7 @@ const Hero = ({ showSignup }: any) => {
           </ButtonContainer>
         </Space>
       </Content>
-      <Features />
+      <Features statistics={statistics} statisticsLoading={statisticsLoading} statisticsError={statisticsError} />
     </Container>
   )
 }

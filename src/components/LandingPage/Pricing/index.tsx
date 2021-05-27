@@ -73,7 +73,7 @@ const Pricing = ({ showSignup }: any) => (
     </TitleContainer>
     <Container>
       <PricingCard>
-        <CardTitle>Account value under $25k</CardTitle>
+        <CardTitle>Portfolio size under $25k</CardTitle>
         <Divider />
         <Tooltip title="Try it for free for 7-days">
           <SmallFeatureCard style={{ boxShadow: 'none' }} icon="gift" color={theme.palette.success[600]} hover={false}>
@@ -88,7 +88,7 @@ const Pricing = ({ showSignup }: any) => (
         </Button>
       </PricingCard>
       <PricingCard>
-        <CardTitle>Account value $25k - $200k</CardTitle>
+        <CardTitle>Portfolio size $25k - $200k</CardTitle>
         <Divider />
         <Tooltip title="This portfolio is tailored for medium-sized accounts.">
           <SmallFeatureCard
@@ -108,7 +108,7 @@ const Pricing = ({ showSignup }: any) => (
         </Button>
       </PricingCard>
       <PricingCard>
-        <CardTitle>Account value over $200k</CardTitle>
+        <CardTitle>Portfolio size over $200k</CardTitle>
         <Divider />
         <Tooltip title="Contact us for portfolios tailored for large accounts.">
           <SmallFeatureCard

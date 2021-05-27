@@ -9,8 +9,8 @@ export const LAUNCH_PERFORMANCE_HISTORY = gql`
 `
 
 export const BACKTESTED_PERFORMANCE_HISTORY = gql`
-  query {
-    plan(planID: "entry") {
+  query($plan: String) {
+    plan(planID: $plan) {
       backtestedHistory
     }
   }

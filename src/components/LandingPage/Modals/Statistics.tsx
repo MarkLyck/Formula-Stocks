@@ -79,7 +79,8 @@ const StatisticsModal = ({ isVisible, statistics, onClose }: StatisticsModalProp
           -{statistics.maxDrawdown45Years.toFixed(2)}%
         </Tag>
       </StatisticsCard>
-      <Paragraph>Need more statistics? Contact us</Paragraph>
+      {/* TODO: Make Contact us open Crisp chat */}
+      <Paragraph>Want more information? Contact us</Paragraph>
     </StyledSpace>
   </Modal>
 )

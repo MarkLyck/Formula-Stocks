@@ -18,7 +18,6 @@ import {
   LoadingTag,
   ButtonIcon,
 } from 'src/ui-components'
-import { useWindowSize } from 'src/common/hooks'
 import { STATISTICS } from 'src/common/queries'
 import { StatisticsModal, ReturnsCalculatorModal } from '../Modals'
 
@@ -36,7 +35,6 @@ const Statistics = () => {
   const { data, loading, error } = useQuery(STATISTICS)
   const [dialogVisible, setDialogVisible] = useState(false)
   const [compoundInterestCalculatorVisible, setCompoundInterestCalculatorVisible] = useState(false)
-  const windowSize = useWindowSize()
   const theme = useTheme()
 
   if (error) return null
@@ -119,10 +117,7 @@ const Statistics = () => {
                 )}
               </StatisticsCard>
             </Space>
-            <Space
-              style={{ width: '100%' }}
-              direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}
-            >
+            <Space style={{ width: '100%' }} direction={'horizontal'}>
               <ActionButton onClick={() => setDialogVisible(true)}>
                 <ButtonIcon icon={['fad', 'analytics']} />
                 SEE ADVANCED STATISTICS

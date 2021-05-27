@@ -77,9 +77,14 @@ const Performance = () => {
   const theme = useTheme()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
+  console.log('🔈 ~ Query', Query)
   const { data: planData, loading: planLoading, error: planError } = useQuery(Query, {
+    variables: {
+      plan: 'entry',
+    },
     // client: FSApolloClient,
   })
+  console.log('🔈 ~ planData', planData)
 
   const { data: marketData } = useQuery(MARKET_PRICE_HISTORY, {
     variables: {
@@ -119,19 +124,6 @@ const Performance = () => {
               />
             ) : null}
             {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
-            <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-              <Button
-                block
-                size="large"
-                icon={<ButtonIcon icon={['fad', 'calculator']} />}
-                onClick={() => setCalculatorVisible(true)}
-              >
-                Interest calculator
-              </Button>
-              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>
-                See yearly returns
-              </Button>
-            </ButtonContainer>
           </Tabs.TabPane>
           <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="2">
             <ScalingSubTitle>
@@ -151,21 +143,21 @@ const Performance = () => {
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
               in real time.
             </Disclaimer>
-            <ButtonContainer direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
-              <Button
-                block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false}
-                size="large"
-                icon={<ButtonIcon icon={['fad', 'calculator']} />}
-                onClick={() => setCalculatorVisible(true)}
-              >
-                Interest calculator
-              </Button>
-              <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>
-                See yearly returns
-              </Button>
-            </ButtonContainer>
           </Tabs.TabPane>
         </StyledTabs>
+        <ButtonContainer direction={'horizontal'}>
+          <Button
+            block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false}
+            size="large"
+            icon={<ButtonIcon icon={['fad', 'calculator']} />}
+            onClick={() => setCalculatorVisible(true)}
+          >
+            Interest calculator
+          </Button>
+          <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>
+            See yearly returns
+          </Button>
+        </ButtonContainer>
         <ReturnsCalculatorModal isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />
         <StyledModal
           title="Yearly returns"

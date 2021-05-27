@@ -98,9 +98,7 @@ const LatestSellSignals = () => {
           })}
         </TableBody>
       </Table>
-      <StyledDisclaimer>
-        *Past results are not necessarily indicative of future returns. (Our lawyer said we had to write this)
-      </StyledDisclaimer>
+      <StyledDisclaimer>*Past results are not necessarily indicative of future returns.</StyledDisclaimer>
     </LatestSellsContainer>
   )
 }
