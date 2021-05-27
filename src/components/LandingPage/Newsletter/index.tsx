@@ -96,11 +96,7 @@ const Newsletter = () => {
             {(!createLoading && createData) || alreadyOnList ? (
               <Alert message="Success, you're on the list!" type="success" />
             ) : (
-              <Form
-                layout={windowSize.width <= 840 ? undefined : 'inline'}
-                name="newsletter_signup"
-                onFinish={onFinish}
-              >
+              <Form layout={'inline'} name="newsletter_signup" onFinish={onFinish}>
                 <Form.Item name="firstName" rules={[{ required: true, message: 'Please input your first name' }]}>
                   <Input
                     onChange={handleNameInput}

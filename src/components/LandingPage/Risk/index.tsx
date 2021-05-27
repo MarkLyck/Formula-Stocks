@@ -40,8 +40,9 @@ const Risk = () => {
               or day-trading usually never works out in the long-term.
               <br />
               <br />
-              Instead, we've spent decades developing long-term strategies that boasts above-average returns, while
-              keeping the risk very low. This is imperative to us, as we invest our own capital along with you.
+              Instead, we've spent decades developing long-term low-risk strategies following the value investing
+              principles pioneered by Benjamin Graham and Warren Buffett. In short we find and buy wonderful companies
+              with a large margin of safety.
             </ScalingParagraph>
             <ActionButton onClick={goToRiskPage}>
               <ButtonIcon icon={['fad', 'chart-line-down']} />

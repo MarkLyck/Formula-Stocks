@@ -119,10 +119,7 @@ const Statistics = () => {
                 )}
               </StatisticsCard>
             </Space>
-            <Space
-              style={{ width: '100%' }}
-              direction={windowSize.width < theme.breakpoints.values.small ? 'vertical' : 'horizontal'}
-            >
+            <Space style={{ width: '100%' }} direction={'horizontal'}>
               <ActionButton onClick={() => setDialogVisible(true)}>
                 <ButtonIcon icon={['fad', 'analytics']} />
                 SEE ADVANCED STATISTICS

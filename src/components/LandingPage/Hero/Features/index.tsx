@@ -5,7 +5,7 @@ import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
+import { STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
 import { SmallFeatureCard } from 'src/ui-components'
 import { numberFormatter } from 'src/common/utils/formatters'
 import { useWindowSize } from 'src/common/hooks'
@@ -65,8 +65,13 @@ const StyledSpace = styled(Space)`
 
 let timer: any
 
-const Features = () => {
-  const { data, loading, error } = useQuery(STATISTICS)
+type FeaturesProps = {
+  statistics: any
+  statisticsLoading: Boolean
+  statisticsError: any
+}
+
+const Features = ({ statistics, statisticsLoading, statisticsError }: FeaturesProps) => {
   const { data: launchData, loading: launchLoading, error: launchError } = useQuery(STATISTICS_SINCE_LAUNCH)
   const theme = useTheme()
   const slider = useRef()
@@ -81,9 +86,9 @@ const Features = () => {
 
   useEffect(() => {
     timer = setInterval(() => {
-      // if (slider.current) {
-      //     nextPage()
-      // }
+      if (slider.current) {
+        nextPage()
+      }
     }, 7500)
 
     return () => {
@@ -91,11 +96,10 @@ const Features = () => {
     }
   })
 
-  if (loading || launchLoading) return null
-  if (error || launchError) return null
+  if (statisticsLoading || launchLoading) return null
+  if (statisticsError || launchError) return null
 
-  const statistics = data ? data.statisticsList.items[0] : {}
-  const launchStatistics = data ? launchData.statisticsSinceLaunchesList.items[0] : {}
+  const launchStatistics = launchData?.statisticsSinceLaunchesList?.items[0] || {}
 
   return (
     <Container>

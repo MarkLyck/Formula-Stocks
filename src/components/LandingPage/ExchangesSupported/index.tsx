@@ -1,9 +1,7 @@
 import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
-import { useTheme } from '@emotion/react'
 import { LandingPageContainer } from 'src/ui-components'
-import { useWindowSize } from 'src/common/hooks'
 
 const Title = styled.h2`
   text-align: center;
@@ -23,13 +21,10 @@ const Exchange = styled.img`
 `
 
 const ExchangesSupported = () => {
-  const windowSize = useWindowSize()
-  const theme = useTheme()
-
   return (
     <LandingPageContainer align="center">
       <Title>Exchanges supported</Title>
-      <Space size="middle" direction={windowSize.width <= theme.breakpoints.values.small ? 'vertical' : 'horizontal'}>
+      <Space size="middle" direction={'horizontal'}>
         <Exchange src="/logos/exchanges/nyse.svg" />
         <Exchange src="/logos/exchanges/nasdaq.svg" />
         <Exchange src="/logos/exchanges/tsx.svg" />

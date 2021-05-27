@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { WIN_RATIO } from 'src/common/constants'
 import { Typography } from 'antd'
 const { Paragraph, Text } = Typography
 
@@ -18,13 +17,20 @@ const StyledParagraph = styled(Paragraph)`
   }
 `
 
-const Description = () => (
-  <StyledParagraph>
-    Our strategy invests in high quality companies selling for much less than they should be worth.
-    <br />
-    <br />
-    <Text strong>+{WIN_RATIO}%</Text> of these investments have been sold with a profit.
-  </StyledParagraph>
-)
+type DescriptionProps = {
+  statistics: any
+}
+
+const Description = ({ statistics }: DescriptionProps) => {
+  return (
+    <StyledParagraph>
+      Our strategy finds and invests in wonderful growing companies selling for less than they should be worth.
+      <br />
+      <br />
+      <Text strong>+{statistics?.winLossRatio?.toFixed(2) || '90.00'}%</Text> of these Warren Buffett style investments
+      have been sold with a profit.
+    </StyledParagraph>
+  )
+}
 
 export default Description
