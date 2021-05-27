@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.166"></a>
+## 1.0.166 (2021-05-27)
+
+### Added
+
+- ✨ cleanup landing page [[78eb8cf](https://github.com/MarkLyck/formula-stocks/commit/78eb8cfc6b3d9ca3786275848467c2cf939d3bb8)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.166 [[e91705c](https://github.com/MarkLyck/formula-stocks/commit/e91705c7e7d909b86767573ae2198ead076f2faf)]
+- 📝 generated changelog [[4676773](https://github.com/MarkLyck/formula-stocks/commit/4676773836c71c5faced85e8da028a014efe99b8)]
+-  Merge pull request [#228](https://github.com/MarkLyck/formula-stocks/issues/228) from MarkLyck/cleanup-landingpage [[1e79893](https://github.com/MarkLyck/formula-stocks/commit/1e79893fe300a44942f38f7b475e9c781aded41a)]
+- 🏷️ fix types [[ccdec52](https://github.com/MarkLyck/formula-stocks/commit/ccdec524248bcfeeecd24c6558645f5aab6b2ca2)]
+
+
 <a name="1.0.165"></a>
 ## 1.0.165 (2021-05-26)
 
