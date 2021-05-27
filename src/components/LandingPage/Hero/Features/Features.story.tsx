@@ -7,7 +7,9 @@ export default {
   title: 'Landing page/features',
 }
 
-export const features = () => <Features />
+export const features = () => (
+  <Features statistics={STATISTICS_MOCK} statisticsLoading={false} statisticsError={undefined} />
+)
 
 features.parameters = {
   apolloClient: {

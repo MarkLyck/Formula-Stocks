@@ -3,7 +3,6 @@ import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from 'src/ui-components'
-import { useWindowSize } from 'src/common/hooks'
 import { transparentize } from 'polished'
 
 const CardTitle = styled.h4`
@@ -29,7 +28,6 @@ const ButtonContainer = styled(Space)`
 `
 
 const StrategyWeUse = ({ showSignup }: any) => {
-  const windowSize = useWindowSize()
   const theme = useTheme()
 
   return (
