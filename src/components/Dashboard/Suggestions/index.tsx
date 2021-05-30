@@ -1,10 +1,10 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { Row } from 'antd'
+import { Row, Col } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 import { useAtom, planAtom } from 'src/atoms'
 import { SUGGESTIONS_QUERY } from 'src/common/queries'
-import { LoadingError } from 'src/ui-components'
+import { LoadingError, DashboardHeader } from 'src/ui-components'
 import Suggestion from './Suggestion'
 
 const Suggestions = () => {
@@ -28,11 +28,18 @@ const Suggestions = () => {
   }
 
   return (
-    <Row gutter={16}>
-      {data?.signalsList.items.map((trade: any) => (
-        <Suggestion trade={trade} key={trade.ticker + trade.action} colSpan={colSpan} />
-      ))}
-    </Row>
+    <>
+      <Row gutter={16}>
+        <Col span={24}>
+          <DashboardHeader />
+        </Col>
+      </Row>
+      <Row gutter={16}>
+        {data?.signalsList.items.map((trade: any) => (
+          <Suggestion trade={trade} key={trade.ticker + trade.action} colSpan={colSpan} />
+        ))}
+      </Row>
+    </>
   )
 }
 

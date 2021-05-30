@@ -67,6 +67,7 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
   }
 
   const stock = trade?.stock_v2 || {}
+  const profile = stock.profile
   const stockPrices = stock?.stockPrices || {}
   const priceHistory = stockPrices?.historicalSimple || []
   const latestPrice = stockPrices?.latestPrice
@@ -78,7 +79,7 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
           <TradeHeader trade={trade} />
           <SmallDivider />
           <Row justify="space-between" align="middle">
-            <TradeChart ticker={trade.ticker} name={trade.name} data={priceHistory} />
+            <TradeChart ticker={trade.ticker} name={profile.companyName} data={priceHistory} />
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">
@@ -153,7 +154,7 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
             <>
               <SmallDivider />
               <AllocationContainer>
-                <Tooltip title="Total allocation percentage of this stock in the portfolio after this trade.">
+                <Tooltip title="Total portfolio allocation of this stock, after trade was completed.">
                   <Label>
                     Total portfolio Allocation
                     <QuestionIcon icon={['fad', 'question-circle']} />

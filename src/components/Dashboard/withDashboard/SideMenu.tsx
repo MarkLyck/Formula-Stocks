@@ -123,6 +123,8 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
   const activeItem =
     menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route || '/dashboard/portfolio'
 
+  const goToHomePage = () => router.push('/')
+
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
       <Sider
@@ -138,7 +140,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         onCollapse={setCollapsed}
       >
         <Tooltip placement="right" title="Home">
-          <LogoContainer>
+          <LogoContainer onClick={goToHomePage}>
             <LogoCard collapsed={collapsed}>
               <Logo
                 src={collapsed ? '/logos/formula_stocks/logo_square.svg' : '/logos/formula_stocks/logo_horizontal.svg'}

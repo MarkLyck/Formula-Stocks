@@ -228,7 +228,7 @@ const Reports = () => {
     <>
       <Row gutter={DASHBOARD_GUTTER_SIZE}>
         <Col span={18}>
-          <DashboardHeader title="AI Reports" />
+          <DashboardHeader showExchangeStatuses={false} />
         </Col>
         <Col span={6}>
           <Search placeholder="search for a stock" onSearch={onMainSearch} />

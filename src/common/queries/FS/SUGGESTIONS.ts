@@ -17,7 +17,6 @@ export const SUGGESTIONS_QUERY = gql`
         }
         stock_v2 {
           stockPrices {
-            historicalSimple
             latestPrice
           }
           profile {

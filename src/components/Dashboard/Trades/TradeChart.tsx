@@ -1,6 +1,9 @@
 import { TinyStockChart } from 'src/ui-components'
+import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from '@emotion/styled'
+
+import { STOCK_PRICE_HISTORY_SIMPLE } from 'src/common/queries'
 
 type TradeChartProps = {
   ticker: string
@@ -40,8 +43,17 @@ const Name = styled.div`
   color: ${(p) => p.theme.palette.neutral[600]};
 `
 
-const TradeChart = ({ ticker, name, data }: TradeChartProps) => {
-  if (!Array.isArray(data) || data.length === 0) {
+const TradeChart = ({ ticker, name }: TradeChartProps) => {
+  const { data, loading } = useQuery(STOCK_PRICE_HISTORY_SIMPLE, {
+    variables: {
+      symbol: ticker,
+    },
+  })
+
+  const historicalData = data?.stockPrice?.historicalSimple || []
+  const sixMonthsdata = historicalData.slice(0, 180)
+
+  if (!loading && (!Array.isArray(sixMonthsdata) || sixMonthsdata.length === 0)) {
     return (
       <ChartUnavailableContainer>
         <Name unavailable>{name}</Name>
@@ -54,7 +66,7 @@ const TradeChart = ({ ticker, name, data }: TradeChartProps) => {
   return (
     <ChartContainer>
       <Name>{name}</Name>
-      <TinyStockChart data={data} height={100} />
+      <TinyStockChart data={sixMonthsdata} height={100} loading={loading} />
     </ChartContainer>
   )
 }

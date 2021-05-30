@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from 'antd'
+import { Typography, Spin } from 'antd'
 import styled from '@emotion/styled'
 import dynamic from 'next/dynamic'
 import { minBy } from 'lodash'
@@ -7,6 +7,13 @@ import { minBy } from 'lodash'
 const { Text } = Typography
 
 const TinyArea = dynamic(() => import('@ant-design/charts').then((mod) => mod.TinyArea) as any, { ssr: false })
+
+const LoadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+`
 
 const TooltipContent = styled.div`
   padding: 4px;
@@ -17,7 +24,14 @@ const TooltipText = styled(Text)`
   margin: 0;
 `
 
-export const TinyStockChart = ({ data, height = 60 }: any) => {
+export const TinyStockChart = ({ data, loading, height = 60 }: any) => {
+  if (loading) {
+    return (
+      <LoadingContainer>
+        <Spin />
+      </LoadingContainer>
+    )
+  }
   if (!Array.isArray(data) || data.length === 0) return null
 
   var config = {
