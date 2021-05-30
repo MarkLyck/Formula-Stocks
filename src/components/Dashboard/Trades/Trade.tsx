@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Card, Typography, Space, Row, Col, Tooltip, Divider, Progress } from 'antd'
+
 import { ErrorBoundary } from 'react-error-boundary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -54,19 +55,30 @@ const NotAvailable = () => <NotAvailableText>--</NotAvailableText>
 
 type TradeProps = {
   trade: any
+  colSpan: number
 }
 
-const Trade = ({ trade }: TradeProps) => {
-  let latestPrice = trade.stock?.latestPrice
+const Trade = ({ trade, colSpan }: TradeProps) => {
+  let totalReturn = 0
+
+  if (trade.action === 'SELL') {
+    const increase = trade.price - trade.boughtAt
+    totalReturn = (increase / trade.boughtAt) * 100
+  }
+
+  const stock = trade?.stock_v2 || {}
+  const stockPrices = stock?.stockPrices || {}
+  const priceHistory = stockPrices?.historicalSimple || []
+  const latestPrice = stockPrices?.latestPrice
 
   return (
-    <Col span={8} style={{ marginBottom: 16 }}>
+    <Col span={colSpan} style={{ marginBottom: 16 }}>
       <Card style={{ height: '100%' }}>
         <Space direction="vertical" style={{ width: '100%' }} size="small">
           <TradeHeader trade={trade} />
           <SmallDivider />
           <Row justify="space-between" align="middle">
-            <TradeChart ticker={trade.ticker} name={trade.name} data={trade.stock.sixMonthsPrices} />
+            <TradeChart ticker={trade.ticker} name={trade.name} data={priceHistory} />
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">
@@ -99,21 +111,25 @@ const Trade = ({ trade }: TradeProps) => {
             <>
               <Row justify="space-between" align="middle">
                 <Label>Total return</Label>
-                <Value>{trade.boughtAt ? `WIP` : <NotAvailable />}</Value>
+                <Value>
+                  {trade.boughtAt ? `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%` : <NotAvailable />}
+                </Value>
               </Row>
               <SmallDivider />
             </>
           )}
-          <Row justify="space-between" align="middle">
-            <AIScorePreview
-              score={trade.report.aIScore}
-              label={
-                <Label>
-                  AI Score <FontAwesomeIcon icon={['fad', 'brain']} />
-                </Label>
-              }
-            />
-          </Row>
+          {trade.action === 'BUY' && (
+            <Row justify="space-between" align="middle">
+              <AIScorePreview
+                score={trade.report.aIScore}
+                label={
+                  <Label>
+                    AI Score <FontAwesomeIcon icon={['fad', 'brain']} />
+                  </Label>
+                }
+              />
+            </Row>
+          )}
 
           {trade.action === 'BUY' && (
             <>
