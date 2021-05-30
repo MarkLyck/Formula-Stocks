@@ -6,7 +6,6 @@ export * from './SELL_TIPS'
 export * from './STRIPE'
 export * from './ALERT'
 export * from './ARTICLES'
-export * from './FILES'
 
 // FS queries
 export * from './FS/STOCKS'
