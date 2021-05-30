@@ -100,8 +100,12 @@ const ExchangeStatuses = () => {
   const timeInTorontoHour = timeInNewYork.hour()
   const timeInTorontoMinute = timeInNewYork.minute()
 
+  const weekday = timeInNewYork.day()
+  const isWeekend = weekday === 0 || weekday === 6
+
   // NYSE and NASDAQ
   if (
+    !isWeekend &&
     timeInNewYorkHour >= 9 &&
     timeInNewYorkHour < 16 &&
     // @ts-ignore
@@ -120,6 +124,7 @@ const ExchangeStatuses = () => {
 
   // TORONTO
   if (
+    !isWeekend &&
     timeInTorontoHour >= 9 &&
     timeInTorontoHour < 16 &&
     // @ts-ignore

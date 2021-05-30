@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { List, Row } from 'antd'
+import { Row, Spin } from 'antd'
 import { useAtom, planAtom } from 'src/atoms'
 import { TRADES_QUERY } from 'src/common/queries'
 import { LoadingError } from 'src/ui-components'
@@ -14,6 +14,8 @@ const Trades = () => {
       planName: plan,
     },
   })
+
+  if (loading) return <Spin />
   if (error) return <LoadingError error={error} />
 
   return (
@@ -22,10 +24,6 @@ const Trades = () => {
         <Trade trade={trade} key={trade.ticker + trade.action} />
       ))}
     </Row>
-  )
-
-  return (
-    <List loading={loading} grid={{ gutter: 16, column: 3 }} dataSource={data?.signalsList?.items} renderItem={Trade} />
   )
 }
 

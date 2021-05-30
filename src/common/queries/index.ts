@@ -17,3 +17,7 @@ export * from './FS/STATISTICS'
 export * from './FS/PORTFOLIO_HOLDINGS'
 export * from './FS/TRADES'
 export * from './FS/SUGGESTIONS'
+export * from './FS/FILES'
+
+// V2
+export * from './FS/STOCK_PRICES'

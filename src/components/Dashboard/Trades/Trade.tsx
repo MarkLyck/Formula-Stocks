@@ -5,7 +5,9 @@ import { ErrorBoundary } from 'react-error-boundary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { resetApplication } from 'src/common/utils'
-import { ActionPill, ErrorCard, AIScorePreview } from 'src/ui-components'
+import { ErrorCard, AIScorePreview } from 'src/ui-components'
+
+import TradeHeader from './TradeHeader'
 import TradeChart from './TradeChart'
 
 const { Text } = Typography
@@ -55,19 +57,13 @@ type TradeProps = {
 }
 
 const Trade = ({ trade }: TradeProps) => {
-  console.log('🔈 ~ trade', trade)
   let latestPrice = trade.stock?.latestPrice
 
   return (
     <Col span={8} style={{ marginBottom: 16 }}>
       <Card style={{ height: '100%' }}>
         <Space direction="vertical" style={{ width: '100%' }} size="small">
-          <Row justify="space-between" align="middle">
-            <ActionPill action={trade.action} ticker={trade.ticker} />
-            <Text>
-              <Label>{trade.action === 'BUY' ? 'Buy near' : 'Sold at'}</Label> <Value>${trade.price.toFixed(2)}</Value>
-            </Text>
-          </Row>
+          <TradeHeader trade={trade} />
           <SmallDivider />
           <Row justify="space-between" align="middle">
             <TradeChart ticker={trade.ticker} name={trade.name} data={trade.stock.sixMonthsPrices} />

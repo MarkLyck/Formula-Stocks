@@ -77,14 +77,12 @@ const Performance = () => {
   const theme = useTheme()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
-  console.log('🔈 ~ Query', Query)
   const { data: planData, loading: planLoading, error: planError } = useQuery(Query, {
     variables: {
       plan: 'entry',
     },
     // client: FSApolloClient,
   })
-  console.log('🔈 ~ planData', planData)
 
   const { data: marketData } = useQuery(MARKET_PRICE_HISTORY, {
     variables: {

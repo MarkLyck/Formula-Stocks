@@ -1,8 +1,4 @@
-import React from 'react'
 import withDashboard from 'src/components/Dashboard/withDashboard'
-
-const Admin = () => {
-  return <div>Admin</div>
-}
+import Admin from 'src/components/Dashboard/Admin'
 
 export default withDashboard(Admin)
