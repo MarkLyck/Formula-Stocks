@@ -19,10 +19,15 @@ const Container = styled.div`
   }
 `
 
-export const DashboardHeader = ({ showExchangeStatuses = true }) => {
+type DashboardHeaderProps = {
+  title?: string
+  showExchangeStatuses?: boolean
+}
+
+export const DashboardHeader = ({ title, showExchangeStatuses = true }: DashboardHeaderProps) => {
   const router = useRouter()
 
-  let pageTitle = router.pathname.split('/dashboard/')[1]
+  let pageTitle = title || router.pathname.split('/dashboard/')[1]
   if (!pageTitle) pageTitle = 'Portfolio'
 
   return (
