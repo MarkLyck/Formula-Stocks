@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Layout, Menu, Tooltip, Button } from 'antd'
+import { Layout, Menu, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -168,12 +168,14 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
               <Menu.Item onClick={onLinkClick} key={item.route} icon={<MenuIcon icon={item.icon} />}>
                 {/* @ts-ignore item.route will exist */}
                 {item.route.includes('http') ? (
+                  // @ts-ignore
                   <Link href={item.route}>
                     <a href={item.route} target="_blank">
                       {item.label}
                     </a>
                   </Link>
                 ) : (
+                  // @ts-ignore
                   <Link href={item.route}>
                     <a>{item.label}</a>
                   </Link>
