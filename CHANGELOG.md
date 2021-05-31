@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.173"></a>
+## 1.0.173 (2021-05-31)
+
+### Added
+
+- ✨ account page [[9bf5d3d](https://github.com/MarkLyck/formula-stocks/commit/9bf5d3dffa617735414eddeed7009605a4c78a17)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.173 [[ec24a9a](https://github.com/MarkLyck/formula-stocks/commit/ec24a9ac5881c6f269478ffa5d06f8cd137b9f94)]
+- 📝 generated changelog [[917d98a](https://github.com/MarkLyck/formula-stocks/commit/917d98a30611232c206f6a5ee626777ba51b1cd7)]
+-  Merge pull request [#238](https://github.com/MarkLyck/formula-stocks/issues/238) from MarkLyck/account-work [[2284c00](https://github.com/MarkLyck/formula-stocks/commit/2284c001d3d9c67002bc8e832fa4605837a81f69)]
+- 🗑️ cleanupp [[e1bd4c7](https://github.com/MarkLyck/formula-stocks/commit/e1bd4c7bd4167889ac2c7cd8968f5e5541f018f5)]
+
+
 <a name="1.0.172"></a>
 ## 1.0.172 (2021-05-31)
 
