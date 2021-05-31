@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { Tooltip } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export const Card = styled.div`
+const Card = styled.div`
   display: flex;
   border-radius: 4px;
   border: 1px solid #ebedf5;
@@ -21,7 +21,7 @@ export const Card = styled.div`
   }
 `
 
-export const Content = styled.div`
+const Content = styled.div`
   background: none;
   width: 68%;
   padding-left: 10%;
@@ -38,7 +38,7 @@ export const Content = styled.div`
   }
 `
 
-export const Symbol = styled.div`
+const Symbol = styled.div`
   color: ${(p: any) => p.color};
   display: flex;
   justify-content: center;
