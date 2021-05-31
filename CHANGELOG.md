@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.167"></a>
+## 1.0.167 (2021-05-31)
+
+### Added
+
+- ✨ add zustand, hide admin for normal users [[900f588](https://github.com/MarkLyck/formula-stocks/commit/900f588df29d37f6cdd55482e4db7f2021697518)]
+- ✨ improvements [[e538452](https://github.com/MarkLyck/formula-stocks/commit/e53845217f1eae4c167de19af71673e035411906)]
+- ✨ use new stock api [[6231e43](https://github.com/MarkLyck/formula-stocks/commit/6231e438cedbfa56917fe4ceb50dd1c51bdb81a7)]
+- ✨ admin file uploads [[77e21f5](https://github.com/MarkLyck/formula-stocks/commit/77e21f5e3ee6cf83c5164c0f53049e29373d0fac)]
+
+### Removed
+
+- 🔥 remove jotai [[283adb3](https://github.com/MarkLyck/formula-stocks/commit/283adb3a776549088020a02f605b26a1e4a5f7bf)]
+
+### Fixed
+
+- 🐛 fix user issu [[734a801](https://github.com/MarkLyck/formula-stocks/commit/734a8010360ef42fbb6b96f7b189a717a6adced9)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.167 [[6cd34c0](https://github.com/MarkLyck/formula-stocks/commit/6cd34c0798acb6cb75431baf9b12e41293585fe5)]
+-  Merge pull request [#232](https://github.com/MarkLyck/formula-stocks/issues/232) from MarkLyck/remove-jotai [[db762fa](https://github.com/MarkLyck/formula-stocks/commit/db762fa029730a5a6d42b877ed9edb81fe03fff4)]
+- 🏷️ fix type [[192733d](https://github.com/MarkLyck/formula-stocks/commit/192733d8274b9762af96b68c56e95af4a56fa177)]
+- 🗑️ remove dupe import [[85def6c](https://github.com/MarkLyck/formula-stocks/commit/85def6cdcf0469db9ba7579cdf6845919bcfe8ad)]
+- 📝 generated changelog [[777c701](https://github.com/MarkLyck/formula-stocks/commit/777c7019c2a736b6b47821be829c7f523e72a86e)]
+
+
 <a name="1.0.166"></a>
 ## 1.0.166 (2021-05-27)
 
