@@ -1,5 +1,26 @@
 # Changelog
 
+<a name="1.0.170"></a>
+## 1.0.170 (2021-05-31)
+
+### Added
+
+- ✨ user statistics [[8371528](https://github.com/MarkLyck/formula-stocks/commit/8371528aaedb2f321d3f5a92158c5581545dc123)]
+
+### Changed
+
+- 🔧 update lighthouse [[fdb1859](https://github.com/MarkLyck/formula-stocks/commit/fdb18591e3500ee3a0d1aeac82e0074ced3a8c2c)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.170 [[8c03a3a](https://github.com/MarkLyck/formula-stocks/commit/8c03a3ad95570838fd5b92b186fa984be7e865c2)]
+- 📝 generated changelog [[154e9ac](https://github.com/MarkLyck/formula-stocks/commit/154e9ac5053d196f77da80df7a6a9f3546344a02)]
+-  Merge pull request [#235](https://github.com/MarkLyck/formula-stocks/issues/235) from MarkLyck/user-statistics [[d8330f7](https://github.com/MarkLyck/formula-stocks/commit/d8330f72c4c9bc55e72d5a5dc4f563dc7bef36b1)]
+- 🗑️ fix type error [[42bb9a9](https://github.com/MarkLyck/formula-stocks/commit/42bb9a9ae32e7a1595aa3c22cc79476e3611b200)]
+- 🗑️ fix exports [[692bd03](https://github.com/MarkLyck/formula-stocks/commit/692bd03747da311ec8eb3514a2676b37d0a0fb54)]
+- 🏷️ fix type [[83cabc5](https://github.com/MarkLyck/formula-stocks/commit/83cabc515af0d5d220897710ad8152c8be453306)]
+
+
 <a name="1.0.169"></a>
 ## 1.0.169 (2021-05-31)
 
