@@ -155,7 +155,11 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         {/* @ts-ignore */}
         <StyledMenu collapsed={collapsed} defaultSelectedKeys={[activeItem]} mode="inline">
           {menuList.map((item, i) => {
-            if (item.label === 'Admin' && user.type !== 'admin') return null
+            if (item.label === 'Admin') {
+              if (!user) return null
+              if (user?.type !== 'admin') return null
+            }
+
             if (item.divider) return <MenuDivider key={'divider' + i} role="menuitem" />
 
             return (
