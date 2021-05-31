@@ -7,7 +7,7 @@ import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
 import { StatBox } from 'src/ui-components'
 
 const GUTTER = 16
-const COL_SPAN = 12
+const COL_SPAN = 6
 
 const Statistics = () => {
   const theme = useTheme()
@@ -23,7 +23,7 @@ const Statistics = () => {
       <Col span={COL_SPAN}>
         <StatBox
           label="Total return"
-          value={!totalReturn ? '' : `+${numberFormatter.format(totalReturn?.toFixed(0))}%`}
+          value={!totalReturn ? '--' : `+${numberFormatter.format(totalReturn?.toFixed(0))}%`}
           backgroundColor={theme.palette.primary[600]}
           color="white"
           icon={['fad', 'chart-line']}
@@ -33,7 +33,7 @@ const Statistics = () => {
       <Col span={COL_SPAN}>
         <StatBox
           label="Annual growth rate"
-          value={`+${statistics.cAGR}%`}
+          value={statistics.cAGR ? `+${statistics.cAGR}%` : '--'}
           backgroundColor="white"
           color={theme.palette.primary[600]}
           icon={['fad', 'dollar-sign']}
@@ -43,7 +43,7 @@ const Statistics = () => {
       <Col span={COL_SPAN}>
         <StatBox
           label="Sold with profit"
-          value={`${!statistics.winLossRatio ? '' : statistics.winLossRatio.toFixed(2)}%`}
+          value={!statistics.winLossRatio ? '--' : `${statistics.winLossRatio.toFixed(2)}%`}
           backgroundColor={theme.palette.success[600]}
           color="#fff"
           icon={['fad', 'chart-pie']}
@@ -53,7 +53,7 @@ const Statistics = () => {
       <Col span={COL_SPAN}>
         <StatBox
           label="Gain to Pain ratio"
-          value={statistics.gainToPainRatio}
+          value={statistics.gainToPainRatio ? statistics.gainToPainRatio : '--'}
           backgroundColor="white"
           color={theme.palette.success[600]}
           icon={['fad', 'balance-scale-right']}

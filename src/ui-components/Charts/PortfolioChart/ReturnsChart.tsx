@@ -134,12 +134,6 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
     },
-    animation: {
-      appear: {
-        animation: 'path-in',
-        duration: 2000,
-      },
-    },
   }
 
   return (
