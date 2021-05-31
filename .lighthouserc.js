@@ -33,7 +33,7 @@ module.exports = {
         interactive: ['error', { minScore: 0.05 }],
         label: 'off',
         'largest-contentful-paint': ['error', { minScore: 0.01 }],
-        'legacy-javascript': ['error', { maxLength: 6 }],
+        'legacy-javascript': ['error', { maxLength: 7 }],
         'link-name': 'off',
         'load-fast-enough-for-pwa': 'off',
         'long-tasks': 'off',
