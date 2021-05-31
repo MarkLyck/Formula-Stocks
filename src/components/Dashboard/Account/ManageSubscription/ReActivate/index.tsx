@@ -1,7 +1,6 @@
 import React from 'react'
 import { useLazyQuery } from '@apollo/client'
 import { format } from 'date-fns'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'antd'
 import { CANCEL_SUBSCRIPTION } from '~/common/queries'
 import { subscriptionType } from '../types'
@@ -27,7 +26,7 @@ const reactivateSubscription = async (
   })
 }
 
-const ReactivateSubscription = ({ subscription, user }) => {
+const ReactivateSubscription = ({ subscription, user }: any) => {
   if (!subscription || !subscription.canceled_at) return null
   //  || subscription.status !== 'active'
   const [executeReactivateSubscription, { called, data, loading, error }] = useLazyQuery(CANCEL_SUBSCRIPTION)
