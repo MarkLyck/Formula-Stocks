@@ -1,22 +1,25 @@
 import { Row, Col } from 'antd'
 import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 import { numberFormatter } from 'src/common/utils/formatters'
 import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
 import { StatBox } from 'src/ui-components'
 
 const GUTTER = 16
-const COL_SPAN = 6
 
 const Statistics = () => {
   const theme = useTheme()
   const { data: statisticsData } = useQuery(STATISTICS)
   const { data: launchStatsData } = useQuery(STATISTICS_SINCE_LAUNCH)
+  const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
   const statistics = statisticsData ? statisticsData.statisticsList.items[0] : {}
   const launchStatistics = launchStatsData?.statisticsSinceLaunchesList?.items[0] || {}
   const totalReturn = launchStatistics.totalReturn
+
+  let COL_SPAN = isTabletMinus ? 12 : 6
 
   return (
     <Row gutter={[GUTTER, GUTTER]} style={{ marginBottom: 24 }}>

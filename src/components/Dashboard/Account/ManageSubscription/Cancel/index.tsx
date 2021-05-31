@@ -12,7 +12,8 @@ type CancelSubscriptionProps = {
 const CancelSubscription = ({ subscription, updateUser, user }: CancelSubscriptionProps) => {
   const [cancelModalVisible, setCancelModalVisible] = useState(false)
 
-  if (!subscription || !subscription.id || subscription.canceled_at) return null
+  console.log('🔈 ~ subscription', subscription)
+  if (!subscription?.id || subscription.canceled_at) return null
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
