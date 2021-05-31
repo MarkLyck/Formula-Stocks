@@ -23,7 +23,7 @@ const Statistics = () => {
       <Col span={COL_SPAN}>
         <StatBox
           label="Total return"
-          value={`+${numberFormatter.format(totalReturn.toFixed(0))}%`}
+          value={!totalReturn ? '' : `+${numberFormatter.format(totalReturn?.toFixed(0))}%`}
           backgroundColor={theme.palette.primary[600]}
           color="white"
           icon={['fad', 'chart-line']}
@@ -43,7 +43,7 @@ const Statistics = () => {
       <Col span={COL_SPAN}>
         <StatBox
           label="Sold with profit"
-          value={`${statistics.winLossRatio.toFixed(2)}%`}
+          value={`${!statistics.winLossRatio ? '' : statistics.winLossRatio.toFixed(2)}%`}
           backgroundColor={theme.palette.success[600]}
           color="#fff"
           icon={['fad', 'chart-pie']}
