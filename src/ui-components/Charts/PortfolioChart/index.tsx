@@ -187,7 +187,7 @@ const PortfolioChart = () => {
       >
         <Space direction="vertical">
           <Flex>
-            <Title level={4}>Portfolio returns</Title>
+            <Title level={4}>Performance</Title>
             <Space>
               {/* @ts-ignore */}
               <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
