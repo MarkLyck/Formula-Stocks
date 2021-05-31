@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.168"></a>
+## 1.0.168 (2021-05-31)
+
+### Fixed
+
+- 🐛 fix icons flash big [[4e236c2](https://github.com/MarkLyck/formula-stocks/commit/4e236c203e8be457e4cecc2079f09d5b179d2356)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.168 [[380a251](https://github.com/MarkLyck/formula-stocks/commit/380a251385e608ecb960e635dbe90cb9a53dd4ee)]
+- 📝 generated changelog [[194f4d4](https://github.com/MarkLyck/formula-stocks/commit/194f4d4c2165465ec29c3185e9418deca3938ad3)]
+-  Merge pull request [#234](https://github.com/MarkLyck/formula-stocks/issues/234) from MarkLyck/fix-icons [[c931c53](https://github.com/MarkLyck/formula-stocks/commit/c931c5344fbd52e18c42be167d659271d44c24cd)]
+
+
 <a name="1.0.167"></a>
 ## 1.0.167 (2021-05-31)
 
