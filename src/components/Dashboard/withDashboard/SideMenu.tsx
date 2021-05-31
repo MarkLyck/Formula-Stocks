@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Layout, Menu, Tooltip } from 'antd'
+import { Layout, Menu, Tooltip, Button } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -109,6 +109,7 @@ const menuList = [
   { label: 'AI Reports', icon: ['fad', 'tachometer-alt'], route: '/dashboard/reports' },
   { divider: true },
   { label: 'Account', icon: ['fad', 'user'], route: '/dashboard/account' },
+  { label: 'Articles', icon: ['fad', 'newspaper'], route: 'https://medium.com/@FormulaStocks' },
   { label: 'Road map', icon: ['fad', 'pennant'], route: '/dashboard/roadmap' },
   { divider: true },
   { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin' },
@@ -166,9 +167,17 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
               // @ts-ignore icon string
               <Menu.Item onClick={onLinkClick} key={item.route} icon={<MenuIcon icon={item.icon} />}>
                 {/* @ts-ignore item.route will exist */}
-                <Link href={item.route}>
-                  <a>{item.label}</a>
-                </Link>
+                {item.route.includes('http') ? (
+                  <Link href={item.route}>
+                    <a href={item.route} target="_blank">
+                      {item.label}
+                    </a>
+                  </Link>
+                ) : (
+                  <Link href={item.route}>
+                    <a>{item.label}</a>
+                  </Link>
+                )}
               </Menu.Item>
             )
           })}
