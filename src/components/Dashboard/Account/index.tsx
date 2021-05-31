@@ -13,7 +13,7 @@ const Account = () => {
   return (
     <div>
       <DashboardHeader title="My Account" showExchangeStatuses={false} />
-      <Statistics user={user} />
+      <Statistics />
       <ManageSubscription subscription={user?.stripe.subscription} updateUser={updateUser} user={user} />
     </div>
   )
