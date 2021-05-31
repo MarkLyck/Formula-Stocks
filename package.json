@@ -36,7 +36,6 @@
     "framer-motion": "4.1.17",
     "graphql": "15.5.0",
     "isomorphic-unfetch": "3.1.0",
-    "jotai": "0.16.7",
     "lodash": "4.17.21",
     "lodash.maxby": "4.6.0",
     "mixpanel-browser": "2.41.0",
@@ -52,7 +51,8 @@
     "react-lazyload": "3.2.0",
     "react-minimal-pie-chart": "8.2.0",
     "react-no-ssr": "1.1.0",
-    "react-scroll": "1.8.2"
+    "react-scroll": "1.8.2",
+    "zustand": "^3.5.1"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.3.0",

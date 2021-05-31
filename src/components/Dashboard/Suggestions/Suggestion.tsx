@@ -52,14 +52,17 @@ const NotAvailable = () => <NotAvailableText>--</NotAvailableText>
 
 type TradeProps = {
   trade: any
+  colSpan: number
 }
 
-const Trade = ({ trade }: TradeProps) => {
-  console.log('🔈 ~ trade', trade)
-  let latestPrice = trade.stock?.latestPrice
+const Trade = ({ trade, colSpan }: TradeProps) => {
+  const stock = trade?.stock_v2 || {}
+  const stockPrices = stock?.stockPrices || {}
+  const priceHistory = stockPrices?.historicalSimple || []
+  const latestPrice = stockPrices?.latestPrice
 
   return (
-    <Col span={8} style={{ marginBottom: 16 }}>
+    <Col span={colSpan} style={{ marginBottom: 16 }}>
       <Card style={{ height: '100%' }}>
         <Space direction="vertical" style={{ width: '100%' }} size="small">
           <Row justify="space-between" align="middle">
@@ -70,7 +73,7 @@ const Trade = ({ trade }: TradeProps) => {
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">
-            <TradeChart ticker={trade.ticker} name={trade.name} data={trade.stock.sixMonthsPrices} />
+            <TradeChart ticker={trade.ticker} name={trade.name} data={priceHistory} />
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">

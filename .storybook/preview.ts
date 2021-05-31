@@ -6,7 +6,6 @@ import { MockedProvider } from '@apollo/client/testing'
 import withStyles from './decorators/withStyles'
 import withTheme from './decorators/withTheme'
 import withRouter from './decorators/withRouter'
-import withJotai from './decorators/withJotai'
 
 addParameters({
   viewport: {
@@ -14,7 +13,6 @@ addParameters({
   },
 })
 
-addDecorator(withJotai)
 addDecorator(withStyles)
 addDecorator(withTheme)
 addDecorator(withRouter)

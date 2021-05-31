@@ -1,5 +1,4 @@
 import React from 'react'
-import { Provider as JotaiProvider } from 'jotai'
 import { ThemeProvider } from '@emotion/react'
 import ComposeProviders from './ComposeProviders'
 import { BreakpointProvider } from '@w11r/use-breakpoint'
@@ -20,10 +19,10 @@ const AppProvider = ({ children }: AppProviderProps) => {
 }
 
 const Wrapper = (props: any) => (
-  <JotaiProvider>
+  <>
     <GlobalStyles />
     <AppProvider {...props} />
-  </JotaiProvider>
+  </>
 )
 
 export default Wrapper

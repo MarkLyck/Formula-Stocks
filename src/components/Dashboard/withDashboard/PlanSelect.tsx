@@ -1,6 +1,6 @@
 import { Select } from 'antd'
 import styled from '@emotion/styled'
-import { useAtom, planAtom } from 'src/atoms'
+import useStore from 'src/lib/useStore'
 
 const { Option } = Select
 
@@ -9,7 +9,7 @@ const Container = styled.div`
 `
 
 const PlanSelect = () => {
-  const [plan, setPlan] = useAtom(planAtom)
+  const { plan, setPlan } = useStore((state: any) => ({ setPlan: state.setPlan, plan: state.plan }))
 
   return (
     <Container>

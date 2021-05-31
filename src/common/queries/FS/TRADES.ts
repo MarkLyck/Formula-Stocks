@@ -4,23 +4,25 @@ export const TRADES_QUERY = gql`
   query TRADES_QUERY($planName: String) {
     signalsList(filter: { plan: { planID: { equals: $planName } }, type: { equals: "trade" } }) {
       items {
+        ticker
         action
-        advancedData
-        name
         percentageWeight
         portfolioWeight
         price
-        ticker
         totalPortfolioWeight
         type
         boughtAt
         report {
           aIScore
         }
-        stock {
-          ticker
-          sixMonthsPrices
-          latestPrice
+        stock_v2 {
+          stockPrices {
+            latestPrice
+          }
+          profile {
+            image
+            companyName
+          }
         }
       }
     }

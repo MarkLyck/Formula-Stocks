@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Card, Typography, Space, Row, Col, Tooltip, Divider, Progress } from 'antd'
+
 import { ErrorBoundary } from 'react-error-boundary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { resetApplication } from 'src/common/utils'
-import { ActionPill, ErrorCard, AIScorePreview } from 'src/ui-components'
+import { ErrorCard, AIScorePreview } from 'src/ui-components'
+
+import TradeHeader from './TradeHeader'
 import TradeChart from './TradeChart'
 
 const { Text } = Typography
@@ -52,25 +55,31 @@ const NotAvailable = () => <NotAvailableText>--</NotAvailableText>
 
 type TradeProps = {
   trade: any
+  colSpan: number
 }
 
-const Trade = ({ trade }: TradeProps) => {
-  console.log('🔈 ~ trade', trade)
-  let latestPrice = trade.stock?.latestPrice
+const Trade = ({ trade, colSpan }: TradeProps) => {
+  let totalReturn = 0
+
+  if (trade.action === 'SELL') {
+    const increase = trade.price - trade.boughtAt
+    totalReturn = (increase / trade.boughtAt) * 100
+  }
+
+  const stock = trade?.stock_v2 || {}
+  const profile = stock.profile
+  const stockPrices = stock?.stockPrices || {}
+  const priceHistory = stockPrices?.historicalSimple || []
+  const latestPrice = stockPrices?.latestPrice
 
   return (
-    <Col span={8} style={{ marginBottom: 16 }}>
+    <Col span={colSpan} style={{ marginBottom: 16 }}>
       <Card style={{ height: '100%' }}>
         <Space direction="vertical" style={{ width: '100%' }} size="small">
-          <Row justify="space-between" align="middle">
-            <ActionPill action={trade.action} ticker={trade.ticker} />
-            <Text>
-              <Label>{trade.action === 'BUY' ? 'Buy near' : 'Sold at'}</Label> <Value>${trade.price.toFixed(2)}</Value>
-            </Text>
-          </Row>
+          <TradeHeader trade={trade} />
           <SmallDivider />
           <Row justify="space-between" align="middle">
-            <TradeChart ticker={trade.ticker} name={trade.name} data={trade.stock.sixMonthsPrices} />
+            <TradeChart ticker={trade.ticker} name={profile.companyName} data={priceHistory} />
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">
@@ -103,21 +112,25 @@ const Trade = ({ trade }: TradeProps) => {
             <>
               <Row justify="space-between" align="middle">
                 <Label>Total return</Label>
-                <Value>{trade.boughtAt ? `WIP` : <NotAvailable />}</Value>
+                <Value>
+                  {trade.boughtAt ? `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%` : <NotAvailable />}
+                </Value>
               </Row>
               <SmallDivider />
             </>
           )}
-          <Row justify="space-between" align="middle">
-            <AIScorePreview
-              score={trade.report.aIScore}
-              label={
-                <Label>
-                  AI Score <FontAwesomeIcon icon={['fad', 'brain']} />
-                </Label>
-              }
-            />
-          </Row>
+          {trade.action === 'BUY' && (
+            <Row justify="space-between" align="middle">
+              <AIScorePreview
+                score={trade.report.aIScore}
+                label={
+                  <Label>
+                    AI Score <FontAwesomeIcon icon={['fad', 'brain']} />
+                  </Label>
+                }
+              />
+            </Row>
+          )}
 
           {trade.action === 'BUY' && (
             <>
@@ -141,7 +154,7 @@ const Trade = ({ trade }: TradeProps) => {
             <>
               <SmallDivider />
               <AllocationContainer>
-                <Tooltip title="Total allocation percentage of this stock in the portfolio after this trade.">
+                <Tooltip title="Total portfolio allocation of this stock, after trade was completed.">
                   <Label>
                     Total portfolio Allocation
                     <QuestionIcon icon={['fad', 'question-circle']} />

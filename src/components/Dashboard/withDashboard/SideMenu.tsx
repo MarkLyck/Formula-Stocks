@@ -5,6 +5,8 @@ import { Layout, Menu, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
+
+import useStore from 'src/lib/useStore'
 import { ErrorFallback } from 'src/ui-components'
 import { resetApplication, logout } from 'src/common/utils'
 import SupportButton from './SupportButton'
@@ -120,8 +122,11 @@ export type SideMenuProps = {
 
 const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
   const router = useRouter()
+  const user = useStore((state: any) => state.user)
   const activeItem =
     menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route || '/dashboard/portfolio'
+
+  const goToHomePage = () => router.push('/')
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
@@ -138,7 +143,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         onCollapse={setCollapsed}
       >
         <Tooltip placement="right" title="Home">
-          <LogoContainer>
+          <LogoContainer onClick={goToHomePage}>
             <LogoCard collapsed={collapsed}>
               <Logo
                 src={collapsed ? '/logos/formula_stocks/logo_square.svg' : '/logos/formula_stocks/logo_horizontal.svg'}
@@ -150,6 +155,11 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         {/* @ts-ignore */}
         <StyledMenu collapsed={collapsed} defaultSelectedKeys={[activeItem]} mode="inline">
           {menuList.map((item, i) => {
+            if (item.label === 'Admin') {
+              if (!user) return null
+              if (user?.type !== 'admin') return null
+            }
+
             if (item.divider) return <MenuDivider key={'divider' + i} role="menuitem" />
 
             return (
