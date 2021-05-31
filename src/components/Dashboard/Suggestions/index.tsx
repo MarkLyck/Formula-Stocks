@@ -2,14 +2,14 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import { Row, Col } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
-import { useAtom, planAtom } from 'src/atoms'
+import useStore from 'src/lib/useStore'
 import { SUGGESTIONS_QUERY } from 'src/common/queries'
 import { LoadingError, DashboardHeader } from 'src/ui-components'
 import Suggestion from './Suggestion'
 
 const Suggestions = () => {
   const { 'isMobile-': isMobileMinus, 'isTablet-': isTabletMinus } = useBreakpoint()
-  const [plan] = useAtom(planAtom)
+  const plan = useStore((state: any) => state.plan)
 
   const { data, error } = useQuery(SUGGESTIONS_QUERY, {
     variables: {

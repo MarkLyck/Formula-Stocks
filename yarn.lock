@@ -7966,11 +7966,6 @@ jest-worker@^26.2.1, jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jotai@0.16.7:
-  version "0.16.7"
-  resolved "https://registry.yarnpkg.com/jotai/-/jotai-0.16.7.tgz#31bc67b5d1b5dde2bac63e0604818c06059750af"
-  integrity sha512-eD8rQffsuQanLnXWxn/7lWXsDlBw4Mw4qmb/craISnjxD1a7jZy5BLSvYFkP+CGLEflZTwd9s2UN+U1qcQPUqA==
-
 js-cookie@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"

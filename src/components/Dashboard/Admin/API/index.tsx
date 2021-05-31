@@ -53,7 +53,6 @@ const customRequest = async (data: any) => {
         return response.json()
       })
       .then((response) => {
-        console.log('response', response)
         data.onSuccess(response)
       })
       .catch((err) => {
@@ -77,10 +76,6 @@ const Uploader = () => {
 
   const handleChange = (info: any) => {
     const { status } = info.file
-
-    if (status !== 'uploading') {
-      console.log(info.file, info.fileList)
-    }
 
     if (status === 'done' && info.file.response.url) {
       // run MUTATION TO ADD TO 8BASE

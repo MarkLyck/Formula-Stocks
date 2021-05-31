@@ -2,15 +2,15 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import { Row, Col, Spin } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
-import { useAtom, planAtom } from 'src/atoms'
+import useStore from 'src/lib/useStore'
 
 import { TRADES_QUERY } from 'src/common/queries'
 import { LoadingError, DashboardHeader } from 'src/ui-components'
 import Trade from './Trade'
 
 const Trades = () => {
+  const plan = useStore((state: any) => state.plan)
   const { 'isMobile-': isMobileMinus, 'isTablet-': isTabletMinus } = useBreakpoint()
-  const [plan] = useAtom(planAtom)
 
   const { data, loading, error } = useQuery(TRADES_QUERY, {
     variables: {

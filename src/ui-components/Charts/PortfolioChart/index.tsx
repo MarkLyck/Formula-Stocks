@@ -5,7 +5,7 @@ import { Select, Space, Typography } from 'antd'
 import { subYears, subMonths, isAfter } from 'date-fns'
 import { ErrorBoundary } from 'react-error-boundary'
 
-import { useAtom, planAtom } from 'src/atoms'
+import useStore from 'src/lib/useStore'
 import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
 import ReturnsChart from './ReturnsChart'
 import BarChart from './Histogram'
@@ -132,7 +132,7 @@ type returnsDataPointType = {
 }
 
 const PortfolioChart = () => {
-  const [plan] = useAtom(planAtom)
+  const plan = useStore((state: any) => state.plan)
   const [chartType, setChartType] = useState('total_return')
   const [startDate, setStartDate] = useState('all_time')
   const { data, loading, error } = useQuery(LAUNCH_PERFORMANCE_HISTORY, {
