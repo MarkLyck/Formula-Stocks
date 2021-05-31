@@ -43,7 +43,7 @@ const Score = styled(Text, {
 `
 
 export const HowToUseThisButton = styled(Button)`
-  color: ${(props: any) => props.theme.colors.primary};
+  color: ${(props: any) => props.theme.palette.primary[600]};
   margin: 24px auto 0;
 
   &:hover {
