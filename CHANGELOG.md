@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.175"></a>
+## 1.0.175 (2021-05-31)
+
+### Changed
+
+- ⬆️ Pin dependencies [[a49d6ce](https://github.com/MarkLyck/formula-stocks/commit/a49d6ce8cb0a74ca5434e4edc5f4dc476cc759a2)]
+- 🎨 add brochure [[28b5d1b](https://github.com/MarkLyck/formula-stocks/commit/28b5d1bc910755bf27769529831ee4d17d15ff47)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.175 [[016d49c](https://github.com/MarkLyck/formula-stocks/commit/016d49cd7d4163f7813f90deab95899e6c05838a)]
+- 📝 generated changelog [[78bbc69](https://github.com/MarkLyck/formula-stocks/commit/78bbc698a0da8af101cf501bd7ef6d8aa829dd98)]
+-  Merge pull request [#239](https://github.com/MarkLyck/formula-stocks/issues/239) from MarkLyck/renovate/pin-dependencies [[146e74d](https://github.com/MarkLyck/formula-stocks/commit/146e74da23b97611aaef17cb9eb3229aeed28920)]
+-  Merge pull request [#241](https://github.com/MarkLyck/formula-stocks/issues/241) from MarkLyck/assets [[9ed029e](https://github.com/MarkLyck/formula-stocks/commit/9ed029ec646693bad79b8b540223ccb421230f66)]
+
+
 <a name="1.0.174"></a>
 ## 1.0.174 (2021-05-31)
 
