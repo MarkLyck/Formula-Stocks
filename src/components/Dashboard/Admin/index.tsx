@@ -1,7 +1,7 @@
-import API from './API'
+import Uploader from './API'
 
 const Admin = () => {
-  return <API />
+  return <Uploader />
 }
 
 export default Admin

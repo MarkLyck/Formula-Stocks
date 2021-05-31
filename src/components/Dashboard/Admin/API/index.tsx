@@ -66,7 +66,7 @@ const Uploader = () => {
   const { loading, error, data: fileStackData } = useQuery(FILE_STACK_INFO)
   const [fileCreateMutation] = useMutation(FILE_CREATE_MUTATION)
 
-  if (loading || error || !fileStackData) return ''
+  if (loading || error || !fileStackData) return null
 
   const FILESTACK_API_KEY = fileStackData.fileUploadInfo.apiKey
   const FILESTACK_SIGNATURE = fileStackData.fileUploadInfo.signature
