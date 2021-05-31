@@ -21,6 +21,7 @@ const LoginItems = ({ showSignup }: any) => {
   }
 
   const handleDashboardClick = () => {
+    console.log('handleDashboardClick - SEND USER TO DASHBOARD')
     Router.push('/dashboard')
   }
 
