@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.177"></a>
+## 1.0.177 (2021-06-08)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.177 [[cb4931b](https://github.com/MarkLyck/formula-stocks/commit/cb4931b011da935c6f7bd3b58f6d324fb4a557d6)]
+
+
+<a name="1.0.176"></a>
+## 1.0.176 (2021-06-08)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.16.2 [[b65fb67](https://github.com/MarkLyck/formula-stocks/commit/b65fb6731adf5b9d33302f2240ca9ff1f489af89)]
+- ⬆️ Update dependency @ant-design/charts to v1.1.10 [[d8c0f3e](https://github.com/MarkLyck/formula-stocks/commit/d8c0f3e8be31dbc37cad6a04f7640cc20ce50c28)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.176 [[6febcd7](https://github.com/MarkLyck/formula-stocks/commit/6febcd7dc1e68a565423781cc29809e05206d78d)]
+-  Merge pull request [#250](https://github.com/MarkLyck/formula-stocks/issues/250) from MarkLyck/renovate/antd-4.x [[d215e25](https://github.com/MarkLyck/formula-stocks/commit/d215e256ec645d1dbc0bad951dd3176bf68fc779)]
+-  Merge pull request [#244](https://github.com/MarkLyck/formula-stocks/issues/244) from MarkLyck/renovate/ant-design-charts-1.x [[8eed61d](https://github.com/MarkLyck/formula-stocks/commit/8eed61dfb92445ec34f058ce6620b35264acf9d1)]
+- 📝 generated changelog [[c112599](https://github.com/MarkLyck/formula-stocks/commit/c112599e1a321d6ea08bdf2d11a96ccfcf8932ad)]
+
+
 <a name="1.0.175"></a>
 ## 1.0.175 (2021-05-31)
 
