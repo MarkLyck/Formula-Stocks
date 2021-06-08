@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import { Card, Typography } from 'antd'
 import styled from '@emotion/styled'
 
-const { Title } = Typography
+const { Text, Title } = Typography
 
 const Container = styled.div`
   display: flex;
@@ -9,23 +10,25 @@ const Container = styled.div`
 `
 
 const Logo = styled.img`
-  height: 24px;
-  width: 24px;
+  height: 32px;
   margin-right: 16px;
+  border-radius: 4px;
 `
 
-const Header = ({ profile, stockPrice }: any) => {
-  console.log('🔈 ~ stockPrice', stockPrice)
+const Header = ({ profile }: any) => {
+  const [image, setImage] = useState(profile?.image)
+
   return (
     <Card>
       {profile && (
         <Container>
-          <Logo src={profile.image} />
+          {/* sets the image to empty if it fails */}
+          <Logo src={image} onError={() => setImage('data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=')} />
           <Title level={4} style={{ margin: 0 }}>
             {profile.companyName} ({profile.symbol})
           </Title>
           <Title level={4} style={{ margin: 0, marginLeft: 'auto' }}>
-            ${stockPrice.latestPrice}
+            ${profile.price}
           </Title>
         </Container>
       )}

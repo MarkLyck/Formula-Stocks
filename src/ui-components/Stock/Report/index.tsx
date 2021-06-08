@@ -10,13 +10,19 @@ import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const ChartContainer = styled(Card)`
   width: 100%;
-  height: 480px;
+  height: 406px;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   > div {
     width: 100%;
+  }
+`
+
+const AIScoreCard = styled(Card)`
+  .ant-card-body {
+    padding: 20px;
   }
 `
 
@@ -43,6 +49,11 @@ const ReportContainer = styled.div`
 
 const ReportPartContainer = styled.div`
   width: calc(50% - 16px);
+
+  .ant-divider {
+    margin: 16px 0;
+  }
+
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -104,11 +115,11 @@ const Report = ({ price, scores, ticker }: ReportType) => {
           <SectionHeader>AI Investment Report</SectionHeader>
 
           <Space direction="vertical" style={{ width: '100%' }} size="large">
-            <Card>
+            <AIScoreCard>
               <AIScorePreview score={scores.ai_score} label="AI Score" />
               <Divider />
               <AIScoreReturn score={scores.ai_score} />
-            </Card>
+            </AIScoreCard>
             <ChartContainer>
               <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />
             </ChartContainer>
@@ -118,12 +129,12 @@ const Report = ({ price, scores, ticker }: ReportType) => {
         <ReportPartContainer>
           <SectionHeader>Scores</SectionHeader>
           <Space direction="vertical" style={{ width: '100%' }} size="large">
-            <Card>
+            <AIScoreCard>
               <AIScorePreview score={scores.ai_reward} label="Reward" />
               <Divider />
               <AIScorePreview score={scores.ai_safety} label="Safety" />
-            </Card>
-            <Card>
+            </AIScoreCard>
+            <AIScoreCard>
               <AIScorePreview score={scores.ai_value} label="Value" />
               <Divider />
               <AIScorePreview score={scores.ai_profitability} label="Profitability" />
@@ -133,7 +144,7 @@ const Report = ({ price, scores, ticker }: ReportType) => {
               <AIScorePreview score={scores.ai_soundness} label="Soundness" />
               <Divider />
               <AIScorePreview score={scores.ai_stewardship} label="Stewardship" />
-            </Card>
+            </AIScoreCard>
           </Space>
         </ReportPartContainer>
       </ReportContainer>

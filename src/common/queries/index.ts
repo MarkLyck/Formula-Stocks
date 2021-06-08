@@ -18,6 +18,7 @@ export * from './FS/PORTFOLIO_HOLDINGS'
 export * from './FS/TRADES'
 export * from './FS/SUGGESTIONS'
 export * from './FS/FILES'
+export * from './FS/FMP' // API RELAY
 
 // V2
 export * from './FS/STOCK_PRICES'

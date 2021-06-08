@@ -1,39 +1,102 @@
 import { useRouter } from 'next/router'
-import { Spin, Space } from 'antd'
+import { Spin, Space, Tabs, Typography } from 'antd'
 import { useQuery } from '@apollo/client'
-import { STOCK_REPORT } from 'src/common/queries'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { FMP, GET_REPORT_QUERY } from 'src/common/queries'
+import { Report } from 'src/ui-components/Stock'
 import Header from './Header'
+import Profile from './Profile'
 import StockChart from './StockChart'
+import StockNews from './StockNews'
+
+const { Text } = Typography
+const { TabPane } = Tabs
 
 const StockReport = () => {
   const router = useRouter()
   const { symbol }: any = router.query
+  console.log('🔈 ~ symbol', symbol)
 
-  const { loading, error, data } = useQuery(STOCK_REPORT, {
+  const { data: fmpProfile, loading } = useQuery(FMP, {
     variables: {
-      symbol,
+      endpoint: `https://financialmodelingprep.com/api/v3/profile/${symbol}`,
     },
   })
+  const { data: reportData, loading: reportLoading } = useQuery(GET_REPORT_QUERY, {
+    variables: {
+      ticker: symbol?.replace('.', '_'),
+    },
+  })
+  const profile = fmpProfile?.FMP?.response[0]
+  const report = reportData?.aIReport
 
-  const stock = data?.stocks_v2
-  console.log('🔈 ~ stock', stock)
-  const profile = stock?.profile
-  const stockPrice = stock?.stockPrices
-
-  if (loading) {
-    return <Spin />
-  }
-  if (error) {
-    return <p>error</p>
-  }
+  if (loading) return <Spin />
 
   return (
     <div>
       <Space direction="vertical" size="large" style={{ width: '100%' }}>
-        <Header profile={profile} stockPrice={stockPrice} />
+        <Header profile={profile} />
         <StockChart symbol={symbol} />
-        Report page
+        <Tabs onChange={console.log} type="card">
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'brain']} style={{ marginRight: 8 }} />
+                AI Report
+              </Text>
+            }
+            key="report"
+          >
+            {reportLoading && <Spin />}
+            {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
+          </TabPane>
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'info-square']} style={{ marginRight: 8 }} />
+                Profile
+              </Text>
+            }
+            key="profile"
+          >
+            {loading && <Spin />}
+            {report && <Profile profile={profile} />}
+          </TabPane>
+          {/* <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
+                Financials
+              </Text>
+            }
+            key="financials"
+          >
+            Content of Tab Pane 2
+          </TabPane> */}
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'newspaper']} style={{ marginRight: 8 }} />
+                Latest News
+              </Text>
+            }
+            key="news"
+          >
+            <StockNews symbol={symbol} />
+          </TabPane>
+          {/* <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
+                Dividends
+              </Text>
+            }
+            key="dividends"
+          >
+            Content of Tab Pane 3
+          </TabPane> */}
+        </Tabs>
       </Space>
     </div>
   )
