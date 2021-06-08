@@ -9,6 +9,7 @@ export * from './ARTICLES'
 
 // FS queries
 export * from './FS/STOCKS'
+export * from './FS/STOCK_REPORT'
 export * from './FS/REPORTS'
 export * from './FS/PLAN'
 export * from './FS/MARKET_PRICE_HISTORY'

@@ -24,10 +24,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/reports</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>http://localhost:3000/dashboard/roadmap</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -37,6 +33,14 @@
   </url>
   <url>
     <loc>http://localhost:3000/dashboard/trades</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>http://localhost:3000/dashboard/reports/[symbol]</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>http://localhost:3000/dashboard/reports/index</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>

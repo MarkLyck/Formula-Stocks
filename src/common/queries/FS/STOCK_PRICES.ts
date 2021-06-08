@@ -8,3 +8,12 @@ export const STOCK_PRICE_HISTORY_SIMPLE = gql`
     }
   }
 `
+
+export const STOCK_PRICE_HISTORY = gql`
+  query STOCK_PRICE_HISTORY_SIMPLE($symbol: String) {
+    stockPrice(symbol: $symbol) {
+      symbol
+      historical
+    }
+  }
+`
