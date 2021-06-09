@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Card, Typography, Space, Row, Col, Tooltip, Divider, Progress } from 'antd'
+import Link from 'next/link'
+import { Card, Typography, Space, Row, Col, Tooltip, Divider, Progress, Button } from 'antd'
 
 import { ErrorBoundary } from 'react-error-boundary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,6 +21,12 @@ const Value = styled(Text)`
   color: ${(p) => p.theme.palette.neutral[1000]};
   font-weight: bold;
 `
+
+const ReturnValue = styled(Text)`
+  color: ${(p: any) => p.theme.palette[p.positive ? 'success' : 'danger'][600]};
+  font-weight: bold;
+`
+
 const NotAvailableText = styled.span`
   color: ${(p) => p.theme.palette.neutral[600]};
 `
@@ -112,9 +119,10 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
             <>
               <Row justify="space-between" align="middle">
                 <Label>Total return</Label>
-                <Value>
+                {/* @ts-ignore */}
+                <ReturnValue positive={totalReturn >= 0}>
                   {trade.boughtAt ? `${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}%` : <NotAvailable />}
-                </Value>
+                </ReturnValue>
               </Row>
               <SmallDivider />
             </>
@@ -164,6 +172,13 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
               </AllocationContainer>
             </>
           )}
+          {trade.action === 'BUY' && <SmallDivider />}
+          <Link href={`/dashboard/reports/${trade.ticker}`}>
+            <Button block>
+              <FontAwesomeIcon icon={['fad', 'file-chart-line']} style={{ marginRight: 8 }} />
+              Full Report
+            </Button>
+          </Link>
         </Space>
       </Card>
     </Col>

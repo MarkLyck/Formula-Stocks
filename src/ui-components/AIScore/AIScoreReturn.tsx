@@ -108,7 +108,7 @@ const AIScoreReturn = ({ score }: AIScoreReturnProps) => {
     <Row justify="space-between" align="middle" style={{ padding: '6px 0' }}>
       <WideTooltip title={() => <PredictedTooltip result={result} />} getPopupContainer={(trigger) => trigger}>
         <Text>
-          Estimated annual {result.irr >= 0 ? 'return' : 'loss'}
+          Avg. Estimated annual {result.irr >= 0 ? 'return' : 'loss'}
           <FontAwesomeIcon icon={['fad', 'question-circle']} style={{ marginLeft: 6 }} />
         </Text>
       </WideTooltip>

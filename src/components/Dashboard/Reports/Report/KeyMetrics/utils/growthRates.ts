@@ -4,6 +4,7 @@ export const calculateGrowthRate = (values: number[]) => {
   const endValue = values[values.length - 1]
   let currentValue = startValue
 
+  if (currentValue < 0) return null
   if (currentValue === 0) return 0
 
   let doubles = 0
@@ -15,7 +16,11 @@ export const calculateGrowthRate = (values: number[]) => {
 
   const remainder = endValue / currentValue - 1
 
+  if (doubles + remainder === 0) return null
+
   const yearsToDouble = years / (doubles + remainder)
+
+  if (yearsToDouble === 0) return null
 
   // 72 is the rule of 72.
   // this involves some complicated mathmaetics and logarithm
@@ -31,9 +36,6 @@ export const calculateGrowthRateByYear = (values: number[]) => {
   const growthRate3Years = calculateGrowthRate(values.slice(values.length - 4))
   const growthRate5Years = calculateGrowthRate(values.slice(values.length - 6))
   const growthRate9Years = calculateGrowthRate(values.slice(values.length - 10))
-
-  const growthRateIsConsistentlyGrowing =
-    growthRate1Year > growthRate3Years && growthRate3Years > growthRate5Years && growthRate5Years > growthRate9Years
 
   const growthRates = [
     {
@@ -60,6 +62,5 @@ export const calculateGrowthRateByYear = (values: number[]) => {
     growthRate3Years,
     growthRate5Years,
     growthRate9Years,
-    growthRateIsConsistentlyGrowing,
   }
 }

@@ -1,6 +1,7 @@
 import { Card } from 'antd'
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
+import { useTheme } from '@emotion/react'
 import { numberFormatter } from 'src/common/utils/formatters'
 import { calculateGrowthRateByYear } from './utils/growthRates'
 
@@ -19,15 +20,20 @@ const ValueText = styled.p`
 const Column = dynamic(() => import('@ant-design/charts').then((mod) => mod.Column) as any, { ssr: false })
 
 type ROICProps = {
-  incomeStatements: any[]
+  keyMetrics: any[]
 }
 
-const Earnings = ({ incomeStatements }: ROICProps) => {
-  const EPSPerYear: any[] = incomeStatements.map((statement) => ({ date: statement.date, value: statement.eps }))
-  const { growthRates } = calculateGrowthRateByYear(EPSPerYear.map((item) => item.value))
+const Equity = ({ keyMetrics }: ROICProps) => {
+  const theme = useTheme()
+  const BVPSYearly = keyMetrics.map((metrics: any) => ({ date: metrics.date, value: metrics.bookValuePerShare }))
+  const { growthRates } = calculateGrowthRateByYear(BVPSYearly.map((item) => item.value))
+  const dateMap = BVPSYearly.reduce((acc: any, curr: any) => {
+    acc[curr.date] = curr.value
+    return acc
+  }, {})
 
   var config = {
-    data: EPSPerYear,
+    data: BVPSYearly,
     xField: 'date',
     yField: 'value',
     tooltip: {
@@ -56,12 +62,18 @@ const Earnings = ({ incomeStatements }: ROICProps) => {
         },
       },
     },
+    color: (item: any) => {
+      if (dateMap[item.date] < 0) {
+        return theme.palette.danger[600]
+      }
+      return theme.palette.primary[500]
+    },
     legend: false,
   }
 
   return (
     <>
-      <Card title="Earnings (Earnings Per Share)">
+      <Card title="Equity (Book Value Per Share)">
         {/* @ts-ignore */}
         <Column {...config} />
       </Card>
@@ -70,4 +82,4 @@ const Earnings = ({ incomeStatements }: ROICProps) => {
   )
 }
 
-export default Earnings
+export default Equity

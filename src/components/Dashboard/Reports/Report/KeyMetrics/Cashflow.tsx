@@ -1,5 +1,6 @@
 import { Card } from 'antd'
 import dynamic from 'next/dynamic'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { currencyFormatter } from 'src/common/utils/formatters'
 import { calculateGrowthRateByYear } from './utils/growthRates'
@@ -23,10 +24,16 @@ type CashflowProps = {
 }
 
 const Cashflow = ({ cashflowStatements }: CashflowProps) => {
+  const theme = useTheme()
   const revenues: any[] = cashflowStatements.map((statement) => ({
     date: statement.date,
     value: statement.freeCashFlow,
   }))
+
+  const dateMap = revenues.reduce((acc: any, curr: any) => {
+    acc[curr.date] = curr.value
+    return acc
+  }, {})
 
   const { growthRates } = calculateGrowthRateByYear(revenues.map((item) => item.value))
 
@@ -59,6 +66,12 @@ const Cashflow = ({ cashflowStatements }: CashflowProps) => {
           },
         },
       },
+    },
+    color: (item: any) => {
+      if (dateMap[item.date] < 0) {
+        return theme.palette.danger[600]
+      }
+      return theme.palette.primary[500]
     },
     legend: false,
   }

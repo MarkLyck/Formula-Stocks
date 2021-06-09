@@ -65,11 +65,16 @@ const GrowthRates = ({ growthRates }: any) => {
               <Label>
                 {rate.years} year{rate.years === 1 ? '' : 's'} growth rate
               </Label>
-              {/* @ts-ignore */}
-              <Value positive={rate.growthRate > 0}>
-                {rate.growthRate > 0 ? '+' : ''}
-                {rate.growthRate.toFixed(2)}%
-              </Value>
+              {rate.growthRate !== null ? (
+                // @ts-ignore
+                <Value positive={rate.growthRate > 0}>
+                  {rate.growthRate > 0 ? '+' : ''}
+                  {rate.growthRate.toFixed(2)}%
+                </Value>
+              ) : (
+                // @ts-ignore
+                <Value positive={false}>N/A</Value>
+              )}
             </Content>
           </Container>
         </Col>

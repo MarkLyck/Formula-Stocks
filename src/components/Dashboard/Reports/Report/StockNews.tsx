@@ -1,4 +1,4 @@
-import { Spin, Space, Card, Typography, Divider, Button } from 'antd'
+import { Spin, Space, Card, Typography, Divider, Button, Empty } from 'antd'
 import { useQuery } from '@apollo/client'
 import styled from '@emotion/styled'
 
@@ -27,8 +27,23 @@ const StockNews = ({ symbol }: any) => {
     },
   })
 
-  if (loading) return <Spin />
+  if (loading) {
+    return (
+      <Card>
+        <Spin />
+      </Card>
+    )
+  }
+
   const news = data?.FMP?.response || []
+
+  if (news.length === 0) {
+    return (
+      <Card>
+        <Empty description="No stock news found" />
+      </Card>
+    )
+  }
 
   return (
     <Space direction="vertical" style={{ width: '100%' }}>

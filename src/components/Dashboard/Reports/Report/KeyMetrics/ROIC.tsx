@@ -1,10 +1,8 @@
 import { Card } from 'antd'
 import dynamic from 'next/dynamic'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { numberFormatter } from 'src/common/utils/formatters'
-import { calculateGrowthRateByYear } from './utils/growthRates'
-
-import GrowthRates from './GrowthRates'
 
 const TooltipContainer = styled.div`
   padding: 16px;
@@ -22,12 +20,16 @@ type ROICProps = {
   keyMetrics: any[]
 }
 
-const Equity = ({ keyMetrics }: ROICProps) => {
-  const BVPSYearly = keyMetrics.map((metrics: any) => ({ date: metrics.date, value: metrics.bookValuePerShare }))
-  const { growthRates } = calculateGrowthRateByYear(BVPSYearly.map((item) => item.value))
+const ROIC = ({ keyMetrics }: ROICProps) => {
+  const theme = useTheme()
+  const roicData = keyMetrics.map((metrics) => ({ date: metrics.date, value: metrics.roic * 100 }))
+  const dateMap = roicData.reduce((acc: any, curr: any) => {
+    acc[curr.date] = curr.value
+    return acc
+  }, {})
 
   var config = {
-    data: BVPSYearly,
+    data: roicData,
     xField: 'date',
     yField: 'value',
     tooltip: {
@@ -35,14 +37,14 @@ const Equity = ({ keyMetrics }: ROICProps) => {
         const value = points[0]?.value
         return (
           <TooltipContainer>
-            <ValueText>${value ? Number(value).toFixed(2) : ''}</ValueText>
+            <ValueText>{value ? Number(value).toFixed(2) : ''}%</ValueText>
           </TooltipContainer>
         )
       },
     },
     yAxis: {
       label: {
-        formatter: (v: string) => `$${numberFormatter.format(Math.floor(Number(v)))}`,
+        formatter: (v: string) => `${numberFormatter.format(Math.floor(Number(v)))}%`,
         style: {
           fill: '#A0A5B2',
         },
@@ -56,18 +58,21 @@ const Equity = ({ keyMetrics }: ROICProps) => {
         },
       },
     },
+    color: (item: any) => {
+      if (dateMap[item.date] < 0) {
+        return theme.palette.danger[600]
+      }
+      return theme.palette.primary[500]
+    },
     legend: false,
   }
 
   return (
-    <>
-      <Card title="Equity (Book Value Per Share)">
-        {/* @ts-ignore */}
-        <Column {...config} />
-      </Card>
-      <GrowthRates growthRates={growthRates} />
-    </>
+    <Card title="ROIC (Return on invested capital)">
+      {/* @ts-ignore */}
+      <Column {...config} />
+    </Card>
   )
 }
 
-export default Equity
+export default ROIC

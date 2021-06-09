@@ -10,11 +10,11 @@ export const getAIScoreColor = (value: number) => {
   // if (score < 80) return 'Great'
   // if (score <= 100) return 'Excellent'
 
-  if (value < -10) {
+  if (value < -20) {
     return theme.palette.danger[600]
   }
 
-  if (value < 10) {
+  if (value < 20) {
     return theme.palette.warning[600]
   }
 
