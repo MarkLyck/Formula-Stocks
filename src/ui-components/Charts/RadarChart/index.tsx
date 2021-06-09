@@ -41,7 +41,7 @@ const RadarChart = ({ data, color }: RadarChartProps) => {
   const config = {
     data: data,
     legend: false,
-    padding: 32,
+    padding: 48,
     xField: 'label',
     yField: 'value',
     color,

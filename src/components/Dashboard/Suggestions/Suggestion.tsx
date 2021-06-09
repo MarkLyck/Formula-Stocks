@@ -106,7 +106,19 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
           <>
             <SmallDivider />
             <AllocationContainer>
-              <Tooltip title={``}>
+              <Tooltip
+                title={
+                  <Text style={{ color: 'white' }}>
+                    Percentage of funds to allocate this week.
+                    <br />
+                    <br />
+                    For example if you are planning to invest $1,000 this week, and the allocation percentage is: 25%.
+                    <br />
+                    <br />
+                    You would invest $250 in this stock.
+                  </Text>
+                }
+              >
                 <Label>
                   Allocate this week
                   <QuestionIcon icon={['fad', 'question-circle']} />

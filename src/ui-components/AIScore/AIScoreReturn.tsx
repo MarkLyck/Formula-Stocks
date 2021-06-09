@@ -93,8 +93,8 @@ const PredictedTooltip = ({ result }: any) => (
     <span style={{ fontWeight: 'bold' }}>{result.bucket.split(' to ')[1]}</span>.
     <br />
     <br />
-    This is an average annual return, measured investing over a long time period, and selling the stock if the AI Score
-    drops significantly, or after 3.5 years, whichever comes first.
+    This is an average annual return measured investing in a large basket of stocks with a similar AI Score over a long
+    time period, and selling the stock if the AI Score drops significantly, or after 3.5 years, whichever comes first.
     <br />
     <br />
     <sup>*</sup>Past results does not guarantee future performance.
