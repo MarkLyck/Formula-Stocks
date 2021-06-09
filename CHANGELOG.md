@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.181"></a>
+## 1.0.181 (2021-06-09)
+
+### Added
+
+- ✨ financials [[75a0eca](https://github.com/MarkLyck/formula-stocks/commit/75a0ecad2aeefea619a580f9e6619f559028c75a)]
+- ✨ report page work [[e5decbc](https://github.com/MarkLyck/formula-stocks/commit/e5decbce6694679d534f8867e2c42c2090088d53)]
+- ✨ add new report page [[692bd88](https://github.com/MarkLyck/formula-stocks/commit/692bd88b1c00aab743e393fdd9eb63e14326e88a)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.181 [[11347bc](https://github.com/MarkLyck/formula-stocks/commit/11347bceb22612eeab448b63d862c0c8bc68fa6b)]
+- 📝 generated changelog [[cde25d2](https://github.com/MarkLyck/formula-stocks/commit/cde25d22e134fa4f17fbfc07a205ca53b50ee5ce)]
+-  Merge pull request [#252](https://github.com/MarkLyck/formula-stocks/issues/252) from MarkLyck/new-report-page [[d38c47c](https://github.com/MarkLyck/formula-stocks/commit/d38c47c7c10b7c924cef286eca81b354d5d85e32)]
+- 🏷️ fix title [[fa90a7e](https://github.com/MarkLyck/formula-stocks/commit/fa90a7e21d8722b3cbbb4eb588b3659614f6b4bb)]
+- 🏷️ fix type [[1db2848](https://github.com/MarkLyck/formula-stocks/commit/1db2848ee6a610dce1a4389c179ab236b543ae7d)]
+
+
 <a name="1.0.180"></a>
 ## 1.0.180 (2021-06-09)
 
