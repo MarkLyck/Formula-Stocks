@@ -17,7 +17,7 @@ const TooltipItem = styled.div`
   width: 120px;
 `
 
-const chartTooltip = (title: string, items: any[], theme: any) => {
+const chartTooltip = (_title: string, items: any[], theme: any) => {
   if (!items[0]) return null
   const point = items[0].data
 
