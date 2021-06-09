@@ -66,10 +66,7 @@ const StockChart = ({ symbol }: StockChartProps) => {
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
     },
-    slider: {
-      start: 0.1,
-      end: 0.5,
-    },
+    scrollbar: { type: 'horizontal' },
   }
 
   return (

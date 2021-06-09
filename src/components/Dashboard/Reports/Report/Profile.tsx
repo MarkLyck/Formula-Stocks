@@ -60,10 +60,10 @@ const Profile = ({ profile }: any) => {
               grid={{
                 gutter: 16,
                 xs: 1,
-                sm: 2,
-                md: 4,
-                lg: 4,
-                xl: 6,
+                sm: 1,
+                md: 2,
+                lg: 2,
+                xl: 3,
                 xxl: 3,
               }}
               dataSource={gridItems}

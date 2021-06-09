@@ -8,6 +8,7 @@ import { Report } from 'src/ui-components/Stock'
 import Header from './Header'
 import Profile from './Profile'
 import StockChart from './StockChart'
+import Financials from './Financials'
 import StockNews from './StockNews'
 
 const { Text } = Typography
@@ -63,17 +64,17 @@ const StockReport = () => {
             {loading && <Spin />}
             {report && <Profile profile={profile} />}
           </TabPane>
-          {/* <TabPane
+          <TabPane
             tab={
               <Text>
-                <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
-                Financials
+                <FontAwesomeIcon icon={['fad', 'balance-scale-right']} style={{ marginRight: 8 }} />
+                Key metrics
               </Text>
             }
-            key="financials"
+            key="keymetrics"
           >
-            Content of Tab Pane 2
-          </TabPane> */}
+            <Financials symbol={symbol} />
+          </TabPane>
           <TabPane
             tab={
               <Text>
