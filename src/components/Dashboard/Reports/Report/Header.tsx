@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Card, Typography } from 'antd'
 import styled from '@emotion/styled'
 
-const { Text, Title } = Typography
+const { Title } = Typography
 
 const Container = styled.div`
   display: flex;
