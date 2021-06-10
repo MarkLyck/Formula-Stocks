@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
+import { useRouter } from 'next/router'
 import isPropValid from '@emotion/is-prop-valid'
 import { useQuery } from '@apollo/client'
 import Highlighter from 'react-highlight-words'
@@ -7,10 +8,9 @@ import { Row, Col, Table, Input, Button, Typography } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
-import { getAIScoreColor } from 'src/components/Dashboard/Reports/utils'
+import { getAIScoreColor, getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
 import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
-import { Report } from 'src/ui-components/Stock'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 
 const { Text } = Typography
@@ -64,6 +64,7 @@ var formatter = new Intl.NumberFormat('en-US', {
 })
 
 const Reports = () => {
+  const router = useRouter()
   const windowSize = useWindowSize()
   const [searchText, setSearchText] = useState('')
   const [searchedColumn, setSearchedColumn] = useState('')
@@ -213,6 +214,13 @@ const Reports = () => {
       ellipsis: true,
       sorter: (a: any, b: any) => (a.industry < b.industry ? 1 : -1),
       ...getColumnSearchProps('industry'),
+      render: (sector: string) => (
+        <div>
+          {/* @ts-ignore */}
+          <FontAwesomeIcon icon={['fad', getIndustryIcon(sector)]} style={{ marginRight: 8 }} />
+          {sector}
+        </div>
+      ),
     })
   }
 
@@ -243,10 +251,9 @@ const Reports = () => {
               dataSource={reports}
               loading={loading}
               ellipsis={true}
-              expandRowByClick={true}
-              expandedRowRender={(report) => (
-                <Report price={report.price} scores={report.scores} ticker={report.ticker} />
-              )}
+              onRow={(record) => ({
+                onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
+              })}
               pagination={{ simple: windowSize.width < 600 ? true : false }}
             />
           </AIScoreBox>

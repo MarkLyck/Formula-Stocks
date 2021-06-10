@@ -1,5 +1,6 @@
 import { Card } from 'antd'
 import dynamic from 'next/dynamic'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { currencyFormatter } from 'src/common/utils/formatters'
 import { calculateGrowthRateByYear } from './utils/growthRates'
@@ -22,12 +23,17 @@ type ROICProps = {
   incomeStatements: any[]
 }
 
-const Sales = ({ incomeStatements }: ROICProps) => {
-  const revenues: any[] = incomeStatements.map((statement) => ({ date: statement.date, value: statement.revenue }))
-  const { growthRates } = calculateGrowthRateByYear(revenues.map((item) => item.value))
+const Earnings = ({ incomeStatements }: ROICProps) => {
+  const theme = useTheme()
+  const EPSPerYear: any[] = incomeStatements.map((statement) => ({ date: statement.date, value: statement.eps }))
+  const { growthRates } = calculateGrowthRateByYear(EPSPerYear.map((item) => item.value))
+  const dateMap = EPSPerYear.reduce((acc: any, curr: any) => {
+    acc[curr.date] = curr.value
+    return acc
+  }, {})
 
   var config = {
-    data: revenues,
+    data: EPSPerYear,
     xField: 'date',
     yField: 'value',
     tooltip: {
@@ -56,12 +62,18 @@ const Sales = ({ incomeStatements }: ROICProps) => {
         },
       },
     },
+    color: (item: any) => {
+      if (dateMap[item.date] < 0) {
+        return theme.palette.danger[600]
+      }
+      return theme.palette.primary[500]
+    },
     legend: false,
   }
 
   return (
     <>
-      <Card title="Sales (Revenue)">
+      <Card title="Earnings (Earnings Per Share)">
         {/* @ts-ignore */}
         <Column {...config} />
       </Card>
@@ -70,4 +82,4 @@ const Sales = ({ incomeStatements }: ROICProps) => {
   )
 }
 
-export default Sales
+export default Earnings

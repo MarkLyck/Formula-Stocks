@@ -1,5 +1,7 @@
-import { Radio } from 'antd'
+import { Select } from 'antd'
 import styled from '@emotion/styled'
+
+const { Option } = Select
 
 const Container = styled.div`
   position: absolute;
@@ -10,14 +12,14 @@ const Container = styled.div`
 
 const IntervalSelector = ({ interval, setInterval }: any) => (
   <Container>
-    <Radio.Group onChange={(e) => setInterval(e.target.value)} value={interval}>
-      <Radio.Button value="daily">daily</Radio.Button>
-      <Radio.Button value="1hour">1 hour</Radio.Button>
-      <Radio.Button value="30min">30 min</Radio.Button>
-      <Radio.Button value="15min">15 min</Radio.Button>
-      <Radio.Button value="5min">5 min</Radio.Button>
-      <Radio.Button value="1min">1 min</Radio.Button>
-    </Radio.Group>
+    <Select value={interval} style={{ width: 120 }} onChange={setInterval}>
+      <Option value="daily">Daily</Option>
+      <Option value="1hour">1 hour</Option>
+      <Option value="30min">30 min</Option>
+      <Option value="15min">15 min</Option>
+      <Option value="5min">5 min</Option>
+      <Option value="1min">1 min</Option>
+    </Select>
   </Container>
 )
 

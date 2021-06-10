@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { Table } from 'antd'
@@ -13,6 +14,7 @@ const Container = styled.div`
 `
 
 const Holdings = () => {
+  const router = useRouter()
   const plan = useStore((state: any) => state.plan)
 
   const { data, loading, error } = useQuery(PORTFOLIO_HOLDINGS, {
@@ -24,7 +26,16 @@ const Holdings = () => {
 
   return (
     <Container>
-      <Table loading={loading} columns={columns} dataSource={holdings} pagination={false} rowKey="ticker" />
+      <Table
+        loading={loading}
+        columns={columns}
+        dataSource={holdings}
+        pagination={false}
+        rowKey="ticker"
+        onRow={(record) => ({
+          onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
+        })}
+      />
     </Container>
   )
 }

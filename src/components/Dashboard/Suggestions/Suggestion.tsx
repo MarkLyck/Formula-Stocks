@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Card, Typography, Space, Row, Col, Tooltip, Divider, Progress } from 'antd'
+import Link from 'next/link'
+import { Card, Typography, Space, Row, Col, Tooltip, Divider, Progress, Button } from 'antd'
 import { ErrorBoundary } from 'react-error-boundary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -127,6 +128,13 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
               <Progress percent={trade.percentageWeight.toFixed(2)} />
             </AllocationContainer>
           </>
+          <SmallDivider />
+          <Link href={`/dashboard/reports/${trade.ticker}`}>
+            <Button block>
+              <FontAwesomeIcon icon={['fad', 'file-chart-line']} style={{ marginRight: 8 }} />
+              Full Report
+            </Button>
+          </Link>
         </Space>
       </Card>
     </Col>

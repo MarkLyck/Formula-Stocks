@@ -32,8 +32,6 @@ const GridItem = ({ label, value }: any) => (
 )
 
 const Profile = ({ profile }: any) => {
-  console.log('🔈 ~ profile', profile)
-
   const gridItems = [
     { label: 'Sector', value: profile.sector },
     { label: 'Industry', value: profile.industry },

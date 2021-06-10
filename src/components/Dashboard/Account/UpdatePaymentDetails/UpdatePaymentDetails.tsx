@@ -11,8 +11,6 @@ import { ErrorMessage } from '~/ui-components'
 
 const { Title } = Typography
 
-console.log('🔈 ~ theme', theme)
-
 const stripeElementOptions = {
   style: {
     base: {

@@ -17,8 +17,8 @@ const Tag = styled.span`
 const getTagName = (score: number) => {
   if (score < -75) return 'Very bad'
   if (score < -25) return 'Bad'
-  if (score < -10) return 'Below average'
-  if (score < 10) return 'Average'
+  if (score < -15) return 'Below average'
+  if (score < 15) return 'Average'
   if (score < 25) return 'Above average'
   if (score < 50) return 'Good'
   if (score < 80) return 'Great'

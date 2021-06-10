@@ -1,15 +1,22 @@
 import { useRouter } from 'next/router'
-import { Spin, Space, Tabs, Typography } from 'antd'
+import Link from 'next/link'
+import { Spin, Space, Tabs, Typography, Breadcrumb } from 'antd'
 import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { FMP, GET_REPORT_QUERY } from 'src/common/queries'
 import { Report } from 'src/ui-components/Stock'
+
 import Header from './Header'
 import Profile from './Profile'
 import StockChart from './StockChart'
+import KeyMetrics from './KeyMetrics'
 import Financials from './Financials'
 import StockNews from './StockNews'
+import PressReleases from './PressReleases'
+import InsiderTrading from './InsiderTrading'
+import KeyExecs from './KeyExecs'
+import EarningsCalls from './EarningsCalls'
 
 const { Text } = Typography
 const { TabPane } = Tabs
@@ -17,7 +24,6 @@ const { TabPane } = Tabs
 const StockReport = () => {
   const router = useRouter()
   const { symbol }: any = router.query
-  console.log('🔈 ~ symbol', symbol)
 
   const { data: fmpProfile, loading } = useQuery(FMP, {
     variables: {
@@ -37,9 +43,15 @@ const StockReport = () => {
   return (
     <div>
       <Space direction="vertical" size="large" style={{ width: '100%' }}>
+        <Breadcrumb>
+          <Breadcrumb.Item>
+            <Link href="/dashboard/reports">Reports</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>{symbol}</Breadcrumb.Item>
+        </Breadcrumb>
         <Header profile={profile} />
         <StockChart symbol={symbol} />
-        <Tabs onChange={console.log} type="card">
+        <Tabs type="card">
           <TabPane
             tab={
               <Text>
@@ -71,9 +83,53 @@ const StockReport = () => {
                 Key metrics
               </Text>
             }
-            key="keymetrics"
+            key="key-metrics"
+          >
+            <KeyMetrics symbol={symbol} />
+          </TabPane>
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
+                Financials
+              </Text>
+            }
+            key="financials"
           >
             <Financials symbol={symbol} />
+          </TabPane>
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'handshake']} style={{ marginRight: 8 }} />
+                Insider Trading
+              </Text>
+            }
+            key="insider-trading"
+          >
+            <InsiderTrading symbol={symbol} />
+          </TabPane>
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'user-tie']} style={{ marginRight: 8 }} />
+                Key Executives
+              </Text>
+            }
+            key="key-executives"
+          >
+            <KeyExecs symbol={symbol} />
+          </TabPane>
+          <TabPane
+            tab={
+              <Text>
+                <FontAwesomeIcon icon={['fad', 'phone-office']} style={{ marginRight: 8 }} />
+                Earnings Call
+              </Text>
+            }
+            key="earnings-calls"
+          >
+            <EarningsCalls symbol={symbol} />
           </TabPane>
           <TabPane
             tab={
@@ -86,17 +142,17 @@ const StockReport = () => {
           >
             <StockNews symbol={symbol} />
           </TabPane>
-          {/* <TabPane
+          <TabPane
             tab={
               <Text>
-                <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
-                Dividends
+                <FontAwesomeIcon icon={['fad', 'microphone-stand']} style={{ marginRight: 8 }} />
+                Press Releases
               </Text>
             }
-            key="dividends"
+            key="press-releases"
           >
-            Content of Tab Pane 3
-          </TabPane> */}
+            <PressReleases symbol={symbol} />
+          </TabPane>
         </Tabs>
       </Space>
     </div>

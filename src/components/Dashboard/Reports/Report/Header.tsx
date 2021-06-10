@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Card, Typography } from 'antd'
 import styled from '@emotion/styled'
+import { currencyFormatter } from 'src/common/utils/formatters'
 
 const { Title } = Typography
 
@@ -28,7 +29,7 @@ const Header = ({ profile }: any) => {
             {profile.companyName} ({profile.symbol})
           </Title>
           <Title level={4} style={{ margin: 0, marginLeft: 'auto' }}>
-            ${profile.price}
+            {currencyFormatter.format(profile.price)}
           </Title>
         </Container>
       )}

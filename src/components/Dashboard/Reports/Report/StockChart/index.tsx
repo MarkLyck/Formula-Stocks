@@ -66,11 +66,14 @@ const StockChart = ({ symbol }: StockChartProps) => {
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
     },
-    scrollbar: { type: 'horizontal' },
+    slider: {
+      start: 0,
+      end: 0.2,
+    },
   }
 
   return (
-    <Card style={{ height: 560 }}>
+    <Card title="Price chart">
       <IntervalSelector interval={interval} setInterval={setInterval} />
       {/* @ts-ignore */}
       <Stock {...config} />
