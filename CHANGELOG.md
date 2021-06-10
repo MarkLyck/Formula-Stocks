@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.183"></a>
+## 1.0.183 (2021-06-10)
+
+### Changed
+
+- ⬆️ Update dependency @types/react-dom to v17.0.7 [[875d4dd](https://github.com/MarkLyck/formula-stocks/commit/875d4dd1502771cf7c8f1206e737dccd166800c4)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.183 [[654d5ff](https://github.com/MarkLyck/formula-stocks/commit/654d5ff01ceb6f727b341582efaa94b66f9cc3cd)]
+-  Merge pull request [#253](https://github.com/MarkLyck/formula-stocks/issues/253) from MarkLyck/renovate/react-dom-17.x [[b329bc7](https://github.com/MarkLyck/formula-stocks/commit/b329bc71258d3c7c5b8203def9c13c8b19e577a1)]
+- 📝 generated changelog [[5055548](https://github.com/MarkLyck/formula-stocks/commit/5055548966d95e6676209d78df7a2edb50caed2b)]
+
+
 <a name="1.0.182"></a>
 ## 1.0.182 (2021-06-09)
 
