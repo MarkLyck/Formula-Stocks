@@ -68,7 +68,7 @@ const StockChart = ({ symbol }: StockChartProps) => {
     },
     slider: {
       start: 0,
-      end: 0.1,
+      end: 0.2,
     },
   }
 
