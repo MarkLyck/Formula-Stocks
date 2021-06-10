@@ -5,10 +5,8 @@ import { Element } from 'react-scroll'
 import { useQuery } from '@apollo/client'
 import fetch from 'isomorphic-unfetch'
 import { Tabs } from 'antd'
-import { useTheme } from '@emotion/react'
 import useBreakpoint from '@w11r/use-breakpoint'
 
-import { useWindowSize } from 'src/common/hooks'
 import { COMPANY_NAME } from 'src/common/constants'
 import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from 'src/ui-components'
 import LaunchChart from './LaunchChart'
@@ -74,8 +72,6 @@ const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [chartType, setChartType] = useState('launch')
-  const windowSize = useWindowSize()
-  const theme = useTheme()
   const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
