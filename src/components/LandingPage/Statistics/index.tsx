@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
 import { transparentize } from 'polished'
+import useBreakpoint from '@w11r/use-breakpoint'
+
 import {
   StatisticsCard,
   ActionButton,
@@ -36,6 +38,7 @@ const Statistics = () => {
   const [dialogVisible, setDialogVisible] = useState(false)
   const [compoundInterestCalculatorVisible, setCompoundInterestCalculatorVisible] = useState(false)
   const theme = useTheme()
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
   if (error) return null
 
@@ -117,7 +120,7 @@ const Statistics = () => {
                 )}
               </StatisticsCard>
             </Space>
-            <Space style={{ width: '100%' }} direction={'horizontal'}>
+            <Space direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
               <ActionButton onClick={() => setDialogVisible(true)}>
                 <ButtonIcon icon={['fad', 'analytics']} />
                 SEE ADVANCED STATISTICS

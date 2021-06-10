@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import useBreakpoint from '@w11r/use-breakpoint'
+
 import { LandingPageContainer, Card, Highlight, Alert, ScalingTitle, ScalingSubTitle } from 'src/ui-components'
 import { CREATE_NEWSLETTER } from 'src/common/queries'
 import { Mixpanel } from 'src/lib/analytics/mixpanel'
@@ -25,6 +27,10 @@ const Content = styled.div`
     .ant-space-item {
       width: 100%;
     }
+
+    .ant-form-item {
+      margin-right: 0;
+    }
   }
 `
 
@@ -40,6 +46,7 @@ const Newsletter = () => {
     CREATE_NEWSLETTER
   )
   const theme = useTheme()
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
   let alreadyOnList = !!createError
 
@@ -95,34 +102,36 @@ const Newsletter = () => {
               <Alert message="Success, you're on the list!" type="success" />
             ) : (
               <Form layout={'inline'} name="newsletter_signup" onFinish={onFinish}>
-                <Form.Item name="firstName" rules={[{ required: true, message: 'Please input your first name' }]}>
-                  <Input
-                    onChange={handleNameInput}
-                    size="large"
-                    placeholder="First name"
-                    prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.neutral[500]} />}
-                  />
-                </Form.Item>
-                <Form.Item
-                  name="email"
-                  validateStatus={!!emailError ? 'error' : undefined}
-                  help={!!emailError ? emailError : undefined}
-                  rules={[{ required: true, message: 'Please input your email' }]}
-                >
-                  <Input
-                    onChange={handleEmailInput}
-                    size="large"
-                    placeholder="Email address"
-                    prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.neutral[500]} />}
-                  />
-                </Form.Item>
-                <Form.Item shouldUpdate={true}>
-                  {() => (
-                    <Button block size="large" type="primary" htmlType="submit" loading={createLoading}>
-                      Join newsletter
-                    </Button>
-                  )}
-                </Form.Item>
+                <Space direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
+                  <Form.Item name="firstName" rules={[{ required: true, message: 'Please input your first name' }]}>
+                    <Input
+                      onChange={handleNameInput}
+                      size="large"
+                      placeholder="First name"
+                      prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.neutral[500]} />}
+                    />
+                  </Form.Item>
+                  <Form.Item
+                    name="email"
+                    validateStatus={!!emailError ? 'error' : undefined}
+                    help={!!emailError ? emailError : undefined}
+                    rules={[{ required: true, message: 'Please input your email' }]}
+                  >
+                    <Input
+                      onChange={handleEmailInput}
+                      size="large"
+                      placeholder="Email address"
+                      prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.neutral[500]} />}
+                    />
+                  </Form.Item>
+                  <Form.Item shouldUpdate={true}>
+                    {() => (
+                      <Button block size="large" type="primary" htmlType="submit" loading={createLoading}>
+                        Join newsletter
+                      </Button>
+                    )}
+                  </Form.Item>
+                </Space>
               </Form>
             )}
           </Space>

@@ -35,7 +35,6 @@ const PressReleases = ({ symbol }: any) => {
     )
   }
 
-  console.log('🔈 ~ pressReleases', pressReleases)
   return (
     <Space direction="vertical" style={{ width: '100%' }}>
       {pressReleases.map((item: any) => (
