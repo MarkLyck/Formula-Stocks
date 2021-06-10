@@ -2,8 +2,10 @@ import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
-import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from 'src/ui-components'
+import useBreakpoint from '@w11r/use-breakpoint'
 import { transparentize } from 'polished'
+
+import { LandingPageContainer, Card, Highlight, ActionButton, ButtonIcon } from 'src/ui-components'
 
 const CardTitle = styled.h4`
   margin: 0;
@@ -29,19 +31,20 @@ const ButtonContainer = styled(Space)`
 
 const StrategyWeUse = ({ showSignup }: any) => {
   const theme = useTheme()
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
   return (
     <LandingPageContainer align="center" marginBottom="4rem">
       <Card>
         <Content>
-          <Space direction="vertical" style={{ alignItems: 'center' }}>
+          <Space direction="vertical" style={{ width: '100%' }}>
             <CardTitle>
               An investing strategy that <Highlight>we use</Highlight>.
             </CardTitle>
             <CardSubtitle>
               We have shown you what we can do. Want to know more? Check out the FAQ or chat with us.
             </CardSubtitle>
-            <ButtonContainer size="middle" direction={'horizontal'}>
+            <ButtonContainer size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
               <ActionButton onClick={showSignup} status="success">
                 <ButtonIcon icon={['fad', 'gift']} />
                 TRY IT FOR FREE

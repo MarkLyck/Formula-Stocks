@@ -5,8 +5,7 @@ import { Element } from 'react-scroll'
 import { useQuery } from '@apollo/client'
 import fetch from 'isomorphic-unfetch'
 import { Tabs } from 'antd'
-import { useTheme } from '@emotion/react'
-import { useWindowSize } from 'src/common/hooks'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 import { COMPANY_NAME } from 'src/common/constants'
 import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from 'src/ui-components'
@@ -73,8 +72,7 @@ const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [chartType, setChartType] = useState('launch')
-  const windowSize = useWindowSize()
-  const theme = useTheme()
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
   const { data: planData, loading: planLoading, error: planError } = useQuery(Query, {
@@ -143,16 +141,21 @@ const Performance = () => {
             </Disclaimer>
           </Tabs.TabPane>
         </StyledTabs>
-        <ButtonContainer direction={'horizontal'}>
+        <ButtonContainer direction={isMobileMinus ? 'vertical' : 'horizontal'}>
           <Button
-            block={windowSize.width <= theme.breakpoints.values.extraSmall ? true : false}
+            block={isMobileMinus ? true : false}
             size="large"
             icon={<ButtonIcon icon={['fad', 'calculator']} />}
             onClick={() => setCalculatorVisible(true)}
           >
             Interest calculator
           </Button>
-          <Button block size="large" icon={<ButtonIcon icon={['fad', 'calendar']} />} onClick={toggleModal}>
+          <Button
+            block={isMobileMinus ? true : false}
+            size="large"
+            icon={<ButtonIcon icon={['fad', 'calendar']} />}
+            onClick={toggleModal}
+          >
             See yearly returns
           </Button>
         </ButtonContainer>

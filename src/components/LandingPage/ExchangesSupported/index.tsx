@@ -1,6 +1,8 @@
 import React from 'react'
 import { Space } from 'antd'
 import styled from '@emotion/styled'
+import useBreakpoint from '@w11r/use-breakpoint'
+
 import { LandingPageContainer } from 'src/ui-components'
 
 const Title = styled.h2`
@@ -21,10 +23,12 @@ const Exchange = styled.img`
 `
 
 const ExchangesSupported = () => {
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
+
   return (
     <LandingPageContainer align="center">
       <Title>Exchanges supported</Title>
-      <Space size="middle" direction={'horizontal'}>
+      <Space size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
         <Exchange src="/logos/exchanges/nyse.svg" />
         <Exchange src="/logos/exchanges/nasdaq.svg" />
         <Exchange src="/logos/exchanges/tsx.svg" />

@@ -38,10 +38,6 @@ const Content = styled.div`
   margin-bottom: 6vw;
 `
 
-const ButtonContainer = styled(Space)`
-  width: 100%;
-`
-
 const Hero = ({ showSignup }: any) => {
   const { 'isMobile-': isMobileMinus } = useBreakpoint()
   const { data, loading: statisticsLoading, error: statisticsError } = useQuery(STATISTICS)
@@ -63,7 +59,7 @@ const Hero = ({ showSignup }: any) => {
         <Space direction="vertical">
           <Title />
           <Description statistics={statistics} />
-          <ButtonContainer size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
+          <Space size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
             <ActionButton onClick={showSignup} status="success">
               <ButtonIcon icon={['fad', 'gift']} />
               TRY IT FOR $0
@@ -72,7 +68,7 @@ const Hero = ({ showSignup }: any) => {
               <ButtonIcon icon={['fad', 'info-square']} />
               LEARN MORE
             </ActionButton>
-          </ButtonContainer>
+          </Space>
         </Space>
       </Content>
       <Features statistics={statistics} statisticsLoading={statisticsLoading} statisticsError={statisticsError} />
