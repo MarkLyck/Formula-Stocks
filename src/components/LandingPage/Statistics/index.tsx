@@ -38,7 +38,7 @@ const Statistics = () => {
   const [dialogVisible, setDialogVisible] = useState(false)
   const [compoundInterestCalculatorVisible, setCompoundInterestCalculatorVisible] = useState(false)
   const theme = useTheme()
-  const { 'isMobile-': isMobileMinus } = useBreakpoint()
+  const { 'isMobile-': isMobileMinus, 'isTablet-': isTabletMinus } = useBreakpoint()
 
   if (error) return null
 
@@ -58,7 +58,7 @@ const Statistics = () => {
         onClose={() => setCompoundInterestCalculatorVisible(false)}
       />
       <Beside>
-        <SpaceImage src="/images/space/space-0.svg" />
+        {!isTabletMinus && <SpaceImage src="/images/space/space-0.svg" />}
         <ContentContainer>
           <Space direction="vertical" size="large">
             <ScalingTitle>
