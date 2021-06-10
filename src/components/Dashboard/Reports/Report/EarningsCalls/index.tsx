@@ -1,8 +1,5 @@
-import { Spin, Space, Card, Typography, Empty } from 'antd'
-// import styled from '@emotion/styled'
+import { Spin, Card, Typography, Empty } from 'antd'
 import { useQuery } from '@apollo/client'
-// import { numberFormatter } from 'src/common/utils/formatters'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { FMP } from 'src/common/queries'
 
