@@ -1,20 +1,10 @@
-import { Spin, Space, Card, Typography, Divider, Button, Empty } from 'antd'
+import { Spin, Space, Card, Typography, Empty } from 'antd'
 import { useQuery } from '@apollo/client'
 import styled from '@emotion/styled'
 
 import { FMP } from 'src/common/queries'
 
 const { Text } = Typography
-
-const NewsImage = styled.div`
-  width: 100px;
-  height: 100px;
-  background-image: url(${(p: any) => p.src});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 8px;
-`
 
 const Content = styled.div`
   display: flex;

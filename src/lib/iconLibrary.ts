@@ -346,6 +346,7 @@ library.add(
 
   // Brands
   faFacebookF,
+  faDiscord,
   faTwitter,
   faLinkedin
 )
