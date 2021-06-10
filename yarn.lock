@@ -10,7 +10,7 @@
     lodash.debounce "^4.0.8"
     lodash.throttle "^4.1.1"
 
-"@ant-design/charts@^1.1.12":
+"@ant-design/charts@1.1.12":
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/@ant-design/charts/-/charts-1.1.12.tgz#add38b52f3ed0c9976609942f9d845a5ea03b1eb"
   integrity sha512-xv7vWtaQ4akN1HVTGCdOgSyAj3TXU4LH2xmRV3ahf7G7mnydhcQNBwxxUylniuKTG4UTcw3YScWU6Eltk0mHzA==
