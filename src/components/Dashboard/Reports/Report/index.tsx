@@ -13,6 +13,7 @@ import StockChart from './StockChart'
 import KeyMetrics from './KeyMetrics'
 import Financials from './Financials'
 import StockNews from './StockNews'
+import PressReleases from './PressReleases'
 import InsiderTrading from './InsiderTrading'
 import KeyExecs from './KeyExecs'
 import EarningsCalls from './EarningsCalls'
@@ -122,6 +123,17 @@ const StockReport = () => {
           <TabPane
             tab={
               <Text>
+                <FontAwesomeIcon icon={['fad', 'phone-office']} style={{ marginRight: 8 }} />
+                Earnings Call
+              </Text>
+            }
+            key="earnings-calls"
+          >
+            <EarningsCalls symbol={symbol} />
+          </TabPane>
+          <TabPane
+            tab={
+              <Text>
                 <FontAwesomeIcon icon={['fad', 'newspaper']} style={{ marginRight: 8 }} />
                 Latest News
               </Text>
@@ -133,13 +145,13 @@ const StockReport = () => {
           <TabPane
             tab={
               <Text>
-                <FontAwesomeIcon icon={['fad', 'phone-office']} style={{ marginRight: 8 }} />
-                Earnings Call
+                <FontAwesomeIcon icon={['fad', 'microphone-stand']} style={{ marginRight: 8 }} />
+                Press Releases
               </Text>
             }
-            key="earnings-calls"
+            key="press-releases"
           >
-            <EarningsCalls symbol={symbol} />
+            <PressReleases symbol={symbol} />
           </TabPane>
         </Tabs>
       </Space>

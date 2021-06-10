@@ -8,7 +8,7 @@ import { Row, Col, Table, Input, Button, Typography } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
-import { getAIScoreColor } from 'src/components/Dashboard/Reports/utils'
+import { getAIScoreColor, getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
 import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
@@ -214,6 +214,13 @@ const Reports = () => {
       ellipsis: true,
       sorter: (a: any, b: any) => (a.industry < b.industry ? 1 : -1),
       ...getColumnSearchProps('industry'),
+      render: (sector: string) => (
+        <div>
+          {/* @ts-ignore */}
+          <FontAwesomeIcon icon={['fad', getIndustryIcon(sector)]} style={{ marginRight: 8 }} />
+          {sector}
+        </div>
+      ),
     })
   }
 
