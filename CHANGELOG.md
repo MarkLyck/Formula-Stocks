@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.185"></a>
+## 1.0.185 (2021-06-10)
+
+### Changed
+
+- ⬆️ Pin dependency @ant-design/charts to 1.1.12 [[51eeb7d](https://github.com/MarkLyck/formula-stocks/commit/51eeb7d4caa2e6132de79e755d70e28370676760)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.185 [[cfbcbb7](https://github.com/MarkLyck/formula-stocks/commit/cfbcbb7dd8df392a49b1fd9f49c16b2929c98793)]
+- 📝 generated changelog [[dc6147d](https://github.com/MarkLyck/formula-stocks/commit/dc6147d3dcc1a0a95fe3ae606246c2e66433d3d4)]
+-  Merge pull request [#256](https://github.com/MarkLyck/formula-stocks/issues/256) from MarkLyck/renovate/pin-dependencies [[a7e05c1](https://github.com/MarkLyck/formula-stocks/commit/a7e05c18a03f7d1fabe2abd207537977cb86ca0d)]
+
+
 <a name="1.0.184"></a>
 ## 1.0.184 (2021-06-10)
 
