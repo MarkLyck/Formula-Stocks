@@ -1,5 +1,26 @@
 # Changelog
 
+<a name="1.0.184"></a>
+## 1.0.184 (2021-06-10)
+
+### Added
+
+- ✨ add industry icons [[b0a0e29](https://github.com/MarkLyck/formula-stocks/commit/b0a0e29a64ce378f44df5f4588a2526874fe16e1)]
+- ✨ report work [[577ff38](https://github.com/MarkLyck/formula-stocks/commit/577ff38bb98d84919e72cd00e0a2dfcccb858eaa)]
+
+### Changed
+
+- 🎨 fix [[4be0786](https://github.com/MarkLyck/formula-stocks/commit/4be0786e01a39dc3f33f2feebd90034061146967)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.184 [[d152a9e](https://github.com/MarkLyck/formula-stocks/commit/d152a9e364e08eac8be7f76c2d3fed4b8a0a9658)]
+- 📝 generated changelog [[483587a](https://github.com/MarkLyck/formula-stocks/commit/483587af247355ba6c7b9fd34855eb462428d763)]
+-  Merge pull request [#255](https://github.com/MarkLyck/formula-stocks/issues/255) from MarkLyck/report-work [[8f55277](https://github.com/MarkLyck/formula-stocks/commit/8f55277f76e38efa6864627ecd4f87f3db0032d9)]
+- 🏷️ unused imports [[0a12674](https://github.com/MarkLyck/formula-stocks/commit/0a126743d261ba129f0292c52feba74634edf996)]
+- 🏷️ fix imports [[875de17](https://github.com/MarkLyck/formula-stocks/commit/875de17237fef287d9b3c92d4ea25678160bcec4)]
+
+
 <a name="1.0.183"></a>
 ## 1.0.183 (2021-06-10)
 
