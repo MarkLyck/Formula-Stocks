@@ -16,7 +16,7 @@ type AppProviderProps = {
 }
 
 const AppProvider = ({ children }: AppProviderProps) => {
-  return <ComposeProviders components={[[ThemeProvider, { theme }], BreakpointProvider]}>{children}</ComposeProviders>
+  return <ComposeProviders components={[BreakpointProvider, [ThemeProvider, { theme }]]}>{children}</ComposeProviders>
 }
 
 const Wrapper = (props: any) => (
