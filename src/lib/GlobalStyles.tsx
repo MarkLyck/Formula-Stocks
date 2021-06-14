@@ -13,6 +13,10 @@ const GlobalStyles = () => (
         font-family: Roboto, sans-serif;
       }
 
+      .ant-card {
+        border-radius: 4px;
+      }
+
       .ant-progress-inner {
         background-color: #f7f9fc;
       }
