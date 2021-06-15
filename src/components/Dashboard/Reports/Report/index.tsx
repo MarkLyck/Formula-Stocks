@@ -25,6 +25,7 @@ import {
   EquityCheck,
   SalesCheck,
   CashflowCheck,
+  MarginOfSafetyCheck,
 } from './Checks'
 
 const { Text, Title } = Typography
@@ -45,6 +46,8 @@ const StockReport = () => {
     },
   })
   const profile = fmpProfile?.FMP?.response[0]
+  const latestPrice = profile?.price
+  console.log('🔈 ~ latestPrice', latestPrice)
   const report = reportData?.aIReport
 
   if (loading) return <Spin />
@@ -74,6 +77,7 @@ const StockReport = () => {
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
             <Title level={4}>Key metrics</Title>
             <Row gutter={[16, 16]}>
+              <MarginOfSafetyCheck symbol={symbol} price={latestPrice} />
               <ROICCheck symbol={symbol} />
               <EquityCheck symbol={symbol} />
               <SalesCheck symbol={symbol} />

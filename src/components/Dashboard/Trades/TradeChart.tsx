@@ -51,7 +51,7 @@ const TradeChart = ({ ticker, name }: TradeChartProps) => {
   })
 
   const historicalData = data?.stockPrice?.historicalSimple || []
-  const sixMonthsdata = historicalData.slice(0, 180)
+  const sixMonthsdata = historicalData.slice(0, 180).reverse()
 
   if (!loading && (!Array.isArray(sixMonthsdata) || sixMonthsdata.length === 0)) {
     return (

@@ -136,7 +136,7 @@ const Statistics = () => {
         Content
       ) : (
         <Beside>
-          <SpaceImage src="/images/space/space-0.svg" />
+          <SpaceImage src="/images/space/space-3.svg" />
           {Content}
         </Beside>
       )}

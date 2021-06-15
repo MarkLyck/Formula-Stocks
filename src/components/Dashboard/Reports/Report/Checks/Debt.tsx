@@ -29,7 +29,7 @@ export const DebtCheck = ({ symbol }: CheckProps) => {
   const { freeCashFlow } = cashflowStatement
 
   const canPayOffDebtWithCashOnHand = totalDebt <= cashAndCashEquivalents
-  const yearsToPayOffDebt = Math.ceil(freeCashFlow / netDebt)
+  const yearsToPayOffDebt = Math.ceil(netDebt / freeCashFlow)
 
   const yearsText = `year${yearsToPayOffDebt === 1 ? '' : 's'}`
 

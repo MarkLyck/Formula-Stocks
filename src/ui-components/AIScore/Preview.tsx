@@ -49,6 +49,7 @@ const Value = styled.div`
 
 const Label = styled(Text)`
   color: ${(p) => p.theme.palette.neutral[700]};
+  margin-right: 8px;
 `
 
 const Top = styled.div`
@@ -67,7 +68,7 @@ const AIScorePreview = ({ score, label }: AIScoreProps) => {
   return (
     <div style={{ width: '100%' }}>
       <Top>
-        <Label>{label}</Label>
+        {label && <Label>{label}</Label>}
         <AIScoreTag score={realScore} />
       </Top>
       <Container>

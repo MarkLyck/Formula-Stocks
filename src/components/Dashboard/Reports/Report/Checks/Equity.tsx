@@ -63,7 +63,7 @@ export const EquityCheck = ({ symbol }: CheckProps) => {
       }
     }
   } else {
-    description = 'Declining'
+    description = `${growthRate9Years && growthRate9Years.toFixed(2)}% and declining`
     sentiment = 'danger'
   }
 
@@ -72,7 +72,7 @@ export const EquityCheck = ({ symbol }: CheckProps) => {
   return (
     <CheckCard
       icon={['fad', hasPositiveGrowth ? 'chart-line' : 'chart-line-down']}
-      title="Equity"
+      title="Equity Growth"
       description={description}
       // @ts-ignore
       sentiment={sentiment}

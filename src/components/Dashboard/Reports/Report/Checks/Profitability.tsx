@@ -60,8 +60,11 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
       }
     } else {
       if (losingYears === 0) {
-        description = 'Profitable, but free cashflow is declining.'
+        description = 'Consistently Profitable, but free cashflow is declining.'
         sentiment = 'warning'
+      } else {
+        description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
+        sentiment = losingYears >= 5 ? 'danger' : 'warning'
       }
     }
   }

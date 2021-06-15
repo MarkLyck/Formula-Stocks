@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useTheme } from '@emotion/react'
 import Tooltip from './Tooltip'
+import dayjs from 'dayjs'
 
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 
@@ -9,6 +10,7 @@ type DataType = {
   type: string
   date: Date
 }
+
 type AreaChartProps = {
   data: DataType[]
   height?: number
@@ -17,6 +19,7 @@ type AreaChartProps = {
   dateMask?: string
   yTickSpace?: number
   log?: boolean
+  annotations?: any[]
   labelFormatter: (value: number) => string
   tooltipValueFormatter: (value: number) => string
 }
@@ -29,6 +32,7 @@ const AreaChart = ({
   dateMask = 'MMM YYYY',
   yTickSpace,
   log,
+  annotations,
   labelFormatter,
   tooltipValueFormatter,
 }: AreaChartProps) => {
@@ -99,6 +103,7 @@ const AreaChart = ({
         offset: -8,
       },
     },
+    annotations,
     seriesField: 'type',
     color: [theme.palette.primary[600], theme.palette.neutral[1000]],
   }

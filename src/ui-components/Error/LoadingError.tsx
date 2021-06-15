@@ -31,6 +31,7 @@ const refreshPage = () => {
 }
 
 const LoadingError = ({ error }: any) => {
+  console.log('🔈 ~ error', error)
   let errorText = 'Please try to refresh the page.'
 
   if (error && error.message.includes('permission')) {

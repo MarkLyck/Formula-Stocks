@@ -50,7 +50,7 @@ const Risk = () => {
             </ActionButton>
           </Space>
         </ContentContainer>
-        <SpaceImage src="/images/space/space-3.svg" />
+        <SpaceImage src="/images/space/space-0.svg" />
       </Beside>
     </LandingPageContainer>
   )

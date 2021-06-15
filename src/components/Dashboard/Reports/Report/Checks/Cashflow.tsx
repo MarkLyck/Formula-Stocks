@@ -22,8 +22,8 @@ export const CashflowCheck = ({ symbol }: CheckProps) => {
   const cashflowStatements = data?.FMP?.response.slice().reverse()
   const freeCashFlowByYear = cashflowStatements.map((metric: any) => metric.freeCashFlow)
   const latestBVPS = freeCashFlowByYear[freeCashFlowByYear.length - 1]
-  const hasPositiveGrowth = freeCashFlowByYear[0] < latestBVPS
   const { growthRate9Years } = calculateGrowthRateByYear(freeCashFlowByYear)
+  const hasPositiveGrowth = freeCashFlowByYear[0] < latestBVPS
 
   // don't show if data is invalid.
   if (latestBVPS === 0) return null
@@ -63,7 +63,7 @@ export const CashflowCheck = ({ symbol }: CheckProps) => {
       }
     }
   } else {
-    description = 'Declining'
+    description = `${growthRate9Years && growthRate9Years.toFixed(2)}% and declining`
     sentiment = 'danger'
   }
 
@@ -72,7 +72,7 @@ export const CashflowCheck = ({ symbol }: CheckProps) => {
   return (
     <CheckCard
       icon={['fad', hasPositiveGrowth ? 'chart-line' : 'chart-line-down']}
-      title="Free Cash Flow"
+      title="Free Cash Flow Growth"
       description={description}
       // @ts-ignore
       sentiment={sentiment}
