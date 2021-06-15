@@ -1,5 +1,60 @@
 # Changelog
 
+<a name="1.0.188"></a>
+## 1.0.188 (2021-06-15)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.188 [[2026a67](https://github.com/MarkLyck/formula-stocks/commit/2026a67aa2e4572447d44c248aeb431fc8776f68)]
+
+
+<a name="1.0.187"></a>
+## 1.0.187 (2021-06-15)
+
+### Added
+
+- ✨ favicon, backted chart annotations, reports fix, space images updated [[d166fd7](https://github.com/MarkLyck/formula-stocks/commit/d166fd783f1564c94e8017381aba54ef94a2c305)]
+- ✨ add key metrics checks [[4bd1945](https://github.com/MarkLyck/formula-stocks/commit/4bd1945828565f86e931712f08da8910d2321a9e)]
+- ✨ change meta tag [[44aa182](https://github.com/MarkLyck/formula-stocks/commit/44aa1826cf3bb03cff24431042e5ce6e4ef74c0a)]
+
+### Changed
+
+- 🔧 config lighthouse [[40c3912](https://github.com/MarkLyck/formula-stocks/commit/40c3912439b64a4c9dd90fbe80d54a2b5ea08b7e)]
+- ⬆️ Update dependency antd to v4.16.3 [[b123a44](https://github.com/MarkLyck/formula-stocks/commit/b123a448d8f1a3736041fe14fb49070c3f1f13de)]
+
+### Fixed
+
+- 🐛 add meta viewport to Head in app.js [[f654d3d](https://github.com/MarkLyck/formula-stocks/commit/f654d3d0cf4ddb94def4de20837c9dfd70323f0d)]
+- 🐛 fix breakpoints [[37af489](https://github.com/MarkLyck/formula-stocks/commit/37af4892171bf00bf2f3b02899eb61df7baa945f)]
+
+### Miscellaneous
+
+-  Merge pull request [#266](https://github.com/MarkLyck/formula-stocks/issues/266) from MarkLyck/renovate/antd-4.x [[c6fb1e4](https://github.com/MarkLyck/formula-stocks/commit/c6fb1e4e662f7b019fd93326ce64814ab2122eb6)]
+-  Merge pull request [#265](https://github.com/MarkLyck/formula-stocks/issues/265) from MarkLyck/responsive2 [[cbdc37d](https://github.com/MarkLyck/formula-stocks/commit/cbdc37d9b5a8522bd8a107536587acf7c3fa60f7)]
+- 🏷️ fix ts issues [[9c41137](https://github.com/MarkLyck/formula-stocks/commit/9c41137058f26313cd533283cd89436a34ee9683)]
+- 📝 version bump to v1.0.187 [[a7f1746](https://github.com/MarkLyck/formula-stocks/commit/a7f1746e9f5f15de2fa841d924711c42174438c3)]
+
+
+<a name="1.0.186"></a>
+## 1.0.186 (2021-06-10)
+
+### Changed
+
+- 📱 fix statistics size [[df7e87d](https://github.com/MarkLyck/formula-stocks/commit/df7e87d53990783012aa43cc1195115364642ee8)]
+- 📱 fix statistics on tablet [[ebf89c9](https://github.com/MarkLyck/formula-stocks/commit/ebf89c93a64a0483f506d2037b6f265dd1a9b4e7)]
+- 📱 responsive landing page [[18f7527](https://github.com/MarkLyck/formula-stocks/commit/18f7527d3d1d799cc8a7791812cc39faefc4deb5)]
+
+### Removed
+
+- 🔥 remove unused imports [[92dba59](https://github.com/MarkLyck/formula-stocks/commit/92dba59198f1606b13b42d50185aa98814af880b)]
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.186 [[74d27f1](https://github.com/MarkLyck/formula-stocks/commit/74d27f1fe79438fcb38fc68010bef43ae2a3ffd9)]
+-  Merge pull request [#258](https://github.com/MarkLyck/formula-stocks/issues/258) from MarkLyck/responsive2 [[baae307](https://github.com/MarkLyck/formula-stocks/commit/baae307a5fd0d96c2c6f85100b238d0ce54d555d)]
+- 📝 generated changelog [[4d0807c](https://github.com/MarkLyck/formula-stocks/commit/4d0807c25e37e9ae5c3ca016c2c6951c6f24ecc2)]
+
+
 <a name="1.0.185"></a>
 ## 1.0.185 (2021-06-10)
 
