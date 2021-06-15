@@ -21,20 +21,13 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
   const cashflowStatements = data?.FMP?.response.slice().reverse()
   const latestFreeCashflow = cashflowStatements[cashflowStatements.length - 1].freeCashFlow
   let losingYears = 0
-  let isConsistentlyGrowing = true
-  let numberOfDecliningYears = 0
+
   const hasPositiveGrowth =
     cashflowStatements[0].freeCashFlow < cashflowStatements[cashflowStatements.length - 1].freeCashFlow
 
-  cashflowStatements.forEach((statement: any, i: number) => {
+  cashflowStatements.forEach((statement: any) => {
     if (statement.freeCashFlow < 0) {
       losingYears += 1
-    }
-    if (i !== 0) {
-      if (statement.freeCashFlow < cashflowStatements[i - 1].freeCashFlow) {
-        isConsistentlyGrowing = false
-        numberOfDecliningYears += 1
-      }
     }
   })
 

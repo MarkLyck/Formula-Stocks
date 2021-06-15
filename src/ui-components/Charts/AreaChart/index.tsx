@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic'
 import { useTheme } from '@emotion/react'
 import Tooltip from './Tooltip'
-import dayjs from 'dayjs'
 
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
 

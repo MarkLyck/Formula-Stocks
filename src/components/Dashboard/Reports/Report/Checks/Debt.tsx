@@ -1,4 +1,3 @@
-import { Card } from 'antd'
 import { useQuery } from '@apollo/client'
 
 import { FMP } from 'src/common/queries'
@@ -56,6 +55,7 @@ export const DebtCheck = ({ symbol }: CheckProps) => {
       icon={['fad', 'balance-scale-right']}
       title="Debt"
       description={description}
+      // @ts-ignore
       sentiment={sentiment}
     ></CheckCard>
   )

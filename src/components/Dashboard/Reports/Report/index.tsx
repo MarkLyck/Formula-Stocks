@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { Spin, Space, Tabs, Typography, Breadcrumb, Row, Col } from 'antd'
+import { Spin, Space, Tabs, Typography, Breadcrumb, Row } from 'antd'
 import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

@@ -30,7 +30,7 @@ const Type = styled(Text)`
 `
 
 const Tooltip = (
-  title: string,
+  _title: string,
   items: any[],
   tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
 ) => {

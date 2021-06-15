@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client'
 import { FMP } from 'src/common/queries'
 import { CheckCard, LoadingCard } from './CheckCard'
 
-import { calculateGrowthRateByYear } from '../keyMetrics/utils/growthRates'
+import { calculateGrowthRateByYear } from '../KeyMetrics/utils/growthRates'
 
 type CheckProps = {
   symbol: string
@@ -29,12 +29,10 @@ export const EquityCheck = ({ symbol }: CheckProps) => {
   if (latestBVPS === 0) return null
 
   let isConsistentlyGrowing = true
-  let numberOfDecliningYears = 0
   equityByYear.forEach((value: number, i: number) => {
     if (i === 0) return
     if (value < equityByYear[i - 1]) {
       isConsistentlyGrowing = false
-      numberOfDecliningYears += 1
     }
   })
 
