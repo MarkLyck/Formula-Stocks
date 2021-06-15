@@ -49,6 +49,11 @@ const KeyExecs = ({ symbol }: any) => {
                     </b>
                   </Text>
                 )}
+                {exec.titleSince !== null && (
+                  <Text>
+                    Title since: <b>({exec.titleSince})</b>
+                  </Text>
+                )}
               </Space>
             </Card>
           )

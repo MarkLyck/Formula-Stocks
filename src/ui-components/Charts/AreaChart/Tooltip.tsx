@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Typography } from 'antd'
 import { transparentize } from 'polished'
+import dayjs from 'dayjs'
 
 const { Text } = Typography
 
@@ -29,32 +30,36 @@ const Type = styled(Text)`
 `
 
 const Tooltip = (
-  title: string,
+  _title: string,
   items: any[],
   tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
-) => (
-  <Container>
-    <Text style={{ fontWeight: 500 }}>{title}</Text>
-    <ul style={{ paddingLeft: 0 }}>
-      {items?.map((item: any, index: number) => {
-        const { name, value, color } = item
-        return (
-          <li
-            key={item.title + item.name}
-            className="g2-tooltip-list-item"
-            data-index={index}
-            style={{ marginBottom: 4, display: 'flex', alignItems: 'center' }}
-          >
-            <Marker color={color} />
-            <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
-              <Type color={color}>{name}:</Type>
-              <Value>{tooltipValueFormatter(value)}</Value>
-            </span>
-          </li>
-        )
-      })}
-    </ul>
-  </Container>
-)
+) => {
+  if (!items[0]) return null
+
+  return (
+    <Container>
+      <Text style={{ fontWeight: 500 }}>{dayjs(items[0].data.date).format('MMM YYYY')}</Text>
+      <ul style={{ paddingLeft: 0 }}>
+        {items?.map((item: any, index: number) => {
+          const { name, value, color, data } = item
+          return (
+            <li
+              key={item.title + item.name}
+              className="g2-tooltip-list-item"
+              data-index={index}
+              style={{ marginBottom: 4, display: 'flex', alignItems: 'center' }}
+            >
+              <Marker color={color} />
+              <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
+                <Type color={color}>{data.label ? data.label : name}:</Type>
+                <Value>{tooltipValueFormatter(value)}</Value>
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+    </Container>
+  )
+}
 
 export default Tooltip

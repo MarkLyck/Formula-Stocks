@@ -56,6 +56,11 @@ module.exports = {
         'unused-javascript': ['error', { maxLength: 7 }],
         'uses-http2': ['error', { minScore: 0.7 }],
         'uses-passive-event-listeners': 'off',
+        // FIX THIS !!!
+        'content-width': ['error', { minScore: 0 }],
+        // FIX THIS !!!
+        'offscreen-images': ['error', { minScore: 0.4 }],
+        'uses-webp-images': ['error', { minScore: 0.8 }],
         'valid-source-maps': 'off',
         'works-offline': 'off',
       },

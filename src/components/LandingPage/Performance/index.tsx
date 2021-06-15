@@ -71,7 +71,7 @@ const ButtonContainer = styled(Space)`
 const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
   const [calculatorVisible, setCalculatorVisible] = useState(false)
-  const [chartType, setChartType] = useState('launch')
+  const [chartType, setChartType] = useState('backtested')
   const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
@@ -96,7 +96,7 @@ const Performance = () => {
   if (planData) planPerformance = planData.plan[chartType === 'launch' ? 'launchHistory' : 'backtestedHistory'] || []
   if (marketData) marketPrices = marketData.marketPricingHistoriesList.items || []
 
-  const switchChartType = (key: string) => setChartType(key === '1' ? 'launch' : 'backtested')
+  const switchChartType = (key: string) => setChartType(key === '1' ? 'backtested' : 'launch')
   const toggleModal = () => setReturnsModalVisible(!returnsModalVisible)
 
   return (
@@ -105,23 +105,7 @@ const Performance = () => {
       <>
         <ScalingTitle>Performance</ScalingTitle>
         <StyledTabs defaultActiveKey="1" onChange={switchChartType}>
-          <Tabs.TabPane tab={`2009 - ${new Date().getFullYear()} Live Performance`} key="1">
-            <ScalingSubTitle>
-              Growth since our 2009 launch, compared to the Dow Jones Industrial Average.
-            </ScalingSubTitle>
-            {chartType === 'launch' ? (
-              <LaunchChart
-                name={COMPANY_NAME}
-                marketName="DJIA"
-                isLoading={planLoading}
-                error={planError}
-                planPerformance={planPerformance}
-                marketPrices={marketPrices}
-              />
-            ) : null}
-            {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
-          </Tabs.TabPane>
-          <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="2">
+          <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="1">
             <ScalingSubTitle>
               Backtested Logarithmic Chart showing how <b>$25,000</b> would have grown since 1970
             </ScalingSubTitle>
@@ -139,6 +123,22 @@ const Performance = () => {
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
               in real time.
             </Disclaimer>
+          </Tabs.TabPane>
+          <Tabs.TabPane tab={`2009 - ${new Date().getFullYear()} Live Performance`} key="2">
+            <ScalingSubTitle>
+              Growth since our 2009 launch, compared to the Dow Jones Industrial Average.
+            </ScalingSubTitle>
+            {chartType === 'launch' ? (
+              <LaunchChart
+                name={COMPANY_NAME}
+                marketName="DJIA"
+                isLoading={planLoading}
+                error={planError}
+                planPerformance={planPerformance}
+                marketPrices={marketPrices}
+              />
+            ) : null}
+            {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
           </Tabs.TabPane>
         </StyledTabs>
         <ButtonContainer direction={isMobileMinus ? 'vertical' : 'horizontal'}>

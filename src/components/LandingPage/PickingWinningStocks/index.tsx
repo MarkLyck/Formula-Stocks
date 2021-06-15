@@ -67,7 +67,7 @@ const HowItWorks = () => {
       <Container>
         <Element name="how-we-pick-winning-stocks" />
         {windowSize.width <= theme.breakpoints.values.medium && (
-          <ProductImage src="/images/product_images/mobile-window.svg" />
+          <ProductImage src="/images/product_images/mobile-screenshot.png" />
         )}
         <Content>
           <Space direction="vertical">

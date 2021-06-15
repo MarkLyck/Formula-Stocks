@@ -9,7 +9,6 @@ const Tag = styled.span`
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 4px;
-  margin-left: 8px;
   text-align: right;
   font-weight: 400;
 `

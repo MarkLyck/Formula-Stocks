@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { Spin, Space, Tabs, Typography, Breadcrumb } from 'antd'
+import { Spin, Space, Tabs, Typography, Breadcrumb, Row } from 'antd'
 import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -17,8 +17,18 @@ import PressReleases from './PressReleases'
 import InsiderTrading from './InsiderTrading'
 import KeyExecs from './KeyExecs'
 import EarningsCalls from './EarningsCalls'
+import {
+  DebtCheck,
+  InsiderTradesCheck,
+  ROICCheck,
+  ProfitabilityCheck,
+  EquityCheck,
+  SalesCheck,
+  CashflowCheck,
+  MarginOfSafetyCheck,
+} from './Checks'
 
-const { Text } = Typography
+const { Text, Title } = Typography
 const { TabPane } = Tabs
 
 const StockReport = () => {
@@ -36,6 +46,8 @@ const StockReport = () => {
     },
   })
   const profile = fmpProfile?.FMP?.response[0]
+  const latestPrice = profile?.price
+  console.log('🔈 ~ latestPrice', latestPrice)
   const report = reportData?.aIReport
 
   if (loading) return <Spin />
@@ -63,6 +75,17 @@ const StockReport = () => {
           >
             {reportLoading && <Spin />}
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
+            <Title level={4}>Key metrics</Title>
+            <Row gutter={[16, 16]}>
+              <MarginOfSafetyCheck symbol={symbol} price={latestPrice} />
+              <ROICCheck symbol={symbol} />
+              <EquityCheck symbol={symbol} />
+              <SalesCheck symbol={symbol} />
+              <CashflowCheck symbol={symbol} />
+              <DebtCheck symbol={symbol} />
+              <InsiderTradesCheck symbol={symbol} />
+              <ProfitabilityCheck symbol={symbol} />
+            </Row>
           </TabPane>
           <TabPane
             tab={

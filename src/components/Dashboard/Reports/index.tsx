@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
-import isPropValid from '@emotion/is-prop-valid'
 import { useQuery } from '@apollo/client'
 import Highlighter from 'react-highlight-words'
 import { Row, Col, Table, Input, Button, Typography } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
-import { getAIScoreColor, getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
-import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
+import { getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
+import { ButtonIcon, DashboardHeader, Ticker, LoadingError, AIScorePreview } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 
@@ -31,15 +30,6 @@ const AIScoreBox = styled.div`
   .ant-table-pagination.ant-pagination {
     margin-right: 16px;
   }
-`
-const Score = styled(Text, {
-  shouldForwardProp: isPropValid,
-})`
-  color: ${(props: any) => props.valueColor};
-  text-align: center;
-  font-weight: 600;
-  display: inline-block;
-  width: 100%;
 `
 
 export const HowToUseThisButton = styled(Button)`
@@ -164,13 +154,9 @@ const Reports = () => {
       title: 'AI Score',
       dataIndex: 'aIScore',
       defaultSortOrder: 'descend',
-      width: windowSize.width > 600 ? 120 : 110,
+      width: 200,
       sorter: (a: any, b: any) => a.aIScore - b.aIScore,
-      render: (aiScore: number) => {
-        const humanReadableAIScore = `${aiScore > 0 ? '+' : ''}${(aiScore * 100).toFixed(2)}`
-        // @ts-ignore
-        return <Score valueColor={getAIScoreColor(aiScore * 100)}>{humanReadableAIScore}</Score>
-      },
+      render: (aiScore: number) => <AIScorePreview score={aiScore} label={false} />,
     },
   ]
 

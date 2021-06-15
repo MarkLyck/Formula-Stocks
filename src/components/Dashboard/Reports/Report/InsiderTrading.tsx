@@ -61,6 +61,8 @@ const InsiderTrading = ({ symbol }: any) => {
           title = `Returned ${numberOfShares} ${trade.securityName} back to company (D)`
         } else if (trade.transactionType === 'P-Purchase') {
           title = `Purchased ${numberOfShares} ${trade.securityName} (P)`
+        } else if (trade.transactionType === 'W-Will') {
+          title = `${numberOfShares} ${trade.securityName} transacted by will (W-Will)`
         } else if (trade.transactionType === 'J-Other') {
           title = `${numberOfShares} ${trade.securityName} transacted (J-Other)`
         }
