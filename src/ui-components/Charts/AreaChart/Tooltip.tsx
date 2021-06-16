@@ -78,7 +78,7 @@ const Tooltip = (
       </Header>
       <ul style={{ paddingLeft: 0 }}>
         {items?.map((item: any, index: number) => {
-          const { name, value, color, data } = item
+          const { name, value, color } = item
           return (
             <li
               key={item.title + item.name}
