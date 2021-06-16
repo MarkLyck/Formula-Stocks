@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client'
 
 import { FMP } from 'src/common/queries'
-import { CheckCard, LoadingCard } from './CheckCard'
+import { CheckCard, LoadingCard, CheckTag } from './CheckCard'
 
 type CheckProps = {
   symbol: string
@@ -35,54 +35,34 @@ export const ROICCheck = ({ symbol }: CheckProps) => {
     }
   })
 
-  let description = ''
+  let description = `${latestROIC.toFixed(2)}%`
   let sentiment = 'neutral'
 
-  if (latestROIC > 0) {
-    if (isConsistentlyGrowing && latestROIC > 10) {
-      description = `${latestROIC.toFixed(2)}%, and consistently growing YoY.`
-      sentiment = 'success'
-    } else if (isConsistentlyGrowing && latestROIC < 10) {
-      description = `${latestROIC.toFixed(2)}%, but consistently growing YoY.`
-      sentiment = 'neutral'
-    }
+  if (latestROIC >= 0) sentiment = 'neutral'
+  if (latestROIC > 10) sentiment = 'success'
+  if (latestROIC < 0) sentiment = 'danger'
 
-    if (hasPositiveGrowth && !isConsistentlyGrowing && latestROIC > 10) {
-      let adjective = 'some'
-      if (numberOfDecliningYears >= 5) {
-        adjective = 'very'
-      }
+  const tags = []
+  if (latestROIC > 10) tags.push(<CheckTag children="High return" color="success" icon={['fad', 'percentage']} />)
+  if (latestROIC >= 5 && latestROIC < 10)
+    tags.push(<CheckTag children="Normal return" color="neutral" icon={['fad', 'percentage']} />)
+  if (latestROIC >= 0 && latestROIC < 5)
+    tags.push(<CheckTag children="Low return" color="warning" icon={['fad', 'percentage']} />)
+  if (latestROIC < 0) tags.push(<CheckTag children="Negative return" color="danger" icon={['fad', 'minus']} />)
 
-      description = `${latestROIC.toFixed(2)}%, with ${adjective} inconsistent growth.`
-      sentiment = latestROIC > 20 ? 'success' : 'neutral'
-    }
-    if (hasPositiveGrowth && !isConsistentlyGrowing && latestROIC < 10) {
-      description = `${latestROIC.toFixed(2)}% with inconsistent growth.`
-      sentiment = 'warning'
-    }
-    if (!hasPositiveGrowth && latestROIC >= 10) {
-      description = `${latestROIC.toFixed(2)}% (good) but it has been declining`
-      sentiment = 'warning'
-    }
-    if (!hasPositiveGrowth && latestROIC < 10) {
-      description = `${latestROIC.toFixed(2)}% and it has been declining`
-      sentiment = 'danger'
-    }
-  } else {
-    if (hasPositiveGrowth) {
-      description = `${latestROIC.toFixed(2)}% but growing`
-      sentiment = 'danger'
-    } else if (!hasPositiveGrowth) {
-      description = `${latestROIC.toFixed(2)}% and declining!`
-      sentiment = 'danger'
-    }
-  }
+  if (isConsistentlyGrowing)
+    tags.push(<CheckTag children="Consistent growth" color="success" icon={['fad', 'chart-line']} />)
+  // if (hasPositiveGrowth && !isConsistentlyGrowing) tags.push(<CheckTag children="Inconsistent" color="warning" />)
+
+  if (hasPositiveGrowth) tags.push(<CheckTag children="Increasing" color="success" icon={['fad', 'chart-line']} />)
+  if (!hasPositiveGrowth) tags.push(<CheckTag children="Decreasing" color="danger" icon={['fad', 'chart-line-down']} />)
 
   return (
     <CheckCard
-      icon={['fad', hasPositiveGrowth ? 'chart-line' : 'chart-line-down']}
+      icon={['fad', 'percentage']}
       title="Return On Invested Capital"
       description={description}
+      tags={tags}
       // @ts-ignore
       sentiment={sentiment}
     ></CheckCard>

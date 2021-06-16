@@ -44,6 +44,10 @@ const SentimentIconContainer = styled.div`
   }
 `
 
+const Content = styled.div`
+  display: flex;
+`
+
 const SentimentIcon = styled(FontAwesomeIcon)``
 
 type CheckCardProps = {
@@ -51,9 +55,10 @@ type CheckCardProps = {
   title: string
   description: string
   sentiment: 'positive' | 'neutral' | 'danger' | 'warning'
+  tags: any[]
 }
 
-export const CheckCard = ({ icon, title, description, sentiment }: CheckCardProps) => {
+export const CheckCard = ({ icon, title, description, sentiment, tags }: CheckCardProps) => {
   let sentimentIcon = ['fas', 'check']
   if (sentiment === 'warning') {
     sentimentIcon = ['fas', 'exclamation-triangle']
@@ -73,7 +78,12 @@ export const CheckCard = ({ icon, title, description, sentiment }: CheckCardProp
             <Title level={5} style={{ marginBottom: 0 }}>
               {title}
             </Title>
-            <Text>{description}</Text>
+            <Content>
+              <Space>
+                <Text>{description}</Text>
+                {tags}
+              </Space>
+            </Content>
           </div>
         </Space>
         <SentimentIconContainer color={sentiment}>
@@ -91,4 +101,22 @@ export const LoadingCard = () => (
       <Spin />
     </StyledCard>
   </Col>
+)
+
+const TagContainer = styled.div`
+  padding: 4px 8px;
+  background-color: ${(p: any) => p.theme.palette[p.color][200]};
+  color: ${(p: any) => p.theme.palette[p.color][600]};
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+`
+
+export const CheckTag = ({ color, children, icon }: { color: string; children: any; icon?: any }) => (
+  <TagContainer color={color}>
+    <span style={{ whiteSpace: 'nowrap' }}>
+      {icon && <FontAwesomeIcon icon={icon} style={{ marginRight: 8 }} />}
+      {children}
+    </span>
+  </TagContainer>
 )

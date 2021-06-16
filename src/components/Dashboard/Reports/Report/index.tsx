@@ -10,7 +10,7 @@ import { Report } from 'src/ui-components/Stock'
 import Header from './Header'
 import Profile from './Profile'
 import StockChart from './StockChart'
-import KeyMetrics from './KeyMetrics'
+import KeyMetrics from './Growth'
 import Financials from './Financials'
 import StockNews from './StockNews'
 import PressReleases from './PressReleases'
@@ -22,10 +22,9 @@ import {
   InsiderTradesCheck,
   ROICCheck,
   ProfitabilityCheck,
-  EquityCheck,
-  SalesCheck,
-  CashflowCheck,
+  GrowthRateCheck,
   MarginOfSafetyCheck,
+  DividendsCheck,
 } from './Checks'
 
 const { Text, Title } = Typography
@@ -79,12 +78,30 @@ const StockReport = () => {
             <Row gutter={[16, 16]}>
               <MarginOfSafetyCheck symbol={symbol} price={latestPrice} />
               <ROICCheck symbol={symbol} />
-              <EquityCheck symbol={symbol} />
-              <SalesCheck symbol={symbol} />
-              <CashflowCheck symbol={symbol} />
+              <GrowthRateCheck
+                label="Equity Growth"
+                url={`https://financialmodelingprep.com/api/v3/key-metrics/${symbol}?limit=10`}
+                metricName="bookValuePerShare"
+              />
+              <GrowthRateCheck
+                label="Earnings Growth"
+                url={`https://financialmodelingprep.com/api/v3/income-statement/${symbol}?limit=10`}
+                metricName="eps"
+              />
+              <GrowthRateCheck
+                label="Sales Growth"
+                url={`https://financialmodelingprep.com/api/v3/income-statement/${symbol}?limit=10`}
+                metricName="revenue"
+              />
+              <GrowthRateCheck
+                label="Cash Flow Growth"
+                url={`https://financialmodelingprep.com/api/v3/cash-flow-statement/${symbol}?limit=10`}
+                metricName="freeCashFlow"
+              />
               <DebtCheck symbol={symbol} />
               <InsiderTradesCheck symbol={symbol} />
               <ProfitabilityCheck symbol={symbol} />
+              <DividendsCheck symbol={symbol} />
             </Row>
           </TabPane>
           <TabPane
@@ -102,8 +119,8 @@ const StockReport = () => {
           <TabPane
             tab={
               <Text>
-                <FontAwesomeIcon icon={['fad', 'balance-scale-right']} style={{ marginRight: 8 }} />
-                Key metrics
+                <FontAwesomeIcon icon={['fad', 'chart-line']} style={{ marginRight: 8 }} />
+                Growth
               </Text>
             }
             key="key-metrics"

@@ -112,7 +112,7 @@ const Performance = () => {
   const toggleModal = () => setReturnsModalVisible(!returnsModalVisible)
 
   return (
-    <LandingPageContainer align="center">
+    <LandingPageContainer align="center" style={{ marginBottom: 32 }}>
       <Element name="performance" />
       <>
         <ScalingTitle>Performance</ScalingTitle>
@@ -138,7 +138,7 @@ const Performance = () => {
             ) : null}
             <Disclaimer>
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
-              in real time.
+              in real-time.
             </Disclaimer>
           </Tabs.TabPane>
           <Tabs.TabPane tab={`2009 - ${new Date().getFullYear()} Live Performance`} key="2">

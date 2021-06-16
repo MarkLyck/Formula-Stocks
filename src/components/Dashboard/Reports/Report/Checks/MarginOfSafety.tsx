@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client'
 
 import { FMP } from 'src/common/queries'
 import { currencyRoundedFormatter } from 'src/common/utils/formatters'
-import { calculateGrowthRateByYear } from '../KeyMetrics/utils/growthRates'
+import { calculateGrowthRateByYear } from '../Growth/utils/growthRates'
 
 import { CheckCard, LoadingCard } from './CheckCard'
 
