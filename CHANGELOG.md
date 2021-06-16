@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.192"></a>
+## 1.0.192 (2021-06-16)
+
+### Added
+
+- ✨ improve checks [[5ef78e1](https://github.com/MarkLyck/formula-stocks/commit/5ef78e1a8e51d1af763599fc6a7fd0175fc31482)]
+
+### Miscellaneous
+
+-  Merge pull request [#270](https://github.com/MarkLyck/formula-stocks/issues/270) from MarkLyck/improve-checks [[530b518](https://github.com/MarkLyck/formula-stocks/commit/530b518074de0f81a772bf3f626f74bda10b2c74)]
+- 🏷️ fix unused var [[2f54d4b](https://github.com/MarkLyck/formula-stocks/commit/2f54d4bb260462227f1bdc06cd855d8bcc0b16f3)]
+- 📝 version bump to v1.0.192 [[bd7de63](https://github.com/MarkLyck/formula-stocks/commit/bd7de633a838fc97216ed8733eb4920feecf813e)]
+- 📝 generated changelog [[f15ad07](https://github.com/MarkLyck/formula-stocks/commit/f15ad07b2483d5722912e02d2fd7f08122f30ed0)]
+
+
 <a name="1.0.191"></a>
 ## 1.0.191 (2021-06-16)
 
