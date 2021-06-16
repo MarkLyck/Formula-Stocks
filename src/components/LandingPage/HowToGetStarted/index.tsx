@@ -103,7 +103,7 @@ const HowToGetStarted = () => (
             <CardTitle>Re-invest dividends</CardTitle>
           </Space>
           <Description>
-            Most stocks we invest in will pay out a dividend. To get the most of our system, we highly recommend you
+            Many stocks we invest in will pay out a dividend. To get the most of our system, we highly recommend you
             re-invest the dividends for exponential growth.
           </Description>
         </Space>

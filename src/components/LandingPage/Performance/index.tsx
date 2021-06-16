@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { Space, Modal, Button } from 'antd'
+import { Space, Modal, Button, Switch, Typography } from 'antd'
 import { Element } from 'react-scroll'
 import { useQuery } from '@apollo/client'
 import fetch from 'isomorphic-unfetch'
@@ -15,6 +15,8 @@ import BacktestedChart from './BacktestedChart'
 import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
 import YearlyReturns from './YearlyReturns'
 import { ReturnsCalculatorModal } from 'src/components/LandingPage/Modals'
+
+const { Text } = Typography
 
 // @ts-ignore
 if (!process.browser) {
@@ -68,9 +70,19 @@ const ButtonContainer = styled(Space)`
   }
 `
 
+const LogSwitchContainer = styled.div`
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 16px;
+  position: absolute;
+  right: 16px;
+`
+
 const Performance = () => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
   const [calculatorVisible, setCalculatorVisible] = useState(false)
+  const [log, setLog] = useState(true)
   const [chartType, setChartType] = useState('backtested')
   const { 'isMobile-': isMobileMinus } = useBreakpoint()
 
@@ -107,16 +119,21 @@ const Performance = () => {
         <StyledTabs defaultActiveKey="1" onChange={switchChartType}>
           <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="1">
             <ScalingSubTitle>
-              Backtested Logarithmic Chart showing how <b>$25,000</b> would have grown since 1970
+              Chart showing how <b>$25,000</b> would have grown since 1970
+              <LogSwitchContainer>
+                <Text>Logarithmic</Text>
+                <Switch checked={log} style={{ marginLeft: 8 }} onChange={setLog} />
+              </LogSwitchContainer>
             </ScalingSubTitle>
             {chartType === 'backtested' ? (
               <BacktestedChart
-                name={`${COMPANY_NAME} (backtested)`}
+                name={COMPANY_NAME}
                 marketName="S&P 500"
                 isLoading={planLoading}
                 error={planError}
                 planPerformance={planPerformance}
                 marketPrices={marketPrices}
+                log={log}
               />
             ) : null}
             <Disclaimer>

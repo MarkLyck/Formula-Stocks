@@ -5,7 +5,7 @@ import { useTheme } from '@emotion/react'
 import { Element } from 'react-scroll'
 import { maxSiteWidth } from 'src/common/styles'
 import { Space } from 'antd'
-import { ActionButton, ScalingTitle, ScalingParagraph, TextTag, ButtonIcon } from 'src/ui-components'
+import { ActionButton, ScalingTitle, ScalingParagraph, ButtonIcon } from 'src/ui-components'
 import { useWindowSize } from 'src/common/hooks'
 
 const BackgroundContainer = styled.div`
@@ -79,11 +79,11 @@ const HowItWorks = () => {
               Warren Buffet & Benjamin Graham.
             </ScalingParagraph>
             <ScalingParagraph>
-              We analyze and evaluate companies based on 100s of factors like: <TextTag>value</TextTag>{' '}
-              <TextTag>risk</TextTag> <TextTag>growth</TextTag> <TextTag>stewardship</TextTag> & many more.
+              It continously analyzes and evaluates companies based on 100s of factors.
             </ScalingParagraph>
             <ScalingParagraph>
-              Out of thousands of stocks, only a select few companies make the cut for our portfolio.
+              Out of thousands of stocks, only a select few companies make the cut for our portfolio when they are
+              significantly undervalued by the market.
             </ScalingParagraph>
             <ActionButton onClick={goToStrategyPage}>
               <ButtonIcon icon={['fad', 'flask']} />

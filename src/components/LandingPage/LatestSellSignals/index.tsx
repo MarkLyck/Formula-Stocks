@@ -3,15 +3,7 @@ import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { maxSiteWidth } from 'src/common/styles'
 import { LATEST_SELL_SIGNALS } from 'src/common/queries'
-import {
-  ScalingTitle,
-  ScalingSubTitle,
-  GenericLoading,
-  LoadingError,
-  Disclaimer,
-  Tag,
-  StockReturn,
-} from 'src/ui-components'
+import { ScalingTitle, ScalingSubTitle, GenericLoading, Disclaimer, Tag, StockReturn } from 'src/ui-components'
 import { Table, TableBody, TableRow, TableCell, TableHeadCell, StockName } from './styles'
 
 const LatestSellsContainer = styled.div`
@@ -65,7 +57,7 @@ const LatestSellSignals = () => {
       <ScalingTitle>Latest sell signals</ScalingTitle>
       <ScalingSubTitle>Here's our 10 latest sell signals (updated monthly)</ScalingSubTitle>
       {loading && <GenericLoading />}
-      {error && <LoadingError error={error} />}
+      {error && <div>Error loading</div>}
       <Table>
         <thead>
           <TableRow>
