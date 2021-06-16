@@ -66,10 +66,7 @@ const Pricing = ({ showSignup }: any) => (
     <Element name="pricing" />
     <TitleContainer>
       <ScalingTitle>Pricing</ScalingTitle>
-      <ScalingSubTitle>
-        Our pricing is tiered based on portfolio size, in order to keep our service affordable for those with smaller
-        account sizes.
-      </ScalingSubTitle>
+      <ScalingSubTitle>Our algorithms are fine-tuned for your portfolio size.</ScalingSubTitle>
     </TitleContainer>
     <Container>
       <PricingCard>
@@ -88,7 +85,7 @@ const Pricing = ({ showSignup }: any) => (
         </Button>
       </PricingCard>
       <PricingCard>
-        <CardTitle>Portfolio size $25k - $200k</CardTitle>
+        <CardTitle>Portfolio size $25k - $500k</CardTitle>
         <Divider />
         <Tooltip title="This portfolio is tailored for medium-sized accounts.">
           <SmallFeatureCard
@@ -108,7 +105,7 @@ const Pricing = ({ showSignup }: any) => (
         </Button>
       </PricingCard>
       <PricingCard>
-        <CardTitle>Portfolio size over $200k</CardTitle>
+        <CardTitle>Portfolio size over $500k</CardTitle>
         <Divider />
         <Tooltip title="Contact us for portfolios tailored for large accounts.">
           <SmallFeatureCard

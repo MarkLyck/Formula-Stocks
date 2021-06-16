@@ -1,4 +1,5 @@
 import React from 'react'
+
 import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,6 +16,7 @@ interface BacktestedChartType {
   marketPrices: any
   marketName: string
   name: string
+  log: boolean
 }
 
 let lastPlanDate = new Date()
@@ -28,8 +30,8 @@ const createPlanData = (data: any[]) => {
 
     return {
       value: Number(balance),
-      label: `Formula Stocks ${dayjsDate.isAfter(dayjs('2009-01-01')) ? '(Observed)' : '(Backtested)'}`,
-      type: `Formula Stocks (Backtested)`,
+      backtested: dayjsDate.isAfter(dayjs('2009-01-01')) ? false : true,
+      type: `Formula Stocks`,
       date: dayjsDate.toDate(),
     }
   })
@@ -53,9 +55,9 @@ const dollarFormatterRounded = (value: number) => currencyRoundedFormatter.forma
 
 const MARKET_CRASHES = [
   {
-    label: '1973 Crash',
-    date: '12-31-1973',
-    offsetY: 3,
+    label: '1973-1974 Crash',
+    date: '09-31-1974',
+    offsetY: -7,
     lineHeight: 15,
   },
   {
@@ -93,6 +95,7 @@ const BacktestedHistoryChart = ({
   marketPrices,
   marketName,
   name,
+  log,
 }: BacktestedChartType) => {
   if (error) {
     return (
@@ -142,39 +145,14 @@ const BacktestedHistoryChart = ({
     line: { length: crash.lineHeight || 40 },
   }))
 
-  annotations.push({
+  const observedRegion = {
     type: 'region',
     // @ts-ignore
     start: () => ['01-31-2009', 'min'],
     end: () => ['2050', 'max'],
-  })
-
-  // [
-  //   {
-  //     type: 'dataMarker',
-  //     position: (xScale: any, yScale: any) => {
-  //       const annotationDate = '02-28-2009'
-  //       const dates = xScale.values
-  //       const values = yScale.value.values
-  //       let valueIndex = 0
-
-  //       dates.forEach((date: any, i: number) => {
-  //         if (dayjs(date).format('MM-DD-YYYY') === annotationDate) {
-  //           valueIndex = i
-  //         }
-  //       })
-
-  //       const valueAtDate = values[valueIndex]
-  //       return [annotationDate, valueAtDate]
-  //     },
-  //     offsetY: 20,
-  //     text: {
-  //       content: 'Financial Crisis',
-  //       style: { textAlign: 'right' },
-  //     },
-  //     line: { length: 40 },
-  //   },
-  // ]
+  }
+  // @ts-ignore
+  annotations.push(observedRegion)
 
   return (
     <GraphContainer>
@@ -195,8 +173,8 @@ const BacktestedHistoryChart = ({
         dateMask="YYYY"
         labelFormatter={dollarFormatterRounded}
         tooltipValueFormatter={dollarFormatterRounded}
-        annotations={annotations}
-        log
+        annotations={log ? annotations : [observedRegion]}
+        log={log}
       />
     </GraphContainer>
   )

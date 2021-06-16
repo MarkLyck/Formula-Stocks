@@ -3,10 +3,12 @@ import { Typography } from 'antd'
 import { transparentize } from 'polished'
 import dayjs from 'dayjs'
 
-const { Text } = Typography
+const { Title, Text } = Typography
 
 const Container = styled.div`
-  padding: 8px 0px 0;
+  padding: 16px 8px 8px;
+  display: flex;
+  flex-direction: column;
 `
 
 const Marker = styled.div`
@@ -20,13 +22,44 @@ const Marker = styled.div`
 
 const Value = styled(Text)`
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
 `
 
 const Type = styled(Text)`
   color: ${(p: { color: string }) => p.color};
   margin-right: 16px;
   font-weight: 500;
+  font-size: 15px;
+`
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const Date = styled(Title)`
+  && {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+`
+
+const BacktestedTag = styled.div`
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  background: #d6e6ff;
+  color: #3366ff;
+`
+const LiveTag = styled.div`
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  background: #e6fff2;
+  color: #00b07b;
 `
 
 const Tooltip = (
@@ -35,23 +68,26 @@ const Tooltip = (
   tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
 ) => {
   if (!items[0]) return null
+  const isBacktested = items[0]?.data?.backtested
 
   return (
     <Container>
-      <Text style={{ fontWeight: 500 }}>{dayjs(items[0].data.date).format('MMM YYYY')}</Text>
+      <Header>
+        <Date level={5}>{dayjs(items[0].data.date).format('MMM YYYY')}</Date>
+        {isBacktested ? <BacktestedTag>Backtested</BacktestedTag> : <LiveTag>Observed realtime</LiveTag>}
+      </Header>
       <ul style={{ paddingLeft: 0 }}>
         {items?.map((item: any, index: number) => {
-          const { name, value, color, data } = item
+          const { name, value, color } = item
           return (
             <li
               key={item.title + item.name}
-              className="g2-tooltip-list-item"
               data-index={index}
-              style={{ marginBottom: 4, display: 'flex', alignItems: 'center' }}
+              style={{ margin: index === 0 ? '16px 0' : '0', display: 'flex', alignItems: 'center' }}
             >
               <Marker color={color} />
               <span style={{ display: 'inline-flex', flex: 1, justifyContent: 'space-between' }}>
-                <Type color={color}>{data.label ? data.label : name}:</Type>
+                <Type color={color}>{name}:</Type>
                 <Value>{tooltipValueFormatter(value)}</Value>
               </span>
             </li>

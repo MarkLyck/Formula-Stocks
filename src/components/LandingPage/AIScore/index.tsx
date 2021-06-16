@@ -49,9 +49,9 @@ const AIScore = () => {
               <TextTag>Profitability</TextTag> <TextTag>Soundness</TextTag> & <TextTag>Stewardship</TextTag>
               <br />
               <br />
-              Investing solely in stocks with a high AI Score means you'll be buying quality stocks when they are on
-              sale, in businesses likely to grow and improve over time. You'll also often avoid businesses that are
-              awful, expensive, badly run, produces subpar returns or are extremely risky.
+              Investing solely in stocks with a high AI Score means you'll be buying quality growing businesses when
+              they are on sale. You'll also often avoid companies that are expensive, badly run, produces subpar returns
+              or are extremely risky.
               <br />
               <br />
               Don't invest without it!
