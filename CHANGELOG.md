@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.193"></a>
+## 1.0.193 (2021-06-16)
+
+### Added
+
+- ✨ improve growthrate tags [[91931e0](https://github.com/MarkLyck/formula-stocks/commit/91931e0d3804bddef366fe0b6977c29e983a5f88)]
+
+### Miscellaneous
+
+-  Merge pull request [#271](https://github.com/MarkLyck/formula-stocks/issues/271) from MarkLyck/improve-checks [[dee04dc](https://github.com/MarkLyck/formula-stocks/commit/dee04dc4b977b188aeeab4c6775e6575d62d7883)]
+- 📝 version bump to v1.0.193 [[346a007](https://github.com/MarkLyck/formula-stocks/commit/346a00714907ba9c610dec2d429bb2ebd9727f3a)]
+- 📝 generated changelog [[38700ca](https://github.com/MarkLyck/formula-stocks/commit/38700caf0ba05cc2a200c0a384be993a47d6e022)]
+
+
 <a name="1.0.192"></a>
 ## 1.0.192 (2021-06-16)
 
