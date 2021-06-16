@@ -48,7 +48,7 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
         description = 'Consistently profitable over the last 10 years '
         sentiment = 'success'
       } else {
-        description = `Profitable, but reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
+        description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
         sentiment = 'warning'
       }
     } else {

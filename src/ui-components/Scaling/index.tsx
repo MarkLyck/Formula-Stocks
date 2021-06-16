@@ -19,6 +19,7 @@ export const ScalingTitle = styled(Title)`
 export const ScalingSubTitle = styled(Title)`
   position: relative;
   width: 100%;
+  text-align: center;
   &&& {
     color: ${(p) => p.theme.palette.text[200]};
     font-size: 1.4rem;

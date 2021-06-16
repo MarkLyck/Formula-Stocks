@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client'
 import { FMP } from 'src/common/queries'
 import { CheckCard, LoadingCard } from './CheckCard'
 
-import { calculateGrowthRateByYear } from '../KeyMetrics/utils/growthRates'
+import { calculateGrowthRateByYear } from '../Growth/utils/growthRates'
 
 type CheckProps = {
   symbol: string

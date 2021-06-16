@@ -39,7 +39,7 @@ const theme: any = {
     },
     success: {
       100: '#e6fff2',
-      200: '#a3ffd4',
+      200: '#e6fff2',
       300: '#79fcc4',
       400: '#4df0af',
       500: '#24e39d',
@@ -63,7 +63,7 @@ const theme: any = {
     },
     warning: {
       100: '#fffbe6',
-      200: '#ffeda3',
+      200: '#fffbe6',
       300: '#ffe07a',
       400: '#ffd152',
       500: '#ffbf29',

@@ -74,7 +74,7 @@ const Tooltip = (
     <Container>
       <Header>
         <Date level={5}>{dayjs(items[0].data.date).format('MMM YYYY')}</Date>
-        {isBacktested ? <BacktestedTag>Backtested</BacktestedTag> : <LiveTag>Observed realtime</LiveTag>}
+        {isBacktested ? <BacktestedTag>Backtested</BacktestedTag> : <LiveTag>Observed real-time</LiveTag>}
       </Header>
       <ul style={{ paddingLeft: 0 }}>
         {items?.map((item: any, index: number) => {

@@ -46,7 +46,7 @@ export const DebtCheck = ({ symbol }: CheckProps) => {
     description = `Net debt can be paid off in ${yearsToPayOffDebt} ${yearsText} with free cashflow.`
     sentiment = 'neutral'
   } else {
-    description = `It would take ${yearsToPayOffDebt} ${yearsText} to pay off the debt with free cashflow.`
+    description = `${yearsToPayOffDebt} ${yearsText} to pay off net debt with free cashflow.`
     sentiment = 'danger'
   }
 
