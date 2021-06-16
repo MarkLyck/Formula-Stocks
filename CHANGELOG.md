@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.191"></a>
+## 1.0.191 (2021-06-16)
+
+### Changed
+
+- ⬆️ Update dependency globby to v11.0.4 [[95e9e89](https://github.com/MarkLyck/formula-stocks/commit/95e9e89828d9e496cb20c1ccaa42583ea79809f0)]
+
+### Miscellaneous
+
+-  Merge pull request [#269](https://github.com/MarkLyck/formula-stocks/issues/269) from MarkLyck/renovate/globby-11.x [[574cb01](https://github.com/MarkLyck/formula-stocks/commit/574cb0152cad3a01b01445bd3de7602c99841d74)]
+- 📝 version bump to v1.0.191 [[caaf8bb](https://github.com/MarkLyck/formula-stocks/commit/caaf8bb3059b8de4e0fb213261da169a3a94c25d)]
+- 📝 generated changelog [[1aaa2c8](https://github.com/MarkLyck/formula-stocks/commit/1aaa2c8af2a7457ff3675a319aacb6a056152638)]
+
+
 <a name="1.0.190"></a>
 ## 1.0.190 (2021-06-16)
 
