@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.190"></a>
+## 1.0.190 (2021-06-16)
+
+### Added
+
+- ✨ improvements [[f2d53fe](https://github.com/MarkLyck/formula-stocks/commit/f2d53fe5a14c9bee6c41cd9d3f5e6b67507ceed1)]
+
+### Miscellaneous
+
+-  Merge pull request [#268](https://github.com/MarkLyck/formula-stocks/issues/268) from MarkLyck/landing-page-improvements [[642ea17](https://github.com/MarkLyck/formula-stocks/commit/642ea17a4a19a1e3a7594d5494b0256a64c4edba)]
+- 🏷️ fix ts [[90d4b2b](https://github.com/MarkLyck/formula-stocks/commit/90d4b2b981593b92d511a52e670a61300a8c6aa8)]
+- 📝 version bump to v1.0.190 [[80f6ff9](https://github.com/MarkLyck/formula-stocks/commit/80f6ff9d225c41c3c182203dfa059915ee782b46)]
+- 📝 generated changelog [[2a80a5c](https://github.com/MarkLyck/formula-stocks/commit/2a80a5c9ff42db4de8bf7539db030fc2b0d00804)]
+
+
 <a name="1.0.189"></a>
 ## 1.0.189 (2021-06-15)
 
