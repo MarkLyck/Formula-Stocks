@@ -26,12 +26,10 @@ export const ROICCheck = ({ symbol }: CheckProps) => {
   if (latestROIC === 0) return null
 
   let isConsistentlyGrowing = true
-  let numberOfDecliningYears = 0
   roicByYear.forEach((value: number, i: number) => {
     if (i === 0) return
     if (value < roicByYear[i - 1]) {
       isConsistentlyGrowing = false
-      numberOfDecliningYears += 1
     }
   })
 
