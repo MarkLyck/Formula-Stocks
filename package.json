@@ -79,7 +79,7 @@
     "pretty-quick": "3.1.1",
     "storybook-addon-apollo-client": "4.0.8",
     "tsconfig-paths-webpack-plugin": "3.5.1",
-    "typescript": "4.3.2",
+    "typescript": "4.3.4",
     "waait": "1.0.5"
   }
 }
