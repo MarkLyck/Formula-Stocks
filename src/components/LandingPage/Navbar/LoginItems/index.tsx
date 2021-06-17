@@ -16,6 +16,7 @@ const LoginItems = ({ showSignup }: any) => {
   const { data, error } = useQuery(CURRENT_USER_QUERY, { fetchPolicy: 'cache-and-network' })
   console.log('🔈 ~ error', error)
   console.log('🔈 ~ data', data)
+
   const [loggedIn, setLoggedIn] = useState(
     // @ts-ignore window.authToken
     (hasStorage && localStorage.getItem('authToken')) || (isBrowser && window.authToken)
