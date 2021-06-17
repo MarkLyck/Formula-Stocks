@@ -10,6 +10,7 @@ const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, 'src/lib
 
 module.exports = withCSS(
   withLess({
+    webpack5: false,
     lessLoaderOptions: {
       lessOptions: {
         javascriptEnabled: true,
