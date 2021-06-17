@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.197"></a>
+## 1.0.197 (2021-06-17)
+
+### Added
+
+- ✨ upgrade to next11 [[d860196](https://github.com/MarkLyck/formula-stocks/commit/d8601968dae5270b26631d1bff8d77fa69bc200c)]
+
+### Miscellaneous
+
+-  Merge pull request [#277](https://github.com/MarkLyck/formula-stocks/issues/277) from MarkLyck/next-11 [[992a420](https://github.com/MarkLyck/formula-stocks/commit/992a42023ac14fbda50b1cfbfde7757f5ec528df)]
+- 📝 version bump to v1.0.197 [[55db438](https://github.com/MarkLyck/formula-stocks/commit/55db43810f575ef3a22d0c05aa4247484840e083)]
+- 📝 generated changelog [[c55add3](https://github.com/MarkLyck/formula-stocks/commit/c55add339857434d7b9a7c27ec8c867b177e8590)]
+
+
 <a name="1.0.196"></a>
 ## 1.0.196 (2021-06-17)
 
