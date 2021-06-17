@@ -1,5 +1,44 @@
 # Changelog
 
+<a name="1.0.196"></a>
+## 1.0.196 (2021-06-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.196 [[e6f5c76](https://github.com/MarkLyck/formula-stocks/commit/e6f5c76376da16caf0c2ab8e84180a0d5de8b84b)]
+
+
+<a name="1.0.195"></a>
+## 1.0.195 (2021-06-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.195 [[5df6456](https://github.com/MarkLyck/formula-stocks/commit/5df645630760827416bb063b81ca3f77d63dad4a)]
+
+
+<a name="1.0.194"></a>
+## 1.0.194 (2021-06-17)
+
+### Changed
+
+- ⬆️ Update dependency typescript to v4.3.4 [[cfa41e3](https://github.com/MarkLyck/formula-stocks/commit/cfa41e3becbdfcd691fc02f64a791f426b43ac5b)]
+- ⬆️ Update dependency pretty-quick to v3.1.1 [[ffd0699](https://github.com/MarkLyck/formula-stocks/commit/ffd0699919bd44a97e5b826efcc69f23ed191e2c)]
+- ⬆️ Update dependency @ant-design/charts to v1.1.17 [[bfe9a6f](https://github.com/MarkLyck/formula-stocks/commit/bfe9a6f3ad090dc96ce30d854148fc4dcd85386e)]
+
+### Removed
+
+- 🔥 remove marginOfSafety Check [[91c8131](https://github.com/MarkLyck/formula-stocks/commit/91c8131842ef75e50c6a11a29b18261ab7e66e56)]
+
+### Miscellaneous
+
+-  Merge pull request [#272](https://github.com/MarkLyck/formula-stocks/issues/272) from MarkLyck/renovate/typescript-4.x [[77eacad](https://github.com/MarkLyck/formula-stocks/commit/77eacadb7b315e6341fd3dc0dae6dd61c6012639)]
+-  Merge pull request [#273](https://github.com/MarkLyck/formula-stocks/issues/273) from MarkLyck/renovate/ant-design-charts-1.x [[8b2de23](https://github.com/MarkLyck/formula-stocks/commit/8b2de2352de4c063dfbc1efdf379d68afee11e25)]
+-  Merge pull request [#275](https://github.com/MarkLyck/formula-stocks/issues/275) from MarkLyck/renovate/pretty-quick-3.x [[c7fd718](https://github.com/MarkLyck/formula-stocks/commit/c7fd718dad442654f052afeebddb35b4b070d882)]
+-  Merge pull request [#276](https://github.com/MarkLyck/formula-stocks/issues/276) from MarkLyck/improve-checks [[5b01257](https://github.com/MarkLyck/formula-stocks/commit/5b012573923731947ee99637f794849ba366deaf)]
+- 📝 version bump to v1.0.194 [[50cc24a](https://github.com/MarkLyck/formula-stocks/commit/50cc24af7eb9f81d379a0e8192cd3d9553089d2b)]
+- 📝 generated changelog [[f93412b](https://github.com/MarkLyck/formula-stocks/commit/f93412b1f073b5e10ae2dbc46d255640e9307e0c)]
+
+
 <a name="1.0.193"></a>
 ## 1.0.193 (2021-06-16)
 
