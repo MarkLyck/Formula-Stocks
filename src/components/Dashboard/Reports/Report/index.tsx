@@ -23,7 +23,7 @@ import {
   ROICCheck,
   ProfitabilityCheck,
   GrowthRateCheck,
-  MarginOfSafetyCheck,
+  // MarginOfSafetyCheck,
   DividendsCheck,
 } from './Checks'
 
@@ -76,7 +76,7 @@ const StockReport = () => {
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
             <Title level={4}>Key metrics</Title>
             <Row gutter={[16, 16]}>
-              <MarginOfSafetyCheck symbol={symbol} price={latestPrice} />
+              {/* <MarginOfSafetyCheck symbol={symbol} price={latestPrice} /> */}
               <ROICCheck symbol={symbol} />
               <GrowthRateCheck
                 label="Equity Growth"
