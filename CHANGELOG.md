@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.200"></a>
+## 1.0.200 (2021-06-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.200 [[921d33f](https://github.com/MarkLyck/formula-stocks/commit/921d33fd437c0241bc7369baf83a227959fe02da)]
+
+
+<a name="1.0.199"></a>
+## 1.0.199 (2021-06-19)
+
+### Changed
+
+- ⬆️ Update dependency @stripe/stripe-js to v1.15.1 [[488eba9](https://github.com/MarkLyck/formula-stocks/commit/488eba98a18a11ded83fd26a4aff2b11c5b1e317)]
+- ⬆️ Pin dependency next to 11.0.0 [[1d69cd4](https://github.com/MarkLyck/formula-stocks/commit/1d69cd4e42cc8a654557a1a5aa00d4f80fd18092)]
+
+### Miscellaneous
+
+-  Merge pull request [#280](https://github.com/MarkLyck/formula-stocks/issues/280) from MarkLyck/renovate/stripe-stripe-js-1.x [[2f5db88](https://github.com/MarkLyck/formula-stocks/commit/2f5db881d30cb7d5b58bae6eb443126edc247ff5)]
+-  Merge pull request [#278](https://github.com/MarkLyck/formula-stocks/issues/278) from MarkLyck/renovate/pin-dependencies [[c499efc](https://github.com/MarkLyck/formula-stocks/commit/c499efce53bc02dba8abbe1de41f3ece2ec6b19f)]
+- 📝 version bump to v1.0.199 [[de2da24](https://github.com/MarkLyck/formula-stocks/commit/de2da24ac52ca7daefa897614132966eda6bb98a)]
+- 📝 generated changelog [[8b2c96a](https://github.com/MarkLyck/formula-stocks/commit/8b2c96adeb411f56a66bd37c42b450c8cc84d793)]
+
+
 <a name="1.0.198"></a>
 ## 1.0.198 (2021-06-18)
 
