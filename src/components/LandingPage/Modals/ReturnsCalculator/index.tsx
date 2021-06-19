@@ -176,9 +176,9 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
             <PlusMinusInput min={0} onChange={setYears} value={years} />
           </div>
           <div>
-            <Title level={5}>Estimated rate of return</Title>
+            <Title level={5}>Rate of return</Title>
             <Paragraph>
-              <strong>{data?.statisticsList?.items[0].cAGR}%</strong> was the average annual return for our strategy in
+              As an example our strategy had a <strong>{data?.statisticsList?.items[0].cAGR}%</strong> rate of return in
               the past.*
             </Paragraph>
             <PlusMinusInput

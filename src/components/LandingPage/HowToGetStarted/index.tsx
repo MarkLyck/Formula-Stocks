@@ -79,8 +79,8 @@ const HowToGetStarted = () => (
             <CardTitle>Mirror portfolio</CardTitle>
           </Space>
           <Description>
-            The easiest way to get started is to mirror our portfolio in your own brokerage account of choice. If you
-            don't have one yet, we will help!
+            To get started is to mirror our portfolio in your brokerage account of choice. Our dashboard shows exactly
+            how much to allocate to each stock, making your life easy.
           </Description>
         </Space>
       </StepCard>
@@ -100,11 +100,11 @@ const HowToGetStarted = () => (
         <Space direction="vertical">
           <Space size="middle">
             <NumberContainer>3</NumberContainer>
-            <CardTitle>Re-invest dividends</CardTitle>
+            <CardTitle>Re-invest profits</CardTitle>
           </Space>
           <Description>
             Many stocks we invest in will pay out a dividend. To get the most of our system, we highly recommend you
-            re-invest the dividends for exponential growth.
+            re-invest the dividends and returns for exponential growth.
           </Description>
         </Space>
       </StepCard>
