@@ -55,7 +55,7 @@ const Statistics = () => {
         </ScalingTitle>
         <Space direction="vertical" size="middle">
           <StatisticsCard icon="percent" color={theme.palette.primary[600]}>
-            <p>stocks sold with a profit</p>
+            <p>% of investments sold with a profit</p>
             {loading ? (
               <LoadingTag />
             ) : (
@@ -90,7 +90,7 @@ const Statistics = () => {
             {loading ? <LoadingTag /> : <StockReturn percentReturn={-statistics.averageLossPerPosition} />}
           </StatisticsCard>
           <StatisticsCard icon="money-bill-wave" color={theme.palette.success[600]}>
-            <p>Average expected return per investment</p>
+            <p>Average return per investment</p>
             {loading ? <LoadingTag /> : <StockReturn percentReturn={Number(expectedReturn)} />}
           </StatisticsCard>
           <StatisticsCard icon="hourglass-start" color={theme.palette.neutral[500]}>

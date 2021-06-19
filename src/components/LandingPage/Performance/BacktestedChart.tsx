@@ -62,8 +62,9 @@ const MARKET_CRASHES = [
   },
   {
     label: 'Black Monday',
-    date: '11-30-1987',
-    lineHeight: 25,
+    date: '10-31-1987',
+    offsetY: -2,
+    lineHeight: 10,
   },
   {
     label: '1990s Recession',
@@ -71,7 +72,7 @@ const MARKET_CRASHES = [
   },
   {
     label: 'Dot-Com Bubble',
-    date: '03-31-2003',
+    date: '06-30-2000',
     offsetY: 12,
   },
   {

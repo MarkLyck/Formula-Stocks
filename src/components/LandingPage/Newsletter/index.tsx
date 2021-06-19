@@ -93,7 +93,7 @@ const Newsletter = () => {
       <Card>
         <Content>
           <Space direction="vertical" align="center">
-            <ScalingTitle>Don't believe us yet? Let us prove it!</ScalingTitle>
+            <ScalingTitle>Follow our results over time!</ScalingTitle>
             <ScalingSubTitle>
               Join our newsletter, to receive emails with <Highlight>actual results</Highlight> of our investment
               signals (good or bad).

@@ -33,7 +33,7 @@ const Highlight = styled(Text)`
 
 const HeroTitle = () => (
   <StyledTitle>
-    <Highlight>Value investing</Highlight>
+    <Highlight>Intelligent investing</Highlight>
     <br />
     With a technological advantage
   </StyledTitle>

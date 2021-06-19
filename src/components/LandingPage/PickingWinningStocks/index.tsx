@@ -75,8 +75,8 @@ const HowItWorks = () => {
               How we pick <Highlight>winning stocks</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              Our algorithms are built on timeless value investing principles from history's top value-investors like
-              Warren Buffet & Benjamin Graham.
+              Our algorithms are built on timeless investing principles from history's top investors like Warren Buffet
+              & Benjamin Graham, Joel Grennblat and many others.
             </ScalingParagraph>
             <ScalingParagraph>
               It continously analyzes and evaluates companies based on 100s of factors.
