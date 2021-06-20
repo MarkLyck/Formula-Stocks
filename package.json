@@ -37,7 +37,7 @@
     "dayjs": "1.10.5",
     "deepmerge": "4.2.2",
     "framer-motion": "4.1.17",
-    "graphql": "15.5.0",
+    "graphql": "15.5.1",
     "isomorphic-unfetch": "3.1.0",
     "lodash": "4.17.21",
     "lodash.maxby": "4.6.0",
