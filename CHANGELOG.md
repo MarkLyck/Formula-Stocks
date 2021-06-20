@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.202"></a>
+## 1.0.202 (2021-06-20)
+
+### Changed
+
+- ⬆️ Update dependency graphql to v15.5.1 [[992f3cc](https://github.com/MarkLyck/formula-stocks/commit/992f3cc58a5c88aa70d48b97e5315a225757a579)]
+
+### Miscellaneous
+
+-  Merge pull request [#282](https://github.com/MarkLyck/formula-stocks/issues/282) from MarkLyck/renovate/graphql-15.x [[2c89e8d](https://github.com/MarkLyck/formula-stocks/commit/2c89e8d70ad6ce309019df170dafd38bf9dcf730)]
+- 📝 version bump to v1.0.202 [[7c6410f](https://github.com/MarkLyck/formula-stocks/commit/7c6410f872b7059dc18a417cf5e2d449ef232a0a)]
+- 📝 generated changelog [[576a806](https://github.com/MarkLyck/formula-stocks/commit/576a806a010279ffe88e98c07cec6773a8ac181b)]
+
+
 <a name="1.0.201"></a>
 ## 1.0.201 (2021-06-19)
 
