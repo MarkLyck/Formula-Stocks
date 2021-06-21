@@ -85,7 +85,7 @@ const Pricing = ({ showSignup }: any) => (
         </Button>
       </PricingCard>
       <PricingCard>
-        <CardTitle>Portfolio size $100k - $500k</CardTitle>
+        <CardTitle>Portfolio size $100k - $1M</CardTitle>
         <Divider />
         <Tooltip title="This portfolio is tailored for medium-sized accounts.">
           <SmallFeatureCard
@@ -105,7 +105,7 @@ const Pricing = ({ showSignup }: any) => (
         </Button>
       </PricingCard>
       <PricingCard>
-        <CardTitle>Portfolio size over $500k</CardTitle>
+        <CardTitle>Portfolio size over $1M</CardTitle>
         <Divider />
         <Tooltip title="Contact us for portfolios tailored for large accounts.">
           <SmallFeatureCard
