@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="1.0.214"></a>
+## 1.0.214 (2021-06-22)
+
+### Miscellaneous
+
+-  Merge pull request [#294](https://github.com/MarkLyck/formula-stocks/issues/294) from MarkLyck/feedback-changes [[f5a9c53](https://github.com/MarkLyck/formula-stocks/commit/f5a9c5357eea01faef093702162319cc3ffde7b2)]
+- 🌐 update screenshot, change joe tex [[6679132](https://github.com/MarkLyck/formula-stocks/commit/6679132f41788f7dbf7e8706b463ef3e00e60005)]
+- 📝 version bump to v1.0.214 [[4655757](https://github.com/MarkLyck/formula-stocks/commit/46557576453fe0c7149e5248a602c8f87ab1b44d)]
+- 📝 generated changelog [[0534737](https://github.com/MarkLyck/formula-stocks/commit/05347376bc1f8bc8094e77a11897aedfbba45eff)]
+
+
 <a name="1.0.213"></a>
 ## 1.0.213 (2021-06-22)
 
