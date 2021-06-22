@@ -76,14 +76,14 @@ const HowItWorks = () => {
             </ScalingTitle>
             <ScalingParagraph>
               Meet Joe. Joe is an artificial intelligence with a diverse personality. He simultaneously thinks like 25
-              of the best super investors of recent centuries. Icons such as Benjamin Graham, Philip Fisher, Warren
-              Buffett, Jesse Livermore, Bernard Baruch to name a few.
+              of the best super investors of recent centuries, such as Benjamin Graham, Philip Fisher, Warren Buffett,
+              Jesse Livermore, to name a few.
             </ScalingParagraph>
             <ScalingParagraph>
-              Joe can help you earn a better return on your capital. As a business investor, he is happy when he can
-              invest in a wonderful business with good growth prospects, a great business model, purchased at a price
-              well below its intrinsic value. Price is what you pay, value is what you get. Joe's task is to make sure
-              you get your moneys worth of good businesses at a sharp price to help you outperform the market.
+              Joe can help you earn a better return on your capital. He is happy when he can invest in a wonderful
+              business with good growth prospects, a great business model, purchased at a price well below its intrinsic
+              value. Price is what you pay, value is what you get. Joe's task is to make sure you get your moneys worth
+              of good businesses at a sharp price to help you outperform the market.
             </ScalingParagraph>
             <ScalingParagraph>
               He is adept at avoiding mistakes, careful about what he invests in, evaluating finances, business models
