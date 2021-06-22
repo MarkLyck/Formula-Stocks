@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.216"></a>
+## 1.0.216 (2021-06-22)
+
+### Added
+
+- ✨ ai score text changes [[fdd0833](https://github.com/MarkLyck/formula-stocks/commit/fdd0833adeff19a5e1e7ffc75e2d1f5d63f78b64)]
+
+### Miscellaneous
+
+-  Merge pull request [#296](https://github.com/MarkLyck/formula-stocks/issues/296) from MarkLyck/feedback-changes [[70194a0](https://github.com/MarkLyck/formula-stocks/commit/70194a0de346385898bde5fca1ac35319d504ed7)]
+- 📝 version bump to v1.0.216 [[57f112c](https://github.com/MarkLyck/formula-stocks/commit/57f112c4ea8e92694dad337bcbbb2b816e870c06)]
+- 📝 generated changelog [[1980724](https://github.com/MarkLyck/formula-stocks/commit/198072417b3947cc181eaae36239e166b7f8fb9a)]
+
+
 <a name="1.0.215"></a>
 ## 1.0.215 (2021-06-22)
 
