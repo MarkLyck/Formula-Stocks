@@ -35,7 +35,7 @@ const Field = styled.div`
 const FieldIcon = styled(FontAwesomeIcon)`
   position: absolute;
   top: 50%;
-  left: 8px;
+  left: 14px;
   transform: translateY(-50%);
 `
 
@@ -111,8 +111,7 @@ const PaymentDetails = ({ customerID }: { customerID: string }) => {
   }
 
   return (
-    <Card>
-      <Title level={4}>Update payment details</Title>
+    <Card title="Update payment details">
       {stripeError ? <ErrorMessage>{stripeError}</ErrorMessage> : null}
       {paymentDetailsError ? (
         <ErrorMessage>Something went wrong, please check your details and try again</ErrorMessage>

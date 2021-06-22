@@ -1,7 +1,6 @@
 import { useQuery } from '@apollo/client'
 
 import { FMP } from 'src/common/queries'
-import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 import { CheckCard, LoadingCard } from './CheckCard'
 
 type CheckProps = {
@@ -19,11 +18,7 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
   if (!data?.FMP?.response || data.FMP.response.length === 0) return null
 
   const cashflowStatements = data?.FMP?.response.slice().reverse()
-  const latestFreeCashflow = cashflowStatements[cashflowStatements.length - 1].freeCashFlow
   let losingYears = 0
-
-  const hasPositiveGrowth =
-    cashflowStatements[0].freeCashFlow < cashflowStatements[cashflowStatements.length - 1].freeCashFlow
 
   cashflowStatements.forEach((statement: any) => {
     if (statement.freeCashFlow < 0) {
@@ -37,36 +32,13 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
   if (losingYears === 0) {
     description = 'Consistently profitable over the last 10 years '
     sentiment = 'success'
-  }
-  if (losingYears < 3) {
+  } else if (losingYears < 3) {
     description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
     sentiment = 'success'
   } else if (losingYears < 5) {
-  }
-  if (latestFreeCashflow < 0) {
-    if (losingYears === 1) {
-      description = `Reported a loss of ${currencyRoundedFormatter.format(latestFreeCashflow)} last year.`
-      sentiment = 'danger'
-    } else if (losingYears > 1) {
-      description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
-      sentiment = 'danger'
-    }
+    sentiment = 'warning'
   } else {
-    if (hasPositiveGrowth) {
-      if (losingYears === 0) {
-      } else {
-        description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
-        sentiment = 'warning'
-      }
-    } else {
-      if (losingYears === 0) {
-        description = 'Consistently Profitable, but free cashflow is declining.'
-        sentiment = 'warning'
-      } else {
-        description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
-        sentiment = losingYears >= 5 ? 'danger' : 'warning'
-      }
-    }
+    sentiment = 'danger'
   }
 
   return (

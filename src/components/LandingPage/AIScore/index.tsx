@@ -10,7 +10,7 @@ import {
   LandingPageContainer,
   Beside,
   SpaceImage,
-  TextTag,
+  Disclaimer,
 } from 'src/ui-components'
 import { AIScoreModal } from '../Modals'
 
@@ -39,22 +39,29 @@ const AIScore = () => {
               The <Highlight>AI Score</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              While the many scientific algorithms that goes into evaluating a company are incredibly complex. We have
-              narrowed the output down to a single number.
+              There are multiple ways to invest intelligently. You have previously met Joe, who is an artificial
+              intelligence specialized in selecting individual winning stocks.
               <br />
               <br />
-              The AI Score is a scale from -100 to +100, made up of 7 sub-categories:
-              <br />
-              <TextTag>Value</TextTag> <TextTag>Growth</TextTag> <TextTag>Risk</TextTag> <TextTag>Reward</TextTag>{' '}
-              <TextTag>Profitability</TextTag> <TextTag>Soundness</TextTag> & <TextTag>Stewardship</TextTag>
-              <br />
-              <br />
-              Investing solely in stocks with a high AI Score means you'll be buying quality growing businesses when
-              they are on sale. You'll also often avoid companies that are expensive, badly run, produces subpar returns
-              or are extremely risky.
+              Another approach is quantitative investing, in which you invest in a "basket" of stocks, say 20 or 40
+              stocks, which sports certain winning traits. These traits are calculated based on more than 200 different
+              mathematical factors, and we compute a score for each stock, called the AI-score, which is essentially a
+              number between -100 and 100, indicating its relative attractiveness to an investor.
               <br />
               <br />
-              Don't invest without it!
+              Consider a stock with -100 as something to avoid, and a stock with an AI-score if 100 as something to
+              definitively invest in, and consider that all supported stocks receive a score.
+              <br />
+              <br />
+              If you for instance invest in 40 stocks with an AI-score of +80 a typical historical average return would
+              be 27% pro anno<sup>*</sup>. See study for further details.
+              <br />
+              <br />
+              For each stock you get access to a detailed report, detailing risk vs. reward, value, growth,
+              profitability, soundness and much more.
+              <Disclaimer>
+                <sup>*</sup>Past performance does not guarantee future performance
+              </Disclaimer>
             </ScalingParagraph>
             <ActionButton onClick={() => setDialogVisible(true)}>
               <ButtonIcon icon={['fad', 'brain']} />

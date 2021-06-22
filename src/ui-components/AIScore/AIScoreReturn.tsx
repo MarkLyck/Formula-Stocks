@@ -88,13 +88,9 @@ type AIScoreReturnProps = {
 
 const PredictedTooltip = ({ result }: any) => (
   <Text style={{ color: 'white', width: 800 }}>
-    The predicted annual return are based on average returns investing in a large bucket of stocks with an AI Score from{' '}
+    The historical avg. annual return is based on investing in a large bucket of stocks with an AI Score from{' '}
     <span style={{ fontWeight: 'bold' }}>{result.bucket.split(' to ')[0]}</span> to{' '}
     <span style={{ fontWeight: 'bold' }}>{result.bucket.split(' to ')[1]}</span>.
-    <br />
-    <br />
-    This is an average annual return measured investing in a large basket of stocks with a similar AI Score over a long
-    time period, and selling the stock if the AI Score drops significantly, or after 3.5 years, whichever comes first.
     <br />
     <br />
     <sup>*</sup>Past results does not guarantee future performance.
@@ -108,7 +104,7 @@ const AIScoreReturn = ({ score }: AIScoreReturnProps) => {
     <Row justify="space-between" align="middle" style={{ padding: '6px 0' }}>
       <WideTooltip title={() => <PredictedTooltip result={result} />} getPopupContainer={(trigger) => trigger}>
         <Text>
-          Avg. Estimated annual {result.irr >= 0 ? 'return' : 'loss'}
+          Historical avg. annual return for stocks with this AI Score {result.irr >= 0 ? 'return' : 'loss'}
           <FontAwesomeIcon icon={['fad', 'question-circle']} style={{ marginLeft: 6 }} />
         </Text>
       </WideTooltip>
