@@ -1,6 +1,21 @@
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
+import { Card, Typography } from 'antd'
 import { useTheme } from '@emotion/react'
+
+const StyledCard = styled(Card)`
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px 0px rgba(111, 120, 156, 0.08);
+
+  .ant-card-body {
+    display: flex;
+    align-items: center;
+
+    > div {
+      width: 100%;
+    }
+  }
+`
 
 const DualAxes = dynamic(() => import('@ant-design/charts').then((mod) => mod.DualAxes) as any, { ssr: false })
 
@@ -99,8 +114,12 @@ const AIScoreChart = () => {
     ],
   }
 
-  // @ts-ignore
-  return <DualAxes {...config} />
+  return (
+    <StyledCard title="AI Score performance & Win ratio chart">
+      {/* @ts-ignore */}
+      <DualAxes {...config} />
+    </StyledCard>
+  )
 }
 
 export default AIScoreChart
