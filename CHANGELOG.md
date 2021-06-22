@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.209"></a>
+## 1.0.209 (2021-06-22)
+
+### Added
+
+- ✨ update picking stocks text [[7bd5413](https://github.com/MarkLyck/formula-stocks/commit/7bd5413be135046c8ee3fbf931d1945d5aba3bf0)]
+
+### Miscellaneous
+
+-  Merge pull request [#289](https://github.com/MarkLyck/formula-stocks/issues/289) from MarkLyck/feedback-changes [[16fe155](https://github.com/MarkLyck/formula-stocks/commit/16fe1557226129455dc98bb733c714b8cbea3016)]
+- 📝 version bump to v1.0.209 [[985e55d](https://github.com/MarkLyck/formula-stocks/commit/985e55d865dccda67776ebb8c2501fce820c67be)]
+- 📝 generated changelog [[57fda83](https://github.com/MarkLyck/formula-stocks/commit/57fda832e08f2375b3b9c151d5e2b2639b0f0e21)]
+
+
 <a name="1.0.208"></a>
 ## 1.0.208 (2021-06-22)
 
