@@ -51,7 +51,7 @@ const Risk = () => {
             </ScalingParagraph>
             <ActionButton onClick={goToRiskPage}>
               <ButtonIcon icon={['fad', 'chart-line-down']} />
-              READ MORE ABOUT RISKS INVOLVED
+              READ MORE ABOUT RISK
             </ActionButton>
           </Space>
         </ContentContainer>

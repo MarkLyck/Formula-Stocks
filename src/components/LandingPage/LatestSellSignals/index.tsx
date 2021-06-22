@@ -55,7 +55,9 @@ const LatestSellSignals = () => {
   return (
     <LatestSellsContainer>
       <ScalingTitle>Latest sell signals</ScalingTitle>
-      <ScalingSubTitle>Here's our 10 latest sell signals (updated monthly)</ScalingSubTitle>
+      <ScalingSubTitle style={{ marginBottom: 40 }}>
+        Here's our 10 latest sell signals (updated monthly)
+      </ScalingSubTitle>
       {loading && <GenericLoading />}
       {error && <div>Error loading</div>}
       <Table>
