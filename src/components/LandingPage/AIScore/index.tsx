@@ -43,22 +43,23 @@ const AIScore = () => {
               individual winning stocks.
               <br />
               <br />
-              Another approach is quantitative investing, where you invest in a "basket" of stocks, say 20 or 40 stocks,
-              which sports certain winning traits. These traits are derived from more than 200 different mathematical
-              and qualitative factors, and computed for each stock, called the AI-score. A number between -100 and 100,
-              indicating the relative attractiveness to an investor.
+              Another approach is quantitative investing, where you invest in a "basket" of stocks, say 40 stocks, which
+              sports certain winning traits. These traits are derived from more than 200 different quantitative and
+              qualitative factors, computed for each stock. Called the AI-score, a number between -100 and 100,
+              indicating the relative attractiveness.
               <br />
               <br />
               Consider a stock with -100 as something to avoid, and a stock with an AI-score if 100 as something to
-              absolutely invest in, and consider that all supported stocks receive a score.
+              absolutely invest in. Since all supported stocks receive a score you can construct your own preferred
+              portfolio.
               <br />
               <br />
-              If you for instance invest in 40 stocks with AI-score {'>'} 80 a typical historical average return would
-              be 27% pro anno<sup>*</sup>. See study for further details.
+              If invested in 40 stocks with an AI-score {'>'} 80 a typical historical avg. return would have been 27%
+              pro anno<sup>*</sup>. See study for further details.
               <br />
               <br />
-              For each stock you also get access to a detailed report, detailing risk vs. reward, value, growth,
-              profitability, soundness and much more.
+              For each stock you also get access to a report, detailing risk vs. reward, value, growth, profitability,
+              soundness and much more.
               <Disclaimer>
                 <sup>*</sup>Past performance does not guarantee future performance
               </Disclaimer>
