@@ -34,6 +34,15 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
   let description = ''
   let sentiment = 'neutral'
 
+  if (losingYears === 0) {
+    description = 'Consistently profitable over the last 10 years '
+    sentiment = 'success'
+  }
+  if (losingYears < 3) {
+    description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
+    sentiment = 'success'
+  } else if (losingYears < 5) {
+  }
   if (latestFreeCashflow < 0) {
     if (losingYears === 1) {
       description = `Reported a loss of ${currencyRoundedFormatter.format(latestFreeCashflow)} last year.`
@@ -45,8 +54,6 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
   } else {
     if (hasPositiveGrowth) {
       if (losingYears === 0) {
-        description = 'Consistently profitable over the last 10 years '
-        sentiment = 'success'
       } else {
         description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
         sentiment = 'warning'

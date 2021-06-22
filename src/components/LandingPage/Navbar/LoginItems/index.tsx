@@ -13,35 +13,31 @@ import LogoutButton from './LogoutButton'
 import DashboardButton from './DashboardButton'
 
 const LoginItems = ({ showSignup }: any) => {
-  const { data, error } = useQuery(CURRENT_USER_QUERY, { fetchPolicy: 'cache-and-network' })
-  console.log('🔈 ~ error', error)
-  console.log('🔈 ~ data', data)
-
+  const { error } = useQuery(CURRENT_USER_QUERY, { fetchPolicy: 'cache-and-network' })
   const [loggedIn, setLoggedIn] = useState(
     // @ts-ignore window.authToken
     (hasStorage && localStorage.getItem('authToken')) || (isBrowser && window.authToken)
   )
 
-  const handleLogoutClick = () => {
+  const handleLogout = () => {
     logout()
     setLoggedIn(false)
   }
 
   if (loggedIn && error) {
     if (error.message.includes('Token validation')) {
-      handleLogoutClick()
+      handleLogout()
     }
   }
 
   const handleDashboardClick = () => {
-    console.log('handleDashboardClick - SEND USER TO DASHBOARD')
     Router.push('/dashboard')
   }
 
   if (loggedIn) {
     return (
       <Space>
-        <LogoutButton onClick={handleLogoutClick} />
+        <LogoutButton onClick={handleLogout} />
         <DashboardButton onClick={handleDashboardClick} />
       </Space>
     )

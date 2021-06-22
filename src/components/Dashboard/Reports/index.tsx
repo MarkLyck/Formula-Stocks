@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
 import { getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
-import { ButtonIcon, DashboardHeader, Ticker, LoadingError, AIScorePreview } from 'src/ui-components'
+import { ButtonIcon, DashboardHeader, Ticker, LoadingError, AIScoreColumn } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 
@@ -156,7 +156,7 @@ const Reports = () => {
       defaultSortOrder: 'descend',
       width: 200,
       sorter: (a: any, b: any) => a.aIScore - b.aIScore,
-      render: (aiScore: number) => <AIScorePreview score={aiScore} label={false} />,
+      render: (aiScore: number) => <AIScoreColumn score={aiScore} />,
     },
   ]
 
