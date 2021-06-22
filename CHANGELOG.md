@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.208"></a>
+## 1.0.208 (2021-06-22)
+
+### Added
+
+- ✨ update risk section [[7526e9f](https://github.com/MarkLyck/formula-stocks/commit/7526e9f93fb5c16865b6bc909d407022342dee25)]
+- ✨ update ai score text [[1e49b4c](https://github.com/MarkLyck/formula-stocks/commit/1e49b4ca90665384e8911b18e222d4d62524584b)]
+- ✨ feedback changes [[d47792d](https://github.com/MarkLyck/formula-stocks/commit/d47792da4ef00fe72b81414da5589f6cc488e6fe)]
+
+### Miscellaneous
+
+-  Merge pull request [#288](https://github.com/MarkLyck/formula-stocks/issues/288) from MarkLyck/feedback-changes [[2b43506](https://github.com/MarkLyck/formula-stocks/commit/2b435060a4c30f65d9aeba7d5ed209fc2c99c959)]
+- 🗑️ cleanup imports [[50285b4](https://github.com/MarkLyck/formula-stocks/commit/50285b4307038d3bf3fea728e0866729bf68ce4d)]
+- 📝 version bump to v1.0.208 [[7895834](https://github.com/MarkLyck/formula-stocks/commit/7895834baee90aacd3af0c9d987a96dcb974d658)]
+- 📝 generated changelog [[f659c1c](https://github.com/MarkLyck/formula-stocks/commit/f659c1c63b8819b6955b6a9f6420fcf800001812)]
+
+
 <a name="1.0.207"></a>
 ## 1.0.207 (2021-06-22)
 
