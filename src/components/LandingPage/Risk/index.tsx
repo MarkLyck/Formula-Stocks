@@ -36,7 +36,7 @@ const Risk = () => {
               High returns, <Highlight>low risk</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              IA hallmark of successful investing is achieving higher returns without being exposed to commensurately
+              A hallmark of successful investing is achieving higher returns without being exposed to commensurately
               higher risk.
               <br />
               <br />

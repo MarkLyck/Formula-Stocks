@@ -76,24 +76,23 @@ const HowItWorks = () => {
             </ScalingTitle>
             <ScalingParagraph>
               Meet Joe. Joe is an artificial intelligence with a diverse personality. He simultaneously thinks like
-              Benjamin Graham, Philip Fisher, Warren Buffett, Jesse Livermore, Bernard Baruch and more than 25 other
-              super investors of the 20th and 21st centuries.
+              Benjamin Graham, Philip Fisher, Warren Buffett, Jesse Livermore, Bernard Baruch and 25 other super
+              investors of the last two centuries.
             </ScalingParagraph>
             <ScalingParagraph>
               Joe can help you earn a better return on your capital. He is quite the expert at it too, having
-              outperformed the market in X out of Y years. Joe is a business investor. He is most happy when he can
-              invest in a wonderful business with good growth prospects, a great business model, purchased at a price
-              well below its intrinsic value. Price is what you pay, value is what you get. Joe's task is to make sure
-              you get your moneys worth of good businesses at a sharp price.
+              outperformed the market in X out of Y years. As a business investor, Joe is happy when he can invest in a
+              wonderful business with good growth prospects, a great business model, purchased at a price well below its
+              intrinsic value. Price is what you pay, value is what you get. Joe's task is to make sure you get your
+              moneys worth of good businesses at a sharp price.
             </ScalingParagraph>
             <ScalingParagraph>
-              He is adept at avoiding mistakes, being extremely careful about what he invests in, evaluating finances,
-              business models and management teams in depth, as well as ~200 other factors influencing a positive
-              outcome.
+              He is adept at avoiding mistakes, very careful about what he invests in, evaluating finances, business
+              models and management teams in depth, as well as 200 factors influencing a positive outcome.
             </ScalingParagraph>
             <ScalingParagraph>
-              While you sleep, Joe will tirelessly evaluate and re-evaluate thousands of business opportunities
-              selecting the very best, giving you more time to focus on what you love to do.
+              While you sleep, Joe tirelessly evaluates and re-evaluates thousands of business opportunities selecting
+              the very best, giving you more time to focus on what you love to do.
             </ScalingParagraph>
             <ActionButton onClick={goToStrategyPage}>
               <ButtonIcon icon={['fad', 'flask']} />
