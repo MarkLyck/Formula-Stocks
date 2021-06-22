@@ -80,15 +80,14 @@ const HowItWorks = () => {
               investors of the last two centuries.
             </ScalingParagraph>
             <ScalingParagraph>
-              Joe can help you earn a better return on your capital. He is quite the expert at it too, having
-              outperformed the market in X out of Y years. As a business investor, Joe is happy when he can invest in a
-              wonderful business with good growth prospects, a great business model, purchased at a price well below its
-              intrinsic value. Price is what you pay, value is what you get. Joe's task is to make sure you get your
-              moneys worth of good businesses at a sharp price.
+              Joe can help you earn a better return on your capital. As a business investor, he is happy when he can
+              invest in a wonderful business with good growth prospects, a great business model, purchased at a price
+              well below its intrinsic value. Price is what you pay, value is what you get. Joe's task is to make sure
+              you get your moneys worth of good businesses at a sharp price to help you outperform the market.
             </ScalingParagraph>
             <ScalingParagraph>
-              He is adept at avoiding mistakes, very careful about what he invests in, evaluating finances, business
-              models and management teams in depth, as well as 200 factors influencing a positive outcome.
+              He is adept at avoiding mistakes, careful about what he invests in, evaluating finances, business models
+              and management teams as well as 200 other factors influencing a positive outcome.
             </ScalingParagraph>
             <ScalingParagraph>
               While you sleep, Joe tirelessly evaluates and re-evaluates thousands of business opportunities selecting
