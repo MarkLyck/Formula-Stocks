@@ -55,7 +55,7 @@
     "react-minimal-pie-chart": "8.2.0",
     "react-no-ssr": "1.1.0",
     "react-scroll": "1.8.2",
-    "zustand": "3.5.2"
+    "zustand": "3.5.4"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.3.0",
