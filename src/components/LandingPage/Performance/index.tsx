@@ -119,7 +119,7 @@ const Performance = () => {
         <StyledTabs defaultActiveKey="1" onChange={switchChartType}>
           <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="1">
             <ScalingSubTitle>
-              Chart showing how <b>$25,000</b> would have grown since 1970
+              Chart showing how <b>$25,000</b> would have multiplied since 1970
               <LogSwitchContainer>
                 <Text>Logarithmic</Text>
                 <Switch checked={log} style={{ marginLeft: 8 }} onChange={setLog} />
