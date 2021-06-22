@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Modal, Space, List, Typography } from 'antd'
 import { AIScoreChart } from 'src/ui-components'
-import { COMPANY_NAME, BLOG_POSTS } from 'src/common/constants'
 
 const { Text, Title, Paragraph } = Typography
 
@@ -44,7 +43,7 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
           'If you had invested in 100 stocks with an AI-score of between -20 and -10, you would historically have achieved about the same.',
           'If you had invested in 100 stocks with an AI-score between say 60 and 70, you would historically have achieved approx. 20% p.a.',
         ]}
-        renderItem={(item) => (
+        renderItem={(item: any) => (
           <List.Item>
             <Text>{item}</Text>
           </List.Item>
@@ -117,7 +116,7 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
           'As a value or growth investors toolbox to screen for investment opportunities',
           'As a quantitative stock investment system buying for instance all stocks with a score > X',
         ]}
-        renderItem={(item) => (
+        renderItem={(item: any) => (
           <List.Item>
             <Text>{item}</Text>
           </List.Item>

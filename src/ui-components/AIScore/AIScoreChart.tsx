@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
-import { Card, Typography } from 'antd'
+import { Card } from 'antd'
 import { useTheme } from '@emotion/react'
 
 const StyledCard = styled(Card)`

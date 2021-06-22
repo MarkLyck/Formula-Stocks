@@ -80,7 +80,7 @@ const MARKET_CRASHES = [
     date: '02-28-2009',
   },
   {
-    label: 'Short bear market',
+    label: 'Stock market sell-off',
     date: '01-31-2016',
   },
   {
