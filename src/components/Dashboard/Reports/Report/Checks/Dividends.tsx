@@ -27,7 +27,9 @@ export const DividendsCheck = ({ symbol }: CheckProps) => {
   let sentiment = 'neutral'
 
   if (dividendYield) {
-    description = `${dividendYield.toFixed(2)}% - ${currencyFormatter.format(dividendPerShare)} per share`
+    description = `${currencyFormatter.format(dividendPerShare)} per share. As dividend yield: ${dividendYield.toFixed(
+      2
+    )}%`
   }
 
   return (

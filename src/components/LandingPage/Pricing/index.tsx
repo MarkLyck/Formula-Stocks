@@ -66,7 +66,7 @@ const Pricing = ({ showSignup }: any) => (
     <Element name="pricing" />
     <TitleContainer>
       <ScalingTitle>Pricing</ScalingTitle>
-      <ScalingSubTitle>Our algorithms are fine-tuned for your portfolio size.</ScalingSubTitle>
+      <ScalingSubTitle>Our products are fine-tuned for your portfolio size.</ScalingSubTitle>
     </TitleContainer>
     <Container>
       <PricingCard>

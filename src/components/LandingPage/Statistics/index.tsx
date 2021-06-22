@@ -51,7 +51,7 @@ const Statistics = () => {
     <ContentContainer>
       <Space direction="vertical" size="large">
         <ScalingTitle>
-          Statistics & <Highlight>expectations</Highlight>
+          Statistics & <Highlight>Ratios</Highlight>
         </ScalingTitle>
         <Space direction="vertical" size="middle">
           <StatisticsCard icon="percent" color={theme.palette.primary[600]}>

@@ -36,13 +36,18 @@ const Risk = () => {
               High returns, <Highlight>low risk</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              It is very easy to achieve high returns by simply leveraging higher risk. However high-risk investments,
-              or day-trading usually never works out in the long-term.
+              IA hallmark of successful investing is achieving higher returns without being exposed to commensurately
+              higher risk.
               <br />
               <br />
-              Instead, we've spent decades developing long-term low-risk strategies following the value investing
-              principles pioneered by Benjamin Graham and Warren Buffett. In short we find and buy wonderful companies
-              with a large margin of safety.
+              Benjamin Graham pioneered the concept of a margin of safety, around which our technology is developed.
+              <br />
+              <br />
+              While risk can never be eliminated, we look for wonderful companies trading for considerably less than
+              they are worth, thus reducing the risk inherent in stock investing.
+              <br />
+              <br />
+              More upside. Less downside.
             </ScalingParagraph>
             <ActionButton onClick={goToRiskPage}>
               <ButtonIcon icon={['fad', 'chart-line-down']} />
