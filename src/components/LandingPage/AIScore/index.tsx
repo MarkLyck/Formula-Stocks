@@ -44,14 +44,15 @@ const AIScore = () => {
               <br />
               <br />
               Another approach is quantitative investing, where you invest in a "basket" of stocks, say 40 stocks, which
-              sports certain winning traits. These traits are derived from more than 200 different quantitative and
-              qualitative factors, computed for each stock. Called the AI-score, a number between -100 and 100,
-              indicating the relative attractiveness.
+              sports certain winning traits. These traits are derived from more than 200 quantitative and qualitative
+              factors, computed for each stock. Called the AI-score, a number between -100 and 100, indicating
+              attractiveness.
               <br />
               <br />
-              Consider a stock with -100 as something to avoid, and a stock with an AI-score if 100 as something to
+              Consider a stock with -100 as something to avoid, and a stock with an AI-score of 100 as something to
               absolutely invest in. Since all supported stocks receive a score you can construct your own preferred
-              portfolio.
+              portfolio or use it as a supporting investment tool. For each stock you also get access to a report,
+              detailing risk vs. reward, value, growth, profitability, soundness and much more.
               <br />
               <br />
               If invested in 40 stocks with an AI-score {'>'} 80 a typical historical avg. return would have been 27%
