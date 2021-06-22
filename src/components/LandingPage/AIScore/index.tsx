@@ -57,10 +57,6 @@ const AIScore = () => {
               <br />
               If invested in 40 stocks with an AI-score {'>'} 80 a typical historical avg. return would have been 27%
               pro anno<sup>*</sup>. See study for further details.
-              <br />
-              <br />
-              For each stock you also get access to a report, detailing risk vs. reward, value, growth, profitability,
-              soundness and much more.
               <Disclaimer>
                 <sup>*</sup>Past performance does not guarantee future performance
               </Disclaimer>
