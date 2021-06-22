@@ -75,9 +75,9 @@ const HowItWorks = () => {
               How we pick <Highlight>winning stocks</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              Meet Joe. Joe is an artificial intelligence with a diverse personality. He simultaneously thinks like
-              Benjamin Graham, Philip Fisher, Warren Buffett, Jesse Livermore, Bernard Baruch and 25 other super
-              investors of the last two centuries.
+              Meet Joe. Joe is an artificial intelligence with a diverse personality. He simultaneously thinks like 25
+              of the best super investors of recent centuries. Icons such as Benjamin Graham, Philip Fisher, Warren
+              Buffett, Jesse Livermore, Bernard Baruch to name a few.
             </ScalingParagraph>
             <ScalingParagraph>
               Joe can help you earn a better return on your capital. As a business investor, he is happy when he can
