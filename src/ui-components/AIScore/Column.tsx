@@ -53,7 +53,6 @@ const Value = styled.div`
 
 type AIScoreProps = {
   score: number
-  label: ReactNode
 }
 
 const AIScoreColumn = ({ score }: AIScoreProps) => {
