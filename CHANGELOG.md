@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.207"></a>
+## 1.0.207 (2021-06-22)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.207 [[80fca27](https://github.com/MarkLyck/formula-stocks/commit/80fca278873f68b9813b2603c95781616533bf7d)]
+
+
+<a name="1.0.206"></a>
+## 1.0.206 (2021-06-22)
+
+### Changed
+
+- ⬆️ Update dependency next to v11.0.1 [[f01839f](https://github.com/MarkLyck/formula-stocks/commit/f01839ffbbbee43e8d46135fa369e8dc3ae6af48)]
+- ⬆️ Update dependency zustand to v3.5.4 [[de8111f](https://github.com/MarkLyck/formula-stocks/commit/de8111fc324d7392670e3370de856190b340a724)]
+
+### Miscellaneous
+
+-  Merge pull request [#286](https://github.com/MarkLyck/formula-stocks/issues/286) from MarkLyck/renovate/nextjs-monorepo [[2510274](https://github.com/MarkLyck/formula-stocks/commit/2510274b8f00b223e57a4208322acde9cf574b42)]
+-  Merge pull request [#284](https://github.com/MarkLyck/formula-stocks/issues/284) from MarkLyck/renovate/zustand-3.x [[8212adb](https://github.com/MarkLyck/formula-stocks/commit/8212adb99e707bcbb8ec5a0c7d0933d8acc78250)]
+- 📝 version bump to v1.0.206 [[87b1cca](https://github.com/MarkLyck/formula-stocks/commit/87b1ccad0b1d36684df930725b1471e7cfdef3df)]
+- 📝 generated changelog [[6e52735](https://github.com/MarkLyck/formula-stocks/commit/6e5273563334cac8177995fc4cbb280f73b70b8c)]
+
+
 <a name="1.0.205"></a>
 ## 1.0.205 (2021-06-22)
 
