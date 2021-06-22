@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 import { CardNumberElement, CardExpiryElement, CardCvcElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useLazyQuery } from '@apollo/client'
-import { Card, Form, Space, Button, Typography } from 'antd'
+import { Card, Form, Space, Button } from 'antd'
 // import { Mixpanel } from '~/common/analytics/mixpanel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from '@emotion/styled'
 import { UPDATE_PAYMENT_DETAILS } from '~/common/queries'
 import theme from 'src/lib/theme'
 import { ErrorMessage } from '~/ui-components'
-
-const { Title } = Typography
 
 const stripeElementOptions = {
   style: {
