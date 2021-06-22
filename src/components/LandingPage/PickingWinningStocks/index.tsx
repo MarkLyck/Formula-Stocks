@@ -90,8 +90,8 @@ const HowItWorks = () => {
               and management teams as well as 200 other factors influencing a positive outcome.
             </ScalingParagraph>
             <ScalingParagraph>
-              While you sleep, Joe tirelessly evaluates and re-evaluates thousands of business opportunities selecting
-              the very best, giving you more time to focus on what you love to do.
+              While you sleep, Joe tirelessly evaluates thousands of business opportunities selecting the very best,
+              giving you more time to focus on what you love to do.
             </ScalingParagraph>
             <ActionButton onClick={goToStrategyPage}>
               <ButtonIcon icon={['fad', 'flask']} />
