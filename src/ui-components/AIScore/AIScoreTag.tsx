@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
-import { getAIScoreColor } from 'src/common/utils/reportUtils'
+import { getAIScoreColor, getAIScoreSentiment } from 'src/common/utils/reportUtils'
 
 const Tag = styled.span`
   color: white;
@@ -13,24 +13,12 @@ const Tag = styled.span`
   font-weight: 400;
 `
 
-const getTagName = (score: number) => {
-  if (score < -75) return 'Very bad'
-  if (score < -25) return 'Bad'
-  if (score < -15) return 'Below average'
-  if (score < 15) return 'Average'
-  if (score < 25) return 'Above average'
-  if (score < 50) return 'Good'
-  if (score < 80) return 'Great'
-  if (score < 100) return 'Excellent'
-  return 'Ideal'
-}
-
 type AIScoreTagProps = {
   score: number
 }
 
 const AIScoreTag = ({ score }: AIScoreTagProps) => {
-  return <Tag color={getAIScoreColor(score)}>{getTagName(score)}</Tag>
+  return <Tag color={getAIScoreColor(score)}>{getAIScoreSentiment(score)}</Tag>
 }
 
 export default AIScoreTag

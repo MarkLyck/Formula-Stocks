@@ -80,7 +80,6 @@ const LoginForm = () => {
 
         setSuccess(true)
         // shortly show the login success message before sending them to portfolio
-        console.log('userLogin - SEND USER TO DASHBOARD')
         setTimeout(() => Router.push('/dashboard'), 100)
       })
       .catch((error: any) => {

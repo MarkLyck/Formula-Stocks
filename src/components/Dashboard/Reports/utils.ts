@@ -16,7 +16,7 @@ export const getAIScoreColor = (value: number) => {
   return theme.palette.scale.perfect
 }
 
-export const getAIScoreType = (value: number) => {
+export const getAIScoreSentiment = (value: number) => {
   if (value < -50) {
     return 'very bad'
   }

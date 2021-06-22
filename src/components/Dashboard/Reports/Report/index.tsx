@@ -74,7 +74,7 @@ const StockReport = () => {
           >
             {reportLoading && <Spin />}
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
-            <Title level={4}>Key metrics</Title>
+            <Title level={4}>Metrics</Title>
             <Row gutter={[16, 16]}>
               {/* <MarginOfSafetyCheck symbol={symbol} price={latestPrice} /> */}
               <ROICCheck symbol={symbol} />

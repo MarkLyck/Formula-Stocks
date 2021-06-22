@@ -79,8 +79,8 @@ const HowToGetStarted = () => (
             <CardTitle>Mirror portfolio</CardTitle>
           </Space>
           <Description>
-            To get started is to mirror our portfolio in your brokerage account of choice. Our dashboard shows exactly
-            how much to allocate to each stock, making your life easy.
+            To get started simply mirror our portfolio in your brokerage account of choice. Our dashboard shows exactly
+            how much to allocate to each stock.
           </Description>
         </Space>
       </StepCard>

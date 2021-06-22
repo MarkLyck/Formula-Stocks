@@ -10,12 +10,16 @@ export const getAIScoreColor = (value: number) => {
   // if (score < 80) return 'Great'
   // if (score <= 100) return 'Excellent'
 
-  if (value < -20) {
+  if (value < -60) {
     return theme.palette.danger[600]
   }
 
-  if (value < 20) {
+  if (value < 0) {
     return theme.palette.warning[600]
+  }
+
+  if (value < 20) {
+    return theme.palette.neutral[600]
   }
 
   if (value < 50) {
@@ -25,21 +29,14 @@ export const getAIScoreColor = (value: number) => {
   return theme.palette.success[600]
 }
 
-export const getAIScoreType = (value: number) => {
-  if (value < -50) {
-    return 'very bad'
-  }
-  if (value < -20) {
-    return 'bad'
-  }
-  if (value < 20) {
-    return 'average'
-  }
-  if (value < 50) {
-    return 'good'
-  }
-  if (value < 75) {
-    return 'very good'
-  }
-  return 'excellent'
+export const getAIScoreSentiment = (score: number) => {
+  if (score < -90) return 'Very bad'
+  if (score < -60) return 'Bad'
+  if (score < 0) return 'Fair'
+  if (score < 20) return 'Average'
+  if (score < 30) return 'Above average'
+  if (score < 50) return 'Good'
+  if (score < 80) return 'Great'
+  if (score < 100) return 'Excellent'
+  return 'Ideal'
 }
