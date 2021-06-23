@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.220"></a>
+## 1.0.220 (2021-06-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.220 [[6fa5ada](https://github.com/MarkLyck/formula-stocks/commit/6fa5ada64b1226be24d5375d8d1465bf63092990)]
+
+
+<a name="1.0.219"></a>
+## 1.0.219 (2021-06-23)
+
+### Changed
+
+- ⬆️ Update dependency antd to v4.16.5 [[8e7c85a](https://github.com/MarkLyck/formula-stocks/commit/8e7c85ad580d340f3737120a0ed6ad8cca38d2b8)]
+- ⬆️ Update storybook monorepo to v6.3.0 [[e8c86ee](https://github.com/MarkLyck/formula-stocks/commit/e8c86eed6d7d9ea0d706c2bf158489b2138f8bda)]
+- ⬆️ Update dependency @types/node to v14.17.4 [[bdec28b](https://github.com/MarkLyck/formula-stocks/commit/bdec28b43e1df3aa7b4ed5bce61d99d47c53df4b)]
+
+### Miscellaneous
+
+-  Merge pull request [#300](https://github.com/MarkLyck/formula-stocks/issues/300) from MarkLyck/renovate/antd-4.x [[772b597](https://github.com/MarkLyck/formula-stocks/commit/772b5979593aa9d4ad0c340529baf37d77a99928)]
+-  Merge pull request [#299](https://github.com/MarkLyck/formula-stocks/issues/299) from MarkLyck/renovate/storybook-monorepo [[0a01df0](https://github.com/MarkLyck/formula-stocks/commit/0a01df0d09a99a0d3dfe83851cb6524c614bde10)]
+-  Merge pull request [#298](https://github.com/MarkLyck/formula-stocks/issues/298) from MarkLyck/renovate/node-14.x [[734b60a](https://github.com/MarkLyck/formula-stocks/commit/734b60a4ae00c1cb14c9e93c55fe59ea878bb3af)]
+- 📝 version bump to v1.0.219 [[58ef942](https://github.com/MarkLyck/formula-stocks/commit/58ef942f19a5ab13a7b7f3256a69d16d27e13afe)]
+- 📝 version bump to v1.0.218 [[a0dc3d8](https://github.com/MarkLyck/formula-stocks/commit/a0dc3d82ccf6eac90c81d08f99485e11cff80cba)]
+- 📝 generated changelog [[419f621](https://github.com/MarkLyck/formula-stocks/commit/419f621436d76c31f367e5e13df4f9eb22d7dec9)]
+
+
 <a name="1.0.217"></a>
 ## 1.0.217 (2021-06-22)
 
