@@ -39,9 +39,9 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
       <StyledList
         bordered
         dataSource={[
-          'If you had invested in 100 completely random stocks, holding them for 50 years, historical experience indicates that you would probably average a 6-7% return p.a.',
-          'If you had invested in 100 stocks with an AI-score of between -20 and -10, you would historically have achieved about the same 6-7% return p.a.',
-          'If you had invested in 100 stocks with an AI-score between say 60 and 70, you would historically have achieved approx. 20% p.a.',
+          'If you had owned 100 random stocks for 50 years, historical experience indicates an average return of 6-7% p.a.',
+          'If you had owned 100 stocks with AI-scores of between -20 and -10, you would historically have achieved the same.',
+          'If you had owned 100 stocks with AI-scores between 60 and 70, you would have achieved approx. 20% p.a.',
         ]}
         renderItem={(item: any) => (
           <List.Item>
