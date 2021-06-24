@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Ticker } from 'src/ui-components'
+import Ticker from 'src/ui-components/Stock/Ticker'
 
 const Container = styled.div`
   display: flex;

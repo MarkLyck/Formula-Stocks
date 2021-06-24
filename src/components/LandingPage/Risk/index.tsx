@@ -36,15 +36,14 @@ const Risk = () => {
               High returns, <Highlight>low risk</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              A hallmark of successful investing is achieving higher returns without being exposed to commensurately
-              higher risk.
+              A hallmark of successful investing is achieving higher returns without equally higher risk.
               <br />
               <br />
               Benjamin Graham pioneered the concept of a margin of safety, around which our technology is developed.
               <br />
               <br />
               While risk can never be eliminated, we look for wonderful companies trading for considerably less than
-              they are worth, thus reducing the risk inherent in stock investing.
+              they are worth, thus minimizing the risks inherent in stock investing.
               <br />
               <br />
               More upside. Less downside.
