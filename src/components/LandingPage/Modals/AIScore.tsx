@@ -22,7 +22,7 @@ interface AIScoreModalProps {
 const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
   <Modal title="AI Score" visible={isVisible} onOk={onClose} onCancel={onClose} footer={null} width={1000}>
     <StyledSpace direction="vertical" size="middle">
-      <Paragraph>“Everything should be made as simple as possible, but no simpler.” -Albert Einstein.</Paragraph>
+      <Title level={5}>“Everything should be made as simple as possible, but no simpler.” -Albert Einstein.</Title>
       <Paragraph>
         Selecting stocks can be complicated and time consuming. AI scores are about making it simple & easy. Think of an
         AI score as a rating on a stock, of its overall attractiveness to you as an investor.
@@ -34,13 +34,13 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
       <Paragraph>You will want to buy green, underweight white, and avoid red.</Paragraph>
       <Paragraph>
         AI scores are stock ratings produced using artificial intelligence and quantitative analysis. The underlying
-        businesses are analyzed. Higher numbers are generally better. Negative numbers are generally best avoided.
+        businesses are analyzed.
       </Paragraph>
       <StyledList
         bordered
         dataSource={[
-          'If you had invested in 100 random stocks, holding them for 50 years, historical experience indicates that you would probably average a 6-7% return p.a.',
-          'If you had invested in 100 stocks with an AI-score of between -20 and -10, you would historically have achieved about the same.',
+          'If you had invested in 100 completely random stocks, holding them for 50 years, historical experience indicates that you would probably average a 6-7% return p.a.',
+          'If you had invested in 100 stocks with an AI-score of between -20 and -10, you would historically have achieved about the same 6-7% return p.a.',
           'If you had invested in 100 stocks with an AI-score between say 60 and 70, you would historically have achieved approx. 20% p.a.',
         ]}
         renderItem={(item: any) => (
@@ -49,30 +49,18 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
           </List.Item>
         )}
       />
-      {/* <Paragraph>
-        If you had invested in 100 random stocks, holding them for 50 years, historical experience indicates that you
-        would probably average a 6-7% return p.a.
-      </Paragraph> */}
-      {/* <Paragraph>
-        If you had invested in 100 stocks with an AI-score of between -20 and -10, you would historically have achieved
-        about the same.
-      </Paragraph> */}
-      {/* <Paragraph>
-        If you had invested in 100 stocks with an AI-score between say 60 and 70, you would historically have achieved
-        approx. 20% p.a.
-      </Paragraph> */}
       <Paragraph>
-        We have taken all stocks, calculated their AI scores, and placed them in buckets, so that all AI scores between
-        -100 and -80, goes into bucket 0, and all with -80 to -60 scores goes into bucket 1, etc. Then we have measured
-        the historical investment performance of each of these buckets, through 50 years to quantify the performance of
-        stocks with a given AI score.
+        In our study, we have taken all stocks, calculated their AI scores, and placed them in buckets, so that all AI
+        scores between -100 and -80, goes into bucket 0, and all with -80 to -60 scores goes into bucket 1, etc. Then we
+        have measured the historical investment performance of each of these buckets, through 50 years to quantify the
+        performance of stocks with a given AI score.
       </Paragraph>
       <Paragraph>
         This interactive graph below will when you move the pointer across the graph, highlight which returns have been
         associated with which AI score. You will notice an extremely strong correlation between the AI score and the
         resulting real world performance later achieved. This is an clear indication that AI scores are an extremely
         efficient method with which to rate stocks attractiveness. Stocks with higher AI scores consistently outperforms
-        stocks with lower AI scores.
+        stocks with lower AI scores across the spectrum. AI Score performance & Win ratio chart
       </Paragraph>
       <AIScoreChart />
       <Paragraph>
