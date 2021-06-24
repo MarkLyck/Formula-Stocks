@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Card, Typography } from 'antd'
+import { Card, Typography, Divider } from 'antd'
 import styled from '@emotion/styled'
 import { currencyFormatter } from 'src/common/utils/formatters'
+import { AIScoreValue } from 'src/ui-components'
 
 const { Title } = Typography
 
@@ -16,7 +17,7 @@ const Logo = styled.img`
   border-radius: 4px;
 `
 
-const Header = ({ profile }: any) => {
+const Header = ({ profile, aiScore }: any) => {
   const [image, setImage] = useState(profile?.image)
 
   return (
@@ -28,9 +29,11 @@ const Header = ({ profile }: any) => {
           <Title level={4} style={{ margin: 0 }}>
             {profile.companyName} ({profile.symbol})
           </Title>
-          <Title level={4} style={{ margin: 0, marginLeft: 'auto' }}>
+          <Title level={5} style={{ margin: 0, marginLeft: 'auto' }}>
             {currencyFormatter.format(profile.price)}
           </Title>
+          <Divider type="vertical" style={{ height: 32, margin: '0 16px' }} />
+          <AIScoreValue score={aiScore * 100} />
         </Container>
       )}
     </Card>

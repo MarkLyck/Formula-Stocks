@@ -60,7 +60,7 @@ const StockReport = () => {
           </Breadcrumb.Item>
           <Breadcrumb.Item>{symbol}</Breadcrumb.Item>
         </Breadcrumb>
-        <Header profile={profile} />
+        <Header profile={profile} aiScore={report?.scores?.ai_score} />
         <StockChart symbol={symbol} />
         <Tabs type="card">
           <TabPane
