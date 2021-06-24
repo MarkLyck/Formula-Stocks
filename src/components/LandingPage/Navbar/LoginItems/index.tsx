@@ -27,6 +27,7 @@ const LoginItems = ({ showSignup }: any) => {
   if (loggedIn && error) {
     if (error.message.includes('Token validation')) {
       handleLogout()
+      window?.location?.reload()
     }
   }
 

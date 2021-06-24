@@ -82,8 +82,15 @@ const columns = [
     sorter: (a: HoldingType, b: HoldingType) => (a.stock?.latestPrice || a.price) - b.purchasePrice,
   },
   {
+    title: 'Days held',
+    key: 'daysOwned',
+    dataIndex: 'daysOwned',
+    sorter: (a: HoldingType, b: HoldingType) => a.daysOwned - b.daysOwned,
+  },
+  {
     title: 'Unrealized Return',
     key: 'unrealized_return',
+    width: 160,
     render: (_value: any, item: any) => {
       if (item.ticker === 'CASH') return null
       const increase = calculatePercentIncrease(item.purchasePrice, item.stock?.latestPrice || item.price)
@@ -94,12 +101,6 @@ const columns = [
       const bIncrease = calculatePercentIncrease(b.purchasePrice, b.stock?.latestPrice || b.price)
       return aIncrease - bIncrease
     },
-  },
-  {
-    title: 'Days held',
-    key: 'daysOwned',
-    dataIndex: 'daysOwned',
-    sorter: (a: HoldingType, b: HoldingType) => a.daysOwned - b.daysOwned,
   },
 ]
 

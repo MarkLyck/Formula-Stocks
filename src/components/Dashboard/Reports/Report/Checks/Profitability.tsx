@@ -36,8 +36,10 @@ export const ProfitabilityCheck = ({ symbol }: CheckProps) => {
     description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
     sentiment = 'success'
   } else if (losingYears < 5) {
+    description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
     sentiment = 'warning'
   } else {
+    description = `Reported losses in ${losingYears} out of the last ${cashflowStatements.length} years.`
     sentiment = 'danger'
   }
 

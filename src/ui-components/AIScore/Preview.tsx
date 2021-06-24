@@ -4,7 +4,6 @@ import { Typography } from 'antd'
 import React from 'react'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
 import AIScoreTag from './AIScoreTag'
-
 const { Text } = Typography
 
 const Container = styled.div`

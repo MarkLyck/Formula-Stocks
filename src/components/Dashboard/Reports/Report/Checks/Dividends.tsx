@@ -22,6 +22,7 @@ export const DividendsCheck = ({ symbol }: CheckProps) => {
 
   const dividendYield = ratiosTTM.dividendYieldTTM * 100
   const dividendPerShare = ratiosTTM.dividendPerShareTTM
+  if (!dividendPerShare) return null
 
   let description = '$0'
   let sentiment = 'neutral'
@@ -39,6 +40,6 @@ export const DividendsCheck = ({ symbol }: CheckProps) => {
       description={description}
       // @ts-ignore
       sentiment={sentiment}
-    ></CheckCard>
+    />
   )
 }

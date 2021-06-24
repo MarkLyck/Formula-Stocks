@@ -8,10 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
 import { getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
-import { ButtonIcon, DashboardHeader, Ticker, LoadingError, AIScoreColumn } from 'src/ui-components'
+import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
-
+import { AIScoreValue } from 'src/ui-components'
 const { Text } = Typography
 const { Search } = Input
 
@@ -154,9 +154,9 @@ const Reports = () => {
       title: 'AI Score',
       dataIndex: 'aIScore',
       defaultSortOrder: 'descend',
-      width: 200,
+      width: 130,
       sorter: (a: any, b: any) => a.aIScore - b.aIScore,
-      render: (aiScore: number) => <AIScoreColumn score={aiScore} />,
+      render: (aiScore: number) => <AIScoreValue score={aiScore * 100} />,
     },
   ]
 

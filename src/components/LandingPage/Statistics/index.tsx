@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Space } from 'antd'
+import { Space, Tooltip } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import { useQuery } from '@apollo/client'
@@ -54,41 +54,62 @@ const Statistics = () => {
           Statistics & <Highlight>Ratios</Highlight>
         </ScalingTitle>
         <Space direction="vertical" size="middle">
-          <StatisticsCard icon="percent" color={theme.palette.primary[600]}>
-            <p>% of investments sold with a profit</p>
-            {loading ? (
-              <LoadingTag />
-            ) : (
-              <Tag color={theme.palette.primary[600]} backgroundColor={theme.palette.primary[100]}>
-                {statistics.winLossRatio.toFixed(2)}%
-              </Tag>
-            )}
-          </StatisticsCard>
-          <StatisticsCard icon="chart-line" color={theme.palette.success[600]}>
-            <p>
-              Average return of the{' '}
-              <strong>
-                {loading ? <LoadingIndicator color={theme.palette.text[500]} /> : statistics.winLossRatio.toFixed(2)}%
-              </strong>{' '}
-              winning investments
-            </p>
-            {loading ? <LoadingTag /> : <StockReturn percentReturn={statistics.averageGainPerPosition} />}
-          </StatisticsCard>
-          <StatisticsCard icon="chart-line-down" color={theme.palette.danger[600]}>
-            <p>
-              Average loss of the{' '}
-              <strong>
+          <Tooltip title="Ratio of investments sold with a profit relative to investments sold with a loss.">
+            <div>
+              <StatisticsCard icon="percent" color={theme.palette.primary[600]}>
+                <p>Ratio of winners relative to losers.</p>
                 {loading ? (
-                  <LoadingIndicator color={theme.palette.text[500]} />
+                  <LoadingTag />
                 ) : (
-                  (100 - statistics.winLossRatio).toFixed(2)
+                  <Tag color={theme.palette.primary[600]} backgroundColor={theme.palette.primary[100]}>
+                    {statistics.winLossRatio.toFixed(2)}%
+                  </Tag>
                 )}
-                %
-              </strong>{' '}
-              losing investments
-            </p>
-            {loading ? <LoadingTag /> : <StockReturn percentReturn={-statistics.averageLossPerPosition} />}
-          </StatisticsCard>
+              </StatisticsCard>
+            </div>
+          </Tooltip>
+          <Tooltip
+            title={`Average return of the ${statistics?.winLossRatio?.toFixed(2)}% investments sold with a profit.`}
+          >
+            <div>
+              <StatisticsCard icon="chart-line" color={theme.palette.success[600]}>
+                <p>
+                  Average return of the{' '}
+                  <strong>
+                    {loading ? (
+                      <LoadingIndicator color={theme.palette.text[500]} />
+                    ) : (
+                      statistics.winLossRatio.toFixed(2)
+                    )}
+                    %
+                  </strong>{' '}
+                  winning investments
+                </p>
+                {loading ? <LoadingTag /> : <StockReturn percentReturn={statistics.averageGainPerPosition} />}
+              </StatisticsCard>
+            </div>
+          </Tooltip>
+          <Tooltip
+            title={`Average loss of the ${(100 - statistics?.winLossRatio)?.toFixed(2)}% investments sold with a loss.`}
+          >
+            <div>
+              <StatisticsCard icon="chart-line-down" color={theme.palette.danger[600]}>
+                <p>
+                  Average loss of the{' '}
+                  <strong>
+                    {loading ? (
+                      <LoadingIndicator color={theme.palette.text[500]} />
+                    ) : (
+                      (100 - statistics.winLossRatio).toFixed(2)
+                    )}
+                    %
+                  </strong>{' '}
+                  losing investments
+                </p>
+                {loading ? <LoadingTag /> : <StockReturn percentReturn={-statistics.averageLossPerPosition} />}
+              </StatisticsCard>
+            </div>
+          </Tooltip>
           <StatisticsCard icon="money-bill-wave" color={theme.palette.success[600]}>
             <p>Average return per investment</p>
             {loading ? <LoadingTag /> : <StockReturn percentReturn={Number(expectedReturn)} />}
