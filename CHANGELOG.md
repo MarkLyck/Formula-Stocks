@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.223"></a>
+## 1.0.223 (2021-06-24)
+
+### Added
+
+- ✨ risk page [[d23c971](https://github.com/MarkLyck/formula-stocks/commit/d23c971a2bcb33557b184fabea9f597d2fbeefdd)]
+
+### Changed
+
+- 🔧 update lighthouse config [[9e66c6b](https://github.com/MarkLyck/formula-stocks/commit/9e66c6bb893335fa80eb7fc183f6e5feaebf4aa4)]
+
+### Miscellaneous
+
+-  Merge pull request [#303](https://github.com/MarkLyck/formula-stocks/issues/303) from MarkLyck/risk-page [[1a539ba](https://github.com/MarkLyck/formula-stocks/commit/1a539bad1e1db03d50baff2620f99a01602726a3)]
+- 🌐 update text for risk section [[435e72f](https://github.com/MarkLyck/formula-stocks/commit/435e72f9d7578fcc815737153cd2ef6174a34744)]
+- 📝 version bump to v1.0.223 [[1d17adf](https://github.com/MarkLyck/formula-stocks/commit/1d17adfd5f14b50d5c052da71616755586dfc956)]
+- 📝 generated changelog [[ba2c4cb](https://github.com/MarkLyck/formula-stocks/commit/ba2c4cbdf04fa2d4819f009b328bf6b823df66cf)]
+
+
 <a name="1.0.222"></a>
 ## 1.0.222 (2021-06-24)
 
