@@ -184,7 +184,7 @@ const Risk = () => {
             attempt to predict what the stock market does tomorrow.
           </Paragraph>
           <Paragraph>
-            {COMPANY_NAME}finds and invests in wonderful growing companies selling for less than they are worth. This
+            {COMPANY_NAME} finds and invests in wonderful growing companies selling for less than they are worth. This
             means, more often than not, {COMPANY_NAME} will recommend companies that other investors are selling. For
             example sometimes investors "over-react" to bad news or other events and end up selling a stock for much
             cheaper than it's intrinsic value. This is often when {COMPANY_NAME} comes in and recommends to buy it. That
