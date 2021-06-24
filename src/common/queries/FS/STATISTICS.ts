@@ -33,6 +33,10 @@ export const STATISTICS_SINCE_LAUNCH = gql`
     statisticsSinceLaunchesList(filter: { plan: { planID: { equals: "entry" } } }) {
       items {
         totalReturn
+        winLossRatio
+        cAGR
+        positionsSoldWithProfit
+        positionsSoldWithLoss
       }
     }
   }

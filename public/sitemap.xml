@@ -4,6 +4,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/risk</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/dashboard/account</loc>
     <changefreq>hourly</changefreq>
   </url>

@@ -79,7 +79,7 @@ const LogSwitchContainer = styled.div`
   right: 16px;
 `
 
-const Performance = () => {
+const Performance = ({ padding }: any) => {
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [log, setLog] = useState(true)
@@ -112,7 +112,7 @@ const Performance = () => {
   const toggleModal = () => setReturnsModalVisible(!returnsModalVisible)
 
   return (
-    <LandingPageContainer align="center" style={{ marginBottom: 32 }}>
+    <LandingPageContainer align="center" style={{ marginBottom: 32, padding }}>
       <Element name="performance" />
       <>
         <ScalingTitle>Performance</ScalingTitle>
