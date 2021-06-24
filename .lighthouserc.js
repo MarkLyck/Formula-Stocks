@@ -15,7 +15,7 @@ module.exports = {
         // should be fixed.
         'apple-touch-icon': 'off',
         'aria-hidden-focus': 'off',
-        'bootup-time': ['error', { minScore: 0.4 }],
+        'bootup-time': ['error', { minScore: 0.3 }],
         'button-name': 'off',
         'color-contrast': 'off',
         'cumulative-layout-shift': ['error', { minScore: 0.2 }],
