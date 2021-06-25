@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.225"></a>
+## 1.0.225 (2021-06-25)
+
+### Added
+
+- ✨ risk page chart [[1e56891](https://github.com/MarkLyck/formula-stocks/commit/1e568913893d9c7921ed1df92db09b207c7e5196)]
+
+### Miscellaneous
+
+-  Merge pull request [#305](https://github.com/MarkLyck/formula-stocks/issues/305) from MarkLyck/risk-page [[6af5509](https://github.com/MarkLyck/formula-stocks/commit/6af550937f2dae25940d17899e5bc2520d5da6e8)]
+- 🌐 update ai score text [[2a20fc6](https://github.com/MarkLyck/formula-stocks/commit/2a20fc6351c755fa88b1152d56e3a6d5e92a2103)]
+- 🏷️ fix type [[4300dbc](https://github.com/MarkLyck/formula-stocks/commit/4300dbc2e043cba95f4a92d6226c526100e563cf)]
+- 🌐 remove performance sections [[771e921](https://github.com/MarkLyck/formula-stocks/commit/771e921815b873081f7497ae08e820b589256bea)]
+- 🌐 minor text change to risk page [[858521d](https://github.com/MarkLyck/formula-stocks/commit/858521dda69aa081852cb8575337f9d8a777eb1f)]
+- 📝 version bump to v1.0.225 [[4924859](https://github.com/MarkLyck/formula-stocks/commit/4924859cabcca550fc8212f01af91c1d8a899bf0)]
+- 📝 generated changelog [[e1d1962](https://github.com/MarkLyck/formula-stocks/commit/e1d19623b2367ee3d985f1c6986fb22c40abdebb)]
+
+
 <a name="1.0.224"></a>
 ## 1.0.224 (2021-06-24)
 
