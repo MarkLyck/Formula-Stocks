@@ -260,40 +260,6 @@ const Risk = () => {
             less volatile and closer to the average statistics you will be. Any single investment could end up being a
             loser, but when investing in many signals over a longer time period the risk decreases dramatically.
           </Paragraph>
-          <Title level={4}>
-            Your performance will vary<sup>*</sup>
-          </Title>
-          <Paragraph>
-            It is almost impossible that you will get the exact same returns as our system does. Your performance will
-            differ for the following reasons:
-            <br />
-            <br />
-            <ul>
-              <li>
-                <b>Slippage</b> - You will not always be able to get your order filled at the exact same price as
-                Formula Stocks did. Sometimes you will buy a little cheaper, sometimes you will buy a little more
-                expensive. E.g. When Formula Stocks puts out a buy signal for XYZ company at $24.02, when you get to
-                making your trade, it might cost $24.06, or $23.98. But it's unlikely you get the exact same price as
-                the system did.
-              </li>
-              <li>
-                <b>Allocation</b> - Your allocation of stocks will always be different. E.g. when Formula Stocks has
-                6.02% of it's portfolio in 1 stock, your allocation might end up being 5%, 8% of 10%. But it will almost
-                never be identical. We recommend simply following it as closely as possible.
-              </li>
-              <li>
-                <b>Trading fees</b> - Formula Stocks assumes there are no trading costs for simplicity. Some brokers do
-                not charge for filling orders, but others do. This will depend on your broker of choice.
-              </li>
-              <li>
-                <b>Deposits and Withdrawls</b> - Formula Stocks never adds more money to it's portfolio besides it's
-                starting capital in 2009, and it never withdraws any money from the account. Most people will deposit
-                addtional funds into their investment account from time to time, making your portfolio grow faster than
-                Formula Stocks. You may also withdraw money from your portfolio at some point causing the opposite
-                effect.
-              </li>
-            </ul>
-          </Paragraph>
         </Content>
       </RiskContainer>
     </>
