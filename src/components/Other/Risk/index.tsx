@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Typography, Card, Spin } from 'antd'
+import { Typography, Card, Spin, Tabs } from 'antd'
 import { useQuery } from '@apollo/client'
 
 import Navbar from '../Navbar'
 import { StockReturn } from '~/ui-components/Stock'
-import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
-import { WIN_RATIO, COMPANY_NAME } from '~/common/constants'
-import Recessions from './Recessions'
-import { Performance } from 'src/components/LandingPage'
+import {
+  STATISTICS,
+  STATISTICS_SINCE_LAUNCH,
+  BACKTESTED_PERFORMANCE_HISTORY,
+  MARKET_PRICE_HISTORY,
+} from 'src/common/queries'
 import { Disclaimer } from 'src/ui-components'
+import BacktestedChart from 'src/components/LandingPage/Performance/BacktestedChart'
+import { COMPANY_NAME } from '~/common/constants'
+import Recessions from './Recessions'
+import TimeInvestedChart from './TimeInvestedChart'
 
 const { Title, Paragraph } = Typography
+const { TabPane } = Tabs
 
 const RiskContainer = styled.div`
   background: ${(props) => props.theme.palette.neutral[200]};
@@ -57,19 +64,32 @@ const ListItem = styled.div`
 const Risk = () => {
   const { data, loading } = useQuery(STATISTICS)
   const { data: launchData, loading: launchLoading } = useQuery(STATISTICS_SINCE_LAUNCH)
-  console.log('🔈 ~ launchData', launchData)
+  const { data: planData, loading: planLoading, error: planError } = useQuery(BACKTESTED_PERFORMANCE_HISTORY, {
+    variables: {
+      plan: 'entry',
+    },
+  })
+  const { data: marketData } = useQuery(MARKET_PRICE_HISTORY, {
+    variables: {
+      marketType: 'SP500',
+      fromDate: '1970-01-30',
+    },
+  })
+
   const now = new Date()
 
   if (loading || launchLoading) return <Spin />
 
   const statistics = data?.statisticsList?.items[0]
   const launchStatistics = launchData?.statisticsSinceLaunchesList?.items[0]
-  console.log('🔈 ~ launchStatistics', launchStatistics)
   const { winLossRatio, averageGainPerPosition, averageLossPerPosition } = statistics
   const { winLossRatio: launchWinLossRatio } = launchStatistics
 
   const winRatio = winLossRatio.toFixed(2)
   const lossRatio = (100 - winLossRatio).toFixed(2)
+
+  const backtestedHistory = planData?.plan?.backtestedHistory || []
+  const marketHistory = marketData?.marketPricingHistoriesList?.items || []
 
   return (
     <>
@@ -173,7 +193,15 @@ const Risk = () => {
             you are not able to hold and stick with it through a period of negative years, you would likely have sold
             your stocks and given up in 1973 on this chart.
           </Paragraph>
-          <Performance padding={0} />
+          <BacktestedChart
+            name={COMPANY_NAME}
+            marketName="S&P 500"
+            isLoading={planLoading}
+            error={planError}
+            planPerformance={backtestedHistory}
+            marketPrices={marketHistory}
+            log={true}
+          />
           <Title level={4}>Not using {COMPANY_NAME} as intended</Title>
           <Paragraph>{COMPANY_NAME} will not make you rich in a week!</Paragraph>
           <Paragraph>
@@ -189,10 +217,35 @@ const Risk = () => {
             example sometimes investors "over-react" to bad news or other events and end up selling a stock for much
             cheaper than it's intrinsic value. This is often when {COMPANY_NAME} comes in and recommends to buy it. That
             means it is very common that after you buy a Formula Stock, it can continue to drop more in value before
-            later going back up. In fact we tested this, and if you sold every signal we recommended after just a single
-            week, the win ratio went from {WIN_RATIO}% down to only 54%! Our past returns didn't happen overnight and if
-            your expectation is to buy a stock and sell it at a profit within a week or a month your average results
-            will be a gamble.
+            later going back up. Our past returns didn't happen overnight and if your expectation is to buy a stock and
+            sell it at a profit within a week or a month your average results will be a gamble.
+          </Paragraph>
+          <Paragraph>
+            The chart below illustrates mirroring our portfolio for time periods between 1 month and 5 years, how often
+            investing with Formula Stocks portfolio for differencet periods of time would have resulted in profits.
+          </Paragraph>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab="Formula Stocks" key="1">
+              {/* @ts-ignore */}
+              <TimeInvestedChart
+                data={backtestedHistory}
+                title="The longer you invest, the lower the risk of losing money"
+              />
+            </TabPane>
+            <TabPane tab="S&P 500" key="2">
+              {/* @ts-ignore */}
+              <TimeInvestedChart data={marketHistory} title="S&P500 have more losing periods across the board" />
+            </TabPane>
+          </Tabs>
+
+          <Paragraph style={{ marginTop: 32 }}>
+            You can see for example if you mirrored the Formula Stocks portfolio for just a single month in the past,
+            there's about 70% chance you would have made money, and 30% chance you would have lost money. Whereas if you
+            followed the system for any period of 5 years, there have been no 5 year periods where Formula Stocks have
+            not been profitable in the past.{' '}
+            <b>In short, Formula Stocks is built to be followed for the longterm, not for 1 month or 2 months.</b> If
+            you compare the above chart to the S&P500, Formula Stocks have historically been a safer investment in any
+            period of time.
           </Paragraph>
           <Paragraph>
             If you would like to follow our signals but aren't quite ready to use it for the longterm. We highly
@@ -200,12 +253,45 @@ const Risk = () => {
             Development of Formula Stocks started in 2003, and we had our first pilot-test in 2009. Since then we have
             been tracking, recording and sharing our results (both the good and the bad years)
           </Paragraph>
-          <Title level={4}>Investing in many Formula Stocks over a long period of time.</Title>
+          <Title level={4}>Investing in many signals over a long period of time.</Title>
           <Paragraph>
             {COMPANY_NAME}' trades, has consistently both outperformed and been a safer investment than other investment
             vehicles such as index funds and hedgefunds in the long term. The longer you use it, the more diversified,
             less volatile and closer to the average statistics you will be. Any single investment could end up being a
             loser, but when investing in many signals over a longer time period the risk decreases dramatically.
+          </Paragraph>
+          <Title level={4}>
+            Your performance will vary<sup>*</sup>
+          </Title>
+          <Paragraph>
+            It is almost impossible that you will get the exact same returns as our system does. Your performance will
+            differ for the following reasons:
+            <br />
+            <br />
+            <ul>
+              <li>
+                <b>Slippage</b> - You will not always be able to get your order filled at the exact same price as
+                Formula Stocks did. Sometimes you will buy a little cheaper, sometimes you will buy a little more
+                expensive. E.g. When Formula Stocks puts out a buy signal for XYZ company at $24.02, when you get to
+                making your trade, it might cost $24.06, or $23.98. But it's unlikely you get the exact same price as
+                the system did.
+              </li>
+              <li>
+                <b>Allocation</b> - Your allocation of stocks will always be different. E.g. when Formula Stocks has
+                6.02% of it's portfolio in 1 stock, your allocation might end up being 5%, 8% of 10%. But it will almost
+                never be identical. We recommend simply following it as closely as possible.
+              </li>
+              <li>
+                <b>Trading fees</b> - Formula Stocks assumes there are no trading costs for simplicity. Some brokers do
+                not charge for filling orders, but others do. This will depend on your broker of choice.
+              </li>
+              <li>
+                <b>Deposits and Withdrawls</b> - Formula Stocks never adds more money to it's portfolio besides it's
+                starting capital in 2009, and it never withdraws any money from it's portfolio. Most people will deposit
+                money into their savings account from time to time, making your portfolio grow faster than Formula
+                Stocks. You may also withdraw money from your portfolio at some point causing the opposite effect.
+              </li>
+            </ul>
           </Paragraph>
         </Content>
       </RiskContainer>
