@@ -25,17 +25,14 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
       <Title level={5}>“Everything should be made as simple as possible, but no simpler.” -Albert Einstein.</Title>
       <Paragraph>
         Selecting stocks can be complicated and time consuming. AI scores are about making it simple & easy. Think of an
-        AI score as a rating on a stock, of its overall attractiveness to you as an investor.
+        AI score as a rating on a stock, of its overall attractiveness to you as an investor. The underlying businesses
+        are analyzed using artificial intelligence and quantitative analysis.
       </Paragraph>
       <Paragraph>
-        The AI score is a number between -100 and 100. You will see negative numbers depicted as red, small numbers as
-        white, and positive numbers as green.
+        The AI score itself is a number between -100 and 100. You will see negative numbers depicted as red, small
+        numbers as white, and positive numbers as green.
       </Paragraph>
       <Paragraph>You will want to buy green, underweight white, and avoid red.</Paragraph>
-      <Paragraph>
-        AI scores are stock ratings produced using artificial intelligence and quantitative analysis. The underlying
-        businesses are analyzed.
-      </Paragraph>
       <StyledList
         bordered
         dataSource={[
@@ -60,7 +57,7 @@ const AIScoreModal = ({ isVisible, onClose }: AIScoreModalProps) => (
         associated with which AI score. You will notice an extremely strong correlation between the AI score and the
         resulting real world performance later achieved. This is an clear indication that AI scores are an extremely
         efficient method with which to rate stocks attractiveness. Stocks with higher AI scores consistently outperforms
-        stocks with lower AI scores across the spectrum. AI Score performance & Win ratio chart
+        stocks with lower AI scores across the spectrum.
       </Paragraph>
       <AIScoreChart />
       <Paragraph>
