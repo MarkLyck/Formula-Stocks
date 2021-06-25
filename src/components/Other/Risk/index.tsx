@@ -226,8 +226,8 @@ const Risk = () => {
           </Paragraph>
           <Tabs defaultActiveKey="1">
             <TabPane tab="Formula Stocks" key="1">
-              {/* @ts-ignore */}
               <TimeInvestedChart
+                // @ts-ignore
                 data={backtestedHistory}
                 title="The longer you invest, the lower the risk of losing money"
               />
