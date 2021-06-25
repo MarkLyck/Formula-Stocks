@@ -5,12 +5,7 @@ import { useQuery } from '@apollo/client'
 
 import Navbar from '../Navbar'
 import { StockReturn } from '~/ui-components/Stock'
-import {
-  STATISTICS,
-  STATISTICS_SINCE_LAUNCH,
-  BACKTESTED_PERFORMANCE_HISTORY,
-  MARKET_PRICE_HISTORY,
-} from 'src/common/queries'
+import { STATISTICS, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
 import { Disclaimer } from 'src/ui-components'
 import BacktestedChart from 'src/components/LandingPage/Performance/BacktestedChart'
 import { COMPANY_NAME } from '~/common/constants'
@@ -63,7 +58,6 @@ const ListItem = styled.div`
 
 const Risk = () => {
   const { data, loading } = useQuery(STATISTICS)
-  const { data: launchData, loading: launchLoading } = useQuery(STATISTICS_SINCE_LAUNCH)
   const { data: planData, loading: planLoading, error: planError } = useQuery(BACKTESTED_PERFORMANCE_HISTORY, {
     variables: {
       plan: 'entry',
@@ -76,14 +70,10 @@ const Risk = () => {
     },
   })
 
-  const now = new Date()
-
-  if (loading || launchLoading) return <Spin />
+  if (loading) return <Spin />
 
   const statistics = data?.statisticsList?.items[0]
-  const launchStatistics = launchData?.statisticsSinceLaunchesList?.items[0]
   const { winLossRatio, averageGainPerPosition, averageLossPerPosition } = statistics
-  const { winLossRatio: launchWinLossRatio } = launchStatistics
 
   const winRatio = winLossRatio.toFixed(2)
   const lossRatio = (100 - winLossRatio).toFixed(2)
