@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.226"></a>
+## 1.0.226 (2021-06-25)
+
+### Added
+
+- ✨ add multiplied by tooltip [[e9631ee](https://github.com/MarkLyck/formula-stocks/commit/e9631eed8eb23376004ff31b812a892d45457125)]
+
+### Miscellaneous
+
+-  Merge pull request [#306](https://github.com/MarkLyck/formula-stocks/issues/306) from MarkLyck/risk-page [[b0774d3](https://github.com/MarkLyck/formula-stocks/commit/b0774d39f7b3c492cfc4663cfd7a6ddd43c0f1bf)]
+- 📝 version bump to v1.0.226 [[573221f](https://github.com/MarkLyck/formula-stocks/commit/573221f11db98eac1e5355e4d991f89a1b4f2331)]
+- 📝 generated changelog [[67c3afb](https://github.com/MarkLyck/formula-stocks/commit/67c3afb5e360376a576857cb0b7f4a8cc8a8dfeb)]
+
+
 <a name="1.0.225"></a>
 ## 1.0.225 (2021-06-25)
 
