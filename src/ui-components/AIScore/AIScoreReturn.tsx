@@ -88,7 +88,7 @@ type AIScoreReturnProps = {
 
 const PredictedTooltip = ({ result }: any) => (
   <Text style={{ color: 'white', width: 800 }}>
-    The historical avg. annual return is based on investing in a large bucket of stocks with an AI Score from{' '}
+    The historical avg. annual return is based on investing in a large basket of stocks with an AI Score from{' '}
     <span style={{ fontWeight: 'bold' }}>{result.bucket.split(' to ')[0]}</span> to{' '}
     <span style={{ fontWeight: 'bold' }}>{result.bucket.split(' to ')[1]}</span>.
     <br />
