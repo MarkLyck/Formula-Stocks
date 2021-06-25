@@ -42,7 +42,7 @@ const StrategyWeUse = ({ showSignup }: any) => {
               An investing strategy that <Highlight>we use</Highlight>.
             </CardTitle>
             <CardSubtitle>
-              We have shown you what we can do. Want to know more? Check out the FAQ or chat with us.
+              We have shown you what we can do. Want to know more? Check out the FAQ or contact us.
             </CardSubtitle>
             <ButtonContainer size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
               <ActionButton onClick={showSignup} status="success">
