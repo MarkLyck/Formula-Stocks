@@ -96,7 +96,7 @@ const HowToGetStarted = () => (
           </Description>
         </Space>
       </StepCard>
-      <StepCard>
+      {/* <StepCard>
         <Space direction="vertical">
           <Space size="middle">
             <NumberContainer>3</NumberContainer>
@@ -107,7 +107,7 @@ const HowToGetStarted = () => (
             re-invest the dividends and returns for exponential growth.
           </Description>
         </Space>
-      </StepCard>
+      </StepCard> */}
     </Container>
   </LandingPageContainer>
 )

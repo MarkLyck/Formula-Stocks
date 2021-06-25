@@ -68,7 +68,12 @@ const Tooltip = (
   tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
 ) => {
   if (!items[0]) return null
+  console.log('🔈 ~ items', items)
   const isBacktested = items[0]?.data?.backtested
+
+  const FSValue = Number(items[0]?.value)
+  const marketValue = Number(items[1]?.value)
+  const comparisonValue = FSValue / marketValue
 
   return (
     <Container>
@@ -94,6 +99,11 @@ const Tooltip = (
           )
         })}
       </ul>
+      {comparisonValue >= 2 && (
+        <Text>
+          FS outperforms S&P500 by a factor of: <b>{comparisonValue.toFixed(0)}x</b>
+        </Text>
+      )}
     </Container>
   )
 }
