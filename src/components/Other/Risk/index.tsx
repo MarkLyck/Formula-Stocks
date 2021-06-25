@@ -287,9 +287,10 @@ const Risk = () => {
               </li>
               <li>
                 <b>Deposits and Withdrawls</b> - Formula Stocks never adds more money to it's portfolio besides it's
-                starting capital in 2009, and it never withdraws any money from it's portfolio. Most people will deposit
-                money into their savings account from time to time, making your portfolio grow faster than Formula
-                Stocks. You may also withdraw money from your portfolio at some point causing the opposite effect.
+                starting capital in 2009, and it never withdraws any money from the account. Most people will deposit
+                addtional funds into their investment account from time to time, making your portfolio grow faster than
+                Formula Stocks. You may also withdraw money from your portfolio at some point causing the opposite
+                effect.
               </li>
             </ul>
           </Paragraph>
