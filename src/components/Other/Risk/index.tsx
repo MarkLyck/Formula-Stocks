@@ -72,8 +72,8 @@ const Risk = () => {
 
   if (loading) return <Spin />
 
-  const statistics = data?.statisticsList?.items[0]
-  const { winLossRatio, averageGainPerPosition, averageLossPerPosition } = statistics
+  const statistics = data?.statisticsList?.items[0] || {}
+  const { winLossRatio = 90, averageGainPerPosition = 60, averageLossPerPosition = 20 } = statistics
 
   const winRatio = winLossRatio.toFixed(2)
   const lossRatio = (100 - winLossRatio).toFixed(2)
