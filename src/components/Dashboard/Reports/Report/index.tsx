@@ -17,15 +17,7 @@ import PressReleases from './PressReleases'
 import InsiderTrading from './InsiderTrading'
 import KeyExecs from './KeyExecs'
 import EarningsCalls from './EarningsCalls'
-import {
-  DebtCheck,
-  InsiderTradesCheck,
-  ROICCheck,
-  ProfitabilityCheck,
-  GrowthRateCheck,
-  // MarginOfSafetyCheck,
-  DividendsCheck,
-} from './Checks'
+import { DebtCheck, InsiderTradesCheck, ROICCheck, ProfitabilityCheck, GrowthRateCheck, DividendsCheck } from './Checks'
 
 const { Text, Title } = Typography
 const { TabPane } = Tabs
@@ -45,8 +37,6 @@ const StockReport = () => {
     },
   })
   const profile = fmpProfile?.FMP?.response[0]
-  const latestPrice = profile?.price
-  console.log('🔈 ~ latestPrice', latestPrice)
   const report = reportData?.aIReport
 
   if (loading) return <Spin />
@@ -76,7 +66,6 @@ const StockReport = () => {
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
             <Title level={4}>Metrics</Title>
             <Row gutter={[16, 16]}>
-              {/* <MarginOfSafetyCheck symbol={symbol} price={latestPrice} /> */}
               <ROICCheck symbol={symbol} />
               <GrowthRateCheck
                 label="Equity Growth"

@@ -32,7 +32,6 @@ export const GrowthRateCheck = ({ url, label, metricName }: GrowthRateCheckProps
   if (latestValue === 0) return null
 
   const averageGrowthRate: number = mean(growthRateNumbers)
-  console.log('🔈 ~ averageGrowthRate', averageGrowthRate)
   const hasPositiveGrowth = averageGrowthRate > 0
 
   // TODO average growthRate
