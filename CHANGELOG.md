@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.232"></a>
+## 1.0.232 (2021-06-27)
+
+### Added
+
+- ✨ better stock chart [[d454275](https://github.com/MarkLyck/formula-stocks/commit/d4542755f9dab3d7c9a8337b1b0e634e91423c11)]
+
+### Removed
+
+- 🔇 remove logs [[6afdfb6](https://github.com/MarkLyck/formula-stocks/commit/6afdfb6ef891e9f102cf551405f59c38498c2046)]
+
+### Miscellaneous
+
+-  Merge pull request [#312](https://github.com/MarkLyck/formula-stocks/issues/312) from MarkLyck/stock-chart [[4a57993](https://github.com/MarkLyck/formula-stocks/commit/4a579933407af7dfda0850605a05853114cdfe90)]
+- 🏷️ fix types [[00d204a](https://github.com/MarkLyck/formula-stocks/commit/00d204ad33d12a5f7ee0323a519a03c0dd1b86f7)]
+- 📝 version bump to v1.0.232 [[f0819f8](https://github.com/MarkLyck/formula-stocks/commit/f0819f83edd2e1ba303bb84ebcc0edd0faa47ada)]
+- 📝 generated changelog [[31d1043](https://github.com/MarkLyck/formula-stocks/commit/31d104366e6366326ccae00929fe6a6356cba179)]
+
+
 <a name="1.0.231"></a>
 ## 1.0.231 (2021-06-27)
 
