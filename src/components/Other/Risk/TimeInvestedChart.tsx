@@ -8,7 +8,7 @@ const Column = dynamic(() => import('@ant-design/charts').then((mod) => mod.Colu
 const getPositivePeriods = (data: any[], interval: number) => {
   let positivePeriods = 0
   let negativePeriods = 0
-  const priceKey = data[0].balance ? 'balance' : 'price'
+  const priceKey = data[0]?.balance ? 'balance' : 'price'
 
   data.forEach((point: any, i: number) => {
     if (!data[i + interval]) return
