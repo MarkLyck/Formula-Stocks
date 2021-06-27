@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.231"></a>
+## 1.0.231 (2021-06-27)
+
+### Fixed
+
+- 🐛 fix slider being in the wrong order [[1ea74a7](https://github.com/MarkLyck/formula-stocks/commit/1ea74a7801624b4dea3bd708fe0056cbb2262500)]
+
+### Miscellaneous
+
+-  Merge pull request [#311](https://github.com/MarkLyck/formula-stocks/issues/311) from MarkLyck/stock-chart [[3c1f3fc](https://github.com/MarkLyck/formula-stocks/commit/3c1f3fc35adf262e664321e07031748d022878df)]
+- 📝 version bump to v1.0.231 [[32da649](https://github.com/MarkLyck/formula-stocks/commit/32da649a8200eb00776c37506465352fd59de5dc)]
+- 📝 generated changelog [[1028676](https://github.com/MarkLyck/formula-stocks/commit/1028676da96d55d17f219cbd15c5e6b07063eaa5)]
+
+
 <a name="1.0.230"></a>
 ## 1.0.230 (2021-06-27)
 
