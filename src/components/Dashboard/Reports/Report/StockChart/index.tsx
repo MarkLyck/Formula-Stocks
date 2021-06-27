@@ -31,9 +31,9 @@ const StockChart = ({ symbol }: StockChartProps) => {
 
   let priceHistory = []
   if (Array.isArray(data?.FMP?.response)) {
-    priceHistory = data.FMP.response
+    priceHistory = data.FMP.response.slice().reverse()
   } else if (Array.isArray(data?.FMP?.response?.historical)) {
-    priceHistory = data.FMP.response.historical
+    priceHistory = data.FMP.response.historical.slice().reverse()
   }
 
   const chartData = cloneDeep(priceHistory)
@@ -67,8 +67,8 @@ const StockChart = ({ symbol }: StockChartProps) => {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
     },
     slider: {
-      start: 0,
-      end: 0.2,
+      start: 0.8,
+      end: 1,
     },
   }
 
