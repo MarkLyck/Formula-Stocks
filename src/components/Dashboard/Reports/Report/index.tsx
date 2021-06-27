@@ -46,7 +46,6 @@ const StockReport = () => {
   })
   const profile = fmpProfile?.FMP?.response[0]
   const latestPrice = profile?.price
-  console.log('🔈 ~ latestPrice', latestPrice)
   const report = reportData?.aIReport
 
   if (loading) return <Spin />

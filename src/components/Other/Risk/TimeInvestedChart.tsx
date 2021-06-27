@@ -18,9 +18,6 @@ const getPositivePeriods = (data: any[], interval: number) => {
     if (balanceNextInterval >= currentBalance) {
       positivePeriods++
     } else {
-      if (interval === 12 * 4) {
-        console.log('4 year loss', point)
-      }
       negativePeriods++
     }
   })
@@ -28,7 +25,6 @@ const getPositivePeriods = (data: any[], interval: number) => {
 }
 
 const TimeInvestedChart: React.FC = ({ data, title }: any) => {
-  console.log('🔈 ~ data', data)
   const theme = useTheme()
 
   const periods1Month = getPositivePeriods(data, 1)
