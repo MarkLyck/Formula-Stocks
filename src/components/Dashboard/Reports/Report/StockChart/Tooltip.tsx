@@ -17,7 +17,28 @@ const TooltipItem = styled.div`
   width: 120px;
 `
 
-const chartTooltip = (_title: string, items: any[], theme: any) => {
+export const lineChartTooltip = (_title: string, items: any[]) => {
+  if (!items[0]) return null
+  const point = items[0].data
+
+  return (
+    <TooltipContent>
+      <Space direction="vertical" size="middle">
+        <Text>
+          <b>{point.date}</b>
+        </Text>
+        <TooltipItem>
+          <Text style={{ width: 60 }}>Close:</Text>
+          <Text>
+            <b>{currencyFormatter.format(point.close)}</b>
+          </Text>
+        </TooltipItem>
+      </Space>
+    </TooltipContent>
+  )
+}
+
+export const stockChartTooltip = (_title: string, items: any[], theme: any) => {
   if (!items[0]) return null
   const point = items[0].data
 
@@ -69,5 +90,3 @@ const chartTooltip = (_title: string, items: any[], theme: any) => {
     </TooltipContent>
   )
 }
-
-export default chartTooltip
