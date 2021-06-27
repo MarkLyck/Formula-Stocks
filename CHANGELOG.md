@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.230"></a>
+## 1.0.230 (2021-06-27)
+
+### Added
+
+- ✨ add white paper [[b0d6aa4](https://github.com/MarkLyck/formula-stocks/commit/b0d6aa4186e7deadfa5a5dd8b87b40368d9704aa)]
+
+### Miscellaneous
+
+-  Merge pull request [#310](https://github.com/MarkLyck/formula-stocks/issues/310) from MarkLyck/white-aper [[f08f457](https://github.com/MarkLyck/formula-stocks/commit/f08f457ea9737d4e22f064e37dabc9d59e26a169)]
+- 📝 version bump to v1.0.230 [[597e877](https://github.com/MarkLyck/formula-stocks/commit/597e8777c4ed9c099530459632ffd673d2956df8)]
+- 📝 generated changelog [[8dec7cf](https://github.com/MarkLyck/formula-stocks/commit/8dec7cff3e65bffff38e81948cfaf938239cdc1d)]
+
+
 <a name="1.0.229"></a>
 ## 1.0.229 (2021-06-27)
 
