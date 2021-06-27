@@ -59,7 +59,7 @@ const LogoPlaceholder = styled.div`
 `
 
 const goTo = (location: any) => Router.push(location)
-const openWhitePaper = () => window.open('/static/2008_Whitepaper.pdf', '_blank')
+const openWhitePaper = () => window.open('/assets/whitepaper_2008.pdf', '_blank')
 
 const Nav = () => {
   // @ts-ignore
