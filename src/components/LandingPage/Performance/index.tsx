@@ -10,6 +10,7 @@ import useBreakpoint from '@w11r/use-breakpoint'
 import { COMPANY_NAME } from 'src/common/constants'
 import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from 'src/ui-components'
 import LaunchChart from './LaunchChart'
+import AnimatedChart from './AnimatedChart'
 import BacktestedChart from './BacktestedChart'
 // import FSApolloClient from 'src/common/FSApolloClient'
 import { LAUNCH_PERFORMANCE_HISTORY, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
@@ -108,7 +109,7 @@ const Performance = ({ padding }: any) => {
   if (planData) planPerformance = planData.plan[chartType === 'launch' ? 'launchHistory' : 'backtestedHistory'] || []
   if (marketData) marketPrices = marketData.marketPricingHistoriesList.items || []
 
-  const switchChartType = (key: string) => setChartType(key === '1' ? 'backtested' : 'launch')
+  const switchChartType = (key: string) => setChartType(key === '2' ? 'launch' : 'backtested')
   const toggleModal = () => setReturnsModalVisible(!returnsModalVisible)
 
   return (
@@ -116,7 +117,17 @@ const Performance = ({ padding }: any) => {
       <Element name="performance" />
       <>
         <ScalingTitle>Performance</ScalingTitle>
-        <StyledTabs defaultActiveKey="1" onChange={switchChartType}>
+        <StyledTabs defaultActiveKey="0" onChange={switchChartType}>
+          <Tabs.TabPane tab={`Portfolio simulation`} key="0">
+            <ScalingSubTitle>
+              Animation showing how <b>$25,000</b> would have multiplied since 1970
+            </ScalingSubTitle>
+            <AnimatedChart planPerformance={planPerformance} isLoading={planLoading} error={planError} />
+            <Disclaimer>
+              *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
+              in real-time.
+            </Disclaimer>
+          </Tabs.TabPane>
           <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="1">
             <ScalingSubTitle>
               Chart showing how <b>$25,000</b> would have multiplied since 1970
