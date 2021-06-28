@@ -89,8 +89,8 @@ const HowItWorks = () => {
               businesses at a sharp price.
             </ScalingParagraph>
             <ScalingParagraph>
-              He is adept at avoiding mistakes, careful about what he invests in, evaluating finances, business models
-              and management teams as well as 200 other factors influencing a positive outcome.
+              He is adept at avoiding mistakes, careful about evaluating finances, business models and management teams
+              as well as 200 other factors influencing a positive outcome.
             </ScalingParagraph>
             <ScalingParagraph>
               While you sleep, Joe tirelessly evaluates thousands of business opportunities selecting the very best,
