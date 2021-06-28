@@ -1,5 +1,35 @@
 # Changelog
 
+<a name="1.0.235"></a>
+## 1.0.235 (2021-06-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.235 [[5ef16f0](https://github.com/MarkLyck/formula-stocks/commit/5ef16f0e423db3180ffd9fc090cd642a6512fb15)]
+- 📝 version bump to v1.0.234 [[8ce9d48](https://github.com/MarkLyck/formula-stocks/commit/8ce9d48642e779726a4bc9d187604c687c32215b)]
+
+
+<a name="1.0.233"></a>
+## 1.0.233 (2021-06-28)
+
+### Added
+
+- ✨ strategy page [[6ab16a6](https://github.com/MarkLyck/formula-stocks/commit/6ab16a6ba0fe25a4746d65181b642ddebaa68bf0)]
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.1.19 [[ca5b943](https://github.com/MarkLyck/formula-stocks/commit/ca5b9436f6ed43da9c4d71dc200d5a834783f692)]
+- ⬆️ Update storybook monorepo to v6.3.1 [[a1b3e46](https://github.com/MarkLyck/formula-stocks/commit/a1b3e462e56a6f9f743dcb9b7e11cb4194f2c1cf)]
+
+### Miscellaneous
+
+-  Merge pull request [#315](https://github.com/MarkLyck/formula-stocks/issues/315) from MarkLyck/risk-page2 [[a204b57](https://github.com/MarkLyck/formula-stocks/commit/a204b57adf0f18c3f2d75aa01871495ca353a417)]
+-  Merge pull request [#314](https://github.com/MarkLyck/formula-stocks/issues/314) from MarkLyck/renovate/ant-design-charts-1.x [[f83fd63](https://github.com/MarkLyck/formula-stocks/commit/f83fd63a1f350ed5e28cc5ab45cf192d94b4a8c2)]
+-  Merge pull request [#313](https://github.com/MarkLyck/formula-stocks/issues/313) from MarkLyck/renovate/storybook-monorepo [[874fe87](https://github.com/MarkLyck/formula-stocks/commit/874fe87f1abf1546a15ae0113799c01a2f7acbd1)]
+- 📝 version bump to v1.0.233 [[d5fc1b2](https://github.com/MarkLyck/formula-stocks/commit/d5fc1b2df57c96666b0c026d54f628368626ccda)]
+- 📝 generated changelog [[1cf6341](https://github.com/MarkLyck/formula-stocks/commit/1cf634177f4cc2a9060dda53ab8342ec2a263a96)]
+
+
 <a name="1.0.232"></a>
 ## 1.0.232 (2021-06-27)
 
