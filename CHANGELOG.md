@@ -1,5 +1,52 @@
 # Changelog
 
+<a name="1.0.242"></a>
+## 1.0.242 (2021-06-29)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.242 [[346a592](https://github.com/MarkLyck/formula-stocks/commit/346a592f718612a7b5a16bf7b0b453eac1b43338)]
+
+
+<a name="1.0.241"></a>
+## 1.0.241 (2021-06-29)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.241 [[d71e73d](https://github.com/MarkLyck/formula-stocks/commit/d71e73d31c76d5a577efd3e6afeadc09ea6081ca)]
+
+
+<a name="1.0.240"></a>
+## 1.0.240 (2021-06-29)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.240 [[11b15cc](https://github.com/MarkLyck/formula-stocks/commit/11b15cc5fbb739ed79802cc5b3fd5d76ddd73ee7)]
+
+
+<a name="1.0.239"></a>
+## 1.0.239 (2021-06-29)
+
+### Added
+
+- ✨ chart animation counters [[f8c0c25](https://github.com/MarkLyck/formula-stocks/commit/f8c0c252a578f30c716307ac220c3df7d488f641)]
+
+### Changed
+
+- ⬆️ Update dependency react-countup to v4.4.0 [[ec9543c](https://github.com/MarkLyck/formula-stocks/commit/ec9543cd2efc9cf96cf440e800ad93853504256b)]
+- ⬆️ Update dependency zustand to v3.5.5 [[d67e5b3](https://github.com/MarkLyck/formula-stocks/commit/d67e5b3f8444ee65f73a765a26f37c02bdd05eb2)]
+- ⬆️ Update dependency @ant-design/charts to v1.1.20 [[58546d5](https://github.com/MarkLyck/formula-stocks/commit/58546d5807540d0cb2de12d9aa82ec8b85cdb211)]
+
+### Miscellaneous
+
+-  Merge pull request [#321](https://github.com/MarkLyck/formula-stocks/issues/321) from MarkLyck/renovate/react-countup-4.x [[4ed1f1e](https://github.com/MarkLyck/formula-stocks/commit/4ed1f1eff4668069f307acd20afced9ad3d922d2)]
+-  Merge pull request [#320](https://github.com/MarkLyck/formula-stocks/issues/320) from MarkLyck/renovate/zustand-3.x [[26f4b27](https://github.com/MarkLyck/formula-stocks/commit/26f4b2738c8a10151cf8b1aaf24021c091f0f436)]
+-  Merge pull request [#319](https://github.com/MarkLyck/formula-stocks/issues/319) from MarkLyck/renovate/ant-design-charts-1.x [[f655743](https://github.com/MarkLyck/formula-stocks/commit/f65574323160c34c8caba24cc33d4cfa1be7cc18)]
+-  Merge pull request [#322](https://github.com/MarkLyck/formula-stocks/issues/322) from MarkLyck/chart-animation [[b4bd2b6](https://github.com/MarkLyck/formula-stocks/commit/b4bd2b6ed1d6dc4386cbc35148a5323242f77dfc)]
+- 📝 version bump to v1.0.239 [[7aff24a](https://github.com/MarkLyck/formula-stocks/commit/7aff24a62c043d2898ece0e5eb413856ac5e2978)]
+- 📝 generated changelog [[d20729b](https://github.com/MarkLyck/formula-stocks/commit/d20729b13e4e7ff0e159313554e6650abef3e3bd)]
+
+
 <a name="1.0.238"></a>
 ## 1.0.238 (2021-06-29)
 
