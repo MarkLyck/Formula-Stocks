@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.243"></a>
+## 1.0.243 (2021-06-29)
+
+### Fixed
+
+- 🐛 fix animation chart length [[d78af56](https://github.com/MarkLyck/formula-stocks/commit/d78af56fffe9929012ebdd5c183b2f11df99e05b)]
+
+### Miscellaneous
+
+-  Merge pull request [#323](https://github.com/MarkLyck/formula-stocks/issues/323) from MarkLyck/chart-animation [[006d808](https://github.com/MarkLyck/formula-stocks/commit/006d80821710483f1d7f4e46be0eba9edcfa351e)]
+- 📝 version bump to v1.0.243 [[94a3d16](https://github.com/MarkLyck/formula-stocks/commit/94a3d168ae6a45a1c818c5adfe8b3d75450aca15)]
+- 📝 generated changelog [[b293cdb](https://github.com/MarkLyck/formula-stocks/commit/b293cdbc03f818ddfe158dc746687eedbb01137d)]
+
+
 <a name="1.0.242"></a>
 ## 1.0.242 (2021-06-29)
 
