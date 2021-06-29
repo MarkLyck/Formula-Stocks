@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 import { Space, Modal, Button, Switch, Typography } from 'antd'
 import { Element } from 'react-scroll'
 import { useQuery } from '@apollo/client'
-import fetch from 'isomorphic-unfetch'
 import { Tabs } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { COMPANY_NAME } from 'src/common/constants'
 import { LandingPageContainer, Disclaimer, ScalingTitle, ScalingSubTitle, ButtonIcon } from 'src/ui-components'
@@ -19,14 +19,9 @@ import { ReturnsCalculatorModal } from 'src/components/LandingPage/Modals'
 
 const { Text } = Typography
 
-// @ts-ignore
-if (!process.browser) {
-  // @ts-ignore
-  global.fetch = fetch
-}
-
 const StyledTabs = styled(Tabs)`
   width: 100%;
+  margin-top: 16px;
   margin-bottom: 32px;
 
   .ant-tabs-nav-wrap {
@@ -117,10 +112,18 @@ const Performance = ({ padding }: any) => {
       <Element name="performance" />
       <>
         <ScalingTitle>Performance</ScalingTitle>
-        <StyledTabs defaultActiveKey="0" onChange={switchChartType}>
-          <Tabs.TabPane tab={`Portfolio simulation`} key="0">
+        <StyledTabs defaultActiveKey="0" onChange={switchChartType} type="card">
+          <Tabs.TabPane
+            tab={
+              <>
+                <FontAwesomeIcon icon={['fad', 'play-circle']} style={{ marginRight: 8 }} />
+                Portfolio simulation
+              </>
+            }
+            key="0"
+          >
             <ScalingSubTitle>
-              Animation showing how <b>$25,000</b> would have multiplied since 1970
+              How <b>$25,000</b> invested in 1970 would have multiplied.
             </ScalingSubTitle>
             <AnimatedChart planPerformance={planPerformance} isLoading={planLoading} error={planError} />
             <Disclaimer>
@@ -128,7 +131,15 @@ const Performance = ({ padding }: any) => {
               in real-time.
             </Disclaimer>
           </Tabs.TabPane>
-          <Tabs.TabPane tab={`1970 - ${new Date().getFullYear()} Backtested Performance`} key="1">
+          <Tabs.TabPane
+            tab={
+              <>
+                <FontAwesomeIcon icon={['fad', 'chart-line']} style={{ marginRight: 8 }} />
+                1970 - {new Date().getFullYear()} Backtested Performance
+              </>
+            }
+            key="1"
+          >
             <ScalingSubTitle>
               Chart showing how <b>$25,000</b> would have multiplied since 1970
               <LogSwitchContainer>
@@ -152,7 +163,15 @@ const Performance = ({ padding }: any) => {
               in real-time.
             </Disclaimer>
           </Tabs.TabPane>
-          <Tabs.TabPane tab={`2009 - ${new Date().getFullYear()} Live Performance`} key="2">
+          <Tabs.TabPane
+            tab={
+              <>
+                <FontAwesomeIcon icon={['fad', 'stop-circle']} style={{ marginRight: 8 }} />
+                2009 - {new Date().getFullYear()} Live Performance
+              </>
+            }
+            key="2"
+          >
             <ScalingSubTitle>
               Growth since our 2009 launch, compared to the Dow Jones Industrial Average.
             </ScalingSubTitle>
