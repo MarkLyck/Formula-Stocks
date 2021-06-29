@@ -92,7 +92,7 @@ const AnimatedChart = ({ data }: any) => {
     if (!animating) {
       data.forEach((_item: any, i: number) => {
         setTimeout(() => {
-          const newChartData = data.slice(0, i)
+          const newChartData = data.slice(0, i + 1)
           setChartData(newChartData)
         }, i * 80)
       })
@@ -148,7 +148,7 @@ const AnimatedChart = ({ data }: any) => {
       <AnimationChart
         data={chartData}
         dateMask="YYYY"
-        min={24500}
+        min={0}
         labelFormatter={dollarFormatterRounded}
         tooltipValueFormatter={dollarFormatterRounded}
       />
