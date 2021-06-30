@@ -1,5 +1,25 @@
 # Changelog
 
+<a name="1.0.247"></a>
+## 1.0.247 (2021-06-30)
+
+### Added
+
+- ✨ remove auto-play [[e0d6684](https://github.com/MarkLyck/formula-stocks/commit/e0d6684d72da5943a05a7fcd241a45708439dcf6)]
+
+### Changed
+
+- ⬆️ Update dependency ahooks to v2.10.6 [[dbd09a7](https://github.com/MarkLyck/formula-stocks/commit/dbd09a7a51fadd5041dd7f4cb4532a429a1588f9)]
+
+### Miscellaneous
+
+-  Merge pull request [#257](https://github.com/MarkLyck/formula-stocks/issues/257) from MarkLyck/renovate/ahooks-2.x [[4bcd2e5](https://github.com/MarkLyck/formula-stocks/commit/4bcd2e5893733e1e5f0cafaa1072afa141ca8d6c)]
+- 🏷️ fix ts [[fd3bbfc](https://github.com/MarkLyck/formula-stocks/commit/fd3bbfc24e5987e1e07145003efc421ea6c0a419)]
+- 📝 version bump to v1.0.247 [[cca4b60](https://github.com/MarkLyck/formula-stocks/commit/cca4b60cfc8ad0b3f703322f07e8f9f51a6aa716)]
+- 🔀 merge main [[944af5b](https://github.com/MarkLyck/formula-stocks/commit/944af5b7bb0cad5ea748a8221dcf78650421728b)]
+- 📝 generated changelog [[361e866](https://github.com/MarkLyck/formula-stocks/commit/361e86665fcf1ab0033f8ca2930e3e6dec300901)]
+
+
 <a name="1.0.246"></a>
 ## 1.0.246 (2021-06-30)
 
