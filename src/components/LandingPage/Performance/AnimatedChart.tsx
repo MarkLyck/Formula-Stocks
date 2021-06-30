@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import dayjs from 'dayjs'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Space, Card } from 'antd'
+import { useInViewport } from 'ahooks'
 
 import { AnimationChart } from 'src/ui-components'
 import { currencyRoundedFormatter, numberFormatter } from 'src/common/utils/formatters'
@@ -94,6 +95,9 @@ const createPlanData = (data: any[]) => {
 const dollarFormatterRounded = (value: number) => currencyRoundedFormatter.format(value)
 
 const AnimatedChart = ({ data }: any) => {
+  const ref = useRef()
+  const inViewPort = useInViewport(ref)
+  const [ranAutomatically, setRanAutomatically] = useState(false)
   const [animating, setAnimating] = useState(false)
   const [chartData, setChartData]: any = useState([])
 
@@ -112,14 +116,17 @@ const AnimatedChart = ({ data }: any) => {
     setAnimating(true)
   }
 
+  useEffect(() => {
+    if (!ranAutomatically && inViewPort) {
+      animateData()
+      setRanAutomatically(true)
+    }
+  }, [inViewPort])
+
   const replay = () => {
     setChartData([])
     animateData()
   }
-
-  useEffect(() => {
-    if (data.length > 0) animateData()
-  }, [data.length])
 
   const renderCounters = () => {
     const currentBalance: number = chartData[chartData.length - 1].value
@@ -157,7 +164,7 @@ const AnimatedChart = ({ data }: any) => {
   }
 
   return (
-    <GraphContainer>
+    <GraphContainer ref={ref}>
       {chartData.length >= 1 && renderCounters()}
       {chartData.length === data.length && (
         <ReplayButton
