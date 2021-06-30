@@ -59,12 +59,14 @@ const LayoutComponent = ({ children }: LayoutProps) => {
         {isTabletPlus ? (
           <SideMenu
             collapsed={!!sideMenuCollapsed}
+            // @ts-ignore
             setCollapsed={setSideMenuCollapsed}
             onLinkClick={() => toggleSideMenu(false)}
           />
         ) : (
           <ResponsiveSideMenu
             collapsed={!!sideMenuCollapsed}
+            // @ts-ignore
             setCollapsed={setSideMenuCollapsed}
             sideMenuIsVisible={sideMenuIsVisible}
             onClose={() => toggleSideMenu(false)}
