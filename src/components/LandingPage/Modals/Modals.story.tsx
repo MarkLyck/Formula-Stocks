@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatisticsModal, AIScoreModal, PerformanceGuaranteeModal } from './index'
+import { StatisticsModal, AIScoreModal } from './index'
 
 export default {
   title: 'landing_page/modals',
@@ -40,5 +40,3 @@ export const ai_score = () => <AIScoreModal isVisible onClose={() => {}} />
 ai_score.parameters = {
   chromatic: { delay: 200 },
 }
-
-export const performance_guarantee = () => <PerformanceGuaranteeModal isVisible onClose={() => {}} />

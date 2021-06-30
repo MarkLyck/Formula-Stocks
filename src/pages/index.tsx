@@ -12,7 +12,7 @@ import {
   Statistics,
   AIScore,
   Newsletter,
-  MoneyBackGuarantee,
+  VerifiableResults,
   StrategyWeUse,
   ExchangesSupported,
   Pricing,
@@ -39,7 +39,7 @@ const IndexPage = () => {
       <Newsletter />
       <AIScore />
       <Pricing showSignup={showSignup} />
-      <MoneyBackGuarantee />
+      <VerifiableResults />
       <HowToGetStarted />
       <StrategyWeUse showSignup={showSignup} />
       <ExchangesSupported />

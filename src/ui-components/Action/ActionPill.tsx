@@ -28,12 +28,10 @@ type ActionProps = {
   ticker: string
 }
 
-export const ActionPill = ({ action, ticker }: ActionProps) => {
-  return (
-    <Container>
-      {/* @ts-ignore */}
-      <Action action={action}>{action}</Action>
-      <StyledTicker ticker={ticker} />
-    </Container>
-  )
-}
+export const ActionPill = ({ action, ticker }: ActionProps) => (
+  <Container>
+    {/* @ts-ignore */}
+    <Action action={action}>{action}</Action>
+    <StyledTicker ticker={ticker} />
+  </Container>
+)

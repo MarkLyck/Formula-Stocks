@@ -76,6 +76,7 @@ const LogSwitchContainer = styled.div`
 `
 
 const Performance = ({ padding }: any) => {
+  const [tabKey, setTabKey] = useState('0')
   const [returnsModalVisible, setReturnsModalVisible] = useState(false)
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [log, setLog] = useState(true)
@@ -104,7 +105,11 @@ const Performance = ({ padding }: any) => {
   if (planData) planPerformance = planData.plan[chartType === 'launch' ? 'launchHistory' : 'backtestedHistory'] || []
   if (marketData) marketPrices = marketData.marketPricingHistoriesList.items || []
 
-  const switchChartType = (key: string) => setChartType(key === '2' ? 'launch' : 'backtested')
+  const setTab = (key: string) => {
+    setTabKey(key)
+    setChartType(key === '2' ? 'launch' : 'backtested')
+  }
+
   const toggleModal = () => setReturnsModalVisible(!returnsModalVisible)
 
   return (
@@ -112,7 +117,7 @@ const Performance = ({ padding }: any) => {
       <Element name="performance" />
       <>
         <ScalingTitle>Performance</ScalingTitle>
-        <StyledTabs defaultActiveKey="0" onChange={switchChartType} type="card">
+        <StyledTabs activeKey={tabKey} onChange={setTab} type="card">
           <Tabs.TabPane
             tab={
               <>
@@ -123,9 +128,14 @@ const Performance = ({ padding }: any) => {
             key="0"
           >
             <ScalingSubTitle>
-              How <b>$25,000</b> invested in 1970 would have multiplied.
+              How <b>$25,000</b> invested with Formula Stocks in 1970 would have multiplied.
             </ScalingSubTitle>
-            <AnimatedChart planPerformance={planPerformance} isLoading={planLoading} error={planError} />
+            <AnimatedChart
+              planPerformance={planPerformance}
+              isLoading={planLoading}
+              error={planError}
+              setTab={setTab}
+            />
             <Disclaimer>
               *Historical numbers are based on backtested data. Since our 2009 launch we have observed similar results
               in real-time.
