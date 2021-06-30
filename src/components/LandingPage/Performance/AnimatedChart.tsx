@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import dayjs from 'dayjs'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Space, Card } from 'antd'
+import { Button, Space, Card } from 'antd'
 
 import { AnimationChart } from 'src/ui-components'
 import { currencyRoundedFormatter, numberFormatter } from 'src/common/utils/formatters'
@@ -22,7 +22,7 @@ const BalanceContainer = styled.div`
 `
 
 const BalanceTag = styled(Card)`
-  width: 260px;
+  width: 270px;
   display: flex;
   justify-content: space-between;
   background: ${(p) => p.theme.palette.neutral[200]};
@@ -44,16 +44,17 @@ const CounterText = styled.span`
   margin-right: 8px;
 `
 
-const PositiveNegative = styled.span`
+const Positive = styled.span`
   display: flex;
   align-items: center;
-  color: ${(p: any) =>
-    p.final ? p.theme.palette.success[600] : p.theme.palette[p.positive ? 'success' : 'danger'][600]};
+  font-size: 18px;
+  color: ${(p: any) => p.theme.palette.success[600]};
 `
 
 const BlueCount = styled.span`
   display: flex;
   align-items: center;
+  font-size: 18px;
   color: ${(p) => p.theme.palette.primary[600]};
 `
 const IconContainer = styled.div`
@@ -66,6 +67,14 @@ const IconContainer = styled.div`
   justify-content: center;
   margin-right: 8px;
   border: 1px solid #f0f0f0;
+`
+
+const ReplayButton = styled(Button)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
 `
 
 const createPlanData = (data: any[]) => {
@@ -94,10 +103,18 @@ const AnimatedChart = ({ data }: any) => {
         setTimeout(() => {
           const newChartData = data.slice(0, i + 1)
           setChartData(newChartData)
+          if (newChartData.length === data.length) {
+            setAnimating(false)
+          }
         }, i * 80)
       })
     }
     setAnimating(true)
+  }
+
+  const replay = () => {
+    setChartData([])
+    animateData()
   }
 
   useEffect(() => {
@@ -105,12 +122,10 @@ const AnimatedChart = ({ data }: any) => {
   }, [data.length])
 
   const renderCounters = () => {
-    const startBalance = chartData[0].value
     const currentBalance: number = chartData[chartData.length - 1].value
+    const startBalance = chartData[0].value
     const increase = currentBalance - startBalance
     const currentReturn = (increase / startBalance) * 100
-    const isPositive = chartData[chartData.length - 2] ? currentBalance > chartData[chartData.length - 2].value : true
-    const isFinal = chartData.length === data.length
 
     return (
       <BalanceContainer>
@@ -133,9 +148,8 @@ const AnimatedChart = ({ data }: any) => {
               Return:
             </CounterText>{' '}
             {/* @ts-ignore */}
-            <PositiveNegative positive={isPositive} final={isFinal}>
-              +{numberFormatter.format(Math.floor(currentReturn))}%
-            </PositiveNegative>
+            <Positive>+{numberFormatter.format(Math.floor(currentReturn))}%</Positive>
+            {/* @ts-ignore */}
           </BalanceTag>
         </Space>
       </BalanceContainer>
@@ -145,10 +159,21 @@ const AnimatedChart = ({ data }: any) => {
   return (
     <GraphContainer>
       {chartData.length >= 1 && renderCounters()}
+      {chartData.length === data.length && (
+        <ReplayButton
+          type="primary"
+          size="large"
+          onClick={replay}
+          icon={<FontAwesomeIcon icon={['fad', 'play-circle']} style={{ marginRight: 8 }} />}
+        >
+          Replay
+        </ReplayButton>
+      )}
       <AnimationChart
         data={chartData}
         dateMask="YYYY"
         min={0}
+        max={chartData.length && chartData[chartData.length - 1].value < 60000 ? 60000 : undefined}
         labelFormatter={dollarFormatterRounded}
         tooltipValueFormatter={dollarFormatterRounded}
       />

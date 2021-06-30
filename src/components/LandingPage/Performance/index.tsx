@@ -141,7 +141,7 @@ const Performance = ({ padding }: any) => {
             key="1"
           >
             <ScalingSubTitle>
-              Chart showing how <b>$25,000</b> would have multiplied since 1970
+              {log && 'Log scale '}chart showing how <b>$25,000</b> would have multiplied since 1970
               <LogSwitchContainer>
                 <Text>Logarithmic</Text>
                 <Switch checked={log} style={{ marginLeft: 8 }} onChange={setLog} />
