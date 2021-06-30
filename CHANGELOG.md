@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.245"></a>
+## 1.0.245 (2021-06-30)
+
+### Added
+
+- ✨ Animated chart improvements [[ea58443](https://github.com/MarkLyck/formula-stocks/commit/ea58443031dc68da91a77074dfb2bb8bab79e972)]
+
+### Miscellaneous
+
+-  Merge pull request [#325](https://github.com/MarkLyck/formula-stocks/issues/325) from MarkLyck/chart-animation [[5577911](https://github.com/MarkLyck/formula-stocks/commit/5577911aefed5f3ac727f233722b02be73a04238)]
+- 📝 version bump to v1.0.245 [[f37cc3b](https://github.com/MarkLyck/formula-stocks/commit/f37cc3b5b3e8312fb18d51fd5c98bc4f4c6cd8b6)]
+- 📝 generated changelog [[8a23fc1](https://github.com/MarkLyck/formula-stocks/commit/8a23fc1f8605ab7afc4683d903ea58aaa13969f9)]
+
+
 <a name="1.0.244"></a>
 ## 1.0.244 (2021-06-30)
 
