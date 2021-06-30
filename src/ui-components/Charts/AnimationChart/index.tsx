@@ -14,6 +14,7 @@ type AreaChartProps = {
   data: DataType[]
   height?: number
   min: number
+  max?: number
   dateMask?: string
   yTickSpace?: number
   annotations?: any[]
@@ -25,6 +26,7 @@ const AnimationChart = ({
   data,
   height = 600,
   min,
+  max,
   dateMask = 'MMM YYYY',
   // yTickSpace,
   annotations,
@@ -64,6 +66,7 @@ const AnimationChart = ({
     yAxis: {
       min,
       minLimit: min,
+      max,
       // tickMethod: yTickSpace
       //   ? () => {
       //       let ticks = []
