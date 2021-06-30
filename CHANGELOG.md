@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.244"></a>
+## 1.0.244 (2021-06-30)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.3.2 [[2252902](https://github.com/MarkLyck/formula-stocks/commit/2252902e37601cfdef797237bf6a8128d733c16c)]
+
+### Miscellaneous
+
+-  Merge pull request [#324](https://github.com/MarkLyck/formula-stocks/issues/324) from MarkLyck/renovate/storybook-monorepo [[f9170ee](https://github.com/MarkLyck/formula-stocks/commit/f9170ee4a7eddd6f68254ae103054d7e136d6de8)]
+- 📝 version bump to v1.0.244 [[8b4db49](https://github.com/MarkLyck/formula-stocks/commit/8b4db49372380543a990e8bcfeb31920f7f0dbc2)]
+- 📝 generated changelog [[4c34b9d](https://github.com/MarkLyck/formula-stocks/commit/4c34b9d10657fcebc492b7e0821846e91e1f409a)]
+
+
 <a name="1.0.243"></a>
 ## 1.0.243 (2021-06-29)
 
