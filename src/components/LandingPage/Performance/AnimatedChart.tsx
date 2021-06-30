@@ -164,6 +164,7 @@ const AnimatedChart = ({ data }: any) => {
   }
 
   return (
+    // @ts-ignore
     <GraphContainer ref={ref}>
       {chartData.length >= 1 && renderCounters()}
       {chartData.length === data.length && (
