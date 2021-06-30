@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.246"></a>
+## 1.0.246 (2021-06-30)
+
+### Added
+
+- ✨ chart only start when you scroll to it. [[bb05ecc](https://github.com/MarkLyck/formula-stocks/commit/bb05ecc2c699b529bdceb9de7b22288ef927b97b)]
+
+### Miscellaneous
+
+-  Merge pull request [#326](https://github.com/MarkLyck/formula-stocks/issues/326) from MarkLyck/chart-animation [[0515050](https://github.com/MarkLyck/formula-stocks/commit/0515050f651c518e1ed22881c094cad550ff3fdf)]
+- 🏷️ fix ts [[67decca](https://github.com/MarkLyck/formula-stocks/commit/67deccabc1c955bf3b39be7e624acea6707e67f3)]
+- 📝 version bump to v1.0.246 [[b5de65a](https://github.com/MarkLyck/formula-stocks/commit/b5de65a99cbc475e8e571b9ecf41ca83f513580e)]
+- 📝 generated changelog [[33e7558](https://github.com/MarkLyck/formula-stocks/commit/33e7558db53dc592159def6d44d0e7efa008b939)]
+
+
 <a name="1.0.245"></a>
 ## 1.0.245 (2021-06-30)
 
