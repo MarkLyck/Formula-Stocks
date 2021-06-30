@@ -12,6 +12,7 @@ type AnimatedChartProps = {
   isLoading: boolean
   error: any
   planPerformance: any
+  setTab: (key: string) => void
 }
 
 const BalanceContainer = styled.div`
@@ -69,12 +70,15 @@ const IconContainer = styled.div`
   border: 1px solid #f0f0f0;
 `
 
-const ReplayButton = styled(Button)`
+const ActionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 999;
+  transform: translate(-50%, -50%);
 `
 
 const createPlanData = (data: any[]) => {
@@ -93,7 +97,7 @@ const createPlanData = (data: any[]) => {
 
 const dollarFormatterRounded = (value: number) => currencyRoundedFormatter.format(value)
 
-const AnimatedChart = ({ data }: any) => {
+const AnimatedChart = ({ data, setTab }: any) => {
   const [animating, setAnimating] = useState(false)
   const [chartData, setChartData]: any = useState(data)
 
@@ -156,14 +160,25 @@ const AnimatedChart = ({ data }: any) => {
     <GraphContainer>
       {chartData.length >= 1 && renderCounters()}
       {chartData.length === data.length && (
-        <ReplayButton
-          type="primary"
-          size="large"
-          onClick={replay}
-          icon={<FontAwesomeIcon icon={['fad', 'play-circle']} style={{ marginRight: 8 }} />}
-        >
-          Play simulation from 1970
-        </ReplayButton>
+        <ActionContainer>
+          <Button
+            type="primary"
+            size="large"
+            onClick={replay}
+            icon={<FontAwesomeIcon icon={['fad', 'play-circle']} style={{ marginRight: 8 }} />}
+            style={{ width: 240, marginBottom: 16 }}
+          >
+            Play portfolio simulation
+          </Button>
+          <Button
+            size="large"
+            style={{ width: 240 }}
+            onClick={() => setTab('1')}
+            icon={<FontAwesomeIcon icon={['fad', 'balance-scale-right']} style={{ marginRight: 8 }} />}
+          >
+            Compare to the S&P500
+          </Button>
+        </ActionContainer>
       )}
       <AnimationChart
         data={chartData}
@@ -177,7 +192,7 @@ const AnimatedChart = ({ data }: any) => {
   )
 }
 
-const AnimatedChartProvider = ({ isLoading, error, planPerformance }: AnimatedChartProps) => {
+const AnimatedChartProvider = ({ isLoading, error, planPerformance, setTab }: AnimatedChartProps) => {
   if (error) {
     return (
       <ChartLoaderContainer>
@@ -197,7 +212,7 @@ const AnimatedChartProvider = ({ isLoading, error, planPerformance }: AnimatedCh
 
   const fullChartData: any[] = createPlanData(planPerformance)
 
-  return <AnimatedChart data={fullChartData} />
+  return <AnimatedChart data={fullChartData} setTab={setTab} />
 }
 
 export default AnimatedChartProvider
