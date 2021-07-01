@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { maxSiteWidth } from 'src/common/styles'
 import { LATEST_SELL_SIGNALS } from 'src/common/queries'
-import { ScalingTitle, ScalingSubTitle, GenericLoading, Disclaimer, Tag, StockReturn } from 'src/ui-components'
+import { ScalingTitle, ScalingSubTitle, GenericLoading, Tag, StockReturn, ActionButton } from 'src/ui-components'
+import { PastTradesModal } from '../Modals'
 import { Table, TableBody, TableRow, TableCell, TableHeadCell, StockName } from './styles'
 
 const LatestSellsContainer = styled.div`
@@ -31,12 +33,6 @@ const ReturnTableCell = styled(TableCell)`
   max-width: 120px;
 `
 
-const StyledDisclaimer = styled(Disclaimer)`
-  margin: 16px auto 0;
-  width: 100%;
-  text-align: center;
-`
-
 const StockContainer = styled.div`
   display: flex;
   align-items: center;
@@ -47,6 +43,7 @@ const TagContainer = styled.div`
 `
 
 const LatestSellSignals = () => {
+  const [modalVisible, setModalVisible] = useState(false)
   const { loading, error, data } = useQuery(LATEST_SELL_SIGNALS)
 
   const [numberVisible] = useState(10)
@@ -54,6 +51,7 @@ const LatestSellSignals = () => {
 
   return (
     <LatestSellsContainer>
+      <PastTradesModal isVisible={modalVisible} onClose={() => setModalVisible(false)} />
       <ScalingTitle>Latest sell signals</ScalingTitle>
       <ScalingSubTitle style={{ marginBottom: 40 }}>
         Here's our 10 latest sell signals (updated monthly)
@@ -92,7 +90,11 @@ const LatestSellSignals = () => {
           })}
         </TableBody>
       </Table>
-      <StyledDisclaimer>*Past results are not necessarily indicative of future returns.</StyledDisclaimer>
+      {/* @ts-ignore */}
+      <ActionButton onClick={() => setModalVisible(true)} style={{ marginTop: 32 }}>
+        <FontAwesomeIcon icon={['fad', 'history']} style={{ marginRight: 8 }} />
+        SEE ALL HISTORICAL TRADES
+      </ActionButton>
     </LatestSellsContainer>
   )
 }

@@ -62,7 +62,7 @@ const chartTooltip = (title: string, items: any[], theme: any) => {
   const value = items[0].data.percentIncrease
   const buyPrice = items[0].data.buyPrice.toFixed(2)
   const sellPrice = items[0].data.sellPrice.toFixed(2)
-  const symbol = items[0].data.obfuscatedSymbol
+  const symbol = items[0].data.symbol
   const startDate = items[0].data.startDate
   const endDate = items[0].data.endDate
 
@@ -114,6 +114,7 @@ const ScatterChart = ({ data, loading }: any) => {
 
   var config = {
     autoFit: true,
+    height: 500,
     xField: 'daysHeld',
     xAxis: {
       label: {
