@@ -114,7 +114,7 @@ const ScatterChart = ({ data, loading }: any) => {
 
   var config = {
     autoFit: true,
-    height: 500,
+    height: 400,
     xField: 'daysHeld',
     xAxis: {
       label: {
@@ -123,6 +123,9 @@ const ScatterChart = ({ data, loading }: any) => {
     },
     yField: 'percentIncrease',
     yAxis: {
+      min: -100,
+      minLimit: -100,
+      max: 500,
       label: {
         formatter: (value: number) => `${value > 0 ? '+' : ''}${value}%`,
       },
