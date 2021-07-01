@@ -6,7 +6,6 @@ export const TRADE_HISTORY = gql`
       items {
         symbol
         obfuscatedSymbol
-        companyName
         buyPrice
         sellPrice
         percentIncrease
