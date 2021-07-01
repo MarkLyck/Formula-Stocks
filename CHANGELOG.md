@@ -1,5 +1,33 @@
 # Changelog
 
+<a name="1.0.252"></a>
+## 1.0.252 (2021-07-01)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.252 [[0b2d83c](https://github.com/MarkLyck/formula-stocks/commit/0b2d83ce05ec996c5668b684c49d6954ced78a35)]
+
+
+<a name="1.0.251"></a>
+## 1.0.251 (2021-07-01)
+
+### Added
+
+- ✨ improve trade history [[21fd8ee](https://github.com/MarkLyck/formula-stocks/commit/21fd8ee8a498254fe36e948edb1a801b35c4018f)]
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.13 [[5e6b75a](https://github.com/MarkLyck/formula-stocks/commit/5e6b75a54f13c4a9e3de95f984fef4a85c08417c)]
+
+### Miscellaneous
+
+-  Merge pull request [#331](https://github.com/MarkLyck/formula-stocks/issues/331) from MarkLyck/renovate/react-17.x [[27aafbb](https://github.com/MarkLyck/formula-stocks/commit/27aafbbd6ec7c04f4326e012fb6851829340b2ef)]
+-  Merge pull request [#332](https://github.com/MarkLyck/formula-stocks/issues/332) from MarkLyck/scatter-plot [[6d1beb9](https://github.com/MarkLyck/formula-stocks/commit/6d1beb90cc143e7f8b0f4ef51ddd99b1272b1c62)]
+- 🏷️ fix tsc [[a5ed36f](https://github.com/MarkLyck/formula-stocks/commit/a5ed36f143e1b810d43778305aab16646f02c66f)]
+- 📝 version bump to v1.0.251 [[04c72e6](https://github.com/MarkLyck/formula-stocks/commit/04c72e6077d2d0e5aaabf0bbef2f5779b91fe0f8)]
+- 📝 generated changelog [[398405a](https://github.com/MarkLyck/formula-stocks/commit/398405a943e8fe7f798dcf6c4806f089c2935950)]
+
+
 <a name="1.0.250"></a>
 ## 1.0.250 (2021-07-01)
 
