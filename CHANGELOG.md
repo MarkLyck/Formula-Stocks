@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.253"></a>
+## 1.0.253 (2021-07-01)
+
+### Fixed
+
+- 🐛 fix query name [[7fb3393](https://github.com/MarkLyck/formula-stocks/commit/7fb33938aa435d6214c9005d910048f1067fe955)]
+
+### Miscellaneous
+
+-  Merge pull request [#333](https://github.com/MarkLyck/formula-stocks/issues/333) from MarkLyck/scatter-plot [[c982002](https://github.com/MarkLyck/formula-stocks/commit/c98200234095611787e26b4189e03f3b6f4e2afc)]
+- 📝 version bump to v1.0.253 [[4fe7740](https://github.com/MarkLyck/formula-stocks/commit/4fe77409438ab7414bb661af2249269adf4dc1c9)]
+- 📝 generated changelog [[24214bb](https://github.com/MarkLyck/formula-stocks/commit/24214bb1bcc74532a8c29b2e0782c3dd51765fcb)]
+
+
 <a name="1.0.252"></a>
 ## 1.0.252 (2021-07-01)
 
