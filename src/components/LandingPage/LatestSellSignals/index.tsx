@@ -4,15 +4,7 @@ import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { maxSiteWidth } from 'src/common/styles'
 import { LATEST_SELL_SIGNALS } from 'src/common/queries'
-import {
-  ScalingTitle,
-  ScalingSubTitle,
-  GenericLoading,
-  Disclaimer,
-  Tag,
-  StockReturn,
-  ActionButton,
-} from 'src/ui-components'
+import { ScalingTitle, ScalingSubTitle, GenericLoading, Tag, StockReturn, ActionButton } from 'src/ui-components'
 import { PastTradesModal } from '../Modals'
 import { Table, TableBody, TableRow, TableCell, TableHeadCell, StockName } from './styles'
 
@@ -98,6 +90,7 @@ const LatestSellSignals = () => {
           })}
         </TableBody>
       </Table>
+      {/* @ts-ignore */}
       <ActionButton onClick={() => setModalVisible(true)} style={{ marginTop: 32 }}>
         <FontAwesomeIcon icon={['fad', 'history']} style={{ marginRight: 8 }} />
         SEE ALL HISTORICAL TRADES
