@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.254"></a>
+## 1.0.254 (2021-07-01)
+
+### Fixed
+
+- 🐛 limit trade history to 1 plan [[6520cac](https://github.com/MarkLyck/formula-stocks/commit/6520cacb4754b6228c300d6561b5e7dfd51c3016)]
+
+### Miscellaneous
+
+-  Merge pull request [#334](https://github.com/MarkLyck/formula-stocks/issues/334) from MarkLyck/scatter-plot [[01227e7](https://github.com/MarkLyck/formula-stocks/commit/01227e713ac4c49de32a3ea53eb98de17921d674)]
+- 📝 version bump to v1.0.254 [[7cb5a60](https://github.com/MarkLyck/formula-stocks/commit/7cb5a601afb1721200a86bb9e1d620d85f734764)]
+- 📝 generated changelog [[85dd541](https://github.com/MarkLyck/formula-stocks/commit/85dd5412efcd1a6b032c2049457d9033c317db8e)]
+
+
 <a name="1.0.253"></a>
 ## 1.0.253 (2021-07-01)
 
