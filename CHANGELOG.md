@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.248"></a>
+## 1.0.248 (2021-07-01)
+
+### Added
+
+- ✨ add scatter plot for historical trades [[94ffb0f](https://github.com/MarkLyck/formula-stocks/commit/94ffb0f7bb1a68ea0e0780c9829efdd5ce0f9a79)]
+
+### Miscellaneous
+
+-  Merge pull request [#327](https://github.com/MarkLyck/formula-stocks/issues/327) from MarkLyck/scatter-plot [[6c82528](https://github.com/MarkLyck/formula-stocks/commit/6c8252816b05ba309f0abbbbfab8dd98201f5835)]
+- 🏷️ fix import [[fc73a83](https://github.com/MarkLyck/formula-stocks/commit/fc73a8395a744d6a391406496202674daa4412ea)]
+- 📝 version bump to v1.0.248 [[5fbf18d](https://github.com/MarkLyck/formula-stocks/commit/5fbf18d624d1e948acecb017ef58b55c7e10340a)]
+- 📝 generated changelog [[db5ae24](https://github.com/MarkLyck/formula-stocks/commit/db5ae24d0cdfeb3496e34e6e8bf1a9b981fa857f)]
+
+
 <a name="1.0.247"></a>
 ## 1.0.247 (2021-06-30)
 
