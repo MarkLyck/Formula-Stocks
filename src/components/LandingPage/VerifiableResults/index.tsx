@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
-import { Space, Button } from 'antd'
+import { Space } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Highlight, ScalingTitle, ScalingParagraph, LandingPageContainer, Beside, SpaceImage } from 'src/ui-components'
+import {
+  ActionButton,
+  Highlight,
+  ScalingTitle,
+  ScalingParagraph,
+  LandingPageContainer,
+  Beside,
+  SpaceImage,
+} from 'src/ui-components'
 import { PastTradesModal } from '../Modals'
 
 const ContentContainer = styled.div`
@@ -47,13 +55,10 @@ const VerifiableResults = () => {
               a large margin of safety. Of course Formula Stocks is built to automate this process and give you time
               back to do the things you love.
             </ScalingParagraph>
-            <Button
-              size="large"
-              icon={<FontAwesomeIcon icon={['fad', 'history']} style={{ marginRight: 8 }} />}
-              onClick={() => setModalVisible(true)}
-            >
-              See all past trades
-            </Button>
+            <ActionButton onClick={() => setModalVisible(true)}>
+              <FontAwesomeIcon icon={['fad', 'history']} style={{ marginRight: 8 }} />
+              SEE ALL HISTORICAL TRADES
+            </ActionButton>
           </Space>
         </ContentContainer>
       </Beside>
