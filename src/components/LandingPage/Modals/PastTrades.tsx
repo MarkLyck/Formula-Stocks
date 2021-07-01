@@ -52,7 +52,7 @@ const columns = [
 
 const PastTradesModal = ({ isVisible, onClose }: PastTradesModalProps) => {
   const theme = useTheme()
-  const { data, loading } = useQuery(TRADE_HISTORY)
+  const { data, loading } = useQuery(TRADE_HISTORY, { variables: { planName: 'entry' } })
   const trades = data?.tradeHistoriesList?.items || []
   const finalTrades = trades
     .map((trade: any) => {
