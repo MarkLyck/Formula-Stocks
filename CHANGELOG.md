@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.255"></a>
+## 1.0.255 (2021-07-01)
+
+### Added
+
+- ✨ scatterplot max 500 [[a327eb3](https://github.com/MarkLyck/formula-stocks/commit/a327eb3902fc1be1ea7cc04fa7cc55c36cf28b8c)]
+
+### Miscellaneous
+
+-  Merge pull request [#335](https://github.com/MarkLyck/formula-stocks/issues/335) from MarkLyck/scatter-plot [[e88b503](https://github.com/MarkLyck/formula-stocks/commit/e88b50375d2732f0287470df1b0cde2bf2af6c79)]
+- 📝 version bump to v1.0.255 [[0031e0b](https://github.com/MarkLyck/formula-stocks/commit/0031e0b071e4133b9d0a62f9bf4b5d393f897ba1)]
+- 📝 generated changelog [[4535da3](https://github.com/MarkLyck/formula-stocks/commit/4535da32a2e5c03c7da33b5d245ce07883d6d6da)]
+
+
 <a name="1.0.254"></a>
 ## 1.0.254 (2021-07-01)
 
