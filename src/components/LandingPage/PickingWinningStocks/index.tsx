@@ -76,8 +76,8 @@ const HowItWorks = () => {
             </ScalingTitle>
             <ScalingParagraph>
               Meet Joe. Joe is an artificial intelligence with a diverse personality. He simultaneously thinks like 25
-              of the best super investors of recent centuries, such as Benjamin Graham, Philip Fisher, Warren Buffett,
-              Jesse Livermore, to name a few.
+              of the best super investors, such as Benjamin Graham, Philip Fisher, Warren Buffett, Jesse Livermore, to
+              name a few.
             </ScalingParagraph>
             <ScalingParagraph>
               Joe can help you earn a better return on your capital. He is happy when he can invest in a wonderful
