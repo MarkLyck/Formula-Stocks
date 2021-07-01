@@ -1,5 +1,31 @@
 # Changelog
 
+<a name="1.0.250"></a>
+## 1.0.250 (2021-07-01)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.250 [[7031522](https://github.com/MarkLyck/formula-stocks/commit/703152206628f14af63446020f5e70c659ef7d69)]
+
+
+<a name="1.0.249"></a>
+## 1.0.249 (2021-07-01)
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.12 [[0a04d13](https://github.com/MarkLyck/formula-stocks/commit/0a04d13d36dde18f6db2784565585eb9cb6d4fef)]
+- ⬆️ Update dependency typescript to v4.3.5 [[08e8eae](https://github.com/MarkLyck/formula-stocks/commit/08e8eae084f0fe2dd5ad3d131a674773ac53d2f8)]
+
+### Miscellaneous
+
+-  Merge pull request [#329](https://github.com/MarkLyck/formula-stocks/issues/329) from MarkLyck/renovate/react-17.x [[60466d3](https://github.com/MarkLyck/formula-stocks/commit/60466d399c395fa23f2c0d4bfb3fd8318e7a5e5c)]
+-  Merge pull request [#328](https://github.com/MarkLyck/formula-stocks/issues/328) from MarkLyck/renovate/typescript-4.x [[ee2ca23](https://github.com/MarkLyck/formula-stocks/commit/ee2ca23fb6b62d6b297fd26a34b4cf44f2432491)]
+-  Merge pull request [#330](https://github.com/MarkLyck/formula-stocks/issues/330) from MarkLyck/scatter-plot [[a774d05](https://github.com/MarkLyck/formula-stocks/commit/a774d05b76e548a9a7376bfadf874f34d9b9733b)]
+- 🌐 update picking winning stocks text [[087235f](https://github.com/MarkLyck/formula-stocks/commit/087235ff35099d4b7d2c15b8bf3599c42e937a49)]
+- 📝 version bump to v1.0.249 [[141287f](https://github.com/MarkLyck/formula-stocks/commit/141287f99dd53a258a4de7faa27b5cdcd49e0142)]
+- 📝 generated changelog [[fefa513](https://github.com/MarkLyck/formula-stocks/commit/fefa51380f0b6c0a5b7be34d6717dd125dcf311e)]
+
+
 <a name="1.0.248"></a>
 ## 1.0.248 (2021-07-01)
 
