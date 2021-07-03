@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Container = styled.div`
