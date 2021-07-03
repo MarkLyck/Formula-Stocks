@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.259"></a>
+## 1.0.259 (2021-07-03)
+
+### Changed
+
+- ⬆️ Pin dependency @w11r/use-breakpoint to 2.1.0-rc.0 [[2910ba4](https://github.com/MarkLyck/formula-stocks/commit/2910ba4846a57cd5ae428560e2377ec1ffd71c98)]
+
+### Miscellaneous
+
+-  Merge pull request [#339](https://github.com/MarkLyck/formula-stocks/issues/339) from MarkLyck/renovate/pin-dependencies [[b6d84b0](https://github.com/MarkLyck/formula-stocks/commit/b6d84b0fe35e70e71bc329d3bfde38dc3594ea0d)]
+- 📝 version bump to v1.0.259 [[9678fbf](https://github.com/MarkLyck/formula-stocks/commit/9678fbff98d20ed927409d8268ce8a533cfecdb5)]
+- 📝 generated changelog [[29db3df](https://github.com/MarkLyck/formula-stocks/commit/29db3df89ae0639407259d595783b3525246f936)]
+
+
 <a name="1.0.258"></a>
 ## 1.0.258 (2021-07-03)
 
