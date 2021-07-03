@@ -3436,7 +3436,7 @@
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.2.tgz#808c9fa7e4517274ed555fa158f2de4b4f468e71"
   integrity sha512-HrCIVMLjE1MOozVoD86622S7aunluLb2PJdPfb3nYiEtohm8mIB/vyv0Fd37AdeMFrTUQXEunw78YloMA3Qilg==
 
-"@w11r/use-breakpoint@^2.1.0-rc.0":
+"@w11r/use-breakpoint@2.1.0-rc.0":
   version "2.1.0-rc.0"
   resolved "https://registry.yarnpkg.com/@w11r/use-breakpoint/-/use-breakpoint-2.1.0-rc.0.tgz#54384bc34f0bdf67768b683f0f068d8ea0c210bc"
   integrity sha512-b7NQnChfN9US+/hUKdzA6CnjV8zLOC4uQC+XaYlQfdXQ4mx4bPinBcU70nVE99BwOKVECaox66MW7z6nuUetBg==
