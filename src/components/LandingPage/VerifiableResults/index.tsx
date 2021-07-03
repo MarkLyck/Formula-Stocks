@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Space } from 'antd'
+import { Space, Card } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -25,6 +25,20 @@ const ContentContainer = styled.div`
   }
 `
 
+const YearReturnContainer = styled(Card)`
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
+
+  .ant-card-body {
+    padding: 16px 24px;
+  }
+`
+const Return = styled.span`
+  margin-left: 16px;
+  color: ${(p) => p.theme.palette.success[600]};
+`
+
 const VerifiableResults = () => {
   const [modalVisible, setModalVisible] = useState(false)
   return (
@@ -38,22 +52,28 @@ const VerifiableResults = () => {
               Verifiable <Highlight>results</Highlight>
             </ScalingTitle>
             <ScalingParagraph>
-              Formula Stocks underwent a pilot test in 2009, 2010 and 2010 where we first tested the system in a real
-              trading account. The results of the pilot test is verified by a 3rd party auditor.
+              Since inception in 2003, and launch in 2009, Formula Stocks has delivered strong results for its users.
               <br />
               <br />
-              2009: +78.94%
+              Upon launch we initiated a 3 year pilot program, as verified by a 3rd party licensed auditor:
               <br />
-              2010: +44.64%
+              <Space style={{ margin: '16px 0' }}>
+                <YearReturnContainer>
+                  2009: <Return>+78.94%</Return>
+                </YearReturnContainer>
+                <YearReturnContainer>
+                  2010: <Return>+44.64%</Return>
+                </YearReturnContainer>
+                <YearReturnContainer>
+                  2011: <Return>+17.51%</Return>
+                </YearReturnContainer>
+              </Space>
               <br />
-              2011: +17.51%
+              Optimizing the odds for great future results is what Joe does best, even as future results are always
+              unknown.
               <br />
               <br />
-              But the best way to verify our strategy, is by doing it yourself. Since we don't manage your account, our
-              trades are all publically available in real-time. If you have the knowledge and time to research our stock
-              signals you will likely come to the same conclusion as Joe and invest in wonderful growing businesses with
-              a large margin of safety. Of course Formula Stocks is built to automate this process and give you time
-              back to do the things you love.
+              By clicking below you can examine how each of our previous trades have worked out seen in retrospect.
             </ScalingParagraph>
             <ActionButton onClick={() => setModalVisible(true)}>
               <FontAwesomeIcon icon={['fad', 'history']} style={{ marginRight: 8 }} />
