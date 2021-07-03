@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.257"></a>
+## 1.0.257 (2021-07-03)
+
+### Added
+
+- ✨ add annual pricing toggle [[5af9f95](https://github.com/MarkLyck/formula-stocks/commit/5af9f950475db0a4383bc56aaff3542cd6e4203c)]
+
+### Miscellaneous
+
+-  Merge pull request [#337](https://github.com/MarkLyck/formula-stocks/issues/337) from MarkLyck/annual-pricing [[83f7449](https://github.com/MarkLyck/formula-stocks/commit/83f7449372cb96a731e30fe85a671e72cfab013d)]
+- 🏷️ fix ts [[0198afc](https://github.com/MarkLyck/formula-stocks/commit/0198afc3a6e4b05b0c1b6913c203652188c20f49)]
+- 📝 version bump to v1.0.257 [[020b94b](https://github.com/MarkLyck/formula-stocks/commit/020b94befc0467b0bdff6b7f55815ed5984d4495)]
+- 📝 generated changelog [[d134ef7](https://github.com/MarkLyck/formula-stocks/commit/d134ef70d022b5ea100af3f3fb929805ff55a0c3)]
+
+
 <a name="1.0.256"></a>
 ## 1.0.256 (2021-07-03)
 
