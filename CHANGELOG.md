@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="1.0.258"></a>
+## 1.0.258 (2021-07-03)
+
+### Miscellaneous
+
+-  Merge pull request [#338](https://github.com/MarkLyck/formula-stocks/issues/338) from MarkLyck/breakpoints [[ca92ce3](https://github.com/MarkLyck/formula-stocks/commit/ca92ce3c72c81cdc639d2fc281bafe8781df0ba9)]
+- 📦 update w11r breakpoints package [[68f7a96](https://github.com/MarkLyck/formula-stocks/commit/68f7a96df6d6ba08a1605fb372055e7d48d8204c)]
+- 📝 version bump to v1.0.258 [[ff308bc](https://github.com/MarkLyck/formula-stocks/commit/ff308bc873477e0999e5ae3d0bfd9f83504a3774)]
+- 📝 generated changelog [[b477f8e](https://github.com/MarkLyck/formula-stocks/commit/b477f8eaf8cab79238575032d269f74b31337816)]
+
+
 <a name="1.0.257"></a>
 ## 1.0.257 (2021-07-03)
 
