@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.256"></a>
+## 1.0.256 (2021-07-03)
+
+### Added
+
+- ✨ update results section [[c191274](https://github.com/MarkLyck/formula-stocks/commit/c19127464c6045df0cccee1bfa38af230a97d949)]
+
+### Miscellaneous
+
+-  Merge pull request [#336](https://github.com/MarkLyck/formula-stocks/issues/336) from MarkLyck/verfiable-results-sections [[dd562d7](https://github.com/MarkLyck/formula-stocks/commit/dd562d73e4761f64c7b486acd2d6198b77628f9b)]
+- 📝 version bump to v1.0.256 [[9db6d86](https://github.com/MarkLyck/formula-stocks/commit/9db6d864693c9388a381ce09b67ab85e33e8078e)]
+- 📝 generated changelog [[c87b6dd](https://github.com/MarkLyck/formula-stocks/commit/c87b6dddf418fe08aae2bb0fb7ee64f009e59389)]
+
+
 <a name="1.0.255"></a>
 ## 1.0.255 (2021-07-01)
 
