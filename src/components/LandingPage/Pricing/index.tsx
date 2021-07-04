@@ -102,7 +102,7 @@ const Pricing = ({ showSignup }: any) => {
           <PriceTag>
             ${pricingMap[term].entry} / month{term === 'annually' && <sup>*</sup>}
           </PriceTag>
-          <Button onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">
+          <Button size="large" onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">
             Try it for free
           </Button>
         </PricingCard>
@@ -122,7 +122,7 @@ const Pricing = ({ showSignup }: any) => {
           <PriceTag>
             ${pricingMap[term].premium} / month{term === 'annually' && <sup>*</sup>}
           </PriceTag>
-          <Button onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">
+          <Button size="large" onClick={showSignup} style={{ fontWeight: 'bold' }} type="primary">
             Get started
           </Button>
         </PricingCard>
@@ -140,7 +140,9 @@ const Pricing = ({ showSignup }: any) => {
             </SmallFeatureCard>
           </Tooltip>
           <PriceTag>Contact us</PriceTag>
-          <Button style={{ fontWeight: 'bold' }}>Send email</Button>
+          <Button size="large" style={{ fontWeight: 'bold' }} href="mailto:mark@formulastocks.com">
+            Send email
+          </Button>
         </PricingCard>
       </Container>
       {/* <StyledAlert type="info" message="You stay in full control of your investments in your brokerage account!" /> */}

@@ -67,9 +67,9 @@ const ScheduleToggle = ({ term, setTerm }: ScheduleToggleProps) => {
     // @ts-ignore
     <Container isOn={term === 'monthly'} onClick={toggleSwitch}>
       <Handle layout transition={spring}>
-        {term === 'annually' ? 'Annually' : 'Monthly'}
+        {term === 'annually' ? 'Yearly' : 'Monthly'}
       </Handle>
-      <UnselectedTextLeft>Annually</UnselectedTextLeft>
+      <UnselectedTextLeft>Yearly</UnselectedTextLeft>
       <UnselectedTextRight>Monthly</UnselectedTextRight>
     </Container>
   )
