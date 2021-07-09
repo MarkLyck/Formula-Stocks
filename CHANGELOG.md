@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.268"></a>
+## 1.0.268 (2021-07-09)
+
+### Changed
+
+- ⬆️ Update dependency @types/react-highlight-words to v0.16.3 [[f068da7](https://github.com/MarkLyck/formula-stocks/commit/f068da7dc0b526a0907cf56a4f0c10faeed2f7ff)]
+- ⬆️ Update dependency @types/node to v14.17.5 [[6896855](https://github.com/MarkLyck/formula-stocks/commit/6896855f16096a35a24ba08c393243d7c91cc712)]
+
+### Miscellaneous
+
+-  Merge pull request [#350](https://github.com/MarkLyck/formula-stocks/issues/350) from MarkLyck/renovate/react-highlight-words-0.x [[6ed7bdd](https://github.com/MarkLyck/formula-stocks/commit/6ed7bdd9a837aed7a38f822d9f08211129b99e3e)]
+-  Merge pull request [#347](https://github.com/MarkLyck/formula-stocks/issues/347) from MarkLyck/renovate/node-14.x [[ae6167c](https://github.com/MarkLyck/formula-stocks/commit/ae6167c44df8710b5f2cd4ca9d250c4fe0fbf23e)]
+- 📝 version bump to v1.0.268 [[74e3ef9](https://github.com/MarkLyck/formula-stocks/commit/74e3ef94ed3fb4447ec8baa0621687bf653c911b)]
+- 📝 version bump to v1.0.267 [[2296f4a](https://github.com/MarkLyck/formula-stocks/commit/2296f4a0fdc9e29e42dafe5299e58cb2bc5e9220)]
+- 📝 generated changelog [[62bcb5c](https://github.com/MarkLyck/formula-stocks/commit/62bcb5c5917c0b5ceb94cd1062763c32a70ee56b)]
+
+
 <a name="1.0.266"></a>
 ## 1.0.266 (2021-07-09)
 
