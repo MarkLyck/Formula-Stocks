@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.269"></a>
+## 1.0.269 (2021-07-09)
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.14 [[48abf52](https://github.com/MarkLyck/formula-stocks/commit/48abf52577df0b1b6c1b9f21e80d371852534bf7)]
+
+### Miscellaneous
+
+-  Merge pull request [#351](https://github.com/MarkLyck/formula-stocks/issues/351) from MarkLyck/renovate/react-17.x [[87a7f0e](https://github.com/MarkLyck/formula-stocks/commit/87a7f0e6a38e9016a529b5e28723eea6eb1c999e)]
+- 📝 version bump to v1.0.269 [[722dae7](https://github.com/MarkLyck/formula-stocks/commit/722dae7b3a6af2c6bca23d78d354814a82a42d1c)]
+- 📝 generated changelog [[03110b0](https://github.com/MarkLyck/formula-stocks/commit/03110b0729cc7f00d8e2ddca0c190ebba6160e5b)]
+
+
 <a name="1.0.268"></a>
 ## 1.0.268 (2021-07-09)
 
