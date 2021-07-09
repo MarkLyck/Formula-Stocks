@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.264"></a>
+## 1.0.264 (2021-07-09)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.264 [[226d2c3](https://github.com/MarkLyck/formula-stocks/commit/226d2c396380a29498c73df510f8f3854580dcd6)]
+
+
+<a name="1.0.263"></a>
+## 1.0.263 (2021-07-09)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.263 [[1609b0d](https://github.com/MarkLyck/formula-stocks/commit/1609b0df66bc07517400f1cba290edf9a19b1ad4)]
+- 📝 generated changelog [[8586186](https://github.com/MarkLyck/formula-stocks/commit/85861861809c5773c7350e1658b12b0c05682c32)]
+
+
 <a name="1.0.262"></a>
 ## 1.0.262 (2021-07-09)
 
