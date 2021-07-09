@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.265"></a>
+## 1.0.265 (2021-07-09)
+
+### Changed
+
+- ⬆️ Update dependency @types/lodash to v4.14.171 [[458d0bd](https://github.com/MarkLyck/formula-stocks/commit/458d0bdf99e3698acfadf1dc9b97833e6635754e)]
+- ⬆️ Update dependency @types/platform to v1.3.4 [[11ff9b3](https://github.com/MarkLyck/formula-stocks/commit/11ff9b3238c45894f9f04f0306597a9e4321a72a)]
+
+### Miscellaneous
+
+-  Merge pull request [#348](https://github.com/MarkLyck/formula-stocks/issues/348) from MarkLyck/renovate/platform-1.x [[ec07573](https://github.com/MarkLyck/formula-stocks/commit/ec07573600f49f74d3da7ab8f758f70cf5c25f04)]
+-  Merge pull request [#343](https://github.com/MarkLyck/formula-stocks/issues/343) from MarkLyck/renovate/lodash-4.x [[af4315f](https://github.com/MarkLyck/formula-stocks/commit/af4315f8fb95e28c95e9a536556f2d023b4662ec)]
+- 📝 version bump to v1.0.265 [[51a4c51](https://github.com/MarkLyck/formula-stocks/commit/51a4c51859b91279aa1692142411a09a21865485)]
+- 📝 generated changelog [[26ba36c](https://github.com/MarkLyck/formula-stocks/commit/26ba36c96729060a09051b9d424a1f9ef339ccf4)]
+
+
 <a name="1.0.264"></a>
 ## 1.0.264 (2021-07-09)
 
