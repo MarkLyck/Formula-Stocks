@@ -1,5 +1,42 @@
 # Changelog
 
+<a name="1.0.262"></a>
+## 1.0.262 (2021-07-09)
+
+### Changed
+
+- ⬆️ Update dependency @types/react-scroll to v1.8.3 [[c0d54f7](https://github.com/MarkLyck/formula-stocks/commit/c0d54f746e677cc89432a547425c82f49a7aea12)]
+- ⬆️ Update dependency @types/react-dom to v17.0.9 [[920069e](https://github.com/MarkLyck/formula-stocks/commit/920069e2b38a144ec42caf9c6f9f9eb61f694496)]
+
+### Miscellaneous
+
+-  Merge pull request [#352](https://github.com/MarkLyck/formula-stocks/issues/352) from MarkLyck/renovate/react-scroll-1.x [[bed84af](https://github.com/MarkLyck/formula-stocks/commit/bed84af712b82c13f4e1fc80e684792f3a5990ba)]
+-  Merge pull request [#349](https://github.com/MarkLyck/formula-stocks/issues/349) from MarkLyck/renovate/react-dom-17.x [[71aab98](https://github.com/MarkLyck/formula-stocks/commit/71aab986f5b4668bdd4fedbd33b276f2c710a327)]
+- 📝 version bump to v1.0.262 [[073e4bc](https://github.com/MarkLyck/formula-stocks/commit/073e4bc589b3abe50769620f5dfca5c26fa4428e)]
+
+
+<a name="1.0.261"></a>
+## 1.0.261 (2021-07-09)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.3.4 [[47daed0](https://github.com/MarkLyck/formula-stocks/commit/47daed019430a56a4a88d56704bd3f3e460e3939)]
+- ⬆️ Update dependency ahooks to v2.10.7 [[edf0b57](https://github.com/MarkLyck/formula-stocks/commit/edf0b57a95f869b3af9822fac120711c6d053270)]
+- ⬆️ Update dependency @types/mixpanel-browser to v2.35.7 [[6a7d5c3](https://github.com/MarkLyck/formula-stocks/commit/6a7d5c33b5f08a102215c3d498d50d87173545d5)]
+- ⬆️ Update dependency @apollo/client to v3.3.21 [[3d49437](https://github.com/MarkLyck/formula-stocks/commit/3d494377d44fd001cd5fd1157bc61d1359f45f89)]
+- ⬆️ Update dependency dayjs to v1.10.6 [[e3bb405](https://github.com/MarkLyck/formula-stocks/commit/e3bb405471c4e2114d55eef073cc5aa60319db88)]
+
+### Miscellaneous
+
+-  Merge pull request [#346](https://github.com/MarkLyck/formula-stocks/issues/346) from MarkLyck/renovate/storybook-monorepo [[f2dd73c](https://github.com/MarkLyck/formula-stocks/commit/f2dd73c47307244ef39e5e2b58f15b9c5e9d49a8)]
+-  Merge pull request [#345](https://github.com/MarkLyck/formula-stocks/issues/345) from MarkLyck/renovate/ahooks-2.x [[3d1eddb](https://github.com/MarkLyck/formula-stocks/commit/3d1eddbe009b73af5c327a699e2012f458608ab0)]
+-  Merge pull request [#344](https://github.com/MarkLyck/formula-stocks/issues/344) from MarkLyck/renovate/mixpanel-browser-2.x [[c9d7594](https://github.com/MarkLyck/formula-stocks/commit/c9d75943fa290b75354e90f67fbbee1710ce591e)]
+-  Merge pull request [#342](https://github.com/MarkLyck/formula-stocks/issues/342) from MarkLyck/renovate/apollo-graphql-packages [[9f1effb](https://github.com/MarkLyck/formula-stocks/commit/9f1effbf72ce16c21025713b16e54f1ef0dcf275)]
+-  Merge pull request [#341](https://github.com/MarkLyck/formula-stocks/issues/341) from MarkLyck/renovate/dayjs-1.x [[04d9a21](https://github.com/MarkLyck/formula-stocks/commit/04d9a2147bd82e331a662c569b82c7d8875cdacc)]
+- 📝 version bump to v1.0.261 [[1e482a3](https://github.com/MarkLyck/formula-stocks/commit/1e482a30364114d9916db9caa5d82d140bc5baa0)]
+- 📝 generated changelog [[be0b5b1](https://github.com/MarkLyck/formula-stocks/commit/be0b5b1e0ebc48e2fe004b8e3a311c546132682c)]
+
+
 <a name="1.0.260"></a>
 ## 1.0.260 (2021-07-04)
 
