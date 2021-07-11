@@ -2,7 +2,6 @@ import { Spin, Typography, Space } from 'antd'
 import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import dynamic from 'next/dynamic'
-import { Ticker } from 'src/ui-components'
 
 const { Text } = Typography
 
@@ -43,8 +42,6 @@ const SellAction = styled.div`
   color: white;
   padding: 6px 12px;
   border-radius: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -53,38 +50,32 @@ const SellAction = styled.div`
 const TooltipLineText = styled(Text)`
   display: flex;
   justify-content: space-between;
-  width: 140px;
+  width: 160px;
 `
 
-const chartTooltip = (title: string, items: any[], theme: any) => {
+const chartTooltip = (_title: string, items: any[], theme: any) => {
   if (!items[0]) return null
 
   const value = items[0].data.percentIncrease
   const buyPrice = items[0].data.buyPrice.toFixed(2)
   const sellPrice = items[0].data.sellPrice.toFixed(2)
-  const symbol = items[0].data.symbol
   const startDate = items[0].data.startDate
-  const endDate = items[0].data.endDate
+  const daysHeld = items[0].data.daysHeld
 
   return (
     <TooltipContent>
       <ActionContainer>
         <SellAction theme={theme}>SELL</SellAction>
-        {/* @ts-ignore */}
-        <Ticker ticker={symbol} className="action-ticker" theme={theme} />
       </ActionContainer>
       <Space direction="vertical">
         <TooltipLineText>
-          Buy date: <b>{startDate}</b>
+          First purchase: <b>{startDate}</b>
         </TooltipLineText>
         <TooltipLineText>
-          Sell date: <b>{endDate}</b>
+          Duration: <b>{daysHeld} days</b>
         </TooltipLineText>
         <TooltipLineText>
-          Days held: <b>{title} days</b>
-        </TooltipLineText>
-        <TooltipLineText>
-          Bought at: <b>${buyPrice}</b>
+          Avg. buy price: <b>${buyPrice}</b>
         </TooltipLineText>
         <TooltipLineText>
           Sold at: <b>${sellPrice}</b>

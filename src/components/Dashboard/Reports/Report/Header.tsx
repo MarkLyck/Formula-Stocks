@@ -17,25 +17,28 @@ const Logo = styled.img`
   border-radius: 4px;
 `
 
-const Header = ({ profile, aiScore }: any) => {
+const Header = ({ profile, report }: any) => {
+  console.log('🔈 ~ report', report)
   const [image, setImage] = useState(profile?.image)
+  const aiScore = report?.scores?.ai_score
+  const companyName = profile?.companyName || report.name
+  const symbol = profile?.symbol || report.ticker
+  const price = profile?.price || report.price
 
   return (
     <Card>
-      {profile && (
-        <Container>
-          {/* sets the image to empty if it fails */}
-          <Logo src={image} onError={() => setImage('data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=')} />
-          <Title level={4} style={{ margin: 0 }}>
-            {profile.companyName} ({profile.symbol})
-          </Title>
-          <Title level={5} style={{ margin: 0, marginLeft: 'auto' }}>
-            {currencyFormatter.format(profile.price)}
-          </Title>
-          <Divider type="vertical" style={{ height: 32, margin: '0 16px' }} />
-          <AIScoreValue score={aiScore * 100} />
-        </Container>
-      )}
+      <Container>
+        {/* sets the image to empty if it fails */}
+        <Logo src={image} onError={() => setImage('data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=')} />
+        <Title level={4} style={{ margin: 0 }}>
+          {companyName} ({symbol})
+        </Title>
+        <Title level={5} style={{ margin: 0, marginLeft: 'auto' }}>
+          {currencyFormatter.format(price)}
+        </Title>
+        <Divider type="vertical" style={{ height: 32, margin: '0 16px' }} />
+        <AIScoreValue score={aiScore * 100} />
+      </Container>
     </Card>
   )
 }

@@ -38,6 +38,7 @@ const StockReport = () => {
   })
   const profile = fmpProfile?.FMP?.response[0]
   const report = reportData?.aIReport
+  console.log('🔈 ~ report', report)
 
   if (loading) return <Spin />
 
@@ -50,7 +51,7 @@ const StockReport = () => {
           </Breadcrumb.Item>
           <Breadcrumb.Item>{symbol}</Breadcrumb.Item>
         </Breadcrumb>
-        <Header profile={profile} aiScore={report?.scores?.ai_score} />
+        <Header profile={profile} report={report} />
         <StockChart symbol={symbol} />
         <Tabs type="card">
           <TabPane

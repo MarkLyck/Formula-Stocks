@@ -33,6 +33,7 @@ interface TickerType {
 }
 
 const Ticker = ({ ticker, ...props }: TickerType) => {
+  if (!ticker) return null
   const formattedTicker = ticker.replace('_', '.')
 
   const handleClick = () => {

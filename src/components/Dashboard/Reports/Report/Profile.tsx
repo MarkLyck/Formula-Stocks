@@ -1,4 +1,4 @@
-import { List, Card, Typography, Space, Divider } from 'antd'
+import { List, Card, Typography, Space, Divider, Empty } from 'antd'
 import styled from '@emotion/styled'
 import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 
@@ -32,6 +32,14 @@ const GridItem = ({ label, value }: any) => (
 )
 
 const Profile = ({ profile }: any) => {
+  if (!profile) {
+    return (
+      <Card>
+        <Empty description="Profile not found" />
+      </Card>
+    )
+  }
+
   const gridItems = [
     { label: 'Sector', value: profile.sector },
     { label: 'Industry', value: profile.industry },
@@ -45,35 +53,33 @@ const Profile = ({ profile }: any) => {
 
   return (
     <Card>
-      {profile && (
-        <Space direction="vertical" style={{ width: '100%' }}>
-          <Title level={4} style={{ margin: 0 }}>
-            {profile.companyName} ({profile.symbol})
-          </Title>
-          <Divider />
-          <Text>{profile.description}</Text>
-          <Divider />
-          <Grid>
-            <List
-              grid={{
-                gutter: 16,
-                xs: 1,
-                sm: 1,
-                md: 2,
-                lg: 2,
-                xl: 3,
-                xxl: 3,
-              }}
-              dataSource={gridItems}
-              renderItem={(item) => (
-                <List.Item>
-                  <GridItem label={item.label} value={item.value} />
-                </List.Item>
-              )}
-            />
-          </Grid>
-        </Space>
-      )}
+      <Space direction="vertical" style={{ width: '100%' }}>
+        <Title level={4} style={{ margin: 0 }}>
+          {profile.companyName} ({profile.symbol})
+        </Title>
+        <Divider />
+        <Text>{profile.description}</Text>
+        <Divider />
+        <Grid>
+          <List
+            grid={{
+              gutter: 16,
+              xs: 1,
+              sm: 1,
+              md: 2,
+              lg: 2,
+              xl: 3,
+              xxl: 3,
+            }}
+            dataSource={gridItems}
+            renderItem={(item) => (
+              <List.Item>
+                <GridItem label={item.label} value={item.value} />
+              </List.Item>
+            )}
+          />
+        </Grid>
+      </Space>
     </Card>
   )
 }
