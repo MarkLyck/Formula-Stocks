@@ -53,7 +53,7 @@ const TooltipLineText = styled(Text)`
   width: 160px;
 `
 
-const chartTooltip = (title: string, items: any[], theme: any) => {
+const chartTooltip = (_title: string, items: any[], theme: any) => {
   if (!items[0]) return null
 
   const value = items[0].data.percentIncrease
