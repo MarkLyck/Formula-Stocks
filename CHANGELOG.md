@@ -1,5 +1,31 @@
 # Changelog
 
+<a name="1.0.271"></a>
+## 1.0.271 (2021-07-11)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.271 [[f82cb33](https://github.com/MarkLyck/formula-stocks/commit/f82cb3370d66929791f2d28ba9c35ea56c6fd271)]
+
+
+<a name="1.0.270"></a>
+## 1.0.270 (2021-07-11)
+
+### Changed
+
+- ⬆️ Update dependency ahooks to v2.10.8 [[8c17786](https://github.com/MarkLyck/formula-stocks/commit/8c17786d3524c5256bbe10ca5ae01b5469dd1be5)]
+- ⬆️ Update dependency @stripe/stripe-js to v1.16.0 [[be6500d](https://github.com/MarkLyck/formula-stocks/commit/be6500d81a12a4ed43efa5ec20e1c57576bad809)]
+- ⬆️ Update dependency zustand to v3.5.6 [[0f7bf28](https://github.com/MarkLyck/formula-stocks/commit/0f7bf289e93ef3d6f4541ea494bac7a34cd7029d)]
+
+### Miscellaneous
+
+-  Merge pull request [#355](https://github.com/MarkLyck/formula-stocks/issues/355) from MarkLyck/renovate/ahooks-2.x [[9f8d9ba](https://github.com/MarkLyck/formula-stocks/commit/9f8d9ba00c14d33e2c69b0e274c6dff8d20b8006)]
+-  Merge pull request [#354](https://github.com/MarkLyck/formula-stocks/issues/354) from MarkLyck/renovate/stripe-stripe-js-1.x [[5b2667f](https://github.com/MarkLyck/formula-stocks/commit/5b2667feb0087473064cf086dbd377c7b0a0b708)]
+-  Merge pull request [#353](https://github.com/MarkLyck/formula-stocks/issues/353) from MarkLyck/renovate/zustand-3.x [[4458fdf](https://github.com/MarkLyck/formula-stocks/commit/4458fdfeafcd0bb7794f63adae8ab53a03db69ad)]
+- 📝 version bump to v1.0.270 [[d816ae9](https://github.com/MarkLyck/formula-stocks/commit/d816ae9dc724ef4d83ae51bc2c73ab8b618542f1)]
+- 📝 generated changelog [[d9f2f87](https://github.com/MarkLyck/formula-stocks/commit/d9f2f87a63e76cb73e9752916f54ca77ee6e5a15)]
+
+
 <a name="1.0.269"></a>
 ## 1.0.269 (2021-07-09)
 
