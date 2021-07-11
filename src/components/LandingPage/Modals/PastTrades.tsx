@@ -16,22 +16,35 @@ interface PastTradesModalProps {
 const columns = [
   {
     title: 'Trade',
-    dataIndex: 'symbol',
-    key: 'symbol',
-    render: (value: string) => <ActionPill ticker={value} action="SELL" />,
+    dataIndex: 'name',
+    key: 'name',
+    render: (name: string, row: any) => (
+      <ActionPill
+        ticker={name
+          .split('')
+          .map((char, i) => {
+            if (i === 0) return char
+            if (row.isWithinPeriod) return char
+            return '*'
+          })
+          .join('')}
+        action="SELL"
+      />
+    ),
   },
   {
-    title: 'Buy date',
+    title: 'First purchase',
     dataIndex: 'startDate',
     key: 'startDate',
   },
   {
-    title: 'Sell date',
-    dataIndex: 'endDate',
-    key: 'endDate',
+    title: 'Duration',
+    dataIndex: 'daysHeld',
+    key: 'daysHeld',
+    render: (value: number) => `${value} days`,
   },
   {
-    title: 'Bought at',
+    title: 'Avg. buy price',
     dataIndex: 'buyPrice',
     key: 'buyPrice',
     render: (value: number) => `$${value.toFixed(2)}`,
@@ -50,6 +63,8 @@ const columns = [
   },
 ]
 
+const VISIBLE_YEARS = 2
+
 const PastTradesModal = ({ isVisible, onClose }: PastTradesModalProps) => {
   const theme = useTheme()
   const { data, loading } = useQuery(TRADE_HISTORY, { variables: { planName: 'entry' } })
@@ -57,10 +72,10 @@ const PastTradesModal = ({ isVisible, onClose }: PastTradesModalProps) => {
   const finalTrades = trades
     .map((trade: any) => {
       const endDate = dayjs(trade.endDate)
-      const date1YearAgo = dayjs().subtract(1, 'year')
-      const isWithin1Year = endDate.isAfter(date1YearAgo)
+      const date1YearAgo = dayjs().subtract(VISIBLE_YEARS, 'year')
+      const isWithinPeriod = endDate.isAfter(date1YearAgo)
 
-      return { ...trade, symbol: isWithin1Year ? trade.symbol : trade.obfuscatedSymbol }
+      return { ...trade, isWithinPeriod }
     })
     .reverse()
 

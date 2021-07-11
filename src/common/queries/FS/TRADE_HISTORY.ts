@@ -5,6 +5,7 @@ export const TRADE_HISTORY = gql`
     tradeHistoriesList(filter: { plan: { planID: { equals: $planName } } }) {
       items {
         symbol
+        name
         obfuscatedSymbol
         buyPrice
         sellPrice

@@ -23,6 +23,8 @@ export const SEARCH_REPORTS_QUERY = gql`
 export const GET_REPORT_QUERY = gql`
   query GET_REPORT_QUERY($ticker: String) {
     aIReport(ticker: $ticker) {
+      name
+      ticker
       aIScore
       scores
       price
