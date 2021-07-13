@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { Form, Input, Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import CountrySelector from './CountrySelector'
+
 const StyledForm = styled(Form)`
   svg {
     margin-right: 8px;
@@ -53,6 +55,7 @@ const SignupForm = ({ onSubmit }: any) => (
     >
       <Input.Password prefix={<FontAwesomeIcon icon={['fad', 'lock-alt']} />} placeholder="password" />
     </Form.Item>
+    <CountrySelector />
 
     <Form.Item>
       <Button type="primary" htmlType="submit" block>
