@@ -30,7 +30,7 @@
     "@w11r/use-breakpoint": "2.1.0-rc.0",
     "@zeit/next-css": "1.0.1",
     "ahooks": "2.10.8",
-    "antd": "4.16.6",
+    "antd": "4.16.7",
     "apollo-link-context": "1.0.20",
     "copy-to-clipboard": "3.3.1",
     "date-fns-tz": "1.1.4",
