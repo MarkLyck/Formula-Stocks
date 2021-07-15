@@ -2,7 +2,7 @@ import React from 'react'
 import { USER_SIGNUP } from 'src/common/queries'
 import { USER_SIGNUP_MOCK } from 'src/tests/mocks'
 import LoginModal from './index'
-import SignupForm from './SignupForm'
+import SignupForm from '.'
 
 export default {
   title: 'landing_page/modals/signup',
