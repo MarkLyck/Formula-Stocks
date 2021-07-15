@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
+import dynamic from 'next/dynamic'
+
 import { ModalTitle } from 'src/ui-components'
-import SignupForm from './SignupForm'
+// import SignupForm from './AccountForm'
+
+const AccountForm = dynamic(() => import('./AccountForm'))
 
 interface SignupModalProps {
   onClose: () => void
@@ -20,7 +24,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   return (
     <Modal visible={isVisible} onCancel={onClose} footer={null} centered>
       <ModalTitle>Sign up</ModalTitle>
-      {page === 1 && <SignupForm onSubmit={handleAccountInfoSubmit} />}
+      {page === 1 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
     </Modal>
   )
 }
