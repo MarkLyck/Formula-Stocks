@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.274"></a>
+## 1.0.274 (2021-07-15)
+
+### Changed
+
+- ⬆️ Update dependency zustand to v3.5.7 [[dc32f0b](https://github.com/MarkLyck/formula-stocks/commit/dc32f0b041083fffbbac4b593ee4aeb0f464af95)]
+
+### Miscellaneous
+
+-  Merge pull request [#359](https://github.com/MarkLyck/formula-stocks/issues/359) from MarkLyck/renovate/zustand-3.x [[41c062f](https://github.com/MarkLyck/formula-stocks/commit/41c062f4c5294d8695adee1e66c658f81bf3329a)]
+- 📝 version bump to v1.0.274 [[eee4ad8](https://github.com/MarkLyck/formula-stocks/commit/eee4ad8882c436d74868900d113e84a773ef9a95)]
+- 📝 generated changelog [[996e969](https://github.com/MarkLyck/formula-stocks/commit/996e9694deddbc7c0a68f6463c864de36fb3a520)]
+
+
 <a name="1.0.273"></a>
 ## 1.0.273 (2021-07-13)
 
