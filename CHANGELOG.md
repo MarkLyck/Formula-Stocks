@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.275"></a>
+## 1.0.275 (2021-07-15)
+
+### Added
+
+- ✨ Finish country selector [[1ea4d9d](https://github.com/MarkLyck/formula-stocks/commit/1ea4d9dd24b58b58919ca316f9e2afcf3d9724f0)]
+- ✨ country selector progress [[06d6ab6](https://github.com/MarkLyck/formula-stocks/commit/06d6ab625057d2108130f0fe51d6c122d313833b)]
+- ✨ add country selector [[fa77702](https://github.com/MarkLyck/formula-stocks/commit/fa777024a24e5646669241ded10512015f014940)]
+
+### Miscellaneous
+
+-  Merge pull request [#358](https://github.com/MarkLyck/formula-stocks/issues/358) from MarkLyck/signup-modal [[772b8c3](https://github.com/MarkLyck/formula-stocks/commit/772b8c3cd11e6392dc20c70433fbc7c0d214f988)]
+- 🗑️ cleanup and load accountForm dynamically [[e7a3774](https://github.com/MarkLyck/formula-stocks/commit/e7a3774861288c87115cbcc7ed09f214a0d31760)]
+- 📝 version bump to v1.0.275 [[72891af](https://github.com/MarkLyck/formula-stocks/commit/72891aff150ea55b6e29f245b392425d34c57bfa)]
+- 📝 generated changelog [[19a4b5f](https://github.com/MarkLyck/formula-stocks/commit/19a4b5f65184e908ffec9b3f1a4c54bdc60b26a1)]
+
+
 <a name="1.0.274"></a>
 ## 1.0.274 (2021-07-15)
 
